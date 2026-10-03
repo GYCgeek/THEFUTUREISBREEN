@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GYC AI Labs — Daily Reports Dashboard</title>
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --panel: #0d1220;
+      --line: #1e2d40;
+      --text: #dce7f1;
+      --muted: #8ea6bc;
+      --accent: #4fc3f7;
+      --green: #8fdb74;
+      --amber: #ffd166;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Inter, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 32px 20px; }
+    header { text-align: center; margin-bottom: 36px; }
+    .kicker {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    h1 { margin: 8px 0 6px; font-size: clamp(26px, 4vw, 40px); color: #fff; }
+    .lede { color: var(--muted); max-width: 60ch; margin: 0 auto; font-size: 15px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px;
+      background: var(--panel);
+      transition: border-color .2s, transform .15s;
+    }
+    .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .card a { text-decoration: none; color: inherit; display: block; }
+    .card .badge-row { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+    .badge {
+      font-size: 11px;
+      border-radius: 999px;
+      padding: 3px 10px;
+      background: rgba(79,195,247,.12);
+      color: #bfefff;
+      border: 1px solid rgba(79,195,247,.2);
+    }
+    .badge-new { background: rgba(143,219,116,.12); color: #d2f3be; border-color: rgba(143,219,116,.2); }
+    .badge-daily { background: rgba(255,209,102,.12); color: #ffe5a9; border-color: rgba(255,209,102,.2); }
+    .badge-weekly { background: rgba(168,130,255,.12); color: #d4c4ff; border-color: rgba(168,130,255,.2); }
+    .card h3 { margin: 0 0 6px; font-size: 17px; color: #fff; }
+    .card p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.55; }
+    .card .meta { margin-top: 10px; font-size: 12px; color: #677f97; }
+    footer { margin-top: 40px; text-align: center; font-size: 12px; color: #677f97; }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <p class="kicker">GYC AI Labs — Internal Reports</p>
+      <h1>Daily Reports Dashboard</h1>
+      <p class="lede">Live links to mission control summaries, command briefs, and community updates. Updated as reports are generated.</p>
+    </header>
+
+    <div class="grid">
+      <div class="card">
+        <a href="/reports/mission-control-daily-2026-06-16.html">
+          <div class="badge-row">
+            <span class="badge badge-daily">Daily</span>
+            <span class="badge badge-new">Latest</span>
+          </div>
+          <h3>Mission Control Daily — 16 June 2026</h3>
+          <p>Funding scan health, 5 new opportunities, 5 fresh signals, action items with deadlines.</p>
+          <div class="meta">Generated 17:04 CET &middot; 89 open opportunities</div>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="/reports/weekly-command-brief-2026-06-16.html">
+          <div class="badge-row">
+            <span class="badge badge-weekly">Weekly</span>
+            <span class="badge badge-new">Latest</span>
+          </div>
+          <h3>Weekly Command Brief — 16 June 2026</h3>
+          <p>Intelligence OS registry brief: urgent decisions, partner moves, funding, project blockers, manual review queue.</p>
+          <div class="meta">Generated 15:02 UTC &middot; 81 registry items</div>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="/reports/community-briefing-2026-06-15.html">
+          <div class="badge-row">
+            <span class="badge">Community</span>
+          </div>
+          <h3>Community Briefing — 15 June 2026</h3>
+          <p>SB64 Bonn Listening Lab, hackathon cohort selection, timeline, signals of change, and calls to action.</p>
+          <div class="meta">Draft for Genn review before public distribution</div>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="/reports/mission-control-daily-2026-06-15.html">
+          <div class="badge-row">
+            <span class="badge badge-daily">Daily</span>
+          </div>
+          <h3>Mission Control Daily — 15 June 2026</h3>
+          <p>Previous day's funding scan, opportunities, and action items.</p>
+          <div class="meta">Archive</div>
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <p>GYC AI Labs Lobster &middot; <a href="https://gycailabs.org">gycailabs.org</a> &middot; <a href="https://lcw-hackathon-production.up.railway.app">Hack for the Futures</a></p>
+      <p style="margin-top:6px;font-size:11px;color:#505870;">These reports are for internal decision support. Do not distribute externally without review.</p>
+    </footer>
+  </div>
+</body>
+</html>

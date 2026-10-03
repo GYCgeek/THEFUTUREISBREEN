@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Impact Tech - GlobalYouth</title>
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Add the favicon -->
+    <link rel="icon" href="assets/images/icon.png" type="image/x-icon" alt="GlobalYouth Favicon">
+    
+    <!-- Add custom styles for this page -->
+    <style>
+        /* Solar-punk aesthetic styles */
+        .impact-tech-header {
+            background: linear-gradient(135deg, #1a5d1a 0%, #003b4a 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+        
+        .impact-tech-header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/images/tech-nature-blend.jpg');
+            background-size: cover;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .impact-tech-header .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .impact-tech-header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, #fff 0%, #9dffb3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .impact-tech-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .section-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #fd580b;
+            display: inline-block;
+            background: rgba(253, 88, 11, 0.1);
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .tech-section:hover .section-icon {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(253, 88, 11, 0.2);
+        }
+        
+        .tech-section {
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .tech-section:nth-child(odd) {
+            background-color: #f8f9fa;
+        }
+        
+        .tech-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #003b4a;
+        }
+        
+        .tech-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+        }
+        
+        .gem-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            border-left: 5px solid #fd580b;
+        }
+        
+        .gem-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .gem-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #003b4a;
+        }
+        
+        .gem-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+        
+        .gem-icon {
+            font-size: 2rem;
+            color: #fd580b;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #003b4a 0%, #1a5d1a 100%);
+            padding: 80px 0;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/images/solar-pattern.png');
+            background-size: cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .cta-section .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-box h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #fd580b;
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin: 10px;
+            border: none;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(253, 88, 11, 0.3);
+            color: white;
+        }
+        
+        .cta-button.secondary {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .cta-button.secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Gem animation */
+        .gem-animation {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .floating-gem {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-image: url('assets/images/gem-icon.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: float 6s infinite ease-in-out;
+        }
+        
+        .floating-gem:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-gem:nth-child(2) {
+            top: 50%;
+            left: 30%;
+            animation-delay: 1s;
+        }
+        
+        .floating-gem:nth-child(3) {
+            top: 30%;
+            left: 50%;
+            animation-delay: 2s;
+        }
+        
+        .floating-gem:nth-child(4) {
+            top: 60%;
+            left: 70%;
+            animation-delay: 3s;
+        }
+        
+        .floating-gem:nth-child(5) {
+            top: 40%;
+            left: 90%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.7;
+            }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .impact-tech-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tech-section h2 {
+                font-size: 2rem;
+            }
+            
+            .cta-box {
+                padding: 30px;
+            }
+            
+            .cta-box h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ======================header started====================== -->
+    <header>
+        <div class="my-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="nav-items">
+                        <div class="logo">
+                            <!-- Wrap the img tag with an a tag pointing to the home page -->
+                            <a href="index">
+                                <img src="assets/images/global_logo1.png" alt="Global Youth Logo">
+                            </a>
+                        </div>
+                        <div class="menu-toggle">
+                            <div class="menu-hamburger"></div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu">
+                                <ul>
+                                    <li><a href="index">Home</a></li>
+                                    <li><a href="about">About Us</a></li>
+                                    <li><a href="GYCT">GYCT</a></li>
+                                    <li><a href="Reeforesting4Peace">R4P</a></li>
+                                    <li><a href="thetrident">The Trident</a></li>
+                                    <li><a href="contact">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ======================Main started====================== -->
+
+    <main>
+        <!-- Hero Section -->
+        <section class="impact-tech-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1>Why We Use Blockchain — and Why It's Ethical</h1>
+                        <p>Regenerative technology for real-world impact, transparent funding, and youth empowerment</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GYC's Vision Section -->
+        <section class="tech-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                        <div class="section-icon">🌱</div>
+                        <h2>GYC's Vision</h2>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <p>At GYC, we don't follow tech hype. We use modern tools to fund youth climate missions, empower changemakers, and ensure transparent, verifiable impact.</p>
+                        <p>Our approach is rooted in practicality and purpose. We've carefully selected blockchain technology not because it's trendy, but because it offers unique solutions to real challenges in global youth activism:</p>
+                        <ul>
+                            <li>Transparent funding that crosses borders</li>
+                            <li>Verifiable impact tracking</li>
+                            <li>Direct support for youth-led initiatives</li>
+                            <li>Community ownership of environmental solutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What is GemFunder Section -->
+        <section class="tech-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <p><strong>gyc.gemfunder.com</strong> is our platform to mint ethical gems that unlock real-world action. Users can launch campaigns, raise funds, fractionalize ownership, and track mission success.</p>
+                        <p>Powered by gemfunder.com and optimized for youth, our platform transforms digital tokens into tangible impact:</p>
+                        <ul>
+                            <li>Launch climate action campaigns</li>
+                            <li>Raise funds transparently</li>
+                            <li>Track mission progress in real-time</li>
+                            <li>Build a global community of supporters</li>
+                            <li>Verify impact with on-chain evidence</li>
+                        </ul>
+                        <p>Each gem represents not just a digital asset, but a stake in real environmental and social change led by young people worldwide.</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                        <div class="section-icon">🔗</div>
+                        <h2>What is GemFunder?</h2>
+                        <div class="gem-animation mt-4">
+                            <div class="floating-gem"></div>
+                            <div class="floating-gem"></div>
+                            <div class="floating-gem"></div>
+                            <div class="floating-gem"></div>
+                            <div class="floating-gem"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Is Blockchain Bad for the Planet Section -->
+        <section class="tech-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                        <div class="section-icon">♻️</div>
+                        <h2>Is Blockchain Bad for the Planet?</h2>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <p><strong>Not here.</strong> We use Proof-of-Stake chains like BNB and Ethereum 2.0 — 99.9% less energy than Bitcoin.</p>
+                        <p>Compared to YouTube or online banking, our energy use is negligible. Plus, our funded missions reforest, clean oceans, and train youth in climate action — real-world regenerative work that offsets our minimal digital footprint many times over.</p>
+                        <p>We've done the math:</p>
+                        <ul>
+                            <li>A single Proof-of-Stake transaction uses less energy than sending 2-3 emails</li>
+                            <li>Our platform's annual carbon footprint is offset by just a few trees planted through our Reforesting4Peace initiative</li>
+                            <li>The environmental benefits of our funded projects exceed our tech footprint by orders of magnitude</li>
+                        </ul>
+                        <p>We believe in using the best tools available to drive positive change, while ensuring those tools themselves align with our environmental values.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What You Actually Own Section -->
+        <section class="tech-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <div class="section-icon">🛠️</div>
+                        <h2>What You Actually Own</h2>
+                        <p>Each gem is more than a digital token — it's a portal to real-world impact</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="gem-card">
+                            <div class="gem-icon"><i class="fal fa-certificate"></i></div>
+                            <h3>Proof of Impact</h3>
+                            <p>Verifiable evidence of your contribution to environmental and social change, backed by blockchain's immutable record</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="gem-card">
+                            <div class="gem-icon"><i class="fal fa-door-open"></i></div>
+                            <h3>Entry to Missions</h3>
+                            <p>Access to participate in and follow the progress of youth-led climate initiatives around the world</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="gem-card">
+                            <div class="gem-icon"><i class="fal fa-gem"></i></div>
+                            <h3>Digital Collectible</h3>
+                            <p>A beautiful, unique digital asset that represents your values and commitment to a sustainable future</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="gem-card">
+                            <div class="gem-icon"><i class="fal fa-hands-heart"></i></div>
+                            <h3>Symbol of Support</h3>
+                            <p>A tangible way to show your backing for young innovators working to solve our planet's most pressing challenges</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learn More Section -->
+        <section class="tech-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <p>Ready to mint your impact? Explore gems and discover how your support can fuel youth-led climate action around the world.</p>
+                        <p>Our platform makes it easy to:</p>
+                        <ul>
+                            <li>Browse active missions by region, focus area, or impact goal</li>
+                            <li>Connect with youth leaders driving change</li>
+                            <li>Track the real-world progress of initiatives you support</li>
+                            <li>Build a collection that reflects your environmental values</li>
+                        </ul>
+                        <p>Every gem minted is a step toward a more sustainable, equitable future led by the next generation of changemakers.</p>
+                        <a href="https://gyc.gemfunder.com" target="_blank" class="cta-button">Explore Gems</a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                        <div class="section-icon">🔮</div>
+                        <h2>Learn More</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-md-12">
+                        <div class="cta-box text-center">
+                            <h2>Want to launch your own mission?<br>Let's fund it together.</h2>
+                            <p>Whether you're a youth activist with a project idea or a supporter looking to make an impact, we have a place for you in our ecosystem.</p>
+                            <div class="mt-4">
+                                <a href="https://gyc.gemfunder.com" target="_blank" class="cta-button">Mint a Gem</a>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8ageTzIA0tmtsmmvX3KqdoOjrdyoN6FsYpNRyyauJv1kaWw/viewform" target="_blank" class="cta-button secondary">Apply as a Youth Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =====================>>>>>Footer Started>>>>>======================== -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                    <div class="footer-content">
+                        <h2>YOU HAVE ANY SUGGESTION? <br>LET US KNOW. <br>COMMUNICATION IS THE BEST TOOL WE GOT</h2>
+                        <form action="takeaction@theglobalyouth.co" method="post" enctype="text/plain">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-warning">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                    <div class="footer-content">
+                        <h2>QUICK LINKS</h2>
+                        <ol>
+                            <li><a href="index.html"><i class="fal fa-angle-double-right"></i>Home</a></li>
+                            <li><a href="about-us.html"><i class="fal fa-angle-double-right"></i>About Us</a></li>
+                            <li><a href="services.html"><i class="fal fa-angle-double-right"></i>Network</a></li>
+                            <li><a href="ourproject.html"><i class="fal fa-angle-double-right"></i>Our Project</a></li>
+                            <li><a href="contact-us.html"><i class="fal fa-angle-double-right"></i>Contact Us</a></li>
+                        </ol>
+
+                        <h2>ABOUT YOU</h2>
+                        <ol>
+                            <li><a href="index.html"><i class="fal fa-angle-double-right"></i>Update Your Preferences</a></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                    <div class="footer-content">
+                        <h2>DONATE</h2>
+                        <ol>
+                            <li><a href="https://www.gofundme.com/f/reeforesting-4-peace-gyc" target="_blank"><i class="fal fa-angle-double-right"></i>Donate now</a></li>
+                            <li><a href="#"><i class="fal fa-angle-double-right"></i>Fundraise</a></li>
+                            <li><a href="#"><i class="fal fa-angle-double-right"></i>Give Monthly</a></li>
+                            <li><a href="#"><i class="fal fa-angle-double-right"></i>Giving Society</a></li>
+                            <li><a href="#"><i class="fal fa-angle-double-right"></i>Legacy Society</a></li>
+                            <li><a href="#"><i class="fal fa-angle-double-right"></i>Ways to Give</a></li>
+                            <li><a href="#"><i class="fal fa-angle-double-right"></i>Manage Your Donation</a></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                    <div class="footer-content">
+                        <h2>CONTACT US</h2>
+                        <li><i class="fal fa-map-marker"></i>Birkenweg 2, 49186 Bad Iburg Germany</li>
+                        <li><i class="fal fa-envelope"></i>takeaction@theglobalyouth.co</li>
+                        <li><i class="fal fa-phone"></i>+593 987319134</li>
+                        <br>
+                        <h2>GET ACTIVE</h2>
+                        <ol>
+                            <li><a href="#"><i class="fal fa-angle-double-right"></i>Get Active</a></li>
+                            <li><a href="#"><i class="fal fa-angle-double-right"></i>Volunteer</a></li>
+                            <li><a href="#"><i class="fal fa-angle-double-right"></i>Digital Activism</a></li>
+                            <li><a href="#"><i class="fal fa-angle-double-right"></i>Events</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right">
+            <div class="container">
+                <div class="copy-right-card">
+                    <p>2023 @ All Rights Reserved Designed and developed by<a href="">Edo&Mponjoli</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    
+    <!-- Add custom script for animations -->
+    <script>
+        // Add scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate sections on scroll
+            const sections = document.querySelectorAll('.tech-section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            sections.forEach(section => {
+                section.style.opacity = 0;
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+            
+            // Gem hover effects
+            const gemCards = document.querySelectorAll('.gem-card');
+            
+            gemCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.querySelector('.gem-icon').style.transform = 'scale(1.2)';
+                    this.querySelector('.gem-icon').style.transition = 'transform 0.3s ease';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.querySelector('.gem-icon').style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

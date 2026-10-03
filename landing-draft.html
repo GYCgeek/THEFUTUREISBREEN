@@ -1,0 +1,992 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Landing Draft | Global Youth Coalition</title>
+    <meta name="description" content="Preview draft for a sharper Global Youth Coalition landing page.">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f5f1e8;
+            --surface: rgba(255, 251, 244, 0.84);
+            --surface-strong: #fffaf0;
+            --ink: #11313a;
+            --muted: #52636b;
+            --line: rgba(17, 49, 58, 0.12);
+            --teal: #0c6c72;
+            --teal-dark: #093f45;
+            --sun: #f26a2e;
+            --sun-soft: #ffd8bf;
+            --leaf: #9bc53d;
+            --shadow: 0 24px 60px rgba(17, 49, 58, 0.14);
+            --radius-xl: 30px;
+            --radius-lg: 22px;
+            --radius-md: 16px;
+            --max: 1240px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Sora', sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, rgba(242, 106, 46, 0.24), transparent 28%),
+                radial-gradient(circle at 85% 12%, rgba(12, 108, 114, 0.22), transparent 24%),
+                linear-gradient(180deg, #f8f3ea 0%, #f3efe5 44%, #efe7d8 100%);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .draft-shell {
+            width: min(calc(100% - 32px), var(--max));
+            margin: 0 auto;
+        }
+
+        .draft-nav {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            backdrop-filter: blur(18px);
+            background: rgba(245, 241, 232, 0.82);
+            border-bottom: 1px solid rgba(17, 49, 58, 0.08);
+        }
+
+        .draft-nav__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            min-height: 80px;
+        }
+
+        .draft-brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .draft-brand img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+        }
+
+        .draft-brand__copy {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .draft-brand__eyebrow {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+        }
+
+        .draft-links {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .draft-links a {
+            font-size: 0.92rem;
+            color: var(--muted);
+        }
+
+        .draft-links a:hover,
+        .draft-links a:focus {
+            color: var(--teal-dark);
+        }
+
+        .draft-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(12, 108, 114, 0.1);
+            color: var(--teal-dark);
+            font-size: 0.86rem;
+            font-weight: 600;
+        }
+
+        .hero {
+            padding: 36px 0 28px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+            gap: 26px;
+            align-items: stretch;
+        }
+
+        .hero-copy,
+        .hero-panel,
+        .section-card,
+        .story-card,
+        .path-card,
+        .impact-card,
+        .movement-card,
+        .signup-card {
+            background: var(--surface);
+            border: 1px solid rgba(255, 255, 255, 0.55);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(18px);
+        }
+
+        .hero-copy {
+            border-radius: 36px;
+            padding: 34px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-copy::after {
+            content: "";
+            position: absolute;
+            inset: auto -40px -70px auto;
+            width: 220px;
+            height: 220px;
+            background: radial-gradient(circle, rgba(242, 106, 46, 0.22), transparent 66%);
+            pointer-events: none;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(17, 49, 58, 0.06);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--teal-dark);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: 0;
+            font-family: 'Fraunces', serif;
+            line-height: 1.02;
+            letter-spacing: -0.03em;
+        }
+
+        h1 {
+            max-width: 12ch;
+            font-size: clamp(3rem, 6vw, 5.7rem);
+            margin-bottom: 20px;
+        }
+
+        .hero-lead {
+            max-width: 60ch;
+            font-size: 1.06rem;
+            line-height: 1.75;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 22px;
+        }
+
+        .btn-draft,
+        .btn-draft-secondary {
+            min-height: 48px;
+            padding: 13px 20px;
+            border-radius: 14px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+        }
+
+        .btn-draft {
+            background: linear-gradient(135deg, var(--sun), #ff8f58);
+            color: #fff;
+            box-shadow: 0 16px 32px rgba(242, 106, 46, 0.28);
+        }
+
+        .btn-draft-secondary {
+            background: rgba(17, 49, 58, 0.06);
+            color: var(--ink);
+        }
+
+        .btn-draft:hover,
+        .btn-draft:focus,
+        .btn-draft-secondary:hover,
+        .btn-draft-secondary:focus {
+            transform: translateY(-2px);
+        }
+
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .hero-metric {
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.58);
+            border-radius: 18px;
+            border: 1px solid rgba(17, 49, 58, 0.08);
+        }
+
+        .hero-metric strong {
+            display: block;
+            font-size: 1.4rem;
+            color: var(--teal-dark);
+            margin-bottom: 6px;
+        }
+
+        .hero-metric span {
+            display: block;
+            font-size: 0.86rem;
+            line-height: 1.5;
+            color: var(--muted);
+        }
+
+        .hero-panel {
+            border-radius: 36px;
+            padding: 18px;
+            display: grid;
+            grid-template-rows: auto auto 1fr;
+            gap: 16px;
+        }
+
+        .hero-panel__image {
+            border-radius: 26px;
+            overflow: hidden;
+            min-height: 300px;
+            position: relative;
+        }
+
+        .hero-panel__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-panel__badge {
+            position: absolute;
+            left: 16px;
+            bottom: 16px;
+            max-width: 280px;
+            padding: 14px 16px;
+            border-radius: 18px;
+            background: rgba(9, 63, 69, 0.84);
+            color: #fff;
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+
+        .hero-panel__note {
+            display: grid;
+            gap: 10px;
+            padding: 18px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, rgba(12, 108, 114, 0.1), rgba(155, 197, 61, 0.12));
+        }
+
+        .hero-panel__note strong {
+            font-size: 1rem;
+        }
+
+        .proof-strip {
+            padding: 14px 0 32px;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .impact-card {
+            border-radius: 24px;
+            padding: 20px;
+        }
+
+        .impact-card__label {
+            font-size: 0.8rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .impact-card strong {
+            display: block;
+            font-size: clamp(1.9rem, 3vw, 2.6rem);
+            margin-bottom: 10px;
+            color: var(--teal-dark);
+        }
+
+        .impact-card p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.65;
+            font-size: 0.94rem;
+        }
+
+        .section-block {
+            padding: 22px 0;
+        }
+
+        .section-heading {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 22px;
+        }
+
+        .section-heading p {
+            max-width: 54ch;
+            margin: 10px 0 0;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .section-card {
+            border-radius: 28px;
+            padding: 24px;
+        }
+
+        .live-grid,
+        .path-grid,
+        .movement-grid {
+            display: grid;
+            gap: 18px;
+        }
+
+        .live-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .live-item {
+            padding: 22px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.52);
+            border: 1px solid rgba(17, 49, 58, 0.08);
+        }
+
+        .live-item span {
+            display: inline-block;
+            margin-bottom: 14px;
+            padding: 7px 12px;
+            border-radius: 999px;
+            background: rgba(242, 106, 46, 0.14);
+            color: #9f4213;
+            font-size: 0.76rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .live-item h3 {
+            font-size: 1.45rem;
+            margin-bottom: 12px;
+        }
+
+        .live-item p {
+            margin: 0 0 14px;
+            color: var(--muted);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .live-item a {
+            font-weight: 700;
+            color: var(--teal-dark);
+        }
+
+        .path-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .path-card {
+            border-radius: 26px;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .path-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, rgba(255,255,255,0.12), transparent 60%);
+            pointer-events: none;
+        }
+
+        .path-card__icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(17, 49, 58, 0.08);
+            margin-bottom: 18px;
+            color: var(--teal-dark);
+            font-size: 1.25rem;
+        }
+
+        .path-card h3 {
+            font-size: 1.45rem;
+            margin-bottom: 12px;
+        }
+
+        .path-card p {
+            margin: 0 0 18px;
+            color: var(--muted);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .path-card a {
+            font-weight: 700;
+            color: var(--teal-dark);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+            gap: 18px;
+        }
+
+        .story-card {
+            border-radius: 28px;
+            padding: 26px;
+        }
+
+        .story-kicker {
+            display: inline-block;
+            margin-bottom: 16px;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+        }
+
+        .story-card h2 {
+            font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+            margin-bottom: 16px;
+        }
+
+        .story-card p {
+            margin: 0 0 16px;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .story-timeline {
+            display: grid;
+            gap: 14px;
+        }
+
+        .story-step {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 16px;
+            padding: 16px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .story-step:first-child {
+            border-top: 0;
+            padding-top: 0;
+        }
+
+        .story-step strong {
+            display: block;
+            color: var(--sun);
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .story-step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .story-step p {
+            margin: 0;
+            font-size: 0.94rem;
+        }
+
+        .movement-grid {
+            grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+        }
+
+        .movement-card {
+            border-radius: 28px;
+            padding: 24px;
+        }
+
+        .movement-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 14px;
+        }
+
+        .movement-card p {
+            margin: 0 0 18px;
+            color: var(--muted);
+            line-height: 1.75;
+        }
+
+        .movement-map {
+            border-radius: 24px;
+            overflow: hidden;
+            min-height: 340px;
+            border: 1px solid rgba(17, 49, 58, 0.08);
+        }
+
+        .movement-map img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .movement-stats {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .movement-stats div {
+            padding: 18px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.58);
+            border: 1px solid rgba(17, 49, 58, 0.08);
+        }
+
+        .movement-stats strong {
+            display: block;
+            font-size: 1.5rem;
+            margin-bottom: 6px;
+        }
+
+        .signup-card {
+            border-radius: 30px;
+            padding: 28px;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 18px;
+            align-items: center;
+            margin: 24px 0 54px;
+        }
+
+        .signup-card p {
+            margin: 12px 0 0;
+            color: var(--muted);
+            line-height: 1.75;
+        }
+
+        .signup-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        .draft-footer {
+            padding: 0 0 32px;
+        }
+
+        .draft-footer__inner {
+            border-top: 1px solid rgba(17, 49, 58, 0.1);
+            padding-top: 18px;
+            color: var(--muted);
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 1100px) {
+            .hero-grid,
+            .story-grid,
+            .movement-grid,
+            .live-grid,
+            .path-grid,
+            .proof-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .signup-card {
+                grid-template-columns: 1fr;
+            }
+
+            .signup-actions {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 820px) {
+            .draft-nav__inner,
+            .section-heading,
+            .draft-footer__inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hero-grid,
+            .proof-grid,
+            .live-grid,
+            .path-grid,
+            .story-grid,
+            .movement-grid,
+            .hero-metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .story-step {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .movement-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-copy,
+            .hero-panel,
+            .section-card,
+            .story-card,
+            .movement-card,
+            .signup-card {
+                padding: 22px;
+            }
+
+            h1 {
+                max-width: 100%;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="draft-nav">
+        <div class="draft-shell draft-nav__inner">
+            <a class="draft-brand" href="index">
+                <img src="assets/images/global_logo1.png" alt="Global Youth Coalition logo">
+                <span class="draft-brand__copy">
+                    <span class="draft-brand__eyebrow">Landing Draft</span>
+                    <span>Global Youth Coalition</span>
+                </span>
+            </a>
+            <nav class="draft-links" aria-label="Draft page navigation">
+                <a href="#live-now">Live Now</a>
+                <a href="#pathways">Choose Your Path</a>
+                <a href="#story">Origin Story</a>
+                <a href="#movement">Movement</a>
+                <a class="draft-pill" href="report2025"><i class="fal fa-file-alt" aria-hidden="true"></i> Review 2025 Report</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="draft-shell hero-grid">
+                <article class="hero-copy">
+                    <div class="eyebrow"><i class="fal fa-globe-africa" aria-hidden="true"></i> Youth in the rooms where futures get decided</div>
+                    <h1>We get young people into climate, finance, and futures decision-making.</h1>
+                    <p class="hero-lead">This draft pushes the homepage toward a clearer landing-page job: explain the mission fast, prove it with numbers, and give people obvious ways to join, learn, partner, or track what GYC is doing right now.</p>
+                    <div class="hero-actions">
+                        <a class="btn-draft" href="GYCT">Apply Through GYCT <i class="fal fa-arrow-right" aria-hidden="true"></i></a>
+                        <a class="btn-draft-secondary" href="about">Read Our Story <i class="fal fa-book-open" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="hero-metrics" aria-label="Impact highlights">
+                        <div class="hero-metric">
+                            <strong>178</strong>
+                            <span>Countries represented across the coalition network.</span>
+                        </div>
+                        <div class="hero-metric">
+                            <strong>$350K+</strong>
+                            <span>Directed toward youth-led projects and direct support.</span>
+                        </div>
+                        <div class="hero-metric">
+                            <strong>60K+</strong>
+                            <span>People reached through open climate learning programs.</span>
+                        </div>
+                    </div>
+                </article>
+
+                <aside class="hero-panel" aria-label="Featured coalition snapshot">
+                    <div class="hero-panel__image">
+                        <img src="assets/images/Header.svg" alt="Global Youth Coalition delegation collage">
+                        <div class="hero-panel__badge">A stronger first screen should feel like a campaign HQ, not a sitemap. This draft makes the mission and next action visible immediately.</div>
+                    </div>
+                    <div class="hero-panel__note">
+                        <strong>What changes here</strong>
+                        <span>The homepage stops saying “welcome” and starts saying what GYC does, why it matters, and what visitors should do next.</span>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="proof-strip">
+            <div class="draft-shell proof-grid">
+                <article class="impact-card">
+                    <span class="impact-card__label">Training Reach</span>
+                    <strong>60K+</strong>
+                    <p>Global viewers reached through climate training and partner-led learning sessions.</p>
+                </article>
+                <article class="impact-card">
+                    <span class="impact-card__label">Project Mapping</span>
+                    <strong>5,000</strong>
+                    <p>Climate solutions identified across the coalition’s network and ecosystem scanning.</p>
+                </article>
+                <article class="impact-card">
+                    <span class="impact-card__label">Direct Investment</span>
+                    <strong>$350K+</strong>
+                    <p>Capital pushed toward youth-led work, bursaries, and program delivery.</p>
+                </article>
+                <article class="impact-card">
+                    <span class="impact-card__label">Global Footprint</span>
+                    <strong>178</strong>
+                    <p>Countries represented by scientists, organizers, coders, farmers, and artists.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="live-now" class="section-block">
+            <div class="draft-shell">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow"><i class="fal fa-broadcast-tower" aria-hidden="true"></i> What’s live right now</div>
+                        <h2>Current entry points, not just archive content</h2>
+                    </div>
+                    <p>A landing page should tell people what is active now. These cards are the clearest way to route different visitors without making them decode the whole site first.</p>
+                </div>
+                <div class="section-card live-grid">
+                    <article class="live-item">
+                        <span>Open training</span>
+                        <h3>GYCT Delegation Prep</h3>
+                        <p>For people who want to understand negotiation texts, climate finance, and how to show up prepared, not symbolic.</p>
+                        <a href="GYCT">View GYCT</a>
+                    </article>
+                    <article class="live-item">
+                        <span>Research</span>
+                        <h3>Foresight Participation</h3>
+                        <p>Join the research pipeline on intergenerational equity, futures thinking, and practical long-term governance tools.</p>
+                        <a href="Foresight-Research">Explore Foresight</a>
+                    </article>
+                    <article class="live-item">
+                        <span>Infrastructure</span>
+                        <h3>GYC AI Labs</h3>
+                        <p>See the tools, experiments, and independent digital infrastructure being built around public-interest AI.</p>
+                        <a href="https://gyc-ai-labs-production.up.railway.app/">Visit AI Labs</a>
+                    </article>
+                    <article class="live-item">
+                        <span>Field action</span>
+                        <h3>Reeforesting 4 Peace</h3>
+                        <p>Track the climate-and-community work that connects field action, peacebuilding, and frontline solidarity.</p>
+                        <a href="Reeforesting4Peace">See R4P</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="pathways" class="section-block">
+            <div class="draft-shell">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow"><i class="fal fa-route" aria-hidden="true"></i> Choose your path</div>
+                        <h2>One homepage, four clear jobs</h2>
+                    </div>
+                    <p>This reduces friction. Different visitors arrive with different intent, so the homepage should route them instead of treating everyone like they need the same pitch.</p>
+                </div>
+                <div class="path-grid">
+                    <article class="path-card">
+                        <div class="path-card__icon"><i class="fal fa-user-graduate" aria-hidden="true"></i></div>
+                        <h3>Learn</h3>
+                        <p>Get trained, build policy fluency, and understand how climate and development rooms actually work.</p>
+                        <a href="GYCT">Enter GYCT</a>
+                    </article>
+                    <article class="path-card">
+                        <div class="path-card__icon"><i class="fal fa-search" aria-hidden="true"></i></div>
+                        <h3>Research</h3>
+                        <p>Join youth-led foresight work on intergenerational equity, horizon scanning, and future governance.</p>
+                        <a href="Foresight-Research">Join the research track</a>
+                    </article>
+                    <article class="path-card">
+                        <div class="path-card__icon"><i class="fal fa-handshake" aria-hidden="true"></i></div>
+                        <h3>Partner</h3>
+                        <p>Work with GYC on delegations, events, field programs, and practical support for young leaders.</p>
+                        <a href="contact">Start a conversation</a>
+                    </article>
+                    <article class="path-card">
+                        <div class="path-card__icon"><i class="fal fa-rocket-launch" aria-hidden="true"></i></div>
+                        <h3>Build</h3>
+                        <p>Help shape the tools, experiments, and infrastructure behind the coalition’s next phase.</p>
+                        <a href="https://gyc-ai-labs-production.up.railway.app/">See what’s being built</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="story" class="section-block">
+            <div class="draft-shell story-grid">
+                <article class="story-card">
+                    <span class="story-kicker">Flagship story</span>
+                    <h2>From one impossible tree to a permanent youth pipeline</h2>
+                    <p>This section lifts the strongest voice already present on the site. The copy in the About page is sharper than the current homepage voice, so this draft pulls that energy forward instead of hiding it deeper in the site.</p>
+                    <p>The goal is not to retell everything. It is to give visitors one memorable origin story that explains why GYC exists and why it moves the way it does.</p>
+                    <a class="btn-draft-secondary" href="about">Read the full story <i class="fal fa-arrow-right" aria-hidden="true"></i></a>
+                </article>
+
+                <article class="story-card">
+                    <div class="story-timeline">
+                        <div class="story-step">
+                            <strong>COP27</strong>
+                            <div>
+                                <h3>An impossible tree in the Blue Zone</h3>
+                                <p>A 3-meter Tree of Hope entered one of the world’s most restricted negotiating spaces. That moment now anchors the coalition’s identity.</p>
+                            </div>
+                        </div>
+                        <div class="story-step">
+                            <strong>COP29</strong>
+                            <div>
+                                <h3>First GYCT delegation</h3>
+                                <p>Young delegates arrived trained, accredited, and ready to read finance text instead of reacting from the outside.</p>
+                            </div>
+                        </div>
+                        <div class="story-step">
+                            <strong>2025</strong>
+                            <div>
+                                <h3>Following the money</h3>
+                                <p>From Washington D.C. to Davos to Sevilla, the coalition tracked where development and climate finance decisions were actually being made.</p>
+                            </div>
+                        </div>
+                        <div class="story-step">
+                            <strong>Today</strong>
+                            <div>
+                                <h3>What gets built next</h3>
+                                <p>Foresight Research, AI Labs, open data, and a network big enough that the next impossible intervention does not need permission first.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="movement" class="section-block">
+            <div class="draft-shell">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow"><i class="fal fa-globe" aria-hidden="true"></i> Global movement</div>
+                        <h2>Show the network as proof, not decoration</h2>
+                    </div>
+                    <p>The map works best when it is tied to real counts and concrete outcomes. This turns “global movement” from branding language into evidence.</p>
+                </div>
+                <div class="movement-grid">
+                    <article class="movement-card">
+                        <div class="movement-map">
+                            <img src="assets/images/gy/HeatMapGYCT2024.jpeg" alt="Heat map showing the coalition's global movement footprint">
+                        </div>
+                    </article>
+                    <article class="movement-card">
+                        <h3>Where the coalition already has reach</h3>
+                        <p>Use this area to show where GYC is active, what those communities are doing, and how that activity turns into delegations, reports, field action, and infrastructure.</p>
+                        <div class="movement-stats">
+                            <div>
+                                <strong>178</strong>
+                                <span>Countries represented</span>
+                            </div>
+                            <div>
+                                <strong>6+</strong>
+                                <span>Languages for volunteer translations</span>
+                            </div>
+                            <div>
+                                <strong>2</strong>
+                                <span>GYCT delegations across COP cycles</span>
+                            </div>
+                            <div>
+                                <strong>1</strong>
+                                <span>Shared pipeline across training, research, and tools</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-block">
+            <div class="draft-shell signup-card">
+                <div>
+                    <div class="eyebrow"><i class="fal fa-envelope-open-text" aria-hidden="true"></i> Better conversion point</div>
+                    <h2>Get updates from the rooms where decisions move</h2>
+                    <p>Instead of ending only on a generic suggestion form, the landing page can close with a tighter ask: get notified about programs, delegations, research, and briefs as they go live.</p>
+                </div>
+                <div class="signup-actions">
+                    <a class="btn-draft" href="contact">Request Updates</a>
+                    <a class="btn-draft-secondary" href="about">Compare With Current Site</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="draft-footer">
+        <div class="draft-shell draft-footer__inner">
+            <span>Draft only. This file is for review before replacing or restructuring the live homepage.</span>
+            <span>Preview assets reused from the current site to keep the direction grounded in the existing brand.</span>
+        </div>
+    </footer>
+</body>
+</html>

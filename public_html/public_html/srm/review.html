@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script data-intel-theme="boot">
+(function(){
+  var k="srm-watch-theme";
+  try{
+    var t=localStorage.getItem(k);
+    if(t==="light"||t==="dark") document.documentElement.dataset.theme=t;
+  }catch(e){}
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%230E8FA8%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2222%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2Csans-serif%22%20font-size%3D%2216%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%3ES%3C%2Ftext%3E%3C%2Fsvg%3E" type="image/svg+xml">
+<meta name="description" content="Analyst review console for confirming, overriding, or archiving AI-provisional signals.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SRM Watch">
+<meta property="og:title" content="Review Console · SRM Watch">
+<meta property="og:description" content="Analyst review console for confirming, overriding, or archiving AI-provisional signals.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Review Console · SRM Watch">
+<meta name="twitter:description" content="Analyst review console for confirming, overriding, or archiving AI-provisional signals.">
+<title>Review Console · SRM Watch</title>
+<style>
+:root,[data-theme="light"]{
+  color-scheme:light;
+  /* —— Gamma Bright (canonical) —— */
+  --color-primary:#0E8FA8;
+  --color-secondary:#0B6E90;
+  --color-tertiary:#062B3A;
+  --color-bg:#FFFFFF;
+  --color-bg-subtle:#F7F9FF;
+  --color-surface:#FFFFFF;
+  --color-on-surface:#002253;
+  --color-muted:#6B7280;
+  --color-border:#DFDFE0;
+  --color-overlay:#F7F9FF;
+  --color-error:#E5484D;
+  --color-success:#0D9B6A;
+  --color-warning:#D97706;
+  --color-info:#0E8FA8;
+  --color-neutral:#FFFFFF;
+
+  --priority-high:var(--color-error);
+  --priority-strong:var(--color-warning);
+  --priority-monitor:var(--color-muted);
+  --priority-reviewed:var(--color-success);
+
+  --radius-sm:4px;
+  --radius-md:8px;
+  --radius-lg:12px;
+  --radius-xl:18px;
+  --radius-full:9999px;
+
+  --space-xs:6px;
+  --space-sm:14px;
+  --space-md:32px;
+  --space-lg:56px;
+  --space-gutter:24px;
+  --space-section:64px;
+
+  --container-max:1200px;
+
+  --font-display:"Instrument Sans","DM Sans","Segoe UI Variable","Segoe UI",system-ui,sans-serif;
+  --font-body:"DM Sans","Segoe UI Variable","Segoe UI",system-ui,sans-serif;
+
+  --shadow-sm:0 1px 3px rgba(0,34,83,.06);
+  --shadow-md:0 4px 16px rgba(0,34,83,.08);
+
+  /* —— Legacy aliases (pre-rebrand builders) —— */
+  --bg:var(--color-bg);
+  --bg2:var(--color-bg-subtle);
+  --panel:var(--color-surface);
+  --panel2:var(--color-bg-subtle);
+  --line:var(--color-border);
+  --line2:var(--color-border);
+  --text:var(--color-on-surface);
+  --muted:var(--color-muted);
+  --faint:#94A3B8;
+  --accent:var(--color-primary);
+  --accent2:var(--color-secondary);
+  --hi:var(--color-error);
+  --hi-bg:rgba(229,72,77,.12);
+  --strong:var(--color-warning);
+  --strong-bg:rgba(217,119,6,.12);
+  --useful:var(--color-success);
+  --useful-bg:rgba(13,155,106,.12);
+  --r:var(--radius-lg);
+
+  font-size:16px;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --color-tertiary:#E8EDF7;
+  --color-bg:#0B1220;
+  --color-bg-subtle:#121A2E;
+  --color-surface:#161F33;
+  --color-on-surface:#E8EDF7;
+  --color-muted:#94A3B8;
+  --color-border:#2A3548;
+  --color-overlay:#121A2E;
+  --color-neutral:#E8EDF7;
+  --faint:#64748B;
+  --hi-bg:rgba(229,72,77,.18);
+  --strong-bg:rgba(217,119,6,.18);
+  --useful-bg:rgba(13,155,106,.18);
+  --shadow-sm:0 1px 3px rgba(0,0,0,.28);
+  --shadow-md:0 4px 16px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--color-bg);
+  color:var(--color-on-surface);
+  font-family:var(--font-body);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--color-secondary);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
+  outline:2px solid var(--color-primary);
+  outline-offset:2px;
+}
+.mono{font-family:"Cascadia Code","Consolas",ui-monospace,monospace}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+.skip-link{
+  position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus{
+  position:fixed;left:var(--space-gutter);top:12px;z-index:100;
+  width:auto;height:auto;padding:10px 16px;
+  background:var(--color-primary);color:var(--color-neutral,#fff);
+  border-radius:var(--radius-md);font-weight:600;text-decoration:none;
+}
+.intel-shell-header{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb, var(--color-bg) 94%, transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--color-border);
+  box-shadow:var(--shadow-sm);
+}
+.intel-shell-header-inner{
+  max-width:var(--container-max);margin:0 auto;
+  padding:12px var(--space-gutter);
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.intel-shell-brand{
+  display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;
+}
+.intel-shell-brand:hover{text-decoration:none}
+.intel-shell-mark{
+  width:36px;height:36px;border-radius:var(--radius-lg);
+  background:var(--color-primary);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-weight:700;font-size:1rem;flex-shrink:0;
+}
+.intel-shell-brand-text{display:flex;flex-direction:column;gap:1px}
+.intel-shell-brand-name{
+  font-family:var(--font-display);font-weight:600;font-size:.95rem;
+  color:var(--color-tertiary);letter-spacing:-.02em;line-height:1.2;
+}
+.intel-shell-brand-name span{color:var(--color-primary)}
+.intel-shell-subtitle{font-size:.78rem;color:var(--color-muted);line-height:1.3}
+.intel-shell-nav{
+  display:flex;gap:6px;flex-wrap:wrap;margin-left:auto;
+}
+.intel-shell-nav a{
+  padding:7px 14px;border-radius:var(--radius-full);
+  font-size:.84rem;font-weight:500;color:var(--color-muted);
+  border:1px solid transparent;transition:background .15s,color .15s,border-color .15s;
+  text-decoration:none;
+}
+.intel-shell-nav a:hover{
+  color:var(--color-on-surface);background:var(--color-bg-subtle);text-decoration:none;
+}
+.intel-shell-nav a.active{
+  color:#fff;background:var(--color-primary);border-color:var(--color-primary);
+}
+.intel-shell-nav a .nav-badge{
+  display:inline-block;margin-left:6px;min-width:1.25em;padding:1px 6px;
+  border-radius:var(--radius-full);font-size:.68rem;font-weight:700;line-height:1.35;
+  background:var(--color-error);color:#fff;vertical-align:1px;
+}
+.intel-shell-nav a.active .nav-badge{background:#fff;color:var(--color-primary)}
+.intel-shell-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.intel-theme-toggle{
+  background:var(--color-surface);border:1px solid var(--color-border);
+  border-radius:var(--radius-full);width:38px;height:38px;padding:0;
+  font-size:1rem;line-height:1;cursor:pointer;color:var(--color-muted);
+  transition:background .15s,border-color .15s,color .15s;
+  flex-shrink:0;
+}
+.intel-theme-toggle:hover{color:var(--color-on-surface);border-color:var(--color-primary)}
+.intel-shell-header-inner:has(.intel-shell-nav) .intel-shell-actions{margin-left:0}
+.intel-shell-header-inner:has(.intel-shell-nav) .intel-shell-nav{margin-left:auto}
+.intel-shell-main{max-width:var(--container-max);margin:0 auto;padding:0 var(--space-gutter) 80px}
+.intel-shell-footer{
+  max-width:var(--container-max);margin:0 auto;
+  padding:24px var(--space-gutter) 48px;
+  border-top:1px solid var(--color-border);
+  color:var(--color-muted);font-size:.8rem;
+  display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;
+}
+.intel-shell-footer a{color:var(--color-secondary);font-weight:500}
+@media(max-width:720px){
+  .intel-shell-nav{width:100%;margin-left:0;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}
+  .intel-shell-nav a{flex:0 0 auto}
+}
+.review-wrap{max-width:840px;margin:0 auto;padding:20px var(--space-gutter) 80px}
+.review-bar{
+  display:flex;gap:12px;align-items:center;flex-wrap:wrap;
+  padding:12px var(--space-gutter);background:var(--color-bg-subtle);
+  border-bottom:1px solid var(--color-border);margin:0 calc(-1 * var(--space-gutter)) 20px;
+}
+.review-bar .prog{color:var(--color-muted);font-size:.82rem}
+.review-bar .sp{flex:1}
+.review-bar input{
+  background:var(--color-surface);border:1px solid var(--color-border);color:var(--color-on-surface);
+  padding:8px 12px;border-radius:var(--radius-full);font:inherit;font-size:.85rem;
+}
+.review-bar .btn{
+  background:var(--color-primary);color:#fff;border:none;font-weight:600;
+  padding:9px 18px;border-radius:var(--radius-full);cursor:pointer;font:inherit;font-size:.88rem;
+}
+.review-bar .btn.ghost{background:var(--color-surface);color:var(--color-secondary);border:1px solid var(--color-border)}
+.review-bar .btn.danger{background:transparent;color:var(--color-error);border:1px solid rgba(229,72,77,.35)}
+.review-bar .btn.warn{background:transparent;color:var(--color-muted);border:1px solid var(--color-border)}
+.review-card{
+  background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);
+  padding:26px;margin-bottom:18px;box-shadow:var(--shadow-sm);
+}
+.badges{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.badge{font-size:.72rem;font-weight:600;padding:4px 11px;border-radius:var(--radius-full)}
+.badge.hi{color:var(--color-error);background:var(--hi-bg);border:1px solid rgba(229,72,77,.25)}
+.badge.strong{color:var(--color-warning);background:var(--strong-bg);border:1px solid rgba(217,119,6,.25)}
+.badge.useful{color:var(--color-success);background:var(--useful-bg);border:1px solid rgba(13,155,106,.25)}
+.badge.score{color:var(--color-primary);border:1px solid var(--color-border)}
+.badge.src,.badge.aging,.badge.stale{color:var(--color-muted);border:1px solid var(--color-border)}
+.badge.fresh,.badge.done{color:var(--color-success);background:var(--useful-bg);border:1px solid rgba(13,155,106,.25)}
+h2.title{font-size:1.32rem;font-weight:600;line-height:1.3;margin-bottom:6px;color:var(--color-tertiary)}
+.meta{color:var(--color-muted);font-size:.78rem;margin-bottom:18px}
+.block{margin-bottom:16px}
+.block h4{font-size:.72rem;font-weight:600;color:var(--color-primary);margin-bottom:5px}
+.block p{color:var(--color-on-surface);font-size:.94rem}
+.rationale{color:var(--color-muted);font-style:italic;font-size:.9rem}
+.srow{
+  display:grid;grid-template-columns:170px 1fr 64px;gap:14px;align-items:center;
+  padding:7px 0;border-bottom:1px solid var(--color-border);
+}
+.srow input[type=range]{width:100%;accent-color:var(--color-primary)}
+.srow .val{text-align:right;font-weight:600;font-family:ui-monospace,monospace}
+.srow .val.changed{color:var(--color-warning)}
+.preview{
+  display:flex;gap:14px;align-items:center;margin:16px 0 6px;padding:12px 16px;
+  background:var(--color-bg-subtle);border-radius:var(--radius-lg);
+}
+.preview .big{font-size:1.5rem;font-weight:700;font-family:ui-monospace,monospace;color:var(--color-tertiary)}
+textarea{
+  width:100%;background:var(--color-surface);border:1px solid var(--color-border);
+  color:var(--color-on-surface);border-radius:var(--radius-md);padding:11px 13px;font:inherit;
+}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.actions .sp{flex:1}
+.hint{color:var(--color-muted);font-size:.76rem;margin-top:12px}
+.empty{text-align:center;padding:50px 20px}
+.log{
+  font-family:ui-monospace,monospace;font-size:.78rem;color:var(--color-muted);
+  background:var(--color-bg-subtle);border:1px solid var(--color-border);border-radius:var(--radius-md);
+  padding:14px;margin-top:18px;max-height:340px;overflow:auto;text-align:left;white-space:pre-wrap;
+}
+.toast{
+  position:fixed;bottom:22px;left:50%;transform:translateX(-50%);
+  background:var(--color-surface);border:1px solid var(--color-border);color:var(--color-on-surface);
+  padding:11px 20px;border-radius:var(--radius-full);font-size:.86rem;opacity:0;transition:opacity .2s;
+  box-shadow:var(--shadow-md);
+}
+.toast.show{opacity:1}
+.toast.err{border-color:var(--color-error);color:var(--color-error)}
+@media(max-width:640px){
+  .srow{grid-template-columns:1fr;gap:6px}
+  .srow .val{text-align:left}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="intel-shell-header" data-intel-shell="v1">
+  <div class="intel-shell-header-inner">
+    <a class="intel-shell-brand" href="index.html">
+      <div class="intel-shell-mark" aria-hidden="true">S</div>
+      <div class="intel-shell-brand-text">
+        <div class="intel-shell-brand-name">SRM <span>Watch</span></div>
+        <div class="intel-shell-subtitle">Analyst review console</div>
+      </div>
+    </a>
+    <div class="intel-shell-actions">
+      <button type="button" class="intel-theme-toggle" id="intel-theme-toggle" aria-label="Switch to dark mode">🌙</button>
+    </div>
+    <nav class="intel-shell-nav" aria-label="Platform sections"><a class="" href="briefing.html">Brief</a><a class="" href="briefing.html#tab=watchlist">Watchlist</a><a class="" href="country-ambition.html">Countries</a><a class="" href="papers.html">Papers</a><a class="" href="organizations.html">Organizations</a><a class="active" href="review.html">Review</a></nav>
+  </div>
+</header>
+<main class="intel-shell-main" id="main-content">
+<div class="review-bar">
+  <span class="prog" id="prog">loading…</span>
+  <span class="sp"></span>
+  <input id="who" placeholder="your name" aria-label="reviewer name" style="width:130px">
+  <button class="btn ghost" id="applyBtn" title="Re-run the pipeline so your reviews take effect">Apply &amp; rebuild</button>
+</div>
+
+<div class="review-wrap" id="root"><div class="review-card">Connecting to the local server…</div></div>
+</main>
+<footer class="intel-shell-footer">
+  <span>Built 2026-06-30 · SRM Watch · Gamma Bright</span>
+  <span><a href="briefing.html">Brief</a> · <a href="briefing.html#tab=watchlist">Watchlist</a> · <a href="country-ambition.html">Countries</a> · <a href="papers.html">Papers</a></span>
+  <span>Requires dev-serve.mjs for live queue</span>
+</footer>
+<div class="toast" id="toast"></div>
+
+<script>
+var CFG = {"weights":{"credibility":0.2,"novelty":0.15,"strategic_relevance":0.25,"potential_impact":0.2,"urgency":0.1,"geographic_significance":0.1},"dims":[["credibility","Credibility","Source authority & confirmability"],["novelty","Novelty","How new the development is"],["strategic_relevance","Strategic relevance","Centrality to youth power & IE advocacy"],["potential_impact","Potential impact","Scale of consequence if it develops"],["urgency","Urgency","Does acting on it expire"],["geographic_significance","Geographic significance","Precedent portability"]],"bands":[[4.2,"high-priority"],[3.4,"strong-monitoring"],[2.6,"useful"],[0,"background"]]};
+var WEIGHTS = CFG.weights, DIMS = CFG.dims, BANDS = CFG.bands;
+var WHO = document.getElementById("who");
+WHO.value = localStorage.getItem("reviewer") || "";
+WHO.addEventListener("input", function(){ localStorage.setItem("reviewer", WHO.value); });
+
+var state = { queue: [], idx: 0, sessionDone: 0 };
+var live = {}; // current slider values for the active card
+
+function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+function round2(n){ return Math.round(n*100)/100; }
+function composite(sc){ var sum=0; for(var k in WEIGHTS){ sum += (sc[k]||0)*WEIGHTS[k]; } return round2(sum); }
+function bandFor(c){ for(var i=0;i<BANDS.length;i++){ if(c>=BANDS[i][0]) return BANDS[i][1]; } return "background"; }
+function bandCls(b){ return b==="high-priority"?"hi":b==="strong-monitoring"?"strong":"useful"; }
+function bandLbl(b){ return b==="high-priority"?"HIGH PRIORITY":b==="strong-monitoring"?"MONITOR":b.toUpperCase(); }
+
+function toast(msg, isErr){
+  var t=document.getElementById("toast");
+  t.textContent=msg; t.className="toast show"+(isErr?" err":"");
+  clearTimeout(t._t); t._t=setTimeout(function(){ t.className="toast"; }, 2600);
+}
+
+function load(){
+  fetch("/api/queue").then(function(r){ return r.json(); }).then(function(d){
+    state.queue = d.queue || [];
+    state.idx = 0;
+    render();
+  }).catch(function(e){
+    document.getElementById("root").innerHTML =
+      '<div class="review-card"><h2 class="title">No local server</h2>'
+      +'<p class="rationale">This console needs the local review server. In the research folder run:</p>'
+      +'<div class="log">node scripts/dev-serve.mjs</div>'
+      +'<p class="hint">then reload this page at http://localhost:8717/review.html</p></div>';
+  });
+}
+
+function progress(){
+  var remaining = state.queue.length - state.idx;
+  document.getElementById("prog").textContent =
+    state.sessionDone + " reviewed this session · " + (remaining>0?remaining+" left in queue":"queue clear");
+}
+
+function render(){
+  progress();
+  var root = document.getElementById("root");
+  if(state.idx >= state.queue.length){ renderDone(root); return; }
+  var s = state.queue[state.idx];
+  live = {}; for(var i=0;i<DIMS.length;i++){ var k=DIMS[i][0]; live[k]=s.scores[k]; }
+
+  var src = s.scores.source==="llm" ? "LLM-assessed" : "rule heuristics";
+  var html = '<div class="review-card">'
+    + '<div class="badges">'
+      + '<span class="badge '+bandCls(s.scores.priority_band)+'">'+bandLbl(s.scores.priority_band)+'</span>'
+      + '<span class="badge score">'+s.scores.composite.toFixed(2)+'</span>'
+      + '<span class="badge src">'+src+'</span>'
+      + '<span class="badge '+esc(s.freshness)+'">'+esc(s.freshness)+'</span>'
+      + (s.already_reviewed?'<span class="badge done">↻ re-review</span>':'')
+    + '</div>'
+    + '<h2 class="title">'+esc(s.title)+'</h2>'
+    + '<div class="meta">'+esc(s.domain)+' · '+esc(s.country)+' · '+esc(s.id)+' · seen '+esc(s.last_seen_date)+(s.corroboration>1?' · ×'+s.corroboration+' sources':'')+'</div>'
+    + '<div class="block"><h4>Summary</h4><p>'+esc(s.summary)+'</p></div>'
+    + '<div class="block"><h4>Why it matters</h4><p>'+esc(s.why_it_matters)+'</p></div>'
+    + (s.scores.rationale?'<div class="block"><h4>AI rationale</h4><p class="rationale">'+esc(s.scores.rationale)+'</p></div>':'')
+    + '<div class="block"><h4>Scores — drag to override</h4><div class="scores" id="scores"></div></div>'
+    + '<div class="preview" id="preview"></div>';
+
+  if(s.sightings && s.sightings.length){
+    html += '<div class="block sources"><h4>Sources</h4>';
+    for(var j=0;j<s.sightings.length;j++){ var g=s.sightings[j];
+      html += '<a href="'+esc(g.url)+'" target="_blank" rel="noopener noreferrer">'+esc(g.name||g.url)+(g.date?' · '+esc(g.date):'')+'</a>';
+    }
+    html += '</div>';
+  }
+  html += '<div class="block"><h4>Note (optional — why you decided this)</h4><textarea id="note" placeholder="e.g. credibility raised: primary court document confirmed"></textarea></div>'
+    + '<div class="actions">'
+      + '<button class="btn" id="saveBtn">Confirm ✓ &amp; next</button>'
+      + '<button class="btn danger" id="archiveBtn">Archive</button>'
+      + '<span class="sp"></span>'
+      + '<button class="btn warn" id="skipBtn">Skip →</button>'
+    + '</div>'
+    + '<div class="hint">Keys: <b>Enter</b> confirm/save · <b>a</b> archive · <b>s</b> skip. Reviews are saved to reviews.json; click <b>Apply &amp; rebuild</b> when done to recompute the dashboard.</div>'
+  + '</div>';
+  root.innerHTML = html;
+
+  renderScores(s);
+  document.getElementById("saveBtn").onclick = function(){ submitCurrent(); };
+  document.getElementById("archiveBtn").onclick = function(){ archiveCurrent(); };
+  document.getElementById("skipBtn").onclick = function(){ advance(); };
+}
+
+function renderScores(s){
+  var host = document.getElementById("scores");
+  var h = "";
+  for(var i=0;i<DIMS.length;i++){
+    var k=DIMS[i][0], label=DIMS[i][1], desc=DIMS[i][2], v=live[k];
+    h += '<div class="srow">'
+      + '<div class="lbl">'+esc(label)+'<small>'+esc(desc)+'</small></div>'
+      + '<input type="range" min="1" max="5" step="0.5" value="'+v+'" data-k="'+k+'">'
+      + '<div class="val" id="v_'+k+'">'+Number(v).toFixed(1)+'<div class="wt">w '+WEIGHTS[k]+'</div></div>'
+    + '</div>';
+  }
+  host.innerHTML = h;
+  var ranges = host.querySelectorAll("input[type=range]");
+  for(var r=0;r<ranges.length;r++){
+    ranges[r].addEventListener("input", function(e){
+      var k=e.target.dataset.k; live[k]=Number(e.target.value);
+      updateScoreUI(s);
+    });
+  }
+  updateScoreUI(s);
+}
+
+function changed(s){
+  for(var i=0;i<DIMS.length;i++){ var k=DIMS[i][0]; if(live[k]!==s.scores[k]) return true; }
+  return false;
+}
+
+function updateScoreUI(s){
+  for(var i=0;i<DIMS.length;i++){
+    var k=DIMS[i][0], cell=document.getElementById("v_"+k);
+    cell.innerHTML = Number(live[k]).toFixed(1)+'<div class="wt">w '+WEIGHTS[k]+'</div>';
+    cell.className = "val"+(live[k]!==s.scores[k]?" changed":"");
+  }
+  var c = composite(live), b = bandFor(c);
+  var ch = changed(s);
+  document.getElementById("preview").innerHTML =
+    '<span class="orig">was '+s.scores.composite.toFixed(2)+' '+bandLbl(s.scores.priority_band)+'</span>'
+    + '<span class="arrow">→</span>'
+    + '<span class="big" style="color:var(--'+bandCls(b)+')">'+c.toFixed(2)+'</span>'
+    + '<span class="badge '+bandCls(b)+'">'+bandLbl(b)+'</span>';
+  var btn = document.getElementById("saveBtn");
+  if(btn) btn.textContent = ch ? "Save overrides & next" : "Confirm ✓ & next";
+}
+
+function postReview(payload, after){
+  payload.reviewed_by = WHO.value || "analyst";
+  fetch("/api/review", { method:"POST", headers:{"content-type":"application/json"}, body:JSON.stringify(payload) })
+    .then(function(r){ return r.json().then(function(j){ return {ok:r.ok, j:j}; }); })
+    .then(function(res){
+      if(!res.ok){ toast(res.j.error||"save failed", true); return; }
+      state.sessionDone++;
+      after && after();
+    })
+    .catch(function(){ toast("could not reach server", true); });
+}
+
+function submitCurrent(){
+  var s = state.queue[state.idx];
+  var note = (document.getElementById("note")||{}).value || "";
+  if(changed(s)){
+    var ov = {};
+    for(var i=0;i<DIMS.length;i++){ var k=DIMS[i][0]; if(live[k]!==s.scores[k]) ov[k]=live[k]; }
+    postReview({ signal_id:s.id, action:"override", score_overrides:ov, note:note }, function(){ toast("override saved"); advance(); });
+  } else {
+    postReview({ signal_id:s.id, action:"confirm", note:note }, function(){ toast("confirmed"); advance(); });
+  }
+}
+
+function archiveCurrent(){
+  var s = state.queue[state.idx];
+  var note = (document.getElementById("note")||{}).value || "";
+  postReview({ signal_id:s.id, action:"archive", note:note }, function(){ toast("archived"); advance(); });
+}
+
+function advance(){ state.idx++; render(); }
+
+function renderDone(root){
+  root.innerHTML = '<div class="review-card empty">'
+    + '<h2>Queue clear ✓</h2>'
+    + '<p>'+state.sessionDone+' decision'+(state.sessionDone===1?"":"s")+' recorded this session. '
+    + 'Apply them to recompute scores, trends and the dashboard.</p>'
+    + '<button class="btn" id="applyBig">Apply &amp; rebuild now</button>'
+    + '<div class="log" id="applyLog" style="display:none"></div>'
+    + '</div>';
+  var big = document.getElementById("applyBig");
+  if(big) big.onclick = applyRebuild;
+}
+
+function applyRebuild(){
+  var logEl = document.getElementById("applyLog");
+  if(logEl){ logEl.style.display="block"; logEl.textContent="running pipeline…"; }
+  document.getElementById("applyBtn").disabled = true;
+  fetch("/api/apply", { method:"POST" }).then(function(r){ return r.json(); }).then(function(d){
+    if(logEl) logEl.textContent = d.log || "(no output)";
+    document.getElementById("applyBtn").disabled = false;
+    if(d.ok){ toast("rebuilt — reloading queue"); setTimeout(load, 700); }
+    else toast("pipeline failed: "+(d.failed||""), true);
+  }).catch(function(){ toast("apply failed", true); document.getElementById("applyBtn").disabled=false; });
+}
+
+document.getElementById("applyBtn").onclick = applyRebuild;
+document.addEventListener("keydown", function(e){
+  if(e.target.tagName==="TEXTAREA"||e.target.tagName==="INPUT") { if(e.key==="Enter"&&e.target.tagName==="TEXTAREA") return; }
+  if(state.idx>=state.queue.length) return;
+  if(e.key==="Enter"){ e.preventDefault(); submitCurrent(); }
+  else if(e.key==="a"){ archiveCurrent(); }
+  else if(e.key==="s"){ advance(); }
+});
+
+load();
+</script>
+<script data-intel-theme="init">
+(function(){
+  var KEY="srm-watch-theme";
+  function apply(theme){
+    document.documentElement.dataset.theme=theme;
+    var btn=document.getElementById("intel-theme-toggle");
+    if(btn){
+      btn.textContent=theme==="dark"?"\u2600":"\u{1F319}";
+      btn.setAttribute("aria-label",theme==="dark"?"Switch to light mode":"Switch to dark mode");
+    }
+    try{localStorage.setItem(KEY,theme);}catch(e){}
+    try{window.dispatchEvent(new CustomEvent("srm-theme-change",{detail:theme}));}catch(e){}
+  }
+  function preferred(){
+    try{
+      var s=localStorage.getItem(KEY);
+      if(s==="light"||s==="dark") return s;
+    }catch(e){}
+    return "light";
+  }
+  var btn=document.getElementById("intel-theme-toggle");
+  if(btn){
+    btn.addEventListener("click",function(){
+      apply(document.documentElement.dataset.theme==="dark"?"light":"dark");
+    });
+  }
+  if(!document.documentElement.dataset.theme) apply(preferred());
+  else apply(document.documentElement.dataset.theme);
+})();
+</script>
+</body>
+</html>

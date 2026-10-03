@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">GYC Foresight Aura — schema inventory</title>
+  <desc id="desc">12 labels and 16 typed label-to-label paths. Complete schema inventory with aggregate counts only.</desc>
+  <style>
+    .title{font:700 34px Georgia,serif;fill:#14261e}
+    .subtitle{font:15px "Segoe UI",sans-serif;fill:#496158}
+    .eyebrow{font:700 12px "Segoe UI",sans-serif;letter-spacing:1.8px;text-transform:uppercase;fill:#b7552b}
+    .head{font:700 13px "Segoe UI",sans-serif;letter-spacing:1px;text-transform:uppercase;fill:#496158}
+    .item{font:700 12px "Segoe UI",sans-serif;fill:#243b31}
+    .detail,.count{font:10px "Segoe UI",sans-serif;fill:#60736b}
+  </style>
+  <rect width="100%" height="100%" fill="#eef3ef"/>
+  <rect x="32" y="32" width="1536" height="936" rx="24" fill="#f7f3ea" stroke="#cbd8d1"/>
+  <text x="72" y="82" class="eyebrow">Neo4j Aura · complete schema inventory</text>
+  <text x="72" y="128" class="title">GYC Foresight Aura — schema inventory</text>
+  <text x="72" y="157" class="subtitle">12 labels and 16 typed label-to-label paths · snapshot 2026-08-30</text>
+  <text x="72" y="184" class="head">Node labels</text>
+  <text x="390" y="184" class="head">Relationship paths</text>
+  <line x1="340" y1="176" x2="340" y2="920" stroke="#cbd8d1"/>
+  <g transform="translate(72 205)">
+        <circle cx="7" cy="-4" r="7" fill="#28728a"/>
+        <text x="22" y="0" class="item">Country</text>
+        <text x="250" y="0" text-anchor="end" class="count">176</text>
+      </g>
+<g transform="translate(72 235)">
+        <circle cx="7" cy="-4" r="7" fill="#28728a"/>
+        <text x="22" y="0" class="item">Funder</text>
+        <text x="250" y="0" text-anchor="end" class="count">171</text>
+      </g>
+<g transform="translate(72 265)">
+        <circle cx="7" cy="-4" r="7" fill="#b7552b"/>
+        <text x="22" y="0" class="item">Claim</text>
+        <text x="250" y="0" text-anchor="end" class="count">2K</text>
+      </g>
+<g transform="translate(72 295)">
+        <circle cx="7" cy="-4" r="7" fill="#b7552b"/>
+        <text x="22" y="0" class="item">Signal</text>
+        <text x="250" y="0" text-anchor="end" class="count">2K</text>
+      </g>
+<g transform="translate(72 325)">
+        <circle cx="7" cy="-4" r="7" fill="#b7552b"/>
+        <text x="22" y="0" class="item">Source</text>
+        <text x="250" y="0" text-anchor="end" class="count">2K</text>
+      </g>
+<g transform="translate(72 355)">
+        <circle cx="7" cy="-4" r="7" fill="#6857a6"/>
+        <text x="22" y="0" class="item">Lens</text>
+        <text x="250" y="0" text-anchor="end" class="count">8</text>
+      </g>
+<g transform="translate(72 385)">
+        <circle cx="7" cy="-4" r="7" fill="#6857a6"/>
+        <text x="22" y="0" class="item">Pact</text>
+        <text x="250" y="0" text-anchor="end" class="count">24</text>
+      </g>
+<g transform="translate(72 415)">
+        <circle cx="7" cy="-4" r="7" fill="#6857a6"/>
+        <text x="22" y="0" class="item">Thread</text>
+        <text x="250" y="0" text-anchor="end" class="count">9</text>
+      </g>
+<g transform="translate(72 445)">
+        <circle cx="7" cy="-4" r="7" fill="#6857a6"/>
+        <text x="22" y="0" class="item">Trend</text>
+        <text x="250" y="0" text-anchor="end" class="count">9</text>
+      </g>
+<g transform="translate(72 475)">
+        <circle cx="7" cy="-4" r="7" fill="#6857a6"/>
+        <text x="22" y="0" class="item">World</text>
+        <text x="250" y="0" text-anchor="end" class="count">4</text>
+      </g>
+<g transform="translate(72 505)">
+        <circle cx="7" cy="-4" r="7" fill="#367357"/>
+        <text x="22" y="0" class="item">Org</text>
+        <text x="250" y="0" text-anchor="end" class="count">112</text>
+      </g>
+<g transform="translate(72 535)">
+        <circle cx="7" cy="-4" r="7" fill="#a06a20"/>
+        <text x="22" y="0" class="item">Moment</text>
+        <text x="250" y="0" text-anchor="end" class="count">8</text>
+      </g>
+  <g transform="translate(390 205)">
+      <text x="0" y="0" class="item">ADVANCES</text>
+      <text x="0" y="15" class="detail">Moment → Trend · 13</text>
+    </g>
+<g transform="translate(390 235)">
+      <text x="0" y="0" class="item">ALIGNED_TO</text>
+      <text x="0" y="15" class="detail">Signal → Lens · 4.6K</text>
+    </g>
+<g transform="translate(390 265)">
+      <text x="0" y="0" class="item">ALIGNED_TO</text>
+      <text x="0" y="15" class="detail">Signal → Pact · 1.4K</text>
+    </g>
+<g transform="translate(390 295)">
+      <text x="0" y="0" class="item">ALIGNED_TO</text>
+      <text x="0" y="15" class="detail">Thread → Pact · 1</text>
+    </g>
+<g transform="translate(390 325)">
+      <text x="0" y="0" class="item">CONTEXTUALIZES</text>
+      <text x="0" y="15" class="detail">Source → Claim · 454</text>
+    </g>
+<g transform="translate(390 355)">
+      <text x="0" y="0" class="item">CONTRADICTS</text>
+      <text x="0" y="15" class="detail">Signal → Signal · 10</text>
+    </g>
+<g transform="translate(390 385)">
+      <text x="0" y="0" class="item">FUNDED_BY</text>
+      <text x="0" y="15" class="detail">Signal → Funder · 225</text>
+    </g>
+<g transform="translate(390 415)">
+      <text x="0" y="0" class="item">FUNDED_BY</text>
+      <text x="0" y="15" class="detail">Thread → Funder · 1</text>
+    </g>
+<g transform="translate(390 445)">
+      <text x="0" y="0" class="item">HAS_CLAIM</text>
+      <text x="0" y="15" class="detail">Signal → Claim · 2K</text>
+    </g>
+<g transform="translate(390 475)">
+      <text x="0" y="0" class="item">IN_THREAD</text>
+      <text x="0" y="15" class="detail">Signal → Thread · 52</text>
+    </g>
+<g transform="translate(390 505)">
+      <text x="0" y="0" class="item">IN_TREND</text>
+      <text x="0" y="15" class="detail">Signal → Trend · 3.3K</text>
+    </g>
+<g transform="translate(390 535)">
+      <text x="0" y="0" class="item">MENTIONED_IN</text>
+      <text x="0" y="15" class="detail">Org → Signal · 518</text>
+    </g>
+<g transform="translate(390 565)">
+      <text x="0" y="0" class="item">MENTIONS_COUNTRY</text>
+      <text x="0" y="15" class="detail">Signal → Country · 2.8K</text>
+    </g>
+<g transform="translate(390 595)">
+      <text x="0" y="0" class="item">PRECEDES</text>
+      <text x="0" y="15" class="detail">Signal → Signal · 27</text>
+    </g>
+<g transform="translate(390 625)">
+      <text x="0" y="0" class="item">SUPPORTS</text>
+      <text x="0" y="15" class="detail">Signal → Signal · 30</text>
+    </g>
+<g transform="translate(390 655)">
+      <text x="0" y="0" class="item">SUPPORTS</text>
+      <text x="0" y="15" class="detail">Source → Claim · 1.6K</text>
+    </g>
+  <text x="72" y="944" class="detail">Schema-only export. No record IDs, names, text, properties, or private values are present.</text>
+</svg>

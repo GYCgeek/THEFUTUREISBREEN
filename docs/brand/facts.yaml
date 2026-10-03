@@ -1,0 +1,174 @@
+# facts.yaml — the ONLY source of facts for the website.
+# status: confirmed = safe to publish | unconfirmed = do not publish until a human confirms in docs/QUESTIONS.md
+# Last human review: 2026-10-03 (prepared from GYC handbook, Sky Phase roadmap and site audit)
+
+organisation:
+  name: Global Youth Coalition
+  short_name: GYC
+  founded: "COP27, Sharm El-Sheikh, 2022"
+  legal_form: "Association under Swiss law (Art. 60 ff. Swiss Civil Code), Zurich"
+  description_one_line: "A youth-led climate coalition that trains young people for climate negotiations, builds tools and research, and brings them into the rooms where decisions are made."
+  identity_note: "Changemakers, not activists. Builders and negotiators, not protesters."
+  run_by: "Largely unsalaried people under thirty"
+  countries_active: { value: "170+", status: confirmed, note: "About page currently says 178 — see Q11" }
+  credentials:
+    - { text: "Accredited Civil Society Observer to the Climate Investment Funds (CIF) Trust Funds Committee, 2025–2027 cohort", status: confirmed }
+    - { text: "Knowledge Partner of Connect4Climate (World Bank Group)", status: confirmed, note: "not yet on the site" }
+    - { text: "In partnership with Norsk Klimanettverk, Norway", status: confirmed, note: "fiscal host; publish wording only, never org numbers" }
+    - { text: "GYCT delivered with Oxford Net Zero and the Oxford Smith School (2023–2025); strategic and academic support from Oxford Net Zero in 2026", status: confirmed }
+    - { text: "Works alongside the Youth Negotiators Academy", status: confirmed }
+
+governance:
+  structure: "Founder → Administrative Circle → Chair → Champs Council → Working Teams. Authority is distributed by function, not personality."
+  chair: { name: "Merna A. Elboghdady", country: Egypt, since: "2026-09-08", status: confirmed, note: "an older note says 1 Oct 2026 — see Q12" }
+  founder: { name: "Agustín Ocaña Escobar", title: "Founder & Strategic Director", country: Ecuador, status: confirmed }
+  communications_director: { name: "Bianca Malfert", title: "Director of Communication", status: confirmed, source: "Champs 2026 First Mission", note: "roadmap writes 'Bianca M. Gutierrez' — Q3 kept open only to confirm" }
+  administrative_circle: "Institutional support and oversight: financial oversight, grant compliance, risk monitoring, partnership vetting, institutional continuity. Provides oversight without directing execution."
+  founder_role: "Strategic coherence: multi-year positioning, institutional partnerships, long-term continuity. Does not intervene in normal strategic or operational decisions. Not to be presented as connected to the Avocado Framework (its steward is Zach Lubin)."
+  chair_role: "Operational coordination: coordinates programmes and strategy execution, ensures alignment across tracks, decision authority within operational scope, participates in the Administrative Circle."
+  champs_council: "Programme leadership (11 Champs): Skills Pipeline leads (CET / LD / NBS), quarterly deliverables, initiative coordination. The primary engine of the 2026 strategy."
+  working_teams: ["Coordination & System Unit (operations and delivery)", "Comms Team (campaign implementation)", "Policy and Research Teams (research and policy support)", "Engagement Team (online and in-person events)"]
+  decision_domains:
+    strategic: "Partnerships, governance changes, large grants, direction. Proposed by Chair or Founder, reviewed by the Administrative Circle, decided by the Chair."
+    operational: "Programme structure, timelines, delivery, events. Champs propose, Council consulted, Chair decides. Consultation, not voting."
+    execution: "Logistics, scheduling, posting, meetings. No approval needed inside each person's scope."
+  rhythm: "90-day cycles: Clarity → Output → Review → Institutional memory. Mid-cycle informal check, end-of-cycle structured review."
+  diagram: "Internal draft lives in the GYC Drive (Distributed_Governance_Molecular_Diagram_3.png). Ask for it via QUESTIONS when redrawing; do not commit it."
+
+champs_2026:
+  roster:
+    # track codes: LD = Governance & Negotiation Literacy, CET = Clean Energy Transition & Green Jobs, NBS = Nature-Based Solutions & Responsible AI, CROSS = Cross-cutting systems
+    - { name: "Merna A. Elboghdady", role: "Chair", track: LD, country: Egypt }
+    - { name: "Julia Anting Wolff", track: LD, country: "Spain / Germany" }
+    - { name: "Shahnoza (Sasha) Rakhmanova", track: LD, country: Uzbekistan }
+    - { name: "Ayooluwa Folakunmi Ogunsola", track: CET, country: Nigeria }
+    - { name: "Zach Lubin", track: CET, role: "Sport & Clean Energy Transition · Avocado Framework steward", country: US }
+    - { name: "Seruni Salsabila", track: CET, role: "Fundraising", country: Indonesia }
+    - { name: "Finlay Wilson", track: NBS, country: UK }
+    - { name: "Tan Yin Yi (Henry)", track: NBS, role: "Youth House coordinator", country: Malaysia }
+    - { name: "Alice Piva", track: NBS, role: "R4P", country: Brazil }
+    - { name: "Bianca Malfert", track: CROSS, role: "Director of Communication", country: Bolivia }
+    - { name: "Genaro (Genn) Godoy", track: CROSS, role: "AI Labs & Foresight lead", country: Chile }
+    - { name: "Agustín Ocaña Escobar", track: CROSS, role: "Founder & Strategic Director", country: Ecuador }
+  commitments: "Each Champ commits to one primary track, one quarterly deliverable, one measurable community impact target, one capacity-transfer objective and a defined monthly time commitment (8–12 hours a month guideline). Renewal is annual, based on delivery."
+  values_from_agreement: [Sustainability, Proactiveness, Inclusivity, Empowerment, Collaboration]
+  values_note: "The homepage shows different values (Effective, Collaborative, Relentless, Inclusive, Innovative, Nimble) and mission_vision.html another set — see Q16"
+  letter_to_the_planet: "Each Champ writes and renews a personal Letter to the Planet (publish only with the Champ's consent)"
+  public_example: "Zach Lubin's Run-N-Ride Relays in Los Angeles — a Champ-led community event built independently and elevated through GYC (from the Operational Handbook; confirm Zach is happy to be featured)"
+  photos_dir: "/assets/images/champs/2026/"
+  former_roster: { names: [Lujain Romouzy, Shura Mercado, Raul Fretes, Sueley Calvacante, Fredrick Binamungu, Irene Delfanti], status: unconfirmed, note: "see Q2 — do not delete or relabel until answered" }
+
+strategy_2026:
+  # The strategic frame the site should express. Use these words; do not invent new framings.
+  name: "The Year We Became the Sky"
+  short: "The Year of the Sky"
+  core_shift: "From inspiration to institutionalisation"
+  public_line: "2026 is not a year of louder messaging. It is a year of discipline, perspective and structural maturity."
+  mandate: "Clarity over chaos, structure over spectacle, capability over commentary."
+  meaning: "Altitude: rising above turbulence to see patterns clearly and prepare — not decoration, not branding."
+  arc:
+    - { year: 2025, name: Ocean, meaning: "Expanded the network and connections across regions; community, storytelling, shared identity. (2025 Report: 'The year we became the Ocean')" }
+    - { year: 2026, name: Sky, meaning: "Altitude: discipline, leadership transfer, structural clarity. We are here." }
+    - { year: 2027, name: Roots, meaning: "Anchor capability locally: micro-governance pilots, local hubs, community implementation of the Avocado Framework." }
+    - { year: 2028, name: Fire, meaning: "Leverage, not rage: strategic policy engagement, financial alignment, institutional partnerships, earned credibility in negotiation spaces." }
+  arc_line: "Fire without Sky is instability. Fire after Sky is influence."
+  shift_line: "From visibility to credibility."
+  funding_line: "We are not selling outrage. We are building human infrastructure."
+  skills_pipeline:
+    lens: "The Avocado Framework is the lens; the Skills Pipeline is the delivery system."
+    tracks:
+      CET: { name: "Clean Energy Transition — green jobs and transition literacy", from_af_pillar: "Clean, Just Energy Transition" }
+      LD: { name: "Governance and negotiation literacy", from_af_pillar: "Loss & Damage" }
+      NBS: { name: "Nature-Based Solutions and responsible AI literacy", from_af_pillar: "Nature-Based Solutions", note: "Ecological literacy first, technological literacy second — in that order." }
+  programme_roles:
+    GYCT: "The intellectual engine: systems literacy, procedurally literate participants at SB and COP."
+    R4P: "The human and relational stabiliser: connection infrastructure, not protest infrastructure."
+    COP_presence: "Where GYCT's systems literacy and R4P's relational grounding converge."
+    youth_house: "One of the clearest proofs of Sky in practice: youth infrastructure, not youth presence."
+  operational_pillars: ["GYCT delivery & evolution", "Avocado Framework implementation", "Policy positioning in SB & COP processes", "Reeforesting for Peace (R4P) activation", "Project incubation & regional elevation"]
+  success_markers:
+    - "GYCT runs through distributed facilitation, not centralised leadership"
+    - "Youth engage at COP with procedural literacy, not symbolic presence"
+    - "R4P activations produce documented ecological and social outcomes"
+    - "The Avocado Framework moves from narrative into applied practice"
+    - "Independent leadership nodes work without continuous intervention"
+  timeline: "September = structural lock. October = Advanced Cohort stress test with reduced Chair intervention. November COP31 = the public audit of Sky."
+  what_gyc_is_not: "Not a social media campaign network driven by visibility metrics. Not symbolic representation. Not a centralised organisation where every initiative needs approval. Not a personality-driven platform."
+  closing_line: "WE ARE ONE."
+
+ecosystem_partners:
+  - { name: "UON.Earth (Union of Nature)", what: "Geocoded units of nature: 1 m² of protected land or 9 m² of ocean; part of each unit activated via GYC returns to the coalition", status: confirmed }
+  - { name: "Planetir", url: "https://www.planetir.org/home", what: "Shared ecosystem platform for the GYC community (founding team in Amsterdam)", status: unconfirmed, note: "public mention — see Q20" }
+
+contact:
+  address: "Speerstrasse 36, 8038 Zurich, Switzerland"
+  email: "takeaction@theglobalyouth.co"
+  phone: "+41 77 807 10 68"
+  phone_href: "tel:+41778071068"
+  research_email: { value: "gen@theglobalyouth.co", status: confirmed, note: "Foresight research team role address (already live; fix pack Q8). Other team role addresses still open in Q8." }
+  join_form: "https://docs.google.com/forms/d/e/1FAIpQLSe8ageTzIA0tmtsmmvX3KqdoOjrdyoN6FsYpNRyyauJv1kaWw/viewform"
+  social:
+    instagram: "https://www.instagram.com/theglobalyouth_co/"
+    linkedin: "https://www.linkedin.com/company/the-global-youth-coalition/"
+    x: "https://twitter.com/theglobalyouthc"
+
+numbers:
+  # Every number shown on the site must come from here, with its source available on hover/footnote where the design allows.
+  invested_in_projects: { value: "$350K+", status: confirmed, source: "GYC Report 2025" }
+  projects_mapped: { value: "5,000", status: confirmed, source: "GYC network mapping" }
+  gyct_applications_2023_2025: { value: "27,000", status: confirmed, source: "GYCT Impact Report 2025 (Oxford Net Zero)" }
+  gyct_trained: { value: "5,400", status: confirmed, source: "GYCT Impact Report 2025" }
+  gyct_mapa_share: { value: "65%", status: confirmed, source: "GYCT Impact Report 2025" }
+  gyct_indigenous_share: { value: "21%", status: confirmed, source: "GYCT Impact Report 2025" }
+  gyct_bursaries: { value: "£36,000", status: confirmed, source: "GYCT Impact Report 2025" }
+  gyct_session_views: { value: "100,000+", status: unconfirmed, note: "homepage says 60K+ — see Q10" }
+  gyct_languages: { value: "6", status: confirmed }
+  ie_survey_responses: { value: "1,000+ from 140+ countries", status: confirmed, source: "IE Impact Report, June 2026" }
+  ie_workshops_2025: { value: "9", status: confirmed }
+
+programmes:
+  gyct_2026:
+    name: "Global Youth Climate Training (GYCT) 2026"
+    page: /GYCT
+    applications_closed: "2026-08-10"
+    main_track: { dates: "September 2026, weekly", platform: "Zoom Webinar", status: completed }
+    session_1_date: { value: "2026-09-02", status: unconfirmed, note: "page says Tue 2 Sep; 2 Sep 2026 is a Wednesday — see Q1" }
+    yna_track: { dates: ["2026-09-29", "2026-10-06", "2026-10-13"], time_utc: "14:00–15:30" }
+    closing: { date: "2026-11-10", place: "Youth House, Antalya + online" }
+    learning_platform: "https://gyct.gycailabs.org"
+  youth_house:
+    name: "Youth House"
+    retired_names: ["GYC House", "GYC Innovation House", "Innovation House"]
+    place: "Kaleiçi old city, Antalya, Türkiye"
+    dates: "9–20 November 2026 (COP31)"
+    beds: 30
+    page: "https://gycailabs.org/gyc-house/"
+    note: "Name decided with partners. Replace 'GYC House' everywhere on theglobalyouth.co. Other domains are out of scope for this repo — list them in QUESTIONS."
+  hack_for_the_futures:
+    name: "Hack for the Futures"
+    url: "https://www.hackforthefutures.org/"
+    workshops: "9–13 November 2026, Youth House"
+    showcase: "18–20 November 2026, Blue and Green Zones"
+    places: 90
+    tracks: [Agro-food, Just Transition, Adaptation, Governance, "Finance & Data", Climate Empowerment, Foresight, "AI & Climate"]
+    first_edition: "London Climate Action Week, 22 June 2026"
+  ai_labs: { name: "GYC AI Labs", url: "https://gycailabs.org/" }
+  foresight_research: { name: "Futures of Intergenerational Equity, Fairness and Justice", page: /Foresight-Research }
+  avocado_framework: { url: "https://avocadoframework.org", pillars: ["Nature-Based Solutions", "Clean, Just Energy Transition", "Loss & Damage"] }
+  r4p: { name: "Reeforesting 4 Peace", page: /Reeforesting4Peace, status: "protected lane, 2027 relaunch logic" }
+  frutz: { name: "FrÜtz", url: "https://fruitz.club" }
+
+terminology:
+  use: ["Youth House", "Hack for the Futures", "Champs", "GYCT", "Avocado Framework", "Reeforesting 4 Peace (R4P)"]
+  never: ["GYC House (retired)", "Innovation House", "Hack for the Future (singular)", "Sports Dinamo / Eco Geek Guru style titles"]
+
+never_publish:
+  - phone numbers of team members (only the official GYC number)
+  - internal Sky material: Chair transition commentary, individual Champ KPIs or time commitments, ECCA reviewer scores, "AI Lucy" credits
+  - Champs' Letters to the Planet without their consent
+  - grant reports, financial remediation, payees, budgets beyond published partner prices
+  - internal forms (e.g. gycailabs.org/gyct-platform-form), Notion, Drive folders
+  - WhatsApp or other invite links
+  - personal email addresses (use takeaction@ or role addresses)
+  - participant names or data without consent
+  - fiscal host registration numbers

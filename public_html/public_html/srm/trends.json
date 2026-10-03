@@ -1,0 +1,623 @@
+{
+  "schema_version": 3,
+  "generated": "2026-06-30T00:02:00.025Z",
+  "source": "signals-db.json",
+  "migration": "scripts/migrate-signals-v3.mjs",
+  "count": 6,
+  "trends": [
+    {
+      "id": "srm-research-governance",
+      "title": "Governing SRM research",
+      "narrative": "Codes of conduct, oversight committees, transparency registers and stage-gating frameworks are emerging to govern how solar radiation modification is researched before any deployment question is reached.",
+      "lifecycle": "developing",
+      "member_signal_ids": [
+        "us-ostp-srm-research-plan-2026-05",
+        "sgrg-research-governance-platform-2026-06",
+        "india-niti-aayog-srm-regulation-plan-2026-06",
+        "tennessee-first-us-geoengineering-ban-2024-04",
+        "us-states-geoengineering-ban-bills-surge-2025",
+        "royal-society-srm-policy-briefing-2025-11",
+        "un-sg-scientific-advisory-board-srm-brief-2025-05",
+        "wcrp-climate-intervention-lighthouse-srm-gaps-2025",
+        "australia-rrap-cooling-shading-program-2025",
+        "eu-sam-srm-deployment-moratorium-advice-2024-12",
+        "us-states-arizona-montana-srm-bills-2025"
+      ],
+      "signal_count": 11,
+      "velocity": {
+        "last_30_days": 2,
+        "previous_30_days": 1,
+        "direction": "accelerating"
+      },
+      "history": [
+        {
+          "week_start": "2026-03-16",
+          "n": 0
+        },
+        {
+          "week_start": "2026-03-23",
+          "n": 0
+        },
+        {
+          "week_start": "2026-03-30",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-06",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-13",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-20",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-27",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-04",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-11",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-18",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-25",
+          "n": 1
+        },
+        {
+          "week_start": "2026-06-01",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-08",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-15",
+          "n": 1
+        },
+        {
+          "week_start": "2026-06-22",
+          "n": 1
+        },
+        {
+          "week_start": "2026-06-29",
+          "n": 0
+        }
+      ],
+      "geographic_spread": {
+        "countries": [
+          "AU",
+          "EU",
+          "GB",
+          "IN",
+          "International",
+          "US"
+        ],
+        "count": 6
+      },
+      "first_signal_date": "2024-04-01",
+      "latest_signal_date": "2026-06-23",
+      "avg_composite_score": 3.64,
+      "review_status": "ai_provisional",
+      "discovered": false
+    },
+    {
+      "id": "moratoria-and-non-use",
+      "title": "Moratoria and the non-use debate",
+      "narrative": "From the CBD de facto moratorium to the proposed International Non-Use Agreement and national bans, a restrictive governance pole is consolidating against open-air SRM.",
+      "lifecycle": "developing",
+      "member_signal_ids": [
+        "cbd-geoengineering-moratorium-reaffirmed-2026-06",
+        "mexico-restricts-solar-geoengineering-experiments-2026-04",
+        "switzerland-unea-srm-governance-push-2026-03",
+        "eu-council-srm-moratorium-call-2026-04",
+        "european-parliament-srm-moratorium-position-2026-06",
+        "florida-geoengineering-ban-law-2025-06",
+        "amcen20-africa-non-use-agreement-call-2025-07",
+        "french-academy-sciences-srm-deployment-ban-2025-10",
+        "unea7-srm-governance-no-consensus-2025-12",
+        "unep-wmo-srm-science-policy-dialogue-2025-05"
+      ],
+      "signal_count": 10,
+      "velocity": {
+        "last_30_days": 2,
+        "previous_30_days": 0,
+        "direction": "accelerating"
+      },
+      "history": [
+        {
+          "week_start": "2026-03-16",
+          "n": 0
+        },
+        {
+          "week_start": "2026-03-23",
+          "n": 0
+        },
+        {
+          "week_start": "2026-03-30",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-06",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-13",
+          "n": 1
+        },
+        {
+          "week_start": "2026-04-20",
+          "n": 1
+        },
+        {
+          "week_start": "2026-04-27",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-04",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-11",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-18",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-25",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-01",
+          "n": 1
+        },
+        {
+          "week_start": "2026-06-08",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-15",
+          "n": 1
+        },
+        {
+          "week_start": "2026-06-22",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-29",
+          "n": 0
+        }
+      ],
+      "geographic_spread": {
+        "countries": [
+          "CH",
+          "EU",
+          "FR",
+          "International",
+          "MX",
+          "US"
+        ],
+        "count": 6
+      },
+      "first_signal_date": "2025-06-01",
+      "latest_signal_date": "2026-06-20",
+      "avg_composite_score": 3.68,
+      "review_status": "ai_provisional",
+      "discovered": false
+    },
+    {
+      "id": "outdoor-experiments",
+      "title": "Outdoor experiments and field trials",
+      "narrative": "Proposed and contested open-air experiments — stratospheric balloon tests, marine cloud brightening trials — are the friction point where research governance meets public consent.",
+      "lifecycle": "developing",
+      "member_signal_ids": [
+        "aria-cambridge-novel-sai-materials-grant-2025-06",
+        "aria-uk-outdoor-experiments-disclosed-2026-04",
+        "uw-mcb-caare-alameda-halted-2024-06",
+        "stardust-shelves-outdoor-experiment-2026-06",
+        "harvard-scopex-experiment-scrapped-2024-03",
+        "australia-rrap-mcb-first-outdoor-trial-2025"
+      ],
+      "signal_count": 6,
+      "velocity": {
+        "last_30_days": 1,
+        "previous_30_days": 0,
+        "direction": "accelerating"
+      },
+      "history": [
+        {
+          "week_start": "2026-03-16",
+          "n": 0
+        },
+        {
+          "week_start": "2026-03-23",
+          "n": 0
+        },
+        {
+          "week_start": "2026-03-30",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-06",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-13",
+          "n": 1
+        },
+        {
+          "week_start": "2026-04-20",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-27",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-04",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-11",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-18",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-25",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-01",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-08",
+          "n": 1
+        },
+        {
+          "week_start": "2026-06-15",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-22",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-29",
+          "n": 0
+        }
+      ],
+      "geographic_spread": {
+        "countries": [
+          "AU",
+          "GB",
+          "US"
+        ],
+        "count": 3
+      },
+      "first_signal_date": "2024-03-01",
+      "latest_signal_date": "2026-06-10",
+      "avg_composite_score": 3.68,
+      "review_status": "ai_provisional",
+      "discovered": false
+    },
+    {
+      "id": "methods-and-science",
+      "title": "Methods and atmospheric science",
+      "narrative": "Modelling studies and method development across SAI, MCB, cirrus thinning, surface albedo and space-based concepts shape what is considered technically plausible and what risks dominate.",
+      "lifecycle": "developing",
+      "member_signal_ids": [
+        "stardust-particle-preprints-released-2026-01",
+        "ucl-low-altitude-sai-existing-aircraft-2025-04",
+        "upper-stratosphere-absorptive-aerosol-sai-study-2025",
+        "geoengineering-engineering-reality-check-2026-06",
+        "geomip-srm-model-intercomparison-ongoing-2025"
+      ],
+      "signal_count": 5,
+      "velocity": {
+        "last_30_days": 1,
+        "previous_30_days": 0,
+        "direction": "accelerating"
+      },
+      "history": [
+        {
+          "week_start": "2026-03-16",
+          "n": 0
+        },
+        {
+          "week_start": "2026-03-23",
+          "n": 0
+        },
+        {
+          "week_start": "2026-03-30",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-06",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-13",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-20",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-27",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-04",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-11",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-18",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-25",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-01",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-08",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-15",
+          "n": 1
+        },
+        {
+          "week_start": "2026-06-22",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-29",
+          "n": 0
+        }
+      ],
+      "geographic_spread": {
+        "countries": [
+          "GB",
+          "International",
+          "US"
+        ],
+        "count": 3
+      },
+      "first_signal_date": "2025-04-15",
+      "latest_signal_date": "2026-06-18",
+      "avg_composite_score": 3.37,
+      "review_status": "ai_provisional",
+      "discovered": false
+    },
+    {
+      "id": "equity-and-public-voice",
+      "title": "Equity, Global South and public voice",
+      "narrative": "Who decides, who is exposed and who consents — Global South leadership, climate justice framing, indigenous rights and public deliberation are increasingly central to SRM governance.",
+      "lifecycle": "developing",
+      "member_signal_ids": [
+        "degrees-global-forum-cape-town-2025-05",
+        "saami-council-fpic-scopex-intervention-2021-03",
+        "srm-international-non-use-agreement-scholars-2022-01",
+        "srm360-african-perspectives-policy-briefings-2025",
+        "first-majority-female-srm-modelling-team-2025",
+        "global-south-srm-diplomacy-expanding-roles-2026"
+      ],
+      "signal_count": 6,
+      "velocity": {
+        "last_30_days": 0,
+        "previous_30_days": 0,
+        "direction": "steady"
+      },
+      "history": [
+        {
+          "week_start": "2026-03-16",
+          "n": 0
+        },
+        {
+          "week_start": "2026-03-23",
+          "n": 0
+        },
+        {
+          "week_start": "2026-03-30",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-06",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-13",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-20",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-27",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-04",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-11",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-18",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-25",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-01",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-08",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-15",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-22",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-29",
+          "n": 0
+        }
+      ],
+      "geographic_spread": {
+        "countries": [
+          "AR",
+          "International",
+          "SE",
+          "ZA"
+        ],
+        "count": 4
+      },
+      "first_signal_date": "2021-03-02",
+      "latest_signal_date": "2026-01-20",
+      "avg_composite_score": 3.37,
+      "review_status": "ai_provisional",
+      "discovered": false
+    },
+    {
+      "id": "commercial-and-non-state-actors",
+      "title": "Commercial and non-state actors",
+      "narrative": "Startups, unilateral actors, philanthropy and research funders are entering a field historically confined to academia, raising questions about rogue deployment and accountability.",
+      "lifecycle": "developing",
+      "member_signal_ids": [
+        "make-sunsets-commercial-aerosol-deployment-2026-06",
+        "uk-aria-exploring-climate-cooling-programme-2025-05",
+        "stardust-solutions-60m-raise-2025-10",
+        "uchicago-climate-systems-engineering-initiative-2024",
+        "stardust-engineered-particle-unveiled-regulation-call-2026-06",
+        "uk-nerc-srm-modelling-projects-public-dialogue-2025"
+      ],
+      "signal_count": 6,
+      "velocity": {
+        "last_30_days": 3,
+        "previous_30_days": 0,
+        "direction": "accelerating"
+      },
+      "history": [
+        {
+          "week_start": "2026-03-16",
+          "n": 0
+        },
+        {
+          "week_start": "2026-03-23",
+          "n": 0
+        },
+        {
+          "week_start": "2026-03-30",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-06",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-13",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-20",
+          "n": 0
+        },
+        {
+          "week_start": "2026-04-27",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-04",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-11",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-18",
+          "n": 0
+        },
+        {
+          "week_start": "2026-05-25",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-01",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-08",
+          "n": 1
+        },
+        {
+          "week_start": "2026-06-15",
+          "n": 0
+        },
+        {
+          "week_start": "2026-06-22",
+          "n": 1
+        },
+        {
+          "week_start": "2026-06-29",
+          "n": 0
+        }
+      ],
+      "geographic_spread": {
+        "countries": [
+          "GB",
+          "International",
+          "US"
+        ],
+        "count": 3
+      },
+      "first_signal_date": "2025-05-15",
+      "latest_signal_date": "2026-06-23",
+      "avg_composite_score": 3.45,
+      "review_status": "ai_provisional",
+      "discovered": false
+    }
+  ],
+  "unassigned_signal_ids": [
+    "ipcc-ar7-first-explicit-srm-assessment-2025",
+    "srm-monsoon-disruption-concern-india-2026-06",
+    "djsg-just-deliberation-solar-geoengineering-2025"
+  ]
+}

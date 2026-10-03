@@ -1,0 +1,1104 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script data-intel-theme="boot">
+(function(){
+  var k="gyc-foresight-theme";
+  try{
+    var t=localStorage.getItem(k);
+    if(t==="light"||t==="dark") document.documentElement.dataset.theme=t;
+  }catch(e){}
+})();
+</script>
+<script data-intel-shell="boot">
+(function(){
+  var k="gyc-foresight-nav";
+  try{
+    var v=localStorage.getItem(k);
+    if(v==="collapsed"||v==="expanded") document.documentElement.dataset.nav=v;
+  }catch(e){}
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%233B68F6%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2222%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2Csans-serif%22%20font-size%3D%2216%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%3EF%3C%2Ftext%3E%3C%2Fsvg%3E" type="image/svg+xml">
+<meta name="description" content="Conference signal packs for SB64 Bonn, London Climate Action Week, and the UN Global Dialogue on AI Governance (Geneva) 2026.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Foresight for Intergenerational Fairness Intelligence platform">
+<meta property="og:title" content="Conferences · Foresight for Intergenerational Fairness Intelligence platform">
+<meta property="og:description" content="Conference signal packs for SB64 Bonn, London Climate Action Week, and the UN Global Dialogue on AI Governance (Geneva) 2026.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Conferences · Foresight for Intergenerational Fairness Intelligence platform">
+<meta name="twitter:description" content="Conference signal packs for SB64 Bonn, London Climate Action Week, and the UN Global Dialogue on AI Governance (Geneva) 2026.">
+<title>Conferences · Foresight for Intergenerational Fairness Intelligence platform</title>
+<style>
+:root,[data-theme="light"]{
+  color-scheme:light;
+  /* —— Gamma Bright (canonical) —— */
+  --color-primary:#3B68F6;
+  --color-secondary:#0858F7;
+  --color-tertiary:#002253;
+  --color-bg:#FFFFFF;
+  --color-bg-subtle:#F7F9FF;
+  --color-surface:#FFFFFF;
+  --color-on-surface:#002253;
+  --color-muted:#6B7280;
+  --color-border:#DFDFE0;
+  --color-overlay:#F7F9FF;
+  --color-error:#E5484D;
+  --color-success:#0D9B6A;
+  --color-warning:#D97706;
+  --color-info:#3B68F6;
+  --color-neutral:#FFFFFF;
+
+  --priority-high:var(--color-error);
+  --priority-strong:var(--color-warning);
+  --priority-monitor:var(--color-muted);
+  --priority-reviewed:var(--color-success);
+
+  /* —— Categorical ramp (non-semantic data series) ——
+     Brand-tuned blue→indigo→teal arc. Deliberately avoids the semantic
+     error/warning/success hues so neutral categories never read as good/bad.
+     Use for: country-ambition dimension bars, Three Horizons (ordinal), etc. */
+  --cat-1:#1F44C9;  /* deep blue   */
+  --cat-2:#3B68F6;  /* brand blue  */
+  --cat-3:#2E9BD6;  /* sky         */
+  --cat-4:#6457E8;  /* indigo      */
+  --cat-5:#0E9C97;  /* teal        */
+  --cat-6:#7B86C4;  /* slate-blue  */
+  --cat-7:#9D6FD0;  /* lavender    */
+  --cat-area:rgba(59,104,246,.12); /* translucent primary — sparkline/area fills */
+  --cat-area-line:rgba(59,104,246,.30);
+
+  --radius-sm:4px;
+  --radius-md:8px;
+  --radius-lg:12px;
+  --radius-xl:18px;
+  --radius-full:9999px;
+
+  --space-xs:6px;
+  --space-sm:14px;
+  --space-md:32px;
+  --space-lg:56px;
+  --space-gutter:24px;
+  --space-section:64px;
+
+  --container-max:1200px;
+
+  --font-display:"Instrument Sans","DM Sans","Segoe UI Variable","Segoe UI",system-ui,sans-serif;
+  --font-body:"DM Sans","Segoe UI Variable","Segoe UI",system-ui,sans-serif;
+
+  --shadow-sm:0 1px 3px rgba(0,34,83,.06);
+  --shadow-md:0 4px 16px rgba(0,34,83,.08);
+
+  /* —— Legacy aliases (pre-rebrand builders) —— */
+  --bg:var(--color-bg);
+  --bg2:var(--color-bg-subtle);
+  --panel:var(--color-surface);
+  --panel2:var(--color-bg-subtle);
+  --line:var(--color-border);
+  --line2:var(--color-border);
+  --text:var(--color-on-surface);
+  --muted:var(--color-muted);
+  --faint:#94A3B8;
+  --accent:var(--color-primary);
+  --accent2:var(--color-secondary);
+  --hi:var(--color-error);
+  --hi-bg:rgba(229,72,77,.12);
+  --strong:var(--color-warning);
+  --strong-bg:rgba(217,119,6,.12);
+  --useful:var(--color-success);
+  --useful-bg:rgba(13,155,106,.12);
+  --r:var(--radius-lg);
+
+  font-size:16px;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --color-tertiary:#E8EDF7;
+  --color-bg:#0B1220;
+  --color-bg-subtle:#121A2E;
+  --color-surface:#161F33;
+  --color-on-surface:#E8EDF7;
+  --color-muted:#94A3B8;
+  --color-border:#2A3548;
+  --color-overlay:#121A2E;
+  --color-neutral:#E8EDF7;
+  --faint:#64748B;
+  /* lift the darkest categorical hues so solid bars stay legible on dark bg */
+  --cat-1:#3A5BE0;
+  --cat-4:#7E72F0;
+  --cat-6:#9AA3D6;
+  --cat-7:#B492EC;
+  --cat-area:rgba(59,104,246,.20);
+  --cat-area-line:rgba(59,104,246,.40);
+  --hi-bg:rgba(229,72,77,.18);
+  --strong-bg:rgba(217,119,6,.18);
+  --useful-bg:rgba(13,155,106,.18);
+  --shadow-sm:0 1px 3px rgba(0,0,0,.28);
+  --shadow-md:0 4px 16px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--color-bg);
+  color:var(--color-on-surface);
+  font-family:var(--font-body);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--color-secondary);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
+  outline:2px solid var(--color-primary);
+  outline-offset:2px;
+}
+.mono{font-family:"Cascadia Code","Consolas",ui-monospace,monospace}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+:root{
+  --shell-sidebar-width:264px;
+  --shell-rail-width:76px;
+  --shell-nav-w:var(--shell-sidebar-width);
+  --shell-sticky-top:60px;
+}
+.skip-link{
+  position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus{
+  position:fixed;left:var(--space-gutter);top:12px;z-index:100;
+  width:auto;height:auto;padding:10px 16px;
+  background:var(--color-primary);color:#fff;
+  border-radius:var(--radius-md);font-weight:600;text-decoration:none;
+}
+
+/* ---- slim top bar ---- */
+.intel-shell-header{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb, var(--color-bg) 88%, transparent);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--color-border);
+}
+.intel-shell-header-inner{
+  position:relative;
+  min-height:var(--shell-sticky-top);margin:0 auto;
+  padding:9px var(--space-gutter);
+  display:flex;align-items:center;gap:14px;
+}
+.intel-shell-brand{
+  display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit;min-width:0;
+}
+.intel-shell-brand:hover{text-decoration:none}
+.intel-shell-mark{
+  width:34px;height:34px;border-radius:10px;
+  background:linear-gradient(150deg,var(--color-primary),var(--color-secondary));
+  color:#fff;display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-weight:700;font-size:1rem;flex-shrink:0;
+  box-shadow:0 2px 8px rgba(59,104,246,.28);
+}
+.intel-shell-brand-text{display:flex;flex-direction:column;gap:1px;min-width:0}
+.intel-shell-brand-name{
+  font-family:var(--font-display);font-weight:600;font-size:.95rem;
+  color:var(--color-on-surface);line-height:1.2;white-space:nowrap;
+}
+.intel-shell-brand-name span{color:var(--color-primary)}
+.intel-shell-subtitle{font-size:.76rem;color:var(--color-muted);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* GYC AI Labs logo: full lockup where there's room, mark in the rail / slim bars */
+.intel-brand-logo{width:150px;height:auto;display:block}
+.intel-brand-mark{width:38px;height:auto;display:none}
+
+/* ---- search + actions ---- */
+.intel-shell-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.intel-shell-search{position:relative;display:flex;align-items:center;width:min(100%,340px)}
+.intel-shell-search input{
+  width:100%;height:38px;border:1px solid var(--color-border);
+  border-radius:var(--radius-full);background:var(--color-surface);
+  color:var(--color-on-surface);font:inherit;font-size:.84rem;
+  padding:8px 14px 8px 36px;transition:border-color .15s,box-shadow .15s;
+}
+.intel-shell-search input::placeholder{color:var(--color-muted)}
+.intel-shell-search input:focus{
+  border-color:var(--color-primary);box-shadow:0 0 0 3px rgba(59,104,246,.14);outline:none;
+}
+.intel-shell-search svg{
+  position:absolute;left:13px;top:50%;transform:translateY(-50%);
+  width:15px;height:15px;stroke:var(--color-muted);pointer-events:none;
+}
+.intel-theme-toggle{
+  background:var(--color-surface);border:1px solid var(--color-border);
+  border-radius:var(--radius-full);width:38px;height:38px;padding:0;
+  font-size:1rem;line-height:1;cursor:pointer;color:var(--color-muted);
+  transition:background .15s,border-color .15s,color .15s;flex-shrink:0;
+}
+.intel-theme-toggle:hover{color:var(--color-on-surface);border-color:var(--color-primary)}
+
+/* ---- sidebar (mobile-first: horizontal strip) ---- */
+.intel-shell-sidebar{
+  background:var(--color-surface);border-bottom:1px solid var(--color-border);
+}
+.intel-shell-sidebar-head{display:none}
+.intel-shell-sidebar-inner{display:flex;flex-direction:column;gap:18px}
+.intel-shell-sidebar-title{
+  display:block;color:var(--color-muted);font-size:.66rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px 8px;
+}
+.intel-shell-group{min-width:0}
+.intel-shell-group-disclosure>summary{
+  min-height:40px;display:flex;align-items:center;gap:11px;padding:8px 13px;border-radius:var(--radius-md);
+  color:var(--color-muted);font-size:.86rem;font-weight:650;cursor:pointer;list-style:none;
+  transition:background .15s,color .15s
+}
+.intel-shell-group-disclosure>summary::-webkit-details-marker{display:none}
+.intel-shell-group-disclosure>summary:hover{background:var(--color-bg-subtle);color:var(--color-on-surface)}
+.intel-shell-group-disclosure>summary .nav-ico{width:19px;height:19px;flex:0 0 19px}
+.intel-shell-group-disclosure>summary .group-chevron{width:14px;height:14px;margin-left:auto;transition:transform .18s ease}
+.intel-shell-group-disclosure[open]>summary{color:var(--color-on-surface)}
+.intel-shell-group-disclosure[open]>summary .group-chevron{transform:rotate(180deg)}
+.intel-shell-group-disclosure>.intel-shell-nav{margin-top:4px;padding-left:8px}
+.intel-shell-nav{display:flex;gap:6px}
+.intel-shell-nav::-webkit-scrollbar{display:none}
+.intel-shell-nav{scrollbar-width:none}
+.intel-shell-nav a{
+  display:flex;align-items:center;gap:11px;position:relative;
+  padding:8px 13px;border-radius:var(--radius-md);
+  font-size:.86rem;font-weight:500;color:var(--color-muted);
+  border:1px solid transparent;text-decoration:none;white-space:nowrap;
+  transition:background .15s,color .15s,border-color .15s,box-shadow .15s;
+}
+.intel-shell-nav a .nav-ico{width:19px;height:19px;flex:0 0 19px;opacity:.9}
+.intel-shell-nav a:hover{
+  color:var(--color-on-surface);background:var(--color-bg-subtle);text-decoration:none;
+}
+.intel-shell-nav a.active{
+  color:var(--color-primary);background:color-mix(in srgb,var(--color-primary) 10%,var(--color-surface));
+  border-color:color-mix(in srgb,var(--color-primary) 20%,var(--color-border));
+  box-shadow:inset 3px 0 0 var(--color-primary);font-weight:700;
+}
+.intel-shell-nav a.active .nav-ico{opacity:1}
+.intel-shell-nav a .nav-badge{
+  margin-left:auto;min-width:1.3em;padding:1px 6px;text-align:center;
+  border-radius:var(--radius-full);font-size:.68rem;font-weight:700;line-height:1.35;
+  background:var(--color-error);color:#fff;
+}
+.intel-shell-nav a.active .nav-badge{background:var(--color-primary);color:#fff}
+.intel-nav-toggle{
+  display:none;align-items:center;justify-content:center;
+  width:32px;height:32px;flex:0 0 32px;padding:0;cursor:pointer;
+  background:transparent;border:1px solid transparent;border-radius:var(--radius-md);
+  color:var(--color-muted);transition:background .15s,color .15s,border-color .15s;
+}
+.intel-nav-toggle:hover{color:var(--color-on-surface);background:var(--color-bg-subtle);border-color:var(--color-border)}
+.intel-nav-toggle svg{width:18px;height:18px}
+.intel-mobile-menu,.intel-mobile-close{
+  display:none;align-items:center;justify-content:center;
+  width:38px;height:38px;flex:0 0 38px;padding:0;cursor:pointer;
+  background:var(--color-surface);border:1px solid var(--color-border);
+  border-radius:var(--radius-md);color:var(--color-on-surface);
+  transition:border-color .15s,background .15s;
+}
+.intel-mobile-menu:hover,.intel-mobile-close:hover{border-color:var(--color-primary)}
+.intel-mobile-menu svg,.intel-mobile-close svg{width:20px;height:20px}
+.intel-shell-scrim{display:none}
+.intel-shell-sidebar-note{
+  color:var(--color-muted);font-size:.73rem;line-height:1.45;
+}
+.intel-shell-main{max-width:var(--container-max);margin:0 auto;padding:0 var(--space-gutter) 80px}
+.intel-shell-footer{
+  max-width:var(--container-max);margin:0 auto;
+  padding:24px var(--space-gutter) 48px;
+  border-top:1px solid var(--color-border);
+  color:var(--color-muted);font-size:.8rem;
+  display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;
+}
+.intel-shell-footer a{color:var(--color-secondary);font-weight:500}
+
+/* ---- desktop: fixed navigator, collapsible ---- */
+@media(min-width:960px){
+  body{padding-left:var(--shell-nav-w);transition:padding-left .22s ease}
+  .intel-shell-main{max-width:none;padding-left:max(var(--space-gutter),calc((100vw - var(--shell-nav-w) - var(--container-max))/2 + var(--space-gutter)));padding-right:max(var(--space-gutter),calc((100vw - var(--shell-nav-w) - var(--container-max))/2 + var(--space-gutter)))}
+  .intel-shell-footer{max-width:none}
+  .intel-shell-sidebar{
+    position:fixed;inset:0 auto 0 0;z-index:70;width:var(--shell-nav-w);
+    display:flex;flex-direction:column;padding:0;overflow:hidden;
+    border-right:1px solid var(--color-border);border-bottom:none;
+    background:linear-gradient(180deg,var(--color-surface),var(--color-bg-subtle));
+    transition:width .22s ease;
+  }
+  .intel-shell-sidebar-head{
+    display:flex;align-items:flex-start;gap:8px;
+    padding:16px 14px 10px;min-height:var(--shell-sticky-top);
+  }
+  .intel-shell-sidebar-head .intel-shell-brand{flex:1;min-width:0}
+  .intel-shell-sidebar-head .intel-nav-toggle{display:flex;margin-left:auto;margin-top:2px}
+  .intel-shell-sidebar-inner{
+    flex:1;overflow-y:auto;overflow-x:hidden;
+    padding:8px 12px 14px;gap:18px;
+  }
+  .intel-shell-nav{flex-direction:column;gap:3px}
+  .intel-shell-nav a{width:100%;min-height:38px}
+  .intel-shell-group + .intel-shell-group{
+    border-top:1px solid color-mix(in srgb,var(--color-border) 72%,transparent);
+    padding-top:14px;
+  }
+  .intel-shell-sidebar-foot{
+    border-top:1px solid var(--color-border);padding:12px 14px;
+    display:flex;flex-direction:column;gap:12px;
+  }
+  .intel-shell-sidebar-foot .intel-shell-sidebar-note{margin:0}
+  /* header on desktop: brand lives in sidebar; centre the global search, pin actions right */
+  .intel-shell-header .intel-shell-brand{display:none}
+  .intel-shell-header-inner{justify-content:center}
+  .intel-shell-search{width:min(560px,52vw)}
+  .intel-shell-actions{position:absolute;right:var(--space-gutter);top:50%;transform:translateY(-50%);margin:0}
+
+  /* collapsed rail */
+  html[data-nav="collapsed"]{--shell-nav-w:var(--shell-rail-width)}
+  html[data-nav="collapsed"] .intel-shell-sidebar-head{flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:14px 0 12px}
+  html[data-nav="collapsed"] .intel-shell-sidebar-head .intel-shell-brand{flex:0}
+  html[data-nav="collapsed"] .intel-brand-logo{display:none}
+  html[data-nav="collapsed"] .intel-brand-mark{display:block;width:40px}
+  html[data-nav="collapsed"] .intel-shell-sidebar-head .intel-nav-toggle{margin:0}
+  html[data-nav="collapsed"] .intel-shell-sidebar-inner{padding:8px 12px 14px}
+  html[data-nav="collapsed"] .intel-shell-sidebar-title{opacity:0;height:0;margin:0;overflow:hidden}
+  html[data-nav="collapsed"] .intel-shell-group-disclosure>summary{justify-content:center;padding:9px 0}
+  html[data-nav="collapsed"] .intel-shell-group-disclosure>summary .group-label,
+  html[data-nav="collapsed"] .intel-shell-group-disclosure>summary .group-chevron{display:none}
+  html[data-nav="collapsed"] .intel-shell-group-disclosure>.intel-shell-nav{padding-left:0}
+  html[data-nav="collapsed"] .intel-shell-group + .intel-shell-group{border-top:1px solid var(--color-border);padding-top:14px}
+  html[data-nav="collapsed"] .intel-shell-nav a{justify-content:center;padding:9px 0;gap:0}
+  html[data-nav="collapsed"] .intel-shell-nav a .nav-txt{display:none}
+  html[data-nav="collapsed"] .intel-shell-nav a .nav-badge{
+    position:absolute;top:3px;right:8px;margin:0;min-width:0;width:7px;height:7px;padding:0;
+    font-size:0;line-height:0;border-radius:50%;
+  }
+  html[data-nav="collapsed"] .intel-shell-sidebar-foot{padding:12px 8px;align-items:center}
+  html[data-nav="collapsed"] .intel-shell-sidebar-note{display:none}
+  /* tooltips on the rail */
+  html[data-nav="collapsed"] .intel-shell-nav a::after{
+    content:attr(data-label);
+    position:absolute;left:calc(100% + 12px);top:50%;transform:translateY(-50%) scale(.96);
+    transform-origin:left center;
+    background:var(--color-on-surface);color:var(--color-surface);
+    padding:5px 10px;border-radius:7px;font-size:.76rem;font-weight:600;white-space:nowrap;
+    opacity:0;pointer-events:none;transition:opacity .12s,transform .12s;
+    box-shadow:var(--shadow-md);z-index:90;
+  }
+  html[data-nav="collapsed"] .intel-shell-nav a:hover::after,
+  html[data-nav="collapsed"] .intel-shell-nav a:focus-visible::after{opacity:1;transform:translateY(-50%) scale(1)}
+}
+
+/* ---- narrow screens: off-canvas drawer (hamburger) ---- */
+@media(max-width:959px){
+  :root{--shell-sticky-top:0px}
+  .intel-shell-header-inner{flex-wrap:wrap;padding:8px var(--space-gutter);gap:10px}
+  /* slim header: hamburger + mark + search; full lockup lives inside the drawer */
+  .intel-shell-header .intel-brand-logo{display:none}
+  .intel-shell-header .intel-brand-mark{display:block;width:32px}
+  .intel-mobile-menu{display:flex;order:0}
+  .intel-shell-header .intel-shell-brand{order:1}
+  .intel-shell-actions{order:2}
+  .intel-shell-search{order:3;width:100%;max-width:none;margin-left:0}
+
+  /* sidebar slides in from the left as a drawer, hidden by default */
+  .intel-shell-sidebar{
+    position:fixed;inset:0 auto 0 0;z-index:85;
+    width:min(322px,86vw);max-width:none;
+    display:flex;flex-direction:column;padding:0;overflow:hidden;
+    border-right:1px solid var(--color-border);border-bottom:none;
+    background:var(--color-surface);
+    transform:translateX(-100%);transition:transform .24s ease;
+  }
+  html[data-mobile-nav="open"] .intel-shell-sidebar{transform:translateX(0);box-shadow:var(--shadow-lg)}
+  .intel-shell-sidebar-head{
+    display:flex;align-items:center;gap:10px;
+    padding:13px 15px;min-height:56px;border-bottom:1px solid var(--color-border);
+  }
+  .intel-shell-sidebar-head .intel-shell-brand{flex:1;min-width:0}
+  .intel-shell-sidebar-head .intel-brand-logo{display:block;width:132px}
+  .intel-shell-sidebar-head .intel-brand-mark{display:none}
+  .intel-nav-toggle{display:none}
+  .intel-mobile-close{display:flex;margin-left:auto}
+  .intel-shell-sidebar-inner{
+    flex:1;overflow-y:auto;overflow-x:hidden;
+    max-width:none;margin:0;padding:12px 12px 20px;gap:18px;
+  }
+  .intel-shell-sidebar-title{display:block;margin:0 0 7px 6px;padding:0;font-size:.64rem}
+  .intel-shell-group{display:block;min-width:0}
+  .intel-shell-group + .intel-shell-group{
+    border-top:1px solid var(--color-border);padding-top:14px;margin-top:2px;
+  }
+  .intel-shell-nav{flex-direction:column;gap:3px;width:100%;overflow:visible}
+  .intel-shell-nav a{width:100%;flex:0 0 auto;padding:10px 13px;font-size:.9rem}
+  .intel-shell-nav a .nav-badge{margin-left:auto}
+  .intel-shell-sidebar-foot{
+    display:flex;flex-direction:column;gap:10px;
+    border-top:1px solid var(--color-border);padding:12px 15px;
+  }
+
+  /* backdrop */
+  .intel-shell-scrim{
+    display:block;position:fixed;inset:0;z-index:84;
+    background:rgba(0,0,0,.45);opacity:0;visibility:hidden;
+    transition:opacity .24s,visibility .24s;
+  }
+  html[data-mobile-nav="open"] .intel-shell-scrim{opacity:1;visibility:visible}
+  html[data-mobile-nav="open"] body{overflow:hidden}
+}
+.page-title{margin:28px 0 8px;font-family:var(--font-display);font-size:1.5rem;font-weight:600;color:var(--color-tertiary);letter-spacing:-.02em}
+.page-lead{color:var(--color-muted);font-size:.95rem;max-width:62ch;margin-bottom:20px;line-height:1.55}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.conf-jump{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:8px 0 16px}
+.conf-jump-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--color-muted)}
+.conf-jump-links{display:flex;gap:8px;flex-wrap:wrap}
+.conf-jump a{display:inline-flex;align-items:center;gap:6px;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-full);padding:7px 12px;font-size:.78rem;color:var(--color-muted);text-decoration:none;transition:background .15s,color .15s,border-color .15s}
+.conf-jump a:hover,.conf-jump a:focus-visible{background:var(--color-bg-subtle);color:var(--color-on-surface);border-color:var(--color-primary);outline:none}
+.conf{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:20px 0;overflow:hidden;box-shadow:var(--shadow-sm)}
+.conf-hdr{display:flex;align-items:center;gap:14px;padding:18px 22px;width:100%;border:none;border-bottom:1px solid var(--color-border);cursor:pointer;background:var(--color-surface);color:inherit;font:inherit;text-align:left;transition:background .15s;list-style:none}
+.conf-hdr:hover{background:var(--color-bg-subtle)}
+.conf-hdr::-webkit-details-marker{display:none}
+.conf-hdr .icon{font-size:1.3rem;flex-shrink:0}
+.conf-hdr .name{font-size:1.05rem;font-weight:600;color:var(--color-on-surface)}
+.conf-hdr .meta{color:var(--color-muted);font-size:.8rem;margin-left:auto;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.conf-hdr .meta span{display:flex;align-items:center;gap:4px}
+.conf-hdr .high-count{color:var(--color-warning);font-weight:600}
+.conf-status{flex-shrink:0;padding:3px 10px;border-radius:var(--radius-full);font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.03em}
+.conf-status.live{background:var(--hi-bg);color:var(--color-error)}
+.conf-status.upcoming{background:var(--useful-bg);color:var(--color-success)}
+.conf-status.concluded{background:var(--color-bg-subtle);color:var(--color-muted);border:1px solid var(--color-border)}
+.no-results{color:var(--color-muted);font-size:.9rem;padding:24px;text-align:center}
+.conf-mix-wrap{display:flex;gap:6px;flex-wrap:wrap}
+.conf-mix{padding:2px 8px;border-radius:var(--radius-full);font-size:.7rem;font-weight:600;white-space:nowrap}
+.conf-mix.critical{background:var(--hi-bg);color:var(--color-error)}
+.conf-mix.high-priority{background:var(--strong-bg);color:var(--color-warning)}
+.conf-mix.strong-monitoring{background:var(--useful-bg);color:var(--color-success)}
+.conf-mix.monitor{background:var(--color-bg-subtle);color:var(--color-muted);border:1px solid var(--color-border)}
+.sig-flash{animation:sigFlash 1.8s ease}
+@keyframes sigFlash{0%,60%{background:var(--useful-bg)}100%{background:transparent}}
+@media(prefers-reduced-motion:reduce){.sig-flash{animation:none;outline:2px solid var(--color-primary);outline-offset:-2px}}
+.conf-hdr .arrow{color:var(--color-muted);font-size:.8rem;transition:transform .2s;margin-left:8px}
+.conf:not([open]) .conf-hdr .arrow{transform:rotate(-90deg)}
+.conf-body{display:block}
+.conf-desc{padding:14px 22px;color:var(--color-muted);font-size:.88rem;border-bottom:1px solid var(--color-border);line-height:1.55;margin:0}
+.sig{border-bottom:1px solid var(--color-border);transition:background .15s}
+.sig:last-child{border-bottom:none}
+.sig[open]{background:var(--color-bg-subtle)}
+.sig-hdr{display:flex;align-items:flex-start;gap:12px;width:100%;padding:16px 22px 8px;border:none;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer;transition:background .15s;list-style:none}
+.sig-hdr:hover{background:var(--color-bg-subtle)}
+.sig-hdr::-webkit-details-marker{display:none}
+.sig-pri{flex-shrink:0;padding:4px 10px;border-radius:var(--radius-full);font-size:.7rem;font-weight:600}
+.sig-pri.critical{background:var(--hi-bg);color:var(--color-error)}
+.sig-pri.high-priority{background:var(--strong-bg);color:var(--color-warning)}
+.sig-pri.strong-monitoring{background:var(--useful-bg);color:var(--color-success)}
+.sig-pri.monitor{background:var(--color-bg-subtle);color:var(--color-muted);border:1px solid var(--color-border)}
+.sig-title{font-size:.95rem;font-weight:600;line-height:1.4;color:var(--color-on-surface);flex:1}
+.sig-hdr:hover .sig-title{color:var(--color-primary)}
+.sig-caret{flex-shrink:0;color:var(--color-muted);font-size:.72rem;margin-top:4px;transition:transform .2s}
+.sig[open] .sig-caret{transform:rotate(180deg)}
+.sig-meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.78rem;color:var(--color-muted);padding:0 22px 14px}
+.sig-detail{display:block}
+.sig-detail-inner{padding:0 22px 18px;animation:sigReveal .2s ease}
+.sig-meta-extra{padding:0;margin-bottom:8px}
+@keyframes sigReveal{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.sig-detail-inner{animation:none}}
+.sig-actions{display:flex;align-items:center;gap:16px;margin-top:12px;flex-wrap:wrap}
+.sig-open{font-size:.8rem;font-weight:600;color:var(--color-primary)}
+.sig-open:hover{text-decoration:underline}
+.sig-link{background:none;border:none;padding:0;font:inherit;font-size:.8rem;font-weight:600;color:var(--color-muted);cursor:pointer}
+.sig-link:hover{color:var(--color-on-surface)}
+.sig-summary{font-size:.88rem;color:var(--color-muted);line-height:1.5;margin-bottom:8px}
+.sig-why{font-size:.84rem;color:var(--color-muted);line-height:1.5;padding:12px 14px;background:var(--color-bg-subtle);border-radius:var(--radius-md);border-left:3px solid var(--color-primary);margin-bottom:8px}
+.sig-hl{background:var(--strong-bg);color:var(--color-on-surface);padding:0 .12em;border-radius:3px}
+.sig-tags{display:flex;flex-wrap:wrap;gap:6px}
+.sig-tags span{background:var(--color-bg-subtle);border:1px solid var(--color-border);border-radius:var(--radius-full);padding:3px 10px;font-size:.72rem;color:var(--color-muted)}
+.sig-scores{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap}
+.sig-scores span{font-size:.72rem;color:var(--color-muted);display:flex;align-items:center;gap:4px}
+.sig-scores .val{color:var(--color-on-surface);font-weight:600}
+.score-inline{display:inline-flex;align-items:center;gap:4px}
+.score-track{width:50px;height:4px;background:var(--color-border);border-radius:2px;overflow:hidden;display:inline-block}
+.score-fill{display:block;height:100%;background:var(--color-primary);border-radius:2px}
+.conf-controls{display:flex;gap:12px;margin:20px 0;flex-wrap:wrap;align-items:center;justify-content:space-between;position:sticky;top:calc(var(--shell-sticky-top) + 8px);z-index:20;background:var(--color-bg);padding:10px 0;border-bottom:1px solid var(--color-border)}
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap}
+.conf-controls-right{display:flex;gap:8px;align-items:center;margin-left:auto;flex-wrap:wrap}
+.sig-search{background:var(--color-surface);border:1px solid var(--color-border);color:var(--color-on-surface);padding:8px 14px;border-radius:var(--radius-full);font:inherit;font-size:.82rem;min-width:200px;transition:border-color .15s}
+.sig-search::placeholder{color:var(--color-muted)}
+.sig-search:focus{outline:none;border-color:var(--color-primary)}
+.expand-all{background:var(--color-surface);border:1px solid var(--color-border);color:var(--color-muted);padding:8px 16px;border-radius:var(--radius-full);font:inherit;font-size:.82rem;font-weight:500;cursor:pointer;transition:color .15s,background .15s,border-color .15s}
+.expand-all:hover{color:var(--color-on-surface);background:var(--color-bg-subtle)}
+.filter-bar button{background:var(--color-surface);border:1px solid var(--color-border);color:var(--color-muted);padding:8px 16px;border-radius:var(--radius-full);font:inherit;font-size:.82rem;font-weight:500;cursor:pointer;transition:color .15s,background .15s,border-color .15s}
+.filter-bar button:hover{color:var(--color-on-surface);background:var(--color-bg-subtle)}
+.filter-bar button.active{color:#fff;background:var(--color-primary);border-color:var(--color-primary)}
+.conf-empty{margin:14px 22px 18px;padding:12px 14px;border:1px dashed var(--color-border);border-radius:var(--radius-md);font-size:.86rem;color:var(--color-muted);background:var(--color-bg-subtle)}
+.conf-archive{margin:16px 0 8px;border:1px solid var(--color-border);border-radius:var(--radius-lg);background:var(--color-surface);box-shadow:var(--shadow-sm);overflow:hidden}
+.conf-archive-hdr{list-style:none;cursor:pointer;padding:14px 18px;font-size:.9rem;font-weight:600;color:var(--color-on-surface);background:var(--color-bg-subtle);border-bottom:1px solid var(--color-border)}
+.conf-archive-hdr::-webkit-details-marker{display:none}
+.conf-archive-body{padding:2px 16px 10px}
+.conf-archive:not([open]) .conf-archive-hdr{border-bottom:none}
+@media(max-width:960px){.conf-controls{top:8px}}
+@media(max-width:640px){.conf-hdr{flex-wrap:wrap}.conf-hdr .meta{margin-left:0;width:100%}}
+@media print{
+	.intel-shell-header,.intel-shell-sidebar,.intel-shell-footer,.conf-controls,.conf-jump,.sig-actions,.sig-link,.expand-all,.filter-bar,#srStatus{display:none!important}
+	.conf,.conf-archive,.sig{box-shadow:none;border-color:#888;break-inside:avoid-page}
+	.conf,.conf-archive,.sig{page-break-inside:avoid}
+	.conf,.conf-archive,.sig,.conf-archive details,.conf details,.sig details{overflow:visible!important}
+	.conf,.sig,.conf-archive{margin:10px 0}
+	.conf .conf-body,.sig .sig-detail{display:block!important}
+	.conf,.sig,.conf-archive,.conf-archive details,.conf details,.sig details{height:auto!important;max-height:none!important}
+	.conf[open],.sig[open],.conf-archive[open]{background:#fff}
+	.conf:not([open]),.sig:not([open]),.conf-archive:not([open]){display:block}
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="intel-shell-header" data-intel-shell="v9">
+  <div class="intel-shell-header-inner">
+    <button type="button" class="intel-mobile-menu" id="intel-mobile-menu" aria-label="Open navigation" aria-expanded="false" aria-controls="intel-shell-sidebar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+    <a class="intel-shell-brand" href="index.html" aria-label="Foresight for Intergenerational Fairness Intelligence platform — home">
+      <img class="intel-brand-logo" src="assets/gyc-ai-labs-lockup.webp" alt="Foresight for Intergenerational Fairness Intelligence platform" width="160" height="152" decoding="async">
+      <img class="intel-brand-mark" src="assets/gyc-ai-labs-mark.webp" alt="Foresight for Intergenerational Fairness Intelligence platform" aria-hidden="true" width="40" height="31" decoding="async">
+    </a>
+    <form class="intel-shell-search" action="briefing.html" method="get" role="search" onsubmit="event.preventDefault();var q=this.querySelector('input').value.trim();window.location.href='briefing.html#tab=all&q='+encodeURIComponent(q);">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" name="q" placeholder="Search platform" aria-label="Search platform">
+    </form>
+    <div class="intel-shell-actions">
+      <button type="button" class="intel-theme-toggle" id="intel-theme-toggle" aria-label="Switch to dark mode">&#9790;</button>
+    </div>
+  </div>
+</header>
+<div class="intel-shell-scrim" id="intel-shell-scrim"></div>
+<aside class="intel-shell-sidebar" id="intel-shell-sidebar" aria-label="Platform navigation">
+  <div class="intel-shell-sidebar-head">
+    <a class="intel-shell-brand" href="index.html" aria-label="Foresight for Intergenerational Fairness Intelligence platform — home">
+      <img class="intel-brand-logo" src="assets/gyc-ai-labs-lockup.webp" alt="Foresight for Intergenerational Fairness Intelligence platform" width="160" height="152" decoding="async">
+      <img class="intel-brand-mark" src="assets/gyc-ai-labs-mark.webp" alt="Foresight for Intergenerational Fairness Intelligence platform" aria-hidden="true" width="40" height="31" decoding="async">
+    </a>
+    <button type="button" class="intel-nav-toggle" id="intel-nav-toggle" aria-label="Collapse navigation" aria-expanded="true" title="Collapse navigation">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M9.5 4.5v15"/><path d="m15.5 9.5-2.5 2.5 2.5 2.5"/></svg>
+  </button>
+    <button type="button" class="intel-mobile-close" id="intel-mobile-close" aria-label="Close navigation">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+  </button>
+  </div>
+  <div class="intel-shell-sidebar-inner">
+    <div class="intel-shell-group"><nav class="intel-shell-nav" aria-label="Read"><a class="" href="index.html" data-nav="landing" data-label="Overview" title="Overview"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.3"/><rect x="13" y="4" width="7" height="4.5" rx="1.3"/><rect x="13" y="11" width="7" height="9" rx="1.3"/><rect x="4" y="14" width="7" height="6" rx="1.3"/></svg><span class="nav-txt">Overview</span></a><a class="" href="briefing.html#tab=brief" data-view="brief" data-label="Weekly briefing" title="Weekly briefing"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5h14v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2Z"/><path d="M8.5 9h7M8.5 12.5h7M8.5 16h4"/></svg><span class="nav-txt">Weekly briefing</span></a></nav></div><details class="intel-shell-group intel-shell-group-disclosure">
+        <summary><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5.2"/><circle cx="12" cy="12" r="2"/><path d="M12 3.5v17M3.5 12h17"/></svg><span class="group-label">Explore</span><svg class="group-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+        <nav class="intel-shell-nav" aria-label="Explore"><a class="" href="briefing.html#tab=all" data-view="all" data-label="Signals" title="Signals"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 6.5h11M8.5 12h11M8.5 17.5h11"/><circle cx="4.5" cy="6.5" r="1.1"/><circle cx="4.5" cy="12" r="1.1"/><circle cx="4.5" cy="17.5" r="1.1"/></svg><span class="nav-txt">Signals</span></a><a class="" href="briefing.html#tab=trends" data-view="trends" data-label="Trends" title="Trends"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 16.5 9 11l4 4 7.5-7.5"/><path d="M20.5 7.5V12h-4.5"/></svg><span class="nav-txt">Trends</span></a><a class="" href="briefing.html#tab=horizons" data-view="horizons" data-label="Horizons" title="Horizons"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 8.5 4.6-8.5 4.6-8.5-4.6Z"/><path d="m3.5 12.6 8.5 4.6 8.5-4.6"/></svg><span class="nav-txt">Horizons</span></a><a class="" href="briefing.html#tab=radar" data-view="radar" data-label="IE radar" title="IE radar"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5.2"/><circle cx="12" cy="12" r="2"/><path d="M12 3.5v17M3.5 12h17"/></svg><span class="nav-txt">IE radar</span></a><a class="" href="briefing.html#tab=threads" data-view="threads" data-label="Threads" title="Threads"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="m8.2 11 7.6-4M8.2 13l7.6 4"/></svg><span class="nav-txt">Threads</span></a><a class="" href="briefing.html#tab=wheels" data-view="wheels" data-label="Futures wheels" title="Futures wheels"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.2"/><path d="M12 4.5v3.2M12 16.3v3.2M4.5 12h3.2M16.3 12h3.2M6.8 6.8l2.3 2.3M14.9 14.9l2.3 2.3M17.2 6.8l-2.3 2.3M9.1 14.9l-2.3 2.3"/></svg><span class="nav-txt">Futures wheels</span></a><a class="" href="briefing.html#tab=map" data-view="map" data-label="Globe" title="Globe"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 2.6 14.6 0 17M12 3.5c-2.6 2.4-2.6 14.6 0 17"/></svg><span class="nav-txt">Globe</span></a><a class="" href="briefing.html#tab=matrix" data-view="matrix" data-label="Triage radar" title="Triage radar"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg><span class="nav-txt">Triage radar</span></a><a class="" href="graph.html" data-nav="graph" data-label="Knowledge graph" title="Knowledge graph"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.5" cy="7" r="2.2"/><circle cx="17.5" cy="8" r="2.2"/><circle cx="8" cy="17" r="2.2"/><circle cx="16.5" cy="16.5" r="2.2"/><path d="m8.4 8.2 6.8.6M8.2 15.2 16 10M9.6 16.4 15 15.2"/></svg><span class="nav-txt">Knowledge graph</span></a></nav>
+      </details><details class="intel-shell-group intel-shell-group-disclosure">
+        <summary><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.2"/><rect x="13" y="4" width="7" height="7" rx="1.2"/><path d="M7.5 16.5h9M12 13.5v6"/></svg><span class="group-label">Applications</span><svg class="group-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+        <nav class="intel-shell-nav" aria-label="Applications"><a class="" href="country-ambition.html" data-nav="countries" data-label="Country index" title="Country index"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 2.6 14.6 0 17M12 3.5c-2.6 2.4-2.6 14.6 0 17"/></svg><span class="nav-txt">Country index</span></a><a class="" href="policy-tools.html" data-nav="policy-tools" data-label="Policy tools" title="Policy tools"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.2"/><rect x="13" y="4" width="7" height="7" rx="1.2"/><path d="M7.5 16.5h9M12 13.5v6"/></svg><span class="nav-txt">Policy tools</span></a><a class="" href="policy-tools.html#family=iia" data-nav="iia" data-label="IIAs" title="IIAs"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5h10v3.5H7Z"/><path d="M8.5 8v12M15.5 8v12"/><path d="M8.5 20h7"/></svg><span class="nav-txt">IIAs</span></a><a class="" href="pact.html" data-nav="pact" data-label="Pact tracker" title="Pact tracker"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4.5h9l3 3v12H6Z"/><path d="M15 4.5V8h3"/><path d="M8.5 11h7M8.5 14h7M8.5 17h4"/><path d="m5 8-1.5 1.5L5 11"/></svg><span class="nav-txt">Pact tracker</span></a><a class="" href="briefing.html#tab=pathway" data-view="pathway" data-label="From here to 2028" title="From here to 2028"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 9.5h16M8.5 3v4M15.5 3v4"/><path d="M8 13h3.5M8 16.5h8"/></svg><span class="nav-txt">From here to 2028</span></a><a class="" href="briefing.html#tab=opportunities" data-view="opportunities" data-label="Opportunities" title="Opportunities"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M9.2 10.2c.8-1 2.1-1.4 2.8-1.4 1.6 0 2.6.8 2.6 2s-1 1.9-2.7 2.3c-1.8.4-2.7 1-2.7 2.2 0 1.1 1 2 2.8 2 1.2 0 2.2-.4 2.9-1.2"/></svg><span class="nav-txt">Opportunities</span></a><a class="" href="finance.html" data-nav="finance" data-label="Finance" title="Finance"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V4.5M4 19.5h16"/><path d="M8 16.5v-4M12 16.5V8M16 16.5v-6"/></svg><span class="nav-txt">Finance</span></a></nav>
+      </details><details class="intel-shell-group intel-shell-group-disclosure" open>
+        <summary><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h6.5L18 8v12.5H7Z"/><path d="M13.5 3.5V8H18M9.5 12.5h5M9.5 15.5h5"/></svg><span class="group-label">Library</span><svg class="group-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+        <nav class="intel-shell-nav" aria-label="Library"><a class="" href="papers.html" data-nav="papers" data-label="Papers" title="Papers"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h6.5L18 8v12.5H7Z"/><path d="M13.5 3.5V8H18M9.5 12.5h5M9.5 15.5h5"/></svg><span class="nav-txt">Papers</span></a><a class="" href="insights.html" data-nav="insights" data-label="Insights" title="Insights"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 5.5h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-3 2v-4H6a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2Z"/><path d="M8.5 9.5h7M8.5 12.5h5"/></svg><span class="nav-txt">Insights</span></a><a class="" href="organizations.html" data-nav="organizations" data-label="Governance map" title="Governance map"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V8.5a2 2 0 0 1 2-2h3.5"/><path d="M5 19.5h14"/><path d="M9 6.5V4.5a2 2 0 0 1 2-2h6.5L20 6v13.5H9"/><path d="M14.5 2.5V6H20"/><circle cx="9" cy="13" r="1.3"/><circle cx="15" cy="13" r="1.3"/></svg><span class="nav-txt">Governance map</span></a><a class="active" href="conferences.html" data-nav="conferences" data-label="Conferences" title="Conferences" aria-current="page"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 9.5h16M8.5 3v4M15.5 3v4"/></svg><span class="nav-txt">Conferences</span></a></nav>
+      </details><details class="intel-shell-group intel-shell-group-disclosure">
+        <summary><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg><span class="group-label">About &amp; method</span><svg class="group-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+        <nav class="intel-shell-nav" aria-label="About and method"><a class="" href="index.html#method" data-nav="methodology" data-label="How it works" title="How it works"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.3"/><rect x="13" y="4" width="7" height="4.5" rx="1.3"/><rect x="13" y="11" width="7" height="9" rx="1.3"/><rect x="4" y="14" width="7" height="6" rx="1.3"/></svg><span class="nav-txt">How it works</span></a><a class="" href="briefing.html#tab=track" data-view="track" data-label="Track record" title="Track record"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg><span class="nav-txt">Track record</span></a><a class="" href="donate.html" data-nav="donate" data-label="Support" title="Support"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.5 15 3.5 8.9A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8.5 1.9C20.5 15 12 20.5 12 20.5Z"/></svg><span class="nav-txt">Support</span></a></nav>
+      </details><details class="intel-shell-group intel-shell-group-disclosure">
+        <summary><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m8.4 12 2.4 2.4 4.8-5.2"/></svg><span class="group-label">Analyst tools</span><svg class="group-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+        <nav class="intel-shell-nav" aria-label="Analyst tools"><a class="" href="briefing.html#tab=watchlist" data-view="watchlist" data-label="Priority watchlist" title="Priority watchlist"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v16l-5-3.6L7 20Z"/></svg><span class="nav-txt">Priority watchlist</span></a><a class="" href="review.html" data-nav="review" data-label="Review console" title="Review console"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m8.4 12 2.4 2.4 4.8-5.2"/></svg><span class="nav-txt">Review console</span><span class="nav-badge" aria-label="16 pending reviews">16</span></a><a class="" href="briefing.html#tab=ask" data-view="ask" data-label="Ask the graph" title="Ask the graph"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5.5h14a1 1 0 0 1 1 1V15a1 1 0 0 1-1 1H9.5L5 19.5V16H5a0 0 0 0 1 0 0Z"/><path d="M9 9.5h6M9 12.5h4"/></svg><span class="nav-txt">Ask the graph</span></a></nav>
+      </details>
+  </div>
+  <div class="intel-shell-sidebar-foot">
+    <p class="intel-shell-sidebar-note">Signal intelligence for youth governance and intergenerational equity.</p>
+  </div>
+</aside>
+<main class="intel-shell-main" id="main-content">
+<h1 class="page-title">Conference signals</h1>
+<p class="page-lead">Pre-built signal packs for upcoming multilateral moments. Search or filter to narrow the list, click any signal to expand its detail, or open a signal in the full dashboard.</p>
+<nav class="conf-jump" aria-label="Jump to conference"><span class="conf-jump-label">Jump to</span><div class="conf-jump-links"><a href="#conf-ai-governance-dialogue-geneva-2026" data-conf-jump="conf-ai-governance-dialogue-geneva-2026">🤖 UN Global Dialogue on AI Governance (Geneva)</a><a href="#conf-lcaw-2026" data-conf-jump="conf-lcaw-2026">🌿 London Climate Action Week 2026</a><a href="#conf-sb64-bonn-2026" data-conf-jump="conf-sb64-bonn-2026">🏛️ SB64 Bonn Climate Conference</a></div></nav>
+<div class="conf-controls">
+  <div class="filter-bar" id="filterBar" role="toolbar" aria-label="Filter by priority">
+    <button type="button" class="active" data-filter="all">All</button>
+    <button type="button" data-filter="critical">Critical</button>
+    <button type="button" data-filter="high-priority">High Priority</button>
+    <button type="button" data-filter="strong-monitoring">Strong Monitor</button>
+    <button type="button" data-filter="monitor">Monitor</button>
+  </div>
+  <div class="conf-controls-right">
+    <input type="search" id="sigSearch" class="sig-search" placeholder="Search signals…" aria-label="Search signals" autocomplete="off">
+    <button type="button" id="expandAll" class="expand-all" data-state="collapsed">Expand all</button>
+  </div>
+</div>
+<div id="conferences"><div class="conf-group conf-group-current"></div><details class="conf-archive" id="confArchive"><summary class="conf-archive-hdr" aria-expanded="false" data-conf-archive-toggle>Past conferences (3)</summary><div class="conf-archive-body"><details class="conf" id="conf-ai-governance-dialogue-geneva-2026" data-conf-id="ai-governance-dialogue-geneva-2026" ><summary class="conf-hdr" aria-expanded="false" aria-controls="conf-body-ai-governance-dialogue-geneva-2026" data-conf-toggle><span class="icon" aria-hidden="true">🤖</span><span class="name">UN Global Dialogue on AI Governance (Geneva)</span><span class="conf-status concluded">Concluded</span><span class="meta"><span>📅 July 6-10, 2026</span><span>📍 Geneva, Switzerland</span><span>📡 8 signals</span><span>⏱️ Ended Jul 10, 2026</span><span class="conf-mix-wrap"><span class="conf-mix strong-monitoring">6 strong</span></span></span><span class="arrow" aria-hidden="true">▾</span></summary><div class="conf-body" id="conf-body-ai-governance-dialogue-geneva-2026"><p class="conf-desc">The UN&#39;s first Global Dialogue on AI Governance (6-7 July), established under the Global Digital Compact and attended by all 193 member states, running alongside the ITU AI for Good Global Summit and the WSIS+20 Forum (7-10 July). The first universal, intergovernmental venue for AI governance, with children&#39;s safety, youth participation, the AI divide, and future-generations equity recurring across opening statements and the Independent Scientific Panel&#39;s first assessment.</p><details class="sig" data-priority="strong-monitoring" id="sig-un-global-dialogue-ai-child-safety-pledge-2026-07-06"><summary class="sig-hdr" aria-expanded="false" aria-controls="sigd-un-global-dialogue-ai-child-safety-pledge-2026-07-06" data-sig-toggle><span class="sig-pri strong-monitoring">Strong Monitor</span><span class="sig-title">UN chief calls for a global AI child-safety pledge at the first Global Dialogue on AI Governance in Geneva</span><span class="sig-caret" aria-hidden="true">▾</span></summary><div class="sig-meta"><span>📅 2026-07-07</span><span>🏷️ child-rights-governance</span><span>🌍 International</span></div><div class="sig-detail" id="sigd-un-global-dialogue-ai-child-safety-pledge-2026-07-06"><div class="sig-detail-inner"><div class="sig-summary">Opening the UN&#39;s first Global Dialogue on AI Governance (Geneva, 6-7 July 2026), Secretary-General Antonio Guterres called for an &quot;AI child safety pledge,&quot; arguing that &quot;no child should be a guinea pig for unregulated AI&quot; and drawing an analogy to medicine safety testing. He said AI systems accessible to children should undergo independent safety testing and oversight before deployment, and insisted that in high-stakes decisions on justice, healthcare and policing, humans must stay accountable.</div><div class="sig-why"><strong>Why it matters:</strong> This is the first time a UN Secretary-General has proposed a dedicated child-safety instrument inside the emerging multilateral AI-governance architecture, moving children&#39;s rights from a side concern to a headline demand. It gives youth and child-rights advocates a concrete, named commitment to hold governments and frontier labs to, and frames AI risk explicitly as a question of who is exposed now versus who is protected later.</div><div class="sig-meta sig-meta-extra"><span>📐 technological</span><span>🌱 emerging</span><span>✅ Medium</span><span>⚖️ IE lens: dfg6-technology</span><span>🧭 IE alignment: unclear</span></div><div class="sig-meta sig-meta-extra"><span>🔗 Source: <a class="sig-open" href="https://news.un.org/en/story/2026/07/1167873" target="_blank" rel="noopener noreferrer">UN News ↗</a></span></div><div class="sig-tags"><span>AI for good</span><span>foresight methods</span><span>multilateral reform</span><span>civic participation</span></div><div class="sig-scores"><span>Composite <span class="score-inline"><span class="score-track"><span class="score-fill" style="width:82%"></span></span><span class="val">4.10</span></span></span><span>Credibility <span class="val">4.5</span></span><span>Novelty <span class="val">4.5</span></span><span>Urgency <span class="val">2.5</span></span></div><div class="sig-actions"><a class="sig-open" href="briefing.html#tab=all&q=UN%20chief%20calls%20for%20a%20global%20AI%20child-safety%20pledge%20at%20the%20fi">Open in full dashboard →</a><button type="button" class="sig-link" data-sig-link="sig-un-global-dialogue-ai-child-safety-pledge-2026-07-06">Copy link</button></div></div></div></details><details class="sig" data-priority="strong-monitoring" id="sig-independent-scientific-panel-ai-first-assessment-2026-07-06"><summary class="sig-hdr" aria-expanded="false" aria-controls="sigd-independent-scientific-panel-ai-first-assessment-2026-07-06" data-sig-toggle><span class="sig-pri strong-monitoring">Strong Monitor</span><span class="sig-title">UN Independent Scientific Panel&#39;s first AI assessment centres child harm and unequal Global South exposure</span><span class="sig-caret" aria-hidden="true">▾</span></summary><div class="sig-meta"><span>📅 2026-07-07</span><span>🏷️ future-generations-governance</span><span>🌍 International</span></div><div class="sig-detail" id="sigd-independent-scientific-panel-ai-first-assessment-2026-07-06"><div class="sig-detail-inner"><div class="sig-summary">The Independent International Scientific Panel on AI, co-chaired by Yoshua Bengio and Maria Ressa, presented its first assessment to the Global Dialogue on AI Governance in Geneva (6-7 July 2026). It flagged AI-generated child sexual abuse material, sexualised deepfakes and socially interactive &quot;AI companion&quot; toys fostering emotional dependency (citing the death of a 14-year-old after prolonged chatbot interaction), and warned that the Global South faces disproportionate exposure while current AI systems support only a small fraction of the world&#39;s 7,000+ languages. Ressa described the findings as &quot;the minimum consensus.&quot;</div><div class="sig-why"><strong>Why it matters:</strong> This is the IPCC-style scientific baseline that future AI negotiations will cite, and its inaugural edition centres children and distributional, long-term harm rather than only frontier-model catastrophe. Embedding child safety, Global South exposure and language exclusion in the &quot;minimum consensus&quot; gives intergenerational-equity actors an authoritative, repeatedly-cited evidence anchor for who bears AI&#39;s costs over time.</div><div class="sig-meta sig-meta-extra"><span>📐 technological</span><span>🌱 emerging</span><span>✅ Medium</span><span>⚖️ IE lens: dfg6-technology</span><span>🧭 IE alignment: unclear</span></div><div class="sig-meta sig-meta-extra"><span>🔗 Source: <a class="sig-open" href="https://dig.watch/updates/un-scientific-panel-ai-assessment-global-dialogue" target="_blank" rel="noopener noreferrer">Digital Watch Observatory ↗</a></span></div><div class="sig-tags"><span>AI for good</span><span>foresight methods</span><span>multilateral reform</span><span>civic participation</span></div><div class="sig-scores"><span>Composite <span class="score-inline"><span class="score-track"><span class="score-fill" style="width:79%"></span></span><span class="val">3.93</span></span></span><span>Credibility <span class="val">4.5</span></span><span>Novelty <span class="val">4.5</span></span><span>Urgency <span class="val">2</span></span></div><div class="sig-actions"><a class="sig-open" href="briefing.html#tab=all&q=UN%20Independent%20Scientific%20Panel's%20first%20AI%20assessment%20centre">Open in full dashboard →</a><button type="button" class="sig-link" data-sig-link="sig-independent-scientific-panel-ai-first-assessment-2026-07-06">Copy link</button></div></div></div></details><details class="sig" data-priority="strong-monitoring" id="sig-unicef-france-spain-children-ai-rights-coalition-2026-07-07"><summary class="sig-hdr" aria-expanded="false" aria-controls="sigd-unicef-france-spain-children-ai-rights-coalition-2026-07-07" data-sig-toggle><span class="sig-pri strong-monitoring">Strong Monitor</span><span class="sig-title">UNICEF, France and Spain Launch Global Coalition for Children&#39;s Rights in the Age of AI</span><span class="sig-caret" aria-hidden="true">▾</span></summary><div class="sig-meta"><span>📅 2026-07-16</span><span>🏷️ digital-child-protection-governance</span><span>🌍 International</span></div><div class="sig-detail" id="sigd-unicef-france-spain-children-ai-rights-coalition-2026-07-07"><div class="sig-detail-inner"><div class="sig-summary">On 7 July 2026 at the UN Global Dialogue on AI Governance in Geneva, UNICEF with the Governments of France and Spain and UN partners (including OHCHR, ITU, UNESCO, the Office for Digital and Emerging Technologies and DGC) launched the Coalition for Children&#39;s Rights and Protection in the Age of Artificial Intelligence. The coalition frames children as rights-holders whose voices should shape how AI is designed, not merely as users to be protected after harm. It aims to turn CRC-based principles into practical multi-stakeholder action on safe, rights-respecting AI systems for children.</div><div class="sig-why"><strong>Why it matters:</strong> Coming one day after UNESCO floated a new normative instrument on children and AI, this coalition is the implementation vehicle that could convert soft standards into coordinated state and industry practice. Anchoring AI governance in the CRC rather than consumer-safety framing strengthens intergenerational digital equity arguments: today&#39;s design choices lock in harms or capabilities for cohorts who will live with AI for decades. Watch for national adoption packages, procurement rules and youth co-design requirements as the real test of substance.</div><div class="sig-meta sig-meta-extra"><span>📐 technological</span><span>🌱 established</span><span>✅ High</span><span>⚖️ IE lens: dfg6-technology</span><span>🧭 IE alignment: unclear</span></div><div class="sig-meta sig-meta-extra"><span>🔗 Source: <a class="sig-open" href="https://news.un.org/en/story/2026/07/1167891" target="_blank" rel="noopener noreferrer">UN News ↗</a></span></div><div class="sig-tags"><span>digital transformation</span><span>AI for good</span><span>foresight methods</span><span>multilateral reform</span><span>civic participation</span></div><div class="sig-scores"><span>Composite <span class="score-inline"><span class="score-track"><span class="score-fill" style="width:77%"></span></span><span class="val">3.85</span></span></span><span>Credibility <span class="val">5</span></span><span>Novelty <span class="val">3</span></span><span>Urgency <span class="val">3</span></span></div><div class="sig-actions"><a class="sig-open" href="briefing.html#tab=all&q=UNICEF%2C%20France%20and%20Spain%20Launch%20Global%20Coalition%20for%20Childre">Open in full dashboard →</a><button type="button" class="sig-link" data-sig-link="sig-unicef-france-spain-children-ai-rights-coalition-2026-07-07">Copy link</button></div></div></div></details><details class="sig" data-priority="strong-monitoring" id="sig-un-ai-panel-global-impact-study-2026-04-23"><summary class="sig-hdr" aria-expanded="false" aria-controls="sigd-un-ai-panel-global-impact-study-2026-04-23" data-sig-toggle><span class="sig-pri strong-monitoring">Strong Monitor</span><span class="sig-title">UN AI Panel Starts Global Impact Study With Human Oversight and Cultural Inclusion at the Center</span><span class="sig-caret" aria-hidden="true">▾</span></summary><div class="sig-meta"><span>📅 2026-04-23</span><span>🏷️ digital-governance</span><span>🌍 International</span></div><div class="sig-detail" id="sigd-un-ai-panel-global-impact-study-2026-04-23"><div class="sig-detail-inner"><div class="sig-summary">A UN News feature published in April 2026 says the new Independent International Scientific Panel on AI has begun work on its first global impact study ahead of the July Global Dialogue on AI Governance in Geneva. Panel members are examining labour-market, health-system, ethics, watermarking, public digital infrastructure, and linguistic inclusion questions with an explicit emphasis on keeping humans central to decision-making.</div><div class="sig-why"><strong>Why it matters:</strong> This matters because the UN is moving from generic AI concern to a formal global assessment architecture. The emphasis on human oversight, public digital infrastructure, and cultural inclusion makes this directly relevant to long-term fairness, especially if future AI governance standards start being benchmarked against these principles.</div><div class="sig-meta sig-meta-extra"><span>📐 technological</span><span>🌱 emerging</span><span>✅ Medium</span><span>⚖️ IE lens: ceb6-knowledge, dfg6-technology</span><span>🧭 IE alignment: unclear</span></div><div class="sig-meta sig-meta-extra"><span>🔗 Source: <a class="sig-open" href="https://news.un.org/en/story/2026/04/1167263" target="_blank" rel="noopener noreferrer">UN News ↗</a></span></div><div class="sig-tags"><span>digital transformation</span><span>AI for good</span><span>foresight methods</span><span>multilateral reform</span><span>civic participation</span></div><div class="sig-scores"><span>Composite <span class="score-inline"><span class="score-track"><span class="score-fill" style="width:71%"></span></span><span class="val">3.55</span></span></span><span>Credibility <span class="val">4</span></span><span>Novelty <span class="val">3</span></span><span>Urgency <span class="val">2</span></span></div><div class="sig-actions"><a class="sig-open" href="briefing.html#tab=all&q=UN%20AI%20Panel%20Starts%20Global%20Impact%20Study%20With%20Human%20Oversight%20">Open in full dashboard →</a><button type="button" class="sig-link" data-sig-link="sig-un-ai-panel-global-impact-study-2026-04-23">Copy link</button></div></div></div></details><details class="sig" data-priority="strong-monitoring" id="sig-un-global-dialogue-ai-divide-development-gap-2026-07-06"><summary class="sig-hdr" aria-expanded="false" aria-controls="sigd-un-global-dialogue-ai-divide-development-gap-2026-07-06" data-sig-toggle><span class="sig-pri strong-monitoring">Strong Monitor</span><span class="sig-title">Guterres warns the digital divide is hardening into an &#39;AI divide&#39; and development gap; proposes global AI capacity-building fund</span><span class="sig-caret" aria-hidden="true">▾</span></summary><div class="sig-meta"><span>📅 2026-07-07</span><span>🏷️ digital-inclusion-governance</span><span>🌍 International</span></div><div class="sig-detail" id="sigd-un-global-dialogue-ai-divide-development-gap-2026-07-06"><div class="sig-detail-inner"><div class="sig-summary">Opening the Global Dialogue on AI Governance in Geneva (6 July 2026), Secretary-General Guterres warned that &quot;we cannot allow the digital divide to harden into an AI divide and the AI divide to become a development gap, a security gap, and a sovereignty gap,&quot; and called for a global fund and network for AI capacity-building for developing countries. Co-chair Egriselda Lopez (El Salvador) stressed that meaningful participation requires skills, infrastructure, financing, institutions and partnerships, not merely a seat at the table.</div><div class="sig-why"><strong>Why it matters:</strong> The &quot;AI divide to development and sovereignty gap&quot; framing is an intergenerational-equity argument in disguise: today&#39;s concentration of compute and skills locks in for decades who can shape and benefit from AI. A dedicated capacity-building fund, if realised, is the mechanism that determines whether younger populations in the Global South inherit agency over AI or structural dependency.</div><div class="sig-meta sig-meta-extra"><span>📐 technological</span><span>🌱 emerging</span><span>✅ Medium</span><span>⚖️ IE lens: ceb5-representation, dfg3-prosperity, dfg6-technology</span><span>🧭 IE alignment: unclear</span></div><div class="sig-meta sig-meta-extra"><span>🔗 Source: <a class="sig-open" href="https://news.un.org/en/story/2026/07/1167862" target="_blank" rel="noopener noreferrer">UN News ↗</a></span></div><div class="sig-tags"><span>digital transformation</span><span>AI for good</span><span>foresight methods</span><span>civic participation</span></div><div class="sig-scores"><span>Composite <span class="score-inline"><span class="score-track"><span class="score-fill" style="width:71%"></span></span><span class="val">3.55</span></span></span><span>Credibility <span class="val">4</span></span><span>Novelty <span class="val">3</span></span><span>Urgency <span class="val">2</span></span></div><div class="sig-actions"><a class="sig-open" href="briefing.html#tab=all&q=Guterres%20warns%20the%20digital%20divide%20is%20hardening%20into%20an%20'AI%20d">Open in full dashboard →</a><button type="button" class="sig-link" data-sig-link="sig-un-global-dialogue-ai-divide-development-gap-2026-07-06">Copy link</button></div></div></div></details><details class="sig" data-priority="strong-monitoring" id="sig-unga-president-baerbock-ai-gendered-abuse-2026-07-06"><summary class="sig-hdr" aria-expanded="false" aria-controls="sigd-unga-president-baerbock-ai-gendered-abuse-2026-07-06" data-sig-toggle><span class="sig-pri strong-monitoring">Strong Monitor</span><span class="sig-title">UNGA President Baerbock says AI deepfakes and gendered abuse disproportionately target women and girls</span><span class="sig-caret" aria-hidden="true">▾</span></summary><div class="sig-meta"><span>📅 2026-07-07</span><span>🏷️ youth-digital-safety-governance</span><span>🌍 International</span></div><div class="sig-detail" id="sigd-unga-president-baerbock-ai-gendered-abuse-2026-07-06"><div class="sig-detail-inner"><div class="sig-summary">At the Global Dialogue on AI Governance in Geneva (6 July 2026), UN General Assembly President Annalena Baerbock warned that harmful uses of AI, including deepfakes and gendered abuse, disproportionately target women and girls, framing image-based and gendered abuse as a core human-rights challenge the governance regime must address.</div><div class="sig-why"><strong>Why it matters:</strong> Naming gendered and image-based abuse from the UNGA presidency chair pushes online safety for girls into the top tier of AI-governance priorities. It links the youth-digital-safety agenda to the highest multilateral platform, strengthening the case for enforceable protections rather than voluntary platform commitments.</div><div class="sig-meta sig-meta-extra"><span>📐 technological</span><span>🌱 emerging</span><span>✅ Medium</span><span>⚖️ IE lens: dfg6-technology</span><span>🧭 IE alignment: unclear</span></div><div class="sig-meta sig-meta-extra"><span>🔗 Source: <a class="sig-open" href="https://dig.watch/updates/un-global-dialogue-ai-governance-opening-session" target="_blank" rel="noopener noreferrer">Digital Watch Observatory ↗</a></span></div><div class="sig-tags"><span>youth participation</span><span>digital transformation</span><span>AI for good</span><span>multilateral reform</span><span>civic participation</span></div><div class="sig-scores"><span>Composite <span class="score-inline"><span class="score-track"><span class="score-fill" style="width:71%"></span></span><span class="val">3.55</span></span></span><span>Credibility <span class="val">3</span></span><span>Novelty <span class="val">3</span></span><span>Urgency <span class="val">2</span></span></div><div class="sig-actions"><a class="sig-open" href="briefing.html#tab=all&q=UNGA%20President%20Baerbock%20says%20AI%20deepfakes%20and%20gendered%20abuse">Open in full dashboard →</a><button type="button" class="sig-link" data-sig-link="sig-unga-president-baerbock-ai-gendered-abuse-2026-07-06">Copy link</button></div></div></div></details><details class="sig" data-priority="useful" id="sig-unesco-normative-instrument-children-ai-2026-07-06"><summary class="sig-hdr" aria-expanded="false" aria-controls="sigd-unesco-normative-instrument-children-ai-2026-07-06" data-sig-toggle><span class="sig-pri useful">useful</span><span class="sig-title">UNESCO launches reflection on a new global normative instrument to protect children and young people in the age of AI</span><span class="sig-caret" aria-hidden="true">▾</span></summary><div class="sig-meta"><span>📅 2026-07-07</span><span>🏷️ digital-child-protection-governance</span><span>🌍 International</span></div><div class="sig-detail" id="sigd-unesco-normative-instrument-children-ai-2026-07-06"><div class="sig-detail-inner"><div class="sig-summary">At the Global Dialogue on AI Governance in Geneva (6 July 2026), UNESCO Director-General Khaled El-Enany announced that UNESCO is launching a collective reflection toward a new global normative instrument to safeguard children and young people in the age of AI and digital technologies, building on its 2021 Recommendation on the Ethics of Artificial Intelligence.</div><div class="sig-why"><strong>Why it matters:</strong> A new standard-setting instrument is the most durable governance mechanism UNESCO can deploy, signalling that children&#39;s and young people&#39;s rights are moving from soft guidance toward a negotiated global norm. For the intergenerational-equity mission it is a concrete institutional foothold: a future standard-setting text where youth and future-generations advocates can shape the protective language before it hardens.</div><div class="sig-meta sig-meta-extra"><span>📐 technological</span><span>🌱 emerging</span><span>✅ Medium</span><span>⚖️ IE lens: dfg6-technology</span><span>🧭 IE alignment: advances</span></div><div class="sig-meta sig-meta-extra"><span>🔗 Source: <a class="sig-open" href="https://dig.watch/updates/un-global-dialogue-ai-governance-opening-session" target="_blank" rel="noopener noreferrer">Digital Watch Observatory ↗</a></span></div><div class="sig-tags"><span>youth participation</span><span>digital transformation</span><span>AI for good</span><span>foresight methods</span><span>civic participation</span></div><div class="sig-scores"><span>Composite <span class="score-inline"><span class="score-track"><span class="score-fill" style="width:67%"></span></span><span class="val">3.35</span></span></span><span>Credibility <span class="val">3</span></span><span>Novelty <span class="val">3</span></span><span>Urgency <span class="val">2</span></span></div><div class="sig-actions"><a class="sig-open" href="briefing.html#tab=all&q=UNESCO%20launches%20reflection%20on%20a%20new%20global%20normative%20instrum">Open in full dashboard →</a><button type="button" class="sig-link" data-sig-link="sig-unesco-normative-instrument-children-ai-2026-07-06">Copy link</button></div></div></div></details><details class="sig" data-priority="useful" id="sig-ai-for-good-2026-youth-zone-robotics-challenge"><summary class="sig-hdr" aria-expanded="false" aria-controls="sigd-ai-for-good-2026-youth-zone-robotics-challenge" data-sig-toggle><span class="sig-pri useful">useful</span><span class="sig-title">AI for Good 2026 expands Youth Zone and stages Robotics for Good Youth Challenge with 68 teams from 39 countries</span><span class="sig-caret" aria-hidden="true">▾</span></summary><div class="sig-meta"><span>📅 2026-07-07</span><span>🏷️ youth-digital-governance</span><span>🌍 International</span></div><div class="sig-detail" id="sigd-ai-for-good-2026-youth-zone-robotics-challenge"><div class="sig-detail-inner"><div class="sig-summary">The ITU AI for Good Global Summit (Geneva, 7-10 July 2026), running alongside the Global Dialogue on AI Governance and the WSIS Forum, expanded its Youth Zone into a week-long programme with a dedicated stage for innovators aged 10 and up, and hosted the Robotics for Good Youth Challenge Grand Finale with 68 finalist teams from 39 countries building AI and robotics solutions for food security.</div><div class="sig-why"><strong>Why it matters:</strong> This is youth participation in AI governance becoming operational rather than rhetorical, putting young people into the same Geneva venue and week as the intergovernmental dialogue. It is a recurring, scalable channel for building the next generation&#39;s technical and governance capacity, whose value depends on whether it is wired into real influence over summit and treaty outcomes.</div><div class="sig-meta sig-meta-extra"><span>📐 technological</span><span>🌱 emerging</span><span>✅ Medium</span><span>⚖️ IE lens: dfg6-technology</span><span>🧭 IE alignment: unclear</span></div><div class="sig-meta sig-meta-extra"><span>🔗 Source: <a class="sig-open" href="https://aiforgood.itu.int/summit26/" target="_blank" rel="noopener noreferrer">ITU AI for Good Global Summit ↗</a></span></div><div class="sig-tags"><span>youth participation</span><span>digital transformation</span><span>AI for good</span><span>foresight methods</span><span>civic participation</span></div><div class="sig-scores"><span>Composite <span class="score-inline"><span class="score-track"><span class="score-fill" style="width:67%"></span></span><span class="val">3.35</span></span></span><span>Credibility <span class="val">3</span></span><span>Novelty <span class="val">3</span></span><span>Urgency <span class="val">2</span></span></div><div class="sig-actions"><a class="sig-open" href="briefing.html#tab=all&q=AI%20for%20Good%202026%20expands%20Youth%20Zone%20and%20stages%20Robotics%20for%20">Open in full dashboard →</a><button type="button" class="sig-link" data-sig-link="sig-ai-for-good-2026-youth-zone-robotics-challenge">Copy link</button></div></div></div></details></div></details><details class="conf" id="conf-lcaw-2026" data-conf-id="lcaw-2026" ><summary class="conf-hdr" aria-expanded="false" aria-controls="conf-body-lcaw-2026" data-conf-toggle><span class="icon" aria-hidden="true">🌿</span><span class="name">London Climate Action Week 2026</span><span class="conf-status concluded">Concluded</span><span class="meta"><span>📅 June 22-26, 2026</span><span>📍 London, United Kingdom</span><span>📡 3 signals</span><span>⏱️ Ended Jun 26, 2026</span><span class="conf-mix-wrap"><span class="conf-mix strong-monitoring">3 strong</span></span></span><span class="arrow" aria-hidden="true">▾</span></summary><div class="conf-body" id="conf-body-lcaw-2026"><p class="conf-desc">Annual gathering of governments, businesses, cities, and civil society focused on climate implementation. Key moments included the Local Climate Action Summit, Global Energy Transition Summit, and UNEP FI roundtable.</p><details class="sig" data-priority="strong-monitoring" id="sig-un-sg-london-climate-action-week-2026-06-23"><summary class="sig-hdr" aria-expanded="false" aria-controls="sigd-un-sg-london-climate-action-week-2026-06-23" data-sig-toggle><span class="sig-pri strong-monitoring">Strong Monitor</span><span class="sig-title">UN Secretary-General Guterres Delivers Major Climate Address at London Climate Action Week: &quot;A Tale of Two Crises&quot;</span><span class="sig-caret" aria-hidden="true">▾</span></summary><div class="sig-meta"><span>📅 2026-06-28</span><span>🏷️ climate-governance</span><span>🌍 International</span></div><div class="sig-detail" id="sigd-un-sg-london-climate-action-week-2026-06-23"><div class="sig-detail-inner"><div class="sig-summary">On June 23, 2026, UN Secretary-General António Guterres delivered a landmark address at London Climate Action Week, framing the climate crisis and the Middle East-driven energy crisis as &quot;A Tale of Two Crises&quot; sharing the same destructive origin: fossil fuels. He outlined a seven-point plan including: emissions peaking immediately and reaching net zero by 2050; ending fossil fuel subsidies and taxing fossil fuel profits; requiring AI companies to disclose data centre environmental impacts and power them with renewables by 2030; ensuring a just transition; boosting climate resilience; unlocking fair finance for developing countries; and defending science against disinformation. The UN Scientific Advisory Board simultaneously released a report on Earth system tipping points, warning that coral reef collapse, ice sheet loss, and Amazon savannization are &quot;far closer than they appear.&quot; Guterres also called for a global push to curb methane pollution, saying &quot;the world phased out leaded gasoline. We eliminated ozone-depleting chemicals. Methane pollution must be next.&quot;</div><div class="sig-why"><strong>Why it matters:</strong> This address is significant for intergenerational governance on multiple levels. First, Guterres explicitly framed the climate crisis as an intergenerational justice issue — &quot;those who did the least to cause these crises pay the highest price.&quot; Second, the seven-point plan includes concrete demands for AI transparency and renewable-powered data centres, connecting digital governance to climate justice. Third, the tipping points report from the UN Scientific Advisory Board provides the scientific foundation for why delayed action constitutes intergenerational harm. The address also came just days after the US Ninth Circuit dismissed the Lighthiser youth climate case, creating a stark contrast between international and domestic legal responses to climate intergenerational equity. The call to tax fossil fuel profits to support vulnerable communities directly addresses the intergenerational transfer of climate costs.</div><div class="sig-meta sig-meta-extra"><span>📐 policy</span><span>🌱 established</span><span>✅ Medium</span><span>⚖️ IE lens: ceb2-fairness, dfg3-prosperity, dfg5-environment</span><span>🧭 IE alignment: strains</span></div><div class="sig-meta sig-meta-extra"><span>🔗 Source: <a class="sig-open" href="https://news.un.org/en/story/2026/06/1167785" target="_blank" rel="noopener noreferrer">UN News ↗</a></span></div><div class="sig-tags"><span>finance</span><span>just transition</span><span>governance innovation</span><span>AI for good</span><span>community resilience</span><span>foresight methods</span></div><div class="sig-scores"><span>Composite <span class="score-inline"><span class="score-track"><span class="score-fill" style="width:77%"></span></span><span class="val">3.83</span></span></span><span>Credibility <span class="val">4.5</span></span><span>Novelty <span class="val">3.5</span></span><span>Urgency <span class="val">2.5</span></span></div><div class="sig-actions"><a class="sig-open" href="briefing.html#tab=all&q=UN%20Secretary-General%20Guterres%20Delivers%20Major%20Climate%20Address">Open in full dashboard →</a><button type="button" class="sig-link" data-sig-link="sig-un-sg-london-climate-action-week-2026-06-23">Copy link</button></div></div></div></details><details class="sig" data-priority="strong-monitoring" id="sig-idea-institutional-innovations-future-generations-report-2026-06-24"><summary class="sig-hdr" aria-expanded="false" aria-controls="sigd-idea-institutional-innovations-future-generations-report-2026-06-24" data-sig-toggle><span class="sig-pri strong-monitoring">Strong Monitor</span><span class="sig-title">International IDEA Launches Report on Institutional Innovations for Future Generations at London Climate Action Week</span><span class="sig-caret" aria-hidden="true">▾</span></summary><div class="sig-meta"><span>📅 2026-07-03</span><span>🏷️ future-generations-governance</span><span>🌍 International</span></div><div class="sig-detail" id="sigd-idea-institutional-innovations-future-generations-report-2026-06-24"><div class="sig-detail-inner"><div class="sig-summary">On 24 June 2026, International IDEA launched a new thematic report &#39;Institutional Innovations for Future Generations: The Experience of Climate Change&#39; at London Climate Action Week, as part of the Climate Governance Forum organized by the International Climate Councils Network and E3G. The report explores how democracies can become more climate-responsive and forward-looking, examining constitutional safeguards, parliamentary reforms, and dedicated institutions for future generations. The launch panel featured former Irish President Mary Robinson, Korea&#39;s Presidential Commission on Climate Crisis Response Chair Chang Hoon Lee, Grantham Research Institute&#39;s Alina Averchenkova, and climate justice advocate Xiye Bastida.</div><div class="sig-why"><strong>Why it matters:</strong> This report represents a significant institutional mapping of future-generations governance mechanisms at a moment of rapid global experimentation. International IDEA&#39;s comparative analysis of constitutional safeguards, parliamentary reforms, and dedicated future-generations institutions provides an evidence base for jurisdictions considering adoption of Wales-style commissioner models, parliamentary foresight committees, or constitutional climate duties. The launch at London Climate Action Week, with Mary Robinson and Xiye Bastida as speakers, signals that future-generations institutional design is moving from niche academic discourse into mainstream climate governance. The report&#39;s focus on climate change as the test case for institutional innovation is strategically important: it grounds future-generations governance in the most pressing intergenerational challenge, making the case transferable to other policy domains.</div><div class="sig-meta sig-meta-extra"><span>📐 policy</span><span>🌱 established</span><span>✅ Medium</span><span>⚖️ IE lens: ceb2-fairness, ceb4-good-ancestor, dfg2-rights</span><span>🧭 IE alignment: unclear</span></div><div class="sig-meta sig-meta-extra"><span>🔗 Source: <a class="sig-open" href="https://www.idea.int/events/london-climate-action-week-institutions-future-generations" target="_blank" rel="noopener noreferrer">International IDEA ↗</a></span></div><div class="sig-tags"><span>future generations</span><span>foresight methods</span></div><div class="sig-scores"><span>Composite <span class="score-inline"><span class="score-track"><span class="score-fill" style="width:70%"></span></span><span class="val">3.48</span></span></span><span>Credibility <span class="val">4</span></span><span>Novelty <span class="val">3.5</span></span><span>Urgency <span class="val">1.5</span></span></div><div class="sig-actions"><a class="sig-open" href="briefing.html#tab=all&q=International%20IDEA%20Launches%20Report%20on%20Institutional%20Innovati">Open in full dashboard →</a><button type="button" class="sig-link" data-sig-link="sig-idea-institutional-innovations-future-generations-report-2026-06-24">Copy link</button></div></div></div></details><details class="sig" data-priority="strong-monitoring" id="sig-nigeria-climate-investment-summit-london-2026-06"><summary class="sig-hdr" aria-expanded="false" aria-controls="sigd-nigeria-climate-investment-summit-london-2026-06" data-sig-toggle><span class="sig-pri strong-monitoring">Strong Monitor</span><span class="sig-title">Nigeria Climate Investment Summit in London Showcases $350 Billion Green Transition Opportunity and Oversubscribed Green Bonds</span><span class="sig-caret" aria-hidden="true">▾</span></summary><div class="sig-meta"><span>📅 2026-07-04</span><span>🏷️ climate-finance</span><span>🌍 NG</span></div><div class="sig-detail" id="sigd-nigeria-climate-investment-summit-london-2026-06"><div class="sig-detail-inner"><div class="sig-summary">The inaugural Nigeria Climate Investment Summit was held at Mansion House in the City of London during London Climate Action Week 2026, convened by GLOBE International President and sponsor of Nigeria&#39;s Climate Change Act 2021, Rt. Hon. Sam Onuigbo. The summit sought to persuade global investors that Nigeria&#39;s green transition represents one of Africa&#39;s most promising investment frontiers, with an estimated $350 billion in financing required to deliver net-zero by 2060. Onuigbo cited strong performance of Nigeria&#39;s green finance instruments: the 2025 Sovereign Green Bond of â‚¦50 billion attracted subscriptions worth â‚¦91 billion (182% oversubscription), while the Lagos State Green Bond was oversubscribed by 97.7%. The National Carbon Market Framework is projected to unlock $2.5-3 billion annually in carbon finance over the next decade. The summit also highlighted the Electricity Act 2023 reforms, with 15 of 36 states now regulating their intra-state electricity markets.</div><div class="sig-why"><strong>Why it matters:</strong> Nigeria&#39;s green bond oversubscription demonstrates that climate finance instruments can attract significant investor demand in African markets when properly structured — a critical signal for intergenerational climate finance equity. The $350 billion investment requirement for Nigeria&#39;s net-zero transition represents a massive intergenerational capital allocation decision: whether current investment patterns lock in fossil fuel infrastructure that future generations must either live with or pay to replace. The summit&#39;s framing of Nigeria as a gateway to the AfCFTA market (1.3 billion consumers, projected 2.5 billion by 2050) positions climate finance as an intergenerational economic development strategy. The 182% oversubscription of the sovereign green bond signals that investor appetite for climate-aligned African sovereign debt exceeds supply, challenging narratives that developing countries cannot attract climate finance. Relationship memory: connects to Nigeria&#39;s Climate Beyond Borders Caravan youth mobilization and the broader pattern of African climate finance innovation.</div><div class="sig-meta sig-meta-extra"><span>📐 policy</span><span>🌱 emerging</span><span>✅ Medium</span><span>⚖️ IE lens: ceb2-fairness, dfg3-prosperity, dfg5-environment</span><span>🧭 IE alignment: unclear</span></div><div class="sig-meta sig-meta-extra"><span>🔗 Source: <a class="sig-open" href="https://tribuneonlineng.com/350bn-green-gamble-why-climate-investment-is-emerging-as-nigerias-next-economic-frontier/" target="_blank" rel="noopener noreferrer">Nigerian Tribune ↗</a></span></div><div class="sig-tags"><span>finance</span><span>foresight methods</span></div><div class="sig-scores"><span>Composite <span class="score-inline"><span class="score-track"><span class="score-fill" style="width:68%"></span></span><span class="val">3.40</span></span></span><span>Credibility <span class="val">3</span></span><span>Novelty <span class="val">4</span></span><span>Urgency <span class="val">2</span></span></div><div class="sig-actions"><a class="sig-open" href="briefing.html#tab=all&q=Nigeria%20Climate%20Investment%20Summit%20in%20London%20Showcases%20%24350%20B">Open in full dashboard →</a><button type="button" class="sig-link" data-sig-link="sig-nigeria-climate-investment-summit-london-2026-06">Copy link</button></div></div></div></details></div></details><details class="conf" id="conf-sb64-bonn-2026" data-conf-id="sb64-bonn-2026" ><summary class="conf-hdr" aria-expanded="false" aria-controls="conf-body-sb64-bonn-2026" data-conf-toggle><span class="icon" aria-hidden="true">🏛️</span><span class="name">SB64 Bonn Climate Conference</span><span class="conf-status concluded">Concluded</span><span class="meta"><span>📅 June 8-18, 2026</span><span>📍 Bonn, Germany</span><span>📡 6 signals</span><span>⏱️ Ended Jun 18, 2026</span><span class="conf-mix-wrap"><span class="conf-mix strong-monitoring">2 strong</span></span></span><span class="arrow" aria-hidden="true">▾</span></summary><div class="conf-body" id="conf-body-sb64-bonn-2026"><p class="conf-desc">64th session of the UNFCCC subsidiary bodies. First major multilateral climate meeting since COP30 in Belem. Set the stage for COP31 in Antalya, Turkiye.</p><details class="sig" data-priority="strong-monitoring" id="sig-ohchr-sr-climate-bonn-negotiations-2026-06-08"><summary class="sig-hdr" aria-expanded="false" aria-controls="sigd-ohchr-sr-climate-bonn-negotiations-2026-06-08" data-sig-toggle><span class="sig-pri strong-monitoring">Strong Monitor</span><span class="sig-title">UN Special Rapporteur Opens Bonn Climate Talks With Demand That States Implement ICJ Advisory Opinion</span><span class="sig-caret" aria-hidden="true">▾</span></summary><div class="sig-meta"><span>📅 2026-06-13</span><span>🏷️ climate-governance</span><span>🌍 International</span></div><div class="sig-detail" id="sigd-ohchr-sr-climate-bonn-negotiations-2026-06-08"><div class="sig-detail-inner"><div class="sig-summary">At the opening of the Bonn intersessional UNFCCC negotiations (June 8-18, 2026), UN Special Rapporteur on climate change and human rights Elisa Morgera called on all states to advance implementation of the ICJ advisory opinion on climate obligations. She exhorted the 141 states that voted for the UNGA resolution welcoming the opinion to &quot;translate the Court&#39;s findings into enhanced multilateral cooperation&quot; and urged abstaining/opposing states to clarify their positions constructively rather than blocking negotiations. Morgera recalled that the ICJ opinion was requested by consensus of all UNGA states, involved the most participatory process in ICJ history, and was adopted unanimously — grounding it in existing binding obligations.</div><div class="sig-why"><strong>Why it matters:</strong> This is the first formal intervention by the UN&#39;s top independent expert on climate and human rights at the Bonn negotiations since the ICJ opinion and UNGA resolution. It transforms the advisory opinion from a legal document into an active negotiating mandate, directly challenging states to implement rather than merely acknowledge their obligations. The timing is critical: Bonn is where the technical groundwork for COP31 is laid, and Morgera is effectively demanding that the ICJ opinion become operational in the UNFCCC process — not remain a symbolic victory. This represents the next phase of the PISFCC campaign&#39;s legacy: from winning the legal argument to embedding it in the negotiating machinery.</div><div class="sig-meta sig-meta-extra"><span>📐 legal</span><span>🌱 established</span><span>✅ Medium</span><span>⚖️ IE lens: dfg2-rights, dfg5-environment</span><span>🧭 IE alignment: advances</span></div><div class="sig-meta sig-meta-extra"><span>🔗 Source: <a class="sig-open" href="https://www.ohchr.org/en/statements-and-speeches/2026/06/un-negotiations-must-advance-implementation-state-obligations" target="_blank" rel="noopener noreferrer">OHCHR ↗</a></span></div><div class="sig-tags"><span>multilateral reform</span></div><div class="sig-scores"><span>Composite <span class="score-inline"><span class="score-track"><span class="score-fill" style="width:71%"></span></span><span class="val">3.55</span></span></span><span>Credibility <span class="val">3</span></span><span>Novelty <span class="val">3</span></span><span>Urgency <span class="val">2</span></span></div><div class="sig-actions"><a class="sig-open" href="briefing.html#tab=all&q=UN%20Special%20Rapporteur%20Opens%20Bonn%20Climate%20Talks%20With%20Demand%20T">Open in full dashboard →</a><button type="button" class="sig-link" data-sig-link="sig-ohchr-sr-climate-bonn-negotiations-2026-06-08">Copy link</button></div></div></div></details><details class="sig" data-priority="strong-monitoring" id="sig-amnesty-bonn-climate-cop31-accountability-2026-06-05"><summary class="sig-hdr" aria-expanded="false" aria-controls="sigd-amnesty-bonn-climate-cop31-accountability-2026-06-05" data-sig-toggle><span class="sig-pri strong-monitoring">Strong Monitor</span><span class="sig-title">Amnesty International Calls on Governments at Bonn Climate Meetings to Translate ICJ/UNGA Commitments Into Rights-Based COP31 Agenda</span><span class="sig-caret" aria-hidden="true">▾</span></summary><div class="sig-meta"><span>📅 2026-06-12</span><span>🏷️ climate-justice</span><span>🌍 International</span></div><div class="sig-detail" id="sigd-amnesty-bonn-climate-cop31-accountability-2026-06-05"><div class="sig-detail-inner"><div class="sig-summary">On June 5, 2026 (World Environment Day), Amnesty International issued recommendations ahead of the June Bonn Climate Meetings, calling on governments to use the talks to turn the UNGA resolution endorsing the ICJ climate advisory opinion into a concrete, rights-centric agenda for COP31 in Antalya, Türkiye. Amnesty&#39;s recommendations call for a full, fast, fair, and funded phase-out of fossil fuels through a just transition; scaling up grants-based climate finance; full reparations for climate-related loss and damage; and protection of civic space for Indigenous Peoples, environmental human rights defenders, and affected communities. Climate Policy Advisor Ann Harrison stated: &#39;Climate action that ignores human rights is not only unjust, but also less effective.&#39;</div><div class="sig-why"><strong>Why it matters:</strong> This represents the next link in the accountability chain from the ICJ advisory opinion (July 2025) → UNGA endorsement (May 2026, 141-8) → Bonn technical negotiations (June 2026) → COP31 (November 2026). Amnesty is explicitly demanding that governments move from rhetorical endorsement to operational delivery, with human rights as the framework. The call for full reparations for loss and damage is particularly significant — it directly connects intergenerational climate justice to financial obligations. The Bonn meetings are where the technical groundwork for COP31 is laid, making this a critical inflection point for whether the ICJ/UNGA momentum translates into binding commitments or dissipates into diplomatic language.</div><div class="sig-meta sig-meta-extra"><span>📐 legal</span><span>🌱 emerging</span><span>✅ Medium</span><span>⚖️ IE lens: dfg2-rights, dfg5-environment</span><span>🧭 IE alignment: advances</span></div><div class="sig-meta sig-meta-extra"><span>🔗 Source: <a class="sig-open" href="https://www.amnesty.org/en/latest/news/2026/06/governments-at-bonn-must-act-on-climate-commitments/" target="_blank" rel="noopener noreferrer">Amnesty International ↗</a></span></div><div class="sig-tags"><span>finance</span><span>just transition</span><span>loss and damage</span><span>multilateral reform</span><span>civic participation</span></div><div class="sig-scores"><span>Composite <span class="score-inline"><span class="score-track"><span class="score-fill" style="width:69%"></span></span><span class="val">3.43</span></span></span><span>Credibility <span class="val">4</span></span><span>Novelty <span class="val">3</span></span><span>Urgency <span class="val">3</span></span></div><div class="sig-actions"><a class="sig-open" href="briefing.html#tab=all&q=Amnesty%20International%20Calls%20on%20Governments%20at%20Bonn%20Climate%20M">Open in full dashboard →</a><button type="button" class="sig-link" data-sig-link="sig-amnesty-bonn-climate-cop31-accountability-2026-06-05">Copy link</button></div></div></div></details><details class="sig" data-priority="useful" id="sig-bonn-climate-talks-gridlock-just-transition-2026-06-18"><summary class="sig-hdr" aria-expanded="false" aria-controls="sigd-bonn-climate-talks-gridlock-just-transition-2026-06-18" data-sig-toggle><span class="sig-pri useful">useful</span><span class="sig-title">Bonn Climate Talks End in Gridlock on Adaptation but Advance Just Transition Mechanism for COP31</span><span class="sig-caret" aria-hidden="true">▾</span></summary><div class="sig-meta"><span>📅 2026-06-25</span><span>🏷️ climate-governance-intergenerational</span><span>🌍 International</span></div><div class="sig-detail" id="sigd-bonn-climate-talks-gridlock-just-transition-2026-06-18"><div class="sig-detail-inner"><div class="sig-summary">Two weeks of UN climate talks in Bonn (SB64) ended 18 June 2026 with few tangible outcomes as diplomats faced gridlock on adaptation finance, emissions cuts, and the global goal on adaptation. Negotiators failed to agree on scaling up adaptation funding despite a COP30 tripling target that lacked baseline details. However, progress was made on a &#39;just transition mechanism&#39; to support communities through decarbonisation, with a package of texts agreed for COP31 in Antalya, Turkey. Many countries criticised &#39;coordinated attacks&#39; on climate science by fossil-fuel interests.</div><div class="sig-why"><strong>Why it matters:</strong> This is an intergenerational fairness signal because climate adaptation failures directly harm younger and future generations who will bear the costs of delayed action. The just transition mechanism is the one bright spot: it represents a governance tool that could ensure decarbonisation doesn&#39;t shift costs onto vulnerable communities. The gridlock on adaptation finance shows how current political cycles continue to underinvest in long-horizon resilience, which is exactly the kind of structural bias intergenerational governance is meant to correct.</div><div class="sig-meta sig-meta-extra"><span>📐 policy</span><span>🌱 emerging</span><span>✅ Medium</span><span>⚖️ IE lens: ceb2-fairness, dfg5-environment</span><span>🧭 IE alignment: strains</span></div><div class="sig-meta sig-meta-extra"><span>🔗 Source: <a class="sig-open" href="https://www.carbonbrief.org/bonn-climate-talks-key-outcomes-from-the-june-2026-un-climate-conference/" target="_blank" rel="noopener noreferrer">Carbon Brief ↗</a></span></div><div class="sig-tags"><span>adaptation</span><span>finance</span><span>just transition</span><span>future generations</span><span>foresight methods</span><span>multilateral reform</span></div><div class="sig-scores"><span>Composite <span class="score-inline"><span class="score-track"><span class="score-fill" style="width:67%"></span></span><span class="val">3.35</span></span></span><span>Credibility <span class="val">3</span></span><span>Novelty <span class="val">3</span></span><span>Urgency <span class="val">2</span></span></div><div class="sig-actions"><a class="sig-open" href="briefing.html#tab=all&q=Bonn%20Climate%20Talks%20End%20in%20Gridlock%20on%20Adaptation%20but%20Advance">Open in full dashboard →</a><button type="button" class="sig-link" data-sig-link="sig-bonn-climate-talks-gridlock-just-transition-2026-06-18">Copy link</button></div></div></div></details><details class="sig" data-priority="useful" id="sig-adaptation-fund-board-approves-usd-134m-projects-and-2026-2029-resource-mobilisation-strategy-includ"><summary class="sig-hdr" aria-expanded="false" aria-controls="sigd-adaptation-fund-board-approves-usd-134m-projects-and-2026-2029-resource-mobilisation-strategy-includ" data-sig-toggle><span class="sig-pri useful">useful</span><span class="sig-title">Adaptation Fund Board Approves ~USD 134m Projects and 2026–2029 Resource Mobilisation Strategy, Including First Regional LLA Window Project</span><span class="sig-caret" aria-hidden="true">▾</span></summary><div class="sig-meta"><span>📅 2026-04-10</span><span>🏷️ climate-finance</span><span>🌍 International</span></div><div class="sig-detail" id="sigd-adaptation-fund-board-approves-usd-134m-projects-and-2026-2029-resource-mobilisation-strategy-includ"><div class="sig-detail-inner"><div class="sig-summary">At its 46th meeting in Bonn (6–10 April 2026), the Adaptation Fund Board approved USD 133.83 million in new projects amid record demand of about USD 1.33 billion across 94 proposals. Milestones include the Fund’s largest regular single-country project (Malawi, USD 20m), largest regular regional project (Angola–Namibia, USD 24.55m), and first/largest regional Locally Led Adaptation project (Eswatini–Zambia–Zimbabwe, USD 30m). The Board also advanced an updated resource mobilisation strategy for 2026–2029 covering diversified public, private, carbon-market (Article 6.4 share of proceeds), philanthropic and partnership pathways, and revised implementing-entity assessment processes to enhance access.</div><div class="sig-why"><strong>Why it matters:</strong> Adaptation Fund windows—especially Locally Led Adaptation—are among the few multilateral channels designed to reach community-scale resilience before irreversible loss lands on younger cohorts. Mechanism: Board-level strategy and LLA regional scale-up decide whether adaptation capital stays projectised for national intermediaries or becomes a durable access architecture for locally governed, youth-inclusive resilience.</div><div class="sig-meta sig-meta-extra"><span>📐 policy</span><span>🌱 emerging</span><span>✅ Medium</span><span>⚖️ IE lens: dfg5-environment</span><span>🧭 IE alignment: advances</span></div><div class="sig-meta sig-meta-extra"><span>🔗 Source: <a class="sig-open" href="https://www.adaptation-fund.org/adaptation-fund-board-approves-close-to-us-134-million-in-new-projects-for-climate-vulnerable-countries/" target="_blank" rel="noopener noreferrer">Adaptation Fund ↗</a></span></div><div class="sig-tags"><span>adaptation</span><span>finance</span></div><div class="sig-scores"><span>Composite <span class="score-inline"><span class="score-track"><span class="score-fill" style="width:67%"></span></span><span class="val">3.35</span></span></span><span>Credibility <span class="val">3</span></span><span>Novelty <span class="val">3</span></span><span>Urgency <span class="val">2</span></span></div><div class="sig-actions"><a class="sig-open" href="briefing.html#tab=all&q=Adaptation%20Fund%20Board%20Approves%20~USD%20134m%20Projects%20and%202026%E2%80%932">Open in full dashboard →</a><button type="button" class="sig-link" data-sig-link="sig-adaptation-fund-board-approves-usd-134m-projects-and-2026-2029-resource-mobilisation-strategy-includ">Copy link</button></div></div></div></details><details class="sig" data-priority="useful" id="sig-montana-missoula-county-data-center-moratorium-2026-07-09"><summary class="sig-hdr" aria-expanded="false" aria-controls="sigd-montana-missoula-county-data-center-moratorium-2026-07-09" data-sig-toggle><span class="sig-pri useful">useful</span><span class="sig-title">Missoula County Unanimously Approves Emergency Moratorium on Data Centers to Study Energy, Water, and Noise Impacts</span><span class="sig-caret" aria-hidden="true">▾</span></summary><div class="sig-meta"><span>📅 2026-07-10</span><span>🏷️ climate-governance</span><span>🌍 US_MT</span></div><div class="sig-detail" id="sigd-montana-missoula-county-data-center-moratorium-2026-07-09"><div class="sig-detail-inner"><div class="sig-summary">On July 9, 2026, Missoula County Commissioners unanimously approved a temporary moratorium on new or expanding data centers for up to one year while the county updates regulations to mitigate potential impacts on public health, safety, and natural resources. The moratorium, prompted by a proposed data center at the Bonner Mill Industrial Park that the property owner subsequently withdrew, covers zoned and unzoned areas countywide. The county&#39;s existing 2021 regulations — designed around cryptocurrency mining — do not adequately address data centers&#39; impacts on water quality and quantity, air quality, heat, noise, and vibration. Commissioners noted that AI companies will likely lobby the 2027 Montana Legislature and urged public engagement. Separately, residents of Butte-Silver Bow and Yellowstone counties are gathering signatures for ballot initiatives requiring voter approval for data center construction.</div><div class="sig-why"><strong>Why it matters:</strong> This moratorium represents a local governance response to the tension between AI-driven energy demand growth and community environmental protection — a tension that directly affects intergenerational equity. Data centers&#39; massive energy and water consumption lock in future infrastructure patterns and emissions that younger and future generations will inherit. The mechanism — county-level interim zoning authority — shows how local governments can act ahead of state legislatures to shape the energy transition. Missoula County&#39;s approach (emergency moratorium, environmental study, public engagement) contrasts with the Gianforte administration&#39;s push to expedite energy infrastructure (Energy Task Force, MEPA reform). For younger Montanans, the question is whether data center growth will accelerate renewable energy buildout or further entrench fossil fuel dependence on the grid. Relationship memory: connects to the NorthWestern Energy IRP (which models data center load growth), the PSC Large New Load tariff, and the Montana Energy Task Force.</div><div class="sig-meta sig-meta-extra"><span>📐 policy</span><span>🌱 emerging</span><span>✅ Medium</span><span>⚖️ IE lens: ceb2-fairness, dfg5-environment, dfg6-technology</span><span>🧭 IE alignment: unclear</span></div><div class="sig-meta sig-meta-extra"><span>🔗 Source: <a class="sig-open" href="https://montanafreepress.org/2026/07/09/missoula-county-adopts-temporary-moratorium-on-data-centers/" target="_blank" rel="noopener noreferrer">Montana Free Press ↗</a></span></div><div class="sig-tags"><span>finance</span><span>AI for good</span><span>foresight methods</span></div><div class="sig-scores"><span>Composite <span class="score-inline"><span class="score-track"><span class="score-fill" style="width:65%"></span></span><span class="val">3.25</span></span></span><span>Credibility <span class="val">3</span></span><span>Novelty <span class="val">3</span></span><span>Urgency <span class="val">2</span></span></div><div class="sig-actions"><a class="sig-open" href="briefing.html#tab=all&q=Missoula%20County%20Unanimously%20Approves%20Emergency%20Moratorium%20on">Open in full dashboard →</a><button type="button" class="sig-link" data-sig-link="sig-montana-missoula-county-data-center-moratorium-2026-07-09">Copy link</button></div></div></div></details><details class="sig" data-priority="useful" id="sig-philippines-ndc-update-local-leadership-2026-07-01"><summary class="sig-hdr" aria-expanded="false" aria-controls="sigd-philippines-ndc-update-local-leadership-2026-07-01" data-sig-toggle><span class="sig-pri useful">useful</span><span class="sig-title">Philippines Faces Race to Finalize Updated NDC Ahead of COP31 as Local Leadership Emerges as Key Implementation Factor</span><span class="sig-caret" aria-hidden="true">▾</span></summary><div class="sig-meta"><span>📅 2026-07-10</span><span>🏷️ climate-governance</span><span>🌍 PH</span></div><div class="sig-detail" id="sigd-philippines-ndc-update-local-leadership-2026-07-01"><div class="sig-detail-inner"><div class="sig-summary">As of July 2026, the Philippines has yet to finalize its updated NDC ahead of COP31. The June 2026 Bonn climate talks (SB64) failed to launch the Belem Action Mechanism (BAM) — a framework designed to protect workers, women, youth, Indigenous peoples, and local communities during the just transition. Adaptation finance pledges from wealthy nations also stalled at Bonn. The Philippines&#39; NDC update process has included youth consultation workshops in 2025, but the final pledge text remains incomplete.</div><div class="sig-why"><strong>Why it matters:</strong> The Philippines&#39; NDC update is a live test of whether youth participation commitments translate into binding NDC text. The failure of the Belem Action Mechanism at Bonn means just transition safeguards remain unoperationalized. For intergenerational equity, the delay represents a governance gap: current generations delay commitments that will bind future generations.</div><div class="sig-meta sig-meta-extra"><span>📐 policy</span><span>🌱 emerging</span><span>✅ Medium</span><span>⚖️ IE lens: ceb2-fairness, dfg3-prosperity, dfg5-environment</span><span>🧭 IE alignment: strains</span></div><div class="sig-meta sig-meta-extra"><span>🔗 Source: <a class="sig-open" href="https://mb.com.ph/2026/07/01/why-the-philippines-new-climate-pledge-hinges-on-local-leaders" target="_blank" rel="noopener noreferrer">Manila Bulletin ↗</a></span></div><div class="sig-tags"><span>adaptation</span><span>finance</span><span>just transition</span><span>youth participation</span><span>foresight methods</span><span>civic participation</span></div><div class="sig-scores"><span>Composite <span class="score-inline"><span class="score-track"><span class="score-fill" style="width:65%"></span></span><span class="val">3.25</span></span></span><span>Credibility <span class="val">3</span></span><span>Novelty <span class="val">3</span></span><span>Urgency <span class="val">2</span></span></div><div class="sig-actions"><a class="sig-open" href="briefing.html#tab=all&q=Philippines%20Faces%20Race%20to%20Finalize%20Updated%20NDC%20Ahead%20of%20COP3">Open in full dashboard →</a><button type="button" class="sig-link" data-sig-link="sig-philippines-ndc-update-local-leadership-2026-07-01">Copy link</button></div></div></div></details></div></details></div></details></div>
+<p id="noResults" class="no-results" hidden>No signals in this priority band.</p>
+<p id="srStatus" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+</main>
+
+
+<footer class="intel-shell-footer">
+  <span>Built 2026-08-30 - 2034 signals tracked - GYC AI Labs · Intergenerational Foresight</span>
+  <span><a href="index.html">Overview</a> - <a href="graph.html">Knowledge graph</a> - <a href="country-ambition.html">Country index</a> - <a href="policy-tools.html">Policy tools</a></span>
+  
+</footer>
+<script>
+function qs(name) {
+  return new URLSearchParams(location.search).get(name) || "";
+}
+
+function updateUrlState() {
+  var params = new URLSearchParams(location.search);
+  if (activeFilter && activeFilter !== "all") params.set("band", activeFilter);
+  else params.delete("band");
+  var trimmed = searchQuery.trim();
+  if (trimmed) params.set("q", trimmed);
+  else params.delete("q");
+  var next = location.pathname + (params.toString() ? "?" + params.toString() : "") + location.hash;
+  history.replaceState(null, "", next);
+}
+
+function announce(message) {
+  var sr = document.getElementById("srStatus");
+  if (!sr) return;
+  sr.textContent = "";
+  setTimeout(function() {
+    sr.textContent = message;
+  }, 25);
+}
+
+function syncConferenceState(conf) {
+  var summary = conf ? conf.querySelector("[data-conf-toggle]") : null;
+  if (!summary) return;
+  summary.setAttribute("aria-expanded", conf.open ? "true" : "false");
+}
+
+function syncSignalState(sig) {
+  var summary = sig ? sig.querySelector("[data-sig-toggle]") : null;
+  if (!summary) return;
+  summary.setAttribute("aria-expanded", sig.open ? "true" : "false");
+}
+
+function setSigOpen(target, open) {
+  var sig = target;
+  if (target && target.matches && target.matches("[data-sig-toggle]")) sig = target.closest(".sig");
+  if (!sig) return;
+  sig.open = !!open;
+  syncSignalState(sig);
+}
+
+document.querySelectorAll(".conf").forEach(function(conf) {
+  syncConferenceState(conf);
+  conf.addEventListener("toggle", function() {
+    syncConferenceState(conf);
+  });
+});
+
+document.querySelectorAll(".sig").forEach(function(sig) {
+  syncSignalState(sig);
+  sig.addEventListener("toggle", function() {
+    syncSignalState(sig);
+  });
+});
+
+var archivePanel = document.getElementById("confArchive");
+var archiveToggle = archivePanel ? archivePanel.querySelector("[data-conf-archive-toggle]") : null;
+function syncArchiveState() {
+  if (!archivePanel || !archiveToggle) return;
+  archiveToggle.setAttribute("aria-expanded", archivePanel.open ? "true" : "false");
+}
+if (archivePanel) {
+  syncArchiveState();
+  archivePanel.addEventListener("toggle", syncArchiveState);
+}
+
+document.querySelectorAll("[data-conf-jump]").forEach(function(link) {
+  link.addEventListener("click", function(e) {
+    var targetId = link.getAttribute("data-conf-jump");
+    var conf = targetId ? document.getElementById(targetId) : null;
+    if (!conf) return;
+    e.preventDefault();
+    var inArchive = conf.closest(".conf-archive");
+    if (archivePanel && inArchive) archivePanel.open = true;
+    conf.open = true;
+    conf.scrollIntoView({ behavior: "smooth", block: "start" });
+    var summary = conf.querySelector("[data-conf-toggle]");
+    if (summary && summary.focus) summary.focus({ preventScroll: true });
+    history.replaceState(null, "", "#" + targetId);
+  });
+});
+
+var expandAllBtn = document.getElementById("expandAll");
+if (expandAllBtn) {
+  expandAllBtn.addEventListener("click", function() {
+    var expand = expandAllBtn.dataset.state !== "expanded";
+    document.querySelectorAll(".sig").forEach(function(sig) {
+      if (!sig.hidden) setSigOpen(sig, expand);
+    });
+    if (expand) {
+      document.querySelectorAll(".conf").forEach(function(conf) {
+        if (!conf.hidden) conf.open = true;
+      });
+      if (archivePanel && !archivePanel.hidden) archivePanel.open = true;
+    }
+    expandAllBtn.dataset.state = expand ? "expanded" : "collapsed";
+    expandAllBtn.textContent = expand ? "Collapse all" : "Expand all";
+  });
+}
+var activeFilter = "all";
+var searchQuery = "";
+
+function escapeRegex(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function clearHighlights(scope) {
+  (scope || document).querySelectorAll("mark.sig-hl").forEach(function(mark) {
+    var parent = mark.parentNode;
+    if (!parent) return;
+    parent.replaceChild(document.createTextNode(mark.textContent || ""), mark);
+    parent.normalize();
+  });
+}
+
+function highlightElementText(el, regex) {
+  var walker = document.createTreeWalker(
+    el,
+    NodeFilter.SHOW_TEXT,
+    {
+      acceptNode: function(node) {
+        if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        var parent = node.parentElement;
+        if (!parent) return NodeFilter.FILTER_REJECT;
+        if (parent.closest("mark.sig-hl")) return NodeFilter.FILTER_REJECT;
+        var tag = parent.tagName;
+        if (tag === "SCRIPT" || tag === "STYLE" || tag === "NOSCRIPT") return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    }
+  );
+  var nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach(function(node) {
+    var text = node.nodeValue;
+    regex.lastIndex = 0;
+    if (!regex.test(text)) return;
+    regex.lastIndex = 0;
+    var frag = document.createDocumentFragment();
+    var start = 0;
+    var match;
+    while ((match = regex.exec(text)) !== null) {
+      var index = match.index;
+      if (index > start) frag.appendChild(document.createTextNode(text.slice(start, index)));
+      var mark = document.createElement("mark");
+      mark.className = "sig-hl";
+      mark.textContent = match[0];
+      frag.appendChild(mark);
+      start = index + match[0].length;
+      if (match[0].length === 0) regex.lastIndex++;
+    }
+    if (start < text.length) frag.appendChild(document.createTextNode(text.slice(start)));
+    if (node.parentNode) node.parentNode.replaceChild(frag, node);
+  });
+}
+
+function applySearchHighlights() {
+  clearHighlights(document);
+  var q = searchQuery.trim();
+  if (!q) return;
+  var regex = new RegExp(escapeRegex(q), "gi");
+  document.querySelectorAll(".sig:not([hidden])").forEach(function(sig) {
+    sig.querySelectorAll(".sig-title, .sig-summary, .sig-why").forEach(function(el) {
+      highlightElementText(el, regex);
+    });
+  });
+}
+
+function applyFilters() {
+  var q = searchQuery.trim().toLowerCase();
+  var anyVisible = 0;
+  document.querySelectorAll(".sig").forEach(function(sig) {
+    var passBand = activeFilter === "all" || sig.dataset.priority === activeFilter;
+    var passText = !q || sig.textContent.toLowerCase().indexOf(q) !== -1;
+    sig.hidden = !(passBand && passText);
+  });
+  document.querySelectorAll(".conf").forEach(function(conf) {
+    var visible = conf.querySelectorAll(".sig:not([hidden])").length;
+    conf.hidden = visible === 0;
+    anyVisible += visible;
+  });
+  var currentGroup = document.querySelector(".conf-group-current");
+  if (currentGroup) {
+    var currentVisible = currentGroup.querySelectorAll(".conf:not([hidden])").length;
+    currentGroup.hidden = currentVisible === 0;
+  }
+  if (archivePanel) {
+    var archiveVisible = archivePanel.querySelectorAll(".conf:not([hidden])").length;
+    archivePanel.hidden = archiveVisible === 0;
+    if (archiveVisible && q) archivePanel.open = true;
+    if (!archiveVisible) archivePanel.open = false;
+  });
+  var noResults = document.getElementById("noResults");
+  if (noResults) {
+    noResults.hidden = anyVisible !== 0;
+    noResults.textContent = q
+      ? 'No signals match "' + searchQuery.trim() + '".'
+      : "No signals in this priority band.";
+  }
+  applySearchHighlights();
+  announce((anyVisible === 1 ? "1 signal" : anyVisible + " signals") + " shown.");
+  updateUrlState();
+}
+document.getElementById("filterBar").addEventListener("click", function(e) {
+  var btn = e.target.closest("button");
+  if (!btn) return;
+  document.querySelectorAll("#filterBar button").forEach(function(b) { b.classList.remove("active"); });
+  btn.classList.add("active");
+  activeFilter = btn.dataset.filter;
+  applyFilters();
+});
+var searchInput = document.getElementById("sigSearch");
+if (searchInput) {
+  searchInput.addEventListener("input", function() {
+    searchQuery = searchInput.value;
+    applyFilters();
+    // While searching, expand the matches so the matching text is visible; collapse when cleared.
+    var q = searchQuery.trim();
+    document.querySelectorAll(".sig").forEach(function(sig) {
+      setSigOpen(sig, !!q && !sig.hidden);
+      if (q && !sig.hidden) {
+        var conf = sig.closest(".conf");
+        if (conf) conf.open = true;
+      }
+    });
+    if (archivePanel && q && archivePanel.querySelector(".conf:not([hidden])")) archivePanel.open = true;
+    if (expandAllBtn) {
+      expandAllBtn.dataset.state = q ? "expanded" : "collapsed";
+      expandAllBtn.textContent = q ? "Collapse all" : "Expand all";
+    }
+  });
+}
+// Show a live count on each filter button so users know a band is empty before clicking.
+document.querySelectorAll("#filterBar button").forEach(function(btn) {
+  var filter = btn.dataset.filter;
+  var count = filter === "all"
+    ? document.querySelectorAll(".sig").length
+    : document.querySelectorAll('.sig[data-priority="' + filter + '"]').length;
+  btn.textContent = btn.textContent + " (" + count + ")";
+});
+// Per-signal "Copy link" — copies a deep link that reopens this signal.
+document.querySelectorAll("[data-sig-link]").forEach(function(btn) {
+  btn.addEventListener("click", function() {
+    var params = new URLSearchParams(location.search);
+    if (activeFilter && activeFilter !== "all") params.set("band", activeFilter);
+    else params.delete("band");
+    var trimmed = searchQuery.trim();
+    if (trimmed) params.set("q", trimmed);
+    else params.delete("q");
+    var query = params.toString();
+    var url = location.origin + location.pathname + (query ? "?" + query : "") + "#" + btn.dataset.sigLink;
+    var label = btn.textContent;
+    function done() {
+      btn.textContent = "Copied!";
+      announce("Link copied.");
+      setTimeout(function() { btn.textContent = label; }, 1400);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(done, function() { location.hash = btn.dataset.sigLink; });
+    } else {
+      location.hash = btn.dataset.sigLink;
+      announce("Link copied.");
+    }
+  });
+});
+// Deep link: on load or hash change, open the target signal (and its conference) and flash it.
+function openSignalFromHash() {
+  var h = location.hash;
+  if (!h || h.indexOf("#sig-") !== 0) return;
+  var sig = document.getElementById(h.slice(1));
+  if (!sig) return;
+  var conf = sig.closest(".conf");
+  if (conf) conf.open = true;
+  var inArchive = sig.closest(".conf-archive");
+  if (archivePanel && inArchive) archivePanel.open = true;
+  setSigOpen(sig, true);
+  var toggle = sig.querySelector("[data-sig-toggle]");
+  sig.scrollIntoView({ behavior: "smooth", block: "center" });
+  if (toggle && toggle.focus) toggle.focus({ preventScroll: true });
+  sig.classList.remove("sig-flash");
+  void sig.offsetWidth;
+  sig.classList.add("sig-flash");
+}
+
+var initialFilter = qs("band");
+if (initialFilter && document.querySelector('#filterBar button[data-filter="' + initialFilter + '"]')) {
+  activeFilter = initialFilter;
+}
+document.querySelectorAll("#filterBar button").forEach(function(b) {
+  b.classList.toggle("active", b.dataset.filter === activeFilter);
+});
+
+var initialQuery = qs("q");
+if (initialQuery) {
+  searchQuery = initialQuery;
+  if (searchInput) searchInput.value = initialQuery;
+}
+
+if (searchQuery.trim()) {
+  document.querySelectorAll(".sig").forEach(function(sig) {
+    var match = sig.textContent.toLowerCase().indexOf(searchQuery.trim().toLowerCase()) !== -1;
+    setSigOpen(sig, match);
+    if (match) {
+      var conf = sig.closest(".conf");
+      if (conf) conf.open = true;
+    }
+  });
+  if (expandAllBtn) {
+    expandAllBtn.dataset.state = "expanded";
+    expandAllBtn.textContent = "Collapse all";
+  }
+}
+
+applyFilters();
+window.addEventListener("hashchange", openSignalFromHash);
+openSignalFromHash();
+
+document.addEventListener("keydown", function(e) {
+  var target = e.target;
+  var isEditable = target && (
+    target.isContentEditable ||
+    /INPUT|TEXTAREA|SELECT/.test(target.tagName)
+  );
+  if (e.key === "/" && !isEditable) {
+    e.preventDefault();
+    if (searchInput) searchInput.focus();
+    return;
+  }
+  if (e.key === "Escape") {
+    var hadSearch = !!(searchInput && searchInput.value.trim());
+    if (hadSearch) {
+      searchInput.value = "";
+      searchQuery = "";
+      applyFilters();
+      if (expandAllBtn) {
+        expandAllBtn.dataset.state = "collapsed";
+        expandAllBtn.textContent = "Expand all";
+      }
+      announce("Search cleared.");
+      return;
+    }
+    var focusedSig = target && target.closest ? target.closest(".sig") : null;
+    if (focusedSig && focusedSig.open) {
+      setSigOpen(focusedSig, false);
+      var summary = focusedSig.querySelector("[data-sig-toggle]");
+      if (summary && summary.focus) summary.focus({ preventScroll: true });
+      announce("Signal collapsed.");
+      return;
+    }
+  }
+  if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
+  if (isEditable) return;
+  var toggles = Array.prototype.slice.call(document.querySelectorAll(".sig:not([hidden]) [data-sig-toggle]"));
+  if (!toggles.length) return;
+  var active = document.activeElement;
+  var idx = toggles.indexOf(active);
+  if (idx === -1) return;
+  e.preventDefault();
+  var next = e.key === "ArrowDown" ? Math.min(toggles.length - 1, idx + 1) : Math.max(0, idx - 1);
+  toggles[next].focus();
+});
+</script>
+
+<script data-intel-theme="init">
+(function(){
+  var KEY="gyc-foresight-theme";
+  function apply(theme){
+    document.documentElement.dataset.theme=theme;
+    var btn=document.getElementById("intel-theme-toggle");
+    if(btn){
+      btn.textContent=theme==="dark"?"\u2600":"\u{1F319}";
+      btn.setAttribute("aria-label",theme==="dark"?"Switch to light mode":"Switch to dark mode");
+    }
+    try{localStorage.setItem(KEY,theme);}catch(e){}
+    try{window.dispatchEvent(new CustomEvent("gyc-theme-change",{detail:theme}));}catch(e){}
+  }
+  function preferred(){
+    try{
+      var s=localStorage.getItem(KEY);
+      if(s==="light"||s==="dark") return s;
+    }catch(e){}
+    return "light";
+  }
+  var btn=document.getElementById("intel-theme-toggle");
+  if(btn){
+    btn.addEventListener("click",function(){
+      apply(document.documentElement.dataset.theme==="dark"?"light":"dark");
+    });
+  }
+  if(!document.documentElement.dataset.theme) apply(preferred());
+  else apply(document.documentElement.dataset.theme);
+})();
+</script>
+<script data-intel-shell="init">
+(function(){
+  var KEY="gyc-foresight-nav";
+  var root=document.documentElement;
+  function apply(state){
+    root.dataset.nav=state;
+    var btn=document.getElementById("intel-nav-toggle");
+    if(btn){
+      var collapsed=state==="collapsed";
+      btn.setAttribute("aria-label",collapsed?"Expand navigation":"Collapse navigation");
+      btn.setAttribute("aria-expanded",collapsed?"false":"true");
+      btn.title=collapsed?"Expand navigation":"Collapse navigation";
+    }
+    try{localStorage.setItem(KEY,state);}catch(e){}
+    try{window.dispatchEvent(new CustomEvent("gyc-nav-change",{detail:state}));}catch(e){}
+  }
+  function preferred(){
+    try{
+      var s=localStorage.getItem(KEY);
+      if(s==="collapsed"||s==="expanded") return s;
+    }catch(e){}
+    return "expanded";
+  }
+  var btn=document.getElementById("intel-nav-toggle");
+  if(btn){
+    btn.addEventListener("click",function(){
+      apply(root.dataset.nav==="collapsed"?"expanded":"collapsed");
+    });
+  }
+  apply(root.dataset.nav==="collapsed"?"collapsed":preferred());
+
+  /* ---- mobile off-canvas drawer ---- */
+  var mq=window.matchMedia("(max-width:959px)");
+  var menuBtn=document.getElementById("intel-mobile-menu");
+  var closeBtn=document.getElementById("intel-mobile-close");
+  var scrim=document.getElementById("intel-shell-scrim");
+  function setDrawer(open){
+    if(open) root.dataset.mobileNav="open"; else delete root.dataset.mobileNav;
+    if(menuBtn) menuBtn.setAttribute("aria-expanded",open?"true":"false");
+  }
+  var closeDrawer=function(){ setDrawer(false); };
+  if(menuBtn) menuBtn.addEventListener("click",function(){ setDrawer(root.dataset.mobileNav!=="open"); });
+  if(closeBtn) closeBtn.addEventListener("click",closeDrawer);
+  if(scrim) scrim.addEventListener("click",closeDrawer);
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape") closeDrawer(); });
+  // pick a destination → close the drawer (view links change the hash in place)
+  var sidebar=document.getElementById("intel-shell-sidebar");
+  if(sidebar){
+    sidebar.querySelectorAll(".intel-shell-nav a").forEach(function(a){
+      a.addEventListener("click",function(){ if(mq.matches) closeDrawer(); });
+    });
+  }
+  // leaving mobile width clears any open drawer so desktop layout is never locked
+  function onMQ(){ if(!mq.matches) closeDrawer(); }
+  if(mq.addEventListener) mq.addEventListener("change",onMQ); else window.addEventListener("resize",onMQ);
+})();
+</script>
+</body>
+</html>

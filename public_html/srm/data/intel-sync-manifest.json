@@ -1,0 +1,24 @@
+{
+  "synced_at": "2026-06-30T00:02:01.316Z",
+  "source": {
+    "signals_v3": "signals-kb/signals-v3.json",
+    "trends": "signals-kb/trends.json",
+    "edges": "signals-kb/edges.json",
+    "country_ambition_data": "signals-kb/country-ambition-data.json",
+    "papers": "signals-kb/papers.json",
+    "organizations": "signals-kb/organizations.json"
+  },
+  "counts": {
+    "signals": 47,
+    "trends": 6,
+    "threads": 0
+  },
+  "hashes": {
+    "signals_v3": "89a9304cc4ebfff57883cf929c38fc1802ba517d3b17bb25149668c906cd3542",
+    "deploy_signals_db": "4ab70c3aa84507451467f2a9d37b7e6f33c6928cb3c9d12a35ff3be799f0a225",
+    "deploy_briefing": "71f5a91864082c7a1be17c0abed3f4ca946fbdf6340d2bbd1c59f8701a5b944a",
+    "deploy_country_ambition_data": "5534d65786cd9af7257a48504942b1c80cf8dc0d936ba75ae610d05d520ccef6",
+    "deploy_papers": "0fa48fe03027539288b0e7e971024a4e3b7c51ea0e4f7f1199acb8bfb9ce0993",
+    "deploy_organizations": "48f00ff9fd6f4fdd1f64c2934549b95d67ec2ed4385332ca0f6ff46e70bf3106"
+  }
+}

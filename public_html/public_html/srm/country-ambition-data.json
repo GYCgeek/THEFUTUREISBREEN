@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "generated": "2026-06-28",
+  "notes": "Country positions on solar radiation modification (SRM) and geoengineering for SRM Watch. Seed entries are illustrative samples; the scanner/analyst pipeline expands and corrects this over time. position: supportive | cautious | opposed | undeclared.",
+  "buckets": {
+    "supportive": "Supports research / open to governed exploration",
+    "cautious": "Cautious — emphasises governance, moratoria pending oversight",
+    "opposed": "Opposed — bans or restricts experiments / deployment",
+    "undeclared": "No clear stated national position"
+  },
+  "total_countries": 5,
+  "countries": [
+    {
+      "country_code": "US",
+      "country_name": "United States",
+      "region": "North America",
+      "position": "supportive",
+      "position_label": "Supports governed research",
+      "summary": "Federal science agencies have produced research plans and assessments treating solar radiation modification as a legitimate area of study, while stopping short of any deployment commitment.",
+      "key_actions": [
+        "OSTP congressionally-mandated research plan on solar/atmosphere interventions (2023)",
+        "NOAA atmospheric science and monitoring programs"
+      ],
+      "relevant_signal_ids": [],
+      "sources": [
+        { "name": "US OSTP", "url": "https://www.whitehouse.gov/ostp/" }
+      ],
+      "last_updated": "2026-06-28"
+    },
+    {
+      "country_code": "GB",
+      "country_name": "United Kingdom",
+      "region": "Europe",
+      "position": "supportive",
+      "position_label": "Funds exploratory research",
+      "summary": "UK research funders have supported exploratory programmes on climate cooling approaches alongside calls for strong governance and transparency.",
+      "key_actions": [
+        "ARIA exploratory climate / cooling research funding",
+        "Royal Society engagement on geoengineering governance"
+      ],
+      "relevant_signal_ids": [],
+      "sources": [
+        { "name": "ARIA", "url": "https://www.aria.org.uk/" }
+      ],
+      "last_updated": "2026-06-28"
+    },
+    {
+      "country_code": "CH",
+      "country_name": "Switzerland",
+      "region": "Europe",
+      "position": "cautious",
+      "position_label": "Pushes multilateral governance",
+      "summary": "Switzerland has sought to put solar radiation modification on the multilateral agenda, proposing UN Environment Assembly consideration of an expert review and governance.",
+      "key_actions": [
+        "Proposed UNEA resolution on solar radiation modification (2019, 2024)"
+      ],
+      "relevant_signal_ids": [],
+      "sources": [
+        { "name": "UN Environment Assembly", "url": "https://www.unep.org/environmentassembly/" }
+      ],
+      "last_updated": "2026-06-28"
+    },
+    {
+      "country_code": "MX",
+      "country_name": "Mexico",
+      "region": "Latin America",
+      "position": "opposed",
+      "position_label": "Restricts experiments",
+      "summary": "Mexico announced steps to prohibit solar geoengineering experiments on its territory following an unauthorised private stratospheric aerosol release.",
+      "key_actions": [
+        "Announced ban on solar geoengineering experimentation (2023)"
+      ],
+      "relevant_signal_ids": [],
+      "sources": [
+        { "name": "Gobierno de Mexico", "url": "https://www.gob.mx/" }
+      ],
+      "last_updated": "2026-06-28"
+    },
+    {
+      "country_code": "International",
+      "country_name": "Multilateral / International bodies",
+      "region": "International",
+      "position": "cautious",
+      "position_label": "De facto moratorium (CBD)",
+      "summary": "Through the Convention on Biological Diversity, parties adopted a widely-cited decision discouraging climate-related geoengineering pending adequate scientific basis and governance.",
+      "key_actions": [
+        "CBD decision establishing a de facto moratorium (2010, reaffirmed)"
+      ],
+      "relevant_signal_ids": [],
+      "sources": [
+        { "name": "CBD", "url": "https://www.cbd.int/" }
+      ],
+      "last_updated": "2026-06-28"
+    }
+  ]
+}

@@ -1,0 +1,3357 @@
+{
+  "schema_version": 1,
+  "generated": "2026-08-30T18:59:59.726Z",
+  "count": 670,
+  "edges": [
+    {
+      "actor_id": "pisffc",
+      "signal_id": "pisffc-right-livelihood-award-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-australia",
+      "signal_id": "australia-tax-reform-passed-lower-house-2026-06-04",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-green-week-youth-dialogue-2026-06-03",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "malaysia-social-media-ban-under-16-2026-06-01",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "human-rights-watch",
+      "signal_id": "hrw-europe-right-healthy-environment-2026-06-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "council-of-europe-parliamentary-assembly",
+      "signal_id": "hrw-europe-right-healthy-environment-2026-06-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-court-of-human-rights",
+      "signal_id": "hrw-europe-right-healthy-environment-2026-06-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-ninth-circuit",
+      "signal_id": "ninth-circuit-lighthiser-youth-climate-dismissal-2026-06-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-supreme-court-juliana",
+      "signal_id": "ninth-circuit-lighthiser-youth-climate-dismissal-2026-06-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-supreme-court",
+      "signal_id": "ninth-circuit-lighthiser-youth-climate-dismissal-2026-06-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-commissioner-intergenerational-fairness",
+      "signal_id": "eu-council-intergenerational-fairness-conclusions-2026-05-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "eu-council-intergenerational-fairness-conclusions-2026-05-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-council-intergenerational-fairness-conclusions-2026-05-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "g7-minors-online-protection-principles-2026-05-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "green-european-journal-overcoming-presentism-eu-strategy-2026-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "icj-climate-advisory-opinion-2025",
+      "signal_id": "unga-icj-climate-resolution-2026-05-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "pisffc",
+      "signal_id": "unga-icj-climate-resolution-2026-05-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "wales-future-generations-commissioner-warning-2026-05-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "wales-future-generations-commissioner-warning-2026-05-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "wales-future-generations-commissioner-warning-2026-05-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-commissioner-intergenerational-fairness",
+      "signal_id": "eu-youth-climate-dialogue-micallef-2026-05-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-youth-climate-dialogue-micallef-2026-05-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "eesc-intergenerational-fairness-hearing-2026-05-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-commissioner-intergenerational-fairness",
+      "signal_id": "eu-strategy-intergenerational-fairness-2026-03-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "eu-strategy-intergenerational-fairness-2026-03-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-strategy-intergenerational-fairness-2026-03-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "eu-strategy-intergenerational-fairness-2026-03-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-ninth-circuit",
+      "signal_id": "lighthiser-v-trump-ninth-circuit-2026-04-13",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-ninth-circuit",
+      "signal_id": "ninth-circuit-dismisses-genesis-b-v-epa-2026-04-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "unu-future-generations-platform",
+      "signal_id": "unu-future-generations-platform-2026-04",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "unu-future-generations-platform-2026-04",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-jrc-intergenerational-dialogue-framework-2026-03-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-yeys-next-youth-strategy-2026-03-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "welsh-government-endorses-nearly-all-2025-future-generations-recommendations-2026-04-13",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "welsh-government-endorses-nearly-all-2025-future-generations-recommendations-2026-04-13",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-edtech-dialogue-digital-education-roadmap-2026-04-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "eesc-hearing-intergenerational-fairness-strategy-2026-04-25",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eesc-hearing-intergenerational-fairness-strategy-2026-04-25",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-just-transition-distributional-workshop-2026-04-25",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-young-energy-ambassadors-cohort-2026-04-25",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-youth-week-solidarity-fairness-2026-04-25",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-circular-economy-act-youth-check-2026-04-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-child-online-safety-panel-2026-04-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "undp",
+      "signal_id": "undp-hdr-2026-youth-intergenerational-metrics-2026-04-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-age-verification-app-rollout-2026-04-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "europarl-cyberbullying-platform-responsibility-2026-04-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "italy-vig-generational-impact-assessment-law-2025-11-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-circular-economy-act-youth-consultation-2026-04-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-finance-youth-policy-dialogue-money-management-2026-04-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "finance-commission",
+      "signal_id": "eu-finance-youth-policy-dialogue-money-management-2026-04-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-youth-week-kickoff-solidarity-fairness-2026-04-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uneca",
+      "signal_id": "uneca-ageing-africa-intergenerational-action-2026-04-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-protecting-young-people-online-policy-hub-2026-05-04",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "international-eu-anti-poverty-housing-strategy-2026-05-07",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "international-eu-disability-inclusion-strategy-update-2026-05-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-bioeconomy-youth-platform",
+      "signal_id": "eesc-bioeconomy-safeguards-youth-platform-2026-05-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-ukraine-canada-return-ukrainian-children-coalition-2026-05-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-child-guarantee-strengthening-2026-05-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-commissioner-intergenerational-fairness",
+      "signal_id": "eu-young-voices-policy-dialogue-micallef-2026-05-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-young-voices-policy-dialogue-micallef-2026-05-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "wales-senedd-future-generations-committee-2026-05-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "wales-senedd-future-generations-committee-2026-05-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "undp",
+      "signal_id": "kyrgyzstan-undp-youth-empowerment-fact-sheet-2026-05-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-anti-poverty-strategy-housing-exclusion-2026-05-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-housing-alliance-2026-05-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-youth-week-housing-challenge-next-generation-2026-05-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "england-childrens-commissioner",
+      "signal_id": "england-childrens-commissioner-big-future-democracy-anxiety-2026-05-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "childrens-commissioner-england",
+      "signal_id": "england-childrens-commissioner-big-future-democracy-anxiety-2026-05-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-barcelona-youth-housing-dialogue-2026-05-19",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uk-climate-change-committee",
+      "signal_id": "uk-ccc-well-adapted-wales-commissioner-climate-negligence-2026-05-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "uk-ccc-well-adapted-wales-commissioner-climate-negligence-2026-05-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "eu-gac-intergenerational-fairness-strategic-foresight-2026-05-27",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-gac-intergenerational-fairness-strategic-foresight-2026-05-27",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "scottish-parliament",
+      "signal_id": "scotland-fm-intergenerational-child-poverty-2026-05-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "scotland-fm-intergenerational-child-poverty-2026-05-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uk-office-budget-responsibility",
+      "signal_id": "uk-pensions-commission-intergenerational-fairness-2026-05-19",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "pensions-commission",
+      "signal_id": "uk-pensions-commission-intergenerational-fairness-2026-05-19",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "pacific-cop31-talanoa-dialogues",
+      "signal_id": "pacific-youth-cop31-talanoa-dialogues-2026-05-25",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "cfg-future-generations-srm-climate-governance-2026-05-22",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "finance-commission",
+      "signal_id": "india-intergenerational-equity-tax-devolution-2026-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "icj-climate-advisory-opinion-2025",
+      "signal_id": "ohchr-sr-climate-bonn-negotiations-2026-06-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "philippines-clima-bill-hb4420",
+      "signal_id": "philippines-hr-1074-climate-intergenerational-justice-2026-06-01",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-south-africa",
+      "signal_id": "south-africa-youth-day-50-governance-accountability-2026-06-15",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eesc-intergenerational-solidarity-sgi-conference-2026-06-15",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "au-intergenerational-report-treasury",
+      "signal_id": "conversation-longevity-book-intergenerational-power-2026-06-19",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-ninth-circuit",
+      "signal_id": "canada-youth-climate-lawsuit-carney-2026-06-16",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "ndc-youth-ambassador-cohort",
+      "signal_id": "ndc-youth-ambassador-intergenerational-equity-2026-06-21",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-europe-culture-culture-for-europe-declaration-2026-06-19",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-europe-culture-culture-for-europe-declaration-2026-06-19",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-south-africa",
+      "signal_id": "south-africa-youth-parliament-2026-06-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-ninth-circuit",
+      "signal_id": "un-sg-london-climate-action-week-2026-06-23",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "wales-senedd-fit-for-future-generations-act-review-2026-03-16",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "wales-senedd-fit-for-future-generations-act-review-2026-03-16",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "scottish-parliament",
+      "signal_id": "scotland-wellbeing-future-generations-bill-fell-2026-01-22",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "scotland-wellbeing-future-generations-bill",
+      "signal_id": "scotland-wellbeing-future-generations-bill-fell-2026-01-22",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "scotland-wellbeing-future-generations-bill-fell-2026-01-22",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uk-kings-trust-youth-opportunity-fund",
+      "signal_id": "uk-kings-trust-youth-opportunity-10m-2026-06-03",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "italy-mase-youth-climate-consultation-table-2026-03",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-constitutional-reform-art9-future-generations",
+      "signal_id": "italy-constitutional-law-art9-future-generations-2022-02-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "italy-constitutional-law-art9-future-generations-2022-02-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-youth-policy-dialogue-cop31-2026-06-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "new-zealand-parliament",
+      "signal_id": "nz-climate-tort-ban-legislation-2026-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uk-kings-trust-youth-opportunity-fund",
+      "signal_id": "uk-youth-jobs-grant-3000-2026-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "undp",
+      "signal_id": "undp-youth4climate-call-solutions-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-regreenconstitution-retail-green-bonds-future-generations",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-kenya",
+      "signal_id": "kenya-sovereign-wealth-future-generations-fund-bill-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-maryland",
+      "signal_id": "maryland-sc-climate-tort-preemption-2026-03-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-utah",
+      "signal_id": "utah-supreme-court-youth-climate-dismissal-2025-03",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-supreme-court-juliana",
+      "signal_id": "scotus-juliana-cert-denied-2025-03-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-supreme-court",
+      "signal_id": "scotus-juliana-cert-denied-2025-03-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "corteidh-ao-32-25",
+      "signal_id": "inter-american-court-climate-ao-32-25-2025-05-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-court-of-human-rights",
+      "signal_id": "ecthr-greenpeace-nordic-v-norway-2025-10-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-india",
+      "signal_id": "india-ridhima-pandey-sc-order-2025-02-21",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "colombia-constitutional-court-t390-awa",
+      "signal_id": "colombia-t-390-25-awa-future-generations-2025-09-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "colombia-constitutional-court",
+      "signal_id": "colombia-t-390-25-awa-future-generations-2025-09-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "high-court-of-australia",
+      "signal_id": "australia-digital-freedom-high-court-challenge-2025-12-04",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "scottish-parliament",
+      "signal_id": "scotland-children-care-services-act-2026-05-15",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "scottish-parliament",
+      "signal_id": "scotland-uncrc-compatibility-amendment-act-2026-04-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "constitutional-court-of-korea",
+      "signal_id": "korea-constitutional-court-climate-deadline-2026-02-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "navahine-v-hawaii",
+      "signal_id": "navahine-v-hawaii-youth-climate-ruling-2024-06-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-hawaii",
+      "signal_id": "navahine-v-hawaii-youth-climate-ruling-2024-06-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uk-office-budget-responsibility",
+      "signal_id": "uk-gov-response-fiscal-risks-sustainability-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "pensions-commission",
+      "signal_id": "uk-gov-response-fiscal-risks-sustainability-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "pensions-commission",
+      "signal_id": "uk-pensions-investment-review-final-2025-05-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "new-zealand-parliament",
+      "signal_id": "nz-budget-2025-kiwisaver-youth-16-17-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-esf-plus-amendment-social-funds-2025-04-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-botswana",
+      "signal_id": "botswana-national-youth-policy-2026-2036-2026-04-14",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-democracy-shield-2025-11-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-democracy-shield-intergenerational-fairness-forum-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-kenya",
+      "signal_id": "kenya-2026-bps-child-online-protection-framework-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "au-wellbeing-future-generations-bill-2025",
+      "signal_id": "australia-climate-duty-of-care-bill-negatived-2025-10-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "australia-climate-duty-of-care-bill-negatived-2025-10-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-australia",
+      "signal_id": "australia-climate-duty-of-care-bill-negatived-2025-10-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "california-youth-empowerment-commission",
+      "signal_id": "california-youth-empowerment-commission-plan-2025-2030",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "esafety-commissioner",
+      "signal_id": "australia-social-media-minimum-age-enforcement-2025-12-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "childrens-commissioner-england",
+      "signal_id": "uk-childrens-commissioner-growing-up-online-response-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-digital-fairness-act-consultation-2025-07",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-parliament-protection-minors-online-resolution-2025-11-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-consumer-agenda-2030-digital-fairness-2025-11-19",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "if-growing-divide-intergenerational-unfairness-2026-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-flash-eurobarometer-556-youth-democracy-2025-03",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-youth-dialogue-11-consultation-votes-at-16-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "icj-climate-advisory-opinion-2025",
+      "signal_id": "icj-advisory-opinion-climate-obligations-2025-07-23",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "constitutional-court-of-hungary",
+      "signal_id": "hungary-constitutional-court-climate-act-annulment-2025-06-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "court-of-session-scotland",
+      "signal_id": "scotland-rosebank-jackdaw-court-quash-2025-01-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-supreme-court",
+      "signal_id": "scotus-suncor-cert-granted-climate-preemption-2026-02-23",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-norway",
+      "signal_id": "norway-supreme-court-oil-scope3-interim-2025-04-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "efta-court",
+      "signal_id": "efta-court-scope3-oil-emissions-judgment-2025-05-21",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "milieudefensie-amsterdam-district-court",
+      "signal_id": "netherlands-milieudefensie-ing-climate-lawsuit-2025-03-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-administrative-court-of-finland",
+      "signal_id": "finland-supreme-administrative-court-climate-kho-2025-2",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "high-court-of-south-africa",
+      "signal_id": "south-africa-cancelcoal-high-court-ruling-2024-12-04",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-court-of-human-rights",
+      "signal_id": "coe-committee-ministers-klimaseniorinnen-review-2025-09",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-canada",
+      "signal_id": "canada-scc-mathur-climate-charter-leave-denied-2025-05-01",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "milieudefensie-amsterdam-district-court",
+      "signal_id": "netherlands-shell-appeal-climate-duty-ruling-2024-11-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "india-national-green-tribunal",
+      "signal_id": "india-ngt-environmental-clearance-ruling-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-court-of-human-rights",
+      "signal_id": "echr-fliegenschnee-austria-climate-inadmissibility-2025-12-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-commission-european-green-bond-standard-2026-03",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-australia",
+      "signal_id": "australia-senate-intergenerational-housing-inquiry-2026-03",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-affordable-housing-plan-housing-bonds-2025-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "canada-digital-safety-commission",
+      "signal_id": "canada-bill-c34-digital-safety-act-2026-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-canada",
+      "signal_id": "canada-bill-c34-digital-safety-act-2026-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "norway-social-media-age-limit-16-bill-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "norway-social-media-age-limit-16-bill-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "esafety-commissioner",
+      "signal_id": "australia-esafety-smma-compliance-report-2026-03",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-child-safety-panel-final-meeting-2026-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-commission-recommendation-age-verification-scheme-2026-04",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "korea-media-and-communications-commission",
+      "signal_id": "south-korea-kmcc-graduated-youth-social-media-policy-2026-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "human-rights-watch",
+      "signal_id": "hrw-nepal-gen-z-protest-unlawful-force-investigation-2025-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "friends-europe-voices-choices-pension-survey-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-commissioner-intergenerational-fairness",
+      "signal_id": "eu-citizens-panel-intergenerational-fairness-recommendations-2025-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-citizens-panel-intergenerational-fairness-recommendations-2025-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "undp",
+      "signal_id": "undp-latin-america-youth-democracy-anxiety-survey-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uk-electoral-commission",
+      "signal_id": "uk-electoral-commission-youth-democracy-survey-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "human-rights-watch",
+      "signal_id": "hrw-uganda-student-climate-protest-crackdown-2025-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-supreme-court",
+      "signal_id": "scotus-presidential-power-agency-firing-2026-06-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "au-wellbeing-future-generations-bill-2025",
+      "signal_id": "australia-youth-parliament-mpi-intergenerational-2026-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "ymca-youth-parliament-australia",
+      "signal_id": "australia-youth-parliament-mpi-intergenerational-2026-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "human-rights-watch",
+      "signal_id": "hrw-egypt-youth-protest-space-economic-anxiety-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "african-commission-on-human-and-peoples-rights",
+      "signal_id": "african-commission-egypt-youth-protest-criminalization-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "human-rights-watch",
+      "signal_id": "african-commission-egypt-youth-protest-criminalization-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "undp",
+      "signal_id": "undp-leaps-lebanon-electoral-trust-poll-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "wales-future-generations-commissioner-decade-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "wales-future-generations-commissioner-decade-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "wales-senedd-future-generations-discussion-paper-2026-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "wales-senedd-future-generations-discussion-paper-2026-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "scotland-futures-forum-parliament-internal-service-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "scottish-parliament",
+      "signal_id": "scotland-futures-forum-parliament-internal-service-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "japan-future-generations-act-project",
+      "signal_id": "japan-future-generations-law-diet-committee-wales-model-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "british-group-interparliamentary-union",
+      "signal_id": "korea-nafi-parliamentary-foresight-institute-profile-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "korea-nafi-parliamentary-foresight-institute-profile-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "un-special-envoy-future-generations",
+      "signal_id": "un-special-envoy-future-generations-appointment-hold-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "eu-eurostat-europop2025-population-projections-2026-04",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-australia",
+      "signal_id": "australia-ndis-senate-interim-report-extension-2026-06-23",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-india",
+      "signal_id": "india-supreme-court-rpwd-grievance-pil-2026-06-01",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-child-guarantee-children-survey-results-2026-02-09",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "colombia-constitutional-court",
+      "signal_id": "colombia-c280-eia-climate-impacts-mandatory-2024",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "colombia-constitutional-court",
+      "signal_id": "colombia-t123-climate-environmental-displacement-2024",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "undp",
+      "signal_id": "undp-ethiopia-youth-unemployment-political-power-survey-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "undp",
+      "signal_id": "undp-ethiopia-youth-peacebuilding-participation-assessment-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "human-rights-watch",
+      "signal_id": "ghana-stop-galamsey-youth-protest-movement-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "democracy-development-program",
+      "signal_id": "ddp-south-africa-youth-voter-apathy-survey-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "independent-electoral-and-boundaries-commission",
+      "signal_id": "kenya-niko-kadi-youth-voter-registration-movement-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "independent-electoral-and-boundaries-commission",
+      "signal_id": "nai-kenya-tuko-kadi-gen-z-ballot-political-power-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "federal-court-of-australia",
+      "signal_id": "au-ndia-v-caterson-fca-287-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "federal-court-of-australia",
+      "signal_id": "au-ndia-v-eastham-fca-147-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "high-court-of-australia",
+      "signal_id": "au-hca-aa-diocese-child-duty-ruling-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-court-of-justice",
+      "signal_id": "eu-cjeu-bervidi-disability-caregivers-ruling-2025-09-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-cjeu-ilva-climate-ruling",
+      "signal_id": "eu-cjeu-ilva-industrial-emissions-climate-ruling-2024-06-25",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-court-of-justice",
+      "signal_id": "eu-cjeu-ilva-industrial-emissions-climate-ruling-2024-06-25",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-court-of-justice",
+      "signal_id": "eu-cjeu-russmedia-platform-privacy-ruling-2025-12-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "kwazulu-natal-high-court",
+      "signal_id": "za-kzn-high-court-ecd-rights-ruling-2026-06-23",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "high-court-of-south-africa",
+      "signal_id": "za-kzn-high-court-ecd-rights-ruling-2026-06-23",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "western-cape-high-court",
+      "signal_id": "za-fcp-v-stc-child-maintenance-court-ruling-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "high-court-of-kenya-nairobi",
+      "signal_id": "ke-macharia-v-im-bank-disability-ruling-2025-10-14",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-supreme-court",
+      "signal_id": "us-mirabelli-v-bonta-parental-rights-scotus-2026-03-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-supreme-court",
+      "signal_id": "us-ajt-v-osseo-disability-school-ruling-2025-06-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "court-of-kings-bench-alberta",
+      "signal_id": "ca-clearview-ai-privacy-constitutional-ruling-2025-05-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "manitoba-court-of-kings-bench",
+      "signal_id": "ca-manitoba-first-nations-cfs-court-ruling-2026-05-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-india",
+      "signal_id": "in-sc-dpdp-constitutional-challenge-2026-02-16",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-digital-fairness-act-youth-participation-survey-2026-03",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-legislative-train-digital-fairness-act-q4-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-legislative-train-digital-fairness-act-q4-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "canada-digital-safety-commission",
+      "signal_id": "canada-expert-advisory-online-safety-reconvened-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "au-climate-change-authority",
+      "signal_id": "australia-electricity-energy-sector-plan-2025-governance",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-eusew-2026-young-energy-ambassadors-fourth-cohort",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-climate-resilience-integrated-framework-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "undp",
+      "signal_id": "ph-undp-youth-ndc-consultation-workshops-2025-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uk-climate-change-committee",
+      "signal_id": "tw-net-zero-generation-youth-climate-dialogue-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "tw-climate-change-response-act-generational-justice-2023",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-commissioner-intergenerational-fairness",
+      "signal_id": "wales-future-generations-act-senedd-research-2026-06-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "wales-future-generations-act-senedd-research-2026-06-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "wales-future-generations-act-senedd-research-2026-06-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uk-climate-change-committee",
+      "signal_id": "bbc-wales-tree-planting-future-generations-2026-06-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "bbc-wales-tree-planting-future-generations-2026-06-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "wales-environment-principles-governance-biodiversity-act-2026-04-27",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "constitutional-court-of-hungary",
+      "signal_id": "hungary-climate-law-constitutional-deadline-missed-2026-06-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "hungary-climate-law-constitutional-deadline-missed-2026-06-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "maharashtra-future-generations-welfare-bill-2024",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "maharashtra-future-generations-welfare-bill-2024",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "netherlands-senate-generatietoets-motion-adopted-2025-11-25",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "balearic-law-10-2023-wellbeing-generations",
+      "signal_id": "baleares-ley-10-2023-wellbeing-future-generations-2023-04-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "cepal-red-comisiones-futuro",
+      "signal_id": "cepal-second-regional-futures-conference-2025-06-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "chile-senado-comision-desafios-futuro",
+      "signal_id": "cepal-second-regional-futures-conference-2025-06-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "colombia-congreso-comision-futuro",
+      "signal_id": "cepal-second-regional-futures-conference-2025-06-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "paraguay-congreso-comision-futuro",
+      "signal_id": "cepal-second-regional-futures-conference-2025-06-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "mexico-senado-comision-futuro",
+      "signal_id": "cepal-second-regional-futures-conference-2025-06-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uruguay-comision-especial-futuros",
+      "signal_id": "cepal-second-regional-futures-conference-2025-06-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "unu-future-generations-platform",
+      "signal_id": "cepal-second-regional-futures-conference-2025-06-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "argentina-cordoba-comision-futuro",
+      "signal_id": "cordoba-comision-futuro-parlamentaria-2025-05-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "argentina-copec",
+      "signal_id": "cordoba-comision-futuro-parlamentaria-2025-05-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parlamericas-montevideo-declaration",
+      "signal_id": "parlamericas-montevideo-declaration-anticipatory-governance-2025-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parlamericas",
+      "signal_id": "parlamericas-montevideo-declaration-anticipatory-governance-2025-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uruguay-comision-especial-futuros",
+      "signal_id": "uruguay-comision-futuros-president-rodriguez-2026-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-south-africa",
+      "signal_id": "south-africa-climate-change-act-commenced-2025-03-17",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "south-africa-climate-change-act",
+      "signal_id": "south-africa-climate-change-act-commenced-2025-03-17",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "chile-senado-comision-desafios-futuro",
+      "signal_id": "chile-national-future-development-institution-bill-16441-2025-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "mexico-senado-comision-futuro",
+      "signal_id": "mexico-senate-comision-futuro-gobernanza-anticipatoria-2025-06-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "cepal-red-comisiones-futuro",
+      "signal_id": "mexico-senate-comision-futuro-gobernanza-anticipatoria-2025-06-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "norway-guaranteed-pension-products-reform-enacted-2026-04-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "philippines-clima-bill-hb4420",
+      "signal_id": "philippines-clima-bill-hb4420-refiled-20th-congress-2025-09",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uk-climate-change-committee",
+      "signal_id": "philippines-clima-bill-hb4420-refiled-20th-congress-2025-09",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "japan-cdp-future-generations-committee-bill-draft-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "japan-citizen-future-generations-act-initiative-2023",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uk-wellbeing-future-generations-bill",
+      "signal_id": "uk-wellbeing-future-generations-bill-dormant-2024-26-session",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "uk-wellbeing-future-generations-bill-dormant-2024-26-session",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "uk-wellbeing-future-generations-bill-dormant-2024-26-session",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-commissioner-intergenerational-fairness",
+      "signal_id": "malta-guardian-coproduction-healthy-playful-spaces-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "malta-guardian-coproduction-healthy-playful-spaces-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "cepal-red-comisiones-futuro",
+      "signal_id": "brazil-senate-futures-commission-dissolved-resolucao-14-2023",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "brasil-senado-comissao-futuro",
+      "signal_id": "brazil-senate-futures-commission-dissolved-resolucao-14-2023",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "norway-framtidspanelet-future-generations-recommendations-2025-05-13",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "norway-framtidspanelet-future-generations-recommendations-2025-05-13",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "efta-court",
+      "signal_id": "norway-borgarting-oil-scope3-merits-ruling-2025-11-14",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "efta-court",
+      "signal_id": "norway-supreme-court-storkammer-oil-climate-2026-01-23",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-norway",
+      "signal_id": "norway-supreme-court-storkammer-oil-climate-2026-01-23",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "italy-anci-municipal-vig-dup-guidelines-2025-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "italy-senate-dossier-vig-implementation-framework-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "netherlands-beleidskompas-generatietoets-integration-2025-12-04",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "netherlands-beleidskompas-generatietoets-integration-2025-12-04",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "navahine-v-hawaii",
+      "signal_id": "hawaii-navahine-climate-settlement-2024-06-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "norway-climate-change-act-2035-target-enacted-2025-06-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "norway-gpfg-ethical-framework-parliament-review-2025-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "norway-fiscal-advisory-council-handlingsregelen-criticism-2026-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "norway-storting-gpfg-2026-white-paper-concluded-2026-06-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "norway-storting-gpfg-2026-white-paper-concluded-2026-06-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "undp",
+      "signal_id": "undp-pacific-climate-change-taxonomy-brief-2026-06-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "efta-court",
+      "signal_id": "norway-royal-resolution-refuses-pud-reversal-oil-2026-05-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "norway-climate-status-plan-2026-2035-pathway",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "norway-storting-petroleum-white-paper-mandate-innst-99-2026-02-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-mt-deq",
+      "signal_id": "montana-deq-final-ghg-guidance-2026-01",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "unga-international-decade-peace-future-generations-2026-06-25",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "pensions-commission",
+      "signal_id": "uk-finance-act-2026-pension-iht-operational-framework-2026-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "undp",
+      "signal_id": "undp-climate-justice-youth-guide-2026-04-13",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "wales-future-trends-report-2026-2027-cabinet-endorsed-2026-02-23",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "norway-storting-repeals-2030-climate-neutrality-2026-02-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-hawaii",
+      "signal_id": "hawaii-maunakea-access-road-dhhl-stewardship-proposals-2026-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "montana-behavioral-health-future-generations-commission-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "montana-behavioral-health-future-generations-commission-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "carbon-tracker-nbim-climate-risk-insight-action-gap-2026-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-supreme-court",
+      "signal_id": "hawaii-act11-sunshine-dark-money-citizens-united-2026-05-14",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "efta-court",
+      "signal_id": "norway-supreme-court-engebofjellet-water-framework-2026-06-17",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-norway",
+      "signal_id": "norway-supreme-court-engebofjellet-water-framework-2026-06-17",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "jiaxing-child-friendly-city-ordinance-2026-06-15",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "planning-wales-act-future-generations-duty-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "planning-wales-act-future-generations-duty-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "nordic-childrens-ombudspersons-crisis-preparedness-2026-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "federal-court-of-australia",
+      "signal_id": "australia-pabai-torres-strait-climate-appeal-2026-07",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "nigeria-unicef-child-foresight-roadmap-2050-2026-07-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "nigeria-unicef-child-foresight-roadmap-2050-2026-07-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "m04-eu-swd-80-strategy-consultation-text-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "m04-eu-swd-80-strategy-consultation-text-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "high-court-of-south-africa",
+      "signal_id": "m06-za-deadly-air-section24-intergenerational-justice-2022",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-kenya",
+      "signal_id": "m06-ke-constitution-future-generations-youth-rights-2010",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "m10-audit-wales-no-time-to-lose-april-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "m10-audit-wales-no-time-to-lose-april-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "m10-welsh-gov-response-senedd-fit-for-future-march-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "m10-welsh-gov-response-senedd-fit-for-future-march-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "m10-hungary-ombudsman-future-generations-operational-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "m10-gibraltar-commissioner-office-vacant-since-2023",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-australia",
+      "signal_id": "m10-australia-wellbeing-future-generations-bill-lapsed-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "au-wellbeing-future-generations-bill-2025",
+      "signal_id": "m10-australia-wellbeing-future-generations-bill-lapsed-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "m10-finland-government-future-report-part-two-spring-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "eu-intergenerational-fairness-strategy-2026-03-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-intergenerational-fairness-strategy-2026-03-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-maryland",
+      "signal_id": "hawaii-doj-climate-tort-lawsuit-dismissed-2026-04-15",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-supreme-court",
+      "signal_id": "scotus-fec-v-rnc-party-spending-ruling-2026-06-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "british-group-interparliamentary-union",
+      "signal_id": "r2-m03-ipu-youth-participation-parliaments-2025-cost",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-commissioner-intergenerational-fairness",
+      "signal_id": "r2-m04-martens-solidarity-governance-tool-european-view-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "r2-m04-martens-solidarity-governance-tool-european-view-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "au-wellbeing-future-generations-bill-2025",
+      "signal_id": "r2-m08-australia-measuring-what-matters-wellbeing-mental-health-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "r2-m10-singapore-centre-for-strategic-futures-operational-15-years",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-court-of-human-rights",
+      "signal_id": "norway-ecthr-greenpeace-nordic-arctic-oil-2025-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "c04-eu-dsa-meta-under13-preliminary-finding-2026-07-03",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "c06-eu-child-guarantee-second-progress-reports-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "c07-eu-pact-migration-child-safeguards-application-2026-07-03",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "human-rights-watch",
+      "signal_id": "c07-eu-pact-migration-child-safeguards-application-2026-07-03",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "d01-scotland-climate-plan-child-consultees-crwia-2026-07-04",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "childrens-commissioner-england",
+      "signal_id": "d01-england-dfe-childrens-commissioner-ai-education-advisory-board-2026-07-04",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-india",
+      "signal_id": "d05-india-sc-article21a-menstrual-hygiene-2026-01-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "d07-eu-return-regulation-child-detention-return-hubs-2026-07-04",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-supreme-court",
+      "signal_id": "d08-maryland-sb162-jlwop-review-expansion-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-india",
+      "signal_id": "d09-in-sc-pocso-romeo-juliet-clause-2026-07-04",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-court-of-human-rights",
+      "signal_id": "d10-ecthr-mp-greece-child-right-to-be-heard-abduction-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "colombia-constitutional-court",
+      "signal_id": "d10-colombia-cc-t108-vaccination-best-interests-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-india",
+      "signal_id": "d10-india-sc-child-custody-psychological-evaluation-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "pensions-commission",
+      "signal_id": "germany-34-measure-economic-package-2026-07-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-kenya",
+      "signal_id": "kenya-mineral-sovereign-fund-intergenerational-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "efta-court",
+      "signal_id": "norway-efta-court-nzia-co2-storage-2026-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-norway",
+      "signal_id": "norway-efta-court-nzia-co2-storage-2026-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "norway-foreign-policy-youth-democratic-renewal-2026-03",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uk-wellbeing-future-generations-bill",
+      "signal_id": "uk-intergenerational-foundation-burnham-report-2026-06-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-supreme-court",
+      "signal_id": "scotus-birthright-citizenship-upheld-2026-07",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uk-climate-change-committee",
+      "signal_id": "norway-klimautvalget-2050-low-emission-pathways-synthesis-2026-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "gap-ep-intergenerational-forum-solidarity-fairness-response-2026-03-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-south-africa",
+      "signal_id": "za-parliament-nyda-whistleblower-governance-alarm-2026-06-03",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uneca",
+      "signal_id": "intl-uneca-youth-policy-implementation-pilot-2026-05-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "portugal-intergenerational-justice-index-update-2025-12-04",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "wales-welsh-government-initial-fgr-2025-response-2025-07-17",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-kenya",
+      "signal_id": "kenya-senate-futures-caucus-strategic-plan-2025-2028",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "kenya-senate-futures-caucus-strategic-plan-2025-2028",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "oecd-inclusive-growth-cities-youth-2026-06-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uk-electoral-commission",
+      "signal_id": "jordan-your-voice-youth-political-empowerment-program-2026-06-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-cea-youth-consultation-summary-published-2026-05-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-circular-economy-act-public-consultation-launched-2025-08-01",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "undp",
+      "signal_id": "sl-youth-circularity-2030-2026-02-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-circular-economy-act-high-level-talks-2026-04-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-ccri-cea-urban-recommendations-2026-04-14",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eib-ec-circular-economy-investment-gap-2026-04-21",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "human-rights-watch",
+      "signal_id": "hrw-algorithms-exploitation-gig-economy-2026-05-13",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "norway-future-panel-commissioner-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "norway-future-panel-commissioner-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "norway-future-panel-commissioner-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-dsa-second-systemic-risks-report-minors-2026-07-01",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eesc-youth-test-ombudsman-award-2026-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "nature-public-heart-science-policy-2026-07",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-australia",
+      "signal_id": "australia-ndis-future-generations-bill-2026-07",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "undp",
+      "signal_id": "undp-african-youth-co-creators-council-2026-07",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-mt-deq",
+      "signal_id": "montana-black-butte-copper-mine-deq-appeal-2026-07",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "eu-commission-generational-renewal-agriculture-strategy-2026-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-commission-generational-renewal-agriculture-strategy-2026-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "eu-wiser-wellbeing-beyond-gdp-framework-2026-07",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-wiser-wellbeing-beyond-gdp-framework-2026-07",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-ninth-circuit",
+      "signal_id": "montana-lighthiser-v-trump-9th-circuit-dismissed-2026-06-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "eu-council-europe-youth-climate-justice-brief-2026-07-07",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "norway-un-pact-future-generations-endorsement-2024-09-23",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "norway-storting-resolution-91-negative-emissions-auctions-2024-12-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-supreme-court",
+      "signal_id": "us-supreme-court-suncor-climate-preemption-merits-2026-07",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-court-of-human-rights",
+      "signal_id": "ireland-intergenerational-solidarity-climate-laws-president-2026-07-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-commissioner-intergenerational-fairness",
+      "signal_id": "eu-commissioner-micallef-intergenerational-fairness-culture-agora-2026-07-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-supreme-court-juliana",
+      "signal_id": "montana-lighthiser-v-trump-federal-youth-climate-case-2025-05-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-commissioner-intergenerational-fairness",
+      "signal_id": "eu-commission-intergenerational-fairness-strategy-2026-03-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "eu-commission-intergenerational-fairness-strategy-2026-03-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-commission-intergenerational-fairness-strategy-2026-03-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "us-special-envoy-best-future-generations-2026-07-07",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "norway-storting-gpfg-future-generations-commissioner-rejected-2026-06-04",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "norway-storting-gpfg-future-generations-commissioner-rejected-2026-06-04",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "jrc-2025-eu-cohort-income-housing-intergenerational-fairness",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "jrc-2025-eu-cohort-income-housing-intergenerational-fairness",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "jrc-2024-eurobarometer-fairness-perceptions-youth-collapse",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "jrc-2024-eurobarometer-fairness-perceptions-youth-collapse",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-commissioner-intergenerational-fairness",
+      "signal_id": "soif-2025-advancing-ltg-igf-eu",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "wales-fg-commissioner-section20-energy-review-project-ynni-2026-07",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "wales-commissioner-statutory-report-2025-04-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "wales-commissioner-statutory-report-2025-04-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "ireland-future-generations-commission-bill-2025-07-17",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "amsterdam-umc-future-generations-commissioner-2026-03-01",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "canada-future-generations-commissioner-debate-2026-02-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-ninth-circuit",
+      "signal_id": "lighthiser-v-trump-ninth-circuit-dismissal-2026-06-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-utah",
+      "signal_id": "utah-supreme-court-dismisses-natalie-v-state-youth-climate-2025-03-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "finance-commission",
+      "signal_id": "india-16th-finance-commission-tax-devolution-fiscal-federalism-2026-05-09",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-future-oriented-policymaking-handbook-training-2026-03-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-ai-act-full-application-2026-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-australia",
+      "signal_id": "australia-enacts-statutory-national-commission-for-aboriginal-and-torres-strait-islander-children-an",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-commissioner-intergenerational-fairness",
+      "signal_id": "eu-2025-strategic-foresight-report-embeds-intergenerational-fairness-and-commits-to-scenario-based-a",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "eu-2025-strategic-foresight-report-embeds-intergenerational-fairness-and-commits-to-scenario-based-a",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-2025-strategic-foresight-report-embeds-intergenerational-fairness-and-commits-to-scenario-based-a",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "soif-brief-urges-ireland-to-advance-future-generations-bill-and-shared-island-wellbeing-committees-2026-05-01",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uk-climate-change-committee",
+      "signal_id": "uk-climate-change-committee-finds-carbon-budget-delivery-plan-leaves-significant-gap-to-2030-ndc-202",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "human-rights-watch",
+      "signal_id": "yasunidos-files-constitutional-court-compliance-action-against-ecuador-for-failure-to-halt-yasun-itt",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "european-commission-proposes-slower-eu-ets-cap-decline-and-longer-free-allowances-in-phase-5-review",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "albania-expands-eu-aligned-youth-guarantee-nationwide-as-accession-negotiations-advance-2026-08-07",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-ninth-circuit",
+      "signal_id": "ninth-circuit-narrows-injunction-against-california-age-appropriate-design-code-reopening-path-for-a",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-intergenerational-fairness-index-remains-under-jrc-development-months-after-strategy-promise-2026",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-life-2026-operating-grant-fpa-opens-for-europe-wide-climate-and-environment-ngos-2026-05-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "european-commission-recommends-three-year-grace-period-on-eu-methane-import-penalties-for-2027-2029",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "portugal-holds-first-future-generations-summit-and-launches-hub-roadmap-2026-05-01",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "eu-intergenerational-fairness-strategy",
+      "signal_id": "soif-launches-eu-long-term-governance-hub-in-brussels-with-germany-hub-partner-zoe-2026-07-01",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "un-special-envoy-future-generations",
+      "signal_id": "soif-launches-eu-long-term-governance-hub-in-brussels-with-germany-hub-partner-zoe-2026-07-01",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "us-lawmakers-introduce-child-safety-and-well-being-act-creating-federal-children-s-commission-2026-0",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-utah",
+      "signal_id": "utah-supreme-court-schedules-october-2026-arguments-on-three-judge-panel-diversion-in-roberts-youth",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "bundestag-and-bundesrat-adopt-stromvkg-auctioning-10-gw-long-duration-capacity-from-september-2026-2",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-commission-adopts-simplified-esrs-climate-transition-plans-stay-disclose-or-explain-mandatory-dat",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-commission-adopts-simplified-esrs-climate-transition-plans-stay-disclose-or-explain-mandatory-dat",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "european-commission-opens-cerv-2026-daphne-21-million-call-on-gender-based-violence-and-violence-aga",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "horizon-europe-cluster-2-2026-democracy-call-opens-with-23-september-deadline-2026-05-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "luxembourg-council-of-government-approves-revised-national-restoration-plan-for-eu-submission-before",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uk-climate-change-committee",
+      "signal_id": "mauritius-climate-change-committee-approves-second-statutory-report-tracking-ndc-3-0-ccr-levy-and-cl",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "balearic-law-10-2023-wellbeing-generations",
+      "signal_id": "balearic-law-7-2024-repeals-mandatory-budget-and-annual-wellbeing-impact-assessments-from-ley-10-202",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-canada",
+      "signal_id": "canada-s-amended-impact-assessment-act-still-requires-a-sustainability-test-for-present-and-future-g",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "canada-s-amended-impact-assessment-act-still-requires-a-sustainability-test-for-present-and-future-g",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "cepal-red-comisiones-futuro",
+      "signal_id": "cepal-issues-a-december-2025-anticipatory-governance-guide-with-dynamic-evaluation-not-a-statutory-i",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "cepal-issues-a-december-2025-anticipatory-governance-guide-with-dynamic-evaluation-not-a-statutory-i",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "council-of-europe-youth-ministers-adopt-reference-framework-requiring-ex-ante-and-ex-post-human-righ",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "european-commission-documents-operational-youth-check-as-mandatory-annex-i-screen-and-applies-it-to",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "hungary-s-ombudsman-act-requires-a-formal-opinion-on-draft-laws-and-plans-directly-affecting-future",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "new-zealand-parliament",
+      "signal_id": "new-zealand-repeals-statutory-wellbeing-report-and-budget-wellbeing-objective-duties-2026-04-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "new-zealand-treasury-publishes-budget-2026-child-poverty-report-required-by-public-finance-act-s15ea",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "oecd-youth-policy-toolkit-instructs-governments-to-run-youth-check-rias-and-embed-intergenerational",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "oecd-youth-policy-toolkit-instructs-governments-to-run-youth-check-rias-and-embed-intergenerational",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "south-africa-gazettes-revised-draft-national-guideline-on-climate-change-implications-in-environment",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "wales-makes-long-term-health-impact-assessments-mandatory-for-strategic-public-decisions-from-april",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "welsh-2026-27-budget-siia-reports-wellbeing-impact-workshops-informed-allocations-but-did-not-remove",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "parma-giunta-gc-455-2025-adopts-anci-vig-check-list-2-0-and-scores-the-act-generational-2025-12-24t0",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "a-c-2825-youth-and-civil-service-bill-air-omits-vig-after-law-167-entered-into-force-2026-02-27t00-0",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "european-commission-preliminarily-finds-tiktok-s-minor-account-defaults-breach-dsa-safety-standards-2026-07-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-ninth-circuit",
+      "signal_id": "ninth-circuit-upholds-south-coast-zero-nox-appliance-rule-against-federal-preemption-challenge-2026-07-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "slovenia-begins-implementing-pension-reform-that-rebalances-adequacy-and-ageing-costs-across-generations-2025",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "wales-just-transition-future-generations-assessment-2025-12-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eprs-eu-youth-check-mff-impact-assessment-gap-2026-01-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eprs-eu-youth-check-mff-impact-assessment-gap-2026-01-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "undp",
+      "signal_id": "undp-future-ready-democratic-institutions-methodology-2026-07-22",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "undp-future-ready-democratic-institutions-methodology-2026-07-22",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "jesc-eu-future-risk-matrix-iia-proposal-2025-11-21",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-south-africa",
+      "signal_id": "south-africa-proposed-mandatory-youth-impact-assessments-2025-11-13",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "scotland-establishes-third-just-transition-commission-to-2031-with-adaptation-fairness-mandate-2026-08-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "wales-future-generations-statutory-reporting-metrics-2026-05-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "wales-future-generations-statutory-reporting-metrics-2026-05-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "undp",
+      "signal_id": "unicef-undp-child-youth-policy-design-toolkit-2026-04-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "oecd-council-recommendation-intergenerational-justice-foresight-2026-05-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-nature-restoration-law-national-plans-50-year-projections-2026-06-22",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-ai-board-fundamental-rights-impact-assessment-youth-guidance-2026-06-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-ninth-circuit",
+      "signal_id": "us-genesis-v-epa-ninth-circuit-constitutional-standing-2026-05-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "constitutional-court-of-korea",
+      "signal_id": "south-korea-constitutional-court-climate-framework-act-legislative-revision-2026-06-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "italy-observatory-generational-impact-air-vig-dpcm-2026-07-22",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "federal-court-of-australia",
+      "signal_id": "australia-federal-court-living-wonders-climate-duty-appeal-2026-05-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-csddd-corporate-climate-transition-plans-article-22-guidelines-2026-06-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-csrd-esrs-generational-workforce-disclosure-standards-2026-04-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "uk-wellbeing-of-future-generations-bill-parliamentary-progress-2026-05-15",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uk-wellbeing-future-generations-bill",
+      "signal_id": "uk-wellbeing-of-future-generations-bill-parliamentary-progress-2026-05-15",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "au-climate-change-authority",
+      "signal_id": "australia-climate-change-authority-2035-target-advice-statutory-review-2026-04-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "milieudefensie-amsterdam-district-court",
+      "signal_id": "netherlands-shell-appeal-court-the-hague-corporate-scope3-ruling-2026-05-14",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-ai-act-entry-into-application-prohibited-practices-minors-2026-06-01",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "oecd-anticipatory-governance-guidelines-public-sector-2025-05-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "oecd-anticipatory-governance-guidelines-public-sector-2025-05-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "new-zealand-parliament",
+      "signal_id": "nz-parliament-te-kahui-tupua-taranaki-maunga-act-2025-02-01",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-canada",
+      "signal_id": "canada-parliament-haida-nation-recognition-act-royal-assent-2024-11-07",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "constitutional-court-of-korea",
+      "signal_id": "south-korea-constitutional-court-climate-target-invalidation-2024-08-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-court-of-human-rights",
+      "signal_id": "echr-grand-chamber-klimaseniorinnen-switzerland-violation-2024-04-09",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "gibraltar-future-generations-act-enactment-2025-04-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-norway",
+      "signal_id": "norway-supreme-court-plenary-barents-oil-ep-review-2025-06-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "wales-future-generations-report-ten-year-statutory-review-2025-11-15",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "wales-future-generations-report-ten-year-statutory-review-2025-11-15",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-ai-act-gpai-systemic-risk-codes-of-practice-publication-2025-05-01",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "esafety-commissioner",
+      "signal_id": "australia-online-safety-youth-minimum-age-enactment-2024-11-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-australia",
+      "signal_id": "australia-online-safety-youth-minimum-age-enactment-2024-11-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "germany-voting-age-16-bundestag-elections-enactment-2025-01-22",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-india",
+      "signal_id": "india-supreme-court-right-against-climate-change-adverse-effects-2024-04-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "african-commission-on-human-and-peoples-rights",
+      "signal_id": "african-union-charter-rights-future-generations-protocol-2025-07-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "scotland-wellbeing-and-sustainable-development-bill-introduced-2025-02-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "scottish-parliament",
+      "signal_id": "scotland-wellbeing-and-sustainable-development-bill-introduced-2025-02-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "scotland-wellbeing-future-generations-bill",
+      "signal_id": "scotland-wellbeing-and-sustainable-development-bill-introduced-2025-02-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "south-africa-climate-change-act",
+      "signal_id": "south-africa-climate-change-act-presidential-assent-2024-07-23",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-administrative-court-of-finland",
+      "signal_id": "fi-supreme-administrative-court-of-finland-mandates-f-2025-04-17",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "india-national-green-tribunal",
+      "signal_id": "in-national-green-tribunal-of-india-imposes-rs-100-cr-2025-04-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "high-court-of-south-africa",
+      "signal_id": "za-high-court-of-south-africa-gauteng-division-orders-2025-02-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-utah",
+      "signal_id": "us-utah-supreme-court-advances-youth-constitutional-c-2025-05-09",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-establishes-european-ai-office-2025-05-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "esafety-commissioner",
+      "signal_id": "au-australian-esafety-commissioner-mandates-social-me-2025-06-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "de-german-bundestag-lowers-federal-voting-age-to-16-f-2024-06-09",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "scottish-parliament",
+      "signal_id": "gb-scottish-parliament-passes-scottish-local-governme-2025-05-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "international-european-youth-forum-secures-formal-intergeneratio-2024-10-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "new-zealand-parliament",
+      "signal_id": "nz-new-zealand-parliament-passes-te-ture-whakatupua-m-2024-09-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-india",
+      "signal_id": "in-supreme-court-of-india-declares-great-indian-busta-2024-03-21",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "no-sami-parliament-of-norway-samediggi-finalizes-fose-2024-03-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-australia",
+      "signal_id": "au-australian-parliament-passes-net-zero-economy-auth-2024-09-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uneca",
+      "signal_id": "international-united-nations-economic-commission-for-africa-unec-2024-04-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-publishes-2024-strategic-fores-2024-07-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uk-climate-change-committee",
+      "signal_id": "gb-uk-climate-change-committee-ccc-publishes-2024-pro-2024-06-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "gb-wales-future-generations-commissioner-releases-cyn-2024-04-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "gb-wales-future-generations-commissioner-releases-cyn-2024-04-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "cz-czech-senate-committee-on-eu-affairs-recommends-st-2024-04-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "federal-court-of-australia",
+      "signal_id": "au-australian-federal-court-recognizes-native-title-o-2024-06-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "colombia-constitutional-court",
+      "signal_id": "co-colombian-constitutional-court-affirms-indigenous--2024-05-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "india-national-green-tribunal",
+      "signal_id": "in-national-green-tribunal-ngt-india-enforces-forest--2024-05-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-norway",
+      "signal_id": "no-supreme-court-of-norway-affirms-fosen-wind-re-nego-2024-03-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "high-court-of-south-africa",
+      "signal_id": "za-high-court-of-south-africa-upholds-khoisan-traditi-2024-03-22",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-india",
+      "signal_id": "in-supreme-court-of-india-protects-niyamgiri-sacred-h-2024-05-14",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-canada",
+      "signal_id": "ca-parliament-of-canada-finalizes-domestic-implementa-2024-06-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-australia",
+      "signal_id": "au-australian-parliament-passes-international-marine--2024-06-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "new-zealand-parliament",
+      "signal_id": "nz-new-zealand-parliament-passes-maritime-powers-bbnj-2024-05-16",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-ai-office-launches-scientific-panel-on-ge-2024-06-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-european-parliament-adopts-packaging-and-packaging-2024-04-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "constitutional-court-of-korea",
+      "signal_id": "kr-constitutional-court-of-korea-issues-historic-part-2024-08-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "federal-court-of-australia",
+      "signal_id": "au-federal-court-of-australia-accepts-indigenous-tiwi-2024-04-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "milieudefensie-amsterdam-district-court",
+      "signal_id": "nl-the-hague-court-of-appeal-hears-landmark-appeal-in-2024-04-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "un-special-envoy-future-generations",
+      "signal_id": "international-un-secretary-general-announces-appointment-of-firs-2024-09-23",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "international-un-secretary-general-announces-appointment-of-firs-2024-09-23",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "undp",
+      "signal_id": "international-united-nations-development-programme-undp-launches-2024-06-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-european-parliament-enacts-corporate-sustainabil-2024-06-13",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-australia",
+      "signal_id": "au-australian-parliament-passes-mandatory-climate-r-2024-09-17",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-european-parliament-and-council-adopt-revised-en-2024-04-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-india",
+      "signal_id": "in-supreme-court-of-india-appoints-central-empowere-2024-02-19",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "african-commission-on-human-and-peoples-rights",
+      "signal_id": "international-african-commission-on-human-and-peoples-rights-a-2024-05-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-norway",
+      "signal_id": "no-supreme-court-of-norway-hears-fosen-sami-wind-fa-2024-03-06",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-administrative-court-of-finland",
+      "signal_id": "fi-supreme-administrative-court-of-finland-enforces-2024-11-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-ai-office-publishes-code-of-practice-fo-2024-11-14",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "korea-media-and-communications-commission",
+      "signal_id": "kr-korea-communications-commission-kcc-releases-use-2024-04-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-launches-european-ai-factori-2024-09-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "finance-commission",
+      "signal_id": "us-state-of-washington-enacts-hb-1474-covenant-home-2024-07-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "uk-office-budget-responsibility",
+      "signal_id": "uk-office-for-budget-responsibility-obr-releases-20-2024-07-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-south-africa",
+      "signal_id": "za-parliamentary-budget-office-pbo-south-africa-pub-2024-06-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-kenya",
+      "signal_id": "ke-parliamentary-budget-office-pbo-kenya-releases-2-2024-05-02",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "finance-commission",
+      "signal_id": "in-sixteenth-finance-commission-of-india-commences--2024-06-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-publishes-2024-ageing-report-2024-04-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-european-parliament-and-council-adopt-european-s-2024-06-17",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-council-environmental-quality",
+      "signal_id": "us-white-house-council-on-environmental-quality-upd-2024-03-21",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-adopts-marine-action-plan-to-2024-03-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-issues-red-card-and-yellow-c-2024-05-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "de-german-federal-returning-officer-bundeswahlleite-2024-06-09",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "be-federal-public-service-interior-belgium-enacts-u-2024-06-09",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "scottish-parliament",
+      "signal_id": "gb-scottish-parliament-passes-scottish-elections-bi-2024-06-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-australia",
+      "signal_id": "au-joint-standing-committee-on-electoral-matters-pa-2024-04-16",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-canada",
+      "signal_id": "ca-senate-of-canada-advances-bill-s-201-an-act-to-a-2024-05-09",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "independent-electoral-and-boundaries-commission",
+      "signal_id": "ke-independent-electoral-and-boundaries-commission--2024-06-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "cz-senate-of-the-czech-republic-senat-p-r-committee-2024-06-25",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "gb-office-of-the-future-generations-commissioner-fo-2024-01-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-wellbeing-future-generations-act",
+      "signal_id": "gb-office-of-the-future-generations-commissioner-fo-2024-01-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "no-storting-of-norway-parliamentary-presidium-estab-2024-05-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "italy-vig-generational-impact-assessment",
+      "signal_id": "pt-national-council-for-the-environment-and-sustain-2024-06-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-canada",
+      "signal_id": "ca-parliament-of-canada-standing-senate-committee-o-2024-05-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-australia",
+      "signal_id": "au-parliament-of-australia-joint-committee-of-publi-2024-07-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "un-special-envoy-future-generations",
+      "signal_id": "international-united-nations-secretary-general-establishes-the-2024-09-23",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "colombia-constitutional-court",
+      "signal_id": "co-constitutional-court-of-colombia-enforces-senten-2024-05-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "federal-court-of-australia",
+      "signal_id": "au-federal-court-of-australia-upholds-tiwi-islands--2024-01-15",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "high-court-of-australia",
+      "signal_id": "au-high-court-of-australia-delivers-historic-decisi-2024-05-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-india",
+      "signal_id": "in-supreme-court-of-india-enforces-forest-rights-ac-2024-05-16",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-norway",
+      "signal_id": "no-supreme-court-of-norway-norges-h-yesterett-follo-2024-03-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "india-national-biodiversity-authority",
+      "signal_id": "in-national-biodiversity-authority-nba-india-approv-2024-04-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "new-zealand-parliament",
+      "signal_id": "nz-taranaki-maunga-collective-redress-act-formally--2024-03-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "no-protect-s-pmi-foundation-enforces-sami-reindeer--2024-06-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "undp",
+      "signal_id": "international-equator-initiative-and-united-nations-developmen-2024-06-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "at-arche-noah-austria-mobilizes-european-campaign-a-2024-06-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-european-parliament-and-council-enact-landmark-r-2024-06-13",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-canada",
+      "signal_id": "ca-parliament-of-canada-passes-bill-c-244-an-act-to-2024-06-05",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-european-parliament-and-council-enact-ecodesign--2024-06-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-mandates-digital-battery-pas-2024-05-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "fi-finnish-innovation-fund-sitra-launches-cirpass-2-2024-06-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-european-parliament-and-council-finalize-packagi-2024-04-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-european-parliament-and-council-adopt-electricit-2024-05-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-enforces-european-solar-roof-2024-05-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-european-parliament-and-council-finalize-hydroge-2024-05-21",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-hydrogen-bank-awards-720-million-in-fir-2024-04-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-european-parliament-and-council-enact-critical-r-2024-05-03",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-finalizes-mandatory-battery--2024-05-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-approves-3-2-billion-state-a-2024-04-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-directorate-general-for-taxa-2024-04-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-opens-formal-proceedings-aga-2024-05-16",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-directorate-general-for-regi-2024-05-15",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "pl-marshal-s-office-of-the-silesian-voivodeship-urz-2024-06-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-european-parliament-and-council-formally-adopt-p-2024-04-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-directorate-general-for-civi-2024-06-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-australia",
+      "signal_id": "au-parliament-of-australia-and-parliament-of-tuvalu-2024-08-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-prepares-first-ever-eu-space-2024-06-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-enforces-mediterranean-botto-2024-03-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-european-parliament-and-council-finalize-social--2024-04-19",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-european-parliament-and-council-enact-reformed-e-2024-04-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-kenya",
+      "signal_id": "ke-parliamentary-budget-office-pbo-kenya-evaluates--2024-05-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "international-european-fiscal-board-efb-publishes-annual-asses-2024-06-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-regulates-implementation-of--2024-04-22",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "india-national-biodiversity-authority",
+      "signal_id": "in-national-biodiversity-authority-nba-india-modern-2024-05-25",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-mandates-dual-use-synthetic--2024-04-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-european-parliament-and-council-enact-critical-r-2024-03-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-enforces-eu-battery-regulati-2024-02-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-enforces-corporate-sustainab-2024-05-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-european-commission-enforces-corporate-sustainab-2024-05-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-updates-conflict-minerals-re-2024-05-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "undp",
+      "signal_id": "international-united-nations-development-programme-undp-planet-2024-06-19",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-european-parliament-and-council-enact-heavy-duty-2024-04-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-publishes-progress-report-on-2024-06-13",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "ca-national-assembly-of-quebec-evaluates-bill-197-o-2024-05-14",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "no-stortinget-norway-committee-on-scrutiny-and-cons-2024-04-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "wales-future-generations-commissioner",
+      "signal_id": "is-althingi-iceland-evaluates-parliamentary-resolut-2024-04-17",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "scottish-parliament",
+      "signal_id": "uk-scottish-parliament-citizen-participation-and-pu-2024-04-16",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-ai-office-inaugurated-under-european-co-2024-05-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "no-norwegian-parliamentary-ombudsman-sivilombudet-i-2024-05-15",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "colombia-constitutional-court",
+      "signal_id": "co-constitutional-court-of-colombia-ruling-t-323-24-2024-05-23",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "international-european-parliament-and-council-enact-final-text-2024-05-21",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "no-stortinget-norway-approves-ratification-of-un-bb-2024-06-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "new-zealand-parliament",
+      "signal_id": "nz-new-zealand-house-of-representatives-ratifies-un-2024-06-18",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-australia",
+      "signal_id": "au-parliament-of-australia-passes-legislation-ratif-2024-06-25",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "new-zealand-parliament",
+      "signal_id": "nz-new-zealand-parliament-debates-prohibition-of-se-2024-05-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "stortinget",
+      "signal_id": "no-stortinget-norway-faces-legal-challenge-from-env-2024-05-15",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "high-court-of-south-africa",
+      "signal_id": "za-high-court-of-south-africa-sets-aside-offshore-m-2024-04-11",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "international-european-parliament-adopts-resolution-on-precaut-2024-02-07",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "international-european-parliament-adopts-resolution-on-precaut-2024-02-07",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "india-national-green-tribunal",
+      "signal_id": "in-national-green-tribunal-ngt-india-orders-mandato-2024-04-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-australia",
+      "signal_id": "au-western-australian-parliament-passes-aboriginal--2024-05-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "india-national-green-tribunal",
+      "signal_id": "in-national-green-tribunal-ngt-orders-immediate-ces-2024-05-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "high-court-of-south-africa",
+      "signal_id": "za-high-court-of-south-africa-declares-vaal-river-p-2024-05-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-administrative-court-of-finland",
+      "signal_id": "fi-supreme-administrative-court-of-finland-korkein--2024-05-15",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "constitutional-court-of-hungary",
+      "signal_id": "hu-constitutional-court-of-hungary-alkotm-nyb-r-s-g-2024-05-28",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-publishes-technical-guidance-2024-05-27",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-european-parliament-and-council-reach-provisiona-2024-04-10",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-approves-500-million-grant-f-2024-04-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "international-north-seas-energy-cooperation-nsec-ministers-fin-2024-01-22",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "de-german-bundestag-enforces-lowering-of-voting-age-2024-06-09",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "new-zealand-parliament",
+      "signal_id": "nz-supreme-court-of-new-zealand-make-it-16-campaign-2024-05-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-australia",
+      "signal_id": "au-australian-senate-evaluates-electoral-legislatio-2024-05-22",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "ie-oireachtas-joint-committee-on-housing-local-gove-2024-05-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "mt-electoral-commission-of-malta-celebrates-6-years-2024-06-08",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-kenya",
+      "signal_id": "ke-national-assembly-of-kenya-enforces-12-reserved--2024-05-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "constitutional-court-of-korea",
+      "signal_id": "kr-constitutional-court-of-korea-holds-historic-pub-2024-05-23",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-court-of-human-rights",
+      "signal_id": "pt-european-court-of-human-rights-echr-delivers-gra-2024-04-09",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-court-of-human-rights",
+      "signal_id": "ch-federal-assembly-of-switzerland-debates-implemen-2024-06-12",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-supreme-court",
+      "signal_id": "us-supreme-court-of-hawaii-upholds-landmark-settlem-2024-06-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-hawaii",
+      "signal_id": "us-supreme-court-of-hawaii-upholds-landmark-settlem-2024-06-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "us-supreme-court-juliana",
+      "signal_id": "us-us-court-of-appeals-for-the-ninth-circuit-review-2024-05-24",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-court-of-norway",
+      "signal_id": "no-supreme-court-of-norway-norges-h-yesterett-consi-2024-04-30",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "supreme-administrative-court-of-finland",
+      "signal_id": "fi-supreme-administrative-court-of-finland-korkein--2024-05-14",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "constitutional-court-of-hungary",
+      "signal_id": "hu-constitutional-court-of-hungary-alkotm-nyb-r-s-g-2024-04-16",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "colombia-constitutional-court",
+      "signal_id": "co-constitutional-court-of-colombia-corte-constituc-2024-05-27",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "federal-court-of-australia",
+      "signal_id": "au-federal-court-of-australia-delivers-judgment-in--2024-06-21",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-parliament",
+      "signal_id": "eu-european-parliament-and-council-formally-adopt-l-2024-04-23",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "european-commission",
+      "signal_id": "eu-european-commission-enforces-ecodesign-for-susta-2024-05-27",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-canada",
+      "signal_id": "ca-parliament-of-canada-enacts-bill-c-59-amending-c-2024-06-20",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "korea-media-and-communications-commission",
+      "signal_id": "kr-korea-communications-commission-kcc-enforces-man-2024-04-29",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "canada-digital-safety-commission",
+      "signal_id": "ca-parliament-of-canada-advances-bill-c-63-online-h-2024-02-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-canada",
+      "signal_id": "ca-parliament-of-canada-advances-bill-c-63-online-h-2024-02-26",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "parliament-of-south-africa",
+      "signal_id": "za-national-assembly-of-south-africa-evaluates-cybe-2024-05-09",
+      "type": "mentioned_in"
+    },
+    {
+      "actor_id": "undp",
+      "signal_id": "international-united-nations-development-programme-undp-and-it-2024-05-28",
+      "type": "mentioned_in"
+    }
+  ]
+}

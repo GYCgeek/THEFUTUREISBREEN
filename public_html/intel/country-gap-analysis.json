@@ -1,0 +1,552 @@
+{
+  "generated_at": "2026-06-27T14:12:31.849Z",
+  "country_count": 10,
+  "recommendations": [
+    {
+      "country_code": "AU",
+      "country_name": "Australia",
+      "ambition_tier": "leader",
+      "ambition_score": 81,
+      "relevant_signals_count": 13,
+      "model_transfer_candidates": [
+        {
+          "model_country_code": "GB",
+          "model_country_name": "United Kingdom",
+          "similarity": 0.9273,
+          "recommended_sections": [
+            {
+              "section_key": "judicial_precedents",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.9618,
+              "message": "Australia appears weaker than United Kingdom on judicial_precedents. This is a plausible model-transfer area."
+            }
+          ]
+        },
+        {
+          "model_country_code": "IN",
+          "model_country_name": "India",
+          "similarity": 0.9132,
+          "recommended_sections": [
+            {
+              "section_key": "judicial_precedents",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.9452,
+              "message": "Australia appears weaker than India on judicial_precedents. This is a plausible model-transfer area."
+            }
+          ]
+        },
+        {
+          "model_country_code": "IT",
+          "model_country_name": "Italy",
+          "similarity": 0.9128,
+          "recommended_sections": [
+            {
+              "section_key": "judicial_precedents",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.9573,
+              "message": "Australia appears weaker than Italy on judicial_precedents. This is a plausible model-transfer area."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country_code": "GB",
+      "country_name": "United Kingdom",
+      "ambition_tier": "leader",
+      "ambition_score": 88,
+      "relevant_signals_count": 26,
+      "model_transfer_candidates": []
+    },
+    {
+      "country_code": "IN",
+      "country_name": "India",
+      "ambition_tier": "leader",
+      "ambition_score": 88,
+      "relevant_signals_count": 9,
+      "model_transfer_candidates": []
+    },
+    {
+      "country_code": "IT",
+      "country_name": "Italy",
+      "ambition_tier": "leader",
+      "ambition_score": 88,
+      "relevant_signals_count": 3,
+      "model_transfer_candidates": []
+    },
+    {
+      "country_code": "NO",
+      "country_name": "Norway",
+      "ambition_tier": "limited",
+      "ambition_score": 6,
+      "relevant_signals_count": 0,
+      "model_transfer_candidates": [
+        {
+          "model_country_code": "US",
+          "model_country_name": "United States",
+          "similarity": 0.7767,
+          "recommended_sections": [
+            {
+              "section_key": "dedicated_legislation",
+              "gap_size": 1,
+              "semantic_similarity": 0.8209,
+              "message": "Norway appears weaker than United States on dedicated_legislation. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "international_commitments",
+              "gap_size": 1,
+              "semantic_similarity": 0.8188,
+              "message": "Norway appears weaker than United States on international_commitments. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "judicial_precedents",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.8138,
+              "message": "Norway appears weaker than United States on judicial_precedents. This is a plausible model-transfer area."
+            }
+          ]
+        },
+        {
+          "model_country_code": "AU",
+          "model_country_name": "Australia",
+          "similarity": 0.7326,
+          "recommended_sections": [
+            {
+              "section_key": "dedicated_legislation",
+              "gap_size": 1,
+              "semantic_similarity": 0.7865,
+              "message": "Norway appears weaker than Australia on dedicated_legislation. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "institutional_mechanisms",
+              "gap_size": 1,
+              "semantic_similarity": 0.7938,
+              "message": "Norway appears weaker than Australia on institutional_mechanisms. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "international_commitments",
+              "gap_size": 1,
+              "semantic_similarity": 0.7974,
+              "message": "Norway appears weaker than Australia on international_commitments. This is a plausible model-transfer area."
+            }
+          ]
+        },
+        {
+          "model_country_code": "GB",
+          "model_country_name": "United Kingdom",
+          "similarity": 0.7242,
+          "recommended_sections": [
+            {
+              "section_key": "dedicated_legislation",
+              "gap_size": 1,
+              "semantic_similarity": 0.7919,
+              "message": "Norway appears weaker than United Kingdom on dedicated_legislation. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "institutional_mechanisms",
+              "gap_size": 1,
+              "semantic_similarity": 0.7839,
+              "message": "Norway appears weaker than United Kingdom on institutional_mechanisms. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "judicial_precedents",
+              "gap_size": 1,
+              "semantic_similarity": 0.7868,
+              "message": "Norway appears weaker than United Kingdom on judicial_precedents. This is a plausible model-transfer area."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country_code": "US",
+      "country_name": "United States",
+      "ambition_tier": "emerging",
+      "ambition_score": 63,
+      "relevant_signals_count": 20,
+      "model_transfer_candidates": [
+        {
+          "model_country_code": "AU",
+          "model_country_name": "Australia",
+          "similarity": 0.8858,
+          "recommended_sections": [
+            {
+              "section_key": "institutional_mechanisms",
+              "gap_size": 0.6667,
+              "semantic_similarity": 0.9285,
+              "message": "United States appears weaker than Australia on institutional_mechanisms. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "policy_integration",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.9217,
+              "message": "United States appears weaker than Australia on policy_integration. This is a plausible model-transfer area."
+            }
+          ]
+        },
+        {
+          "model_country_code": "GB",
+          "model_country_name": "United Kingdom",
+          "similarity": 0.8783,
+          "recommended_sections": [
+            {
+              "section_key": "institutional_mechanisms",
+              "gap_size": 0.6667,
+              "semantic_similarity": 0.932,
+              "message": "United States appears weaker than United Kingdom on institutional_mechanisms. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "judicial_precedents",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.9311,
+              "message": "United States appears weaker than United Kingdom on judicial_precedents. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "policy_integration",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.9117,
+              "message": "United States appears weaker than United Kingdom on policy_integration. This is a plausible model-transfer area."
+            }
+          ]
+        },
+        {
+          "model_country_code": "IN",
+          "model_country_name": "India",
+          "similarity": 0.8895,
+          "recommended_sections": [
+            {
+              "section_key": "judicial_precedents",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.9334,
+              "message": "United States appears weaker than India on judicial_precedents. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "policy_integration",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.9239,
+              "message": "United States appears weaker than India on policy_integration. This is a plausible model-transfer area."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country_code": "US_HI",
+      "country_name": "Hawaii (US State)",
+      "ambition_tier": "emerging",
+      "ambition_score": 44,
+      "relevant_signals_count": 0,
+      "model_transfer_candidates": [
+        {
+          "model_country_code": "US",
+          "model_country_name": "United States",
+          "similarity": 0.8828,
+          "recommended_sections": [
+            {
+              "section_key": "international_commitments",
+              "gap_size": 1,
+              "semantic_similarity": 0.8552,
+              "message": "Hawaii (US State) appears weaker than United States on international_commitments. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "dedicated_legislation",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.9343,
+              "message": "Hawaii (US State) appears weaker than United States on dedicated_legislation. This is a plausible model-transfer area."
+            }
+          ]
+        },
+        {
+          "model_country_code": "AU",
+          "model_country_name": "Australia",
+          "similarity": 0.8485,
+          "recommended_sections": [
+            {
+              "section_key": "international_commitments",
+              "gap_size": 1,
+              "semantic_similarity": 0.8252,
+              "message": "Hawaii (US State) appears weaker than Australia on international_commitments. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "institutional_mechanisms",
+              "gap_size": 0.6667,
+              "semantic_similarity": 0.9284,
+              "message": "Hawaii (US State) appears weaker than Australia on institutional_mechanisms. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "dedicated_legislation",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.9321,
+              "message": "Hawaii (US State) appears weaker than Australia on dedicated_legislation. This is a plausible model-transfer area."
+            }
+          ]
+        },
+        {
+          "model_country_code": "GB",
+          "model_country_name": "United Kingdom",
+          "similarity": 0.8392,
+          "recommended_sections": [
+            {
+              "section_key": "international_commitments",
+              "gap_size": 1,
+              "semantic_similarity": 0.8127,
+              "message": "Hawaii (US State) appears weaker than United Kingdom on international_commitments. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "institutional_mechanisms",
+              "gap_size": 0.6667,
+              "semantic_similarity": 0.9351,
+              "message": "Hawaii (US State) appears weaker than United Kingdom on institutional_mechanisms. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "dedicated_legislation",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.926,
+              "message": "Hawaii (US State) appears weaker than United Kingdom on dedicated_legislation. This is a plausible model-transfer area."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country_code": "US_MT",
+      "country_name": "Montana (US State)",
+      "ambition_tier": "emerging",
+      "ambition_score": 44,
+      "relevant_signals_count": 0,
+      "model_transfer_candidates": [
+        {
+          "model_country_code": "US",
+          "model_country_name": "United States",
+          "similarity": 0.8812,
+          "recommended_sections": [
+            {
+              "section_key": "international_commitments",
+              "gap_size": 1,
+              "semantic_similarity": 0.8538,
+              "message": "Montana (US State) appears weaker than United States on international_commitments. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "dedicated_legislation",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.9296,
+              "message": "Montana (US State) appears weaker than United States on dedicated_legislation. This is a plausible model-transfer area."
+            }
+          ]
+        },
+        {
+          "model_country_code": "AU",
+          "model_country_name": "Australia",
+          "similarity": 0.853,
+          "recommended_sections": [
+            {
+              "section_key": "international_commitments",
+              "gap_size": 1,
+              "semantic_similarity": 0.8257,
+              "message": "Montana (US State) appears weaker than Australia on international_commitments. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "institutional_mechanisms",
+              "gap_size": 0.6667,
+              "semantic_similarity": 0.9277,
+              "message": "Montana (US State) appears weaker than Australia on institutional_mechanisms. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "dedicated_legislation",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.9393,
+              "message": "Montana (US State) appears weaker than Australia on dedicated_legislation. This is a plausible model-transfer area."
+            }
+          ]
+        },
+        {
+          "model_country_code": "IT",
+          "model_country_name": "Italy",
+          "similarity": 0.8404,
+          "recommended_sections": [
+            {
+              "section_key": "international_commitments",
+              "gap_size": 1,
+              "semantic_similarity": 0.8078,
+              "message": "Montana (US State) appears weaker than Italy on international_commitments. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "dedicated_legislation",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.9329,
+              "message": "Montana (US State) appears weaker than Italy on dedicated_legislation. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "judicial_precedents",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.9552,
+              "message": "Montana (US State) appears weaker than Italy on judicial_precedents. This is a plausible model-transfer area."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country_code": "US_NY",
+      "country_name": "New York (US State)",
+      "ambition_tier": "limited",
+      "ambition_score": 31,
+      "relevant_signals_count": 0,
+      "model_transfer_candidates": [
+        {
+          "model_country_code": "US",
+          "model_country_name": "United States",
+          "similarity": 0.8574,
+          "recommended_sections": [
+            {
+              "section_key": "international_commitments",
+              "gap_size": 1,
+              "semantic_similarity": 0.852,
+              "message": "New York (US State) appears weaker than United States on international_commitments. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "dedicated_legislation",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.9374,
+              "message": "New York (US State) appears weaker than United States on dedicated_legislation. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "judicial_precedents",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.8588,
+              "message": "New York (US State) appears weaker than United States on judicial_precedents. This is a plausible model-transfer area."
+            }
+          ]
+        },
+        {
+          "model_country_code": "AU",
+          "model_country_name": "Australia",
+          "similarity": 0.8295,
+          "recommended_sections": [
+            {
+              "section_key": "international_commitments",
+              "gap_size": 1,
+              "semantic_similarity": 0.8352,
+              "message": "New York (US State) appears weaker than Australia on international_commitments. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "institutional_mechanisms",
+              "gap_size": 0.6667,
+              "semantic_similarity": 0.9514,
+              "message": "New York (US State) appears weaker than Australia on institutional_mechanisms. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "dedicated_legislation",
+              "gap_size": 0.5,
+              "semantic_similarity": 0.9552,
+              "message": "New York (US State) appears weaker than Australia on dedicated_legislation. This is a plausible model-transfer area."
+            }
+          ]
+        },
+        {
+          "model_country_code": "GB",
+          "model_country_name": "United Kingdom",
+          "similarity": 0.8165,
+          "recommended_sections": [
+            {
+              "section_key": "judicial_precedents",
+              "gap_size": 1,
+              "semantic_similarity": 0.8289,
+              "message": "New York (US State) appears weaker than United Kingdom on judicial_precedents. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "international_commitments",
+              "gap_size": 1,
+              "semantic_similarity": 0.8215,
+              "message": "New York (US State) appears weaker than United Kingdom on international_commitments. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "institutional_mechanisms",
+              "gap_size": 0.6667,
+              "semantic_similarity": 0.9486,
+              "message": "New York (US State) appears weaker than United Kingdom on institutional_mechanisms. This is a plausible model-transfer area."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country_code": "US_PA",
+      "country_name": "Pennsylvania (US State)",
+      "ambition_tier": "limited",
+      "ambition_score": 25,
+      "relevant_signals_count": 0,
+      "model_transfer_candidates": [
+        {
+          "model_country_code": "US",
+          "model_country_name": "United States",
+          "similarity": 0.8464,
+          "recommended_sections": [
+            {
+              "section_key": "dedicated_legislation",
+              "gap_size": 1,
+              "semantic_similarity": 0.8481,
+              "message": "Pennsylvania (US State) appears weaker than United States on dedicated_legislation. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "international_commitments",
+              "gap_size": 1,
+              "semantic_similarity": 0.8544,
+              "message": "Pennsylvania (US State) appears weaker than United States on international_commitments. This is a plausible model-transfer area."
+            }
+          ]
+        },
+        {
+          "model_country_code": "AU",
+          "model_country_name": "Australia",
+          "similarity": 0.8203,
+          "recommended_sections": [
+            {
+              "section_key": "dedicated_legislation",
+              "gap_size": 1,
+              "semantic_similarity": 0.8143,
+              "message": "Pennsylvania (US State) appears weaker than Australia on dedicated_legislation. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "international_commitments",
+              "gap_size": 1,
+              "semantic_similarity": 0.8325,
+              "message": "Pennsylvania (US State) appears weaker than Australia on international_commitments. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "institutional_mechanisms",
+              "gap_size": 0.6667,
+              "semantic_similarity": 0.9265,
+              "message": "Pennsylvania (US State) appears weaker than Australia on institutional_mechanisms. This is a plausible model-transfer area."
+            }
+          ]
+        },
+        {
+          "model_country_code": "GB",
+          "model_country_name": "United Kingdom",
+          "similarity": 0.8103,
+          "recommended_sections": [
+            {
+              "section_key": "dedicated_legislation",
+              "gap_size": 1,
+              "semantic_similarity": 0.8203,
+              "message": "Pennsylvania (US State) appears weaker than United Kingdom on dedicated_legislation. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "international_commitments",
+              "gap_size": 1,
+              "semantic_similarity": 0.8128,
+              "message": "Pennsylvania (US State) appears weaker than United Kingdom on international_commitments. This is a plausible model-transfer area."
+            },
+            {
+              "section_key": "institutional_mechanisms",
+              "gap_size": 0.6667,
+              "semantic_similarity": 0.9273,
+              "message": "Pennsylvania (US State) appears weaker than United Kingdom on institutional_mechanisms. This is a plausible model-transfer area."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

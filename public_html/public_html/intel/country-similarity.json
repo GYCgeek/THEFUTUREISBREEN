@@ -1,0 +1,4588 @@
+{
+  "generated_at": "2026-06-27T14:12:31.847Z",
+  "country_count": 10,
+  "pairs": [
+    {
+      "pair_id": "AU::GB",
+      "country_a": {
+        "code": "AU",
+        "name": "Australia",
+        "region": "Oceania"
+      },
+      "country_b": {
+        "code": "GB",
+        "name": "United Kingdom",
+        "region": "Europe"
+      },
+      "overall_similarity": 0.9273,
+      "profile_similarity": 0.9709,
+      "section_semantic_similarity": 0.9689,
+      "ambition_score_proximity": 0.93,
+      "signal_alignment": {
+        "shared_signal_count": 3,
+        "shared_signal_ratio": 0.2308,
+        "shared_signal_ids": [
+          "malaysia-social-media-ban-under-16-2026-06-01",
+          "scotland-fm-intergenerational-child-poverty-2026-05-26",
+          "uk-pensions-commission-intergenerational-fairness-2026-05-19"
+        ]
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9499,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9831,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9747,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9618,
+          "score_a": 0.5,
+          "score_b": 1,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.9758,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9684,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        }
+      ],
+      "transferable_gaps_for_a": [
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "GB",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9618,
+          "message": "Australia appears weaker than United Kingdom on judicial_precedents. This is a plausible model-transfer area."
+        }
+      ],
+      "transferable_gaps_for_b": []
+    },
+    {
+      "pair_id": "AU::IN",
+      "country_a": {
+        "code": "AU",
+        "name": "Australia",
+        "region": "Oceania"
+      },
+      "country_b": {
+        "code": "IN",
+        "name": "India",
+        "region": "Asia"
+      },
+      "overall_similarity": 0.9132,
+      "profile_similarity": 0.9721,
+      "section_semantic_similarity": 0.9562,
+      "ambition_score_proximity": 0.93,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.947,
+          "score_a": 0.3333,
+          "score_b": 0.6667,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9647,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9544,
+          "score_a": 1,
+          "score_b": 0.6667,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9452,
+          "score_a": 0.5,
+          "score_b": 1,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.9706,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9553,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        }
+      ],
+      "transferable_gaps_for_a": [
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "IN",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9452,
+          "message": "Australia appears weaker than India on judicial_precedents. This is a plausible model-transfer area."
+        }
+      ],
+      "transferable_gaps_for_b": []
+    },
+    {
+      "pair_id": "AU::IT",
+      "country_a": {
+        "code": "AU",
+        "name": "Australia",
+        "region": "Oceania"
+      },
+      "country_b": {
+        "code": "IT",
+        "name": "Italy",
+        "region": "Europe"
+      },
+      "overall_similarity": 0.9128,
+      "profile_similarity": 0.9727,
+      "section_semantic_similarity": 0.9533,
+      "ambition_score_proximity": 0.93,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9265,
+          "score_a": 0.3333,
+          "score_b": 0.6667,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.964,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9506,
+          "score_a": 1,
+          "score_b": 0.6667,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9573,
+          "score_a": 0.5,
+          "score_b": 1,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.9668,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9546,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        }
+      ],
+      "transferable_gaps_for_a": [
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "IT",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9573,
+          "message": "Australia appears weaker than Italy on judicial_precedents. This is a plausible model-transfer area."
+        }
+      ],
+      "transferable_gaps_for_b": []
+    },
+    {
+      "pair_id": "AU::NO",
+      "country_a": {
+        "code": "AU",
+        "name": "Australia",
+        "region": "Oceania"
+      },
+      "country_b": {
+        "code": "NO",
+        "name": "Norway",
+        "region": "Europe"
+      },
+      "overall_similarity": 0.7326,
+      "profile_similarity": 0.8915,
+      "section_semantic_similarity": 0.8193,
+      "ambition_score_proximity": 0.25,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9447,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.7865,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.7938,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.7901,
+          "score_a": 0.5,
+          "score_b": 0,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.7974,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.8034,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "AU",
+          "gap_size": 1,
+          "semantic_similarity": 0.7865,
+          "message": "Norway appears weaker than Australia on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "learn_from": "AU",
+          "gap_size": 1,
+          "semantic_similarity": 0.7938,
+          "message": "Norway appears weaker than Australia on institutional_mechanisms. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "international_commitments",
+          "learn_from": "AU",
+          "gap_size": 1,
+          "semantic_similarity": 0.7974,
+          "message": "Norway appears weaker than Australia on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "AU",
+          "gap_size": 1,
+          "semantic_similarity": 0.8034,
+          "message": "Norway appears weaker than Australia on policy_integration. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "AU",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.7901,
+          "message": "Norway appears weaker than Australia on judicial_precedents. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "AU::US",
+      "country_a": {
+        "code": "AU",
+        "name": "Australia",
+        "region": "Oceania"
+      },
+      "country_b": {
+        "code": "US",
+        "name": "United States",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8858,
+      "profile_similarity": 0.9603,
+      "section_semantic_similarity": 0.9385,
+      "ambition_score_proximity": 0.82,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9386,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9544,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9285,
+          "score_a": 1,
+          "score_b": 0.3333,
+          "score_gap": 0.6667
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9248,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.9631,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9217,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "institutional_mechanisms",
+          "learn_from": "AU",
+          "gap_size": 0.6667,
+          "semantic_similarity": 0.9285,
+          "message": "United States appears weaker than Australia on institutional_mechanisms. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "AU",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9217,
+          "message": "United States appears weaker than Australia on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "AU::US_HI",
+      "country_a": {
+        "code": "AU",
+        "name": "Australia",
+        "region": "Oceania"
+      },
+      "country_b": {
+        "code": "US_HI",
+        "name": "Hawaii (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8485,
+      "profile_similarity": 0.955,
+      "section_semantic_similarity": 0.9148,
+      "ambition_score_proximity": 0.63,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9389,
+          "score_a": 0.3333,
+          "score_b": 0.6667,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9321,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9284,
+          "score_a": 1,
+          "score_b": 0.3333,
+          "score_gap": 0.6667
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9307,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8252,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9336,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "international_commitments",
+          "learn_from": "AU",
+          "gap_size": 1,
+          "semantic_similarity": 0.8252,
+          "message": "Hawaii (US State) appears weaker than Australia on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "learn_from": "AU",
+          "gap_size": 0.6667,
+          "semantic_similarity": 0.9284,
+          "message": "Hawaii (US State) appears weaker than Australia on institutional_mechanisms. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "AU",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9321,
+          "message": "Hawaii (US State) appears weaker than Australia on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "AU",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9336,
+          "message": "Hawaii (US State) appears weaker than Australia on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "AU::US_MT",
+      "country_a": {
+        "code": "AU",
+        "name": "Australia",
+        "region": "Oceania"
+      },
+      "country_b": {
+        "code": "US_MT",
+        "name": "Montana (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.853,
+      "profile_similarity": 0.9633,
+      "section_semantic_similarity": 0.9147,
+      "ambition_score_proximity": 0.63,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.92,
+          "score_a": 0.3333,
+          "score_b": 0.6667,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9393,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9277,
+          "score_a": 1,
+          "score_b": 0.3333,
+          "score_gap": 0.6667
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9388,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8257,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9367,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "international_commitments",
+          "learn_from": "AU",
+          "gap_size": 1,
+          "semantic_similarity": 0.8257,
+          "message": "Montana (US State) appears weaker than Australia on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "learn_from": "AU",
+          "gap_size": 0.6667,
+          "semantic_similarity": 0.9277,
+          "message": "Montana (US State) appears weaker than Australia on institutional_mechanisms. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "AU",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9393,
+          "message": "Montana (US State) appears weaker than Australia on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "AU",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9367,
+          "message": "Montana (US State) appears weaker than Australia on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "AU::US_NY",
+      "country_a": {
+        "code": "AU",
+        "name": "Australia",
+        "region": "Oceania"
+      },
+      "country_b": {
+        "code": "US_NY",
+        "name": "New York (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8295,
+      "profile_similarity": 0.9616,
+      "section_semantic_similarity": 0.9023,
+      "ambition_score_proximity": 0.5,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9157,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9552,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9514,
+          "score_a": 1,
+          "score_b": 0.3333,
+          "score_gap": 0.6667
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.8328,
+          "score_a": 0.5,
+          "score_b": 0,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8352,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9237,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "international_commitments",
+          "learn_from": "AU",
+          "gap_size": 1,
+          "semantic_similarity": 0.8352,
+          "message": "New York (US State) appears weaker than Australia on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "learn_from": "AU",
+          "gap_size": 0.6667,
+          "semantic_similarity": 0.9514,
+          "message": "New York (US State) appears weaker than Australia on institutional_mechanisms. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "AU",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9552,
+          "message": "New York (US State) appears weaker than Australia on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "AU",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.8328,
+          "message": "New York (US State) appears weaker than Australia on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "AU",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9237,
+          "message": "New York (US State) appears weaker than Australia on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "AU::US_PA",
+      "country_a": {
+        "code": "AU",
+        "name": "Australia",
+        "region": "Oceania"
+      },
+      "country_b": {
+        "code": "US_PA",
+        "name": "Pennsylvania (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8203,
+      "profile_similarity": 0.966,
+      "section_semantic_similarity": 0.8919,
+      "ambition_score_proximity": 0.44,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9233,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.8143,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9265,
+          "score_a": 1,
+          "score_b": 0.3333,
+          "score_gap": 0.6667
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9293,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8325,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9256,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "AU",
+          "gap_size": 1,
+          "semantic_similarity": 0.8143,
+          "message": "Pennsylvania (US State) appears weaker than Australia on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "international_commitments",
+          "learn_from": "AU",
+          "gap_size": 1,
+          "semantic_similarity": 0.8325,
+          "message": "Pennsylvania (US State) appears weaker than Australia on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "learn_from": "AU",
+          "gap_size": 0.6667,
+          "semantic_similarity": 0.9265,
+          "message": "Pennsylvania (US State) appears weaker than Australia on institutional_mechanisms. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "AU",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9256,
+          "message": "Pennsylvania (US State) appears weaker than Australia on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "GB::IN",
+      "country_a": {
+        "code": "GB",
+        "name": "United Kingdom",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "IN",
+        "name": "India",
+        "region": "Asia"
+      },
+      "overall_similarity": 0.9227,
+      "profile_similarity": 0.97,
+      "section_semantic_similarity": 0.9568,
+      "ambition_score_proximity": 1,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9434,
+          "score_a": 0.3333,
+          "score_b": 0.6667,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9596,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9544,
+          "score_a": 1,
+          "score_b": 0.6667,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9611,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.9729,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9495,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": []
+    },
+    {
+      "pair_id": "GB::IT",
+      "country_a": {
+        "code": "GB",
+        "name": "United Kingdom",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "IT",
+        "name": "Italy",
+        "region": "Europe"
+      },
+      "overall_similarity": 0.9214,
+      "profile_similarity": 0.9683,
+      "section_semantic_similarity": 0.9554,
+      "ambition_score_proximity": 1,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9307,
+          "score_a": 0.3333,
+          "score_b": 0.6667,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9661,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9587,
+          "score_a": 1,
+          "score_b": 0.6667,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9614,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.9675,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.948,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": []
+    },
+    {
+      "pair_id": "GB::NO",
+      "country_a": {
+        "code": "GB",
+        "name": "United Kingdom",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "NO",
+        "name": "Norway",
+        "region": "Europe"
+      },
+      "overall_similarity": 0.7242,
+      "profile_similarity": 0.8999,
+      "section_semantic_similarity": 0.8092,
+      "ambition_score_proximity": 0.18,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9347,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.7919,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.7839,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.7868,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.7757,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.7825,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "GB",
+          "gap_size": 1,
+          "semantic_similarity": 0.7919,
+          "message": "Norway appears weaker than United Kingdom on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "learn_from": "GB",
+          "gap_size": 1,
+          "semantic_similarity": 0.7839,
+          "message": "Norway appears weaker than United Kingdom on institutional_mechanisms. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "GB",
+          "gap_size": 1,
+          "semantic_similarity": 0.7868,
+          "message": "Norway appears weaker than United Kingdom on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "international_commitments",
+          "learn_from": "GB",
+          "gap_size": 1,
+          "semantic_similarity": 0.7757,
+          "message": "Norway appears weaker than United Kingdom on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "GB",
+          "gap_size": 1,
+          "semantic_similarity": 0.7825,
+          "message": "Norway appears weaker than United Kingdom on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "GB::US",
+      "country_a": {
+        "code": "GB",
+        "name": "United Kingdom",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "US",
+        "name": "United States",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8783,
+      "profile_similarity": 0.9676,
+      "section_semantic_similarity": 0.9345,
+      "ambition_score_proximity": 0.75,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9277,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9541,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.932,
+          "score_a": 1,
+          "score_b": 0.3333,
+          "score_gap": 0.6667
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9311,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.9506,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9117,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "institutional_mechanisms",
+          "learn_from": "GB",
+          "gap_size": 0.6667,
+          "semantic_similarity": 0.932,
+          "message": "United States appears weaker than United Kingdom on institutional_mechanisms. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "GB",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9311,
+          "message": "United States appears weaker than United Kingdom on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "GB",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9117,
+          "message": "United States appears weaker than United Kingdom on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "GB::US_HI",
+      "country_a": {
+        "code": "GB",
+        "name": "United Kingdom",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "US_HI",
+        "name": "Hawaii (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8392,
+      "profile_similarity": 0.9594,
+      "section_semantic_similarity": 0.9102,
+      "ambition_score_proximity": 0.56,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9227,
+          "score_a": 0.3333,
+          "score_b": 0.6667,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.926,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9351,
+          "score_a": 1,
+          "score_b": 0.3333,
+          "score_gap": 0.6667
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9372,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8127,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9275,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "international_commitments",
+          "learn_from": "GB",
+          "gap_size": 1,
+          "semantic_similarity": 0.8127,
+          "message": "Hawaii (US State) appears weaker than United Kingdom on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "learn_from": "GB",
+          "gap_size": 0.6667,
+          "semantic_similarity": 0.9351,
+          "message": "Hawaii (US State) appears weaker than United Kingdom on institutional_mechanisms. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "GB",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.926,
+          "message": "Hawaii (US State) appears weaker than United Kingdom on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "GB",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9372,
+          "message": "Hawaii (US State) appears weaker than United Kingdom on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "GB",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9275,
+          "message": "Hawaii (US State) appears weaker than United Kingdom on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "GB::US_MT",
+      "country_a": {
+        "code": "GB",
+        "name": "United Kingdom",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "US_MT",
+        "name": "Montana (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8382,
+      "profile_similarity": 0.9597,
+      "section_semantic_similarity": 0.9052,
+      "ambition_score_proximity": 0.56,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9015,
+          "score_a": 0.3333,
+          "score_b": 0.6667,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9317,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9231,
+          "score_a": 1,
+          "score_b": 0.3333,
+          "score_gap": 0.6667
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9426,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8088,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9233,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "international_commitments",
+          "learn_from": "GB",
+          "gap_size": 1,
+          "semantic_similarity": 0.8088,
+          "message": "Montana (US State) appears weaker than United Kingdom on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "learn_from": "GB",
+          "gap_size": 0.6667,
+          "semantic_similarity": 0.9231,
+          "message": "Montana (US State) appears weaker than United Kingdom on institutional_mechanisms. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "GB",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9317,
+          "message": "Montana (US State) appears weaker than United Kingdom on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "GB",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9426,
+          "message": "Montana (US State) appears weaker than United Kingdom on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "GB",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9233,
+          "message": "Montana (US State) appears weaker than United Kingdom on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "GB::US_NY",
+      "country_a": {
+        "code": "GB",
+        "name": "United Kingdom",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "US_NY",
+        "name": "New York (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8165,
+      "profile_similarity": 0.9607,
+      "section_semantic_similarity": 0.8944,
+      "ambition_score_proximity": 0.43,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.8947,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9494,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9486,
+          "score_a": 1,
+          "score_b": 0.3333,
+          "score_gap": 0.6667
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.8289,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8215,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9235,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "GB",
+          "gap_size": 1,
+          "semantic_similarity": 0.8289,
+          "message": "New York (US State) appears weaker than United Kingdom on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "international_commitments",
+          "learn_from": "GB",
+          "gap_size": 1,
+          "semantic_similarity": 0.8215,
+          "message": "New York (US State) appears weaker than United Kingdom on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "learn_from": "GB",
+          "gap_size": 0.6667,
+          "semantic_similarity": 0.9486,
+          "message": "New York (US State) appears weaker than United Kingdom on institutional_mechanisms. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "GB",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9494,
+          "message": "New York (US State) appears weaker than United Kingdom on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "GB",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9235,
+          "message": "New York (US State) appears weaker than United Kingdom on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "GB::US_PA",
+      "country_a": {
+        "code": "GB",
+        "name": "United Kingdom",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "US_PA",
+        "name": "Pennsylvania (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8103,
+      "profile_similarity": 0.9664,
+      "section_semantic_similarity": 0.893,
+      "ambition_score_proximity": 0.37,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9269,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.8203,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9273,
+          "score_a": 1,
+          "score_b": 0.3333,
+          "score_gap": 0.6667
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9415,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8128,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9291,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "GB",
+          "gap_size": 1,
+          "semantic_similarity": 0.8203,
+          "message": "Pennsylvania (US State) appears weaker than United Kingdom on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "international_commitments",
+          "learn_from": "GB",
+          "gap_size": 1,
+          "semantic_similarity": 0.8128,
+          "message": "Pennsylvania (US State) appears weaker than United Kingdom on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "learn_from": "GB",
+          "gap_size": 0.6667,
+          "semantic_similarity": 0.9273,
+          "message": "Pennsylvania (US State) appears weaker than United Kingdom on institutional_mechanisms. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "GB",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9415,
+          "message": "Pennsylvania (US State) appears weaker than United Kingdom on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "GB",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9291,
+          "message": "Pennsylvania (US State) appears weaker than United Kingdom on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "IN::IT",
+      "country_a": {
+        "code": "IN",
+        "name": "India",
+        "region": "Asia"
+      },
+      "country_b": {
+        "code": "IT",
+        "name": "Italy",
+        "region": "Europe"
+      },
+      "overall_similarity": 0.9227,
+      "profile_similarity": 0.97,
+      "section_semantic_similarity": 0.9568,
+      "ambition_score_proximity": 1,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.956,
+          "score_a": 0.6667,
+          "score_b": 0.6667,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9532,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.952,
+          "score_a": 0.6667,
+          "score_b": 0.6667,
+          "score_gap": 0
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9635,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.9627,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9535,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": []
+    },
+    {
+      "pair_id": "IN::NO",
+      "country_a": {
+        "code": "IN",
+        "name": "India",
+        "region": "Asia"
+      },
+      "country_b": {
+        "code": "NO",
+        "name": "Norway",
+        "region": "Europe"
+      },
+      "overall_similarity": 0.7242,
+      "profile_similarity": 0.8926,
+      "section_semantic_similarity": 0.8253,
+      "ambition_score_proximity": 0.18,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9518,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.798,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.8172,
+          "score_a": 0.6667,
+          "score_b": 0,
+          "score_gap": 0.6667
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.7876,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.7903,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.8071,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "IN",
+          "gap_size": 1,
+          "semantic_similarity": 0.798,
+          "message": "Norway appears weaker than India on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "IN",
+          "gap_size": 1,
+          "semantic_similarity": 0.7876,
+          "message": "Norway appears weaker than India on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "international_commitments",
+          "learn_from": "IN",
+          "gap_size": 1,
+          "semantic_similarity": 0.7903,
+          "message": "Norway appears weaker than India on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "IN",
+          "gap_size": 1,
+          "semantic_similarity": 0.8071,
+          "message": "Norway appears weaker than India on policy_integration. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "learn_from": "IN",
+          "gap_size": 0.6667,
+          "semantic_similarity": 0.8172,
+          "message": "Norway appears weaker than India on institutional_mechanisms. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "IN::US",
+      "country_a": {
+        "code": "IN",
+        "name": "India",
+        "region": "Asia"
+      },
+      "country_b": {
+        "code": "US",
+        "name": "United States",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8895,
+      "profile_similarity": 0.9583,
+      "section_semantic_similarity": 0.9332,
+      "ambition_score_proximity": 0.75,
+      "signal_alignment": {
+        "shared_signal_count": 3,
+        "shared_signal_ratio": 0.3333,
+        "shared_signal_ids": [
+          "hindustan-times-boomers-europe-intergenerational-heist-2026-05-29",
+          "wir2026-india-inequality-intergenerational-mobility-2026-06",
+          "world-inequality-report-2026-intergenerational"
+        ]
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9216,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.946,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9259,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9334,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.9483,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9239,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "IN",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9334,
+          "message": "United States appears weaker than India on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "IN",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9239,
+          "message": "United States appears weaker than India on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "IN::US_HI",
+      "country_a": {
+        "code": "IN",
+        "name": "India",
+        "region": "Asia"
+      },
+      "country_b": {
+        "code": "US_HI",
+        "name": "Hawaii (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8371,
+      "profile_similarity": 0.9508,
+      "section_semantic_similarity": 0.9207,
+      "ambition_score_proximity": 0.56,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9563,
+          "score_a": 0.6667,
+          "score_b": 0.6667,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9313,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9316,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9451,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8292,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9307,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "international_commitments",
+          "learn_from": "IN",
+          "gap_size": 1,
+          "semantic_similarity": 0.8292,
+          "message": "Hawaii (US State) appears weaker than India on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "IN",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9313,
+          "message": "Hawaii (US State) appears weaker than India on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "IN",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9451,
+          "message": "Hawaii (US State) appears weaker than India on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "IN",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9307,
+          "message": "Hawaii (US State) appears weaker than India on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "IN::US_MT",
+      "country_a": {
+        "code": "IN",
+        "name": "India",
+        "region": "Asia"
+      },
+      "country_b": {
+        "code": "US_MT",
+        "name": "Montana (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8386,
+      "profile_similarity": 0.9558,
+      "section_semantic_similarity": 0.9159,
+      "ambition_score_proximity": 0.56,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9286,
+          "score_a": 0.6667,
+          "score_b": 0.6667,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9386,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9126,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9444,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8254,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9456,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "international_commitments",
+          "learn_from": "IN",
+          "gap_size": 1,
+          "semantic_similarity": 0.8254,
+          "message": "Montana (US State) appears weaker than India on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "IN",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9386,
+          "message": "Montana (US State) appears weaker than India on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "IN",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9444,
+          "message": "Montana (US State) appears weaker than India on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "IN",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9456,
+          "message": "Montana (US State) appears weaker than India on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "IN::US_NY",
+      "country_a": {
+        "code": "IN",
+        "name": "India",
+        "region": "Asia"
+      },
+      "country_b": {
+        "code": "US_NY",
+        "name": "New York (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8151,
+      "profile_similarity": 0.9557,
+      "section_semantic_similarity": 0.8997,
+      "ambition_score_proximity": 0.43,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9108,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9331,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9379,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.8424,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8393,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9347,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "IN",
+          "gap_size": 1,
+          "semantic_similarity": 0.8424,
+          "message": "New York (US State) appears weaker than India on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "international_commitments",
+          "learn_from": "IN",
+          "gap_size": 1,
+          "semantic_similarity": 0.8393,
+          "message": "New York (US State) appears weaker than India on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "IN",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9331,
+          "message": "New York (US State) appears weaker than India on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "IN",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9347,
+          "message": "New York (US State) appears weaker than India on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "IN::US_PA",
+      "country_a": {
+        "code": "IN",
+        "name": "India",
+        "region": "Asia"
+      },
+      "country_b": {
+        "code": "US_PA",
+        "name": "Pennsylvania (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8059,
+      "profile_similarity": 0.9555,
+      "section_semantic_similarity": 0.8995,
+      "ambition_score_proximity": 0.37,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9486,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.8217,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9184,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9529,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8328,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9228,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "IN",
+          "gap_size": 1,
+          "semantic_similarity": 0.8217,
+          "message": "Pennsylvania (US State) appears weaker than India on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "international_commitments",
+          "learn_from": "IN",
+          "gap_size": 1,
+          "semantic_similarity": 0.8328,
+          "message": "Pennsylvania (US State) appears weaker than India on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "IN",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9529,
+          "message": "Pennsylvania (US State) appears weaker than India on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "IN",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9228,
+          "message": "Pennsylvania (US State) appears weaker than India on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "IT::NO",
+      "country_a": {
+        "code": "IT",
+        "name": "Italy",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "NO",
+        "name": "Norway",
+        "region": "Europe"
+      },
+      "overall_similarity": 0.7207,
+      "profile_similarity": 0.8873,
+      "section_semantic_similarity": 0.8226,
+      "ambition_score_proximity": 0.18,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.938,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.7907,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.8151,
+          "score_a": 0.6667,
+          "score_b": 0,
+          "score_gap": 0.6667
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.7824,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.7848,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.8245,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "IT",
+          "gap_size": 1,
+          "semantic_similarity": 0.7907,
+          "message": "Norway appears weaker than Italy on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "IT",
+          "gap_size": 1,
+          "semantic_similarity": 0.7824,
+          "message": "Norway appears weaker than Italy on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "international_commitments",
+          "learn_from": "IT",
+          "gap_size": 1,
+          "semantic_similarity": 0.7848,
+          "message": "Norway appears weaker than Italy on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "IT",
+          "gap_size": 1,
+          "semantic_similarity": 0.8245,
+          "message": "Norway appears weaker than Italy on policy_integration. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "learn_from": "IT",
+          "gap_size": 0.6667,
+          "semantic_similarity": 0.8151,
+          "message": "Norway appears weaker than Italy on institutional_mechanisms. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "IT::US",
+      "country_a": {
+        "code": "IT",
+        "name": "Italy",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "US",
+        "name": "United States",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8709,
+      "profile_similarity": 0.9589,
+      "section_semantic_similarity": 0.924,
+      "ambition_score_proximity": 0.75,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.8906,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9305,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9295,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9344,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.9424,
+          "score_a": 1,
+          "score_b": 1,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9165,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "IT",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9344,
+          "message": "United States appears weaker than Italy on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "IT",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9165,
+          "message": "United States appears weaker than Italy on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "IT::US_HI",
+      "country_a": {
+        "code": "IT",
+        "name": "Italy",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "US_HI",
+        "name": "Hawaii (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8367,
+      "profile_similarity": 0.9539,
+      "section_semantic_similarity": 0.912,
+      "ambition_score_proximity": 0.56,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9485,
+          "score_a": 0.6667,
+          "score_b": 0.6667,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9177,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.934,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9373,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8085,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9261,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "international_commitments",
+          "learn_from": "IT",
+          "gap_size": 1,
+          "semantic_similarity": 0.8085,
+          "message": "Hawaii (US State) appears weaker than Italy on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "IT",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9177,
+          "message": "Hawaii (US State) appears weaker than Italy on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "IT",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9373,
+          "message": "Hawaii (US State) appears weaker than Italy on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "IT",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9261,
+          "message": "Hawaii (US State) appears weaker than Italy on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "IT::US_MT",
+      "country_a": {
+        "code": "IT",
+        "name": "Italy",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "US_MT",
+        "name": "Montana (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8404,
+      "profile_similarity": 0.9613,
+      "section_semantic_similarity": 0.9108,
+      "ambition_score_proximity": 0.56,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9142,
+          "score_a": 0.6667,
+          "score_b": 0.6667,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9329,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9283,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9552,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8078,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9264,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "international_commitments",
+          "learn_from": "IT",
+          "gap_size": 1,
+          "semantic_similarity": 0.8078,
+          "message": "Montana (US State) appears weaker than Italy on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "IT",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9329,
+          "message": "Montana (US State) appears weaker than Italy on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "IT",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9552,
+          "message": "Montana (US State) appears weaker than Italy on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "IT",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9264,
+          "message": "Montana (US State) appears weaker than Italy on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "IT::US_NY",
+      "country_a": {
+        "code": "IT",
+        "name": "Italy",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "US_NY",
+        "name": "New York (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8126,
+      "profile_similarity": 0.9548,
+      "section_semantic_similarity": 0.8917,
+      "ambition_score_proximity": 0.43,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.8745,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9457,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9433,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.8341,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8218,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9309,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "IT",
+          "gap_size": 1,
+          "semantic_similarity": 0.8341,
+          "message": "New York (US State) appears weaker than Italy on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "international_commitments",
+          "learn_from": "IT",
+          "gap_size": 1,
+          "semantic_similarity": 0.8218,
+          "message": "New York (US State) appears weaker than Italy on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "IT",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9457,
+          "message": "New York (US State) appears weaker than Italy on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "IT",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9309,
+          "message": "New York (US State) appears weaker than Italy on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "IT::US_PA",
+      "country_a": {
+        "code": "IT",
+        "name": "Italy",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "US_PA",
+        "name": "Pennsylvania (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.805,
+      "profile_similarity": 0.9539,
+      "section_semantic_similarity": 0.8994,
+      "ambition_score_proximity": 0.37,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.945,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.8164,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.925,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.951,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8205,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9383,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "IT",
+          "gap_size": 1,
+          "semantic_similarity": 0.8164,
+          "message": "Pennsylvania (US State) appears weaker than Italy on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "international_commitments",
+          "learn_from": "IT",
+          "gap_size": 1,
+          "semantic_similarity": 0.8205,
+          "message": "Pennsylvania (US State) appears weaker than Italy on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "IT",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.951,
+          "message": "Pennsylvania (US State) appears weaker than Italy on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "IT",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9383,
+          "message": "Pennsylvania (US State) appears weaker than Italy on policy_integration. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "NO::US",
+      "country_a": {
+        "code": "NO",
+        "name": "Norway",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "US",
+        "name": "United States",
+        "region": "North America"
+      },
+      "overall_similarity": 0.7767,
+      "profile_similarity": 0.9112,
+      "section_semantic_similarity": 0.8441,
+      "ambition_score_proximity": 0.43,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9189,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.8209,
+          "score_a": 0,
+          "score_b": 1,
+          "score_gap": 1
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.8475,
+          "score_a": 0,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.8138,
+          "score_a": 0,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8188,
+          "score_a": 0,
+          "score_b": 1,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.8447,
+          "score_a": 0,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "US",
+          "gap_size": 1,
+          "semantic_similarity": 0.8209,
+          "message": "Norway appears weaker than United States on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "international_commitments",
+          "learn_from": "US",
+          "gap_size": 1,
+          "semantic_similarity": 0.8188,
+          "message": "Norway appears weaker than United States on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "US",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.8138,
+          "message": "Norway appears weaker than United States on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "US",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.8447,
+          "message": "Norway appears weaker than United States on policy_integration. This is a plausible model-transfer area."
+        }
+      ],
+      "transferable_gaps_for_b": []
+    },
+    {
+      "pair_id": "NO::US_HI",
+      "country_a": {
+        "code": "NO",
+        "name": "Norway",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "US_HI",
+        "name": "Hawaii (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8084,
+      "profile_similarity": 0.9187,
+      "section_semantic_similarity": 0.8406,
+      "ambition_score_proximity": 0.62,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.942,
+          "score_a": 0.3333,
+          "score_b": 0.6667,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.816,
+          "score_a": 0,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.8252,
+          "score_a": 0,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.7888,
+          "score_a": 0,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8724,
+          "score_a": 0,
+          "score_b": 0,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.7992,
+          "score_a": 0,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "US_HI",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.816,
+          "message": "Norway appears weaker than Hawaii (US State) on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "US_HI",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.7888,
+          "message": "Norway appears weaker than Hawaii (US State) on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "US_HI",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.7992,
+          "message": "Norway appears weaker than Hawaii (US State) on policy_integration. This is a plausible model-transfer area."
+        }
+      ],
+      "transferable_gaps_for_b": []
+    },
+    {
+      "pair_id": "NO::US_MT",
+      "country_a": {
+        "code": "NO",
+        "name": "Norway",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "US_MT",
+        "name": "Montana (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8047,
+      "profile_similarity": 0.9118,
+      "section_semantic_similarity": 0.8411,
+      "ambition_score_proximity": 0.62,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9131,
+          "score_a": 0.3333,
+          "score_b": 0.6667,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.8075,
+          "score_a": 0,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.8223,
+          "score_a": 0,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.8013,
+          "score_a": 0,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8749,
+          "score_a": 0,
+          "score_b": 0,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.8275,
+          "score_a": 0,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "US_MT",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.8075,
+          "message": "Norway appears weaker than Montana (US State) on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "US_MT",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.8013,
+          "message": "Norway appears weaker than Montana (US State) on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "US_MT",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.8275,
+          "message": "Norway appears weaker than Montana (US State) on policy_integration. This is a plausible model-transfer area."
+        }
+      ],
+      "transferable_gaps_for_b": []
+    },
+    {
+      "pair_id": "NO::US_NY",
+      "country_a": {
+        "code": "NO",
+        "name": "Norway",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "US_NY",
+        "name": "New York (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8346,
+      "profile_similarity": 0.9211,
+      "section_semantic_similarity": 0.8619,
+      "ambition_score_proximity": 0.75,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9031,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.8211,
+          "score_a": 0,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.8331,
+          "score_a": 0,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.8961,
+          "score_a": 0,
+          "score_b": 0,
+          "score_gap": 0
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8951,
+          "score_a": 0,
+          "score_b": 0,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.8226,
+          "score_a": 0,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "US_NY",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.8211,
+          "message": "Norway appears weaker than New York (US State) on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "US_NY",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.8226,
+          "message": "Norway appears weaker than New York (US State) on policy_integration. This is a plausible model-transfer area."
+        }
+      ],
+      "transferable_gaps_for_b": []
+    },
+    {
+      "pair_id": "NO::US_PA",
+      "country_a": {
+        "code": "NO",
+        "name": "Norway",
+        "region": "Europe"
+      },
+      "country_b": {
+        "code": "US_PA",
+        "name": "Pennsylvania (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8427,
+      "profile_similarity": 0.9166,
+      "section_semantic_similarity": 0.8685,
+      "ambition_score_proximity": 0.81,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9339,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.907,
+          "score_a": 0,
+          "score_b": 0,
+          "score_gap": 0
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.8329,
+          "score_a": 0,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.8087,
+          "score_a": 0,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.9042,
+          "score_a": 0,
+          "score_b": 0,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.8245,
+          "score_a": 0,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        }
+      ],
+      "transferable_gaps_for_a": [
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "US_PA",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.8087,
+          "message": "Norway appears weaker than Pennsylvania (US State) on judicial_precedents. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "policy_integration",
+          "learn_from": "US_PA",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.8245,
+          "message": "Norway appears weaker than Pennsylvania (US State) on policy_integration. This is a plausible model-transfer area."
+        }
+      ],
+      "transferable_gaps_for_b": []
+    },
+    {
+      "pair_id": "US::US_HI",
+      "country_a": {
+        "code": "US",
+        "name": "United States",
+        "region": "North America"
+      },
+      "country_b": {
+        "code": "US_HI",
+        "name": "Hawaii (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8828,
+      "profile_similarity": 0.9682,
+      "section_semantic_similarity": 0.9151,
+      "ambition_score_proximity": 0.81,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9157,
+          "score_a": 0.3333,
+          "score_b": 0.6667,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9343,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9485,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9376,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8552,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.8993,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "international_commitments",
+          "learn_from": "US",
+          "gap_size": 1,
+          "semantic_similarity": 0.8552,
+          "message": "Hawaii (US State) appears weaker than United States on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "US",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9343,
+          "message": "Hawaii (US State) appears weaker than United States on dedicated_legislation. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "US::US_MT",
+      "country_a": {
+        "code": "US",
+        "name": "United States",
+        "region": "North America"
+      },
+      "country_b": {
+        "code": "US_MT",
+        "name": "Montana (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8812,
+      "profile_similarity": 0.9654,
+      "section_semantic_similarity": 0.9152,
+      "ambition_score_proximity": 0.81,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9046,
+          "score_a": 0.3333,
+          "score_b": 0.6667,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9296,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9388,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9438,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8538,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9206,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "international_commitments",
+          "learn_from": "US",
+          "gap_size": 1,
+          "semantic_similarity": 0.8538,
+          "message": "Montana (US State) appears weaker than United States on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "US",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9296,
+          "message": "Montana (US State) appears weaker than United States on dedicated_legislation. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "US::US_NY",
+      "country_a": {
+        "code": "US",
+        "name": "United States",
+        "region": "North America"
+      },
+      "country_b": {
+        "code": "US_NY",
+        "name": "New York (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8574,
+      "profile_similarity": 0.9642,
+      "section_semantic_similarity": 0.9001,
+      "ambition_score_proximity": 0.68,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9042,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9374,
+          "score_a": 1,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9389,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.8588,
+          "score_a": 0.5,
+          "score_b": 0,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.852,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9093,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "international_commitments",
+          "learn_from": "US",
+          "gap_size": 1,
+          "semantic_similarity": 0.852,
+          "message": "New York (US State) appears weaker than United States on international_commitments. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "US",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.9374,
+          "message": "New York (US State) appears weaker than United States on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "US",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.8588,
+          "message": "New York (US State) appears weaker than United States on judicial_precedents. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "US::US_PA",
+      "country_a": {
+        "code": "US",
+        "name": "United States",
+        "region": "North America"
+      },
+      "country_b": {
+        "code": "US_PA",
+        "name": "Pennsylvania (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8464,
+      "profile_similarity": 0.9634,
+      "section_semantic_similarity": 0.8939,
+      "ambition_score_proximity": 0.62,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9073,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.8481,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9179,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9251,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.8544,
+          "score_a": 1,
+          "score_b": 0,
+          "score_gap": 1
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9109,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "US",
+          "gap_size": 1,
+          "semantic_similarity": 0.8481,
+          "message": "Pennsylvania (US State) appears weaker than United States on dedicated_legislation. This is a plausible model-transfer area."
+        },
+        {
+          "section_key": "international_commitments",
+          "learn_from": "US",
+          "gap_size": 1,
+          "semantic_similarity": 0.8544,
+          "message": "Pennsylvania (US State) appears weaker than United States on international_commitments. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "US_HI::US_MT",
+      "country_a": {
+        "code": "US_HI",
+        "name": "Hawaii (US State)",
+        "region": "North America"
+      },
+      "country_b": {
+        "code": "US_MT",
+        "name": "Montana (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.9228,
+      "profile_similarity": 0.9732,
+      "section_semantic_similarity": 0.9504,
+      "ambition_score_proximity": 1,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9593,
+          "score_a": 0.6667,
+          "score_b": 0.6667,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9391,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9443,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9468,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.9754,
+          "score_a": 0,
+          "score_b": 0,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9373,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": []
+    },
+    {
+      "pair_id": "US_HI::US_NY",
+      "country_a": {
+        "code": "US_HI",
+        "name": "Hawaii (US State)",
+        "region": "North America"
+      },
+      "country_b": {
+        "code": "US_NY",
+        "name": "New York (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8933,
+      "profile_similarity": 0.9688,
+      "section_semantic_similarity": 0.9198,
+      "ambition_score_proximity": 0.87,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9321,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9274,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.943,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.8493,
+          "score_a": 0.5,
+          "score_b": 0,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.9493,
+          "score_a": 0,
+          "score_b": 0,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9177,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "US_HI",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.8493,
+          "message": "New York (US State) appears weaker than Hawaii (US State) on judicial_precedents. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "US_HI::US_PA",
+      "country_a": {
+        "code": "US_HI",
+        "name": "Hawaii (US State)",
+        "region": "North America"
+      },
+      "country_b": {
+        "code": "US_PA",
+        "name": "Pennsylvania (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8861,
+      "profile_similarity": 0.9692,
+      "section_semantic_similarity": 0.926,
+      "ambition_score_proximity": 0.81,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.942,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.8631,
+          "score_a": 0.5,
+          "score_b": 0,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9408,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9445,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.9425,
+          "score_a": 0,
+          "score_b": 0,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.923,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "US_HI",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.8631,
+          "message": "Pennsylvania (US State) appears weaker than Hawaii (US State) on dedicated_legislation. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "US_MT::US_NY",
+      "country_a": {
+        "code": "US_MT",
+        "name": "Montana (US State)",
+        "region": "North America"
+      },
+      "country_b": {
+        "code": "US_NY",
+        "name": "New York (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8964,
+      "profile_similarity": 0.9726,
+      "section_semantic_similarity": 0.924,
+      "ambition_score_proximity": 0.87,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9374,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.9365,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.941,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.8568,
+          "score_a": 0.5,
+          "score_b": 0,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.9466,
+          "score_a": 0,
+          "score_b": 0,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9256,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "US_MT",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.8568,
+          "message": "New York (US State) appears weaker than Montana (US State) on judicial_precedents. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "US_MT::US_PA",
+      "country_a": {
+        "code": "US_MT",
+        "name": "Montana (US State)",
+        "region": "North America"
+      },
+      "country_b": {
+        "code": "US_PA",
+        "name": "Pennsylvania (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.8873,
+      "profile_similarity": 0.9735,
+      "section_semantic_similarity": 0.9214,
+      "ambition_score_proximity": 0.81,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9234,
+          "score_a": 0.6667,
+          "score_b": 0.3333,
+          "score_gap": 0.3333
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.8557,
+          "score_a": 0.5,
+          "score_b": 0,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9345,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.9402,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.9412,
+          "score_a": 0,
+          "score_b": 0,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9333,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        }
+      ],
+      "transferable_gaps_for_a": [],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "US_MT",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.8557,
+          "message": "Pennsylvania (US State) appears weaker than Montana (US State) on dedicated_legislation. This is a plausible model-transfer area."
+        }
+      ]
+    },
+    {
+      "pair_id": "US_NY::US_PA",
+      "country_a": {
+        "code": "US_NY",
+        "name": "New York (US State)",
+        "region": "North America"
+      },
+      "country_b": {
+        "code": "US_PA",
+        "name": "Pennsylvania (US State)",
+        "region": "North America"
+      },
+      "overall_similarity": 0.9051,
+      "profile_similarity": 0.9764,
+      "section_semantic_similarity": 0.9083,
+      "ambition_score_proximity": 0.94,
+      "signal_alignment": {
+        "shared_signal_count": 0,
+        "shared_signal_ratio": 0,
+        "shared_signal_ids": []
+      },
+      "section_comparisons": [
+        {
+          "section_key": "constitutional_provisions",
+          "semantic_similarity": 0.9085,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "dedicated_legislation",
+          "semantic_similarity": 0.8619,
+          "score_a": 0.5,
+          "score_b": 0,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "institutional_mechanisms",
+          "semantic_similarity": 0.9336,
+          "score_a": 0.3333,
+          "score_b": 0.3333,
+          "score_gap": 0
+        },
+        {
+          "section_key": "judicial_precedents",
+          "semantic_similarity": 0.8681,
+          "score_a": 0,
+          "score_b": 0.5,
+          "score_gap": 0.5
+        },
+        {
+          "section_key": "international_commitments",
+          "semantic_similarity": 0.9579,
+          "score_a": 0,
+          "score_b": 0,
+          "score_gap": 0
+        },
+        {
+          "section_key": "policy_integration",
+          "semantic_similarity": 0.9199,
+          "score_a": 0.5,
+          "score_b": 0.5,
+          "score_gap": 0
+        }
+      ],
+      "transferable_gaps_for_a": [
+        {
+          "section_key": "judicial_precedents",
+          "learn_from": "US_PA",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.8681,
+          "message": "New York (US State) appears weaker than Pennsylvania (US State) on judicial_precedents. This is a plausible model-transfer area."
+        }
+      ],
+      "transferable_gaps_for_b": [
+        {
+          "section_key": "dedicated_legislation",
+          "learn_from": "US_NY",
+          "gap_size": 0.5,
+          "semantic_similarity": 0.8619,
+          "message": "Pennsylvania (US State) appears weaker than New York (US State) on dedicated_legislation. This is a plausible model-transfer area."
+        }
+      ]
+    }
+  ],
+  "neighbors": [
+    {
+      "country_code": "AU",
+      "country_name": "Australia",
+      "nearest_neighbors": [
+        {
+          "country_code": "GB",
+          "country_name": "United Kingdom",
+          "region": "Europe",
+          "similarity": 0.9273,
+          "profile_similarity": 0.9709,
+          "section_semantic_similarity": 0.9689,
+          "shared_signal_count": 3,
+          "top_gap_section": "judicial_precedents"
+        },
+        {
+          "country_code": "IN",
+          "country_name": "India",
+          "region": "Asia",
+          "similarity": 0.9132,
+          "profile_similarity": 0.9721,
+          "section_semantic_similarity": 0.9562,
+          "shared_signal_count": 0,
+          "top_gap_section": "judicial_precedents"
+        },
+        {
+          "country_code": "IT",
+          "country_name": "Italy",
+          "region": "Europe",
+          "similarity": 0.9128,
+          "profile_similarity": 0.9727,
+          "section_semantic_similarity": 0.9533,
+          "shared_signal_count": 0,
+          "top_gap_section": "judicial_precedents"
+        },
+        {
+          "country_code": "US",
+          "country_name": "United States",
+          "region": "North America",
+          "similarity": 0.8858,
+          "profile_similarity": 0.9603,
+          "section_semantic_similarity": 0.9385,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "US_MT",
+          "country_name": "Montana (US State)",
+          "region": "North America",
+          "similarity": 0.853,
+          "profile_similarity": 0.9633,
+          "section_semantic_similarity": 0.9147,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        }
+      ]
+    },
+    {
+      "country_code": "GB",
+      "country_name": "United Kingdom",
+      "nearest_neighbors": [
+        {
+          "country_code": "AU",
+          "country_name": "Australia",
+          "region": "Oceania",
+          "similarity": 0.9273,
+          "profile_similarity": 0.9709,
+          "section_semantic_similarity": 0.9689,
+          "shared_signal_count": 3,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "IN",
+          "country_name": "India",
+          "region": "Asia",
+          "similarity": 0.9227,
+          "profile_similarity": 0.97,
+          "section_semantic_similarity": 0.9568,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "IT",
+          "country_name": "Italy",
+          "region": "Europe",
+          "similarity": 0.9214,
+          "profile_similarity": 0.9683,
+          "section_semantic_similarity": 0.9554,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "US",
+          "country_name": "United States",
+          "region": "North America",
+          "similarity": 0.8783,
+          "profile_similarity": 0.9676,
+          "section_semantic_similarity": 0.9345,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "US_HI",
+          "country_name": "Hawaii (US State)",
+          "region": "North America",
+          "similarity": 0.8392,
+          "profile_similarity": 0.9594,
+          "section_semantic_similarity": 0.9102,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        }
+      ]
+    },
+    {
+      "country_code": "IN",
+      "country_name": "India",
+      "nearest_neighbors": [
+        {
+          "country_code": "GB",
+          "country_name": "United Kingdom",
+          "region": "Europe",
+          "similarity": 0.9227,
+          "profile_similarity": 0.97,
+          "section_semantic_similarity": 0.9568,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "IT",
+          "country_name": "Italy",
+          "region": "Europe",
+          "similarity": 0.9227,
+          "profile_similarity": 0.97,
+          "section_semantic_similarity": 0.9568,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "AU",
+          "country_name": "Australia",
+          "region": "Oceania",
+          "similarity": 0.9132,
+          "profile_similarity": 0.9721,
+          "section_semantic_similarity": 0.9562,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "US",
+          "country_name": "United States",
+          "region": "North America",
+          "similarity": 0.8895,
+          "profile_similarity": 0.9583,
+          "section_semantic_similarity": 0.9332,
+          "shared_signal_count": 3,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "US_MT",
+          "country_name": "Montana (US State)",
+          "region": "North America",
+          "similarity": 0.8386,
+          "profile_similarity": 0.9558,
+          "section_semantic_similarity": 0.9159,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        }
+      ]
+    },
+    {
+      "country_code": "IT",
+      "country_name": "Italy",
+      "nearest_neighbors": [
+        {
+          "country_code": "IN",
+          "country_name": "India",
+          "region": "Asia",
+          "similarity": 0.9227,
+          "profile_similarity": 0.97,
+          "section_semantic_similarity": 0.9568,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "GB",
+          "country_name": "United Kingdom",
+          "region": "Europe",
+          "similarity": 0.9214,
+          "profile_similarity": 0.9683,
+          "section_semantic_similarity": 0.9554,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "AU",
+          "country_name": "Australia",
+          "region": "Oceania",
+          "similarity": 0.9128,
+          "profile_similarity": 0.9727,
+          "section_semantic_similarity": 0.9533,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "US",
+          "country_name": "United States",
+          "region": "North America",
+          "similarity": 0.8709,
+          "profile_similarity": 0.9589,
+          "section_semantic_similarity": 0.924,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "US_MT",
+          "country_name": "Montana (US State)",
+          "region": "North America",
+          "similarity": 0.8404,
+          "profile_similarity": 0.9613,
+          "section_semantic_similarity": 0.9108,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        }
+      ]
+    },
+    {
+      "country_code": "NO",
+      "country_name": "Norway",
+      "nearest_neighbors": [
+        {
+          "country_code": "US_PA",
+          "country_name": "Pennsylvania (US State)",
+          "region": "North America",
+          "similarity": 0.8427,
+          "profile_similarity": 0.9166,
+          "section_semantic_similarity": 0.8685,
+          "shared_signal_count": 0,
+          "top_gap_section": "judicial_precedents"
+        },
+        {
+          "country_code": "US_NY",
+          "country_name": "New York (US State)",
+          "region": "North America",
+          "similarity": 0.8346,
+          "profile_similarity": 0.9211,
+          "section_semantic_similarity": 0.8619,
+          "shared_signal_count": 0,
+          "top_gap_section": "dedicated_legislation"
+        },
+        {
+          "country_code": "US_HI",
+          "country_name": "Hawaii (US State)",
+          "region": "North America",
+          "similarity": 0.8084,
+          "profile_similarity": 0.9187,
+          "section_semantic_similarity": 0.8406,
+          "shared_signal_count": 0,
+          "top_gap_section": "dedicated_legislation"
+        },
+        {
+          "country_code": "US_MT",
+          "country_name": "Montana (US State)",
+          "region": "North America",
+          "similarity": 0.8047,
+          "profile_similarity": 0.9118,
+          "section_semantic_similarity": 0.8411,
+          "shared_signal_count": 0,
+          "top_gap_section": "dedicated_legislation"
+        },
+        {
+          "country_code": "US",
+          "country_name": "United States",
+          "region": "North America",
+          "similarity": 0.7767,
+          "profile_similarity": 0.9112,
+          "section_semantic_similarity": 0.8441,
+          "shared_signal_count": 0,
+          "top_gap_section": "dedicated_legislation"
+        }
+      ]
+    },
+    {
+      "country_code": "US",
+      "country_name": "United States",
+      "nearest_neighbors": [
+        {
+          "country_code": "IN",
+          "country_name": "India",
+          "region": "Asia",
+          "similarity": 0.8895,
+          "profile_similarity": 0.9583,
+          "section_semantic_similarity": 0.9332,
+          "shared_signal_count": 3,
+          "top_gap_section": "judicial_precedents"
+        },
+        {
+          "country_code": "AU",
+          "country_name": "Australia",
+          "region": "Oceania",
+          "similarity": 0.8858,
+          "profile_similarity": 0.9603,
+          "section_semantic_similarity": 0.9385,
+          "shared_signal_count": 0,
+          "top_gap_section": "institutional_mechanisms"
+        },
+        {
+          "country_code": "US_HI",
+          "country_name": "Hawaii (US State)",
+          "region": "North America",
+          "similarity": 0.8828,
+          "profile_similarity": 0.9682,
+          "section_semantic_similarity": 0.9151,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "US_MT",
+          "country_name": "Montana (US State)",
+          "region": "North America",
+          "similarity": 0.8812,
+          "profile_similarity": 0.9654,
+          "section_semantic_similarity": 0.9152,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "GB",
+          "country_name": "United Kingdom",
+          "region": "Europe",
+          "similarity": 0.8783,
+          "profile_similarity": 0.9676,
+          "section_semantic_similarity": 0.9345,
+          "shared_signal_count": 0,
+          "top_gap_section": "institutional_mechanisms"
+        }
+      ]
+    },
+    {
+      "country_code": "US_HI",
+      "country_name": "Hawaii (US State)",
+      "nearest_neighbors": [
+        {
+          "country_code": "US_MT",
+          "country_name": "Montana (US State)",
+          "region": "North America",
+          "similarity": 0.9228,
+          "profile_similarity": 0.9732,
+          "section_semantic_similarity": 0.9504,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "US_NY",
+          "country_name": "New York (US State)",
+          "region": "North America",
+          "similarity": 0.8933,
+          "profile_similarity": 0.9688,
+          "section_semantic_similarity": 0.9198,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "US_PA",
+          "country_name": "Pennsylvania (US State)",
+          "region": "North America",
+          "similarity": 0.8861,
+          "profile_similarity": 0.9692,
+          "section_semantic_similarity": 0.926,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "US",
+          "country_name": "United States",
+          "region": "North America",
+          "similarity": 0.8828,
+          "profile_similarity": 0.9682,
+          "section_semantic_similarity": 0.9151,
+          "shared_signal_count": 0,
+          "top_gap_section": "international_commitments"
+        },
+        {
+          "country_code": "AU",
+          "country_name": "Australia",
+          "region": "Oceania",
+          "similarity": 0.8485,
+          "profile_similarity": 0.955,
+          "section_semantic_similarity": 0.9148,
+          "shared_signal_count": 0,
+          "top_gap_section": "international_commitments"
+        }
+      ]
+    },
+    {
+      "country_code": "US_MT",
+      "country_name": "Montana (US State)",
+      "nearest_neighbors": [
+        {
+          "country_code": "US_HI",
+          "country_name": "Hawaii (US State)",
+          "region": "North America",
+          "similarity": 0.9228,
+          "profile_similarity": 0.9732,
+          "section_semantic_similarity": 0.9504,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "US_NY",
+          "country_name": "New York (US State)",
+          "region": "North America",
+          "similarity": 0.8964,
+          "profile_similarity": 0.9726,
+          "section_semantic_similarity": 0.924,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "US_PA",
+          "country_name": "Pennsylvania (US State)",
+          "region": "North America",
+          "similarity": 0.8873,
+          "profile_similarity": 0.9735,
+          "section_semantic_similarity": 0.9214,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        },
+        {
+          "country_code": "US",
+          "country_name": "United States",
+          "region": "North America",
+          "similarity": 0.8812,
+          "profile_similarity": 0.9654,
+          "section_semantic_similarity": 0.9152,
+          "shared_signal_count": 0,
+          "top_gap_section": "international_commitments"
+        },
+        {
+          "country_code": "AU",
+          "country_name": "Australia",
+          "region": "Oceania",
+          "similarity": 0.853,
+          "profile_similarity": 0.9633,
+          "section_semantic_similarity": 0.9147,
+          "shared_signal_count": 0,
+          "top_gap_section": "international_commitments"
+        }
+      ]
+    },
+    {
+      "country_code": "US_NY",
+      "country_name": "New York (US State)",
+      "nearest_neighbors": [
+        {
+          "country_code": "US_PA",
+          "country_name": "Pennsylvania (US State)",
+          "region": "North America",
+          "similarity": 0.9051,
+          "profile_similarity": 0.9764,
+          "section_semantic_similarity": 0.9083,
+          "shared_signal_count": 0,
+          "top_gap_section": "judicial_precedents"
+        },
+        {
+          "country_code": "US_MT",
+          "country_name": "Montana (US State)",
+          "region": "North America",
+          "similarity": 0.8964,
+          "profile_similarity": 0.9726,
+          "section_semantic_similarity": 0.924,
+          "shared_signal_count": 0,
+          "top_gap_section": "judicial_precedents"
+        },
+        {
+          "country_code": "US_HI",
+          "country_name": "Hawaii (US State)",
+          "region": "North America",
+          "similarity": 0.8933,
+          "profile_similarity": 0.9688,
+          "section_semantic_similarity": 0.9198,
+          "shared_signal_count": 0,
+          "top_gap_section": "judicial_precedents"
+        },
+        {
+          "country_code": "US",
+          "country_name": "United States",
+          "region": "North America",
+          "similarity": 0.8574,
+          "profile_similarity": 0.9642,
+          "section_semantic_similarity": 0.9001,
+          "shared_signal_count": 0,
+          "top_gap_section": "international_commitments"
+        },
+        {
+          "country_code": "NO",
+          "country_name": "Norway",
+          "region": "Europe",
+          "similarity": 0.8346,
+          "profile_similarity": 0.9211,
+          "section_semantic_similarity": 0.8619,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        }
+      ]
+    },
+    {
+      "country_code": "US_PA",
+      "country_name": "Pennsylvania (US State)",
+      "nearest_neighbors": [
+        {
+          "country_code": "US_NY",
+          "country_name": "New York (US State)",
+          "region": "North America",
+          "similarity": 0.9051,
+          "profile_similarity": 0.9764,
+          "section_semantic_similarity": 0.9083,
+          "shared_signal_count": 0,
+          "top_gap_section": "dedicated_legislation"
+        },
+        {
+          "country_code": "US_MT",
+          "country_name": "Montana (US State)",
+          "region": "North America",
+          "similarity": 0.8873,
+          "profile_similarity": 0.9735,
+          "section_semantic_similarity": 0.9214,
+          "shared_signal_count": 0,
+          "top_gap_section": "dedicated_legislation"
+        },
+        {
+          "country_code": "US_HI",
+          "country_name": "Hawaii (US State)",
+          "region": "North America",
+          "similarity": 0.8861,
+          "profile_similarity": 0.9692,
+          "section_semantic_similarity": 0.926,
+          "shared_signal_count": 0,
+          "top_gap_section": "dedicated_legislation"
+        },
+        {
+          "country_code": "US",
+          "country_name": "United States",
+          "region": "North America",
+          "similarity": 0.8464,
+          "profile_similarity": 0.9634,
+          "section_semantic_similarity": 0.8939,
+          "shared_signal_count": 0,
+          "top_gap_section": "dedicated_legislation"
+        },
+        {
+          "country_code": "NO",
+          "country_name": "Norway",
+          "region": "Europe",
+          "similarity": 0.8427,
+          "profile_similarity": 0.9166,
+          "section_semantic_similarity": 0.8685,
+          "shared_signal_count": 0,
+          "top_gap_section": null
+        }
+      ]
+    }
+  ]
+}

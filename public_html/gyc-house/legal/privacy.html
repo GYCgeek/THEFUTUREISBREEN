@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy notice | GYC House</title>
+  <meta name="description" content="Privacy notice for GYC House partner inquiries and youth applications." />
+  <meta name="theme-color" content="#0a3d4c" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="../index.html">
+        <span class="logo-mark" aria-hidden="true">GYC</span>
+        <span class="logo-text"><strong>GYC House</strong><span>Global Youth Coalition</span></span>
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="../partners.html">Partners</a>
+        <a href="../apply.html">Apply</a>
+      </nav>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+    </div>
+    <nav class="nav-mobile" id="mobile-nav" data-nav-mobile aria-label="Mobile">
+      <a href="../index.html">Home</a>
+      <a href="../partners.html">Partners</a>
+      <a href="../apply.html">Apply</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="crumbs"><a href="../index.html">Home</a> / Legal / Privacy</p>
+        <h1>Privacy notice</h1>
+        <p>How we handle partner inquiries and youth applications on this site.</p>
+      </div>
+    </header>
+
+    <section>
+      <div class="wrap prose" style="max-width:720px">
+        <p><strong>Version:</strong> v0 · HTML5 site · update when CRM / hosting goes live</p>
+
+        <h2>1. Controller</h2>
+        <p>
+          Global Youth Coalition (“GYC”, “we”) operates GYC House pages. Contact routes are published on
+          <a href="https://www.theglobalyouth.co/" rel="noopener" target="_blank">theglobalyouth.co</a>.
+        </p>
+
+        <h2>2. What we collect</h2>
+        <ul>
+          <li><strong>Partner form:</strong> organisation, name, role, email, moment interest, package interest, optional budget band, message, consent flags.</li>
+          <li><strong>Apply form:</strong> name, email, country, age band, role, affiliation, moment interest, motivation, optional links and access needs, equity support preference, consent flags.</li>
+        </ul>
+
+        <h2>3. v0 technical note</h2>
+        <p>
+          Until a server-side CRM is connected, form submissions are stored in your browser
+          (<code>localStorage</code> key <code>gyc-house-submissions</code>) so the product flow can be tested.
+          That is <strong>not</strong> a production data pipeline. Do not treat localStorage as a secure archive.
+          Production will use a controlled backend (e.g. form endpoint → CRM / sheet) with access controls.
+        </p>
+
+        <h2>4. Purposes</h2>
+        <ul>
+          <li>Respond to partner inquiries and schedule conversations</li>
+          <li>Review youth applications and send prep materials if selected</li>
+          <li>Operate events safely (access needs, safeguarding)</li>
+          <li>Improve the House programme (aggregated, non-identifying where possible)</li>
+        </ul>
+
+        <h2>5. Legal bases (where GDPR applies)</h2>
+        <p>
+          Consent (forms) and legitimate interests in operating convening programmes and partnerships,
+          balanced against your rights. You may withdraw consent for optional marketing; operational
+          event communication may still be required if you are selected to attend.
+        </p>
+
+        <h2>6. Retention</h2>
+        <p>
+          Production retention periods will be documented at launch (expected: inquiry data for the active season + limited archive for impact reporting).
+          You may request deletion subject to legal obligations.
+        </p>
+
+        <h2>7. Sharing</h2>
+        <p>
+          We do not sell personal data. We may share limited fields with session co-hosts only as needed
+          to run a confirmed programme, under confidentiality expectations.
+        </p>
+
+        <h2>8. Your rights</h2>
+        <p>
+          Depending on jurisdiction: access, rectification, erasure, restriction, objection, and portability.
+          Use coalition contact channels to exercise rights.
+        </p>
+
+        <h2>9. Cookies</h2>
+        <p>
+          This static v0 site does not set analytics cookies by default. If analytics are added later,
+          we will update this notice and provide a choice where required.
+        </p>
+
+        <p class="muted" style="margin-top:2rem">Related: <a href="code-of-conduct.html">Code of conduct</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-bottom" style="border:0;padding:0">
+        <span>© <span data-year></span> Global Youth Coalition</span>
+        <a href="code-of-conduct.html">Code of conduct</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/site.js" defer></script>
+</body>
+</html>

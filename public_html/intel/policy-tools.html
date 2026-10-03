@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script data-intel-theme="boot">
+(function(){
+  var k="gyc-foresight-theme";
+  try{
+    var t=localStorage.getItem(k);
+    if(t==="light"||t==="dark") document.documentElement.dataset.theme=t;
+  }catch(e){}
+})();
+</script>
+<script data-intel-shell="boot">
+(function(){
+  var k="gyc-foresight-nav";
+  try{
+    var v=localStorage.getItem(k);
+    if(v==="collapsed"||v==="expanded") document.documentElement.dataset.nav=v;
+  }catch(e){}
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%233B68F6%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2222%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2Csans-serif%22%20font-size%3D%2216%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%3EF%3C%2Ftext%3E%3C%2Fsvg%3E" type="image/svg+xml">
+<meta name="description" content="Policy tools and frameworks for intergenerational equity, starting with Intergenerational Impact Assessments.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Foresight for Intergenerational Fairness Intelligence platform">
+<meta property="og:title" content="Policy Tools · Foresight for Intergenerational Fairness Intelligence platform">
+<meta property="og:description" content="Policy tools and frameworks for intergenerational equity, starting with Intergenerational Impact Assessments.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Policy Tools · Foresight for Intergenerational Fairness Intelligence platform">
+<meta name="twitter:description" content="Policy tools and frameworks for intergenerational equity, starting with Intergenerational Impact Assessments.">
+<title>Policy Tools · Foresight for Intergenerational Fairness Intelligence platform</title>
+<style>
+:root,[data-theme="light"]{
+  color-scheme:light;
+  /* —— Gamma Bright (canonical) —— */
+  --color-primary:#3B68F6;
+  --color-secondary:#0858F7;
+  --color-tertiary:#002253;
+  --color-bg:#FFFFFF;
+  --color-bg-subtle:#F7F9FF;
+  --color-surface:#FFFFFF;
+  --color-on-surface:#002253;
+  --color-muted:#6B7280;
+  --color-border:#DFDFE0;
+  --color-overlay:#F7F9FF;
+  --color-error:#E5484D;
+  --color-success:#0D9B6A;
+  --color-warning:#D97706;
+  --color-info:#3B68F6;
+  --color-neutral:#FFFFFF;
+
+  --priority-high:var(--color-error);
+  --priority-strong:var(--color-warning);
+  --priority-monitor:var(--color-muted);
+  --priority-reviewed:var(--color-success);
+
+  /* —— Categorical ramp (non-semantic data series) ——
+     Brand-tuned blue→indigo→teal arc. Deliberately avoids the semantic
+     error/warning/success hues so neutral categories never read as good/bad.
+     Use for: country-ambition dimension bars, Three Horizons (ordinal), etc. */
+  --cat-1:#1F44C9;  /* deep blue   */
+  --cat-2:#3B68F6;  /* brand blue  */
+  --cat-3:#2E9BD6;  /* sky         */
+  --cat-4:#6457E8;  /* indigo      */
+  --cat-5:#0E9C97;  /* teal        */
+  --cat-6:#7B86C4;  /* slate-blue  */
+  --cat-7:#9D6FD0;  /* lavender    */
+  --cat-area:rgba(59,104,246,.12); /* translucent primary — sparkline/area fills */
+  --cat-area-line:rgba(59,104,246,.30);
+
+  --radius-sm:4px;
+  --radius-md:8px;
+  --radius-lg:12px;
+  --radius-xl:18px;
+  --radius-full:9999px;
+
+  --space-xs:6px;
+  --space-sm:14px;
+  --space-md:32px;
+  --space-lg:56px;
+  --space-gutter:24px;
+  --space-section:64px;
+
+  --container-max:1200px;
+
+  --font-display:"Instrument Sans","DM Sans","Segoe UI Variable","Segoe UI",system-ui,sans-serif;
+  --font-body:"DM Sans","Segoe UI Variable","Segoe UI",system-ui,sans-serif;
+
+  --shadow-sm:0 1px 3px rgba(0,34,83,.06);
+  --shadow-md:0 4px 16px rgba(0,34,83,.08);
+
+  /* —— Legacy aliases (pre-rebrand builders) —— */
+  --bg:var(--color-bg);
+  --bg2:var(--color-bg-subtle);
+  --panel:var(--color-surface);
+  --panel2:var(--color-bg-subtle);
+  --line:var(--color-border);
+  --line2:var(--color-border);
+  --text:var(--color-on-surface);
+  --muted:var(--color-muted);
+  --faint:#94A3B8;
+  --accent:var(--color-primary);
+  --accent2:var(--color-secondary);
+  --hi:var(--color-error);
+  --hi-bg:rgba(229,72,77,.12);
+  --strong:var(--color-warning);
+  --strong-bg:rgba(217,119,6,.12);
+  --useful:var(--color-success);
+  --useful-bg:rgba(13,155,106,.12);
+  --r:var(--radius-lg);
+
+  font-size:16px;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --color-tertiary:#E8EDF7;
+  --color-bg:#0B1220;
+  --color-bg-subtle:#121A2E;
+  --color-surface:#161F33;
+  --color-on-surface:#E8EDF7;
+  --color-muted:#94A3B8;
+  --color-border:#2A3548;
+  --color-overlay:#121A2E;
+  --color-neutral:#E8EDF7;
+  --faint:#64748B;
+  /* lift the darkest categorical hues so solid bars stay legible on dark bg */
+  --cat-1:#3A5BE0;
+  --cat-4:#7E72F0;
+  --cat-6:#9AA3D6;
+  --cat-7:#B492EC;
+  --cat-area:rgba(59,104,246,.20);
+  --cat-area-line:rgba(59,104,246,.40);
+  --hi-bg:rgba(229,72,77,.18);
+  --strong-bg:rgba(217,119,6,.18);
+  --useful-bg:rgba(13,155,106,.18);
+  --shadow-sm:0 1px 3px rgba(0,0,0,.28);
+  --shadow-md:0 4px 16px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--color-bg);
+  color:var(--color-on-surface);
+  font-family:var(--font-body);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--color-secondary);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
+  outline:2px solid var(--color-primary);
+  outline-offset:2px;
+}
+.mono{font-family:"Cascadia Code","Consolas",ui-monospace,monospace}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+:root{
+  --shell-sidebar-width:264px;
+  --shell-rail-width:76px;
+  --shell-nav-w:var(--shell-sidebar-width);
+  --shell-sticky-top:60px;
+}
+.skip-link{
+  position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus{
+  position:fixed;left:var(--space-gutter);top:12px;z-index:100;
+  width:auto;height:auto;padding:10px 16px;
+  background:var(--color-primary);color:#fff;
+  border-radius:var(--radius-md);font-weight:600;text-decoration:none;
+}
+
+/* ---- slim top bar ---- */
+.intel-shell-header{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb, var(--color-bg) 88%, transparent);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--color-border);
+}
+.intel-shell-header-inner{
+  position:relative;
+  min-height:var(--shell-sticky-top);margin:0 auto;
+  padding:9px var(--space-gutter);
+  display:flex;align-items:center;gap:14px;
+}
+.intel-shell-brand{
+  display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit;min-width:0;
+}
+.intel-shell-brand:hover{text-decoration:none}
+.intel-shell-mark{
+  width:34px;height:34px;border-radius:10px;
+  background:linear-gradient(150deg,var(--color-primary),var(--color-secondary));
+  color:#fff;display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-weight:700;font-size:1rem;flex-shrink:0;
+  box-shadow:0 2px 8px rgba(59,104,246,.28);
+}
+.intel-shell-brand-text{display:flex;flex-direction:column;gap:1px;min-width:0}
+.intel-shell-brand-name{
+  font-family:var(--font-display);font-weight:600;font-size:.95rem;
+  color:var(--color-on-surface);line-height:1.2;white-space:nowrap;
+}
+.intel-shell-brand-name span{color:var(--color-primary)}
+.intel-shell-subtitle{font-size:.76rem;color:var(--color-muted);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* GYC AI Labs logo: full lockup where there's room, mark in the rail / slim bars */
+.intel-brand-logo{width:150px;height:auto;display:block}
+.intel-brand-mark{width:38px;height:auto;display:none}
+
+/* ---- search + actions ---- */
+.intel-shell-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.intel-shell-search{position:relative;display:flex;align-items:center;width:min(100%,340px)}
+.intel-shell-search input{
+  width:100%;height:38px;border:1px solid var(--color-border);
+  border-radius:var(--radius-full);background:var(--color-surface);
+  color:var(--color-on-surface);font:inherit;font-size:.84rem;
+  padding:8px 14px 8px 36px;transition:border-color .15s,box-shadow .15s;
+}
+.intel-shell-search input::placeholder{color:var(--color-muted)}
+.intel-shell-search input:focus{
+  border-color:var(--color-primary);box-shadow:0 0 0 3px rgba(59,104,246,.14);outline:none;
+}
+.intel-shell-search svg{
+  position:absolute;left:13px;top:50%;transform:translateY(-50%);
+  width:15px;height:15px;stroke:var(--color-muted);pointer-events:none;
+}
+.intel-theme-toggle{
+  background:var(--color-surface);border:1px solid var(--color-border);
+  border-radius:var(--radius-full);width:38px;height:38px;padding:0;
+  font-size:1rem;line-height:1;cursor:pointer;color:var(--color-muted);
+  transition:background .15s,border-color .15s,color .15s;flex-shrink:0;
+}
+.intel-theme-toggle:hover{color:var(--color-on-surface);border-color:var(--color-primary)}
+
+/* ---- sidebar (mobile-first: horizontal strip) ---- */
+.intel-shell-sidebar{
+  background:var(--color-surface);border-bottom:1px solid var(--color-border);
+}
+.intel-shell-sidebar-head{display:none}
+.intel-shell-sidebar-inner{display:flex;flex-direction:column;gap:18px}
+.intel-shell-sidebar-title{
+  display:block;color:var(--color-muted);font-size:.66rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px 8px;
+}
+.intel-shell-group{min-width:0}
+.intel-shell-group-disclosure>summary{
+  min-height:40px;display:flex;align-items:center;gap:11px;padding:8px 13px;border-radius:var(--radius-md);
+  color:var(--color-muted);font-size:.86rem;font-weight:650;cursor:pointer;list-style:none;
+  transition:background .15s,color .15s
+}
+.intel-shell-group-disclosure>summary::-webkit-details-marker{display:none}
+.intel-shell-group-disclosure>summary:hover{background:var(--color-bg-subtle);color:var(--color-on-surface)}
+.intel-shell-group-disclosure>summary .nav-ico{width:19px;height:19px;flex:0 0 19px}
+.intel-shell-group-disclosure>summary .group-chevron{width:14px;height:14px;margin-left:auto;transition:transform .18s ease}
+.intel-shell-group-disclosure[open]>summary{color:var(--color-on-surface)}
+.intel-shell-group-disclosure[open]>summary .group-chevron{transform:rotate(180deg)}
+.intel-shell-group-disclosure>.intel-shell-nav{margin-top:4px;padding-left:8px}
+.intel-shell-nav{display:flex;gap:6px}
+.intel-shell-nav::-webkit-scrollbar{display:none}
+.intel-shell-nav{scrollbar-width:none}
+.intel-shell-nav a{
+  display:flex;align-items:center;gap:11px;position:relative;
+  padding:8px 13px;border-radius:var(--radius-md);
+  font-size:.86rem;font-weight:500;color:var(--color-muted);
+  border:1px solid transparent;text-decoration:none;white-space:nowrap;
+  transition:background .15s,color .15s,border-color .15s,box-shadow .15s;
+}
+.intel-shell-nav a .nav-ico{width:19px;height:19px;flex:0 0 19px;opacity:.9}
+.intel-shell-nav a:hover{
+  color:var(--color-on-surface);background:var(--color-bg-subtle);text-decoration:none;
+}
+.intel-shell-nav a.active{
+  color:var(--color-primary);background:color-mix(in srgb,var(--color-primary) 10%,var(--color-surface));
+  border-color:color-mix(in srgb,var(--color-primary) 20%,var(--color-border));
+  box-shadow:inset 3px 0 0 var(--color-primary);font-weight:700;
+}
+.intel-shell-nav a.active .nav-ico{opacity:1}
+.intel-shell-nav a .nav-badge{
+  margin-left:auto;min-width:1.3em;padding:1px 6px;text-align:center;
+  border-radius:var(--radius-full);font-size:.68rem;font-weight:700;line-height:1.35;
+  background:var(--color-error);color:#fff;
+}
+.intel-shell-nav a.active .nav-badge{background:var(--color-primary);color:#fff}
+.intel-nav-toggle{
+  display:none;align-items:center;justify-content:center;
+  width:32px;height:32px;flex:0 0 32px;padding:0;cursor:pointer;
+  background:transparent;border:1px solid transparent;border-radius:var(--radius-md);
+  color:var(--color-muted);transition:background .15s,color .15s,border-color .15s;
+}
+.intel-nav-toggle:hover{color:var(--color-on-surface);background:var(--color-bg-subtle);border-color:var(--color-border)}
+.intel-nav-toggle svg{width:18px;height:18px}
+.intel-mobile-menu,.intel-mobile-close{
+  display:none;align-items:center;justify-content:center;
+  width:38px;height:38px;flex:0 0 38px;padding:0;cursor:pointer;
+  background:var(--color-surface);border:1px solid var(--color-border);
+  border-radius:var(--radius-md);color:var(--color-on-surface);
+  transition:border-color .15s,background .15s;
+}
+.intel-mobile-menu:hover,.intel-mobile-close:hover{border-color:var(--color-primary)}
+.intel-mobile-menu svg,.intel-mobile-close svg{width:20px;height:20px}
+.intel-shell-scrim{display:none}
+.intel-shell-sidebar-note{
+  color:var(--color-muted);font-size:.73rem;line-height:1.45;
+}
+.intel-shell-main{max-width:var(--container-max);margin:0 auto;padding:0 var(--space-gutter) 80px}
+.intel-shell-footer{
+  max-width:var(--container-max);margin:0 auto;
+  padding:24px var(--space-gutter) 48px;
+  border-top:1px solid var(--color-border);
+  color:var(--color-muted);font-size:.8rem;
+  display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;
+}
+.intel-shell-footer a{color:var(--color-secondary);font-weight:500}
+
+/* ---- desktop: fixed navigator, collapsible ---- */
+@media(min-width:960px){
+  body{padding-left:var(--shell-nav-w);transition:padding-left .22s ease}
+  .intel-shell-main{max-width:none;padding-left:max(var(--space-gutter),calc((100vw - var(--shell-nav-w) - var(--container-max))/2 + var(--space-gutter)));padding-right:max(var(--space-gutter),calc((100vw - var(--shell-nav-w) - var(--container-max))/2 + var(--space-gutter)))}
+  .intel-shell-footer{max-width:none}
+  .intel-shell-sidebar{
+    position:fixed;inset:0 auto 0 0;z-index:70;width:var(--shell-nav-w);
+    display:flex;flex-direction:column;padding:0;overflow:hidden;
+    border-right:1px solid var(--color-border);border-bottom:none;
+    background:linear-gradient(180deg,var(--color-surface),var(--color-bg-subtle));
+    transition:width .22s ease;
+  }
+  .intel-shell-sidebar-head{
+    display:flex;align-items:flex-start;gap:8px;
+    padding:16px 14px 10px;min-height:var(--shell-sticky-top);
+  }
+  .intel-shell-sidebar-head .intel-shell-brand{flex:1;min-width:0}
+  .intel-shell-sidebar-head .intel-nav-toggle{display:flex;margin-left:auto;margin-top:2px}
+  .intel-shell-sidebar-inner{
+    flex:1;overflow-y:auto;overflow-x:hidden;
+    padding:8px 12px 14px;gap:18px;
+  }
+  .intel-shell-nav{flex-direction:column;gap:3px}
+  .intel-shell-nav a{width:100%;min-height:38px}
+  .intel-shell-group + .intel-shell-group{
+    border-top:1px solid color-mix(in srgb,var(--color-border) 72%,transparent);
+    padding-top:14px;
+  }
+  .intel-shell-sidebar-foot{
+    border-top:1px solid var(--color-border);padding:12px 14px;
+    display:flex;flex-direction:column;gap:12px;
+  }
+  .intel-shell-sidebar-foot .intel-shell-sidebar-note{margin:0}
+  /* header on desktop: brand lives in sidebar; centre the global search, pin actions right */
+  .intel-shell-header .intel-shell-brand{display:none}
+  .intel-shell-header-inner{justify-content:center}
+  .intel-shell-search{width:min(560px,52vw)}
+  .intel-shell-actions{position:absolute;right:var(--space-gutter);top:50%;transform:translateY(-50%);margin:0}
+
+  /* collapsed rail */
+  html[data-nav="collapsed"]{--shell-nav-w:var(--shell-rail-width)}
+  html[data-nav="collapsed"] .intel-shell-sidebar-head{flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:14px 0 12px}
+  html[data-nav="collapsed"] .intel-shell-sidebar-head .intel-shell-brand{flex:0}
+  html[data-nav="collapsed"] .intel-brand-logo{display:none}
+  html[data-nav="collapsed"] .intel-brand-mark{display:block;width:40px}
+  html[data-nav="collapsed"] .intel-shell-sidebar-head .intel-nav-toggle{margin:0}
+  html[data-nav="collapsed"] .intel-shell-sidebar-inner{padding:8px 12px 14px}
+  html[data-nav="collapsed"] .intel-shell-sidebar-title{opacity:0;height:0;margin:0;overflow:hidden}
+  html[data-nav="collapsed"] .intel-shell-group-disclosure>summary{justify-content:center;padding:9px 0}
+  html[data-nav="collapsed"] .intel-shell-group-disclosure>summary .group-label,
+  html[data-nav="collapsed"] .intel-shell-group-disclosure>summary .group-chevron{display:none}
+  html[data-nav="collapsed"] .intel-shell-group-disclosure>.intel-shell-nav{padding-left:0}
+  html[data-nav="collapsed"] .intel-shell-group + .intel-shell-group{border-top:1px solid var(--color-border);padding-top:14px}
+  html[data-nav="collapsed"] .intel-shell-nav a{justify-content:center;padding:9px 0;gap:0}
+  html[data-nav="collapsed"] .intel-shell-nav a .nav-txt{display:none}
+  html[data-nav="collapsed"] .intel-shell-nav a .nav-badge{
+    position:absolute;top:3px;right:8px;margin:0;min-width:0;width:7px;height:7px;padding:0;
+    font-size:0;line-height:0;border-radius:50%;
+  }
+  html[data-nav="collapsed"] .intel-shell-sidebar-foot{padding:12px 8px;align-items:center}
+  html[data-nav="collapsed"] .intel-shell-sidebar-note{display:none}
+  /* tooltips on the rail */
+  html[data-nav="collapsed"] .intel-shell-nav a::after{
+    content:attr(data-label);
+    position:absolute;left:calc(100% + 12px);top:50%;transform:translateY(-50%) scale(.96);
+    transform-origin:left center;
+    background:var(--color-on-surface);color:var(--color-surface);
+    padding:5px 10px;border-radius:7px;font-size:.76rem;font-weight:600;white-space:nowrap;
+    opacity:0;pointer-events:none;transition:opacity .12s,transform .12s;
+    box-shadow:var(--shadow-md);z-index:90;
+  }
+  html[data-nav="collapsed"] .intel-shell-nav a:hover::after,
+  html[data-nav="collapsed"] .intel-shell-nav a:focus-visible::after{opacity:1;transform:translateY(-50%) scale(1)}
+}
+
+/* ---- narrow screens: off-canvas drawer (hamburger) ---- */
+@media(max-width:959px){
+  :root{--shell-sticky-top:0px}
+  .intel-shell-header-inner{flex-wrap:wrap;padding:8px var(--space-gutter);gap:10px}
+  /* slim header: hamburger + mark + search; full lockup lives inside the drawer */
+  .intel-shell-header .intel-brand-logo{display:none}
+  .intel-shell-header .intel-brand-mark{display:block;width:32px}
+  .intel-mobile-menu{display:flex;order:0}
+  .intel-shell-header .intel-shell-brand{order:1}
+  .intel-shell-actions{order:2}
+  .intel-shell-search{order:3;width:100%;max-width:none;margin-left:0}
+
+  /* sidebar slides in from the left as a drawer, hidden by default */
+  .intel-shell-sidebar{
+    position:fixed;inset:0 auto 0 0;z-index:85;
+    width:min(322px,86vw);max-width:none;
+    display:flex;flex-direction:column;padding:0;overflow:hidden;
+    border-right:1px solid var(--color-border);border-bottom:none;
+    background:var(--color-surface);
+    transform:translateX(-100%);transition:transform .24s ease;
+  }
+  html[data-mobile-nav="open"] .intel-shell-sidebar{transform:translateX(0);box-shadow:var(--shadow-lg)}
+  .intel-shell-sidebar-head{
+    display:flex;align-items:center;gap:10px;
+    padding:13px 15px;min-height:56px;border-bottom:1px solid var(--color-border);
+  }
+  .intel-shell-sidebar-head .intel-shell-brand{flex:1;min-width:0}
+  .intel-shell-sidebar-head .intel-brand-logo{display:block;width:132px}
+  .intel-shell-sidebar-head .intel-brand-mark{display:none}
+  .intel-nav-toggle{display:none}
+  .intel-mobile-close{display:flex;margin-left:auto}
+  .intel-shell-sidebar-inner{
+    flex:1;overflow-y:auto;overflow-x:hidden;
+    max-width:none;margin:0;padding:12px 12px 20px;gap:18px;
+  }
+  .intel-shell-sidebar-title{display:block;margin:0 0 7px 6px;padding:0;font-size:.64rem}
+  .intel-shell-group{display:block;min-width:0}
+  .intel-shell-group + .intel-shell-group{
+    border-top:1px solid var(--color-border);padding-top:14px;margin-top:2px;
+  }
+  .intel-shell-nav{flex-direction:column;gap:3px;width:100%;overflow:visible}
+  .intel-shell-nav a{width:100%;flex:0 0 auto;padding:10px 13px;font-size:.9rem}
+  .intel-shell-nav a .nav-badge{margin-left:auto}
+  .intel-shell-sidebar-foot{
+    display:flex;flex-direction:column;gap:10px;
+    border-top:1px solid var(--color-border);padding:12px 15px;
+  }
+
+  /* backdrop */
+  .intel-shell-scrim{
+    display:block;position:fixed;inset:0;z-index:84;
+    background:rgba(0,0,0,.45);opacity:0;visibility:hidden;
+    transition:opacity .24s,visibility .24s;
+  }
+  html[data-mobile-nav="open"] .intel-shell-scrim{opacity:1;visibility:visible}
+  html[data-mobile-nav="open"] body{overflow:hidden}
+}
+
+.pt-wrap{max-width:1080px;margin:0 auto;padding:28px 0 64px}
+.pt-kicker{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--color-primary);margin:0 0 8px}
+.pt-wrap h1{font-family:var(--font-display);font-size:1.85rem;line-height:1.15;margin:0 0 12px;color:var(--color-tertiary)}
+.pt-lead{font-size:1.05rem;line-height:1.65;color:var(--color-muted);max-width:68ch;margin:0 0 28px}
+.pt-views{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px}
+.pt-views a{
+  border:1px solid var(--color-border);background:var(--color-surface);
+  color:var(--color-on-surface);border-radius:999px;padding:8px 14px;font-size:.84rem;font-weight:600;
+  text-decoration:none;min-height:40px;display:inline-flex;align-items:center;
+}
+.pt-views a:hover{border-color:var(--color-primary);text-decoration:none}
+.pt-views .is-on{background:color-mix(in srgb,var(--color-primary) 12%,var(--color-surface));border-color:var(--color-primary);color:var(--color-primary)}
+.pt-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-bottom:36px}
+.pt-card{
+  display:block;background:var(--color-surface);border:1px solid var(--color-border);
+  border-radius:16px;padding:20px 22px;color:inherit;text-decoration:none;
+  border-top:3px solid var(--card-accent,var(--color-primary));
+}
+.pt-card:hover{border-color:var(--card-accent,var(--color-primary));text-decoration:none;transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.pt-card .meta{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--card-accent,var(--color-primary));margin-bottom:6px}
+.pt-card h2{font-size:1.08rem;margin:0 0 8px}
+.pt-card p{margin:0;color:var(--color-muted);font-size:.92rem;line-height:1.55}
+.pt-card.is-planned{opacity:.78;border-top-color:var(--color-muted)}
+.pt-card.is-planned:hover{transform:none;box-shadow:none}
+.pt-def{
+  display:grid;gap:18px;grid-template-columns:1.4fr .9fr;margin:0 0 28px;
+  background:var(--color-bg-subtle);border:1px solid var(--color-border);border-radius:16px;padding:22px 24px;
+}
+.pt-def p{margin:0 0 10px;line-height:1.65}
+.pt-def ul{margin:0;padding-left:1.1em;color:var(--color-muted);font-size:.92rem;line-height:1.55}
+.pt-grade{border-left:3px solid var(--color-warning);padding-left:14px;font-size:.95rem;line-height:1.55}
+.pt-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 28px}
+.pt-stat{background:var(--color-surface);border:1px solid var(--color-border);border-radius:14px;padding:16px 18px}
+.pt-stat .n{font-family:var(--font-display);font-size:1.7rem;font-weight:700;color:var(--color-tertiary);line-height:1}
+.pt-stat .l{margin-top:8px;font-size:.82rem;font-weight:700}
+.pt-stat .h{margin-top:6px;font-size:.78rem;color:var(--color-muted);line-height:1.45}
+.pt-sec{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--color-muted);margin:28px 0 10px}
+.pt-filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.pt-filters button{
+  appearance:none;border:1px solid var(--color-border);background:var(--color-bg-subtle);
+  border-radius:999px;padding:6px 12px;font-size:.78rem;font-weight:600;cursor:pointer;min-height:36px;color:inherit;
+}
+.pt-filters button.is-on{background:var(--color-tertiary);color:#fff;border-color:var(--color-tertiary)}
+.pt-table-wrap{overflow:auto;border:1px solid var(--color-border);border-radius:14px;margin-bottom:22px}
+table.pt-table{width:100%;border-collapse:collapse;font-size:.84rem}
+.pt-table th{text-align:left;padding:10px 12px;background:var(--color-bg-subtle);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--color-muted)}
+.pt-table td{padding:11px 12px;border-top:1px solid var(--color-border);vertical-align:top}
+.pt-table tr[data-open]{cursor:pointer}
+.pt-table tr:hover td{background:color-mix(in srgb,var(--color-primary) 6%,transparent)}
+.pt-pill{display:inline-block;border-radius:999px;padding:2px 8px;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.pt-pill.enacted{background:color-mix(in srgb,var(--color-success) 16%,transparent);color:var(--color-success)}
+.pt-pill.cousin{background:color-mix(in srgb,var(--color-primary) 14%,transparent);color:var(--color-primary)}
+.pt-pill.stall{background:color-mix(in srgb,var(--color-error) 14%,transparent);color:var(--color-error)}
+.pt-pill.amendment{background:color-mix(in srgb,var(--color-success) 16%,transparent);color:var(--color-success)}
+.pt-pill.skip{background:color-mix(in srgb,var(--color-warning) 18%,transparent);color:var(--color-warning)}
+.pt-pill.none,.pt-pill.unknown{background:var(--color-bg-subtle);color:var(--color-muted)}
+.pt-detail{
+  display:none;margin:0 0 28px;padding:18px 20px;border:1px solid var(--color-border);
+  border-radius:14px;background:var(--color-surface);border-left:4px solid var(--color-primary);
+}
+.pt-detail.is-open{display:block}
+.pt-detail h3{margin:0 0 8px;font-size:1.05rem}
+.pt-kv{display:grid;grid-template-columns:140px 1fr;gap:6px 12px;font-size:.9rem;line-height:1.5}
+.pt-kv dt{color:var(--color-muted);font-weight:600}
+.pt-dossiers{display:grid;gap:12px}
+.pt-dossier{border:1px solid var(--color-border);border-radius:14px;background:var(--color-surface);overflow:hidden}
+.pt-dossier summary{
+  list-style:none;cursor:pointer;padding:14px 18px;font-weight:700;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;
+}
+.pt-dossier summary::-webkit-details-marker{display:none}
+.pt-dossier .body{padding:0 18px 16px;color:var(--color-muted);font-size:.92rem;line-height:1.6}
+.pt-layers{margin:10px 0 0;padding:0;list-style:none}
+.pt-layers li{padding:8px 0;border-top:1px solid var(--color-border)}
+.pt-layers strong{color:var(--color-on-surface)}
+.pt-bite{display:grid;gap:10px;margin-bottom:8px}
+.pt-bite article{border:1px solid var(--color-border);border-radius:12px;padding:12px 14px}
+.pt-bite h3{margin:0 0 4px;font-size:.95rem}
+.pt-watch{padding:0;margin:0;display:grid;gap:8px}
+.pt-watch li{list-style:none;padding:12px 14px;border:1px dashed var(--color-border);border-radius:12px}
+@media(max-width:820px){
+  .pt-def,.pt-stats{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .pt-def,.pt-stats{grid-template-columns:1fr}
+  .pt-kv{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="intel-shell-header" data-intel-shell="v9">
+  <div class="intel-shell-header-inner">
+    <button type="button" class="intel-mobile-menu" id="intel-mobile-menu" aria-label="Open navigation" aria-expanded="false" aria-controls="intel-shell-sidebar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+    <a class="intel-shell-brand" href="index.html" aria-label="Foresight for Intergenerational Fairness Intelligence platform — home">
+      <img class="intel-brand-logo" src="assets/gyc-ai-labs-lockup.webp" alt="Foresight for Intergenerational Fairness Intelligence platform" width="160" height="152" decoding="async">
+      <img class="intel-brand-mark" src="assets/gyc-ai-labs-mark.webp" alt="Foresight for Intergenerational Fairness Intelligence platform" aria-hidden="true" width="40" height="31" decoding="async">
+    </a>
+    <form class="intel-shell-search" action="briefing.html" method="get" role="search" onsubmit="event.preventDefault();var q=this.querySelector('input').value.trim();window.location.href='briefing.html#tab=all&q='+encodeURIComponent(q);">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" name="q" placeholder="Search platform" aria-label="Search platform">
+    </form>
+    <div class="intel-shell-actions">
+      <button type="button" class="intel-theme-toggle" id="intel-theme-toggle" aria-label="Switch to dark mode">&#9790;</button>
+    </div>
+  </div>
+</header>
+<div class="intel-shell-scrim" id="intel-shell-scrim"></div>
+<aside class="intel-shell-sidebar" id="intel-shell-sidebar" aria-label="Platform navigation">
+  <div class="intel-shell-sidebar-head">
+    <a class="intel-shell-brand" href="index.html" aria-label="Foresight for Intergenerational Fairness Intelligence platform — home">
+      <img class="intel-brand-logo" src="assets/gyc-ai-labs-lockup.webp" alt="Foresight for Intergenerational Fairness Intelligence platform" width="160" height="152" decoding="async">
+      <img class="intel-brand-mark" src="assets/gyc-ai-labs-mark.webp" alt="Foresight for Intergenerational Fairness Intelligence platform" aria-hidden="true" width="40" height="31" decoding="async">
+    </a>
+    <button type="button" class="intel-nav-toggle" id="intel-nav-toggle" aria-label="Collapse navigation" aria-expanded="true" title="Collapse navigation">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M9.5 4.5v15"/><path d="m15.5 9.5-2.5 2.5 2.5 2.5"/></svg>
+  </button>
+    <button type="button" class="intel-mobile-close" id="intel-mobile-close" aria-label="Close navigation">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+  </button>
+  </div>
+  <div class="intel-shell-sidebar-inner">
+    <div class="intel-shell-group"><nav class="intel-shell-nav" aria-label="Read"><a class="" href="index.html" data-nav="landing" data-label="Overview" title="Overview"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.3"/><rect x="13" y="4" width="7" height="4.5" rx="1.3"/><rect x="13" y="11" width="7" height="9" rx="1.3"/><rect x="4" y="14" width="7" height="6" rx="1.3"/></svg><span class="nav-txt">Overview</span></a><a class="" href="briefing.html#tab=brief" data-view="brief" data-label="Weekly briefing" title="Weekly briefing"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5h14v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2Z"/><path d="M8.5 9h7M8.5 12.5h7M8.5 16h4"/></svg><span class="nav-txt">Weekly briefing</span></a></nav></div><details class="intel-shell-group intel-shell-group-disclosure">
+        <summary><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5.2"/><circle cx="12" cy="12" r="2"/><path d="M12 3.5v17M3.5 12h17"/></svg><span class="group-label">Explore</span><svg class="group-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+        <nav class="intel-shell-nav" aria-label="Explore"><a class="" href="briefing.html#tab=all" data-view="all" data-label="Signals" title="Signals"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 6.5h11M8.5 12h11M8.5 17.5h11"/><circle cx="4.5" cy="6.5" r="1.1"/><circle cx="4.5" cy="12" r="1.1"/><circle cx="4.5" cy="17.5" r="1.1"/></svg><span class="nav-txt">Signals</span></a><a class="" href="briefing.html#tab=trends" data-view="trends" data-label="Trends" title="Trends"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 16.5 9 11l4 4 7.5-7.5"/><path d="M20.5 7.5V12h-4.5"/></svg><span class="nav-txt">Trends</span></a><a class="" href="briefing.html#tab=horizons" data-view="horizons" data-label="Horizons" title="Horizons"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 8.5 4.6-8.5 4.6-8.5-4.6Z"/><path d="m3.5 12.6 8.5 4.6 8.5-4.6"/></svg><span class="nav-txt">Horizons</span></a><a class="" href="briefing.html#tab=radar" data-view="radar" data-label="IE radar" title="IE radar"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5.2"/><circle cx="12" cy="12" r="2"/><path d="M12 3.5v17M3.5 12h17"/></svg><span class="nav-txt">IE radar</span></a><a class="" href="briefing.html#tab=threads" data-view="threads" data-label="Threads" title="Threads"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="m8.2 11 7.6-4M8.2 13l7.6 4"/></svg><span class="nav-txt">Threads</span></a><a class="" href="briefing.html#tab=wheels" data-view="wheels" data-label="Futures wheels" title="Futures wheels"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.2"/><path d="M12 4.5v3.2M12 16.3v3.2M4.5 12h3.2M16.3 12h3.2M6.8 6.8l2.3 2.3M14.9 14.9l2.3 2.3M17.2 6.8l-2.3 2.3M9.1 14.9l-2.3 2.3"/></svg><span class="nav-txt">Futures wheels</span></a><a class="" href="briefing.html#tab=map" data-view="map" data-label="Globe" title="Globe"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 2.6 14.6 0 17M12 3.5c-2.6 2.4-2.6 14.6 0 17"/></svg><span class="nav-txt">Globe</span></a><a class="" href="briefing.html#tab=matrix" data-view="matrix" data-label="Triage radar" title="Triage radar"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg><span class="nav-txt">Triage radar</span></a><a class="" href="graph.html" data-nav="graph" data-label="Knowledge graph" title="Knowledge graph"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.5" cy="7" r="2.2"/><circle cx="17.5" cy="8" r="2.2"/><circle cx="8" cy="17" r="2.2"/><circle cx="16.5" cy="16.5" r="2.2"/><path d="m8.4 8.2 6.8.6M8.2 15.2 16 10M9.6 16.4 15 15.2"/></svg><span class="nav-txt">Knowledge graph</span></a></nav>
+      </details><details class="intel-shell-group intel-shell-group-disclosure" open>
+        <summary><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.2"/><rect x="13" y="4" width="7" height="7" rx="1.2"/><path d="M7.5 16.5h9M12 13.5v6"/></svg><span class="group-label">Applications</span><svg class="group-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+        <nav class="intel-shell-nav" aria-label="Applications"><a class="" href="country-ambition.html" data-nav="countries" data-label="Country index" title="Country index"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 2.6 14.6 0 17M12 3.5c-2.6 2.4-2.6 14.6 0 17"/></svg><span class="nav-txt">Country index</span></a><a class="active" href="policy-tools.html" data-nav="policy-tools" data-label="Policy tools" title="Policy tools" aria-current="page"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.2"/><rect x="13" y="4" width="7" height="7" rx="1.2"/><path d="M7.5 16.5h9M12 13.5v6"/></svg><span class="nav-txt">Policy tools</span></a><a class="" href="policy-tools.html#family=iia" data-nav="iia" data-label="IIAs" title="IIAs"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5h10v3.5H7Z"/><path d="M8.5 8v12M15.5 8v12"/><path d="M8.5 20h7"/></svg><span class="nav-txt">IIAs</span></a><a class="" href="pact.html" data-nav="pact" data-label="Pact tracker" title="Pact tracker"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4.5h9l3 3v12H6Z"/><path d="M15 4.5V8h3"/><path d="M8.5 11h7M8.5 14h7M8.5 17h4"/><path d="m5 8-1.5 1.5L5 11"/></svg><span class="nav-txt">Pact tracker</span></a><a class="" href="briefing.html#tab=pathway" data-view="pathway" data-label="From here to 2028" title="From here to 2028"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 9.5h16M8.5 3v4M15.5 3v4"/><path d="M8 13h3.5M8 16.5h8"/></svg><span class="nav-txt">From here to 2028</span></a><a class="" href="briefing.html#tab=opportunities" data-view="opportunities" data-label="Opportunities" title="Opportunities"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M9.2 10.2c.8-1 2.1-1.4 2.8-1.4 1.6 0 2.6.8 2.6 2s-1 1.9-2.7 2.3c-1.8.4-2.7 1-2.7 2.2 0 1.1 1 2 2.8 2 1.2 0 2.2-.4 2.9-1.2"/></svg><span class="nav-txt">Opportunities</span></a><a class="" href="finance.html" data-nav="finance" data-label="Finance" title="Finance"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V4.5M4 19.5h16"/><path d="M8 16.5v-4M12 16.5V8M16 16.5v-6"/></svg><span class="nav-txt">Finance</span></a></nav>
+      </details><details class="intel-shell-group intel-shell-group-disclosure">
+        <summary><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h6.5L18 8v12.5H7Z"/><path d="M13.5 3.5V8H18M9.5 12.5h5M9.5 15.5h5"/></svg><span class="group-label">Library</span><svg class="group-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+        <nav class="intel-shell-nav" aria-label="Library"><a class="" href="papers.html" data-nav="papers" data-label="Papers" title="Papers"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h6.5L18 8v12.5H7Z"/><path d="M13.5 3.5V8H18M9.5 12.5h5M9.5 15.5h5"/></svg><span class="nav-txt">Papers</span></a><a class="" href="insights.html" data-nav="insights" data-label="Insights" title="Insights"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 5.5h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-3 2v-4H6a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2Z"/><path d="M8.5 9.5h7M8.5 12.5h5"/></svg><span class="nav-txt">Insights</span></a><a class="" href="organizations.html" data-nav="organizations" data-label="Governance map" title="Governance map"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V8.5a2 2 0 0 1 2-2h3.5"/><path d="M5 19.5h14"/><path d="M9 6.5V4.5a2 2 0 0 1 2-2h6.5L20 6v13.5H9"/><path d="M14.5 2.5V6H20"/><circle cx="9" cy="13" r="1.3"/><circle cx="15" cy="13" r="1.3"/></svg><span class="nav-txt">Governance map</span></a><a class="" href="conferences.html" data-nav="conferences" data-label="Conferences" title="Conferences"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 9.5h16M8.5 3v4M15.5 3v4"/></svg><span class="nav-txt">Conferences</span></a></nav>
+      </details><details class="intel-shell-group intel-shell-group-disclosure">
+        <summary><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg><span class="group-label">About &amp; method</span><svg class="group-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+        <nav class="intel-shell-nav" aria-label="About and method"><a class="" href="index.html#method" data-nav="methodology" data-label="How it works" title="How it works"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.3"/><rect x="13" y="4" width="7" height="4.5" rx="1.3"/><rect x="13" y="11" width="7" height="9" rx="1.3"/><rect x="4" y="14" width="7" height="6" rx="1.3"/></svg><span class="nav-txt">How it works</span></a><a class="" href="briefing.html#tab=track" data-view="track" data-label="Track record" title="Track record"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg><span class="nav-txt">Track record</span></a><a class="" href="donate.html" data-nav="donate" data-label="Support" title="Support"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.5 15 3.5 8.9A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8.5 1.9C20.5 15 12 20.5 12 20.5Z"/></svg><span class="nav-txt">Support</span></a></nav>
+      </details><details class="intel-shell-group intel-shell-group-disclosure">
+        <summary><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m8.4 12 2.4 2.4 4.8-5.2"/></svg><span class="group-label">Analyst tools</span><svg class="group-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+        <nav class="intel-shell-nav" aria-label="Analyst tools"><a class="" href="briefing.html#tab=watchlist" data-view="watchlist" data-label="Priority watchlist" title="Priority watchlist"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v16l-5-3.6L7 20Z"/></svg><span class="nav-txt">Priority watchlist</span></a><a class="" href="review.html" data-nav="review" data-label="Review console" title="Review console"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m8.4 12 2.4 2.4 4.8-5.2"/></svg><span class="nav-txt">Review console</span><span class="nav-badge" aria-label="16 pending reviews">16</span></a><a class="" href="briefing.html#tab=ask" data-view="ask" data-label="Ask the graph" title="Ask the graph"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5.5h14a1 1 0 0 1 1 1V15a1 1 0 0 1-1 1H9.5L5 19.5V16H5a0 0 0 0 1 0 0Z"/><path d="M9 9.5h6M9 12.5h4"/></svg><span class="nav-txt">Ask the graph</span></a></nav>
+      </details>
+  </div>
+  <div class="intel-shell-sidebar-foot">
+    <p class="intel-shell-sidebar-note">Signal intelligence for youth governance and intergenerational equity.</p>
+  </div>
+</aside>
+<main class="intel-shell-main" id="main-content">
+<div class="pt-wrap">
+  <nav class="pt-views" aria-label="Policy tool families">
+    <a class="is-on" data-pt-view="hub" href="policy-tools.html">Overview</a>
+    <a data-pt-view="iia" href="policy-tools.html#family=iia">IIAs</a>
+  </nav>
+
+  <section id="view-hub">
+    <p class="pt-kicker">Policy tools and frameworks</p>
+    <h1>How governments are supposed to look before they leap</h1>
+    <p class="pt-lead">This section inventories the machinery — impact assessments, commissioners, long-term budgets — rather than the news. The first live family is Intergenerational Impact Assessments. Completing a form is not the same as changing a decision.</p>
+    <div class="pt-grid"><a class="pt-card" href="#family=iia" data-family="iia" style="--card-accent:var(--color-primary)"><div class="meta">Open subsection</div><h2>Intergenerational Impact Assessments</h2><p>A statutory or administrative tool that forces assessment of effects on young people, future cohorts, or the unborn before a law, budget, plan, or project is adopted. Strong inventory, weak bite: almost no instrument can stall a dossier.</p></a><div class="pt-card is-planned" style="--card-accent:var(--color-muted)"><div class="meta">Not built yet</div><h2>Future-generations institutions</h2><p>Wales Future Generations Commissioner, Hungary Deputy Commissioner, Malta FG commissioner (advisory). Not an IIA page — institutions without a pre-decision test. Build next if this family earns a scan.</p></div><div class="pt-card is-planned" style="--card-accent:var(--color-muted)"><div class="meta">Not built yet</div><h2>Long-term fiscal and wellbeing budgets</h2><p>Australian Intergenerational Report, Ireland Future Forty, NZ wellbeing-budget duties (partly repealed 2026). Cousins of IIA, not the same tool.</p></div></div>
+  </section>
+
+  <section id="view-iia" hidden>
+    <p class="pt-kicker">Subsection · IIAs</p>
+    <h1>Intergenerational Impact Assessments</h1>
+    <div class="pt-def">
+      <div>
+        <p>An Intergenerational Impact Assessment is a procedure, not a slogan: someone has to assess effects on young people, future cohorts, or the unborn before a law, budget, plan, or project is adopted, with some legal or administrative force.</p>
+        <p class="pt-grade">Completing an IA is common. Changing a decision is rare. Flanders JoKER is the only instrument that can stall a dossier — and only when the report is missing.</p>
+      </div>
+      <div>
+        <p><strong>Not an IIA</strong></p>
+        <ul><li>A constitutional future-generations clause by itself (Germany Art. 20a, Italy Art. 9)</li><li>A commissioner or ombuds without a pre-decision annex</li><li>A 40-year fiscal outlook or intergenerational report</li><li>A completed form that left the decision unchanged</li></ul>
+      </div>
+    </div>
+    <div class="pt-stats">
+      <div class="pt-stat"><div class="n">2</div><div class="l">National IIAs enacted</div><div class="h">Italy VIG (statutory, DPCMs unpublished) · Netherlands generatietoets (administrative, MN 2026 skip)</div></div><div class="pt-stat"><div class="n">1</div><div class="l">Can stall a dossier</div><div class="h">Flanders JoKER, Council of State 69.100/1 (2021). Completing JoKER does not rewrite policy.</div></div><div class="pt-stat"><div class="n">1</div><div class="l">Documented amendment</div><div class="h">Dutch Kinderrechtentoets on Wet reikwijdte Jeugdwet consultation — two safeguards, not yet a statute.</div></div><div class="pt-stat"><div class="n">0</div><div class="l">National IIA outside Europe</div><div class="h">Africa/MENA, APAC, and the Americas: zero enacted national IIA in the 94-jurisdiction scan.</div></div>
+    </div>
+
+    <p class="pt-sec">Instrument family</p>
+    <div class="pt-filters" id="pt-filters">
+      <button type="button" class="is-on" data-filter="all">All</button>
+      <button type="button" data-filter="enacted">Enacted IIA</button>
+      <button type="button" data-filter="cousin">Cousins</button>
+      <button type="button" data-filter="stall">Can stall</button>
+      <button type="button" data-filter="skip">Skip</button>
+      <button type="button" data-filter="amendment">Amendment</button>
+    </div>
+    <div class="pt-table-wrap">
+      <table class="pt-table" id="pt-table">
+        <thead><tr><th>CC</th><th>Instrument</th><th>Kind</th><th>Bite</th><th>Who can block</th><th>Who is assessed</th></tr></thead>
+        <tbody><tr data-open="it-air-vig" data-kind="enacted" data-bite="unknown" data-block="unknown">
+      <td><strong>IT</strong></td>
+      <td>AIR-VIG (Law 167/2025)</td>
+      <td><span class="pt-pill enacted">enacted</span></td>
+      <td><span class="pt-pill unknown">unknown</span></td>
+      <td>unknown</td>
+      <td>young people and future generations</td>
+    </tr><tr data-open="nl-beleidskompas-generatietoets" data-kind="enacted" data-bite="skip" data-block="must consider">
+      <td><strong>NL</strong></td>
+      <td>Beleidskompas generatietoets</td>
+      <td><span class="pt-pill enacted">enacted</span></td>
+      <td><span class="pt-pill skip">skip</span></td>
+      <td>must consider</td>
+      <td>current and future generations (NPCE used living age bands, not the unborn as a legal person)</td>
+    </tr><tr data-open="nl-kinderrechtentoets" data-kind="cousin" data-bite="amendment" data-block="none">
+      <td><strong>NL</strong></td>
+      <td>Kinderrechtentoets (Kinderombudsman CRIA)</td>
+      <td><span class="pt-pill cousin">cousin</span></td>
+      <td><span class="pt-pill amendment">amendment</span></td>
+      <td>none</td>
+      <td>children as CRC rights-holders</td>
+    </tr><tr data-open="de-jugend-check" data-kind="cousin" data-bite="skip" data-block="none">
+      <td><strong>DE</strong></td>
+      <td>KomJC Jugend-Check</td>
+      <td><span class="pt-pill cousin">cousin</span></td>
+      <td><span class="pt-pill skip">skip</span></td>
+      <td>none</td>
+      <td>ages 12–27</td>
+    </tr><tr data-open="be-joker" data-kind="cousin" data-bite="stall" data-block="can stall dossier">
+      <td><strong>BE</strong></td>
+      <td>Flanders JoKER</td>
+      <td><span class="pt-pill cousin">cousin</span></td>
+      <td><span class="pt-pill stall">stall</span></td>
+      <td>can stall dossier</td>
+      <td>persons through age 30 (from 13 Mar 2026)</td>
+    </tr><tr data-open="at-wfa-jugend-check" data-kind="cousin" data-bite="skip" data-block="must consider">
+      <td><strong>AT</strong></td>
+      <td>WFA Jugend-Check (WFA-KJV)</td>
+      <td><span class="pt-pill cousin">cousin</span></td>
+      <td><span class="pt-pill skip">skip</span></td>
+      <td>must consider</td>
+      <td>children and young adults</td>
+    </tr><tr data-open="fr-clause-impact-jeunesse" data-kind="cousin" data-bite="unknown" data-block="must consider">
+      <td><strong>FR</strong></td>
+      <td>Clause d'impact jeunesse (circular 2 May 2016)</td>
+      <td><span class="pt-pill cousin">cousin</span></td>
+      <td><span class="pt-pill unknown">unknown</span></td>
+      <td>must consider</td>
+      <td>ages 16–25 (25–30 flagged where age barriers or housing/employment effects are large)</td>
+    </tr><tr data-open="gb-wales-siia" data-kind="cousin" data-bite="skip" data-block="must consider">
+      <td><strong>GB</strong></td>
+      <td>Wales Strategic Integrated Impact Assessment</td>
+      <td><span class="pt-pill cousin">cousin</span></td>
+      <td><span class="pt-pill skip">skip</span></td>
+      <td>must consider</td>
+      <td>current and future generations under the Well-being of Future Generations (Wales) Act 2015, plus equality groups</td>
+    </tr><tr data-open="gb-scotland-crwia" data-kind="cousin" data-bite="none" data-block="none">
+      <td><strong>GB</strong></td>
+      <td>Scotland CRWIA (UNCRC Act 2024 s.17)</td>
+      <td><span class="pt-pill cousin">cousin</span></td>
+      <td><span class="pt-pill none">none</span></td>
+      <td>none</td>
+      <td>children and young people under 18 (incorporated UNCRC), not unborn cohorts</td>
+    </tr><tr data-open="no-dfo-child-impact" data-kind="cousin" data-bite="unknown" data-block="must consider">
+      <td><strong>NO</strong></td>
+      <td>DFØ child-impact step in Utredningsinstruksen</td>
+      <td><span class="pt-pill cousin">cousin</span></td>
+      <td><span class="pt-pill unknown">unknown</span></td>
+      <td>must consider</td>
+      <td>children (barn)</td>
+    </tr><tr data-open="ca-justice-cria" data-kind="cousin" data-bite="unknown" data-block="none">
+      <td><strong>CA</strong></td>
+      <td>Justice Canada CRIA tool</td>
+      <td><span class="pt-pill cousin">cousin</span></td>
+      <td><span class="pt-pill unknown">unknown</span></td>
+      <td>none</td>
+      <td>children (CRC rights)</td>
+    </tr><tr data-open="hu-act-cxi-opinion" data-kind="cousin" data-bite="skip" data-block="must consider">
+      <td><strong>HU</strong></td>
+      <td>Act CXI of 2011 Commissioner opinion</td>
+      <td><span class="pt-pill cousin">cousin</span></td>
+      <td><span class="pt-pill skip">skip</span></td>
+      <td>must consider</td>
+      <td>future generations (Fundamental Law Article P)</td>
+    </tr><tr data-open="scotland-wellbeing-duty" data-kind="proposed" data-bite="unknown" data-block="unknown">
+      <td><strong>GB</strong></td>
+      <td>Wellbeing and Sustainable Development Bill Future Generations Duty</td>
+      <td><span class="pt-pill proposed">proposed</span></td>
+      <td><span class="pt-pill unknown">unknown</span></td>
+      <td>unknown</td>
+      <td>future generations and long-term community wellbeing</td>
+    </tr><tr data-open="es-prospectiva-long-term-annex" data-kind="enacted" data-bite="skip" data-block="must consider">
+      <td><strong>ES</strong></td>
+      <td>Oficina de Prospectiva Intergenerational Impact Annex</td>
+      <td><span class="pt-pill enacted">enacted</span></td>
+      <td><span class="pt-pill skip">skip</span></td>
+      <td>must consider</td>
+      <td>future cohorts (2040+ horizon) and youth</td>
+    </tr><tr data-open="pt-intergenerational-justice-budget-filter" data-kind="cousin" data-bite="skip" data-block="none">
+      <td><strong>PT</strong></td>
+      <td>Assembleia da República Intergenerational Justice Index</td>
+      <td><span class="pt-pill cousin">cousin</span></td>
+      <td><span class="pt-pill skip">skip</span></td>
+      <td>none</td>
+      <td>current and future generations (fiscal equity, pension liabilities)</td>
+    </tr><tr data-open="eu-ai-board-fria-youth" data-kind="cousin" data-bite="amendment" data-block="must consider">
+      <td><strong>EU</strong></td>
+      <td>EU AI Act Fundamental Rights Impact Assessment (Youth &amp; Children Module)</td>
+      <td><span class="pt-pill cousin">cousin</span></td>
+      <td><span class="pt-pill amendment">amendment</span></td>
+      <td>must consider</td>
+      <td>children, youth, and affected groups</td>
+    </tr></tbody>
+      </table>
+    </div>
+    <div id="pt-detail" class="pt-detail"></div>
+
+    <p class="pt-sec">Bite — did the assessment change the decision?</p>
+    <div class="pt-bite"><article>
+        <span class="pt-pill stall">stall</span>
+        <h3>BE · JoKER</h3>
+        <p>Council of State 69.100/1 (18 May 2021) — missing JoKER on closed-supervision youth-justice bill</p>
+        <p>Only documented dossier-blocking bite. Report written two days later. Completing JoKER unblocks; it does not rewrite.</p>
+      </article><article>
+        <span class="pt-pill amendment">amendment</span>
+        <h3>NL · Kinderrechtentoets</h3>
+        <p>Wet reikwijdte Jeugdwet consultation MvT §7.4 (Feb 2026)</p>
+        <p>Two safeguards after youth conversations. Not yet a statute.</p>
+      </article><article>
+        <span class="pt-pill skip">skip</span>
+        <h3>NL · Generatietoets</h3>
+        <p>Miljoenennota 2026 after Senate motion 36.800 D</p>
+        <p>Motion adopted; MN 2026 had no generatietoets annex.</p>
+      </article><article>
+        <span class="pt-pill skip">skip</span>
+        <h3>DE · Jugend-Check</h3>
+        <p>Minijobs / Mindestlohn cabinet draft (23 Feb 2022)</p>
+        <p>Two youth-protective enforcement clauses identified on 7 Feb were deleted from the cabinet text.</p>
+      </article><article>
+        <span class="pt-pill skip">skip</span>
+        <h3>AT · WFA Jugend-Check</h3>
+        <p>Budgetbegleitgesetz 2025</p>
+        <p>Completed child/youth WFA; family-benefit freeze and school-travel copay enacted anyway.</p>
+      </article><article>
+        <span class="pt-pill skip">skip</span>
+        <h3>GB · Wales SIIA</h3>
+        <p>Final Budget 2026–27</p>
+        <p>Workshops informed some allocations; documented disproportionate harms were not removed.</p>
+      </article><article>
+        <span class="pt-pill none">none</span>
+        <h3>GB · Scotland CRWIA</h3>
+        <p>Budget (Scotland) (No. 5) Bill 2026–27</p>
+        <p>CRWIA states it resulted in no changes to the Bill.</p>
+      </article><article>
+        <span class="pt-pill none">none</span>
+        <h3>BE · JoKER</h3>
+        <p>Bill 864 community-institution schools (27 May 2026)</p>
+        <p>Completed JoKER after age-30 expansion; Council of State did not stall.</p>
+      </article></div>
+
+    <p class="pt-sec">Country dossiers</p>
+    <div class="pt-dossiers"><details class="pt-dossier" id="country-IT" data-country="IT">
+        <summary><span class="pt-pill enacted">enacted</span> <span>Italy</span> <span style="font-weight:500;color:var(--color-muted)">Constitutional Art. 9 + statutory VIG. Implementing DPCMs unpublished; 2026 government AIR still omits VIG.</span></summary>
+        <div class="body"><p>Italy's intergenerational equity model is a three-layer stack: (1) constitutional entrenchment via Constitutional Law 1/2022 (Articles 9 and 41), naming future generations and environmental limits on economic activity; (2) administrative operationalisation through Generational Impact Assessment (VIG) in Law 167/2025, integrated into regulatory impact analysis for government bills; and (3) judicial enforcement through Constitutional Court doctrine on equità intergenerazionale, spanning public finance (from 2019) and environment (especially post-2022). Italy does not have a Wales-style Future Generations Commissioner, but it is among the few states that constitutionally name future generations alongside environment and biodiversity. As of mid-2026, VIG is legally binding but the implementing DPCM and Observatory are still being stood up, while municipalities (Parma, Bologna) already run local VIG ahead of central government practice.</p><ul class="pt-layers"><li><strong>Layer 1 · Constitutional foundation</strong><br>Constitutional Law No. 1 of 11 February 2022 — Binds legislature, executive, and courts; elevates future generations from policy language to fundamental principles.</li><li><strong>Layer 2 · Statutory operationalisation</strong><br>Law No. 167 of 10 November 2025 (Art. 4–5) — VIG in AIR for government normative acts; National Observatory at Presidency of the Council of Ministers.</li><li><strong>Layer 3 · Judicial doctrine</strong><br>Constitutional Court jurisprudence (2019–2026) — Equità intergenerazionale as legitimacy parameter in fiscal discipline and environmental derogations.</li></ul>
+          <p><a href="country-ambition.html#country=IT">Country Index →</a> · <a href="briefing.html#tab=all&amp;q=Italy">Related signals →</a></p>
+        </div>
+      </details><details class="pt-dossier" id="country-NL" data-country="NL">
+        <summary><span class="pt-pill enacted">enacted</span> <span>Netherlands</span> <span style="font-weight:500;color:var(--color-muted)">Administrative generatietoets is live as method. Budget skip on MN 2026. One consultation-stage Kinderrechtentoets amendment.</span></summary>
+        <div class="body"><p>The Netherlands is one of two countries GYC classifies as having an enacted national Intergenerational Impact Assessment — but the instrument is administrative, not a veto. The Beleidskompas generatietoets asks ministries to test irreversible or redistributive effects on current and future generations before a decision; nobody can stall a dossier for a missing toets. A cousin tool, the Kinderrechtentoets, is a living-child CRIA now instructed for jeugdzorg bills. Bite is thin: Miljoenennota 2026 skipped the Senate's generatietoets motion; the only documented amendment is two consultation-stage safeguards on Wet reikwijdte Jeugdwet. Next public test is Prinsjesdag 15 September 2026.</p><ul class="pt-layers"><li><strong>Layer 1 · Administrative IIA (enacted method)</strong><br>Beleidskompas step 4 + Leidraad Toekomstgericht Beleid generatietoets — Ministries should run a generatietoets when effects may redistribute across generations, are irreversible, or lock later cohorts in. Hulpmiddel, not a statutory veto.</li><li><strong>Layer 2 · Child-rights cousin (youth-care bills)</strong><br>Kinderrechtentoets — Senate motion 36.546, I (7 Oct 2025) — Four-step CRC assessment on future jeugdzorg bills, recorded in the memorie van toelichting. Kinderombudsman advises; cannot void a bill.</li><li><strong>Layer 3 · Climate duty (not IIA review)</strong><br>Urgenda (Hoge Raad 2019) via ECHR Arts. 2 and 8 — Intergenerational climate duty of care. Does not require a pre-decision generatietoets and does not review a missing one.</li></ul>
+          <p><a href="country-ambition.html#country=NL">Country Index →</a> · <a href="briefing.html#tab=all&amp;q=Netherlands">Related signals →</a></p>
+        </div>
+      </details><details class="pt-dossier" id="country-DE" data-country="DE">
+        <summary><span class="pt-pill cousin">cousin</span> <span>Germany</span> <span style="font-weight:500;color:var(--color-muted)">Art. 20a names future generations. Jugend-Check is the densest published youth-IA series — and the Bundestag is not bound.</span></summary>
+        <div class="body"><p>Germany has a constitutional future-generations clause (Basic Law Article 20a) and the densest published youth-impact series in the GYC corpus: KomJC screened 490 federal bills in the 20th Bundestag and published 91 Jugend-Checks. The check is not an Intergenerational Impact Assessment of unborn cohorts. It assesses living 12–27-year-olds; the Bundestag is not bound to amend; who can block: nobody. Documented bite is skip (minijobs 2022 dropped two youth-protective clauses after the check) or check-then-enact (Thuringia court-organisation statute kept the draft robe clause). Neubauer 2021 is intergenerational climate doctrine, not Jugend-Check review.</p><ul class="pt-layers"><li><strong>Layer 1 · Constitutional foundation</strong><br>Basic Law Article 20a (1994) — Names future generations as the reason the state must protect the natural foundations of life. No commissioner and no statutory IIA annex.</li><li><strong>Layer 2 · Youth-check (administrative, published)</strong><br>KomJC Jugend-Check (since 2017) — Independent scientific pre-screen of every federal government draft for effects on ages 12–27. Published. Bundestag not bound.</li><li><strong>Layer 3 · Climate freedom over time</strong><br>BVerfG Neubauer (24 March 2021) — Offloading a radical post-2030 mitigation burden onto later generations threatens future freedom. Climate law, not Jugend-Check procedure.</li></ul>
+          <p><a href="country-ambition.html#country=DE">Country Index →</a> · <a href="briefing.html#tab=all&amp;q=Germany">Related signals →</a></p>
+        </div>
+      </details><details class="pt-dossier" id="country-BE" data-country="BE">
+        <summary><span class="pt-pill cousin">cousin</span> <span>Belgium</span> <span style="font-weight:500;color:var(--color-muted)">Flanders JoKER only. Unique stall gate for a missing report. No federal IIA.</span></summary>
+        <div class="body"><p>Belgium has no federal Intergenerational Impact Assessment. The live instrument is Flemish: Jeugddecreet Article 7 JoKER (kind- en jongereneffectrapport) on Flemish Government draft decrees that directly affect children and young people, now through age 30. It is the only IIA-family tool in the GYC corpus with documented dossier-blocking bite — the Council of State required a missing JoKER in opinion 69.100/1 (18 May 2021). Completing JoKER unblocks the file; it does not force a rewrite. After the 13 March 2026 age-30 expansion, bill 864 filed a completed JoKER and the Council did not stall it.</p><ul class="pt-layers"><li><strong>Layer 1 · Flemish statutory JoKER</strong><br>Jeugddecreet Article 7 — kind- en jongereneffectrapport — Mandatory annex on Flemish Government ontwerpdecreten that directly affect children and young people: effects with the measure, without it, and alternatives to avoid, limit or remedy serious harm.</li><li><strong>Layer 2 · Council of State stall gate</strong><br>Raad van State / Conseil d'État legislation section — Can require a missing JoKER before the dossier proceeds. Completing the report unblocks; no merits veto on a completed JoKER.</li><li><strong>Layer 3 · Federal and Walloon gap</strong><br>None enacted in the GYC corpus as of 17 August 2026 — No federal IIA, no Walloon equivalent located, no Future Generations Commissioner.</li></ul>
+          <p><a href="country-ambition.html#country=BE">Country Index →</a> · <a href="briefing.html#tab=all&amp;q=Belgium">Related signals →</a></p>
+        </div>
+      </details><details class="pt-dossier" id="country-AT" data-country="AT">
+        <summary><span class="pt-pill cousin">cousin</span> <span>Austria</span> <span style="font-weight:500;color:var(--color-muted)">Mandatory WFA child/youth dimension since 2013. Budgetbegleitgesetz 2025 completed the check then enacted the freeze.</span></summary>
+        <div class="body"><p>WFA-Kinder-und-Jugend-Verordnung (BGBl. II Nr. 495/2012) requires simplified screening then a deeper assessment in material cases, travelling with the government bill. The assessor is the bill author. Budgetbegleitgesetz 2025 (BGBl. I Nr. 25/2025) quantified a two-year Familienbeihilfe freeze for two million children and a school-travel copay rise, and enacted both.</p>
+          <p><a href="country-ambition.html#country=AT">Country Index →</a> · <a href="briefing.html#tab=all&amp;q=Austria">Related signals →</a></p>
+        </div>
+      </details><details class="pt-dossier" id="country-FR" data-country="FR">
+        <summary><span class="pt-pill cousin">cousin</span> <span>France</span> <span style="font-weight:500;color:var(--color-muted)">2016 youth-impact clause requires intergenerational-justice analysis in government bills. No proven rewrite located.</span></summary>
+        <div class="body"><p>Circular 5857-SG (2 May 2016) adds a clause d'impact jeunesse to études d'impact, covering equality among young people, intergenerational justice and non-discrimination, with compensating measures expected if a text would penalise current or future young cohorts. Loi 2025-268 filled the youth-impact sections; bite versus adopted articles is unknown.</p>
+          <p><a href="country-ambition.html#country=FR">Country Index →</a> · <a href="briefing.html#tab=all&amp;q=France">Related signals →</a></p>
+        </div>
+      </details></div>
+
+    <p class="pt-sec">Watch list — do not invent an unpublished toets</p>
+    <ul class="pt-watch"><li><strong>2026-09-15 · NL</strong><br>Prinsjesdag / Miljoenennota 2027 generatietoets<br>Official hub still published only MN 2026 as of 17 Aug 2026. Do not invent a toets.</li><li><strong>Undated · IT</strong><br>Italy VIG criteria DPCM and Observatory DPCM<br>Gazzetta unpublished. A.C. 2825 AIR omitted VIG after Law 167 in force.</li><li><strong>Undated · NL</strong><br>Versterking jeugdbescherming Tweede Kamer MvT<br>At Raad van State 30 Jun 2026. Sterk Kinderrechtentoets claim unverified against public consultation MvT.</li><li><strong>Undated · EU</strong><br>EU Intergenerational Fairness Index methodology PDF<br>youth.europa.eu still 'Coming soon'.</li><li><strong>Undated · KR</strong><br>Korea first completed 청년영향평가<br>OPC 5–6 Aug 2026 announcement remained future-tense.</li><li><strong>Undated · DE</strong><br>ThürGDG 8/3713 and prisoner-pay 8/3287 final texts<br>Land Jugend-Checks published; Landtag texts still pending.</li></ul>
+    <p style="margin-top:18px;font-size:.82rem;color:var(--color-muted)">Updated 2026-08-17 · IIA subsection compiled from foresight missions iia-soc-country / iia-mechanism-bite / iia-bite-closeout / iia-watch-korea-th (17 Aug 2026) and country deep-dive databases. Completing an assessment is not bite; changing the decision is.</p>
+  </section>
+</div>
+</main>
+<footer class="intel-shell-footer">
+  <span>Built 2026-08-30 - 2034 signals tracked - GYC AI Labs · Intergenerational Foresight</span>
+  <span><a href="index.html">Overview</a> - <a href="graph.html">Knowledge graph</a> - <a href="country-ambition.html">Country index</a> - <a href="policy-tools.html">Policy tools</a></span>
+  <span>Policy tools</span>
+</footer>
+<script id="data" type="application/json">{"updated":"2026-08-30","families":[{"id":"iia","label":"Intergenerational Impact Assessments","status":"live","kicker":"The procedure that is supposed to bite","summary":"A statutory or administrative tool that forces assessment of effects on young people, future cohorts, or the unborn before a law, budget, plan, or project is adopted. Strong inventory, weak bite: almost no instrument can stall a dossier.","href":"#family=iia"},{"id":"fg-institutions","label":"Future-generations institutions","status":"planned","kicker":"Commissioners and ombuds","summary":"Wales Future Generations Commissioner, Hungary Deputy Commissioner, Malta FG commissioner (advisory). Not an IIA page — institutions without a pre-decision test. Build next if this family earns a scan."},{"id":"long-term-budget","label":"Long-term fiscal and wellbeing budgets","status":"planned","kicker":"40-year outlooks, IGR, wellbeing duties","summary":"Australian Intergenerational Report, Ireland Future Forty, NZ wellbeing-budget duties (partly repealed 2026). Cousins of IIA, not the same tool."}],"instruments":[{"id":"it-air-vig","country":"IT","kind":"enacted","instrument":"AIR-VIG (Law 167/2025)","trigger":"Government normative acts except decree-laws, inside AIR, when environmental or social effects fall on young people and future generations.","who_writes":"Sponsoring ministry inside AIR. Observatory at the Presidency of the Council is to monitor.","who_can_block":"unknown","who_is_assessed":"young people and future generations","time_horizon":"long-term social, environmental and economic effects","method":"labels","published":false,"bite":"unknown","source_url":"https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=25G00174&art.idArticolo=4","notes":"Criteria DPCM and Observatory DPCM unpublished as of 17 Aug 2026. A.C. 2825 (27 Feb 2026) AIR still uses the 2017 DPCM 169 template and omits VIG. Flagship is not operating.","corpus_ids":["italy-vig-generational-impact-assessment-law-2025-11-20"]},{"id":"nl-beleidskompas-generatietoets","country":"NL","kind":"enacted","instrument":"Beleidskompas generatietoets","trigger":"After a generatiescan, strongly advised when effects may redistribute across generations, are irreversible, or lock later cohorts in. Not required on every file.","who_writes":"Ministry officials. NPCE worked example was contractor Sira Consulting.","who_can_block":"must consider","who_is_assessed":"current and future generations (NPCE used living age bands, not the unborn as a legal person)","time_horizon":"long-term / irreversible and redistributive effects","method":"checklist","published":false,"bite":"skip","source_url":"https://www.kcbr.nl/beleid-en-regelgeving-ontwikkelen/beleidskompas","notes":"Hulpmiddel, not a veto. MN 2026 skipped the Senate motion. NPCE 2024 toets issued recommendations only. Next test Prinsjesdag 15 Sep 2026.","corpus_ids":["netherlands-beleidskompas-generatietoets-integration-2025-12-04","netherlands-senate-generatietoets-motion-adopted-2025-11-25"]},{"id":"nl-kinderrechtentoets","country":"NL","kind":"cousin","instrument":"Kinderrechtentoets (Kinderombudsman CRIA)","trigger":"Senate motion 36.546, I: future jeugdzorg bills. Pre-check: does the proposal affect children's development or welfare?","who_writes":"Sponsoring ministry using the four-step toolkit. Kinderombudsman advises; no formal toetsingsrol.","who_can_block":"none","who_is_assessed":"children as CRC rights-holders","time_horizon":"short- and long-term effects on living children, not unborn cohorts","method":"checklist","published":true,"bite":"amendment","source_url":"https://kinderrechtentoets.nl/","notes":"Only documented Dutch IIA-family amendment: Wet reikwijdte Jeugdwet consultation MvT §7.4 added two safeguards. Not yet a statute. Sterk claim on jeugdbescherming unverified.","corpus_ids":["dutch-reikwijdte-jeugdwet-consultation-publishes-a-kinderrechtentoets-that-adjusted-two-bill-safegua"]},{"id":"de-jugend-check","country":"DE","kind":"cousin","instrument":"KomJC Jugend-Check","trigger":"Every federal government draft is pre-screened; a full check when effects on 12–27-year-olds are identified.","who_writes":"Kompetenzzentrum Jugend-Check (FÖV Speyer), independent, funded by the federal youth ministry.","who_can_block":"none","who_is_assessed":"ages 12–27","time_horizon":"present youth life situations, not unborn cohorts","method":"checklist","published":true,"bite":"skip","source_url":"https://www.jugend-check.de/der-jugend-check/","notes":"20th Bundestag: 490 screened / 91 published. Bundestag not bound. Minijobs 2022 dropped two youth-protective clauses after the check.","corpus_ids":["germany-youth-check-third-report-490-federal-bills-screened-91-youth-impact-assessments-in-20th-bund","german-minijobs-government-draft-drops-jugend-check-youth-protective-time-recording-and-payslip-rule"]},{"id":"be-joker","country":"BE","kind":"cousin","instrument":"Flanders JoKER","trigger":"Flemish Government ontwerpdecreet that directly affects children and young people. Not member bills or ministerial orders.","who_writes":"Sponsoring minister and administration. CJM advises within 12 working days.","who_can_block":"can stall dossier","who_is_assessed":"persons through age 30 (from 13 Mar 2026)","time_horizon":"present children and youth, with/without-measure counterfactual","method":"checklist","published":true,"bite":"stall","source_url":"https://www.vlaanderen.be/cjm/nl/jeugd/vlaams-jeugd-en-kinderrechtenbeleid/instrumenten/joker-kind-en-jongereneffectrapport","notes":"Only stall gate in the family (CoS 69.100/1, 18 May 2021). Bill 864 (27 May 2026) filed a completed JoKER; Council did not stall. Federal Belgium has no IIA.","corpus_ids":["flanders-expands-mandatory-joker-child-and-youth-impact-reports-from-under-25-to-age-30-2026-03-13","flemish-council-of-state-required-a-missing-joker-before-the-2021-closed-supervision-youth-justice-b"]},{"id":"at-wfa-jugend-check","country":"AT","kind":"cousin","instrument":"WFA Jugend-Check (WFA-KJV)","trigger":"All federal bills and major financially significant projects as a mandatory WFA dimension from 1 January 2013.","who_writes":"Sponsoring federal ministry (self-assessment), not an independent checker.","who_can_block":"must consider","who_is_assessed":"children and young adults","time_horizon":"current protection/care/cost compensation plus medium-term Zukunftssicherung","method":"checklist","published":true,"bite":"skip","source_url":"https://www.bundeskanzleramt.gv.at/agenda/jugend/jugendpolitik/jugend-check.html","notes":"Budgetbegleitgesetz 2025 completed the child/youth WFA then enacted a family-benefit freeze and school-travel copay rise.","corpus_ids":["austria-s-binding-jugend-check-requires-child-and-youth-impact-assessment-of-all-federal-bills-2013","austria-budgetbegleitgesetz-2025-enacts-family-benefit-freeze-after-a-completed-child-and-youth-wfa"]},{"id":"fr-clause-impact-jeunesse","country":"FR","kind":"cousin","instrument":"Clause d'impact jeunesse (circular 2 May 2016)","trigger":"Ex-ante evaluation of government bills (on top of organic-law 2009-403 impact studies) and regulatory texts.","who_writes":"Sponsoring ministry inside the SGG impact-study / enriched regulatory impact sheet.","who_can_block":"must consider","who_is_assessed":"ages 16–25 (25–30 flagged where age barriers or housing/employment effects are large)","time_horizon":"today's youth and the next youth cohort","method":"checklist","published":true,"bite":"unknown","source_url":"https://www.documentation-administrative.gouv.fr/adm-01858890v1/document","notes":"Loi 2025-268 (agriculture) filled youth-impact sections; no proven rewrite. Intergenerational justice is a required analysis axis, not a veto.","corpus_ids":["france-s-2016-youth-impact-clause-requires-intergenerational-justice-analysis-in-every-government-bi"]},{"id":"gb-wales-siia","country":"GB","kind":"cousin","instrument":"Wales Strategic Integrated Impact Assessment","trigger":"Welsh Government Draft and Final Budget; two-stage SIIA for 2026–27.","who_writes":"Welsh Government budget teams, with wellbeing impact workshops after the Draft Budget.","who_can_block":"must consider","who_is_assessed":"current and future generations under the Well-being of Future Generations (Wales) Act 2015, plus equality groups","time_horizon":"budget year plus WFG long-term wellbeing goals","method":"labels","published":true,"bite":"skip","source_url":"https://www.gov.wales/sites/default/files/publications/2026-02/2026-2027-final-budget-impact-assessment.pdf","notes":"2026–27 Final SIIA: workshops informed targeted allocations but did not reverse listed disproportionate harms. Not a veto on harmful baselines.","corpus_ids":["welsh-2026-27-budget-siia-reports-wellbeing-impact-workshops-informed-allocations-but-did-not-remove"]},{"id":"gb-scotland-crwia","country":"GB","kind":"cousin","instrument":"Scotland CRWIA (UNCRC Act 2024 s.17)","trigger":"Legislation and strategic decisions relating to children's rights and wellbeing, including Budget Bills.","who_writes":"Scottish Government policy team on a published CRWIA template.","who_can_block":"none","who_is_assessed":"children and young people under 18 (incorporated UNCRC), not unborn cohorts","time_horizon":"children during the decision's life","method":"checklist","published":true,"bite":"none","source_url":"https://www.gov.scot/publications/scottish-budget-bill-2026-27-budget-scotland-no-5-bill-child-rights-wellbeing-impact-assessment/pages/2/","notes":"2026–27 Budget Bill CRWIA: 'The analysis in this CRWIA has not resulted in any changes being made to the Bill.'","corpus_ids":[]},{"id":"no-dfo-child-impact","country":"NO","kind":"cousin","instrument":"DFØ child-impact step in Utredningsinstruksen","trigger":"Any state measure appraisal; child-effects analysis when the measure has direct or indirect significance for children.","who_writes":"Ministries and agencies preparing the utredning before decision.","who_can_block":"must consider","who_is_assessed":"children (barn)","time_horizon":"full expected duration of effects","method":"checklist","published":false,"bite":"unknown","source_url":"https://www.dfo.no/kap-21-minimumskrav-til-utredning-av-statlige-tiltak","notes":"Child-rights cousin inside the Norwegian investigation instruction, not a future-unborn IIA.","corpus_ids":["norway-s-df-guidance-now-requires-child-impact-analysis-in-pre-decision-appraisals-of-state-measures"]},{"id":"ca-justice-cria","country":"CA","kind":"cousin","instrument":"Justice Canada CRIA tool","trigger":"Voluntary, when federal officials develop a law, policy, program or initiative that may affect children.","who_writes":"Federal officials using the Justice Canada tool; also usable by other governments and NGOs.","who_can_block":"none","who_is_assessed":"children (CRC rights)","time_horizon":"direct, indirect, intended and unintended child-rights effects","method":"checklist","published":false,"bite":"unknown","source_url":"https://www.justice.gc.ca/eng/csj-sjc/cria-erde/index.html","notes":"Complementary to GBA Plus. Not mandatory for Memoranda to Cabinet.","corpus_ids":["justice-canada-publishes-a-federal-child-rights-impact-assessment-tool-still-voluntary-for-cabinet-2"]},{"id":"hu-act-cxi-opinion","country":"HU","kind":"cousin","instrument":"Act CXI of 2011 Commissioner opinion","trigger":"Draft legislation affecting the Commissioner's tasks; long-term development and spatial plans; other plans affecting future generations' quality of life.","who_writes":"Commissioner for Fundamental Rights / Deputy Commissioner for future generations.","who_can_block":"must consider","who_is_assessed":"future generations (Fundamental Law Article P)","time_horizon":"quality of life of future generations","method":"labels","published":false,"bite":"skip","source_url":"https://www.ajbh.hu/web/ajbh-en/act-cxi-of-2011","notes":"Ombudsman opinion-and-amendment power, not a ministry-authored IA annex. T/3613 (2018) never reached AJBH in administrative consultation — documented skip of the gate.","corpus_ids":[]},{"id":"scotland-wellbeing-duty","country":"GB","kind":"proposed","instrument":"Wellbeing and Sustainable Development Bill Future Generations Duty","trigger":"Statutory duty on Scottish public bodies to assess long-term impacts on future generations' wellbeing.","who_writes":"Scottish public authorities and sponsoring departments.","who_can_block":"unknown","who_is_assessed":"future generations and long-term community wellbeing","time_horizon":"multi-decadal / long-term","method":"checklist","published":true,"bite":"unknown","source_url":"https://www.gov.scot/publications/wellbeing-and-sustainable-development-bill-consultation-analysis/","notes":"Creates a statutory future generations duty for Scotland akin to the Welsh framework, with independent commissioner oversight.","corpus_ids":["scotland-wellbeing-sustainable-development-bill-statutory-duty-2026-04-15"]},{"id":"es-prospectiva-long-term-annex","country":"ES","kind":"enacted","instrument":"Oficina de Prospectiva Intergenerational Impact Annex","trigger":"Draft royal decree-laws and major legislative bills submitted to the Council of Ministers.","who_writes":"Sponsoring ministries with Oficina Nacional de Prospectiva guidance.","who_can_block":"must consider","who_is_assessed":"future cohorts (2040+ horizon) and youth","time_horizon":"30-year horizon (demographic, ecological, technological)","method":"checklist","published":false,"bite":"skip","source_url":"https://www.mpr.gob.es/prospectiva-estrategica/informes-2026-impacto-futuro","notes":"Institutionalises foresight into Spain's regulatory impact assessment machinery across royal decree-laws.","corpus_ids":["spain-foresight-office-mandatory-long-term-impact-checklist-2026-02-18"]},{"id":"pt-intergenerational-justice-budget-filter","country":"PT","kind":"cousin","instrument":"Assembleia da República Intergenerational Justice Index","trigger":"Annual State Budget proposals submitted to the Portuguese Parliament.","who_writes":"Parliamentary Technical Budget Support Unit (UTAO).","who_can_block":"none","who_is_assessed":"current and future generations (fiscal equity, pension liabilities)","time_horizon":"generational transfer lifecycle","method":"labels","published":true,"bite":"skip","source_url":"https://www.parlamento.pt/OrcamentoEstado/Paginas/indice-justica-intergeracional-2026.aspx","notes":"Measures net generational transfers, pension liabilities, and youth capital investments during parliamentary budget debates.","corpus_ids":["portugal-parliament-intergenerational-justice-index-budget-filter-2026-06-04"]},{"id":"eu-ai-board-fria-youth","country":"EU","kind":"cousin","instrument":"EU AI Act Fundamental Rights Impact Assessment (Youth & Children Module)","trigger":"Deployment of high-risk AI systems in education, juvenile justice, and public administration under Article 27 AI Act.","who_writes":"High-risk AI deployers / public bodies.","who_can_block":"must consider","who_is_assessed":"children, youth, and affected groups","time_horizon":"system lifecycle / developmental trajectory","method":"checklist","published":true,"bite":"amendment","source_url":"https://digital-strategy.ec.europa.eu/en/policies/ai-board-fria-guidelines-children-future-generations-2026","notes":"Statutory pre-deployment obligation requiring documented assessment of fundamental rights, developmental harms, and bias mitigations.","corpus_ids":["eu-ai-board-fundamental-rights-impact-assessment-youth-guidance-2026-06-30"]}]}</script>
+<script>
+var DATA = JSON.parse(document.getElementById('data').textContent);
+function escTxt(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+var byId = {};
+DATA.instruments.forEach(function(x){ byId[x.id] = x; });
+function parseHash(){
+  var h = (location.hash || '').replace(/^#/, '');
+  var out = { family: 'hub', country: '', instrument: '' };
+  h.split('&').forEach(function(part){
+    var kv = part.split('=');
+    if (kv[0] === 'family') out.family = decodeURIComponent(kv[1] || 'hub');
+    if (kv[0] === 'country') out.country = decodeURIComponent(kv[1] || '');
+    if (kv[0] === 'instrument') out.instrument = decodeURIComponent(kv[1] || '');
+  });
+  if (h === 'family-iia') out.family = 'iia';
+  return out;
+}
+function setNav(family){
+  document.querySelectorAll('[data-nav]').forEach(function(a){
+    var on = (family === 'iia' && a.getAttribute('data-nav') === 'iia') || (family !== 'iia' && a.getAttribute('data-nav') === 'policy-tools');
+    a.classList.toggle('active', on);
+    if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+  });
+  document.querySelectorAll('[data-pt-view]').forEach(function(a){
+    a.classList.toggle('is-on', a.getAttribute('data-pt-view') === family);
+  });
+}
+function showFamily(family){
+  var hub = document.getElementById('view-hub');
+  var iia = document.getElementById('view-iia');
+  if (!hub || !iia) return;
+  hub.hidden = family === 'iia';
+  iia.hidden = family !== 'iia';
+  setNav(family);
+}
+function openInstrument(id){
+  var x = byId[id];
+  var el = document.getElementById('pt-detail');
+  if (!x || !el) return;
+  el.className = 'pt-detail is-open';
+  el.innerHTML = '<h3>' + escTxt(x.instrument) + ' · ' + escTxt(x.country) + '</h3>' +
+    '<dl class="pt-kv">' +
+    '<dt>Kind</dt><dd>' + escTxt(x.kind) + '</dd>' +
+    '<dt>Trigger</dt><dd>' + escTxt(x.trigger) + '</dd>' +
+    '<dt>Who writes</dt><dd>' + escTxt(x.who_writes) + '</dd>' +
+    '<dt>Who can block</dt><dd>' + escTxt(x.who_can_block) + '</dd>' +
+    '<dt>Who is assessed</dt><dd>' + escTxt(x.who_is_assessed) + '</dd>' +
+    '<dt>Horizon</dt><dd>' + escTxt(x.time_horizon) + '</dd>' +
+    '<dt>Bite</dt><dd>' + escTxt(x.bite) + '</dd>' +
+    '<dt>Notes</dt><dd>' + escTxt(x.notes) + '</dd>' +
+    '</dl>' +
+    (x.source_url ? '<p><a href="' + x.source_url + '" target="_blank" rel="noopener">Primary source →</a></p>' : '') +
+    (x.corpus_ids && x.corpus_ids[0] ? '<p><a href="briefing.html#tab=all&q=' + encodeURIComponent(x.corpus_ids[0]) + '">Linked signal →</a></p>' : '');
+  el.scrollIntoView({ block: 'nearest' });
+}
+function applyFilter(kind){
+  document.querySelectorAll('#pt-filters button').forEach(function(b){ b.classList.toggle('is-on', b.getAttribute('data-filter') === kind); });
+  document.querySelectorAll('#pt-table tbody tr').forEach(function(tr){
+    var show = kind === 'all' || tr.getAttribute('data-kind') === kind || tr.getAttribute('data-bite') === kind || tr.getAttribute('data-block') === kind;
+    tr.style.display = show ? '' : 'none';
+  });
+}
+function applyState(){
+  var st = parseHash();
+  showFamily(st.family === 'iia' ? 'iia' : 'hub');
+  if (st.family === 'iia' && st.instrument) openInstrument(st.instrument);
+  if (st.family === 'iia' && st.country){
+    var d = document.getElementById('country-' + st.country);
+    if (d) { d.open = true; d.scrollIntoView({ block: 'start' }); }
+  }
+}
+document.getElementById('pt-table').addEventListener('click', function(e){
+  var tr = e.target.closest('tr[data-open]');
+  if (!tr) return;
+  var id = tr.getAttribute('data-open');
+  history.replaceState(null, '', '#family=iia&instrument=' + encodeURIComponent(id));
+  openInstrument(id);
+});
+document.getElementById('pt-filters').addEventListener('click', function(e){
+  var b = e.target.closest('button[data-filter]');
+  if (b) applyFilter(b.getAttribute('data-filter'));
+});
+window.addEventListener('hashchange', applyState);
+applyState();
+</script>
+<script data-intel-shell="init">
+(function(){
+  var KEY="gyc-foresight-nav";
+  var root=document.documentElement;
+  function apply(state){
+    root.dataset.nav=state;
+    var btn=document.getElementById("intel-nav-toggle");
+    if(btn){
+      var collapsed=state==="collapsed";
+      btn.setAttribute("aria-label",collapsed?"Expand navigation":"Collapse navigation");
+      btn.setAttribute("aria-expanded",collapsed?"false":"true");
+      btn.title=collapsed?"Expand navigation":"Collapse navigation";
+    }
+    try{localStorage.setItem(KEY,state);}catch(e){}
+    try{window.dispatchEvent(new CustomEvent("gyc-nav-change",{detail:state}));}catch(e){}
+  }
+  function preferred(){
+    try{
+      var s=localStorage.getItem(KEY);
+      if(s==="collapsed"||s==="expanded") return s;
+    }catch(e){}
+    return "expanded";
+  }
+  var btn=document.getElementById("intel-nav-toggle");
+  if(btn){
+    btn.addEventListener("click",function(){
+      apply(root.dataset.nav==="collapsed"?"expanded":"collapsed");
+    });
+  }
+  apply(root.dataset.nav==="collapsed"?"collapsed":preferred());
+
+  /* ---- mobile off-canvas drawer ---- */
+  var mq=window.matchMedia("(max-width:959px)");
+  var menuBtn=document.getElementById("intel-mobile-menu");
+  var closeBtn=document.getElementById("intel-mobile-close");
+  var scrim=document.getElementById("intel-shell-scrim");
+  function setDrawer(open){
+    if(open) root.dataset.mobileNav="open"; else delete root.dataset.mobileNav;
+    if(menuBtn) menuBtn.setAttribute("aria-expanded",open?"true":"false");
+  }
+  var closeDrawer=function(){ setDrawer(false); };
+  if(menuBtn) menuBtn.addEventListener("click",function(){ setDrawer(root.dataset.mobileNav!=="open"); });
+  if(closeBtn) closeBtn.addEventListener("click",closeDrawer);
+  if(scrim) scrim.addEventListener("click",closeDrawer);
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape") closeDrawer(); });
+  // pick a destination → close the drawer (view links change the hash in place)
+  var sidebar=document.getElementById("intel-shell-sidebar");
+  if(sidebar){
+    sidebar.querySelectorAll(".intel-shell-nav a").forEach(function(a){
+      a.addEventListener("click",function(){ if(mq.matches) closeDrawer(); });
+    });
+  }
+  // leaving mobile width clears any open drawer so desktop layout is never locked
+  function onMQ(){ if(!mq.matches) closeDrawer(); }
+  if(mq.addEventListener) mq.addEventListener("change",onMQ); else window.addEventListener("resize",onMQ);
+})();
+</script>
+<script data-intel-theme="init">
+(function(){
+  var KEY="gyc-foresight-theme";
+  function apply(theme){
+    document.documentElement.dataset.theme=theme;
+    var btn=document.getElementById("intel-theme-toggle");
+    if(btn){
+      btn.textContent=theme==="dark"?"\u2600":"\u{1F319}";
+      btn.setAttribute("aria-label",theme==="dark"?"Switch to light mode":"Switch to dark mode");
+    }
+    try{localStorage.setItem(KEY,theme);}catch(e){}
+    try{window.dispatchEvent(new CustomEvent("gyc-theme-change",{detail:theme}));}catch(e){}
+  }
+  function preferred(){
+    try{
+      var s=localStorage.getItem(KEY);
+      if(s==="light"||s==="dark") return s;
+    }catch(e){}
+    return "light";
+  }
+  var btn=document.getElementById("intel-theme-toggle");
+  if(btn){
+    btn.addEventListener("click",function(){
+      apply(document.documentElement.dataset.theme==="dark"?"light":"dark");
+    });
+  }
+  if(!document.documentElement.dataset.theme) apply(preferred());
+  else apply(document.documentElement.dataset.theme);
+})();
+</script>
+</body>
+</html>

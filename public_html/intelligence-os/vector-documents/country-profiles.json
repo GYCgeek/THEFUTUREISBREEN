@@ -1,0 +1,931 @@
+{
+  "generated_at": "2026-08-17T03:22:00.769Z",
+  "items": [
+    {
+      "id": "AT::profile",
+      "doc_type": "country_profile",
+      "text": "Country profile for Austria (AT). Jurisdiction type: national. Region: Europe. Scan status: enriched. Completeness: enriched. Ambition score: 50/100. Tier: emerging. Score breakdown: constitutional_recognition: 1/3 (Budget outcome-orientation, not an FG clause); dedicated_legislation: 2/4 (WFA-KJV mandatory since 2013); institutional_mechanisms: 1/3 (Ministry self-assessment only); judicial_enforcement: 0/2 (No IIA-review case located); international_leadership: 2/2 (Declaration on Future Generations); policy_integration: 2/2 (Worked 2025 skip on the budget omnibus). Strongest documented sections: constitutional_provisions (1), dedicated_legislation (1), institutional_mechanisms (1). Analyst notes: IIA family lives on policy-tools.html#family=iia&country=AT. Mandatory cousin, documented skip.. Relevant signals: austria-s-binding-jugend-check-requires-child-and-youth-impact-assessment-of-all-federal-bills-2013, austria-budgetbegleitgesetz-2025-enacts-family-benefit-freeze-after-a-completed-child-and-youth-wfa.",
+      "metadata": {
+        "source_file": "research/country-legal-frameworks/AT.json",
+        "country_code": "AT",
+        "country_name": "Austria",
+        "jurisdiction_type": "national",
+        "region": "Europe",
+        "scan_status": "enriched",
+        "completeness": "enriched",
+        "relevant_signal_ids": [
+          "austria-s-binding-jugend-check-requires-child-and-youth-impact-assessment-of-all-federal-bills-2013",
+          "austria-budgetbegleitgesetz-2025-enacts-family-benefit-freeze-after-a-completed-child-and-youth-wfa"
+        ],
+        "relevant_signals_count": 2,
+        "ambition_scoring": {
+          "raw_score": 8,
+          "max_score": 16,
+          "normalized_score": 50,
+          "tier": "emerging",
+          "breakdown": {
+            "constitutional_recognition": {
+              "score": 1,
+              "max": 3,
+              "detail": "Budget outcome-orientation, not an FG clause"
+            },
+            "dedicated_legislation": {
+              "score": 2,
+              "max": 4,
+              "detail": "WFA-KJV mandatory since 2013"
+            },
+            "institutional_mechanisms": {
+              "score": 1,
+              "max": 3,
+              "detail": "Ministry self-assessment only"
+            },
+            "judicial_enforcement": {
+              "score": 0,
+              "max": 2,
+              "detail": "No IIA-review case located"
+            },
+            "international_leadership": {
+              "score": 2,
+              "max": 2,
+              "detail": "Declaration on Future Generations"
+            },
+            "policy_integration": {
+              "score": 2,
+              "max": 2,
+              "detail": "Worked 2025 skip on the budget omnibus"
+            }
+          }
+        }
+      },
+      "text_hash": "6bcb8bbbea0296f61df74688984eae25e282df7c8cf385db2e940a9c671b941e"
+    },
+    {
+      "id": "AU::profile",
+      "doc_type": "country_profile",
+      "text": "Country profile for Australia (AU). Jurisdiction type: national. Region: Oceania. Scan status: enriched. Completeness: enriched. Ambition score: 81/100. Tier: leader. Score breakdown: constitutional_recognition: 1/3 (1 provisions found); dedicated_legislation: 4/4 (3 laws found); institutional_mechanisms: 3/3 (3 mechanisms found); judicial_enforcement: 1/2 (1 precedents found); international_leadership: 2/2 (2 commitments found); policy_integration: 2/2 (3 integration points found). Strongest documented sections: dedicated_legislation (3), institutional_mechanisms (3), policy_integration (3). Analyst notes: Australia presents a dynamic and evolving picture. Its strongest asset is the EPBC Act's statutory intergenerational equity principle — one of the most explicit in the common law world — which applies to all national environmental decisions. The Sharma case was a near-miss: the first global judicial finding of a ministerial duty of care to future generations (overturned on appeal), but it accelerated climate litigation globally. The Wellbeing of Future Generations Bill 2025 is the most significant current development — a direct attempt to replicate Wales' WFGA with active civil society backing and a cross-party parliamentary group. The mandatory Intergenerational Report (40-year fiscal horizon) and the Measuring What Matters framework show growing policy integration. The main gap is a lack of constitutional recognition and the absence of a statutory future generations commissioner — both of which the 2025 Bill would address if passed.. Relevant signals: australia-tax-reform-passed-lower-house-2026-06-04, malaysia-social-media-ban-under-16-2026-06-01, biodiversity-council-australia-intergenerational-letter-budget-nature-2026-06, canada-oas-reform-intergenerational-fairness-2026-05-25, aspi-darwin-dialogue-young-guns-national-security-2026-05-27, australia-chalmers-tax-intergenerational-equity-2026-03-19, australia-tax-reform-future-generations-2026-05-12, australia-ndis-future-generations-bill-2026-05-14, australia-budget-climate-health-intergenerational-gap-2026-05-22, australia-budget-education-equity-gap-2026-05-20, scotland-fm-intergenerational-child-poverty-2026-05-26, uk-pensions-commission-intergenerational-fairness-2026-05-19, pacific-youth-cop31-talanoa-dialogues-2026-05-25.",
+      "metadata": {
+        "source_file": "research/country-legal-frameworks/AU.json",
+        "country_code": "AU",
+        "country_name": "Australia",
+        "jurisdiction_type": "national",
+        "region": "Oceania",
+        "scan_status": "enriched",
+        "completeness": "enriched",
+        "relevant_signal_ids": [
+          "australia-tax-reform-passed-lower-house-2026-06-04",
+          "malaysia-social-media-ban-under-16-2026-06-01",
+          "biodiversity-council-australia-intergenerational-letter-budget-nature-2026-06",
+          "canada-oas-reform-intergenerational-fairness-2026-05-25",
+          "aspi-darwin-dialogue-young-guns-national-security-2026-05-27",
+          "australia-chalmers-tax-intergenerational-equity-2026-03-19",
+          "australia-tax-reform-future-generations-2026-05-12",
+          "australia-ndis-future-generations-bill-2026-05-14",
+          "australia-budget-climate-health-intergenerational-gap-2026-05-22",
+          "australia-budget-education-equity-gap-2026-05-20",
+          "scotland-fm-intergenerational-child-poverty-2026-05-26",
+          "uk-pensions-commission-intergenerational-fairness-2026-05-19",
+          "pacific-youth-cop31-talanoa-dialogues-2026-05-25"
+        ],
+        "relevant_signals_count": 13,
+        "ambition_scoring": {
+          "raw_score": 13,
+          "max_score": 16,
+          "normalized_score": 81,
+          "tier": "leader",
+          "breakdown": {
+            "constitutional_recognition": {
+              "score": 1,
+              "max": 3,
+              "detail": "1 provisions found"
+            },
+            "dedicated_legislation": {
+              "score": 4,
+              "max": 4,
+              "detail": "3 laws found"
+            },
+            "institutional_mechanisms": {
+              "score": 3,
+              "max": 3,
+              "detail": "3 mechanisms found"
+            },
+            "judicial_enforcement": {
+              "score": 1,
+              "max": 2,
+              "detail": "1 precedents found"
+            },
+            "international_leadership": {
+              "score": 2,
+              "max": 2,
+              "detail": "2 commitments found"
+            },
+            "policy_integration": {
+              "score": 2,
+              "max": 2,
+              "detail": "3 integration points found"
+            }
+          }
+        }
+      },
+      "text_hash": "34609a72fa87b6e11bf54ae1edf835e6bd4a389dd0e3ae265dd98aff747beb0c"
+    },
+    {
+      "id": "BE::profile",
+      "doc_type": "country_profile",
+      "text": "Country profile for Belgium (BE). Jurisdiction type: national. Region: Europe. Scan status: enriched. Completeness: enriched. Ambition score: 63/100. Tier: emerging. Score breakdown: constitutional_recognition: 1/3 (No national FG clause; Flemish JoKER is statutory at Community level); dedicated_legislation: 2/4 (Jeugddecreet Art. 7 + 2026 age-30 expansion; federal IIA absent); institutional_mechanisms: 2/3 (CJM advice + Council of State stall power); judicial_enforcement: 1/2 (CoS procedure stall, not constitutional-court IIA review); international_leadership: 2/2 (3 commitments found); policy_integration: 2/2 (2 integration points found). Strongest documented sections: institutional_mechanisms (3), international_commitments (3), dedicated_legislation (2). Analyst notes: IIA deep dive: belgium-intergenerational-equity. Belgium's IIA is Flanders JoKER, not a federal tool. Unique bite: Council of State can stall a missing report. Completing JoKER does not rewrite policy (bill 864, May 2026).. Relevant signals: flanders-expands-mandatory-joker-child-and-youth-impact-reports-from-under-25-to-age-30-2026-03-13, flanders-files-a-completed-joker-with-the-community-institution-school-bill-after-the-13-march-2026, flemish-council-of-state-required-a-missing-joker-before-the-2021-closed-supervision-youth-justice-b, flanders-tightens-family-company-inheritance-relief-by-excluding-residential-property-from-preferent.",
+      "metadata": {
+        "source_file": "research/country-legal-frameworks/BE.json",
+        "country_code": "BE",
+        "country_name": "Belgium",
+        "jurisdiction_type": "national",
+        "region": "Europe",
+        "scan_status": "enriched",
+        "completeness": "enriched",
+        "relevant_signal_ids": [
+          "flanders-expands-mandatory-joker-child-and-youth-impact-reports-from-under-25-to-age-30-2026-03-13",
+          "flanders-files-a-completed-joker-with-the-community-institution-school-bill-after-the-13-march-2026",
+          "flemish-council-of-state-required-a-missing-joker-before-the-2021-closed-supervision-youth-justice-b",
+          "flanders-tightens-family-company-inheritance-relief-by-excluding-residential-property-from-preferent"
+        ],
+        "relevant_signals_count": 4,
+        "ambition_scoring": {
+          "raw_score": 10,
+          "max_score": 16,
+          "normalized_score": 63,
+          "tier": "emerging",
+          "breakdown": {
+            "constitutional_recognition": {
+              "score": 1,
+              "max": 3,
+              "detail": "No national FG clause; Flemish JoKER is statutory at Community level"
+            },
+            "dedicated_legislation": {
+              "score": 2,
+              "max": 4,
+              "detail": "Jeugddecreet Art. 7 + 2026 age-30 expansion; federal IIA absent"
+            },
+            "institutional_mechanisms": {
+              "score": 2,
+              "max": 3,
+              "detail": "CJM advice + Council of State stall power"
+            },
+            "judicial_enforcement": {
+              "score": 1,
+              "max": 2,
+              "detail": "CoS procedure stall, not constitutional-court IIA review"
+            },
+            "international_leadership": {
+              "score": 2,
+              "max": 2,
+              "detail": "3 commitments found"
+            },
+            "policy_integration": {
+              "score": 2,
+              "max": 2,
+              "detail": "2 integration points found"
+            }
+          }
+        }
+      },
+      "text_hash": "e39cdc30080c5b506bd4dbb4ea27281f29176d05d7957c3c82a61cd63f250e92"
+    },
+    {
+      "id": "DE::profile",
+      "doc_type": "country_profile",
+      "text": "Country profile for Germany (DE). Jurisdiction type: national. Region: Europe. Scan status: enriched. Completeness: enriched. Ambition score: 75/100. Tier: emerging. Score breakdown: constitutional_recognition: 2/3 (Article 20a names future generations; no dedicated IIA clause); dedicated_legislation: 2/4 (Jugend-Check (admin) + Climate Change Act; no statutory IIA annex); institutional_mechanisms: 3/3 (KomJC federal + ProJCT Thuringia pilot); judicial_enforcement: 2/2 (Neubauer 2021 intergenerational climate doctrine); international_leadership: 2/2 (3 commitments found); policy_integration: 1/2 (Checks are published; Bundestag not bound; documented skips). Strongest documented sections: institutional_mechanisms (3), international_commitments (3), policy_integration (3). Analyst notes: IIA deep dive: germany-intergenerational-equity. Jugend-Check is the densest published youth-IA series in the corpus (490/91) and the Bundestag is not bound. Bite pattern: skip (minijobs 2022) or check-then-enact (Thuringia robes). Not a future-unborn IIA.. Relevant signals: germany-youth-check-third-report-490-federal-bills-screened-91-youth-impact-assessments-in-20th-bund, german-minijobs-government-draft-drops-jugend-check-youth-protective-time-recording-and-payslip-rule, komjc-ikjhg-checks-show-cabinet-dropped-a-youth-own-claim-the-bill-did-not-become-law-2024-12-09t00, thuringia-publishes-a-land-jugend-check-on-the-health-service-bill-now-before-the-landtag-2026-07-01, thuringia-enacts-rechtspfleger-robe-clause-after-land-jugend-check-on-the-court-organisation-bill-20.",
+      "metadata": {
+        "source_file": "research/country-legal-frameworks/DE.json",
+        "country_code": "DE",
+        "country_name": "Germany",
+        "jurisdiction_type": "national",
+        "region": "Europe",
+        "scan_status": "enriched",
+        "completeness": "enriched",
+        "relevant_signal_ids": [
+          "germany-youth-check-third-report-490-federal-bills-screened-91-youth-impact-assessments-in-20th-bund",
+          "german-minijobs-government-draft-drops-jugend-check-youth-protective-time-recording-and-payslip-rule",
+          "komjc-ikjhg-checks-show-cabinet-dropped-a-youth-own-claim-the-bill-did-not-become-law-2024-12-09t00",
+          "thuringia-publishes-a-land-jugend-check-on-the-health-service-bill-now-before-the-landtag-2026-07-01",
+          "thuringia-enacts-rechtspfleger-robe-clause-after-land-jugend-check-on-the-court-organisation-bill-20"
+        ],
+        "relevant_signals_count": 5,
+        "ambition_scoring": {
+          "raw_score": 12,
+          "max_score": 16,
+          "normalized_score": 75,
+          "tier": "emerging",
+          "breakdown": {
+            "constitutional_recognition": {
+              "score": 2,
+              "max": 3,
+              "detail": "Article 20a names future generations; no dedicated IIA clause"
+            },
+            "dedicated_legislation": {
+              "score": 2,
+              "max": 4,
+              "detail": "Jugend-Check (admin) + Climate Change Act; no statutory IIA annex"
+            },
+            "institutional_mechanisms": {
+              "score": 3,
+              "max": 3,
+              "detail": "KomJC federal + ProJCT Thuringia pilot"
+            },
+            "judicial_enforcement": {
+              "score": 2,
+              "max": 2,
+              "detail": "Neubauer 2021 intergenerational climate doctrine"
+            },
+            "international_leadership": {
+              "score": 2,
+              "max": 2,
+              "detail": "3 commitments found"
+            },
+            "policy_integration": {
+              "score": 1,
+              "max": 2,
+              "detail": "Checks are published; Bundestag not bound; documented skips"
+            }
+          }
+        }
+      },
+      "text_hash": "3280de5047f266084d1a4d86dc5541e5d46ee15c4a798227f1a1af4171cdeec6"
+    },
+    {
+      "id": "FR::profile",
+      "doc_type": "country_profile",
+      "text": "Country profile for France (FR). Jurisdiction type: national. Region: Europe. Scan status: enriched. Completeness: enriched. Ambition score: 44/100. Tier: limited. Score breakdown: constitutional_recognition: 1/3 (No IIA clause); dedicated_legislation: 2/4 (2016 circular, not a statute); institutional_mechanisms: 1/3 (SGG method; COJ advisory); judicial_enforcement: 0/2 (No missing-clause case located); international_leadership: 2/2 (Declaration on Future Generations); policy_integration: 1/2 (2025 agricultural IA filled; rewrite unproven). Strongest documented sections: constitutional_provisions (1), dedicated_legislation (1), institutional_mechanisms (1). Analyst notes: IIA family lives on policy-tools.html#family=iia&country=FR. Cousin, bite unknown.. Relevant signals: france-s-2016-youth-impact-clause-requires-intergenerational-justice-analysis-in-every-government-bi, french-agricultural-orientation-law-2025-268-enacts-youth-impact-clause-measures-after-a-completed-2.",
+      "metadata": {
+        "source_file": "research/country-legal-frameworks/FR.json",
+        "country_code": "FR",
+        "country_name": "France",
+        "jurisdiction_type": "national",
+        "region": "Europe",
+        "scan_status": "enriched",
+        "completeness": "enriched",
+        "relevant_signal_ids": [
+          "france-s-2016-youth-impact-clause-requires-intergenerational-justice-analysis-in-every-government-bi",
+          "french-agricultural-orientation-law-2025-268-enacts-youth-impact-clause-measures-after-a-completed-2"
+        ],
+        "relevant_signals_count": 2,
+        "ambition_scoring": {
+          "raw_score": 7,
+          "max_score": 16,
+          "normalized_score": 44,
+          "tier": "limited",
+          "breakdown": {
+            "constitutional_recognition": {
+              "score": 1,
+              "max": 3,
+              "detail": "No IIA clause"
+            },
+            "dedicated_legislation": {
+              "score": 2,
+              "max": 4,
+              "detail": "2016 circular, not a statute"
+            },
+            "institutional_mechanisms": {
+              "score": 1,
+              "max": 3,
+              "detail": "SGG method; COJ advisory"
+            },
+            "judicial_enforcement": {
+              "score": 0,
+              "max": 2,
+              "detail": "No missing-clause case located"
+            },
+            "international_leadership": {
+              "score": 2,
+              "max": 2,
+              "detail": "Declaration on Future Generations"
+            },
+            "policy_integration": {
+              "score": 1,
+              "max": 2,
+              "detail": "2025 agricultural IA filled; rewrite unproven"
+            }
+          }
+        }
+      },
+      "text_hash": "c52da5a73465b7b9dd1d4f7b3787d8e9c5de2c2829ee21d7ebfd466b5fa499e4"
+    },
+    {
+      "id": "GB::profile",
+      "doc_type": "country_profile",
+      "text": "Country profile for United Kingdom (GB). Jurisdiction type: national. Region: Europe. Scan status: enriched. Completeness: enriched. Ambition score: 88/100. Tier: leader. Score breakdown: constitutional_recognition: 1/3 (1 provisions found); dedicated_legislation: 4/4 (4 laws found); institutional_mechanisms: 3/3 (4 mechanisms found); judicial_enforcement: 2/2 (2 precedents found); international_leadership: 2/2 (3 commitments found); policy_integration: 2/2 (3 integration points found). Strongest documented sections: dedicated_legislation (4), institutional_mechanisms (4), international_commitments (3). Analyst notes: The UK presents a mixed picture. Wales is a global leader with its Well-being of Future Generations Act and Commissioner — the only country with such a comprehensive legal framework. However, at the UK-wide level, there is no codified constitution, no dedicated future generations legislation (two bills failed to progress), and no national commissioner. The UK's strength lies in its climate governance infrastructure (Climate Change Act, CCC, carbon budgets) and fiscal long-term analysis (OBR), which indirectly serve intergenerational equity. The House of Lords committee's 2019 recommendations for Intergenerational Impact Assessments remain unimplemented. UK courts have been reluctant to enforce international climate obligations domestically (FoE v UKEF), limiting judicial enforcement of intergenerational climate duties.. Relevant signals: malaysia-social-media-ban-under-16-2026-06-01, uk-youth-unemployment-milburn-report-2026-05-28, uk-votes-at-16-bill-2026-05, wales-future-generations-commissioner-warning-2026-05-20, bonaire-climate-case-2026-01-28, eu-strategy-intergenerational-fairness-2026-03-05, unu-future-generations-platform-2026-04, wales-accepts-core-recommendations-for-future-electricity-grid-planning-2026-04-13, wales-advances-long-term-flood-resilience-planning-toward-2050-2026-04-13, welsh-government-endorses-nearly-all-2025-future-generations-recommendations-2026-04-13, uk-staffordshire-future-ready-fund-2026-04-15, wales-ofwat-strategic-priorities-2026-04-18, uk-every-child-achieving-thriving-white-paper-2026-04-27, uk-ministerial-group-digital-inclusion-governance-2026-04-24, wales-population-projections-ageing-young-people-2026-04-28, uk-childrens-reforms-law-2026-05-04, uk-apprenticeships-youth-guarantee-expansion-2026-05-11, uk-mission-north-east-mission-coastal-2026-05-10, wales-senedd-future-generations-committee-2026-05-12, england-childrens-commissioner-big-future-democracy-anxiety-2026-05-02.",
+      "metadata": {
+        "source_file": "research/country-legal-frameworks/GB.json",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
+        "jurisdiction_type": "national",
+        "region": "Europe",
+        "scan_status": "enriched",
+        "completeness": "enriched",
+        "relevant_signal_ids": [
+          "malaysia-social-media-ban-under-16-2026-06-01",
+          "uk-youth-unemployment-milburn-report-2026-05-28",
+          "uk-votes-at-16-bill-2026-05",
+          "wales-future-generations-commissioner-warning-2026-05-20",
+          "bonaire-climate-case-2026-01-28",
+          "eu-strategy-intergenerational-fairness-2026-03-05",
+          "unu-future-generations-platform-2026-04",
+          "wales-accepts-core-recommendations-for-future-electricity-grid-planning-2026-04-13",
+          "wales-advances-long-term-flood-resilience-planning-toward-2050-2026-04-13",
+          "welsh-government-endorses-nearly-all-2025-future-generations-recommendations-2026-04-13",
+          "uk-staffordshire-future-ready-fund-2026-04-15",
+          "wales-ofwat-strategic-priorities-2026-04-18",
+          "uk-every-child-achieving-thriving-white-paper-2026-04-27",
+          "uk-ministerial-group-digital-inclusion-governance-2026-04-24",
+          "wales-population-projections-ageing-young-people-2026-04-28",
+          "uk-childrens-reforms-law-2026-05-04",
+          "uk-apprenticeships-youth-guarantee-expansion-2026-05-11",
+          "uk-mission-north-east-mission-coastal-2026-05-10",
+          "wales-senedd-future-generations-committee-2026-05-12",
+          "england-childrens-commissioner-big-future-democracy-anxiety-2026-05-02",
+          "uk-ccc-well-adapted-wales-commissioner-climate-negligence-2026-05-20",
+          "the-new-alignment-g20-intergenerational-2026-05-26",
+          "scotland-fm-intergenerational-child-poverty-2026-05-26",
+          "uk-pensions-commission-intergenerational-fairness-2026-05-19",
+          "ifs-inheritance-tax-reform-intergenerational-2026-05-27",
+          "uk-smf-citizens-advance-intergenerational-wealth-2026-06-09"
+        ],
+        "relevant_signals_count": 26,
+        "ambition_scoring": {
+          "raw_score": 14,
+          "max_score": 16,
+          "normalized_score": 88,
+          "tier": "leader",
+          "breakdown": {
+            "constitutional_recognition": {
+              "score": 1,
+              "max": 3,
+              "detail": "1 provisions found"
+            },
+            "dedicated_legislation": {
+              "score": 4,
+              "max": 4,
+              "detail": "4 laws found"
+            },
+            "institutional_mechanisms": {
+              "score": 3,
+              "max": 3,
+              "detail": "4 mechanisms found"
+            },
+            "judicial_enforcement": {
+              "score": 2,
+              "max": 2,
+              "detail": "2 precedents found"
+            },
+            "international_leadership": {
+              "score": 2,
+              "max": 2,
+              "detail": "3 commitments found"
+            },
+            "policy_integration": {
+              "score": 2,
+              "max": 2,
+              "detail": "3 integration points found"
+            }
+          }
+        }
+      },
+      "text_hash": "f772cf01aec91e160a4224fc8135f9bd0abffc097d8a3646c2064bebb3edf89a"
+    },
+    {
+      "id": "IN::profile",
+      "doc_type": "country_profile",
+      "text": "Country profile for India (IN). Jurisdiction type: national. Region: Asia. Scan status: enriched. Completeness: enriched. Ambition score: 88/100. Tier: leader. Score breakdown: constitutional_recognition: 2/3 (2 provisions found); dedicated_legislation: 4/4 (3 laws found); institutional_mechanisms: 2/3 (2 mechanisms found); judicial_enforcement: 2/2 (3 precedents found); international_leadership: 2/2 (3 commitments found); policy_integration: 2/2 (3 integration points found). Strongest documented sections: dedicated_legislation (3), judicial_precedents (3), international_commitments (3). Analyst notes: India has one of the stronger constitutional-environmental doctrines in the Global South, even without a standalone future generations act. Its framework rests on a mix of constitutional duties, expansive Article 21 jurisprudence, core environmental statutes, and a specialized environmental tribunal. The strongest recent development is the Supreme Court's 2024 recognition that protection against the adverse effects of climate change flows from Articles 14 and 21. That said, India still lacks a dedicated future generations commissioner or ombudsperson, and the implementation gap is substantial: environmental clearances remain contested, ecological protection is often traded against development imperatives, and intergenerational fairness is not yet systematically embedded in fiscal, youth-participation, or whole-of-government decision processes. In other words, India is doctrinally ambitious but institutionally uneven.. Relevant signals: india-youth-ki-awaaz-civic-tech-2026-05-26, nepal-gen-z-uprising-2026-03-24, india-youth-policy-participation-2026-03-25, space-orbital-governance-intergenerational-equity-2026-04-01, chi-she-shine-partnership-exploration-2026-05-26, hindustan-times-boomers-europe-intergenerational-heist-2026-05-29, india-intergenerational-equity-tax-devolution-2026-06, wir2026-india-inequality-intergenerational-mobility-2026-06, world-inequality-report-2026-intergenerational.",
+      "metadata": {
+        "source_file": "research/country-legal-frameworks/IN.json",
+        "country_code": "IN",
+        "country_name": "India",
+        "jurisdiction_type": "national",
+        "region": "Asia",
+        "scan_status": "enriched",
+        "completeness": "enriched",
+        "relevant_signal_ids": [
+          "india-youth-ki-awaaz-civic-tech-2026-05-26",
+          "nepal-gen-z-uprising-2026-03-24",
+          "india-youth-policy-participation-2026-03-25",
+          "space-orbital-governance-intergenerational-equity-2026-04-01",
+          "chi-she-shine-partnership-exploration-2026-05-26",
+          "hindustan-times-boomers-europe-intergenerational-heist-2026-05-29",
+          "india-intergenerational-equity-tax-devolution-2026-06",
+          "wir2026-india-inequality-intergenerational-mobility-2026-06",
+          "world-inequality-report-2026-intergenerational"
+        ],
+        "relevant_signals_count": 9,
+        "ambition_scoring": {
+          "raw_score": 14,
+          "max_score": 16,
+          "normalized_score": 88,
+          "tier": "leader",
+          "breakdown": {
+            "constitutional_recognition": {
+              "score": 2,
+              "max": 3,
+              "detail": "2 provisions found"
+            },
+            "dedicated_legislation": {
+              "score": 4,
+              "max": 4,
+              "detail": "3 laws found"
+            },
+            "institutional_mechanisms": {
+              "score": 2,
+              "max": 3,
+              "detail": "2 mechanisms found"
+            },
+            "judicial_enforcement": {
+              "score": 2,
+              "max": 2,
+              "detail": "3 precedents found"
+            },
+            "international_leadership": {
+              "score": 2,
+              "max": 2,
+              "detail": "3 commitments found"
+            },
+            "policy_integration": {
+              "score": 2,
+              "max": 2,
+              "detail": "3 integration points found"
+            }
+          }
+        }
+      },
+      "text_hash": "a10dbb53775ec40037cd23a6ea42d6024b4ec1649fe1b9670e3e1a14d123189c"
+    },
+    {
+      "id": "IT::profile",
+      "doc_type": "country_profile",
+      "text": "Country profile for Italy (IT). Jurisdiction type: national. Region: Europe. Scan status: enriched. Completeness: enriched. Ambition score: 88/100. Tier: leader. Score breakdown: constitutional_recognition: 2/3 (2 provisions found); dedicated_legislation: 4/4 (2 laws found); institutional_mechanisms: 2/3 (2 mechanisms found); judicial_enforcement: 2/2 (2 precedents found); international_leadership: 2/2 (3 commitments found); policy_integration: 2/2 (2 integration points found). Strongest documented sections: international_commitments (3), constitutional_provisions (2), dedicated_legislation (2). Analyst notes: Italy's headline story is its landmark 2022 constitutional amendment — one of the first countries globally to insert 'future generations' explicitly into the fundamental principles of its constitution (Article 9). This gives the concept constitutional standing at the highest level of the legal order. The judicial picture is nascent but active: the Giudizio Universale case (2024) was dismissed on procedural grounds but used Article 9's future generations language, and the ENI case is proceeding after Supreme Court confirmed jurisdiction in 2025. The main gaps are the absence of a dedicated national institution (no commissioner or ombudsperson) and no specific implementing legislation for the Article 9 mandate beyond the NRRP. Italy also benefits from EU-level architecture — the EU's new Intergenerational Fairness Commissioner and EU Climate Law both strengthen Italy's framework from above.. Relevant signals: oecd-pension-reforms-intergenerational-fairness-2026-05-19, unicef-children-climate-risk-report-2026-06-16, italy-youth-peace-security-nap-2026-06-17.",
+      "metadata": {
+        "source_file": "research/country-legal-frameworks/IT.json",
+        "country_code": "IT",
+        "country_name": "Italy",
+        "jurisdiction_type": "national",
+        "region": "Europe",
+        "scan_status": "enriched",
+        "completeness": "enriched",
+        "relevant_signal_ids": [
+          "oecd-pension-reforms-intergenerational-fairness-2026-05-19",
+          "unicef-children-climate-risk-report-2026-06-16",
+          "italy-youth-peace-security-nap-2026-06-17"
+        ],
+        "relevant_signals_count": 3,
+        "ambition_scoring": {
+          "raw_score": 14,
+          "max_score": 16,
+          "normalized_score": 88,
+          "tier": "leader",
+          "breakdown": {
+            "constitutional_recognition": {
+              "score": 2,
+              "max": 3,
+              "detail": "2 provisions found"
+            },
+            "dedicated_legislation": {
+              "score": 4,
+              "max": 4,
+              "detail": "2 laws found"
+            },
+            "institutional_mechanisms": {
+              "score": 2,
+              "max": 3,
+              "detail": "2 mechanisms found"
+            },
+            "judicial_enforcement": {
+              "score": 2,
+              "max": 2,
+              "detail": "2 precedents found"
+            },
+            "international_leadership": {
+              "score": 2,
+              "max": 2,
+              "detail": "3 commitments found"
+            },
+            "policy_integration": {
+              "score": 2,
+              "max": 2,
+              "detail": "2 integration points found"
+            }
+          }
+        }
+      },
+      "text_hash": "344b4626ad83f2a6e9c9b004e8a04b7ca17e7d39695bf4856f816912c525a43b"
+    },
+    {
+      "id": "NL::profile",
+      "doc_type": "country_profile",
+      "text": "Country profile for Netherlands (NL). Jurisdiction type: national. Region: Europe. Scan status: enriched. Completeness: enriched. Ambition score: 75/100. Tier: emerging. Score breakdown: constitutional_recognition: 1/3 (No Grondwet future-generations clause; ECHR/Urgenda is the live hook); dedicated_legislation: 3/4 (3 instruments: generatietoets (admin), Kinderrechtentoets instruction, Climate Act); institutional_mechanisms: 2/3 (Kinderombudsman + KCBR method owner; no FG commissioner); judicial_enforcement: 2/2 (Urgenda + Shell climate line; not IIA review); international_leadership: 2/2 (3 commitments found); policy_integration: 2/2 (3 integration points found). Strongest documented sections: dedicated_legislation (3), institutional_mechanisms (3), international_commitments (3). Analyst notes: IIA deep dive: netherlands-intergenerational-equity. National generatietoets is enacted as administrative method, not a veto. Completing a toets is documented; changing a budget or bill is rare (one consultation-stage Kinderrechtentoets amendment). Next watch: Prinsjesdag 15 September 2026.. Relevant signals: netherlands-senate-generatietoets-motion-adopted-2025-11-25, netherlands-beleidskompas-generatietoets-integration-2025-12-04, netherlands-publishes-a-completed-generatietoets-on-the-national-circular-economy-programme-2023-203, dutch-senate-instructs-government-to-apply-the-kinderrechtentoets-to-all-future-youth-care-bills-202, dutch-reikwijdte-jeugdwet-consultation-publishes-a-kinderrechtentoets-that-adjusted-two-bill-safegua, netherlands-raad-van-state-intergenerational-justice-2026-04-16, netherlands-shell-appeal-climate-duty-ruling-2024-11-12.",
+      "metadata": {
+        "source_file": "research/country-legal-frameworks/NL.json",
+        "country_code": "NL",
+        "country_name": "Netherlands",
+        "jurisdiction_type": "national",
+        "region": "Europe",
+        "scan_status": "enriched",
+        "completeness": "enriched",
+        "relevant_signal_ids": [
+          "netherlands-senate-generatietoets-motion-adopted-2025-11-25",
+          "netherlands-beleidskompas-generatietoets-integration-2025-12-04",
+          "netherlands-publishes-a-completed-generatietoets-on-the-national-circular-economy-programme-2023-203",
+          "dutch-senate-instructs-government-to-apply-the-kinderrechtentoets-to-all-future-youth-care-bills-202",
+          "dutch-reikwijdte-jeugdwet-consultation-publishes-a-kinderrechtentoets-that-adjusted-two-bill-safegua",
+          "netherlands-raad-van-state-intergenerational-justice-2026-04-16",
+          "netherlands-shell-appeal-climate-duty-ruling-2024-11-12"
+        ],
+        "relevant_signals_count": 7,
+        "ambition_scoring": {
+          "raw_score": 12,
+          "max_score": 16,
+          "normalized_score": 75,
+          "tier": "emerging",
+          "breakdown": {
+            "constitutional_recognition": {
+              "score": 1,
+              "max": 3,
+              "detail": "No Grondwet future-generations clause; ECHR/Urgenda is the live hook"
+            },
+            "dedicated_legislation": {
+              "score": 3,
+              "max": 4,
+              "detail": "3 instruments: generatietoets (admin), Kinderrechtentoets instruction, Climate Act"
+            },
+            "institutional_mechanisms": {
+              "score": 2,
+              "max": 3,
+              "detail": "Kinderombudsman + KCBR method owner; no FG commissioner"
+            },
+            "judicial_enforcement": {
+              "score": 2,
+              "max": 2,
+              "detail": "Urgenda + Shell climate line; not IIA review"
+            },
+            "international_leadership": {
+              "score": 2,
+              "max": 2,
+              "detail": "3 commitments found"
+            },
+            "policy_integration": {
+              "score": 2,
+              "max": 2,
+              "detail": "3 integration points found"
+            }
+          }
+        }
+      },
+      "text_hash": "4d5b0277256ba8c15702fdf6022519bd49891db8e6df5142c99619fb487af6d9"
+    },
+    {
+      "id": "NO::profile",
+      "doc_type": "country_profile",
+      "text": "Country profile for Norway (NO). Jurisdiction type: national. Region: Europe. Scan status: enriched. Completeness: enriched. Ambition score: 6/100. Tier: limited. Score breakdown: constitutional_recognition: 1/3 (1 provisions found); dedicated_legislation: 0/4 (0 laws found); institutional_mechanisms: 0/3 (0 mechanisms found); judicial_enforcement: 0/2 (0 precedents found); international_leadership: 0/2 (0 commitments found); policy_integration: 0/2 (0 integration points found). Strongest documented sections: constitutional_provisions (1).",
+      "metadata": {
+        "source_file": "research/country-legal-frameworks/NO.json",
+        "country_code": "NO",
+        "country_name": "Norway",
+        "jurisdiction_type": "national",
+        "region": "Europe",
+        "scan_status": "enriched",
+        "completeness": "enriched",
+        "relevant_signal_ids": [],
+        "relevant_signals_count": 0,
+        "ambition_scoring": {
+          "raw_score": 1,
+          "max_score": 16,
+          "normalized_score": 6,
+          "tier": "limited",
+          "breakdown": {
+            "constitutional_recognition": {
+              "score": 1,
+              "max": 3,
+              "detail": "1 provisions found"
+            },
+            "dedicated_legislation": {
+              "score": 0,
+              "max": 4,
+              "detail": "0 laws found"
+            },
+            "institutional_mechanisms": {
+              "score": 0,
+              "max": 3,
+              "detail": "0 mechanisms found"
+            },
+            "judicial_enforcement": {
+              "score": 0,
+              "max": 2,
+              "detail": "0 precedents found"
+            },
+            "international_leadership": {
+              "score": 0,
+              "max": 2,
+              "detail": "0 commitments found"
+            },
+            "policy_integration": {
+              "score": 0,
+              "max": 2,
+              "detail": "0 integration points found"
+            }
+          }
+        }
+      },
+      "text_hash": "13757a0a30e5de749290cf02cae36fc9cdba9d26df70775a67bf10fe59d99042"
+    },
+    {
+      "id": "US::profile",
+      "doc_type": "country_profile",
+      "text": "Country profile for United States (US). Jurisdiction type: national. Region: North America. Scan status: enriched. Completeness: enriched. Ambition score: 63/100. Tier: emerging. Score breakdown: constitutional_recognition: 1/3 (1 provisions found); dedicated_legislation: 4/4 (2 laws found); institutional_mechanisms: 1/3 (1 mechanisms found); judicial_enforcement: 1/2 (1 precedents found); international_leadership: 2/2 (2 commitments found); policy_integration: 1/2 (1 integration points found). Strongest documented sections: dedicated_legislation (2), international_commitments (2), constitutional_provisions (1). Analyst notes: The US federal government has weak intergenerational equity frameworks: no constitutional provision, no dedicated legislation (bills failed), no commissioner, hostile federal courts (Juliana dismissed), and no intergenerational budgeting. The real action is at the state level — see individual state entries for Montana, Pennsylvania, Hawaii, New York, and others with green amendments and successful youth climate litigation.. Relevant signals: pisffc-right-livelihood-award-2025, hrw-europe-right-healthy-environment-2026-06-05, ninth-circuit-lighthiser-youth-climate-dismissal-2026-06-02, circle-tufts-youth-democracy-changes-2026-04, americans-future-generations-perception-gap-2026-05-23, unga-icj-climate-resolution-2026-05-20, us-youth-venner-epa-lawsuit-2026-05-20, montana-youth-climate-lawsuit-venue-2026-03-18, california-billionaire-tax-2026-03-19, warren-wealth-tax-federal-2026-03-26, lighthiser-v-trump-ninth-circuit-2026-04-13, ninth-circuit-dismisses-genesis-b-v-epa-2026-04-10, wisconsin-youth-climate-appeal-dunn-2026-05-28, hindustan-times-boomers-europe-intergenerational-heist-2026-05-29, wir2026-india-inequality-intergenerational-mobility-2026-06, youth-climate-plaintiffs-religious-liberty-endangerment-2026-06, pew-political-typology-2026-generational-divides, world-inequality-report-2026-intergenerational, pew-political-typology-2026-generational-gaps, the-hill-climate-betrayal-constitutional-amendment-2026-06-15.",
+      "metadata": {
+        "source_file": "research/country-legal-frameworks/US.json",
+        "country_code": "US",
+        "country_name": "United States",
+        "jurisdiction_type": "national",
+        "region": "North America",
+        "scan_status": "enriched",
+        "completeness": "enriched",
+        "relevant_signal_ids": [
+          "pisffc-right-livelihood-award-2025",
+          "hrw-europe-right-healthy-environment-2026-06-05",
+          "ninth-circuit-lighthiser-youth-climate-dismissal-2026-06-02",
+          "circle-tufts-youth-democracy-changes-2026-04",
+          "americans-future-generations-perception-gap-2026-05-23",
+          "unga-icj-climate-resolution-2026-05-20",
+          "us-youth-venner-epa-lawsuit-2026-05-20",
+          "montana-youth-climate-lawsuit-venue-2026-03-18",
+          "california-billionaire-tax-2026-03-19",
+          "warren-wealth-tax-federal-2026-03-26",
+          "lighthiser-v-trump-ninth-circuit-2026-04-13",
+          "ninth-circuit-dismisses-genesis-b-v-epa-2026-04-10",
+          "wisconsin-youth-climate-appeal-dunn-2026-05-28",
+          "hindustan-times-boomers-europe-intergenerational-heist-2026-05-29",
+          "wir2026-india-inequality-intergenerational-mobility-2026-06",
+          "youth-climate-plaintiffs-religious-liberty-endangerment-2026-06",
+          "pew-political-typology-2026-generational-divides",
+          "world-inequality-report-2026-intergenerational",
+          "pew-political-typology-2026-generational-gaps",
+          "the-hill-climate-betrayal-constitutional-amendment-2026-06-15"
+        ],
+        "relevant_signals_count": 20,
+        "ambition_scoring": {
+          "raw_score": 10,
+          "max_score": 16,
+          "normalized_score": 63,
+          "tier": "emerging",
+          "breakdown": {
+            "constitutional_recognition": {
+              "score": 1,
+              "max": 3,
+              "detail": "1 provisions found"
+            },
+            "dedicated_legislation": {
+              "score": 4,
+              "max": 4,
+              "detail": "2 laws found"
+            },
+            "institutional_mechanisms": {
+              "score": 1,
+              "max": 3,
+              "detail": "1 mechanisms found"
+            },
+            "judicial_enforcement": {
+              "score": 1,
+              "max": 2,
+              "detail": "1 precedents found"
+            },
+            "international_leadership": {
+              "score": 2,
+              "max": 2,
+              "detail": "2 commitments found"
+            },
+            "policy_integration": {
+              "score": 1,
+              "max": 2,
+              "detail": "1 integration points found"
+            }
+          }
+        }
+      },
+      "text_hash": "7e331483a208fb08cd27666c079f0083394ac948ec209021763452c5a689697b"
+    },
+    {
+      "id": "US_HI::profile",
+      "doc_type": "country_profile",
+      "text": "Country profile for Hawaii (US State) (US_HI). Jurisdiction type: subnational. Region: North America. Scan status: enriched. Completeness: enriched. Ambition score: 44/100. Tier: emerging. Score breakdown: constitutional_recognition: 2/3 (2 provisions found); dedicated_legislation: 2/4 (1 laws found); institutional_mechanisms: 1/3 (1 mechanisms found); judicial_enforcement: 1/2 (1 precedents found); international_leadership: 0/2 (0 commitments found); policy_integration: 1/2 (1 integration points found). Strongest documented sections: constitutional_provisions (2), dedicated_legislation (1), institutional_mechanisms (1). Analyst notes: Hawaii has one of the strongest constitutional environmental frameworks in the US, with two separate provisions explicitly protecting natural resources for 'present and future generations.' Combined with the nation's most ambitious statutory climate target (zero emissions by 2045), Hawaii integrates intergenerational equity into both its constitution and its policy framework..",
+      "metadata": {
+        "source_file": "research/country-legal-frameworks/US_HI.json",
+        "country_code": "US_HI",
+        "country_name": "Hawaii (US State)",
+        "jurisdiction_type": "subnational",
+        "region": "North America",
+        "scan_status": "enriched",
+        "completeness": "enriched",
+        "relevant_signal_ids": [],
+        "relevant_signals_count": 0,
+        "ambition_scoring": {
+          "raw_score": 7,
+          "max_score": 16,
+          "normalized_score": 44,
+          "tier": "emerging",
+          "breakdown": {
+            "constitutional_recognition": {
+              "score": 2,
+              "max": 3,
+              "detail": "2 provisions found"
+            },
+            "dedicated_legislation": {
+              "score": 2,
+              "max": 4,
+              "detail": "1 laws found"
+            },
+            "institutional_mechanisms": {
+              "score": 1,
+              "max": 3,
+              "detail": "1 mechanisms found"
+            },
+            "judicial_enforcement": {
+              "score": 1,
+              "max": 2,
+              "detail": "1 precedents found"
+            },
+            "international_leadership": {
+              "score": 0,
+              "max": 2,
+              "detail": "0 commitments found"
+            },
+            "policy_integration": {
+              "score": 1,
+              "max": 2,
+              "detail": "1 integration points found"
+            }
+          }
+        }
+      },
+      "text_hash": "3157a67e4ce67a9f82be6e44fec2ea7f21f00acc103aac247032bd2f5b474592"
+    },
+    {
+      "id": "US_MT::profile",
+      "doc_type": "country_profile",
+      "text": "Country profile for Montana (US State) (US_MT). Jurisdiction type: subnational. Region: North America. Scan status: enriched. Completeness: enriched. Ambition score: 44/100. Tier: emerging. Score breakdown: constitutional_recognition: 2/3 (2 provisions found); dedicated_legislation: 2/4 (1 laws found); institutional_mechanisms: 1/3 (1 mechanisms found); judicial_enforcement: 1/2 (1 precedents found); international_leadership: 0/2 (0 commitments found); policy_integration: 1/2 (1 integration points found). Strongest documented sections: constitutional_provisions (2), dedicated_legislation (1), institutional_mechanisms (1). Analyst notes: Montana is the strongest US state for intergenerational equity. Its 1972 constitution explicitly protects the environment for 'present and future generations' — language that proved decisive in Held v. Montana, the first US court victory establishing a constitutional climate right for youth. The Montana Supreme Court's 2024 affirmation is binding precedent within the state..",
+      "metadata": {
+        "source_file": "research/country-legal-frameworks/US_MT.json",
+        "country_code": "US_MT",
+        "country_name": "Montana (US State)",
+        "jurisdiction_type": "subnational",
+        "region": "North America",
+        "scan_status": "enriched",
+        "completeness": "enriched",
+        "relevant_signal_ids": [],
+        "relevant_signals_count": 0,
+        "ambition_scoring": {
+          "raw_score": 7,
+          "max_score": 16,
+          "normalized_score": 44,
+          "tier": "emerging",
+          "breakdown": {
+            "constitutional_recognition": {
+              "score": 2,
+              "max": 3,
+              "detail": "2 provisions found"
+            },
+            "dedicated_legislation": {
+              "score": 2,
+              "max": 4,
+              "detail": "1 laws found"
+            },
+            "institutional_mechanisms": {
+              "score": 1,
+              "max": 3,
+              "detail": "1 mechanisms found"
+            },
+            "judicial_enforcement": {
+              "score": 1,
+              "max": 2,
+              "detail": "1 precedents found"
+            },
+            "international_leadership": {
+              "score": 0,
+              "max": 2,
+              "detail": "0 commitments found"
+            },
+            "policy_integration": {
+              "score": 1,
+              "max": 2,
+              "detail": "1 integration points found"
+            }
+          }
+        }
+      },
+      "text_hash": "9363984546da27f148932747592884c5403002fa8e65f3c9894842a8eb38c2bc"
+    },
+    {
+      "id": "US_NY::profile",
+      "doc_type": "country_profile",
+      "text": "Country profile for New York (US State) (US_NY). Jurisdiction type: subnational. Region: North America. Scan status: enriched. Completeness: enriched. Ambition score: 31/100. Tier: limited. Score breakdown: constitutional_recognition: 1/3 (1 provisions found); dedicated_legislation: 2/4 (1 laws found); institutional_mechanisms: 1/3 (1 mechanisms found); judicial_enforcement: 0/2 (0 precedents found); international_leadership: 0/2 (0 commitments found); policy_integration: 1/2 (1 integration points found). Strongest documented sections: constitutional_provisions (1), dedicated_legislation (1), institutional_mechanisms (1). Analyst notes: New York is the newest US state with a green amendment (2021). Its constitutional provision is less explicit about future generations than Montana or Pennsylvania, but combined with the CLCPA — one of the most ambitious state climate laws — it creates a strong framework. The green amendment has not yet been tested in major climate litigation..",
+      "metadata": {
+        "source_file": "research/country-legal-frameworks/US_NY.json",
+        "country_code": "US_NY",
+        "country_name": "New York (US State)",
+        "jurisdiction_type": "subnational",
+        "region": "North America",
+        "scan_status": "enriched",
+        "completeness": "enriched",
+        "relevant_signal_ids": [],
+        "relevant_signals_count": 0,
+        "ambition_scoring": {
+          "raw_score": 5,
+          "max_score": 16,
+          "normalized_score": 31,
+          "tier": "limited",
+          "breakdown": {
+            "constitutional_recognition": {
+              "score": 1,
+              "max": 3,
+              "detail": "1 provisions found"
+            },
+            "dedicated_legislation": {
+              "score": 2,
+              "max": 4,
+              "detail": "1 laws found"
+            },
+            "institutional_mechanisms": {
+              "score": 1,
+              "max": 3,
+              "detail": "1 mechanisms found"
+            },
+            "judicial_enforcement": {
+              "score": 0,
+              "max": 2,
+              "detail": "0 precedents found"
+            },
+            "international_leadership": {
+              "score": 0,
+              "max": 2,
+              "detail": "0 commitments found"
+            },
+            "policy_integration": {
+              "score": 1,
+              "max": 2,
+              "detail": "1 integration points found"
+            }
+          }
+        }
+      },
+      "text_hash": "7bfdd3502e14e8ede91f5a64fba7f629b301d75f0d82d77f7e94e08d8b99a805"
+    },
+    {
+      "id": "US_PA::profile",
+      "doc_type": "country_profile",
+      "text": "Country profile for Pennsylvania (US State) (US_PA). Jurisdiction type: subnational. Region: North America. Scan status: enriched. Completeness: enriched. Ambition score: 25/100. Tier: limited. Score breakdown: constitutional_recognition: 1/3 (1 provisions found); dedicated_legislation: 0/4 (0 laws found); institutional_mechanisms: 1/3 (1 mechanisms found); judicial_enforcement: 1/2 (1 precedents found); international_leadership: 0/2 (0 commitments found); policy_integration: 1/2 (1 integration points found). Strongest documented sections: constitutional_provisions (1), institutional_mechanisms (1), judicial_precedents (1). Analyst notes: Pennsylvania was the first US state to adopt a green amendment (1971, one year before Montana). Its Environmental Rights Amendment is the strongest in the country in terms of explicit intergenerational language: 'including generations yet to come.' The Pennsylvania Supreme Court's Robinson Township ruling (2013) established that this creates enforceable public trust obligations — a powerful precedent for intergenerational equity litigation..",
+      "metadata": {
+        "source_file": "research/country-legal-frameworks/US_PA.json",
+        "country_code": "US_PA",
+        "country_name": "Pennsylvania (US State)",
+        "jurisdiction_type": "subnational",
+        "region": "North America",
+        "scan_status": "enriched",
+        "completeness": "enriched",
+        "relevant_signal_ids": [],
+        "relevant_signals_count": 0,
+        "ambition_scoring": {
+          "raw_score": 4,
+          "max_score": 16,
+          "normalized_score": 25,
+          "tier": "limited",
+          "breakdown": {
+            "constitutional_recognition": {
+              "score": 1,
+              "max": 3,
+              "detail": "1 provisions found"
+            },
+            "dedicated_legislation": {
+              "score": 0,
+              "max": 4,
+              "detail": "0 laws found"
+            },
+            "institutional_mechanisms": {
+              "score": 1,
+              "max": 3,
+              "detail": "1 mechanisms found"
+            },
+            "judicial_enforcement": {
+              "score": 1,
+              "max": 2,
+              "detail": "1 precedents found"
+            },
+            "international_leadership": {
+              "score": 0,
+              "max": 2,
+              "detail": "0 commitments found"
+            },
+            "policy_integration": {
+              "score": 1,
+              "max": 2,
+              "detail": "1 integration points found"
+            }
+          }
+        }
+      },
+      "text_hash": "ed84e851c10083a4156c1fca0e9d0a7e15a6848e47177f37f3ac935cf8c5aa72"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "synced_at": "2026-08-30T12:21:52.860Z",
+  "source": {
+    "signals_v3": "signals-kb/signals-v3.json",
+    "trends": "signals-kb/trends.json",
+    "edges": "signals-kb/edges.json",
+    "country_ambition_data": "signals-kb/country-ambition-data.json",
+    "country_similarity": "signals-kb/country-similarity.json",
+    "country_gap_analysis": "signals-kb/country-gap-analysis.json",
+    "country_profiles": "intelligence-os/vector-documents/country-profiles.json",
+    "country_sections": "intelligence-os/vector-documents/country-sections.json",
+    "organizations": "signals-kb/organizations.json",
+    "actors": "signals-kb/actors.json",
+    "actor_signal_edges": "signals-kb/actor-signal-edges.json"
+  },
+  "counts": {
+    "signals": 2034,
+    "trends": 9,
+    "threads": 9
+  },
+  "hashes": {
+    "signals_v3": "bd5208ecaeac8bb9c9bdf5f00597b35f64f8f2a19264b671161b1f2a5685dcf0",
+    "deploy_signals_db": "50cb91932b86ea7a42ca6dfd9581489bd03aa3c61bfb65ed18569c0e81cb712f",
+    "deploy_briefing": "48b5ae17843b35f6804b9749b318090a961fa95cb809e9697aab44c78c16e227",
+    "deploy_country_ambition_data": "72a429a9f53a76edbc38bda4e79ed12a9b8e1d2249e39443edeb25f3219f6624",
+    "deploy_country_similarity": "10f208693690b9236a64abd0e42134490c91053ba15541cf49fc4155141fc767",
+    "deploy_country_gap_analysis": "3b6100976fd15a7cc7eb7c27e5cfcc16e49efcee0c2dab36a2dadc14ac607baa",
+    "deploy_country_profiles": "7ebbdf6bf73fd99f677127a50c1b522d74078addd1bc0af62c0b8d22128b351c",
+    "deploy_country_sections": "56e5f416a4d3e6674f01a17dd3d4c402a2a3b721c35f415c86b4b48f272b5e0f"
+  }
+}

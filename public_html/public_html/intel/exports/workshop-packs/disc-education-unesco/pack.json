@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "generated": "2026-08-30T00:00:00.000Z",
+  "trend_id": "disc-education-unesco",
+  "title": "Education equity & intergenerational mobility",
+  "lifecycle": "developing",
+  "signal_count": 17,
+  "velocity": {
+    "last_30_days": 0,
+    "previous_30_days": 0,
+    "direction": "steady",
+    "unit": "signals"
+  },
+  "projection": {
+    "status": "current",
+    "is_stub": false,
+    "horizon": "2030"
+  },
+  "alignment": {
+    "trend_id": "disc-education-unesco",
+    "advances": 2,
+    "strains": 0,
+    "mixed": 0,
+    "net": 2
+  },
+  "counter_ratio": 0,
+  "counter_signal_ids": [],
+  "wheel": {
+    "ring1_count": 12,
+    "ring2_count": 2
+  },
+  "moments": [],
+  "evidence_signal_ids": [
+    "brazil-mec-ai-education-reference-framework-2026-03",
+    "international-unesco-africa-higher-technical-education-reform-2026-05-10",
+    "maldives-secures-gpe-grant-to-build-a-climate-resilient-national-education-system-2026-06-10",
+    "uganda-digital-education-policy-2026-05-04",
+    "unesco-adopts-youth4water-flagship-to-institutionalize-youth-participation-in-water-governance-2026-06-12",
+    "unesco-ai-competency-framework-students-2026",
+    "unesco-education-beyond-2030-foresight-outlook-2026-04-14",
+    "unesco-gem-access-equity-countdown-2026-04-29",
+    "unesco-gem-equitable-financing-index-2026-03",
+    "unesco-gem-report-2026-education-equity-financing-2026-03-25"
+  ],
+  "member_signal_ids": [
+    "brazil-mec-ai-education-reference-framework-2026-03",
+    "international-unesco-africa-higher-technical-education-reform-2026-05-10",
+    "maldives-secures-gpe-grant-to-build-a-climate-resilient-national-education-system-2026-06-10",
+    "uganda-digital-education-policy-2026-05-04",
+    "unesco-adopts-youth4water-flagship-to-institutionalize-youth-participation-in-water-governance-2026-06-12",
+    "unesco-ai-competency-framework-students-2026",
+    "unesco-education-beyond-2030-foresight-outlook-2026-04-14",
+    "unesco-gem-access-equity-countdown-2026-04-29",
+    "unesco-gem-equitable-financing-index-2026-03",
+    "unesco-gem-report-2026-education-equity-financing-2026-03-25",
+    "unesco-global-youth-student-consultations-education-beyond-2030-2026-04-14",
+    "unesco-guidance-generative-ai-education-2026",
+    "unesco-intercultural-youth-governance-2026-05-13",
+    "unesco-maghreb-youth-skills-equity-tvet-2026-04-15",
+    "unesco-unevoc-youth-ai-digital-skills-survey-2025-07-15",
+    "unesco-unicef-and-itu-launch-charter-treating-public-digital-learning-platforms-as-age-appropriate-d",
+    "unesco-unicef-un-youth-office-and-who-issue-joint-call-for-standalone-child-and-youth-mental-health"
+  ]
+}

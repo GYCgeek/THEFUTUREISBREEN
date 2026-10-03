@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "id": "belgium-intergenerational-equity",
+  "title": "Belgium: Flanders JoKER — the stall gate",
+  "language": "en",
+  "country_code": "BE",
+  "country_name": "Belgium",
+  "region": "Europe",
+  "last_updated": "2026-08-17",
+  "confidence": "high",
+  "related_signal_ids": [
+    "flanders-expands-mandatory-joker-child-and-youth-impact-reports-from-under-25-to-age-30-2026-03-13",
+    "flanders-files-a-completed-joker-with-the-community-institution-school-bill-after-the-13-march-2026",
+    "flemish-council-of-state-required-a-missing-joker-before-the-2021-closed-supervision-youth-justice-b"
+  ],
+  "executive_summary": "Belgium has no federal Intergenerational Impact Assessment. The live instrument is Flemish: Jeugddecreet Article 7 JoKER (kind- en jongereneffectrapport) on Flemish Government draft decrees that directly affect children and young people, now through age 30. It is the only IIA-family tool in the GYC corpus with documented dossier-blocking bite — the Council of State required a missing JoKER in opinion 69.100/1 (18 May 2021). Completing JoKER unblocks the file; it does not force a rewrite. After the 13 March 2026 age-30 expansion, bill 864 filed a completed JoKER and the Council did not stall it.",
+  "ui": {
+    "instrument_tab_label": "JoKER",
+    "stats": { "recs_label": "Watch items" },
+    "case_search_placeholder": "Filter JoKER bite cases…"
+  },
+  "three_layer_stack": {
+    "layers": [
+      {
+        "order": 1,
+        "id": "statutory",
+        "label": "Flemish statutory JoKER",
+        "instrument": "Jeugddecreet Article 7 — kind- en jongereneffectrapport",
+        "in_force": "2012 (age ceiling to 30 on 2026-03-13)",
+        "primary_articles": ["Jeugddecreet Art. 7"],
+        "role": "Mandatory annex on Flemish Government ontwerpdecreten that directly affect children and young people: effects with the measure, without it, and alternatives to avoid, limit or remedy serious harm."
+      },
+      {
+        "order": 2,
+        "id": "procedure",
+        "label": "Council of State stall gate",
+        "instrument": "Raad van State / Conseil d'État legislation section",
+        "role": "Can require a missing JoKER before the dossier proceeds. Completing the report unblocks; no merits veto on a completed JoKER."
+      },
+      {
+        "order": 3,
+        "id": "federal-gap",
+        "label": "Federal and Walloon gap",
+        "instrument": "None enacted in the GYC corpus as of 17 August 2026",
+        "role": "No federal IIA, no Walloon equivalent located, no Future Generations Commissioner."
+      }
+    ]
+  },
+  "constitutional_reform": {
+    "instrument": "Belgian Constitution — no national IIA clause",
+    "english_name": "No federal future-generations IIA",
+    "adopted": "1831 (current charter; no IIA amendment)",
+    "in_force": "1831-02-07",
+    "significance": "Belgium's IIA story is Community/Region procedure in Flanders, not constitutional entrenchment.",
+    "articles": [
+      {
+        "article": "Jeugddecreet Article 7 (Flanders) — the operative text",
+        "text_en": "Flemish Government draft decrees that directly affect children and young people must include a kind- en jongereneffectrapport in the explanatory memorandum, covering effects with the measure, without it, and alternatives. Population: tot en met 30 years after 13 March 2026.",
+        "source_url": "https://www.vlaanderen.be/cjm/nl/jeugd/vlaams-jeugd-en-kinderrechtenbeleid/instrumenten/joker-kind-en-jongereneffectrapport"
+      }
+    ],
+    "gaps_heading": "What Belgium does not have",
+    "what_lacks": [
+      "No federal Intergenerational Impact Assessment",
+      "No Future Generations Commissioner",
+      "JoKER does not apply to member bills, government decisions, ministerial orders or circulars",
+      "No Walloon equivalent located in the GYC corpus as of 17 August 2026",
+      "A completed JoKER is not a merits veto"
+    ],
+    "what_italy_lacks": [
+      "No federal Intergenerational Impact Assessment",
+      "No Future Generations Commissioner",
+      "JoKER does not apply to member bills, government decisions, ministerial orders or circulars",
+      "No Walloon equivalent located in the GYC corpus as of 17 August 2026",
+      "A completed JoKER is not a merits veto"
+    ]
+  },
+  "jurisprudence": {
+    "overview": "The Council of State stall is procedural: missing form blocks; completed form does not rewrite. That distinction is the whole bite story.",
+    "streams": [
+      {
+        "id": "social_solidarity",
+        "label": "JoKER stall versus completed filing",
+        "summary": "One stall precedent (2021). One post-expansion completed filing that did not stall (2026).",
+        "key_cases": [
+          {
+            "id": "cos-69100-2021",
+            "citation": "Council of State opinion 69.100/1",
+            "nickname": "The stall",
+            "date": "2021-05-18",
+            "subject": "Closed-supervision youth-justice bill missing JoKER",
+            "holding_en": "The Council required a missing JoKER before the bill could proceed. The report was written two days later.",
+            "significance": "Only IIA-family instrument in the corpus with documented dossier-blocking bite.",
+            "source_url": "https://www.raadvst-consetat.be/",
+            "era": "stall",
+            "tag_label": "Stall",
+            "pre_reform": false
+          },
+          {
+            "id": "bill-864-2026",
+            "citation": "Flemish bill 864 — community-institution schools",
+            "nickname": "Completed, no stall",
+            "date": "2026-05-27",
+            "subject": "JoKER filed after the 13 March 2026 age-30 expansion",
+            "holding_en": "A completed JoKER travelled with the government bill. The Council of State did not stall it.",
+            "significance": "After expansion, completing JoKER is routine. Stall remains a missing-report gate, not a youth-merits veto.",
+            "source_url": "https://www.vlaamsparlement.be/",
+            "era": "none",
+            "tag_label": "Completed — no stall",
+            "pre_reform": false
+          }
+        ]
+      }
+    ],
+    "operational_tests": [
+      {
+        "domain": "Trigger",
+        "test": "Flemish Government ontwerpdecreet that directly affects children and young people (through age 30). Not member bills or ministerial orders."
+      },
+      {
+        "domain": "Who writes",
+        "test": "Sponsoring minister and administration; CJM advises within 12 working days. Not an independent KomJC-style unit."
+      },
+      {
+        "domain": "Who can block",
+        "test": "Council of State can stall a missing JoKER. Nobody can force a rewrite of a completed one."
+      }
+    ]
+  },
+  "vig_framework": {
+    "instrument": "JoKER (kind- en jongereneffectrapport)",
+    "gazette": "Jeugddecreet Article 7; age-30 expansion 13 March 2026",
+    "in_force": "2012",
+    "english_name": "Child- and youth-effect report (Flanders)",
+    "statutory_principle": "Effects with the measure, without it, and alternatives to avoid, limit or remedy serious harm, inserted in the explanatory memorandum.",
+    "definition": "Mandatory child-and-youth impact report on in-scope Flemish Government draft decrees, covering persons through age 30 after March 2026.",
+    "integration": "Explanatory memorandum of the ontwerpdecreet; Council of State legislative review can demand a missing report.",
+    "trigger": "Every Flemish Government draft decree that directly affects children and young people.",
+    "exclusions": [
+      "Member bills",
+      "Government decisions, ministerial orders, circulars",
+      "Federal legislation",
+      "Walloon and Brussels instruments (no equivalent located)"
+    ],
+    "institutions": [
+      {
+        "name": "Sponsoring Flemish minister and administration",
+        "location": "Flanders",
+        "role": "Writes the JoKER."
+      },
+      {
+        "name": "Department of Culture, Youth and Media (CJM)",
+        "location": "Brussels (Flemish administration)",
+        "role": "Advises within 12 working days."
+      },
+      {
+        "name": "Council of State",
+        "location": "Brussels",
+        "role": "Can stall a missing JoKER; does not rewrite a completed one."
+      }
+    ],
+    "implementing_instruments": [
+      {
+        "instrument": "Age-30 expansion (Vlaams Parlement 754 / 13 March 2026)",
+        "deadline": "In force 2026-03-13",
+        "status_as_of_2026_06_28": "Active; subsequent bills use tot en met 30",
+        "status": "Active; subsequent bills use tot en met 30"
+      }
+    ]
+  },
+  "implementation_status_2026": {
+    "as_of": "2026-08-17",
+    "headline": "Flanders has the only stall gate in the IIA family. Federal Belgium still has no IIA.",
+    "recommendations_heading": "Watch list",
+    "provvedimenti": [
+      {
+        "instrument": "CoS 69.100/1 (18 May 2021)",
+        "vig_status": "Stall — missing JoKER required; written 2 days later",
+        "instrument_status": "Stall — missing JoKER required; written 2 days later"
+      },
+      {
+        "instrument": "Age-30 expansion 13 March 2026",
+        "vig_status": "Duty widened; not itself a worked report",
+        "instrument_status": "Duty widened; not itself a worked report"
+      },
+      {
+        "instrument": "Bill 864 (27 May 2026)",
+        "vig_status": "Completed JoKER; Council did not stall",
+        "instrument_status": "Completed JoKER; Council did not stall"
+      }
+    ],
+    "recommendations": [
+      { "order": 1, "text": "Do not describe Belgium as having a national IIA — it is Flanders JoKER." },
+      { "order": 2, "text": "Do not treat a completed JoKER as bite; stall is the missing-report gate only." },
+      { "order": 3, "text": "Do not clone a Walloon or federal IIA that has not been published." }
+    ]
+  },
+  "local_practice": [
+    {
+      "entity": "Flemish Government / CJM",
+      "since": "2012",
+      "detail": "JoKER is written by the sponsoring administration with CJM advice. Independent checker model (KomJC) is not used.",
+      "source_url": "https://www.vlaanderen.be/cjm/nl/jeugd/vlaams-jeugd-en-kinderrechtenbeleid/instrumenten/joker-kind-en-jongereneffectrapport"
+    }
+  ],
+  "comparative_notes": [
+    {
+      "jurisdiction": "Netherlands",
+      "contrast": "Dutch generatietoets cannot stall. Flemish JoKER can stall a missing report — and only that."
+    },
+    {
+      "jurisdiction": "Germany",
+      "contrast": "KomJC is independent and high-volume but non-binding. JoKER is ministry-authored and procedurally harder to skip."
+    },
+    {
+      "jurisdiction": "Italy",
+      "contrast": "Italian VIG is national and statutory but DPCMs unpublished. Flemish JoKER is subnational and already operating with a stall precedent."
+    }
+  ],
+  "litigation_track": [
+    {
+      "case": "Council of State 69.100/1",
+      "court": "Raad van State / Conseil d'État",
+      "year": 2021,
+      "status": "JoKER required; then proceeded",
+      "relevance": "Procedural stall, not constitutional IIA review."
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "be-stack",
+      "title": "Flanders JoKER stall gate",
+      "mermaid": "flowchart TB\n  A[\"Federal Belgium\\nno IIA\"] --> B[\"Flanders Jeugddecreet Art. 7\\nJoKER\"]\n  B --> C[\"Age-30 expansion\\n13 Mar 2026\"]\n  B --> D[\"CJM advises in 12 days\"]\n  B --> E[\"Council of State\"]\n  E -->|\"missing JoKER\"| F[\"Stall\\n69.100/1 May 2021\"]\n  E -->|\"completed JoKER\"| G[\"No stall\\nbill 864 May 2026\"]"
+    }
+  ],
+  "glossary": [
+    { "term": "JoKER", "en": "Kind- en jongereneffectrapport — Flemish child- and youth-effect report." },
+    { "term": "Ontwerpdecreet", "en": "Flemish Government draft decree — the trigger for JoKER." },
+    { "term": "Stall", "en": "Council of State will not let the dossier proceed until the missing JoKER is filed." }
+  ],
+  "sources": [
+    { "title": "Vlaanderen — JoKER", "url": "https://www.vlaanderen.be/cjm/nl/jeugd/vlaams-jeugd-en-kinderrechtenbeleid/instrumenten/joker-kind-en-jongereneffectrapport" },
+    { "title": "Council of State", "url": "https://www.raadvst-consetat.be/" }
+  ]
+}

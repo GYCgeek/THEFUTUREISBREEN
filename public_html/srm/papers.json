@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "generated": "2026-06-29",
+  "notes": "Science-article register for SRM Watch. Seed entries below are illustrative samples; the scanner/analyst pipeline expands this over time. stance: supportive | cautionary | neutral | critical. srm_method: SAI | MCB | CCT | surface-albedo | space-based | CDR | general.",
+  "count": 11,
+  "papers": [
+    {
+      "id": "robock-2008-20-reasons",
+      "title": "20 reasons why geoengineering may be a bad idea",
+      "authors": [
+        "Alan Robock"
+      ],
+      "year": 2008,
+      "venue": "Bulletin of the Atomic Scientists",
+      "doi": "10.2968/064002006",
+      "url": "https://doi.org/10.2968/064002006",
+      "srm_method": "SAI",
+      "type": "perspective",
+      "finding": "Catalogues physical, ethical and governance risks of stratospheric aerosol injection, including monsoon disruption, ozone loss and termination shock.",
+      "stance": "critical",
+      "tags": [
+        "stratospheric aerosol injection",
+        "atmospheric science",
+        "governance"
+      ],
+      "added_date": "2026-06-28"
+    },
+    {
+      "id": "keith-macmartin-2015-temporary-moderate",
+      "title": "A temporary, moderate and responsive scenario for solar geoengineering",
+      "authors": [
+        "David W. Keith",
+        "Douglas G. MacMartin"
+      ],
+      "year": 2015,
+      "venue": "Nature Climate Change",
+      "doi": "10.1038/nclimate2493",
+      "url": "https://doi.org/10.1038/nclimate2493",
+      "srm_method": "SAI",
+      "type": "perspective",
+      "finding": "Proposes a bounded deployment framing intended to reduce, not replace, mitigation and to limit risks such as termination shock.",
+      "stance": "supportive",
+      "tags": [
+        "deployment",
+        "stratospheric aerosol injection"
+      ],
+      "added_date": "2026-06-28"
+    },
+    {
+      "id": "kravitz-geomip-overview",
+      "title": "The Geoengineering Model Intercomparison Project (GeoMIP)",
+      "authors": [
+        "Ben Kravitz",
+        "Alan Robock",
+        "Olivier Boucher",
+        "et al."
+      ],
+      "year": 2011,
+      "venue": "Atmospheric Science Letters",
+      "doi": "10.1002/asl.316",
+      "url": "https://doi.org/10.1002/asl.316",
+      "srm_method": "general",
+      "type": "modelling",
+      "finding": "Establishes a standardized set of climate-model experiments enabling consistent comparison of SRM impacts across earth system models.",
+      "stance": "neutral",
+      "tags": [
+        "climate modelling",
+        "atmospheric science",
+        "methods research"
+      ],
+      "added_date": "2026-06-28"
+    },
+    {
+      "id": "national-academies-2021-reflecting-sunlight",
+      "title": "Reflecting Sunlight: Recommendations for Solar Geoengineering Research and Research Governance",
+      "authors": [
+        "National Academies of Sciences, Engineering, and Medicine"
+      ],
+      "year": 2021,
+      "venue": "The National Academies Press",
+      "doi": "10.17226/25762",
+      "url": "https://doi.org/10.17226/25762",
+      "srm_method": "general",
+      "type": "assessment",
+      "finding": "Recommends a cautious, transparent and governed US research program on solar geoengineering with strong oversight and exit ramps.",
+      "stance": "cautionary",
+      "tags": [
+        "research governance",
+        "assessment",
+        "public engagement"
+      ],
+      "added_date": "2026-06-28"
+    },
+    {
+      "id": "duffey-2025-low-altitude-high",
+      "title": "Low‐Altitude High‐Latitude Stratospheric Aerosol Injection Is Feasible With Existing Aircraft",
+      "authors": [
+        "Alistair Duffey",
+        "Matthew Henry",
+        "Wake Smith",
+        "Michel Tsamados",
+        "Peter J. Irvine"
+      ],
+      "year": 2025,
+      "venue": "Earth's Future",
+      "doi": "10.1029/2024ef005567",
+      "url": "https://doi.org/10.1029/2024ef005567",
+      "srm_method": "SAI",
+      "type": "modelling",
+      "finding": "Stratospheric aerosol injection (SAI) is a proposed method of climate intervention in which aerosols or their precursors would be injected into the stratosphere to reduce or halt global warming. It is often assumed that to produce a substantial global cooling, SAI would require a fleet of specially designed…",
+      "stance": "neutral",
+      "tags": [
+        "stratospheric aerosol injection",
+        "deployment",
+        "climate modelling",
+        "atmospheric science"
+      ],
+      "added_date": "2026-06-29",
+      "review_status": "ai_provisional",
+      "source": "crossref",
+      "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2024EF005567",
+      "oa_status": "gold"
+    },
+    {
+      "id": "rasch-2024-a-protocol-for",
+      "title": "A protocol for model intercomparison of impacts of marine cloud brightening climate intervention",
+      "authors": [
+        "Philip J. Rasch",
+        "Haruki Hirasawa",
+        "Mingxuan Wu",
+        "Sarah J. Doherty",
+        "Robert Wood",
+        "Hailong Wang",
+        "Andy Jones",
+        "Jim Haywood",
+        "Hansi Singh"
+      ],
+      "year": 2024,
+      "venue": "Geoscientific model development",
+      "doi": "10.5194/gmd-17-7963-2024",
+      "url": "https://doi.org/10.5194/gmd-17-7963-2024",
+      "srm_method": "MCB",
+      "type": "modelling",
+      "finding": "A modeling protocol (defined by a series of climate model simulations with specified model output) is introduced. Studies using these simulations are designed to improve the understanding of climate impacts using a strategy for climate intervention (CI) known as marine cloud brightening (MCB) in specific…",
+      "stance": "neutral",
+      "tags": [
+        "marine cloud brightening",
+        "deployment",
+        "climate modelling",
+        "atmospheric science",
+        "impacts research"
+      ],
+      "added_date": "2026-06-29",
+      "review_status": "ai_provisional",
+      "source": "openalex",
+      "oa_url": "https://gmd.copernicus.org/articles/17/7963/2024/gmd-17-7963-2024.pdf",
+      "oa_status": "gold"
+    },
+    {
+      "id": "chen-2024-rethinking-the-susceptibility",
+      "title": "Rethinking the Susceptibility‐Based Strategy for Marine Cloud Brightening Climate Intervention: Experiment With CESM2 and Its Implications",
+      "authors": [
+        "Chih‐Chieh Chen",
+        "Jadwiga H. Richter",
+        "Walker Lee",
+        "Douglas G. MacMartin",
+        "Ben Kravitz"
+      ],
+      "year": 2024,
+      "venue": "Geophysical Research Letters",
+      "doi": "10.1029/2024gl108860",
+      "url": "https://doi.org/10.1029/2024gl108860",
+      "srm_method": "MCB",
+      "type": "modelling",
+      "finding": "Previous modeling studies indicate that even though marine cloud brightening under a susceptibility‐based strategy is effective in reducing the global average surface temperature, it triggers a La Niña‐like sea‐surface temperature response with cooling mostly confined within lower latitudes. Here we explore…",
+      "stance": "supportive",
+      "tags": [
+        "marine cloud brightening",
+        "climate modelling"
+      ],
+      "added_date": "2026-06-29",
+      "review_status": "ai_provisional",
+      "source": "openalex",
+      "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2024GL108860",
+      "oa_status": "gold"
+    },
+    {
+      "id": "hirasawa-2023-effect-of-regional",
+      "title": "Effect of Regional Marine Cloud Brightening Interventions on Climate Tipping Elements",
+      "authors": [
+        "Haruki Hirasawa",
+        "Dipti Hingmire",
+        "Hansi Singh",
+        "Philip J. Rasch",
+        "Peetak Mitra"
+      ],
+      "year": 2023,
+      "venue": "Geophysical Research Letters",
+      "doi": "10.1029/2023gl104314",
+      "url": "https://doi.org/10.1029/2023gl104314",
+      "srm_method": "MCB",
+      "type": "modelling",
+      "finding": "It has been proposed that increasing greenhouse gas (GHG) driven climate tipping point risks may prompt consideration of solar radiation modification (SRM) climate intervention to reduce those risks. Here, we study marine cloud brightening (MCB) SRM interventions in three subtropical oceanic regions using…",
+      "stance": "cautionary",
+      "tags": [
+        "marine cloud brightening",
+        "climate modelling",
+        "impacts research"
+      ],
+      "added_date": "2026-06-29",
+      "review_status": "ai_provisional",
+      "source": "openalex",
+      "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2023GL104314",
+      "oa_status": "gold"
+    },
+    {
+      "id": "haywood-2023-climate-intervention-using",
+      "title": "Climate intervention using marine cloud brightening (MCB) compared with stratospheric aerosol injection (SAI) in the UKESM1 climate model",
+      "authors": [
+        "Jim Haywood",
+        "Andy Jones",
+        "Anthony C. Jones",
+        "Paul R. Halloran",
+        "Philip J. Rasch"
+      ],
+      "year": 2023,
+      "venue": "Atmospheric chemistry and physics",
+      "doi": "10.5194/acp-23-15305-2023",
+      "url": "https://doi.org/10.5194/acp-23-15305-2023",
+      "srm_method": "SAI",
+      "type": "modelling",
+      "finding": "The difficulties in using conventional mitigation techniques to maintain global-mean temperatures well below 2 ∘C compared with pre-industrial levels have been well documented, leading to so-called “climate intervention” or “geoengineering” research whereby the planetary albedo is increased to…",
+      "stance": "cautionary",
+      "tags": [
+        "stratospheric aerosol injection",
+        "marine cloud brightening",
+        "deployment",
+        "climate modelling",
+        "atmospheric science",
+        "impacts research"
+      ],
+      "added_date": "2026-06-29",
+      "review_status": "ai_provisional",
+      "source": "openalex",
+      "oa_url": "https://acp.copernicus.org/articles/23/15305/2023/acp-23-15305-2023.pdf",
+      "oa_status": "gold"
+    },
+    {
+      "id": "feingold-2024-physical-science-research",
+      "title": "Physical science research needed to evaluate the viability and risks of marine cloud brightening",
+      "authors": [
+        "Graham Feingold",
+        "Virendra P. Ghate",
+        "Lynn M. Russell",
+        "Peter N. Blossey",
+        "Will Cantrell",
+        "Matthew W. Christensen",
+        "Michael Diamond",
+        "Andrew Gettelman",
+        "Franziska Glassmeier",
+        "Edward Gryspeerdt",
+        "Jim Haywood",
+        "Fabian Hoffmann",
+        "Colleen Kaul",
+        "Matthew Lebsock",
+        "Allison McComiskey",
+        "Daniel T. McCoy",
+        "Yi Ming",
+        "Johannes Mülmenstädt",
+        "Anna Possner",
+        "Prasanth Prabhakaran",
+        "Patricia K. Quinn",
+        "K. Sebastian Schmidt",
+        "Raymond A. Shaw",
+        "Clare E. Singer",
+        "Armin Sorooshian",
+        "Velle Toll",
+        "Jessica Wan",
+        "Robert Wood",
+        "Fan Yang",
+        "Jianhao Zhang",
+        "Xue Zheng"
+      ],
+      "year": 2024,
+      "venue": "Science Advances",
+      "doi": "10.1126/sciadv.adi8594",
+      "url": "https://doi.org/10.1126/sciadv.adi8594",
+      "srm_method": "MCB",
+      "type": "modelling",
+      "finding": "Marine cloud brightening (MCB) is the deliberate injection of aerosol particles into shallow marine clouds to increase their reflection of solar radiation and reduce the amount of energy absorbed by the climate system. From the physical science perspective, the consensus of a broad international group of scientists…",
+      "stance": "neutral",
+      "tags": [
+        "marine cloud brightening",
+        "atmospheric science"
+      ],
+      "added_date": "2026-06-29",
+      "review_status": "ai_provisional",
+      "source": "openalex",
+      "oa_url": "https://www.science.org/doi/pdf/10.1126/sciadv.adi8594?download=true",
+      "oa_status": "gold"
+    },
+    {
+      "id": "he-2025-stratospheric-aerosol-injection",
+      "title": "Stratospheric aerosol injection can weaken the carbon dioxide greenhouse effect",
+      "authors": [
+        "Haozhe He",
+        "Brian J. Soden",
+        "Gabriel A. Vecchi",
+        "Wenchang Yang"
+      ],
+      "year": 2025,
+      "venue": "Communications Earth & Environment",
+      "doi": "10.1038/s43247-025-02466-z",
+      "url": "https://doi.org/10.1038/s43247-025-02466-z",
+      "srm_method": "SAI",
+      "type": "modelling",
+      "finding": "Stratospheric aerosol injection is a proposed method for offsetting greenhouse gas-induced warming by introducing scattering aerosols into the lower stratosphere to reflect sunlight. Here we explore a potentially more efficient alternative: weakening the Earth’s greenhouse effect by deploying absorptive…",
+      "stance": "cautionary",
+      "tags": [
+        "stratospheric aerosol injection",
+        "climate modelling",
+        "atmospheric science",
+        "impacts research"
+      ],
+      "added_date": "2026-06-29",
+      "review_status": "ai_provisional",
+      "source": "crossref",
+      "oa_url": "https://www.nature.com/articles/s43247-025-02466-z.pdf",
+      "oa_status": "gold"
+    }
+  ]
+}

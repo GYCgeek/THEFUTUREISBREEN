@@ -1,0 +1,3310 @@
+{
+  "schema_version": 1,
+  "generated": "2026-08-30T00:00:00.000Z",
+  "source": {
+    "trends": "signals-kb/trends.json",
+    "edges": "signals-kb/edges.json",
+    "signals": "signals-kb/signals-v3.json",
+    "ring2": "scripts/data/curated/trend-implications.json"
+  },
+  "note": "ring1 uses tiered edges: causal > same-mechanism > same-structure; hop-2 bridge nodes when direct ring sparse.",
+  "wheels": [
+    {
+      "trend_id": "intergenerational-fiscal-rebalancing",
+      "title": "Intergenerational fiscal rebalancing",
+      "member_hubs": [
+        {
+          "signal_id": "australia-tax-reform-future-generations-2026-05-12",
+          "title": "Australia Frames Major Tax and Housing Reform as a Fairness Package for Future Generations",
+          "hub_score": 104.6,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "ifs-inheritance-tax-reform-intergenerational-2026-05-27",
+          "title": "IFS Proposes Inheritance Tax Reform to Close £1.6bn Intergenerational Wealth Loophole",
+          "hub_score": 87.6,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "australia-chalmers-tax-intergenerational-equity-2026-03-19",
+          "title": "Australia's May Budget to Prioritize Intergenerational Equity in Tax Reform",
+          "hub_score": 84,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "australia-tax-reform-passed-lower-house-2026-06-04",
+          "title": "Australia Enacts Landmark Intergenerational Equity Tax Reform Limiting Negative Gearing and Restructuring CGT",
+          "hub_score": 68.2,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "uk-pensions-commission-intergenerational-fairness-2026-05-19",
+          "title": "UK Pensions Commission Warns 15 Million Undersaving, Calls for 'Intergenerational Fairness' in Pension Reform",
+          "hub_score": 64,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "unesco-gem-equitable-financing-index-2026-03",
+          "title": "UNESCO GEM Equitable Financing in Education Index 2026",
+          "hub_score": 28.6,
+          "relation": "member-hub"
+        }
+      ],
+      "ring1": [
+        {
+          "signal_id": "unesco-gem-access-equity-countdown-2026-04-29",
+          "title": "UNESCO’s 2026 Global Education Monitoring Report Puts Access and Equity at the Center of the Countdown to 2030",
+          "relation": "supports",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "unesco-gem-equitable-financing-index-2026-03",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "unesco-gem-access-equity-countdown-2026-04-29",
+              "type": "supports",
+              "note": "2026 GEM report puts access/equity at the centre using the equitable financing index evidence base."
+            },
+            {
+              "from": "unesco-gem-access-equity-countdown-2026-04-29",
+              "type": "supports",
+              "note": "GEM equity countdown narrative parallels UK children's wellbeing and schools inclusion reforms."
+            }
+          ]
+        },
+        {
+          "signal_id": "oecd-documents-decade-long-youth-mental-health-decline-intensified-by-covid-19-worse-than-previous-g",
+          "title": "OECD Documents Decade-Long Youth Mental Health Decline Intensified by COVID-19, Worse Than Previous Generations",
+          "relation": "same-structure",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "australia-chalmers-tax-intergenerational-equity-2026-03-19",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "oecd-documents-decade-long-youth-mental-health-decline-intensified-by-covid-19-worse-than-previous-g",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "oecd-documents-decade-long-youth-mental-health-decline-intensified-by-covid-19-worse-than-previous-g",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "r2-m08-australia-measuring-what-matters-wellbeing-mental-health-2025",
+          "title": "Australia's Measuring What Matters Wellbeing Framework Institutionalises Mental Health as a 'Beyond-GDP' National Indicator",
+          "relation": "same-structure",
+          "edge_count": 4,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "australia-chalmers-tax-intergenerational-equity-2026-03-19",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "r2-m08-australia-measuring-what-matters-wellbeing-mental-health-2025",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "r2-m08-australia-measuring-what-matters-wellbeing-mental-health-2025",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "r2-m08-australia-measuring-what-matters-wellbeing-mental-health-2025",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "m01-oecd-citizen-participation-youth-trust-governance-risk-2025",
+          "title": "OECD Warns Youth Disaffection and Intergenerational Fairness Perceptions Threaten Democratic Legitimacy",
+          "relation": "same-structure",
+          "edge_count": 3,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "australia-chalmers-tax-intergenerational-equity-2026-03-19",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "m01-oecd-citizen-participation-youth-trust-governance-risk-2025",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "m01-oecd-citizen-participation-youth-trust-governance-risk-2025",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "m01-oecd-citizen-participation-youth-trust-governance-risk-2025",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "m01-oecd-lac-trust-survey-youth-cohort-2025",
+          "title": "OECD Latin America Trust Survey Records Four-Point Youth–Elder Government Trust Gap, Largest in Peru",
+          "relation": "same-structure",
+          "edge_count": 3,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "australia-chalmers-tax-intergenerational-equity-2026-03-19",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "m01-oecd-lac-trust-survey-youth-cohort-2025",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "m01-oecd-lac-trust-survey-youth-cohort-2025",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "m01-oecd-lac-trust-survey-youth-cohort-2025",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "oecd-youth-formal-political-participation-gap-2025-06",
+          "title": "OECD Finds 18–29 Year-Olds 21 Points Less Likely to Vote but More Likely to Protest",
+          "relation": "same-structure",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "australia-chalmers-tax-intergenerational-equity-2026-03-19",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "oecd-youth-formal-political-participation-gap-2025-06",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "oecd-youth-formal-political-participation-gap-2025-06",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "r2-m03-eviction-housing-instability-voter-turnout-study",
+          "title": "Study: Residential Eviction Causally Depresses Voter Turnout, Evidencing Housing Instability as a Barrier to Participation",
+          "relation": "same-structure",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "visa-great-wealth-transfer-inequality-study-2026-07-08",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "r2-m03-eviction-housing-instability-voter-turnout-study",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "r2-m03-eviction-housing-instability-voter-turnout-study",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "eesc-april-newsletter-youth-intergenerational-fairness-2026-04-30",
+          "title": "EESC Bundles Housing, Mental Health and Intergenerational Fairness Into a Youth Policy Agenda",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "eesc-intergenerational-fairness-hearing-2026-05-18",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "eesc-april-newsletter-youth-intergenerational-fairness-2026-04-30",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "d08-us-juvenile-solitary-confinement-bans-2026",
+          "title": "US states advance 2026 wave of juvenile solitary-confinement limits as Maryland House passes restrictive-housing curbs 104-31",
+          "relation": "same-structure",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "d04-us-promoting-permanency-kinship-families-act-foster-2026-07-04",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "d08-us-juvenile-solitary-confinement-bans-2026",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "d08-us-juvenile-solitary-confinement-bans-2026",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "undp-future-ready-democratic-institutions-methodology-2026-07-22",
+          "title": "UNDP Operationalizes Intergenerational Governance Through a Future-Ready Institutions Methodology",
+          "relation": "same-structure",
+          "edge_count": 3,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "baleares-ley-10-2023-wellbeing-future-generations-2023-04-05",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "undp-future-ready-democratic-institutions-methodology-2026-07-22",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "undp-future-ready-democratic-institutions-methodology-2026-07-22",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "undp-future-ready-democratic-institutions-methodology-2026-07-22",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "australia-climate-duty-of-care-bill-negatived-2025-10-29",
+          "title": "Australian Senate Negatives Climate Change Amendment (Duty of Care and Intergenerational Climate Equity) Bill 2025",
+          "relation": "same-structure",
+          "edge_count": 3,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "uk-commons-library-icj-climate-advisory-briefing-2026-07",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "australia-climate-duty-of-care-bill-negatived-2025-10-29",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "australia-climate-duty-of-care-bill-negatived-2025-10-29",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "australia-climate-duty-of-care-bill-negatived-2025-10-29",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "canada-cepa-intergenerational-equity-framework-2025-07-19",
+          "title": "Canada Operationalizes Intergenerational Equity in Federal Environmental Decisions Through the Final CEPA Framework",
+          "relation": "same-structure",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "canada-treasury-board-quality-of-life-intergenerational-lens-2026-04-02",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "canada-cepa-intergenerational-equity-framework-2025-07-19",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "canada-cepa-intergenerational-equity-framework-2025-07-19",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        }
+      ],
+      "cross_trend": [
+        {
+          "trend_id": "intergenerational-equity-mainstreaming",
+          "shared_edge_count": 12
+        },
+        {
+          "trend_id": "youth-participation-governance",
+          "shared_edge_count": 1
+        },
+        {
+          "trend_id": "disc-education-unesco",
+          "shared_edge_count": 1
+        },
+        {
+          "trend_id": "youth-digital-protection",
+          "shared_edge_count": 1
+        },
+        {
+          "trend_id": "future-generations-institutions",
+          "shared_edge_count": 1
+        },
+        {
+          "trend_id": "youth-climate-litigation",
+          "shared_edge_count": 1
+        },
+        {
+          "trend_id": "youth-climate-governance",
+          "shared_edge_count": 1
+        }
+      ],
+      "ring2": [
+        {
+          "id": "pension-reform-backlash",
+          "if": "Pension and retirement-age reforms accelerate across OECD states",
+          "then": "Organised older-voter blocs mobilise electorally, raising the political cost of the next reform and slowing the trend into a contested equilibrium",
+          "affects_lens": [
+            "ceb2-fairness",
+            "dfg3-prosperity"
+          ],
+          "order": 2,
+          "parent_ring1_signal_id": "unesco-gem-access-equity-countdown-2026-04-29",
+          "watch_signal_topics": [
+            "intergenerational-fiscal-policy"
+          ],
+          "parent_is_hub": false,
+          "affects_lens_labels": [
+            {
+              "id": "ceb2-fairness",
+              "label": "Fairness between present and future generations"
+            },
+            {
+              "id": "dfg3-prosperity",
+              "label": "Thrive in prosperity and sustainable development"
+            }
+          ]
+        },
+        {
+          "id": "housing-wealth-transfer",
+          "if": "Housing affordability stays central to the fairness framing",
+          "then": "Inheritance and property taxation move up the agenda as the lever that reconciles present homeowners with future renters",
+          "affects_lens": [
+            "ceb2-fairness",
+            "dfg3-prosperity"
+          ],
+          "order": 2,
+          "parent_hub_member_id": "australia-tax-reform-future-generations-2026-05-12",
+          "watch_signal_topics": [
+            "housing-governance",
+            "youth-housing-equity"
+          ],
+          "parent_ring1_signal_id": "australia-tax-reform-future-generations-2026-05-12",
+          "parent_is_hub": true,
+          "affects_lens_labels": [
+            {
+              "id": "ceb2-fairness",
+              "label": "Fairness between present and future generations"
+            },
+            {
+              "id": "dfg3-prosperity",
+              "label": "Thrive in prosperity and sustainable development"
+            }
+          ]
+        }
+      ],
+      "ring2_stub": false
+    },
+    {
+      "trend_id": "youth-climate-litigation",
+      "title": "Youth climate litigation: international advance, domestic retreat",
+      "member_hubs": [
+        {
+          "signal_id": "ninth-circuit-lighthiser-youth-climate-dismissal-2026-06-02",
+          "title": "Ninth Circuit Dismisses Youth Climate Challenge to Trump Energy Orders, Deepening US Judicial Retreat on Climate Rights",
+          "hub_score": 174.7,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "unga-icj-climate-resolution-2026-05-20",
+          "title": "UN General Assembly Votes 141-8 to Endorse ICJ Climate Ruling, Cementing Legal Duty to Act",
+          "hub_score": 146.7,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "icj-advisory-opinion-climate-obligations-2025-07-23",
+          "title": "ICJ Issues Unanimous Advisory Opinion on State Climate Obligations to Present and Future Generations",
+          "hub_score": 125.7,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "navahine-v-hawaii-youth-climate-ruling-2024-06-12",
+          "title": "Hawaii Supreme Court Rules State Must Protect Youth Constitutional Rights in Navahine Climate Case",
+          "hub_score": 112.6,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "montana-held-precedent-icj-advisory-opinion-cited-2025-2026",
+          "title": "Montana's Held v. Montana Constitutional Climate Precedent Cited in ICJ Advisory Opinion and International Climate Litigation",
+          "hub_score": 90.6,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "montana-constitutional-climate-precedent-international-2026",
+          "title": "Montana's Held v. Montana Constitutional Climate Precedent Cited in International Litigation and UN Human Rights Fora",
+          "hub_score": 88.6,
+          "relation": "member-hub"
+        }
+      ],
+      "ring1": [
+        {
+          "signal_id": "hrw-europe-right-healthy-environment-2026-06-05",
+          "title": "Human Rights Watch Urges Council of Europe to Recognize Right to Healthy Environment as First Forum on Environmental Defenders Convenes",
+          "relation": "supports",
+          "edge_count": 4,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "unga-icj-climate-resolution-2026-05-20",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "hrw-europe-right-healthy-environment-2026-06-05",
+              "type": "supports",
+              "note": "Builds on ICJ/UNGA recognition to push Council of Europe treaty recognition."
+            },
+            {
+              "from": "hrw-europe-right-healthy-environment-2026-06-05",
+              "type": "supports",
+              "note": "HRW CoE treaty push builds on the ICJ's affirmation of the right to a healthy environment."
+            },
+            {
+              "from": "hrw-europe-right-healthy-environment-2026-06-05",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "eu-strategy-intergenerational-fairness-2026-03-05",
+          "title": "EU Adopts First-Ever Strategy on Intergenerational Fairness with New Index and Youth Check",
+          "relation": "supports",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "unu-future-generations-platform-2026-04",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "unu-future-generations-platform-2026-04",
+              "type": "supports",
+              "note": "UNU platform on future-generations institutions parallels and reinforces the EU strategy architecture."
+            }
+          ]
+        },
+        {
+          "signal_id": "wales-advances-long-term-flood-resilience-planning-toward-2050-2026-04-13",
+          "title": "Wales Advances Long-Term Flood Resilience Planning Toward 2050",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "scotland-establishes-third-just-transition-commission-to-2031-with-adaptation-fairness-mandate-2026-08-26",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "scotland-establishes-third-just-transition-commission-to-2031-with-adaptation-fairness-mandate-2026-08-26",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "argentina-cofema-youth-commission-intergenerational-agenda-2024",
+          "title": "Argentina COFEMA Youth Commission Launches Federal Intergenerational Climate Agenda",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "borim-kim-goldman-prize-youth-climate-litigation-2026-07",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "argentina-cofema-youth-commission-intergenerational-agenda-2024",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "m07-id-youth-climate-national-statement-cop30-2025",
+          "title": "Indonesian Youth Deliver National Children and Youth Statement to COP30 After Consultations Across 32 Provinces",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "hawaii-navahine-climate-settlement-2024-06-20",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "m07-id-youth-climate-national-statement-cop30-2025",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "france-snbc-3-final-public-consultation-2026-06-05",
+          "title": "France Opens Final Public Consultation on SNBC 3 Low-Carbon Strategy Before Summer 2026 Decree Adoption",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "norway-climate-status-plan-2026-2035-pathway",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "france-snbc-3-final-public-consultation-2026-06-05",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "norway-jordan-article6-waste-agreement-2026-03-04",
+          "title": "Norway and Jordan sign Article 6 climate agreement focused on waste-sector emissions cuts",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "montana-held-precedent-new-zealand-climate-ban-debate-2026-07",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "norway-jordan-article6-waste-agreement-2026-03-04",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "norway-pakistan-article6-climate-agreement-2026-04-01",
+          "title": "Norway and Pakistan sign Article 6 climate-credit cooperation agreement",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "montana-held-precedent-new-zealand-climate-ban-debate-2026-07",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "norway-pakistan-article6-climate-agreement-2026-04-01",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "norway-save-the-children-oil-fund-climate-finance-campaign-2026-01",
+          "title": "Save the Children Norway Launches Campaign Proposing Oil Fund Redirect for International Climate Finance",
+          "relation": "same-mechanism",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "brazil-supreme-court-strikes-compulsory-carbon-credit-investment-requirement-for-insurers-2026-06-02",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "brazil-supreme-court-strikes-compulsory-carbon-credit-investment-requirement-for-insurers-2026-06-02",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "kenya-innovate4cities-nairobi-africa-climate-conference-2026-06-21",
+          "title": "Nairobi Hosts First-Ever Innovate4Cities Climate Conference in Africa, Centering Youth and Indigenous Perspectives",
+          "relation": "same-structure",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "r2-m06-ke-carbon-registry-intergenerational-benefit-sharing-2026",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "kenya-innovate4cities-nairobi-africa-climate-conference-2026-06-21",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "kenya-innovate4cities-nairobi-africa-climate-conference-2026-06-21",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "gcf-board-approves-fp308-usd-30-million-local-climate-adaptation-project-for-tajikistan-with-youth-p",
+          "title": "GCF Board Approves FP308 USD 30 Million Local Climate Adaptation Project for Tajikistan With Youth Participation Mandates",
+          "relation": "same-structure",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "hawaii-navahine-climate-settlement-2024-06-20",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "gcf-board-approves-fp308-usd-30-million-local-climate-adaptation-project-for-tajikistan-with-youth-p",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "gcf-board-approves-fp308-usd-30-million-local-climate-adaptation-project-for-tajikistan-with-youth-p",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "norway-barnas-klimapanel-minister-demands-2026-02",
+          "title": "Norway Children's Climate Panel Presents Four Demands to Climate Minister Including Global Youth Panel",
+          "relation": "same-structure",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "norway-climate-change-act-klimaseniorinnen-amendments-consultation-2025-12",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "norway-barnas-klimapanel-minister-demands-2026-02",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "norway-barnas-klimapanel-minister-demands-2026-02",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        }
+      ],
+      "cross_trend": [
+        {
+          "trend_id": "intergenerational-equity-mainstreaming",
+          "shared_edge_count": 10
+        },
+        {
+          "trend_id": "intergenerational-fiscal-rebalancing",
+          "shared_edge_count": 8
+        },
+        {
+          "trend_id": "youth-climate-governance",
+          "shared_edge_count": 7
+        }
+      ],
+      "ring2": [
+        {
+          "id": "regional-right-to-environment",
+          "if": "Council of Europe and regional human-rights bodies recognise a stable environment as a rights anchor",
+          "then": "Domestic courts receive a portable precedent layer that outlasts any single federal retreat on climate claims",
+          "affects_lens": [
+            "dfg2-rights",
+            "dfg5-environment"
+          ],
+          "order": 2,
+          "parent_ring1_signal_id": "hrw-europe-right-healthy-environment-2026-06-05",
+          "watch_signal_topics": [
+            "climate-litigation",
+            "youth-climate-governance"
+          ],
+          "parent_is_hub": false,
+          "affects_lens_labels": [
+            {
+              "id": "dfg2-rights",
+              "label": "Human rights and fundamental freedoms"
+            },
+            {
+              "id": "dfg5-environment",
+              "label": "Clean, healthy and sustainable environment"
+            }
+          ]
+        },
+        {
+          "id": "pacific-treaty-litigation-bridge",
+          "if": "Pacific youth litigation campaigns win high-profile international recognition",
+          "then": "Small-island states accelerate treaty-based duty arguments that bypass hostile domestic judiciaries",
+          "affects_lens": [
+            "dfg2-rights",
+            "ceb5-representation"
+          ],
+          "order": 2,
+          "parent_hub_member_id": "navahine-v-hawaii-youth-climate-ruling-2024-06-12",
+          "watch_signal_topics": [
+            "climate-litigation",
+            "youth-climate-governance"
+          ],
+          "parent_ring1_signal_id": "navahine-v-hawaii-youth-climate-ruling-2024-06-12",
+          "parent_is_hub": true,
+          "affects_lens_labels": [
+            {
+              "id": "dfg2-rights",
+              "label": "Human rights and fundamental freedoms"
+            },
+            {
+              "id": "ceb5-representation",
+              "label": "Representation of future generations"
+            }
+          ]
+        },
+        {
+          "id": "litigation-risk-repricing",
+          "if": "ICJ-derived duties enter regional and municipal merits hearings",
+          "then": "Municipal borrowing and insurance markets begin pricing sovereign climate-duty exposure explicitly",
+          "affects_lens": [
+            "dfg3-prosperity",
+            "dfg5-environment"
+          ],
+          "order": 3,
+          "parent_ring1_signal_id": "unga-icj-climate-resolution-2026-05-20",
+          "watch_signal_topics": [
+            "climate-finance",
+            "climate-litigation"
+          ],
+          "parent_is_hub": true,
+          "affects_lens_labels": [
+            {
+              "id": "dfg3-prosperity",
+              "label": "Thrive in prosperity and sustainable development"
+            },
+            {
+              "id": "dfg5-environment",
+              "label": "Clean, healthy and sustainable environment"
+            }
+          ]
+        }
+      ],
+      "ring2_stub": false
+    },
+    {
+      "trend_id": "future-generations-institutions",
+      "title": "Future generations institutional machinery",
+      "member_hubs": [
+        {
+          "signal_id": "balearic-law-7-2024-repeals-mandatory-budget-and-annual-wellbeing-impact-assessments-from-ley-10-202",
+          "title": "Balearic Law 7/2024 Repeals Mandatory Budget and Annual Wellbeing Impact Assessments from Ley 10/2023",
+          "hub_score": 44,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "baleares-ley-10-2023-wellbeing-future-generations-2023-04-05",
+          "title": "Balearic Islands Enact Spain's First Wellbeing Law for Present and Future Generations",
+          "hub_score": 40.1,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "norway-framtidspanelet-future-generations-recommendations-2025-05-13",
+          "title": "Norwegian Future Panel Presents 19 Recommendations to Parliament Including Independent Future Generations Commissioner",
+          "hub_score": 39,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "soif-gulbenkian-framework-intergenerational-fairness-2020-21",
+          "title": "SOIF–Gulbenkian Framework for Intergenerational Fairness: Institutions, National Dialogue, and Five Unfairness Tests for Policy Assessment",
+          "hub_score": 38.6,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "canada-s-amended-impact-assessment-act-still-requires-a-sustainability-test-for-present-and-future-g",
+          "title": "Canada’s Amended Impact Assessment Act Still Requires a Sustainability Test for Present and Future Generations",
+          "hub_score": 38,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "berlin-senate-and-22-land-owned-firms-sign-klimapakt-2025-2030-committing-13-6bn-climate-investment",
+          "title": "Berlin Senate and 22 Land-Owned Firms Sign Klimapakt 2025–2030 Committing €13.6bn Climate Investment for Future Generations",
+          "hub_score": 37.5,
+          "relation": "member-hub"
+        }
+      ],
+      "ring1": [
+        {
+          "signal_id": "eu-edtech-dialogue-digital-education-roadmap-2026-04-18",
+          "title": "EU Uses EdTech Dialogue to Shape a 2030 Roadmap for Digital Education and Skills",
+          "relation": "precedes",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "unesco-education-beyond-2030-foresight-outlook-2026-04-14",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "unesco-education-beyond-2030-foresight-outlook-2026-04-14",
+              "type": "precedes",
+              "note": "Education Beyond 2030 foresight precedes EU stakeholder roadmap for 2030 digital skills."
+            }
+          ]
+        },
+        {
+          "signal_id": "norad-youth-global-engagement-funding-2026-2030",
+          "title": "Norad Allocates NOK 900 Million to 23 Organisations for Youth Global Engagement, Democracy and Climate Education 2026-2030",
+          "relation": "same-mechanism",
+          "edge_count": 6,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "norway-framtidspanelet-future-generations-recommendations-2025-05-13",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "norway-framtidspanelet-future-generations-recommendations-2025-05-13",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "norway-gpfg-ethical-framework-parliament-review-2025-11",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "norway-storting-gpfg-2026-white-paper-concluded-2026-06-05",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "norway-citizenship-stricter-requirements-proposal-2026-06-21",
+          "title": "Norway Proposes Stricter Citizenship Requirements Including Longer Continuous Residency for Intergenerational Integration",
+          "relation": "same-mechanism",
+          "edge_count": 3,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "norway-framtidspanelet-future-generations-recommendations-2025-05-13",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "norway-framtidspanelet-future-generations-recommendations-2025-05-13",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "norway-nou-2026-2-birth-rate-policy-new-generations-2026-02-09",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "norway-storting-gpfg-future-generations-commissioner-rejected-2026-06-04",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "carbon-tracker-nbim-climate-risk-insight-action-gap-2026-06",
+          "title": "Carbon Tracker Report Finds Norway's $2.3 Trillion Oil Fund Has Climate Risk Insight but Fails to Act on Fossil Fuel Divestment",
+          "relation": "same-mechanism",
+          "edge_count": 6,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "norway-framtidspanelet-future-generations-recommendations-2025-05-13",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "norway-framtidspanelet-future-generations-recommendations-2025-05-13",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "norway-gpfg-ethical-framework-parliament-review-2025-11",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "norway-storting-gpfg-2026-white-paper-concluded-2026-06-05",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "montana-behavioral-health-future-generations-commission-2025",
+          "title": "Montana Creates Behavioral Health System for Future Generations Commission with $300M Investment",
+          "relation": "same-structure",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "m10-audit-wales-no-time-to-lose-april-2025",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "montana-behavioral-health-future-generations-commission-2025",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "montana-behavioral-health-future-generations-commission-2025",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "japan-basic-policy-2026-ties-debt-to-gdp-decline-and-working-generation-premium-relief-to-responsibi",
+          "title": "Japan Basic Policy 2026 Ties Debt-to-GDP Decline and Working-Generation Premium Relief to Responsibility for Future Generations",
+          "relation": "same-mechanism",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "japan-economic-fiscal-future-projection-committee-bill-2026",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "japan-economic-fiscal-future-projection-committee-bill-2026",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "korea-announces-future-response-fund-to-ring-fence-windfall-tax-revenue-for-youth-regions-and-skills",
+          "title": "Korea Announces Future Response Fund to Ring-Fence Windfall Tax Revenue for Youth, Regions and Skills",
+          "relation": "same-mechanism",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "korea-japan-future-vision-forum-youth-demographic-policy-2026",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "korea-japan-future-vision-forum-youth-demographic-policy-2026",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "m05-jp-national-council-social-security-2026",
+          "title": "Japan Launches National Council on Social Security to Rebalance Benefits and Burdens Across Generations",
+          "relation": "same-mechanism",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "japan-economic-fiscal-future-projection-committee-bill-2026",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "japan-economic-fiscal-future-projection-committee-bill-2026",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "korea-cabinet-adopts-implementing-decrees-for-short-term-parental-leave-and-spouse-care-entitlements",
+          "title": "Korea Cabinet Adopts Implementing Decrees for Short-Term Parental Leave and Spouse Care Entitlements",
+          "relation": "same-mechanism",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "korea-japan-future-vision-forum-youth-demographic-policy-2026",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "korea-japan-future-vision-forum-youth-demographic-policy-2026",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "japan-enacts-2025-pension-reform-act-to-lift-basic-pension-and-expand-coverage-2025-06-13",
+          "title": "Japan Enacts 2025 Pension Reform Act to Lift Basic Pension and Expand Coverage",
+          "relation": "same-mechanism",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "japan-economic-fiscal-future-projection-committee-bill-2026",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "japan-economic-fiscal-future-projection-committee-bill-2026",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "portugal-creates-social-security-reform-working-group-mandating-intergenerational-equity-analysis-20",
+          "title": "Portugal Creates Social Security Reform Working Group Mandating Intergenerational Equity Analysis",
+          "relation": "same-mechanism",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "portugal-intergenerational-justice-index-update-2025-12-04",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "portugal-intergenerational-justice-index-update-2025-12-04",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "unesco-guidance-generative-ai-education-2026",
+          "title": "UNESCO Generative AI Guidance Calls for Age Limits, Data Privacy, and Human-Agent Pedagogical Design in Schools",
+          "relation": "supports",
+          "edge_count": 1,
+          "hop": 2,
+          "edge_tier": 0,
+          "anchor_member_id": "eu-edtech-dialogue-digital-education-roadmap-2026-04-18",
+          "parent_signal_id": "eu-edtech-dialogue-digital-education-roadmap-2026-04-18",
+          "via": [
+            {
+              "from": "unesco-guidance-generative-ai-education-2026",
+              "type": "supports",
+              "note": "EU EdTech Dialogue 2030 roadmap embeds UNESCO age-limit and privacy safeguards for classroom GenAI."
+            }
+          ]
+        }
+      ],
+      "cross_trend": [
+        {
+          "trend_id": "intergenerational-fiscal-rebalancing",
+          "shared_edge_count": 10
+        },
+        {
+          "trend_id": "intergenerational-equity-mainstreaming",
+          "shared_edge_count": 7
+        },
+        {
+          "trend_id": "youth-digital-protection",
+          "shared_edge_count": 3
+        },
+        {
+          "trend_id": "youth-participation-governance",
+          "shared_edge_count": 1
+        },
+        {
+          "trend_id": "disc-education-unesco",
+          "shared_edge_count": 1
+        }
+      ],
+      "ring2": [
+        {
+          "id": "commissioner-mandate-hardening",
+          "if": "Future-generations bodies gain parliamentary foresight and pension-governance visibility",
+          "then": "Advocates push binding long-term impact tests on major legislation, not advisory reports alone",
+          "affects_lens": [
+            "ceb5-representation",
+            "ceb4-good-ancestor"
+          ],
+          "order": 2,
+          "parent_hub_member_id": "korea-nafi-parliamentary-foresight-institute-profile-2026",
+          "watch_signal_topics": [
+            "future-generations-governance",
+            "youth-governance"
+          ],
+          "parent_ring1_signal_id": "eu-edtech-dialogue-digital-education-roadmap-2026-04-18",
+          "parent_is_hub": false,
+          "affects_lens_labels": [
+            {
+              "id": "ceb5-representation",
+              "label": "Representation of future generations"
+            },
+            {
+              "id": "ceb4-good-ancestor",
+              "label": "Think, plan and act with future generations in mind"
+            }
+          ]
+        },
+        {
+          "id": "sovereign-fund-climate-duty",
+          "if": "Sovereign wealth funds face sustained scrutiny on intergenerational climate risk",
+          "then": "Fiduciary rules begin requiring explicit long-horizon scenario stress tests for public pension assets",
+          "affects_lens": [
+            "dfg5-environment",
+            "dfg3-prosperity"
+          ],
+          "order": 2,
+          "parent_ring1_signal_id": "carbon-tracker-nbim-climate-risk-insight-action-gap-2026-06",
+          "watch_signal_topics": [
+            "climate-finance",
+            "intergenerational-fiscal-policy"
+          ],
+          "parent_is_hub": false,
+          "affects_lens_labels": [
+            {
+              "id": "dfg5-environment",
+              "label": "Clean, healthy and sustainable environment"
+            },
+            {
+              "id": "dfg3-prosperity",
+              "label": "Thrive in prosperity and sustainable development"
+            }
+          ]
+        },
+        {
+          "id": "eu-fairness-institutional-spillover",
+          "if": "EU intergenerational fairness strategy normalises cross-cutting impact review",
+          "then": "Member states replicate commissioner-style bodies at regional level, creating a patchwork enforcement map",
+          "affects_lens": [
+            "ceb2-fairness",
+            "ceb5-representation"
+          ],
+          "order": 3,
+          "parent_ring1_signal_id": "eu-edtech-dialogue-digital-education-roadmap-2026-04-18",
+          "watch_signal_topics": [
+            "intergenerational-equity",
+            "future-generations-governance"
+          ],
+          "parent_is_hub": false,
+          "affects_lens_labels": [
+            {
+              "id": "ceb2-fairness",
+              "label": "Fairness between present and future generations"
+            },
+            {
+              "id": "ceb5-representation",
+              "label": "Representation of future generations"
+            }
+          ]
+        }
+      ],
+      "ring2_stub": false
+    },
+    {
+      "trend_id": "youth-digital-protection",
+      "title": "Youth digital protection regulatory wave",
+      "member_hubs": [
+        {
+          "signal_id": "g7-minors-online-protection-principles-2026-05-29",
+          "title": "G7 Nations Adopt First-Ever Common Principles to Protect Minors Online, Inspired by EU Digital Services Act Framework",
+          "hub_score": 183.6,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "unesco-guidance-generative-ai-education-2026",
+          "title": "UNESCO Generative AI Guidance Calls for Age Limits, Data Privacy, and Human-Agent Pedagogical Design in Schools",
+          "hub_score": 143,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "france-social-media-ban-under-15-law-2026-01-26",
+          "title": "French National Assembly Votes to Ban Social Media Access for Minors Under 15",
+          "hub_score": 127.5,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "un-ohchr-children-social-media-safety-by-design-2026-05-29",
+          "title": "UN Human Rights Office Issues 10-Point Framework: Social Media Bans Not Enough Without Safety-by-Design",
+          "hub_score": 124.5,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "malaysia-social-media-ban-under-16-2026-06-01",
+          "title": "Malaysia Enforces Under-16 Social Media Ban as Global Movement for Youth Digital Protection Accelerates",
+          "hub_score": 121,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "brazil-mec-ai-education-reference-framework-2026-03",
+          "title": "Brazil Publishes National AI in Education Reference Framework for Responsible Digital Learning Governance",
+          "hub_score": 111.5,
+          "relation": "member-hub"
+        }
+      ],
+      "ring1": [
+        {
+          "signal_id": "green-european-journal-overcoming-presentism-eu-strategy-2026-06",
+          "title": "Green European Journal Maps the Promise and Limits of EU Intergenerational Fairness Strategy in Major Analysis",
+          "relation": "contradicts",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "france-social-media-ban-under-15-law-2026-01-26",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "france-social-media-ban-under-15-law-2026-01-26",
+              "type": "contradicts",
+              "note": "Precautionary platform ban vs critique that EU governance remains structurally presentist without democratic redesign."
+            }
+          ]
+        },
+        {
+          "signal_id": "eu-finance-youth-policy-dialogue-money-management-2026-04-30",
+          "title": "EU Finance Commissioner Hosts Youth Policy Dialogue on Money Management Skills",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "g7-minors-online-protection-principles-2026-05-29",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "eu-finance-youth-policy-dialogue-money-management-2026-04-30",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "cor-europe-future-young-people-dialogue-2026-05-08",
+          "title": "Committee of the Regions Uses Europe Day Dialogue to Ask What Kind of Europe Can Meet Future Generations’ Needs",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "g7-minors-online-protection-principles-2026-05-29",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "g7-minors-online-protection-principles-2026-05-29",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "eu-council-europe-youth-climate-justice-brief-2026-07-07",
+          "title": "EU-Council of Europe Youth Partnership Publishes Knowledge Brief on Climate Justice in the European Youth Field",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "g7-minors-online-protection-principles-2026-05-29",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "g7-minors-online-protection-principles-2026-05-29",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "albania-expands-eu-aligned-youth-guarantee-nationwide-as-accession-negotiations-advance-2026-08-07",
+          "title": "Albania Expands EU-Aligned Youth Guarantee Nationwide as Accession Negotiations Advance",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "g7-minors-online-protection-principles-2026-05-29",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "g7-minors-online-protection-principles-2026-05-29",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "eesc-youth-week-meaningful-participation-2026-04-27",
+          "title": "EESC Uses European Youth Week to Push Youth Participation Beyond Consultation",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "g7-minors-online-protection-principles-2026-05-29",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "g7-minors-online-protection-principles-2026-05-29",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "r2-m09-bloomberg-economics-civil-unrest-risk-model-2025",
+          "title": "Bloomberg Economics Machine-Learning Model Links Youth Median Age and Social Media Penetration to Civil-Unrest Risk, Flags Six Countries for 2026",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "hrw-nepal-gen-z-protest-unlawful-force-investigation-2025-11",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "r2-m09-bloomberg-economics-civil-unrest-risk-model-2025",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "oecd-digital-government-outlook-2026-07",
+          "title": "OECD Publishes First Digital Government Outlook 2026, Finding Persistent Gap Between Strategy and Implementation Across 36 Member States",
+          "relation": "same-structure",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "eu-consumer-agenda-2030-digital-fairness-2025-11-19",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "oecd-digital-government-outlook-2026-07",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "oecd-digital-government-outlook-2026-07",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "bangladesh-youth-civic-tech-expo-2026-04-18",
+          "title": "Bangladesh Backs Youth-Led Civic Tech Tools for More Inclusive Digital Governance",
+          "relation": "same-structure",
+          "edge_count": 3,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "eu-consumer-agenda-2030-digital-fairness-2025-11-19",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "bangladesh-youth-civic-tech-expo-2026-04-18",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "bangladesh-youth-civic-tech-expo-2026-04-18",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "us-kids-act-house-passage-2026-06-29",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "un-joint-statement-ai-rights-child-2025-11",
+          "title": "UN Agencies Issue Joint Statement Demanding Child-Rights-Based Approach to AI Governance",
+          "relation": "same-structure",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "unicef-policy-guidance-ai-children-v3-2025",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "unicef-policy-guidance-ai-children-v3-2025",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "un-joint-statement-ai-rights-child-2025-11",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "coe-huderia-ai-impact-assessment-2026",
+          "title": "Council of Europe Adopts HUDERIA Methodology for AI Human-Rights Risk Assessment Including Child-Specific Safeguards",
+          "relation": "same-structure",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "eu-consumer-agenda-2030-digital-fairness-2025-11-19",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "coe-huderia-ai-impact-assessment-2026",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "coe-huderia-ai-impact-assessment-2026",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "uk-work-and-pensions-committee-calls-for-a-youth-employment-strategy-under-25-nics-relief-and-10-yea",
+          "title": "UK Work and Pensions Committee Calls for a Youth Employment Strategy, Under-25 NICs Relief and 10-Year Youth Guarantee Funding",
+          "relation": "same-mechanism",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "c02-scotland-crwia-budget-bill-2025-26",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "uk-work-and-pensions-committee-calls-for-a-youth-employment-strategy-under-25-nics-relief-and-10-yea",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        }
+      ],
+      "cross_trend": [
+        {
+          "trend_id": "intergenerational-equity-mainstreaming",
+          "shared_edge_count": 9
+        },
+        {
+          "trend_id": "youth-participation-governance",
+          "shared_edge_count": 6
+        },
+        {
+          "trend_id": "ai-global-governance-architecture",
+          "shared_edge_count": 5
+        },
+        {
+          "trend_id": "intergenerational-fiscal-rebalancing",
+          "shared_edge_count": 4
+        }
+      ],
+      "ring2": [
+        {
+          "id": "ban-to-design-shift",
+          "if": "Under-16 platform bans spread faster than safety-by-design enforcement matures",
+          "then": "Regulators pivot from age-gating to product-level duty-of-care audits with youth co-design mandates",
+          "affects_lens": [
+            "dfg6-technology",
+            "dfg2-rights"
+          ],
+          "order": 2,
+          "parent_hub_member_id": "un-ohchr-children-social-media-safety-by-design-2026-05-29",
+          "watch_signal_topics": [
+            "youth-digital-protection",
+            "digital-governance"
+          ],
+          "parent_ring1_signal_id": "un-ohchr-children-social-media-safety-by-design-2026-05-29",
+          "parent_is_hub": true,
+          "affects_lens_labels": [
+            {
+              "id": "dfg6-technology",
+              "label": "Responsible and ethical science, technology and innovation"
+            },
+            {
+              "id": "dfg2-rights",
+              "label": "Human rights and fundamental freedoms"
+            }
+          ]
+        },
+        {
+          "id": "g7-harmonisation-race",
+          "if": "G7 common principles on minors' online protection gain diplomatic weight",
+          "then": "Platforms face a converging compliance baseline across jurisdictions, raising the cost of weakest-link enforcement",
+          "affects_lens": [
+            "dfg6-technology",
+            "ceb2-fairness"
+          ],
+          "order": 2,
+          "parent_hub_member_id": "g7-minors-online-protection-principles-2026-05-29",
+          "watch_signal_topics": [
+            "youth-digital-protection"
+          ],
+          "parent_ring1_signal_id": "g7-minors-online-protection-principles-2026-05-29",
+          "parent_is_hub": true,
+          "affects_lens_labels": [
+            {
+              "id": "dfg6-technology",
+              "label": "Responsible and ethical science, technology and innovation"
+            },
+            {
+              "id": "ceb2-fairness",
+              "label": "Fairness between present and future generations"
+            }
+          ]
+        },
+        {
+          "id": "verification-privacy-tension",
+          "if": "Age-assurance rules tighten on major platforms",
+          "then": "Privacy advocates and child-rights groups force a visible trade-off frame: verification vs anonymity for vulnerable youth",
+          "affects_lens": [
+            "dfg2-rights",
+            "dfg6-technology"
+          ],
+          "order": 3,
+          "parent_hub_member_id": "g7-minors-online-protection-principles-2026-05-29",
+          "watch_signal_topics": [
+            "youth-digital-protection",
+            "digital-governance"
+          ],
+          "parent_ring1_signal_id": "g7-minors-online-protection-principles-2026-05-29",
+          "parent_is_hub": true,
+          "affects_lens_labels": [
+            {
+              "id": "dfg2-rights",
+              "label": "Human rights and fundamental freedoms"
+            },
+            {
+              "id": "dfg6-technology",
+              "label": "Responsible and ethical science, technology and innovation"
+            }
+          ]
+        }
+      ],
+      "ring2_stub": false
+    },
+    {
+      "trend_id": "ai-global-governance-architecture",
+      "title": "AI global governance architecture is institutionalising",
+      "member_hubs": [
+        {
+          "signal_id": "green-european-journal-overcoming-presentism-eu-strategy-2026-06",
+          "title": "Green European Journal Maps the Promise and Limits of EU Intergenerational Fairness Strategy in Major Analysis",
+          "hub_score": 36.5,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "unu-future-generations-platform-2026-04",
+          "title": "UNU Launches Global Future Generations Platform Mapping Long-Term Governance Worldwide",
+          "hub_score": 20.5,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "coe-huderia-ai-impact-assessment-2026",
+          "title": "Council of Europe Adopts HUDERIA Methodology for AI Human-Rights Risk Assessment Including Child-Specific Safeguards",
+          "hub_score": 25,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "eu-ai-board-fundamental-rights-impact-assessment-youth-guidance-2026-06-30",
+          "title": "European AI Board Issues Guidelines on Mandatory Fundamental Rights Impact Assessments for High-Risk AI Affecting Children and Youth",
+          "hub_score": 24.6,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "south-korea-nafi-mandatory-30-year-legislative-foresight-audits-2026-02-25",
+          "title": "South Korea National Assembly Futures Institute Implements Mandatory 30-Year Legislative Impact Vetting",
+          "hub_score": 23.1,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "152nd-ipu-assembly-unanimously-endorses-long-term-governance-and-parliamentary-foresight-commitments-2026-04-1",
+          "title": "152nd IPU Assembly Unanimously Endorses Long-Term Governance and Parliamentary Foresight Commitments",
+          "hub_score": 22.6,
+          "relation": "member-hub"
+        }
+      ],
+      "ring1": [
+        {
+          "signal_id": "france-social-media-ban-under-15-law-2026-01-26",
+          "title": "French National Assembly Votes to Ban Social Media Access for Minors Under 15",
+          "relation": "contradicts",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "green-european-journal-overcoming-presentism-eu-strategy-2026-06",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "france-social-media-ban-under-15-law-2026-01-26",
+              "type": "contradicts",
+              "note": "Precautionary platform ban vs critique that EU governance remains structurally presentist without democratic redesign."
+            }
+          ]
+        },
+        {
+          "signal_id": "eu-strategy-intergenerational-fairness-2026-03-05",
+          "title": "EU Adopts First-Ever Strategy on Intergenerational Fairness with New Index and Youth Check",
+          "relation": "contradicts",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "green-european-journal-overcoming-presentism-eu-strategy-2026-06",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "green-european-journal-overcoming-presentism-eu-strategy-2026-06",
+              "type": "contradicts",
+              "note": "Argues the strategy does not address democracy's structural presentism."
+            },
+            {
+              "from": "unu-future-generations-platform-2026-04",
+              "type": "supports",
+              "note": "UNU platform on future-generations institutions parallels and reinforces the EU strategy architecture."
+            }
+          ]
+        },
+        {
+          "signal_id": "eu-anti-poverty-strategy-housing-exclusion-2026-05-06",
+          "title": "European Commission Pairs a First EU Anti-Poverty Strategy With Long-Term Action on Child Poverty and Housing Exclusion",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "152nd-ipu-assembly-unanimously-endorses-long-term-governance-and-parliamentary-foresight-commitments-2026-04-1",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "eu-anti-poverty-strategy-housing-exclusion-2026-05-06",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "eu-child-guarantee-strengthening-2026-05-11",
+          "title": "European Commission Moves to Strengthen the Child Guarantee as an Intergenerational Anti-Poverty Tool",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "152nd-ipu-assembly-unanimously-endorses-long-term-governance-and-parliamentary-foresight-commitments-2026-04-1",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "eu-child-guarantee-strengthening-2026-05-11",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "scotland-fm-intergenerational-child-poverty-2026-05-26",
+          "title": "Scotland's First Minister Calls Intergenerational Child Poverty 'Morally Wrong' in Inaugural Programme Speech",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "152nd-ipu-assembly-unanimously-endorses-long-term-governance-and-parliamentary-foresight-commitments-2026-04-1",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "scotland-fm-intergenerational-child-poverty-2026-05-26",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "eesc-youth-entrepreneurship-competitiveness-2026-05-07",
+          "title": "EESC Treats Youth Entrepreneurship as a Competitiveness and Generational-Renewal Tool",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "152nd-ipu-assembly-unanimously-endorses-long-term-governance-and-parliamentary-foresight-commitments-2026-04-1",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "eesc-youth-entrepreneurship-competitiveness-2026-05-07",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "international-eu-anti-poverty-housing-strategy-2026-05-07",
+          "title": "European Commission Launches an EU Anti-Poverty Strategy and New Housing-Exclusion Measures",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "152nd-ipu-assembly-unanimously-endorses-long-term-governance-and-parliamentary-foresight-commitments-2026-04-1",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "international-eu-anti-poverty-housing-strategy-2026-05-07",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "ireland-roadmap-social-inclusion-2026-2030",
+          "title": "Ireland Launches Roadmap for Social Inclusion 2026–2030 Targeting 2% Consistent Poverty by 2030",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "152nd-ipu-assembly-unanimously-endorses-long-term-governance-and-parliamentary-foresight-commitments-2026-04-1",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "ireland-roadmap-social-inclusion-2026-2030",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "global-witness-roots-of-resistance-defenders-2024",
+          "title": "Global Witness Records 146 Land and Environmental Defenders Killed or Disappeared in 2024, Indigenous Peoples Bearing a Third of Attacks",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "152nd-ipu-assembly-unanimously-endorses-long-term-governance-and-parliamentary-foresight-commitments-2026-04-1",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "global-witness-roots-of-resistance-defenders-2024",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "un-hleg-beyond-gdp-global-dashboard-report-2026-05",
+          "title": "UN High-Level Expert Group on Beyond GDP Releases Blueprint for Global Progress Dashboard Complementing GDP",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "152nd-ipu-assembly-unanimously-endorses-long-term-governance-and-parliamentary-foresight-commitments-2026-04-1",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "un-hleg-beyond-gdp-global-dashboard-report-2026-05",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "un-aarhus-special-rapporteur-environmental-defenders-guidelines-2025",
+          "title": "UN Special Rapporteur on Environmental Defenders Documents 95 Criminalization Complaints and Issues Guidelines on Peaceful Protest",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "152nd-ipu-assembly-unanimously-endorses-long-term-governance-and-parliamentary-foresight-commitments-2026-04-1",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "un-aarhus-special-rapporteur-environmental-defenders-guidelines-2025",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "east-asia-kr-bok-youth-labor-housing-scarring-2026",
+          "title": "Bank of Korea Finds Youth Job-Search Delays and Housing Costs Permanently Scar Lifetime Earnings",
+          "relation": "same-mechanism",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "korea-nafi-parliamentary-foresight-institute-profile-2026",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "korea-nafi-parliamentary-foresight-institute-profile-2026",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "south-korea-nafi-mandatory-30-year-legislative-foresight-audits-2026-02-25",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        }
+      ],
+      "cross_trend": [
+        {
+          "trend_id": "intergenerational-fiscal-rebalancing",
+          "shared_edge_count": 11
+        },
+        {
+          "trend_id": "intergenerational-equity-mainstreaming",
+          "shared_edge_count": 11
+        },
+        {
+          "trend_id": "youth-digital-protection",
+          "shared_edge_count": 1
+        }
+      ],
+      "ring2": [],
+      "ring2_stub": false
+    },
+    {
+      "trend_id": "youth-participation-governance",
+      "title": "Youth participation in governance institutions",
+      "member_hubs": [
+        {
+          "signal_id": "aspi-darwin-dialogue-young-guns-national-security-2026-05-27",
+          "title": "ASPI Darwin Dialogue Introduces 'Young Guns' Session, Arguing National Security Needs Younger Voices to Challenge Assumptions",
+          "hub_score": 31,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "rwanda-governance-scorecard-citizen-participation-survey-2025",
+          "title": "Rwanda Governance Scorecard Survey Rates Citizen Participation at 90.87% Amid Youth Political Power Debate",
+          "hub_score": 28.5,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "norway-hlpf-youth-delegate-sdg7-2026-07-07",
+          "title": "Norway Youth Delegate Amalie Bjørnsen Delivers SDG7 Statement at UN HLPF 2026, Demonstrating Institutionalised Youth Participation in International Forums",
+          "hub_score": 26.5,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "eesc-youth-week-meaningful-participation-2026-04-27",
+          "title": "EESC Uses European Youth Week to Push Youth Participation Beyond Consultation",
+          "hub_score": 26,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "afrobarometer-uganda-youth-health-priorities-poll-2024",
+          "title": "Afrobarometer Poll Finds Ugandan Youth Prioritize Health and Water Over Party Political Participation",
+          "hub_score": 26,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "m02-zimbabwe-junior-councils-tokenistic-governance-2021",
+          "title": "Zimbabwe Junior Council Assessment Finds Tokenistic Participation Despite 70-Year Formal Mechanism",
+          "hub_score": 24.5,
+          "relation": "member-hub"
+        }
+      ],
+      "ring1": [
+        {
+          "signal_id": "eu-edtech-dialogue-digital-education-roadmap-2026-04-18",
+          "title": "EU Uses EdTech Dialogue to Shape a 2030 Roadmap for Digital Education and Skills",
+          "relation": "supports",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "unesco-global-youth-student-consultations-education-beyond-2030-2026-04-14",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "unesco-global-youth-student-consultations-education-beyond-2030-2026-04-14",
+              "type": "supports",
+              "note": "UNESCO youth consultations feed multilateral digital-education roadmap processes including the EU EdTech Dialogue."
+            }
+          ]
+        },
+        {
+          "signal_id": "france-social-media-ban-under-15-law-2026-01-26",
+          "title": "French National Assembly Votes to Ban Social Media Access for Minors Under 15",
+          "relation": "precedes",
+          "edge_count": 3,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "un-ohchr-children-social-media-safety-by-design-2026-05-29",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "un-ohchr-children-social-media-safety-by-design-2026-05-29",
+              "type": "contradicts",
+              "note": "OHCHR argues bans alone are insufficient; France enacted its under-15 ban four months earlier."
+            },
+            {
+              "from": "france-social-media-ban-under-15-law-2026-01-26",
+              "type": "precedes",
+              "note": "France's January ban is among national measures the G7 principles later harmonised in May."
+            },
+            {
+              "from": "france-social-media-ban-under-15-law-2026-01-26",
+              "type": "precedes",
+              "note": "France's under-15 ban predates Malaysia's June under-16 enforcement in the global ban wave."
+            }
+          ]
+        },
+        {
+          "signal_id": "south-africa-youth-day-50-governance-accountability-2026-06-15",
+          "title": "South Africa's Youth Day at 50: From Commemoration to Governance Accountability",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "za-parliament-nyda-whistleblower-governance-alarm-2026-06-03",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "south-africa-youth-day-50-governance-accountability-2026-06-15",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "eu-anti-poverty-strategy-housing-exclusion-2026-05-06",
+          "title": "European Commission Pairs a First EU Anti-Poverty Strategy With Long-Term Action on Child Poverty and Housing Exclusion",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "albania-expands-eu-aligned-youth-guarantee-nationwide-as-accession-negotiations-advance-2026-08-07",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "eu-anti-poverty-strategy-housing-exclusion-2026-05-06",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "eesc-youth-entrepreneurship-competitiveness-2026-05-07",
+          "title": "EESC Treats Youth Entrepreneurship as a Competitiveness and Generational-Renewal Tool",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "albania-expands-eu-aligned-youth-guarantee-nationwide-as-accession-negotiations-advance-2026-08-07",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "eesc-youth-entrepreneurship-competitiveness-2026-05-07",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "uk-social-media-ban-under-16-2026-06-15",
+          "title": "UK Announces Social Media Ban for Under-16s, Framed as Protecting Future Generations",
+          "relation": "contradicts",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "un-ohchr-children-social-media-safety-by-design-2026-05-29",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "un-ohchr-children-social-media-safety-by-design-2026-05-29",
+              "type": "contradicts",
+              "note": "Same OHCHR safety-by-design framework challenges the UK's under-16 ban announced two weeks later."
+            },
+            {
+              "from": "g7-minors-online-protection-principles-2026-05-29",
+              "type": "supports",
+              "note": "G7 common principles provide multilateral framing for the UK's under-16 ban announcement."
+            }
+          ]
+        },
+        {
+          "signal_id": "eu-age-verification-app-rollout-2026-04-29",
+          "title": "EU Urges Member States to Roll Out a Privacy-Preserving Age Verification App by End-2026",
+          "relation": "supports",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "g7-minors-online-protection-principles-2026-05-29",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "eu-age-verification-app-rollout-2026-04-29",
+              "type": "supports",
+              "note": "EU privacy-preserving age verification underpins the G7 principle on privacy-preserving age assurance."
+            }
+          ]
+        },
+        {
+          "signal_id": "eu-child-online-safety-panel-2026-04-28",
+          "title": "EU Child Online Safety Panel Advances a Harmonised Age-Verification Track",
+          "relation": "precedes",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "g7-minors-online-protection-principles-2026-05-29",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "eu-child-online-safety-panel-2026-04-28",
+              "type": "precedes",
+              "note": "EU Special Panel fed harmonised age-restriction recommendations before G7 adopted DSA-inspired principles."
+            }
+          ]
+        },
+        {
+          "signal_id": "green-european-journal-overcoming-presentism-eu-strategy-2026-06",
+          "title": "Green European Journal Maps the Promise and Limits of EU Intergenerational Fairness Strategy in Major Analysis",
+          "relation": "contradicts",
+          "edge_count": 1,
+          "hop": 2,
+          "edge_tier": 0,
+          "anchor_member_id": "green-european-journal-overcoming-presentism-eu-strategy-2026-06",
+          "parent_signal_id": "france-social-media-ban-under-15-law-2026-01-26",
+          "via": [
+            {
+              "from": "france-social-media-ban-under-15-law-2026-01-26",
+              "type": "contradicts",
+              "note": "Precautionary platform ban vs critique that EU governance remains structurally presentist without democratic redesign."
+            }
+          ]
+        },
+        {
+          "signal_id": "unesco-guidance-generative-ai-education-2026",
+          "title": "UNESCO Generative AI Guidance Calls for Age Limits, Data Privacy, and Human-Agent Pedagogical Design in Schools",
+          "relation": "supports",
+          "edge_count": 1,
+          "hop": 2,
+          "edge_tier": 0,
+          "anchor_member_id": "eu-edtech-dialogue-digital-education-roadmap-2026-04-18",
+          "parent_signal_id": "eu-edtech-dialogue-digital-education-roadmap-2026-04-18",
+          "via": [
+            {
+              "from": "unesco-guidance-generative-ai-education-2026",
+              "type": "supports",
+              "note": "EU EdTech Dialogue 2030 roadmap embeds UNESCO age-limit and privacy safeguards for classroom GenAI."
+            }
+          ]
+        },
+        {
+          "signal_id": "eu-commission-recommendation-age-verification-scheme-2026-04",
+          "title": "European Commission Adopts Digital Age Verification Recommendation for EU Online Platform Protection by End-2026",
+          "relation": "precedes",
+          "edge_count": 1,
+          "hop": 2,
+          "edge_tier": 0,
+          "anchor_member_id": "eu-age-verification-app-rollout-2026-04-29",
+          "parent_signal_id": "eu-age-verification-app-rollout-2026-04-29",
+          "via": [
+            {
+              "from": "eu-commission-recommendation-age-verification-scheme-2026-04",
+              "type": "precedes",
+              "note": "Commission age-verification recommendation adopted in April, rollout urged five days later."
+            }
+          ]
+        },
+        {
+          "signal_id": "eu-strategy-intergenerational-fairness-2026-03-05",
+          "title": "EU Adopts First-Ever Strategy on Intergenerational Fairness with New Index and Youth Check",
+          "relation": "supports",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "eu-green-week-youth-dialogue-2026-06-03",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "eu-green-week-youth-dialogue-2026-06-03",
+              "type": "supports",
+              "note": "Green Week Youth Policy Dialogue mainstreams the Commission strategy into Europe's flagship environmental conference."
+            }
+          ]
+        }
+      ],
+      "cross_trend": [
+        {
+          "trend_id": "intergenerational-equity-mainstreaming",
+          "shared_edge_count": 8
+        },
+        {
+          "trend_id": "youth-digital-protection",
+          "shared_edge_count": 7
+        },
+        {
+          "trend_id": "intergenerational-fiscal-rebalancing",
+          "shared_edge_count": 7
+        },
+        {
+          "trend_id": "ai-global-governance-architecture",
+          "shared_edge_count": 1
+        },
+        {
+          "trend_id": "disc-education-unesco",
+          "shared_edge_count": 1
+        }
+      ],
+      "ring2": [
+        {
+          "id": "tokenism-credibility-gap",
+          "if": "Youth councils and advisory bodies proliferate faster than their real decision power grows",
+          "then": "A credibility gap opens between symbolic and substantive participation, driving demand for binding youth-check mechanisms with legal teeth",
+          "affects_lens": [
+            "ceb5-representation",
+            "dfg2-rights"
+          ],
+          "order": 2,
+          "parent_hub_member_id": "unesco-global-youth-student-consultations-education-beyond-2030-2026-04-14",
+          "watch_signal_topics": [
+            "youth-participation",
+            "future-generations-governance"
+          ],
+          "parent_ring1_signal_id": "eu-edtech-dialogue-digital-education-roadmap-2026-04-18",
+          "parent_is_hub": false,
+          "affects_lens_labels": [
+            {
+              "id": "ceb5-representation",
+              "label": "Representation of future generations"
+            },
+            {
+              "id": "dfg2-rights",
+              "label": "Human rights and fundamental freedoms"
+            }
+          ]
+        },
+        {
+          "id": "participation-budget-link",
+          "if": "Youth parliaments and civic-tech forums scale nationally",
+          "then": "Participatory budgeting pilots become the default proof point for moving from consultation to allocative power",
+          "affects_lens": [
+            "ceb5-representation",
+            "dfg3-prosperity"
+          ],
+          "order": 2,
+          "parent_hub_member_id": "unesco-gem-access-equity-countdown-2026-04-29",
+          "watch_signal_topics": [
+            "youth-governance",
+            "youth-participation"
+          ],
+          "parent_ring1_signal_id": "eu-edtech-dialogue-digital-education-roadmap-2026-04-18",
+          "parent_is_hub": false,
+          "affects_lens_labels": [
+            {
+              "id": "ceb5-representation",
+              "label": "Representation of future generations"
+            },
+            {
+              "id": "dfg3-prosperity",
+              "label": "Thrive in prosperity and sustainable development"
+            }
+          ]
+        }
+      ],
+      "ring2_stub": false
+    },
+    {
+      "trend_id": "intergenerational-equity-mainstreaming",
+      "title": "Intergenerational equity goes mainstream",
+      "member_hubs": [
+        {
+          "signal_id": "eu-strategy-intergenerational-fairness-2026-03-05",
+          "title": "EU Adopts First-Ever Strategy on Intergenerational Fairness with New Index and Youth Check",
+          "hub_score": 262.7,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "ninth-circuit-lighthiser-youth-climate-dismissal-2026-06-02",
+          "title": "Ninth Circuit Dismisses Youth Climate Challenge to Trump Energy Orders, Deepening US Judicial Retreat on Climate Rights",
+          "hub_score": 116.7,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "icj-advisory-opinion-climate-obligations-2025-07-23",
+          "title": "ICJ Issues Unanimous Advisory Opinion on State Climate Obligations to Present and Future Generations",
+          "hub_score": 109.7,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "eu-edtech-dialogue-digital-education-roadmap-2026-04-18",
+          "title": "EU Uses EdTech Dialogue to Shape a 2030 Roadmap for Digital Education and Skills",
+          "hub_score": 107,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "eu-council-intergenerational-fairness-conclusions-2026-05-28",
+          "title": "EU Competitiveness Council Prepares Conclusions on Intergenerational Fairness Strategy, Marking First-Ever Ministerial Endorsement",
+          "hub_score": 100.6,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "navahine-v-hawaii-youth-climate-ruling-2024-06-12",
+          "title": "Hawaii Supreme Court Rules State Must Protect Youth Constitutional Rights in Navahine Climate Case",
+          "hub_score": 98.6,
+          "relation": "member-hub"
+        }
+      ],
+      "ring1": [
+        {
+          "signal_id": "unga-icj-climate-resolution-2026-05-20",
+          "title": "UN General Assembly Votes 141-8 to Endorse ICJ Climate Ruling, Cementing Legal Duty to Act",
+          "relation": "supports",
+          "edge_count": 5,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "ninth-circuit-lighthiser-youth-climate-dismissal-2026-06-02",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "ninth-circuit-lighthiser-youth-climate-dismissal-2026-06-02",
+              "type": "contradicts",
+              "note": "US domestic judicial retreat days after international legal recognition of climate duties."
+            },
+            {
+              "from": "pisffc-right-livelihood-award-2025",
+              "type": "supports",
+              "note": "Award recognizes the campaign that produced the ICJ opinion the UNGA endorsed."
+            },
+            {
+              "from": "hrw-europe-right-healthy-environment-2026-06-05",
+              "type": "supports",
+              "note": "Builds on ICJ/UNGA recognition to push Council of Europe treaty recognition."
+            }
+          ]
+        },
+        {
+          "signal_id": "france-social-media-ban-under-15-law-2026-01-26",
+          "title": "French National Assembly Votes to Ban Social Media Access for Minors Under 15",
+          "relation": "contradicts",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "green-european-journal-overcoming-presentism-eu-strategy-2026-06",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "france-social-media-ban-under-15-law-2026-01-26",
+              "type": "contradicts",
+              "note": "Precautionary platform ban vs critique that EU governance remains structurally presentist without democratic redesign."
+            },
+            {
+              "from": "france-social-media-ban-under-15-law-2026-01-26",
+              "type": "precedes",
+              "note": "France's January ban is among national measures the G7 principles later harmonised in May."
+            }
+          ]
+        },
+        {
+          "signal_id": "brazil-mec-ai-education-reference-framework-2026-03",
+          "title": "Brazil Publishes National AI in Education Reference Framework for Responsible Digital Learning Governance",
+          "relation": "supports",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "oecd-digital-education-outlook-2026-genai-governance",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "brazil-mec-ai-education-reference-framework-2026-03",
+              "type": "supports",
+              "note": "Brazil reference framework mirrors OECD pedagogy-first GenAI school governance recommendations."
+            },
+            {
+              "from": "unesco-ai-competency-framework-students-2026",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "lighthiser-v-trump-ninth-circuit-2026-04-13",
+          "title": "22 Youth Head to Ninth Circuit in Lighthiser v. Trump, Challenging Pro-Fossil Fuel Executive Orders",
+          "relation": "same-structure",
+          "edge_count": 3,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "ninth-circuit-lighthiser-youth-climate-dismissal-2026-06-02",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "lighthiser-v-trump-ninth-circuit-2026-04-13",
+              "type": "precedes",
+              "note": "Oral arguments preceding the dismissal ruling."
+            },
+            {
+              "from": "lighthiser-v-trump-ninth-circuit-2026-04-13",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "lighthiser-v-trump-ninth-circuit-2026-04-13",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "australia-senate-intergenerational-housing-inquiry-2026-03",
+          "title": "Australia Senate Opens Intergenerational Housing Inequity Inquiry Examining Tax Settings and Budget Investment",
+          "relation": "same-mechanism",
+          "edge_count": 3,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "australia-budget-2026-27-cgt-negative-gearing-reform",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "australia-senate-intergenerational-housing-inquiry-2026-03",
+              "type": "same-mechanism:housing-tax-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "australia-senate-intergenerational-housing-inquiry-2026-03",
+              "type": "same-mechanism:housing-tax-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "australia-senate-intergenerational-housing-inquiry-2026-03",
+              "type": "same-mechanism:housing-tax-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "azerbaijan-opens-public-consultation-on-a-draft-climate-law-creating-ets-carbon-tax-five-year-carbon",
+          "title": "Azerbaijan Opens Public Consultation on a Draft Climate Law Creating ETS, Carbon Tax, Five-Year Carbon Budgets and a National Carbon Registry",
+          "relation": "same-structure",
+          "edge_count": 3,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "australia-climate-change-authority-2035-target-advice-statutory-review-2026-04-10",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "azerbaijan-opens-public-consultation-on-a-draft-climate-law-creating-ets-carbon-tax-five-year-carbon",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "azerbaijan-opens-public-consultation-on-a-draft-climate-law-creating-ets-carbon-tax-five-year-carbon",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "azerbaijan-opens-public-consultation-on-a-draft-climate-law-creating-ets-carbon-tax-five-year-carbon",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "indonesia-national-transfer-accounts-investment-framework-2026-05-01",
+          "title": "Indonesia Publishes National Transfer Accounts Framework for Intergenerational Investment Planning",
+          "relation": "same-mechanism",
+          "edge_count": 3,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "australia-pension-home-equity-proposal-2026-06-26",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "indonesia-national-transfer-accounts-investment-framework-2026-05-01",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "indonesia-national-transfer-accounts-investment-framework-2026-05-01",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "indonesia-national-transfer-accounts-investment-framework-2026-05-01",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "r2-m05-cn-national-childcare-subsidy-2025",
+          "title": "China Launches First National Childcare Subsidy of RMB 3,600 per Child to Counter Demographic Decline",
+          "relation": "same-mechanism",
+          "edge_count": 3,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "australia-health-rebate-over65s-senate-inquiry-2026-07-02",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "r2-m05-cn-national-childcare-subsidy-2025",
+              "type": "same-mechanism:benefit-retargeting",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "r2-m05-cn-national-childcare-subsidy-2025",
+              "type": "same-mechanism:benefit-retargeting",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "r2-m05-cn-national-childcare-subsidy-2025",
+              "type": "same-mechanism:benefit-retargeting",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "m05-kr-pension-reform-national-assembly-2025",
+          "title": "South Korea's National Assembly Passes First Major Pension Reform in 18 Years, Raising Contributions to 13%",
+          "relation": "same-mechanism",
+          "edge_count": 3,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "oecd-korea-economic-survey-2026-intergenerational-fiscal-contract",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "m05-kr-pension-reform-national-assembly-2025",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "m05-kr-pension-reform-national-assembly-2025",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "m05-kr-pension-reform-national-assembly-2025",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "m07-mx-pnp-demographic-transition-2026",
+          "title": "Mexico Publishes National Population Program 2026-2030 Warning of Demographic Turning Point by 2034",
+          "relation": "same-mechanism",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "mexico-city-promulgates-care-system-law-shifting-unpaid-childhood-and-elder-care-onto-a-public-right",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "m07-mx-pnp-demographic-transition-2026",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "m07-mx-pnp-demographic-transition-2026",
+              "type": "same-mechanism:pension-reform",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "rwanda-minecofin-vision-2050-generational-accounting-2026-03-17",
+          "title": "Rwanda Ministry of Finance Integrates Generational Accounting Guidelines into Vision 2050 Expenditure Reviews",
+          "relation": "same-structure",
+          "edge_count": 4,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "china-mof-sovereign-green-bond-disclosure-2025",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "rwanda-minecofin-vision-2050-generational-accounting-2026-03-17",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "rwanda-minecofin-vision-2050-generational-accounting-2026-03-17",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "rwanda-minecofin-vision-2050-generational-accounting-2026-03-17",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "new-york-climate-superfund-act-enacted-2024-12-26",
+          "title": "New York Enacts Climate Superfund Act Imposing Legal Liability on Fossil Majors",
+          "relation": "same-structure",
+          "edge_count": 4,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "alaska-governor-files-hjr-30-to-constitutionalize-permanent-fund-5-pomv-draw-and-automatic-50-divide",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "new-york-climate-superfund-act-enacted-2024-12-26",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "new-york-climate-superfund-act-enacted-2024-12-26",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "new-york-climate-superfund-act-enacted-2024-12-26",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        }
+      ],
+      "cross_trend": [
+        {
+          "trend_id": "intergenerational-fiscal-rebalancing",
+          "shared_edge_count": 8
+        },
+        {
+          "trend_id": "youth-climate-litigation",
+          "shared_edge_count": 2
+        },
+        {
+          "trend_id": "youth-digital-protection",
+          "shared_edge_count": 2
+        },
+        {
+          "trend_id": "disc-education-unesco",
+          "shared_edge_count": 1
+        },
+        {
+          "trend_id": "youth-climate-governance",
+          "shared_edge_count": 1
+        }
+      ],
+      "ring2": [
+        {
+          "id": "budget-tagging-normalized",
+          "if": "Intergenerational-fairness language becomes standard in national budget statements",
+          "then": "Finance ministries begin tagging line items by generational impact, creating demand for a shared impact-assessment methodology",
+          "affects_lens": [
+            "ceb4-good-ancestor",
+            "dfg3-prosperity"
+          ],
+          "order": 2,
+          "parent_ring1_signal_id": "unga-icj-climate-resolution-2026-05-20",
+          "watch_signal_topics": [
+            "intergenerational-fiscal-policy",
+            "future-opportunity-metrics"
+          ],
+          "parent_is_hub": false,
+          "affects_lens_labels": [
+            {
+              "id": "ceb4-good-ancestor",
+              "label": "Think, plan and act with future generations in mind"
+            },
+            {
+              "id": "dfg3-prosperity",
+              "label": "Thrive in prosperity and sustainable development"
+            }
+          ]
+        },
+        {
+          "id": "commissioner-network-effect",
+          "if": "Future-generations commissioners multiply across sub-national governments",
+          "then": "A transnational peer network forms, standardising mandates and giving the model institutional durability beyond any single election cycle",
+          "affects_lens": [
+            "ceb5-representation"
+          ],
+          "order": 3,
+          "parent_hub_member_id": "eu-strategy-intergenerational-fairness-2026-03-05",
+          "watch_signal_topics": [
+            "future-generations-governance",
+            "futures-governance"
+          ],
+          "parent_ring1_signal_id": "eu-strategy-intergenerational-fairness-2026-03-05",
+          "parent_is_hub": true,
+          "affects_lens_labels": [
+            {
+              "id": "ceb5-representation",
+              "label": "Representation of future generations"
+            }
+          ]
+        }
+      ],
+      "ring2_stub": false
+    },
+    {
+      "trend_id": "youth-climate-governance",
+      "title": "Youth climate & environment governance",
+      "member_hubs": [
+        {
+          "signal_id": "montana-constitutional-climate-precedent-international-2026",
+          "title": "Montana's Held v. Montana Constitutional Climate Precedent Cited in International Litigation and UN Human Rights Fora",
+          "hub_score": 60.6,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "montana-held-precedent-icj-advisory-opinion-cited-2025-2026",
+          "title": "Montana's Held v. Montana Constitutional Climate Precedent Cited in ICJ Advisory Opinion and International Climate Litigation",
+          "hub_score": 60.6,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "pisffc-right-livelihood-award-2025",
+          "title": "Pacific Islands Students Fighting Climate Change Awarded 2025 Right Livelihood Award for Turning Survival Into Legal Rights",
+          "hub_score": 36.5,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "hawaii-navahine-climate-settlement-2024-06-20",
+          "title": "Hawaii Settles Navahine Youth Climate Case With Binding Transportation Decarbonization Commitments",
+          "hub_score": 26.7,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "cfg-future-generations-srm-climate-governance-2026-05-22",
+          "title": "Centre for Future Generations: Solar Geoengineering Debate Excludes Those It Would Most Affect — Future Generations",
+          "hub_score": 21,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "cambodia-ministry-of-environment-posts-environmental-diplomacy-strategy-2026-2030-after-6-july-launc",
+          "title": "Cambodia Ministry of Environment Posts Environmental Diplomacy Strategy 2026–2030 After 6 July Launch",
+          "hub_score": 26.5,
+          "relation": "member-hub"
+        }
+      ],
+      "ring1": [
+        {
+          "signal_id": "icj-advisory-opinion-climate-obligations-2025-07-23",
+          "title": "ICJ Issues Unanimous Advisory Opinion on State Climate Obligations to Present and Future Generations",
+          "relation": "supports",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "pisffc-right-livelihood-award-2025",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "pisffc-right-livelihood-award-2025",
+              "type": "supports",
+              "note": "Award recognizes the six-year PISFCC campaign that produced the ICJ climate opinion."
+            },
+            {
+              "from": "montana-held-precedent-icj-advisory-opinion-cited-2025-2026",
+              "type": "supports",
+              "note": "Held v. Montana cited in the ICJ opinion as a domestic constitutional climate-enforcement model."
+            }
+          ]
+        },
+        {
+          "signal_id": "unga-icj-climate-resolution-2026-05-20",
+          "title": "UN General Assembly Votes 141-8 to Endorse ICJ Climate Ruling, Cementing Legal Duty to Act",
+          "relation": "supports",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "pisffc-right-livelihood-award-2025",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "pisffc-right-livelihood-award-2025",
+              "type": "supports",
+              "note": "Award recognizes the campaign that produced the ICJ opinion the UNGA endorsed."
+            },
+            {
+              "from": "montana-constitutional-climate-precedent-international-2026",
+              "type": "supports",
+              "note": "Montana constitutional precedent cited in UN human rights fora alongside UNGA endorsement of ICJ duties."
+            }
+          ]
+        },
+        {
+          "signal_id": "navahine-v-hawaii-youth-climate-ruling-2024-06-12",
+          "title": "Hawaii Supreme Court Rules State Must Protect Youth Constitutional Rights in Navahine Climate Case",
+          "relation": "precedes",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "hawaii-navahine-climate-settlement-2024-06-20",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "navahine-v-hawaii-youth-climate-ruling-2024-06-12",
+              "type": "precedes",
+              "note": "Landmark ruling eight days before Hawaii DOT settlement implementing transport decarbonisation."
+            }
+          ]
+        },
+        {
+          "signal_id": "eu-strategy-intergenerational-fairness-2026-03-05",
+          "title": "EU Adopts First-Ever Strategy on Intergenerational Fairness with New Index and Youth Check",
+          "relation": "contradicts",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "cfg-future-generations-srm-climate-governance-2026-05-22",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "cfg-future-generations-srm-climate-governance-2026-05-22",
+              "type": "contradicts",
+              "note": "Critiques the strategy for conflating today's youth with unborn generations."
+            }
+          ]
+        },
+        {
+          "signal_id": "nigeria-climate-investment-summit-london-2026-06",
+          "title": "Nigeria Climate Investment Summit in London Showcases $350 Billion Green Transition Opportunity and Oversubscribed Green Bonds",
+          "relation": "same-mechanism",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "cambodia-ministry-of-environment-posts-environmental-diplomacy-strategy-2026-2030-after-6-july-launc",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "nigeria-climate-investment-summit-london-2026-06",
+              "type": "same-mechanism:green-public-finance",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "india-sovereign-green-bonds-h2-2025-26-borrowing-2025-09-26",
+          "title": "India Includes 10,000 Crore in Sovereign Green Bonds in H2 2025-26 Borrowing Plan Amid Green Finance Taxonomy Push",
+          "relation": "same-mechanism",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "cambodia-ministry-of-environment-posts-environmental-diplomacy-strategy-2026-2030-after-6-july-launc",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "india-sovereign-green-bonds-h2-2025-26-borrowing-2025-09-26",
+              "type": "same-mechanism:green-public-finance",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "hawaii-doj-climate-tort-lawsuit-dismissed-2026-04-15",
+          "title": "Federal Court Dismisses DOJ Attempt to Block Hawaii Climate Tort Lawsuit Against Oil and Gas Companies",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "hawaii-navahine-climate-settlement-2024-06-20",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "hawaii-doj-climate-tort-lawsuit-dismissed-2026-04-15",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "denmark-european-green-bond-treasury-2025",
+          "title": "Denmark Launches European Green Bond Programme Under EU Standard to Fund Treasury Climate Budget for Future Generations",
+          "relation": "same-mechanism",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "savannah-bloomberg-youth-climate-action-fund-2026-07",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "savannah-bloomberg-youth-climate-action-fund-2026-07",
+              "type": "same-mechanism:green-public-finance",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "vietnam-issues-resolution-208-nq-cp-operationalising-party-climate-conclusion-75-kl-tw-for-2026-2030",
+              "type": "same-mechanism:green-public-finance",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "china-mof-sovereign-green-bond-disclosure-2025",
+          "title": "China Ministry of Finance Allocates RMB 6 Billion Sovereign Green Bond Proceeds from 2025 Treasury Budget to Pollution Control",
+          "relation": "same-mechanism",
+          "edge_count": 2,
+          "hop": 1,
+          "edge_tier": 1,
+          "anchor_member_id": "savannah-bloomberg-youth-climate-action-fund-2026-07",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "savannah-bloomberg-youth-climate-action-fund-2026-07",
+              "type": "same-mechanism:green-public-finance",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "vietnam-issues-resolution-208-nq-cp-operationalising-party-climate-conclusion-75-kl-tw-for-2026-2030",
+              "type": "same-mechanism:green-public-finance",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "green-european-journal-overcoming-presentism-eu-strategy-2026-06",
+          "title": "Green European Journal Maps the Promise and Limits of EU Intergenerational Fairness Strategy in Major Analysis",
+          "relation": "contradicts",
+          "edge_count": 1,
+          "hop": 2,
+          "edge_tier": 0,
+          "anchor_member_id": "eu-strategy-intergenerational-fairness-2026-03-05",
+          "parent_signal_id": "eu-strategy-intergenerational-fairness-2026-03-05",
+          "via": [
+            {
+              "from": "green-european-journal-overcoming-presentism-eu-strategy-2026-06",
+              "type": "contradicts",
+              "note": "Argues the strategy does not address democracy's structural presentism."
+            }
+          ]
+        },
+        {
+          "signal_id": "eu-green-week-youth-dialogue-2026-06-03",
+          "title": "EU Green Week 2026 Puts Intergenerational Fairness at Centre of Nature-Positive Economic Strategy for First Time",
+          "relation": "supports",
+          "edge_count": 1,
+          "hop": 2,
+          "edge_tier": 0,
+          "anchor_member_id": "eu-strategy-intergenerational-fairness-2026-03-05",
+          "parent_signal_id": "eu-strategy-intergenerational-fairness-2026-03-05",
+          "via": [
+            {
+              "from": "eu-green-week-youth-dialogue-2026-06-03",
+              "type": "supports",
+              "note": "Green Week Youth Policy Dialogue mainstreams the Commission strategy into Europe's flagship environmental conference."
+            }
+          ]
+        },
+        {
+          "signal_id": "unu-future-generations-platform-2026-04",
+          "title": "UNU Launches Global Future Generations Platform Mapping Long-Term Governance Worldwide",
+          "relation": "supports",
+          "edge_count": 1,
+          "hop": 2,
+          "edge_tier": 0,
+          "anchor_member_id": "eu-strategy-intergenerational-fairness-2026-03-05",
+          "parent_signal_id": "eu-strategy-intergenerational-fairness-2026-03-05",
+          "via": [
+            {
+              "from": "unu-future-generations-platform-2026-04",
+              "type": "supports",
+              "note": "UNU platform on future-generations institutions parallels and reinforces the EU strategy architecture."
+            }
+          ]
+        }
+      ],
+      "cross_trend": [
+        {
+          "trend_id": "intergenerational-equity-mainstreaming",
+          "shared_edge_count": 10
+        },
+        {
+          "trend_id": "intergenerational-fiscal-rebalancing",
+          "shared_edge_count": 8
+        },
+        {
+          "trend_id": "youth-climate-litigation",
+          "shared_edge_count": 5
+        },
+        {
+          "trend_id": "ai-global-governance-architecture",
+          "shared_edge_count": 2
+        },
+        {
+          "trend_id": "youth-participation-governance",
+          "shared_edge_count": 1
+        }
+      ],
+      "ring2": [
+        {
+          "id": "icj-domestic-transposition",
+          "if": "UNGA-endorsed ICJ climate duties filter into national executive guidance",
+          "then": "Youth councils and climate ministries gain a formal hook to demand measurable decarbonisation pathways",
+          "affects_lens": [
+            "dfg5-environment",
+            "ceb5-representation"
+          ],
+          "order": 2,
+          "parent_ring1_signal_id": "unga-icj-climate-resolution-2026-05-20",
+          "watch_signal_topics": [
+            "youth-climate-governance",
+            "climate-governance"
+          ],
+          "parent_is_hub": false,
+          "affects_lens_labels": [
+            {
+              "id": "dfg5-environment",
+              "label": "Clean, healthy and sustainable environment"
+            },
+            {
+              "id": "ceb5-representation",
+              "label": "Representation of future generations"
+            }
+          ]
+        },
+        {
+          "id": "fairness-strategy-implementation-gap",
+          "if": "EU intergenerational fairness rhetoric outruns youth-decision power in climate files",
+          "then": "Credibility pressure shifts toward binding youth impact checks on Green Deal implementation instruments",
+          "affects_lens": [
+            "ceb2-fairness",
+            "ceb5-representation"
+          ],
+          "order": 2,
+          "parent_ring1_signal_id": "eu-strategy-intergenerational-fairness-2026-03-05",
+          "watch_signal_topics": [
+            "youth-climate-governance",
+            "intergenerational-equity"
+          ],
+          "parent_is_hub": false,
+          "affects_lens_labels": [
+            {
+              "id": "ceb2-fairness",
+              "label": "Fairness between present and future generations"
+            },
+            {
+              "id": "ceb5-representation",
+              "label": "Representation of future generations"
+            }
+          ]
+        }
+      ],
+      "ring2_stub": false
+    },
+    {
+      "trend_id": "disc-education-unesco",
+      "title": "Education equity & intergenerational mobility",
+      "member_hubs": [
+        {
+          "signal_id": "unesco-guidance-generative-ai-education-2026",
+          "title": "UNESCO Generative AI Guidance Calls for Age Limits, Data Privacy, and Human-Agent Pedagogical Design in Schools",
+          "hub_score": 89,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "unesco-ai-competency-framework-students-2026",
+          "title": "UNESCO AI Competency Framework for Students Defines 12 Curricular Competencies for Responsible AI Citizenship",
+          "hub_score": 59,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "brazil-mec-ai-education-reference-framework-2026-03",
+          "title": "Brazil Publishes National AI in Education Reference Framework for Responsible Digital Learning Governance",
+          "hub_score": 55.5,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "unesco-gem-access-equity-countdown-2026-04-29",
+          "title": "UNESCO’s 2026 Global Education Monitoring Report Puts Access and Equity at the Center of the Countdown to 2030",
+          "hub_score": 54,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "unesco-global-youth-student-consultations-education-beyond-2030-2026-04-14",
+          "title": "UNESCO Launches Global Youth and Student Consultations on Education Beyond 2030",
+          "hub_score": 50.5,
+          "relation": "member-hub"
+        },
+        {
+          "signal_id": "unesco-education-beyond-2030-foresight-outlook-2026-04-14",
+          "title": "UNESCO Opens a Foresight Exercise to Shape Education Beyond 2030",
+          "hub_score": 48.5,
+          "relation": "member-hub"
+        }
+      ],
+      "ring1": [
+        {
+          "signal_id": "eu-edtech-dialogue-digital-education-roadmap-2026-04-18",
+          "title": "EU Uses EdTech Dialogue to Shape a 2030 Roadmap for Digital Education and Skills",
+          "relation": "supports",
+          "edge_count": 4,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "unesco-guidance-generative-ai-education-2026",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "unesco-guidance-generative-ai-education-2026",
+              "type": "supports",
+              "note": "EU EdTech Dialogue 2030 roadmap embeds UNESCO age-limit and privacy safeguards for classroom GenAI."
+            },
+            {
+              "from": "unesco-ai-competency-framework-students-2026",
+              "type": "supports",
+              "note": "EU digital education roadmap references competency frameworks parallel to UNESCO's 12 student competencies."
+            },
+            {
+              "from": "unesco-global-youth-student-consultations-education-beyond-2030-2026-04-14",
+              "type": "supports",
+              "note": "UNESCO youth consultations feed multilateral digital-education roadmap processes including the EU EdTech Dialogue."
+            }
+          ]
+        },
+        {
+          "signal_id": "oecd-digital-education-outlook-2026-genai-governance",
+          "title": "OECD Digital Education Outlook 2026 Urges Trustworthy GenAI Infrastructure and Pedagogy-First School Governance",
+          "relation": "supports",
+          "edge_count": 3,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "unesco-guidance-generative-ai-education-2026",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "unesco-guidance-generative-ai-education-2026",
+              "type": "supports",
+              "note": "OECD Digital Education Outlook 2026 builds on UNESCO GenAI norms for trustworthy school infrastructure."
+            },
+            {
+              "from": "unesco-ai-competency-framework-students-2026",
+              "type": "supports",
+              "note": "OECD outlook aligns national GenAI governance with UNESCO student AI competency standards."
+            },
+            {
+              "from": "brazil-mec-ai-education-reference-framework-2026-03",
+              "type": "supports",
+              "note": "Brazil reference framework mirrors OECD pedagogy-first GenAI school governance recommendations."
+            }
+          ]
+        },
+        {
+          "signal_id": "brazil-mec-ai-education-regulatory-sandbox-2026-03",
+          "title": "Brazil MEC Launches First Regulatory Sandbox for AI in Public Education With Algorithm Impact Assessment Duties",
+          "relation": "precedes",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "brazil-mec-ai-education-reference-framework-2026-03",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "brazil-mec-ai-education-reference-framework-2026-03",
+              "type": "precedes",
+              "note": "National reference framework adopted before MEC's regulatory sandbox for public-sector AI pilots."
+            }
+          ]
+        },
+        {
+          "signal_id": "uk-childrens-reforms-law-2026-05-04",
+          "title": "UK Enacts Children's Wellbeing and Schools Reforms With Cost, Safeguarding, and Inclusion Measures",
+          "relation": "same-structure",
+          "edge_count": 3,
+          "hop": 1,
+          "edge_tier": 0,
+          "anchor_member_id": "unesco-gem-access-equity-countdown-2026-04-29",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "unesco-gem-access-equity-countdown-2026-04-29",
+              "type": "supports",
+              "note": "GEM equity countdown narrative parallels UK children's wellbeing and schools inclusion reforms."
+            },
+            {
+              "from": "uk-childrens-reforms-law-2026-05-04",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "uk-childrens-reforms-law-2026-05-04",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "liberia-youth-digital-skills-hubs-ogp-commitment-2026-06-26",
+          "title": "Liberia Launches National Youth Digital Transformation Initiative With 15 Digital Skills Hubs Under OGP Commitment",
+          "relation": "same-structure",
+          "edge_count": 3,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "unesco-gem-access-equity-countdown-2026-04-29",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "unesco-gem-access-equity-countdown-2026-04-29",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "liberia-youth-digital-skills-hubs-ogp-commitment-2026-06-26",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            },
+            {
+              "from": "liberia-youth-digital-skills-hubs-ogp-commitment-2026-06-26",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "australia-youth-parliament-mpi-intergenerational-2026-06",
+          "title": "Young Australians Choose Intergenerational Equity as 2026 National Matter of Public Importance",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "unesco-global-youth-student-consultations-education-beyond-2030-2026-04-14",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "unesco-global-youth-student-consultations-education-beyond-2030-2026-04-14",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "albania-expands-eu-aligned-youth-guarantee-nationwide-as-accession-negotiations-advance-2026-08-07",
+          "title": "Albania Expands EU-Aligned Youth Guarantee Nationwide as Accession Negotiations Advance",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "unesco-global-youth-student-consultations-education-beyond-2030-2026-04-14",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "unesco-global-youth-student-consultations-education-beyond-2030-2026-04-14",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "aspi-darwin-dialogue-young-guns-national-security-2026-05-27",
+          "title": "ASPI Darwin Dialogue Introduces 'Young Guns' Session, Arguing National Security Needs Younger Voices to Challenge Assumptions",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "unesco-global-youth-student-consultations-education-beyond-2030-2026-04-14",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "unesco-global-youth-student-consultations-education-beyond-2030-2026-04-14",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "afdb-francophonie-youth-employment-partnership-2026-06",
+          "title": "African Development Bank and La Francophonie Sign Partnership to Promote Youth Employment Across Francophone Africa",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "unesco-global-youth-student-consultations-education-beyond-2030-2026-04-14",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "unesco-global-youth-student-consultations-education-beyond-2030-2026-04-14",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "eu-just-transition-distributional-workshop-2026-04-25",
+          "title": "EU Just Transition Workshop Ties Fair Climate Policy Design to the Intergenerational Fairness Strategy",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "unesco-unicef-un-youth-office-and-who-issue-joint-call-for-standalone-child-and-youth-mental-health",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "unesco-unicef-un-youth-office-and-who-issue-joint-call-for-standalone-child-and-youth-mental-health",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "bhutan-5th-national-biodiversity-strategy-ie-framework-2025-09-16",
+          "title": "Bhutan Launches 5th National Biodiversity Strategy With Intergenerational Equity Framework Grounded in Gross National Happiness",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "maldives-secures-gpe-grant-to-build-a-climate-resilient-national-education-system-2026-06-10",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "maldives-secures-gpe-grant-to-build-a-climate-resilient-national-education-system-2026-06-10",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        },
+        {
+          "signal_id": "aiib-hsbc-gss-bond-platform-2026-06-29",
+          "title": "AIIB and HSBC Launch $500 Million Green, Social and Sustainability Bond Investment Platform for Asia",
+          "relation": "same-structure",
+          "edge_count": 1,
+          "hop": 1,
+          "edge_tier": 2,
+          "anchor_member_id": "unesco-unicef-un-youth-office-and-who-issue-joint-call-for-standalone-child-and-youth-mental-health",
+          "parent_signal_id": null,
+          "via": [
+            {
+              "from": "unesco-unicef-un-youth-office-and-who-issue-joint-call-for-standalone-child-and-youth-mental-health",
+              "type": "same-structure",
+              "note": "Derived from shared mechanisms, trends, IE lenses, and entities."
+            }
+          ]
+        }
+      ],
+      "cross_trend": [
+        {
+          "trend_id": "intergenerational-equity-mainstreaming",
+          "shared_edge_count": 11
+        },
+        {
+          "trend_id": "intergenerational-fiscal-rebalancing",
+          "shared_edge_count": 7
+        },
+        {
+          "trend_id": "youth-participation-governance",
+          "shared_edge_count": 6
+        },
+        {
+          "trend_id": "youth-digital-protection",
+          "shared_edge_count": 3
+        },
+        {
+          "trend_id": "future-generations-institutions",
+          "shared_edge_count": 1
+        }
+      ],
+      "ring2": [
+        {
+          "id": "beyond-2030-governance-bridge",
+          "if": "UNESCO Education Beyond 2030 foresight gains ministerial uptake",
+          "then": "National curricula reviews embed intergenerational mobility metrics alongside completion rates",
+          "affects_lens": [
+            "ceb6-knowledge",
+            "dfg3-prosperity"
+          ],
+          "order": 2,
+          "parent_hub_member_id": "unesco-education-beyond-2030-foresight-outlook-2026-04-14",
+          "watch_signal_topics": [
+            "child-rights-governance",
+            "youth-governance"
+          ],
+          "parent_ring1_signal_id": "unesco-education-beyond-2030-foresight-outlook-2026-04-14",
+          "parent_is_hub": true,
+          "affects_lens_labels": [
+            {
+              "id": "ceb6-knowledge",
+              "label": "Open science, data and knowledge for the future"
+            },
+            {
+              "id": "dfg3-prosperity",
+              "label": "Thrive in prosperity and sustainable development"
+            }
+          ]
+        },
+        {
+          "id": "genai-education-equity",
+          "if": "GenAI in classrooms scales faster than equity safeguards",
+          "then": "Education ministries introduce generational fairness tests for ed-tech procurement and student data use",
+          "affects_lens": [
+            "dfg6-technology",
+            "ceb2-fairness"
+          ],
+          "order": 2,
+          "parent_hub_member_id": "unesco-guidance-generative-ai-education-2026",
+          "watch_signal_topics": [
+            "youth-digital-protection",
+            "child-rights-governance"
+          ],
+          "parent_ring1_signal_id": "unesco-guidance-generative-ai-education-2026",
+          "parent_is_hub": true,
+          "affects_lens_labels": [
+            {
+              "id": "dfg6-technology",
+              "label": "Responsible and ethical science, technology and innovation"
+            },
+            {
+              "id": "ceb2-fairness",
+              "label": "Fairness between present and future generations"
+            }
+          ]
+        }
+      ],
+      "ring2_stub": false
+    }
+  ]
+}

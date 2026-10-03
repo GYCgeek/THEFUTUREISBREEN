@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="96" viewBox="0 0 560 96" fill="none">
+  <rect x="4" y="4" width="552" height="88" rx="44" fill="#0B5561" stroke="#7CB9C4" stroke-width="4"/>
+  <circle cx="50" cy="48" r="18" fill="#F3C64E"/>
+  <path d="M34 48c10-13 22-13 32 0-10 13-22 13-32 0Z" fill="#083F4A"/>
+  <circle cx="50" cy="48" r="7" fill="#D5EEF0"/>
+  <text x="92" y="57" fill="#D5EEF0" font-family="Arial, sans-serif" font-size="28" font-weight="800" letter-spacing=".06em">GYCT 2026</text>
+  <circle cx="250" cy="48" r="5" fill="#F3C64E"/>
+  <text x="274" y="57" fill="#F3C64E" font-family="Arial, sans-serif" font-size="26" font-weight="800" letter-spacing=".06em">ROAD TO COP31 ANTALYA</text>
+</svg>

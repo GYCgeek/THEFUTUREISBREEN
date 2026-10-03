@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Youth Climate Training (GYCT) 2026 | Global Youth Coalition</title>
+<meta name="description" content="GYCT has trained 5,400+ youth from 180+ countries with free UNFCCC policy training, bursaries, and COP preparation. Now evolving for 2026 — apply or partner with us.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Montserrat',sans-serif;line-height:1.7;background:#fff;color:#003b4a}
+
+  /* ── NAV (matches existing GYC site) ── */
+  .nav{background:#003b4a;padding:12px 0;position:sticky;top:0;z-index:1000}
+  .nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
+  .nav-logo{color:#fffb80;font-size:20px;font-weight:800;text-decoration:none;letter-spacing:.5px}
+  .nav-links{display:flex;gap:20px;align-items:center}
+  .nav-links a{color:#fff;text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:#fffb80}
+  .nav-cta{background:linear-gradient(45deg,#fffb80,#f15a27);color:#003b4a!important;padding:8px 18px;border-radius:999px;font-weight:700!important;font-size:12px!important}
+
+  /* ── HERO ── */
+  .hero{background:linear-gradient(135deg,#003b4a 0%,#00526b 50%,#003b4a 100%);padding:80px 20px 60px;text-align:center;position:relative;overflow:hidden}
+  .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 30% 50%,rgba(255,251,128,.08) 0%,transparent 60%)}
+  .hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1}
+  .hero-badge{display:inline-block;background:rgba(255,251,128,.15);color:#fffb80;font-size:11px;font-weight:700;letter-spacing:.1em;padding:6px 16px;border-radius:999px;margin-bottom:20px;border:1px solid rgba(255,251,128,.25)}
+  .hero h1{font-size:clamp(28px,5vw,48px);font-weight:900;color:#fff;line-height:1.15;margin-bottom:16px}
+  .hero h1 span{color:#fffb80}
+  .hero p{font-size:17px;color:rgba(255,255,255,.8);max-width:650px;margin:0 auto 28px;line-height:1.6}
+  .hero-stats{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-top:24px}
+  .hero-stat{text-align:center}
+  .hero-stat .num{font-family:'Orbitron',monospace;font-size:28px;font-weight:800;color:#fffb80;display:block}
+  .hero-stat .label{font-size:11px;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.08em}
+  .hero-buttons{margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:12px 28px;border-radius:999px;text-decoration:none;font-weight:700;font-size:14px;transition:all .2s}
+  .btn-primary{background:#fffb80;color:#003b4a}
+  .btn-primary:hover{background:#fff;transform:translateY(-1px)}
+  .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4)}
+  .btn-outline:hover{border-color:#fffb80;color:#fffb80}
+
+  /* ── SECTIONS ── */
+  section{padding:80px 20px}
+  .section-inner{max-width:1100px;margin:0 auto}
+  .section-label{font-family:'Share Tech Mono',monospace;font-size:12px;color:#f15a27;text-transform:uppercase;letter-spacing:.15em;margin-bottom:8px}
+  .section-title{font-size:clamp(24px,4vw,36px);font-weight:800;color:#003b4a;margin-bottom:12px;line-height:1.2}
+  .section-subtitle{font-size:16px;color:#557580;max-width:650px;margin-bottom:40px;line-height:1.6}
+
+  /* ── CARDS ── */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+  .card{background:#fff;border-radius:16px;padding:32px 24px;border:1px solid #e8eef0;transition:transform .2s,box-shadow .2s}
+  .card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,59,74,.08)}
+  .card-icon{font-size:28px;margin-bottom:16px;color:#f15a27}
+  .card h3{font-size:18px;font-weight:700;color:#003b4a;margin-bottom:8px}
+  .card p{font-size:14px;color:#557580;line-height:1.6}
+  .card .num-big{font-family:'Orbitron',monospace;font-size:36px;font-weight:800;color:#fffb80;-webkit-text-stroke:1px #f15a27;margin-bottom:4px;display:block}
+
+  /* ── NUMBERS STRIP ── */
+  .numbers{background:#f5f8f9;padding:60px 20px}
+  .numbers-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;text-align:center}
+  .numbers-grid .num{font-family:'Orbitron',monospace;font-size:40px;font-weight:900;color:#003b4a;display:block;line-height:1}
+  .numbers-grid .num.highlight{color:#f15a27}
+  .numbers-grid .label{font-size:12px;color:#557580;text-transform:uppercase;letter-spacing:.08em;margin-top:6px}
+
+  /* ── TIMELINE ── */
+  .timeline{background:#003b4a;padding:80px 20px;color:#fff}
+  .timeline-inner{max-width:900px;margin:0 auto}
+  .timeline .section-title{color:#fff}
+  .timeline .section-subtitle{color:rgba(255,255,255,.7)}
+  .timeline-list{display:flex;flex-direction:column;gap:16px;margin-top:32px}
+  .timeline-item{display:flex;align-items:center;gap:20px;padding:16px 20px;background:rgba(255,255,255,.06);border-radius:12px;border-left:3px solid #fffb80}
+  .timeline-item .date{font-family:'Share Tech Mono',monospace;font-size:13px;color:#fffb80;min-width:100px;font-weight:700}
+  .timeline-item .desc{font-size:14px;color:rgba(255,255,255,.85)}
+
+  /* ── FUNDER CTA ── */
+  .funder{background:linear-gradient(135deg,#fffb80,#fcd34d);padding:80px 20px;text-align:center}
+  .funder-inner{max-width:700px;margin:0 auto}
+  .funder h2{font-size:clamp(24px,4vw,36px);font-weight:900;color:#003b4a;margin-bottom:12px}
+  .funder p{font-size:16px;color:#003b4a;margin-bottom:28px;opacity:.85}
+  .funder-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:32px 0}
+  .funder-card{background:#fff;border-radius:12px;padding:20px;text-align:center}
+  .funder-card .price{font-family:'Orbitron',monospace;font-size:22px;font-weight:800;color:#003b4a}
+  .funder-card .desc{font-size:12px;color:#557580;margin-top:4px}
+
+  /* ── TESTIMONIAL ── */
+  .testimonial{background:#f5f8f9;padding:80px 20px}
+  .testimonial-inner{max-width:700px;margin:0 auto;text-align:center}
+  .testimonial blockquote{font-size:20px;font-style:italic;color:#003b4a;line-height:1.6;margin-bottom:12px}
+  .testimonial cite{font-size:14px;color:#557580;font-style:normal}
+  .testimonial cite strong{color:#003b4a}
+
+  /* ── PARTNERS ── */
+  .partners{padding:60px 20px;text-align:center}
+  .partners-inner{max-width:900px;margin:0 auto}
+  .partners h3{font-size:13px;color:#557580;text-transform:uppercase;letter-spacing:.1em;margin-bottom:24px}
+  .partners-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:32px}
+  .partner-logo{font-size:14px;font-weight:700;color:#003b4a;opacity:.7;padding:8px 16px;background:#f5f8f9;border-radius:8px}
+
+  /* ── FOOTER ── */
+  footer{background:#003b4a;color:#fff;padding:40px 20px;text-align:center;font-size:13px}
+  footer a{color:#fffb80;text-decoration:none}
+  footer a:hover{text-decoration:underline}
+
+  /* ── MOBILE ── */
+  @media(max-width:768px){
+    .hero{padding:50px 16px 40px}
+    .hero-stats{gap:16px}
+    .hero-stat .num{font-size:22px}
+    .cards{grid-template-columns:1fr}
+    .timeline-item{flex-direction:column;align-items:flex-start;gap:6px}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">🌍 GYC</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/GYCT" style="color:#fffb80;">GYCT</a>
+      <a href="https://gycailabs.org">AI Labs</a>
+      <a href="/horizon-scanning">Horizon Scanning</a>
+      <a href="/GYCT" class="nav-cta">Get Involved</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">🚀 2026 PROGRAMME NOW OPEN</div>
+    <h1>Global Youth <span>Climate Training</span></h1>
+    <p>Free, online, multilingual climate policy training equipping youth worldwide to lead at COPs and beyond — now evolving for a new era of climate action.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="num">5,400+</span><span class="label">Youth Trained</span></div>
+      <div class="hero-stat"><span class="num">27,000+</span><span class="label">Applications</span></div>
+      <div class="hero-stat"><span class="num">180+</span><span class="label">Countries</span></div>
+      <div class="hero-stat"><span class="num">6</span><span class="label">Languages</span></div>
+    </div>
+    <div class="hero-buttons">
+      <a href="https://forms.gle/5YcFP6E27m3dmK9D7" class="btn btn-primary">Apply Now</a>
+      <a href="#funder" class="btn btn-outline">Partner With Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS GYCT -->
+<section>
+  <div class="section-inner">
+    <div class="section-label">About The Programme</div>
+    <h2 class="section-title">What is the Global Youth Climate Training?</h2>
+    <p class="section-subtitle">Co-developed by the Global Youth Coalition, Oxford Net Zero, and the Smith School of Enterprise and the Environment, GYCT is a free, fully online course that has united thousands of young people (aged 16–35) from around the world to learn from leading climate experts and prepare for roles in international climate policy.</p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-globe-americas"></i></div>
+        <h3>Global Reach, Local Impact</h3>
+        <p>65% of participants come from MAPA regions (Most Affected People and Areas). 21% identify as Indigenous youth. Live interpretation in up to 6 languages ensures accessibility for all.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <h3>Expert-Led Sessions</h3>
+        <p>Weekly 90-minute sessions: 40 minutes of expert presentation, 40 minutes of interactive Q&A, and 10 minutes of creative climate engagement — art, innovation, and success stories.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-hand-holding-usd"></i></div>
+        <h3>COP Bursaries</h3>
+        <p>£36,000 invested in youth bursaries to date, enabling exceptional participants from underrepresented groups to attend COP29, COP30, and other international climate forums in person.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-users"></i></div>
+        <h3>Community First</h3>
+        <p>Structured breakout groups, post-session calls, and city/region hubs foster a genuine peer network across regions and movements — not just a classroom, but a community.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS STRIP -->
+<div class="numbers">
+  <div class="numbers-grid">
+    <div><span class="num highlight">89%</span><span class="label">Increased Policy Knowledge</span></div>
+    <div><span class="num">77%</span><span class="label">Greater UNFCCC Confidence</span></div>
+    <div><span class="num">60%</span><span class="label">Attributed GYCT to Policy Success</span></div>
+    <div><span class="num highlight">100K+</span><span class="label">YouTube Video Views</span></div>
+  </div>
+</div>
+
+<!-- WHAT'S NEW IN 2026 -->
+<section style="background:#f5f8f9;">
+  <div class="section-inner">
+    <div class="section-label">What's New</div>
+    <h2 class="section-title">GYCT 2026: Evolving For Impact</h2>
+    <p class="section-subtitle">After three years and 5,400+ participants, we're evolving from a single introductory model into a multi-layered ecosystem — responding directly to what our global alumni community has asked for.</p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-seedling"></i></div>
+        <h3>General Cohort</h3>
+        <p><strong style="color:#003b4a;">500 participants</strong> from MAPA and global regions. Expanded curriculum beyond climate science to include geopolitics, climate enforcement, and system change — because climate decisions aren't made in a vacuum.</p>
+        <p style="margin-top:8px;font-size:13px;color:#557580;">Topics: Non-state climate action · COP roles · Climate geopolitics · System change · Climate risk · Education</p>
+      </div>
+      <div class="card" style="border-color:#f15a27;border-width:2px;">
+        <div class="card-icon"><i class="fas fa-star"></i></div>
+        <h3>Advanced YNA Cohort <span style="background:#f15a27;color:#fff;font-size:10px;padding:2px 8px;border-radius:999px;margin-left:6px;">NEW</span></h3>
+        <p><strong style="color:#003b4a;">20 selected participants</strong> partner with the Youth Negotiators Academy (YNA) for hands-on COP simulations, personalised guidance, and direct mentorship from experienced negotiators.</p>
+        <p style="margin-top:8px;font-size:13px;color:#557580;">Objective: practical COP negotiation skills and strategic influence — not just theory.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-rocket"></i></div>
+        <h3>Future Pathways</h3>
+        <p>Looking beyond 2026: project-based learning, fellowships, practical internships, alumni mentorship — turning training into tangible career pathways for youth climate leaders.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY DATES -->
+<section class="timeline">
+  <div class="timeline-inner">
+    <div class="section-label" style="color:rgba(255,255,255,.6);">Key Dates</div>
+    <h2 class="section-title">2026 Programme Timeline</h2>
+    <p class="section-subtitle">Mark your calendar — here's the journey from application to COP.</p>
+    <div class="timeline-list">
+      <div class="timeline-item"><span class="date">Feb 27</span><span class="desc">Applications Open — apply now for the 2026 cohort</span></div>
+      <div class="timeline-item"><span class="date">Mar 21</span><span class="desc">Applications Close — final call for submissions</span></div>
+      <div class="timeline-item"><span class="date">Apr 21</span><span class="desc">Applicants Informed &amp; Materials Released</span></div>
+      <div class="timeline-item"><span class="date">May 21</span><span class="desc">Course Start Date — first session kicks off</span></div>
+      <div class="timeline-item"><span class="date">Jul 16</span><span class="desc">Course End Date — graduation and community celebration</span></div>
+      <div class="timeline-item"><span class="date">Nov 4</span><span class="desc">Pre-COP30 Reunion Session — regroup before Belém</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial">
+  <div class="testimonial-inner">
+    <blockquote>"GYCT was a turning point. It transformed my enthusiasm for climate justice into the strategic ability to engage in international climate policy and negotiations."</blockquote>
+    <cite>— <strong>GYCT Participant</strong>, 2024 Cohort</cite>
+  </div>
+</section>
+
+<!-- FUNDER SECTION -->
+<section class="funder" id="funder">
+  <div class="funder-inner">
+    <h2>Invest in the Next Generation of Climate Leaders</h2>
+    <p>ClimateWorks Foundation funding has ended. We're seeking new partners to sustain and grow GYCT. Your contribution directly enables youth from underrepresented regions to access COP negotiations and shape global climate policy.</p>
+
+    <div class="funder-cards">
+      <div class="funder-card">
+        <div class="price">£106K</div>
+        <div class="desc">Core Programme<br>3 languages, essential staffing, 5–10 COP bursaries</div>
+      </div>
+      <div class="funder-card" style="border:2px solid #f15a27;">
+        <div class="price" style="color:#f15a27;">£177K</div>
+        <div class="desc"><strong>Enhanced Programme</strong><br>5 languages, expanded mentorship, equity-focused bursaries, creative materials</div>
+      </div>
+      <div class="funder-card">
+        <div class="price">Custom</div>
+        <div class="desc">Targeted Support<br>Sponsor bursaries, a specific module, or regional outreach</div>
+      </div>
+    </div>
+
+    <p style="font-size:14px;color:#003b4a;margin-bottom:24px;opacity:.8;">
+      📧 Contact us to discuss partnership opportunities:<br>
+      <strong style="font-size:16px;">genaro.gg@unmgcy.org</strong>
+    </p>
+
+    <a href="mailto:genaro.gg@unmgcy.org?subject=GYCT%20Partnership%20Inquiry" class="btn btn-primary" style="font-size:16px;padding:14px 36px;">Become a Partner</a>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners">
+  <div class="partners-inner">
+    <h3>In Partnership With</h3>
+    <div class="partners-grid">
+      <span class="partner-logo">Global Youth Coalition</span>
+      <span class="partner-logo">Oxford Net Zero</span>
+      <span class="partner-logo">Smith School of Enterprise and the Environment</span>
+      <span class="partner-logo">Youth Negotiators Academy (YNA)</span>
+      <span class="partner-logo">Eco Interpreters</span>
+      <span class="partner-logo">ClimateWorks Foundation</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Global Youth Climate Training (GYCT) · A programme of the <a href="/">Global Youth Coalition</a></p>
+  <p style="margin-top:8px;font-size:11px;opacity:.7;">Impact Report available · <a href="https://netzeroclimate.org/wp-content/uploads/2025/11/GYCT-Impact-Report_2025.pdf">Download PDF</a></p>
+</footer>
+
+</body>
+</html>

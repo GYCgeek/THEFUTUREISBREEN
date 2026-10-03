@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Wheel of Sessions</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #003b4a;
+        }
+        
+        .containerA {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            perspective: 1000px;
+            background-color: #003b4a;
+            padding: 20px;
+        }
+        
+        .card-container {
+            position: relative;
+            width: 60%;
+            height: 70vh;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+        
+        .card {
+            position: absolute;
+            width: 20%;
+            top: 10%;
+            left: 40%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease-out, box-shadow 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            background-color: #fff;
+        }
+        
+        .card:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+        }
+        
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .img-hover-zoom img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+            object-fit: cover;
+        }
+        
+        .img-hover-zoom:hover img {
+            transform: scale(1.1);
+        }
+        
+        .card-img-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: white;
+            background-color: rgba(0,0,0,0.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.8;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        
+        .card:hover .card-img-overlay {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        
+        .play-icon {
+            pointer-events: none;
+        }
+        
+        h2 {
+            color: #fffb80;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        /* Tablet Responsiveness */
+        @media only screen and (max-width: 992px) {
+            .card-container {
+                width: 80%;
+                height: 60vh;
+            }
+            
+            .card {
+                width: 30%;
+                left: 35%;
+            }
+            
+            .card-img-top {
+                height: 150px;
+            }
+        }
+        
+        /* Mobile Responsiveness */
+        @media only screen and (max-width: 768px) {
+            .containerA {
+                height: auto;
+                min-height: 100vh;
+                padding: 40px 10px;
+            }
+            
+            .card-container {
+                width: 100%;
+                height: 50vh;
+                margin-bottom: 20px;
+                transform: scale(0.8);
+            }
+            
+            .card {
+                width: 70%;
+                left: 15%;
+                top: 15%;
+            }
+            
+            .card-img-top {
+                height: 120px;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+            
+            .card-img-overlay {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+        }
+        
+        /* Small Mobile Devices */
+        @media only screen and (max-width: 480px) {
+            .containerA {
+                padding: 20px 0;
+            }
+            
+            .card-container {
+                transform: scale(0.6);
+                height: 60vh;
+            }
+            
+            .card {
+                width: 90%;
+                left: 5%;
+                top: 10%;
+            }
+            
+            .card-img-top {
+                height: 80px; /* Reduced height for mobile */
+            }
+            
+            .card-img-overlay {
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+            }
+        }
+        
+        /* Extra Small Mobile Devices */
+        @media only screen and (max-width: 360px) {
+            .card-img-top {
+                height: 60px; /* Even smaller for very small screens */
+            }
+            
+            .card-img-overlay {
+                width: 25px;
+                height: 25px;
+                font-size: 14px;
+            }
+        }
+        
+        /* Landscape Mode */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .containerA {
+                height: auto;
+                padding: 20px;
+            }
+            
+            .card-container {
+                height: 40vh;
+                transform: scale(0.7);
+            }
+            
+            .card-img-top {
+                height: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="instagram-feed">
+        <div class="containerA">
+            <h2>#WeAreOne</h2>
+            
+            <div class="card-container">
+                <!-- Cards with transformation for wheel effect -->
+                <div class="card" style="transform: rotateY(0deg) translateZ(300px);">
+                    <a href="https://www.youtube.com/live/0969PnyG4mg?feature=shared" target="_blank">
+                        <div class="card-img-top img-hover-zoom">
+                            <img src="/assets/images/SpeakersONZ/1.webp" alt="Session 1" class="img-fluid">
+                        </div>
+                        <div class="card-img-overlay">
+                            <span class="play-icon">&#9658;</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Remaining cards with the same structure -->
+                <div class="card" style="transform: rotateY(-30deg) translateZ(300px);">
+                    <a href="https://www.youtube.com/live/zdZotZsh7Ko?feature=shared" target="_blank">
+                        <div class="card-img-top img-hover-zoom">
+                            <img src="/assets/images/SpeakersONZ/2.webp" alt="Session 2" class="img-fluid">
+                        </div>
+                        <div class="card-img-overlay">
+                            <span class="play-icon">&#9658;</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- ... other cards ... -->
+                <div class="card" style="transform: rotateY(-60deg) translateZ(300px);">
+                    <a href="https://www.youtube.com/live/fCscY_rXKQU?feature=shared" target="_blank">
+                        <div class="card-img-top img-hover-zoom">
+                            <img src="/assets/images/SpeakersONZ/3.webp" alt="Session 3" class="img-fluid">
+                        </div>
+                        <div class="card-img-overlay">
+                            <span class="play-icon">&#9658;</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- ... remaining cards ... -->
+                <div class="card" style="transform: rotateY(-90deg) translateZ(300px);">
+                    <a href="https://www.youtube.com/live/NhpMJflJPo8?feature=shared" target="_blank">
+                        <div class="card-img-top img-hover-zoom">
+                            <img src="/assets/images/SpeakersONZ/4.webp" alt="Session 4" class="img-fluid">
+                        </div>
+                        <div class="card-img-overlay">
+                            <span class="play-icon">&#9658;</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="card" style="transform: rotateY(-120deg) translateZ(300px);">
+                    <a href="https://www.youtube.com/live/AZ7hXmQhyH8?feature=shared" target="_blank">
+                        <div class="card-img-top img-hover-zoom">
+                            <img src="/assets/images/SpeakersONZ/5.webp" alt="Session 5" class="img-fluid">
+                        </div>
+                        <div class="card-img-overlay">
+                            <span class="play-icon">&#9658;</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="card" style="transform: rotateY(-150deg) translateZ(300px);">
+                    <a href="https://www.youtube.com/live/KMwoS3oop2A?feature=shared" target="_blank">
+                        <div class="card-img-top img-hover-zoom">
+                            <img src="/assets/images/SpeakersONZ/6.webp" alt="Session 6" class="img-fluid">
+                        </div>
+                        <div class="card-img-overlay">
+                            <span class="play-icon">&#9658;</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="card" style="transform: rotateY(-180deg) translateZ(300px);">
+                    <a href="https://www.youtube.com/live/5hx5HQX1R7s?feature=shared" target="_blank">
+                        <div class="card-img-top img-hover-zoom">
+                            <img src="/assets/images/SpeakersONZ/7.webp" alt="Session 7" class="img-fluid">
+                        </div>
+                        <div class="card-img-overlay">
+                            <span class="play-icon">&#9658;</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="card" style="transform: rotateY(-210deg) translateZ(300px);">
+                    <a href="https://www.youtube.com/live/utLPatu6QX4?feature=shared" target="_blank">
+                        <div class="card-img-top img-hover-zoom">
+                            <img src="/assets/images/SpeakersONZ/8.webp" alt="Session 8" class="img-fluid">
+                        </div>
+                        <div class="card-img-overlay">
+                            <span class="play-icon">&#9658;</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="card" style="transform: rotateY(-240deg) translateZ(300px);">
+                    <a href="https://www.youtube.com/live/0_l-ZCA1H0M?feature=shared" target="_blank">
+                        <div class="card-img-top img-hover-zoom">
+                            <img src="/assets/images/SpeakersONZ/9.webp" alt="Session 9" class="img-fluid">
+                        </div>
+                        <div class="card-img-overlay">
+                            <span class="play-icon">&#9658;</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="card" style="transform: rotateY(-270deg) translateZ(300px);">
+                    <a href="https://www.youtube.com/live/yB1XRGYsX30?feature=shared" target="_blank">
+                        <div class="card-img-top img-hover-zoom">
+                            <img src="/assets/images/SpeakersONZ/10.webp" alt="Session 10" class="img-fluid">
+                        </div>
+                        <div class="card-img-overlay">
+                            <span class="play-icon">&#9658;</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="card" style="transform: rotateY(-300deg) translateZ(300px);">
+                    <a href="https://www.youtube.com/live/J7s6wDGRtRk?feature=shared" target="_blank">
+                        <div class="card-img-top img-hover-zoom">
+                            <img src="/assets/images/SpeakersONZ/11.webp" alt="Session 11" class="img-fluid">
+                        </div>
+                        <div class="card-img-overlay">
+                            <span class="play-icon">&#9658;</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="card" style="transform: rotateY(-330deg) translateZ(300px);">
+                    <a href="https://www.youtube.com/live/37iIe7L033s?feature=shared" target="_blank">
+                        <div class="card-img-top img-hover-zoom">
+                            <img src="/assets/images/SpeakersONZ/12.webp" alt="Session 12" class="img-fluid">
+                        </div>
+                        <div class="card-img-overlay">
+                            <span class="play-icon">&#9658;</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Improved interaction script
+        const cardContainer = document.querySelector('.card-container');
+        let isDragging = false;
+        let startPosition;
+        let currentRotation = 0;
+        
+        // Mouse/touch interaction for rotation
+        cardContainer.addEventListener('mousedown', startDrag);
+        cardContainer.addEventListener('touchstart', handleTouchStart, {passive: false});
+        
+        document.addEventListener('mousemove', drag);
+        document.addEventListener('touchmove', handleTouchMove, {passive: false});
+        
+        document.addEventListener('mouseup', endDrag);
+        document.addEventListener('touchend', endDrag);
+        
+        // Individual card hover effect
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseover', function() {
+                const rotation = parseInt(this.style.transform.match(/-?\d+/)[0]);
+                cardContainer.style.transform = `rotateY(${-rotation}deg)`;
+            });
+        });
+        
+        function startDrag(e) {
+            isDragging = true;
+            startPosition = e.clientX || (e.touches && e.touches[0].clientX);
+            cardContainer.style.transition = 'none';
+            
+            // Prevent default behavior only for touch events
+            if (e.type === 'touchstart') {
+                e.preventDefault();
+            }
+        }
+        
+        function handleTouchStart(e) {
+            startDrag(e);
+            e.preventDefault(); // Prevent scrolling while dragging
+        }
+        
+        function drag(e) {
+            if (!isDragging) return;
+            
+            const currentPosition = e.clientX || (e.touches && e.touches[0].clientX);
+            if (!currentPosition) return;
+            
+            const difference = currentPosition - startPosition;
+            const newRotation = currentRotation + difference / 10;
+            
+            cardContainer.style.transform = `rotateY(${newRotation}deg)`;
+            
+            // Prevent default behavior only for touch events
+            if (e.type === 'touchmove') {
+                e.preventDefault();
+            }
+        }
+        
+        function handleTouchMove(e) {
+            drag(e);
+            e.preventDefault(); // Prevent scrolling while dragging
+        }
+        
+        function endDrag() {
+            if (!isDragging) return;
+            
+            isDragging = false;
+            cardContainer.style.transition = 'transform 1s';
+            const transformValue = cardContainer.style.transform;
+            if (transformValue) {
+                const match = transformValue.match(/rotateY\(([-\d.]+)deg\)/);
+                if (match && match[1]) {
+                    currentRotation = parseFloat(match[1]);
+                }
+            }
+        }
+        
+        // Auto-rotation for initial engagement
+        let autoRotate = true;
+        let autoRotateInterval;
+        
+        function startAutoRotate() {
+            if (autoRotate) {
+                autoRotateInterval = setInterval(() => {
+                    currentRotation += 0.5;
+                    cardContainer.style.transform = `rotateY(${currentRotation}deg)`;
+                }, 50);
+            }
+        }
+        
+        // Stop auto-rotation on user interaction
+        cardContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoRotateInterval);
+            autoRotate = false;
+        });
+        
+        cardContainer.addEventListener('touchstart', () => {
+            clearInterval(autoRotateInterval);
+            autoRotate = false;
+        });
+        
+        // Adjust for mobile
+        function adjustForMobile() {
+            const isMobile = window.innerWidth <= 480;
+            const isVerySmallMobile = window.innerWidth <= 360;
+            
+            document.querySelectorAll('.card').forEach(card => {
+                const currentTransform = card.style.transform;
+                let newTransform = currentTransform;
+                
+                if (isVerySmallMobile) {
+                    newTransform = currentTransform.replace(/translateZ\(\d+px\)/, 'translateZ(150px)');
+                } else if (isMobile) {
+                    newTransform = currentTransform.replace(/translateZ\(\d+px\)/, 'translateZ(200px)');
+                }
+                
+                card.style.transform = newTransform;
+            });
+        }
+        
+        // Run on load and resize
+        window.addEventListener('load', () => {
+            startAutoRotate();
+            adjustForMobile();
+        });
+        
+        window.addEventListener('resize', adjustForMobile);
+    </script>
+</body>
+</html>

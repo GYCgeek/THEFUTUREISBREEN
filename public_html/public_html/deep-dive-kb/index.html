@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script data-intel-theme="boot">
+(function(){
+  var k="gyc-foresight-theme";
+  try{
+    var t=localStorage.getItem(k);
+    if(t==="light"||t==="dark") document.documentElement.dataset.theme=t;
+  }catch(e){}
+})();
+</script>
+<script data-intel-shell="boot">
+(function(){
+  var k="gyc-foresight-nav";
+  try{
+    var v=localStorage.getItem(k);
+    if(v==="collapsed"||v==="expanded") document.documentElement.dataset.nav=v;
+  }catch(e){}
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%233B68F6%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2222%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2Csans-serif%22%20font-size%3D%2216%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%3EF%3C%2Ftext%3E%3C%2Fsvg%3E" type="image/svg+xml">
+<meta name="description" content="In-depth country databases separate from the live signals feed. Italy is the constitutional + VIG stack. Netherlands, Germany and Belgium are Intergenerational Impact Assessment (IIA) mechanism dives: enacted vs cousin vs bite.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Foresight for Intergenerational Fairness Intelligence platform">
+<meta property="og:title" content="Deep Dives · Foresight for Intergenerational Fairness Intelligence platform">
+<meta property="og:description" content="In-depth country databases separate from the live signals feed. Italy is the constitutional + VIG stack. Netherlands, Germany and Belgium are Intergenerational Impact Assessment (IIA) mechanism dives: enacted vs cousin vs bite.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Deep Dives · Foresight for Intergenerational Fairness Intelligence platform">
+<meta name="twitter:description" content="In-depth country databases separate from the live signals feed. Italy is the constitutional + VIG stack. Netherlands, Germany and Belgium are Intergenerational Impact Assessment (IIA) mechanism dives: enacted vs cousin vs bite.">
+<title>Deep Dives archive · Foresight for Intergenerational Fairness Intelligence platform</title>
+<style>
+:root,[data-theme="light"]{
+  color-scheme:light;
+  /* —— Gamma Bright (canonical) —— */
+  --color-primary:#3B68F6;
+  --color-secondary:#0858F7;
+  --color-tertiary:#002253;
+  --color-bg:#FFFFFF;
+  --color-bg-subtle:#F7F9FF;
+  --color-surface:#FFFFFF;
+  --color-on-surface:#002253;
+  --color-muted:#6B7280;
+  --color-border:#DFDFE0;
+  --color-overlay:#F7F9FF;
+  --color-error:#E5484D;
+  --color-success:#0D9B6A;
+  --color-warning:#D97706;
+  --color-info:#3B68F6;
+  --color-neutral:#FFFFFF;
+
+  --priority-high:var(--color-error);
+  --priority-strong:var(--color-warning);
+  --priority-monitor:var(--color-muted);
+  --priority-reviewed:var(--color-success);
+
+  /* —— Categorical ramp (non-semantic data series) ——
+     Brand-tuned blue→indigo→teal arc. Deliberately avoids the semantic
+     error/warning/success hues so neutral categories never read as good/bad.
+     Use for: country-ambition dimension bars, Three Horizons (ordinal), etc. */
+  --cat-1:#1F44C9;  /* deep blue   */
+  --cat-2:#3B68F6;  /* brand blue  */
+  --cat-3:#2E9BD6;  /* sky         */
+  --cat-4:#6457E8;  /* indigo      */
+  --cat-5:#0E9C97;  /* teal        */
+  --cat-6:#7B86C4;  /* slate-blue  */
+  --cat-7:#9D6FD0;  /* lavender    */
+  --cat-area:rgba(59,104,246,.12); /* translucent primary — sparkline/area fills */
+  --cat-area-line:rgba(59,104,246,.30);
+
+  --radius-sm:4px;
+  --radius-md:8px;
+  --radius-lg:12px;
+  --radius-xl:18px;
+  --radius-full:9999px;
+
+  --space-xs:6px;
+  --space-sm:14px;
+  --space-md:32px;
+  --space-lg:56px;
+  --space-gutter:24px;
+  --space-section:64px;
+
+  --container-max:1200px;
+
+  --font-display:"Instrument Sans","DM Sans","Segoe UI Variable","Segoe UI",system-ui,sans-serif;
+  --font-body:"DM Sans","Segoe UI Variable","Segoe UI",system-ui,sans-serif;
+
+  --shadow-sm:0 1px 3px rgba(0,34,83,.06);
+  --shadow-md:0 4px 16px rgba(0,34,83,.08);
+
+  /* —— Legacy aliases (pre-rebrand builders) —— */
+  --bg:var(--color-bg);
+  --bg2:var(--color-bg-subtle);
+  --panel:var(--color-surface);
+  --panel2:var(--color-bg-subtle);
+  --line:var(--color-border);
+  --line2:var(--color-border);
+  --text:var(--color-on-surface);
+  --muted:var(--color-muted);
+  --faint:#94A3B8;
+  --accent:var(--color-primary);
+  --accent2:var(--color-secondary);
+  --hi:var(--color-error);
+  --hi-bg:rgba(229,72,77,.12);
+  --strong:var(--color-warning);
+  --strong-bg:rgba(217,119,6,.12);
+  --useful:var(--color-success);
+  --useful-bg:rgba(13,155,106,.12);
+  --r:var(--radius-lg);
+
+  font-size:16px;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --color-tertiary:#E8EDF7;
+  --color-bg:#0B1220;
+  --color-bg-subtle:#121A2E;
+  --color-surface:#161F33;
+  --color-on-surface:#E8EDF7;
+  --color-muted:#94A3B8;
+  --color-border:#2A3548;
+  --color-overlay:#121A2E;
+  --color-neutral:#E8EDF7;
+  --faint:#64748B;
+  /* lift the darkest categorical hues so solid bars stay legible on dark bg */
+  --cat-1:#3A5BE0;
+  --cat-4:#7E72F0;
+  --cat-6:#9AA3D6;
+  --cat-7:#B492EC;
+  --cat-area:rgba(59,104,246,.20);
+  --cat-area-line:rgba(59,104,246,.40);
+  --hi-bg:rgba(229,72,77,.18);
+  --strong-bg:rgba(217,119,6,.18);
+  --useful-bg:rgba(13,155,106,.18);
+  --shadow-sm:0 1px 3px rgba(0,0,0,.28);
+  --shadow-md:0 4px 16px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--color-bg);
+  color:var(--color-on-surface);
+  font-family:var(--font-body);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--color-secondary);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
+  outline:2px solid var(--color-primary);
+  outline-offset:2px;
+}
+.mono{font-family:"Cascadia Code","Consolas",ui-monospace,monospace}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+:root{
+  --shell-sidebar-width:264px;
+  --shell-rail-width:76px;
+  --shell-nav-w:var(--shell-sidebar-width);
+  --shell-sticky-top:60px;
+}
+.skip-link{
+  position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus{
+  position:fixed;left:var(--space-gutter);top:12px;z-index:100;
+  width:auto;height:auto;padding:10px 16px;
+  background:var(--color-primary);color:#fff;
+  border-radius:var(--radius-md);font-weight:600;text-decoration:none;
+}
+
+/* ---- slim top bar ---- */
+.intel-shell-header{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb, var(--color-bg) 88%, transparent);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--color-border);
+}
+.intel-shell-header-inner{
+  position:relative;
+  min-height:var(--shell-sticky-top);margin:0 auto;
+  padding:9px var(--space-gutter);
+  display:flex;align-items:center;gap:14px;
+}
+.intel-shell-brand{
+  display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit;min-width:0;
+}
+.intel-shell-brand:hover{text-decoration:none}
+.intel-shell-mark{
+  width:34px;height:34px;border-radius:10px;
+  background:linear-gradient(150deg,var(--color-primary),var(--color-secondary));
+  color:#fff;display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-weight:700;font-size:1rem;flex-shrink:0;
+  box-shadow:0 2px 8px rgba(59,104,246,.28);
+}
+.intel-shell-brand-text{display:flex;flex-direction:column;gap:1px;min-width:0}
+.intel-shell-brand-name{
+  font-family:var(--font-display);font-weight:600;font-size:.95rem;
+  color:var(--color-on-surface);line-height:1.2;white-space:nowrap;
+}
+.intel-shell-brand-name span{color:var(--color-primary)}
+.intel-shell-subtitle{font-size:.76rem;color:var(--color-muted);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* GYC AI Labs logo: full lockup where there's room, mark in the rail / slim bars */
+.intel-brand-logo{width:150px;height:auto;display:block}
+.intel-brand-mark{width:38px;height:auto;display:none}
+
+/* ---- search + actions ---- */
+.intel-shell-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.intel-shell-search{position:relative;display:flex;align-items:center;width:min(100%,340px)}
+.intel-shell-search input{
+  width:100%;height:38px;border:1px solid var(--color-border);
+  border-radius:var(--radius-full);background:var(--color-surface);
+  color:var(--color-on-surface);font:inherit;font-size:.84rem;
+  padding:8px 14px 8px 36px;transition:border-color .15s,box-shadow .15s;
+}
+.intel-shell-search input::placeholder{color:var(--color-muted)}
+.intel-shell-search input:focus{
+  border-color:var(--color-primary);box-shadow:0 0 0 3px rgba(59,104,246,.14);outline:none;
+}
+.intel-shell-search svg{
+  position:absolute;left:13px;top:50%;transform:translateY(-50%);
+  width:15px;height:15px;stroke:var(--color-muted);pointer-events:none;
+}
+.intel-theme-toggle{
+  background:var(--color-surface);border:1px solid var(--color-border);
+  border-radius:var(--radius-full);width:38px;height:38px;padding:0;
+  font-size:1rem;line-height:1;cursor:pointer;color:var(--color-muted);
+  transition:background .15s,border-color .15s,color .15s;flex-shrink:0;
+}
+.intel-theme-toggle:hover{color:var(--color-on-surface);border-color:var(--color-primary)}
+
+/* ---- sidebar (mobile-first: horizontal strip) ---- */
+.intel-shell-sidebar{
+  background:var(--color-surface);border-bottom:1px solid var(--color-border);
+}
+.intel-shell-sidebar-head{display:none}
+.intel-shell-sidebar-inner{display:flex;flex-direction:column;gap:18px}
+.intel-shell-sidebar-title{
+  display:block;color:var(--color-muted);font-size:.66rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px 8px;
+}
+.intel-shell-group{min-width:0}
+.intel-shell-group-disclosure>summary{
+  min-height:40px;display:flex;align-items:center;gap:11px;padding:8px 13px;border-radius:var(--radius-md);
+  color:var(--color-muted);font-size:.86rem;font-weight:650;cursor:pointer;list-style:none;
+  transition:background .15s,color .15s
+}
+.intel-shell-group-disclosure>summary::-webkit-details-marker{display:none}
+.intel-shell-group-disclosure>summary:hover{background:var(--color-bg-subtle);color:var(--color-on-surface)}
+.intel-shell-group-disclosure>summary .nav-ico{width:19px;height:19px;flex:0 0 19px}
+.intel-shell-group-disclosure>summary .group-chevron{width:14px;height:14px;margin-left:auto;transition:transform .18s ease}
+.intel-shell-group-disclosure[open]>summary{color:var(--color-on-surface)}
+.intel-shell-group-disclosure[open]>summary .group-chevron{transform:rotate(180deg)}
+.intel-shell-group-disclosure>.intel-shell-nav{margin-top:4px;padding-left:8px}
+.intel-shell-nav{display:flex;gap:6px}
+.intel-shell-nav::-webkit-scrollbar{display:none}
+.intel-shell-nav{scrollbar-width:none}
+.intel-shell-nav a{
+  display:flex;align-items:center;gap:11px;position:relative;
+  padding:8px 13px;border-radius:var(--radius-md);
+  font-size:.86rem;font-weight:500;color:var(--color-muted);
+  border:1px solid transparent;text-decoration:none;white-space:nowrap;
+  transition:background .15s,color .15s,border-color .15s,box-shadow .15s;
+}
+.intel-shell-nav a .nav-ico{width:19px;height:19px;flex:0 0 19px;opacity:.9}
+.intel-shell-nav a:hover{
+  color:var(--color-on-surface);background:var(--color-bg-subtle);text-decoration:none;
+}
+.intel-shell-nav a.active{
+  color:var(--color-primary);background:color-mix(in srgb,var(--color-primary) 10%,var(--color-surface));
+  border-color:color-mix(in srgb,var(--color-primary) 20%,var(--color-border));
+  box-shadow:inset 3px 0 0 var(--color-primary);font-weight:700;
+}
+.intel-shell-nav a.active .nav-ico{opacity:1}
+.intel-shell-nav a .nav-badge{
+  margin-left:auto;min-width:1.3em;padding:1px 6px;text-align:center;
+  border-radius:var(--radius-full);font-size:.68rem;font-weight:700;line-height:1.35;
+  background:var(--color-error);color:#fff;
+}
+.intel-shell-nav a.active .nav-badge{background:var(--color-primary);color:#fff}
+.intel-nav-toggle{
+  display:none;align-items:center;justify-content:center;
+  width:32px;height:32px;flex:0 0 32px;padding:0;cursor:pointer;
+  background:transparent;border:1px solid transparent;border-radius:var(--radius-md);
+  color:var(--color-muted);transition:background .15s,color .15s,border-color .15s;
+}
+.intel-nav-toggle:hover{color:var(--color-on-surface);background:var(--color-bg-subtle);border-color:var(--color-border)}
+.intel-nav-toggle svg{width:18px;height:18px}
+.intel-mobile-menu,.intel-mobile-close{
+  display:none;align-items:center;justify-content:center;
+  width:38px;height:38px;flex:0 0 38px;padding:0;cursor:pointer;
+  background:var(--color-surface);border:1px solid var(--color-border);
+  border-radius:var(--radius-md);color:var(--color-on-surface);
+  transition:border-color .15s,background .15s;
+}
+.intel-mobile-menu:hover,.intel-mobile-close:hover{border-color:var(--color-primary)}
+.intel-mobile-menu svg,.intel-mobile-close svg{width:20px;height:20px}
+.intel-shell-scrim{display:none}
+.intel-shell-sidebar-note{
+  color:var(--color-muted);font-size:.73rem;line-height:1.45;
+}
+.intel-shell-main{max-width:var(--container-max);margin:0 auto;padding:0 var(--space-gutter) 80px}
+.intel-shell-footer{
+  max-width:var(--container-max);margin:0 auto;
+  padding:24px var(--space-gutter) 48px;
+  border-top:1px solid var(--color-border);
+  color:var(--color-muted);font-size:.8rem;
+  display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;
+}
+.intel-shell-footer a{color:var(--color-secondary);font-weight:500}
+
+/* ---- desktop: fixed navigator, collapsible ---- */
+@media(min-width:960px){
+  body{padding-left:var(--shell-nav-w);transition:padding-left .22s ease}
+  .intel-shell-main{max-width:none;padding-left:max(var(--space-gutter),calc((100vw - var(--shell-nav-w) - var(--container-max))/2 + var(--space-gutter)));padding-right:max(var(--space-gutter),calc((100vw - var(--shell-nav-w) - var(--container-max))/2 + var(--space-gutter)))}
+  .intel-shell-footer{max-width:none}
+  .intel-shell-sidebar{
+    position:fixed;inset:0 auto 0 0;z-index:70;width:var(--shell-nav-w);
+    display:flex;flex-direction:column;padding:0;overflow:hidden;
+    border-right:1px solid var(--color-border);border-bottom:none;
+    background:linear-gradient(180deg,var(--color-surface),var(--color-bg-subtle));
+    transition:width .22s ease;
+  }
+  .intel-shell-sidebar-head{
+    display:flex;align-items:flex-start;gap:8px;
+    padding:16px 14px 10px;min-height:var(--shell-sticky-top);
+  }
+  .intel-shell-sidebar-head .intel-shell-brand{flex:1;min-width:0}
+  .intel-shell-sidebar-head .intel-nav-toggle{display:flex;margin-left:auto;margin-top:2px}
+  .intel-shell-sidebar-inner{
+    flex:1;overflow-y:auto;overflow-x:hidden;
+    padding:8px 12px 14px;gap:18px;
+  }
+  .intel-shell-nav{flex-direction:column;gap:3px}
+  .intel-shell-nav a{width:100%;min-height:38px}
+  .intel-shell-group + .intel-shell-group{
+    border-top:1px solid color-mix(in srgb,var(--color-border) 72%,transparent);
+    padding-top:14px;
+  }
+  .intel-shell-sidebar-foot{
+    border-top:1px solid var(--color-border);padding:12px 14px;
+    display:flex;flex-direction:column;gap:12px;
+  }
+  .intel-shell-sidebar-foot .intel-shell-sidebar-note{margin:0}
+  /* header on desktop: brand lives in sidebar; centre the global search, pin actions right */
+  .intel-shell-header .intel-shell-brand{display:none}
+  .intel-shell-header-inner{justify-content:center}
+  .intel-shell-search{width:min(560px,52vw)}
+  .intel-shell-actions{position:absolute;right:var(--space-gutter);top:50%;transform:translateY(-50%);margin:0}
+
+  /* collapsed rail */
+  html[data-nav="collapsed"]{--shell-nav-w:var(--shell-rail-width)}
+  html[data-nav="collapsed"] .intel-shell-sidebar-head{flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:14px 0 12px}
+  html[data-nav="collapsed"] .intel-shell-sidebar-head .intel-shell-brand{flex:0}
+  html[data-nav="collapsed"] .intel-brand-logo{display:none}
+  html[data-nav="collapsed"] .intel-brand-mark{display:block;width:40px}
+  html[data-nav="collapsed"] .intel-shell-sidebar-head .intel-nav-toggle{margin:0}
+  html[data-nav="collapsed"] .intel-shell-sidebar-inner{padding:8px 12px 14px}
+  html[data-nav="collapsed"] .intel-shell-sidebar-title{opacity:0;height:0;margin:0;overflow:hidden}
+  html[data-nav="collapsed"] .intel-shell-group-disclosure>summary{justify-content:center;padding:9px 0}
+  html[data-nav="collapsed"] .intel-shell-group-disclosure>summary .group-label,
+  html[data-nav="collapsed"] .intel-shell-group-disclosure>summary .group-chevron{display:none}
+  html[data-nav="collapsed"] .intel-shell-group-disclosure>.intel-shell-nav{padding-left:0}
+  html[data-nav="collapsed"] .intel-shell-group + .intel-shell-group{border-top:1px solid var(--color-border);padding-top:14px}
+  html[data-nav="collapsed"] .intel-shell-nav a{justify-content:center;padding:9px 0;gap:0}
+  html[data-nav="collapsed"] .intel-shell-nav a .nav-txt{display:none}
+  html[data-nav="collapsed"] .intel-shell-nav a .nav-badge{
+    position:absolute;top:3px;right:8px;margin:0;min-width:0;width:7px;height:7px;padding:0;
+    font-size:0;line-height:0;border-radius:50%;
+  }
+  html[data-nav="collapsed"] .intel-shell-sidebar-foot{padding:12px 8px;align-items:center}
+  html[data-nav="collapsed"] .intel-shell-sidebar-note{display:none}
+  /* tooltips on the rail */
+  html[data-nav="collapsed"] .intel-shell-nav a::after{
+    content:attr(data-label);
+    position:absolute;left:calc(100% + 12px);top:50%;transform:translateY(-50%) scale(.96);
+    transform-origin:left center;
+    background:var(--color-on-surface);color:var(--color-surface);
+    padding:5px 10px;border-radius:7px;font-size:.76rem;font-weight:600;white-space:nowrap;
+    opacity:0;pointer-events:none;transition:opacity .12s,transform .12s;
+    box-shadow:var(--shadow-md);z-index:90;
+  }
+  html[data-nav="collapsed"] .intel-shell-nav a:hover::after,
+  html[data-nav="collapsed"] .intel-shell-nav a:focus-visible::after{opacity:1;transform:translateY(-50%) scale(1)}
+}
+
+/* ---- narrow screens: off-canvas drawer (hamburger) ---- */
+@media(max-width:959px){
+  :root{--shell-sticky-top:0px}
+  .intel-shell-header-inner{flex-wrap:wrap;padding:8px var(--space-gutter);gap:10px}
+  /* slim header: hamburger + mark + search; full lockup lives inside the drawer */
+  .intel-shell-header .intel-brand-logo{display:none}
+  .intel-shell-header .intel-brand-mark{display:block;width:32px}
+  .intel-mobile-menu{display:flex;order:0}
+  .intel-shell-header .intel-shell-brand{order:1}
+  .intel-shell-actions{order:2}
+  .intel-shell-search{order:3;width:100%;max-width:none;margin-left:0}
+
+  /* sidebar slides in from the left as a drawer, hidden by default */
+  .intel-shell-sidebar{
+    position:fixed;inset:0 auto 0 0;z-index:85;
+    width:min(322px,86vw);max-width:none;
+    display:flex;flex-direction:column;padding:0;overflow:hidden;
+    border-right:1px solid var(--color-border);border-bottom:none;
+    background:var(--color-surface);
+    transform:translateX(-100%);transition:transform .24s ease;
+  }
+  html[data-mobile-nav="open"] .intel-shell-sidebar{transform:translateX(0);box-shadow:var(--shadow-lg)}
+  .intel-shell-sidebar-head{
+    display:flex;align-items:center;gap:10px;
+    padding:13px 15px;min-height:56px;border-bottom:1px solid var(--color-border);
+  }
+  .intel-shell-sidebar-head .intel-shell-brand{flex:1;min-width:0}
+  .intel-shell-sidebar-head .intel-brand-logo{display:block;width:132px}
+  .intel-shell-sidebar-head .intel-brand-mark{display:none}
+  .intel-nav-toggle{display:none}
+  .intel-mobile-close{display:flex;margin-left:auto}
+  .intel-shell-sidebar-inner{
+    flex:1;overflow-y:auto;overflow-x:hidden;
+    max-width:none;margin:0;padding:12px 12px 20px;gap:18px;
+  }
+  .intel-shell-sidebar-title{display:block;margin:0 0 7px 6px;padding:0;font-size:.64rem}
+  .intel-shell-group{display:block;min-width:0}
+  .intel-shell-group + .intel-shell-group{
+    border-top:1px solid var(--color-border);padding-top:14px;margin-top:2px;
+  }
+  .intel-shell-nav{flex-direction:column;gap:3px;width:100%;overflow:visible}
+  .intel-shell-nav a{width:100%;flex:0 0 auto;padding:10px 13px;font-size:.9rem}
+  .intel-shell-nav a .nav-badge{margin-left:auto}
+  .intel-shell-sidebar-foot{
+    display:flex;flex-direction:column;gap:10px;
+    border-top:1px solid var(--color-border);padding:12px 15px;
+  }
+
+  /* backdrop */
+  .intel-shell-scrim{
+    display:block;position:fixed;inset:0;z-index:84;
+    background:rgba(0,0,0,.45);opacity:0;visibility:hidden;
+    transition:opacity .24s,visibility .24s;
+  }
+  html[data-mobile-nav="open"] .intel-shell-scrim{opacity:1;visibility:visible}
+  html[data-mobile-nav="open"] body{overflow:hidden}
+}
+*{box-sizing:border-box}
+body{line-height:1.55}
+.deep-index-wrap{max-width:980px;margin:0 auto;padding-top:28px}
+h1{font-size:1.45rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;color:var(--color-tertiary);font-family:var(--font-display)}
+.lead{color:var(--color-muted);margin-bottom:26px;max-width:70ch;font-size:.95rem;line-height:1.65}
+.grid{display:grid;gap:16px}
+.card{
+  display:block;background:var(--color-surface);border:1px solid var(--color-border);
+  border-radius:14px;padding:20px 22px;color:inherit;text-decoration:none;
+  border-left:4px solid var(--card-accent,#94a3b8);
+  transition:border-color .15s,transform .12s,box-shadow .15s;
+}
+.card:hover{border-color:var(--card-accent);transform:translateY(-2px);box-shadow:var(--shadow-md);text-decoration:none}
+.code{font-size:.72rem;color:var(--card-accent);letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+.card h2{font-size:1.08rem;margin:8px 0 6px;color:var(--color-on-surface)}
+.card p{color:var(--color-muted);font-size:.92rem;line-height:1.55}
+.meta{margin-top:14px;font-size:.78rem;color:var(--color-muted)}
+.tag{display:inline-block;background:var(--color-bg-subtle);border:1px solid var(--color-border);border-radius:999px;padding:3px 9px;margin:3px 5px 0 0;font-size:.72rem}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="intel-shell-header" data-intel-shell="v9">
+  <div class="intel-shell-header-inner">
+    <button type="button" class="intel-mobile-menu" id="intel-mobile-menu" aria-label="Open navigation" aria-expanded="false" aria-controls="intel-shell-sidebar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+    <a class="intel-shell-brand" href="../signals-kb/index.html" aria-label="Foresight for Intergenerational Fairness Intelligence platform — home">
+      <img class="intel-brand-logo" src="../signals-kb/assets/gyc-ai-labs-lockup.webp" alt="Foresight for Intergenerational Fairness Intelligence platform" width="160" height="152" decoding="async">
+      <img class="intel-brand-mark" src="../signals-kb/assets/gyc-ai-labs-mark.webp" alt="Foresight for Intergenerational Fairness Intelligence platform" aria-hidden="true" width="40" height="31" decoding="async">
+    </a>
+    <form class="intel-shell-search" action="../signals-kb/briefing.html" method="get" role="search" onsubmit="event.preventDefault();var q=this.querySelector('input').value.trim();window.location.href='../signals-kb/briefing.html#tab=all&q='+encodeURIComponent(q);">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" name="q" placeholder="Search platform" aria-label="Search platform">
+    </form>
+    <div class="intel-shell-actions">
+      <button type="button" class="intel-theme-toggle" id="intel-theme-toggle" aria-label="Switch to dark mode">&#9790;</button>
+    </div>
+  </div>
+</header>
+<div class="intel-shell-scrim" id="intel-shell-scrim"></div>
+<aside class="intel-shell-sidebar" id="intel-shell-sidebar" aria-label="Platform navigation">
+  <div class="intel-shell-sidebar-head">
+    <a class="intel-shell-brand" href="../signals-kb/index.html" aria-label="Foresight for Intergenerational Fairness Intelligence platform — home">
+      <img class="intel-brand-logo" src="../signals-kb/assets/gyc-ai-labs-lockup.webp" alt="Foresight for Intergenerational Fairness Intelligence platform" width="160" height="152" decoding="async">
+      <img class="intel-brand-mark" src="../signals-kb/assets/gyc-ai-labs-mark.webp" alt="Foresight for Intergenerational Fairness Intelligence platform" aria-hidden="true" width="40" height="31" decoding="async">
+    </a>
+    <button type="button" class="intel-nav-toggle" id="intel-nav-toggle" aria-label="Collapse navigation" aria-expanded="true" title="Collapse navigation">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M9.5 4.5v15"/><path d="m15.5 9.5-2.5 2.5 2.5 2.5"/></svg>
+  </button>
+    <button type="button" class="intel-mobile-close" id="intel-mobile-close" aria-label="Close navigation">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+  </button>
+  </div>
+  <div class="intel-shell-sidebar-inner">
+    <div class="intel-shell-group"><nav class="intel-shell-nav" aria-label="Read"><a class="" href="../signals-kb/index.html" data-nav="landing" data-label="Overview" title="Overview"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.3"/><rect x="13" y="4" width="7" height="4.5" rx="1.3"/><rect x="13" y="11" width="7" height="9" rx="1.3"/><rect x="4" y="14" width="7" height="6" rx="1.3"/></svg><span class="nav-txt">Overview</span></a><a class="" href="../signals-kb/briefing.html#tab=brief" data-view="brief" data-label="Weekly briefing" title="Weekly briefing"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5h14v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2Z"/><path d="M8.5 9h7M8.5 12.5h7M8.5 16h4"/></svg><span class="nav-txt">Weekly briefing</span></a></nav></div><details class="intel-shell-group intel-shell-group-disclosure">
+        <summary><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5.2"/><circle cx="12" cy="12" r="2"/><path d="M12 3.5v17M3.5 12h17"/></svg><span class="group-label">Explore</span><svg class="group-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+        <nav class="intel-shell-nav" aria-label="Explore"><a class="" href="../signals-kb/briefing.html#tab=all" data-view="all" data-label="Signals" title="Signals"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 6.5h11M8.5 12h11M8.5 17.5h11"/><circle cx="4.5" cy="6.5" r="1.1"/><circle cx="4.5" cy="12" r="1.1"/><circle cx="4.5" cy="17.5" r="1.1"/></svg><span class="nav-txt">Signals</span></a><a class="" href="../signals-kb/briefing.html#tab=trends" data-view="trends" data-label="Trends" title="Trends"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 16.5 9 11l4 4 7.5-7.5"/><path d="M20.5 7.5V12h-4.5"/></svg><span class="nav-txt">Trends</span></a><a class="" href="../signals-kb/briefing.html#tab=horizons" data-view="horizons" data-label="Horizons" title="Horizons"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 8.5 4.6-8.5 4.6-8.5-4.6Z"/><path d="m3.5 12.6 8.5 4.6 8.5-4.6"/></svg><span class="nav-txt">Horizons</span></a><a class="" href="../signals-kb/briefing.html#tab=radar" data-view="radar" data-label="IE radar" title="IE radar"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5.2"/><circle cx="12" cy="12" r="2"/><path d="M12 3.5v17M3.5 12h17"/></svg><span class="nav-txt">IE radar</span></a><a class="" href="../signals-kb/briefing.html#tab=threads" data-view="threads" data-label="Threads" title="Threads"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="m8.2 11 7.6-4M8.2 13l7.6 4"/></svg><span class="nav-txt">Threads</span></a><a class="" href="../signals-kb/briefing.html#tab=wheels" data-view="wheels" data-label="Futures wheels" title="Futures wheels"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.2"/><path d="M12 4.5v3.2M12 16.3v3.2M4.5 12h3.2M16.3 12h3.2M6.8 6.8l2.3 2.3M14.9 14.9l2.3 2.3M17.2 6.8l-2.3 2.3M9.1 14.9l-2.3 2.3"/></svg><span class="nav-txt">Futures wheels</span></a><a class="" href="../signals-kb/briefing.html#tab=map" data-view="map" data-label="Globe" title="Globe"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 2.6 14.6 0 17M12 3.5c-2.6 2.4-2.6 14.6 0 17"/></svg><span class="nav-txt">Globe</span></a><a class="" href="../signals-kb/briefing.html#tab=matrix" data-view="matrix" data-label="Triage radar" title="Triage radar"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg><span class="nav-txt">Triage radar</span></a><a class="" href="../signals-kb/graph.html" data-nav="graph" data-label="Knowledge graph" title="Knowledge graph"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.5" cy="7" r="2.2"/><circle cx="17.5" cy="8" r="2.2"/><circle cx="8" cy="17" r="2.2"/><circle cx="16.5" cy="16.5" r="2.2"/><path d="m8.4 8.2 6.8.6M8.2 15.2 16 10M9.6 16.4 15 15.2"/></svg><span class="nav-txt">Knowledge graph</span></a></nav>
+      </details><details class="intel-shell-group intel-shell-group-disclosure" open>
+        <summary><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.2"/><rect x="13" y="4" width="7" height="7" rx="1.2"/><path d="M7.5 16.5h9M12 13.5v6"/></svg><span class="group-label">Applications</span><svg class="group-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+        <nav class="intel-shell-nav" aria-label="Applications"><a class="" href="../signals-kb/country-ambition.html" data-nav="countries" data-label="Country index" title="Country index"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 2.6 14.6 0 17M12 3.5c-2.6 2.4-2.6 14.6 0 17"/></svg><span class="nav-txt">Country index</span></a><a class="" href="../signals-kb/policy-tools.html" data-nav="policy-tools" data-label="Policy tools" title="Policy tools"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.2"/><rect x="13" y="4" width="7" height="7" rx="1.2"/><path d="M7.5 16.5h9M12 13.5v6"/></svg><span class="nav-txt">Policy tools</span></a><a class="active" href="../signals-kb/policy-tools.html#family=iia" data-nav="iia" data-label="IIAs" title="IIAs" aria-current="page"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5h10v3.5H7Z"/><path d="M8.5 8v12M15.5 8v12"/><path d="M8.5 20h7"/></svg><span class="nav-txt">IIAs</span></a><a class="" href="../signals-kb/pact.html" data-nav="pact" data-label="Pact tracker" title="Pact tracker"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4.5h9l3 3v12H6Z"/><path d="M15 4.5V8h3"/><path d="M8.5 11h7M8.5 14h7M8.5 17h4"/><path d="m5 8-1.5 1.5L5 11"/></svg><span class="nav-txt">Pact tracker</span></a><a class="" href="../signals-kb/briefing.html#tab=pathway" data-view="pathway" data-label="From here to 2028" title="From here to 2028"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 9.5h16M8.5 3v4M15.5 3v4"/><path d="M8 13h3.5M8 16.5h8"/></svg><span class="nav-txt">From here to 2028</span></a><a class="" href="../signals-kb/briefing.html#tab=opportunities" data-view="opportunities" data-label="Opportunities" title="Opportunities"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M9.2 10.2c.8-1 2.1-1.4 2.8-1.4 1.6 0 2.6.8 2.6 2s-1 1.9-2.7 2.3c-1.8.4-2.7 1-2.7 2.2 0 1.1 1 2 2.8 2 1.2 0 2.2-.4 2.9-1.2"/></svg><span class="nav-txt">Opportunities</span></a><a class="" href="../signals-kb/finance.html" data-nav="finance" data-label="Finance" title="Finance"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V4.5M4 19.5h16"/><path d="M8 16.5v-4M12 16.5V8M16 16.5v-6"/></svg><span class="nav-txt">Finance</span></a></nav>
+      </details><details class="intel-shell-group intel-shell-group-disclosure">
+        <summary><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h6.5L18 8v12.5H7Z"/><path d="M13.5 3.5V8H18M9.5 12.5h5M9.5 15.5h5"/></svg><span class="group-label">Library</span><svg class="group-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+        <nav class="intel-shell-nav" aria-label="Library"><a class="" href="../signals-kb/papers.html" data-nav="papers" data-label="Papers" title="Papers"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h6.5L18 8v12.5H7Z"/><path d="M13.5 3.5V8H18M9.5 12.5h5M9.5 15.5h5"/></svg><span class="nav-txt">Papers</span></a><a class="" href="../signals-kb/insights.html" data-nav="insights" data-label="Insights" title="Insights"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 5.5h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-3 2v-4H6a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2Z"/><path d="M8.5 9.5h7M8.5 12.5h5"/></svg><span class="nav-txt">Insights</span></a><a class="" href="../signals-kb/organizations.html" data-nav="organizations" data-label="Governance map" title="Governance map"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V8.5a2 2 0 0 1 2-2h3.5"/><path d="M5 19.5h14"/><path d="M9 6.5V4.5a2 2 0 0 1 2-2h6.5L20 6v13.5H9"/><path d="M14.5 2.5V6H20"/><circle cx="9" cy="13" r="1.3"/><circle cx="15" cy="13" r="1.3"/></svg><span class="nav-txt">Governance map</span></a><a class="" href="../signals-kb/conferences.html" data-nav="conferences" data-label="Conferences" title="Conferences"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 9.5h16M8.5 3v4M15.5 3v4"/></svg><span class="nav-txt">Conferences</span></a></nav>
+      </details><details class="intel-shell-group intel-shell-group-disclosure">
+        <summary><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg><span class="group-label">About &amp; method</span><svg class="group-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+        <nav class="intel-shell-nav" aria-label="About and method"><a class="" href="../signals-kb/index.html#method" data-nav="methodology" data-label="How it works" title="How it works"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.3"/><rect x="13" y="4" width="7" height="4.5" rx="1.3"/><rect x="13" y="11" width="7" height="9" rx="1.3"/><rect x="4" y="14" width="7" height="6" rx="1.3"/></svg><span class="nav-txt">How it works</span></a><a class="" href="../signals-kb/briefing.html#tab=track" data-view="track" data-label="Track record" title="Track record"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg><span class="nav-txt">Track record</span></a><a class="" href="../signals-kb/donate.html" data-nav="donate" data-label="Support" title="Support"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.5 15 3.5 8.9A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8.5 1.9C20.5 15 12 20.5 12 20.5Z"/></svg><span class="nav-txt">Support</span></a></nav>
+      </details><details class="intel-shell-group intel-shell-group-disclosure">
+        <summary><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m8.4 12 2.4 2.4 4.8-5.2"/></svg><span class="group-label">Analyst tools</span><svg class="group-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+        <nav class="intel-shell-nav" aria-label="Analyst tools"><a class="" href="../signals-kb/briefing.html#tab=watchlist" data-view="watchlist" data-label="Priority watchlist" title="Priority watchlist"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v16l-5-3.6L7 20Z"/></svg><span class="nav-txt">Priority watchlist</span></a><a class="" href="../signals-kb/review.html" data-nav="review" data-label="Review console" title="Review console"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m8.4 12 2.4 2.4 4.8-5.2"/></svg><span class="nav-txt">Review console</span><span class="nav-badge" aria-label="16 pending reviews">16</span></a><a class="" href="../signals-kb/briefing.html#tab=ask" data-view="ask" data-label="Ask the graph" title="Ask the graph"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5.5h14a1 1 0 0 1 1 1V15a1 1 0 0 1-1 1H9.5L5 19.5V16H5a0 0 0 0 1 0 0Z"/><path d="M9 9.5h6M9 12.5h4"/></svg><span class="nav-txt">Ask the graph</span></a></nav>
+      </details>
+  </div>
+  <div class="intel-shell-sidebar-foot">
+    <p class="intel-shell-sidebar-note">Signal intelligence for youth governance and intergenerational equity.</p>
+  </div>
+</aside>
+<main class="intel-shell-main" id="main-content"><div class="deep-index-wrap">
+<h1>Deep Dive archive</h1>
+<p class="lead"><strong>Moved.</strong> Country IIA dossiers now live on the intel site: <a href="../signals-kb/policy-tools.html#family=iia">Policy tools → IIAs</a>. These readers are an archive of the source databases, not the product surface.</p>
+<p class="lead">In-depth country databases separate from the live signals feed. Italy is the constitutional + VIG stack. Netherlands, Germany and Belgium are Intergenerational Impact Assessment (IIA) mechanism dives: enacted vs cousin vs bite.</p>
+<div class="grid"><a class="card" href="italy-intergenerational-equity/reader.html" style="--card-accent:#818cf8">
+      <div class="code">IT</div>
+      <h2>Italy: Constitutional Intergenerational Equity</h2>
+      <p>Constitutional reform, Constitutional Court doctrine, and Generational Impact Assessment (VIG)</p>
+      <div class="meta">Updated 2026-06-28 · <span class="tag">intergenerational-equity</span><span class="tag">constitutional-law</span><span class="tag">environment</span><span class="tag">vig</span><span class="tag">italy</span></div>
+    </a><a class="card" href="netherlands-intergenerational-equity/reader.html" style="--card-accent:#818cf8">
+      <div class="code">NL</div>
+      <h2>Netherlands: Generatietoets and Kinderrechtentoets</h2>
+      <p>Enacted administrative IIA, budget skip on MN 2026, one consultation-stage child-rights amendment</p>
+      <div class="meta">Updated 2026-08-17 · <span class="tag">intergenerational-equity</span><span class="tag">iia</span><span class="tag">generatietoets</span><span class="tag">kinderrechtentoets</span><span class="tag">netherlands</span></div>
+    </a><a class="card" href="germany-intergenerational-equity/reader.html" style="--card-accent:#818cf8">
+      <div class="code">DE</div>
+      <h2>Germany: Jugend-Check and Article 20a</h2>
+      <p>Independent youth-check at volume, Bundestag not bound, documented skips</p>
+      <div class="meta">Updated 2026-08-17 · <span class="tag">intergenerational-equity</span><span class="tag">iia</span><span class="tag">jugend-check</span><span class="tag">article-20a</span><span class="tag">germany</span></div>
+    </a><a class="card" href="belgium-intergenerational-equity/reader.html" style="--card-accent:#818cf8">
+      <div class="code">BE</div>
+      <h2>Belgium: Flanders JoKER — the stall gate</h2>
+      <p>Subnational statutory youth-effect report; Council of State can stall a missing JoKER</p>
+      <div class="meta">Updated 2026-08-17 · <span class="tag">intergenerational-equity</span><span class="tag">iia</span><span class="tag">joker</span><span class="tag">flanders</span><span class="tag">belgium</span></div>
+    </a></div>
+</div></main>
+<footer class="intel-shell-footer">
+  <span>Built 2026-08-30 - 2034 signals tracked - GYC AI Labs · Intergenerational Foresight</span>
+  <span><a href="../signals-kb/index.html">Overview</a> - <a href="../signals-kb/graph.html">Knowledge graph</a> - <a href="../signals-kb/country-ambition.html">Country index</a> - <a href="../signals-kb/policy-tools.html">Policy tools</a></span>
+  <span>Country legal deep dives</span>
+</footer>
+<script data-intel-shell="init">
+(function(){
+  var KEY="gyc-foresight-nav";
+  var root=document.documentElement;
+  function apply(state){
+    root.dataset.nav=state;
+    var btn=document.getElementById("intel-nav-toggle");
+    if(btn){
+      var collapsed=state==="collapsed";
+      btn.setAttribute("aria-label",collapsed?"Expand navigation":"Collapse navigation");
+      btn.setAttribute("aria-expanded",collapsed?"false":"true");
+      btn.title=collapsed?"Expand navigation":"Collapse navigation";
+    }
+    try{localStorage.setItem(KEY,state);}catch(e){}
+    try{window.dispatchEvent(new CustomEvent("gyc-nav-change",{detail:state}));}catch(e){}
+  }
+  function preferred(){
+    try{
+      var s=localStorage.getItem(KEY);
+      if(s==="collapsed"||s==="expanded") return s;
+    }catch(e){}
+    return "expanded";
+  }
+  var btn=document.getElementById("intel-nav-toggle");
+  if(btn){
+    btn.addEventListener("click",function(){
+      apply(root.dataset.nav==="collapsed"?"expanded":"collapsed");
+    });
+  }
+  apply(root.dataset.nav==="collapsed"?"collapsed":preferred());
+
+  /* ---- mobile off-canvas drawer ---- */
+  var mq=window.matchMedia("(max-width:959px)");
+  var menuBtn=document.getElementById("intel-mobile-menu");
+  var closeBtn=document.getElementById("intel-mobile-close");
+  var scrim=document.getElementById("intel-shell-scrim");
+  function setDrawer(open){
+    if(open) root.dataset.mobileNav="open"; else delete root.dataset.mobileNav;
+    if(menuBtn) menuBtn.setAttribute("aria-expanded",open?"true":"false");
+  }
+  var closeDrawer=function(){ setDrawer(false); };
+  if(menuBtn) menuBtn.addEventListener("click",function(){ setDrawer(root.dataset.mobileNav!=="open"); });
+  if(closeBtn) closeBtn.addEventListener("click",closeDrawer);
+  if(scrim) scrim.addEventListener("click",closeDrawer);
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape") closeDrawer(); });
+  // pick a destination → close the drawer (view links change the hash in place)
+  var sidebar=document.getElementById("intel-shell-sidebar");
+  if(sidebar){
+    sidebar.querySelectorAll(".intel-shell-nav a").forEach(function(a){
+      a.addEventListener("click",function(){ if(mq.matches) closeDrawer(); });
+    });
+  }
+  // leaving mobile width clears any open drawer so desktop layout is never locked
+  function onMQ(){ if(!mq.matches) closeDrawer(); }
+  if(mq.addEventListener) mq.addEventListener("change",onMQ); else window.addEventListener("resize",onMQ);
+})();
+</script>
+<script data-intel-theme="init">
+(function(){
+  var KEY="gyc-foresight-theme";
+  function apply(theme){
+    document.documentElement.dataset.theme=theme;
+    var btn=document.getElementById("intel-theme-toggle");
+    if(btn){
+      btn.textContent=theme==="dark"?"\u2600":"\u{1F319}";
+      btn.setAttribute("aria-label",theme==="dark"?"Switch to light mode":"Switch to dark mode");
+    }
+    try{localStorage.setItem(KEY,theme);}catch(e){}
+    try{window.dispatchEvent(new CustomEvent("gyc-theme-change",{detail:theme}));}catch(e){}
+  }
+  function preferred(){
+    try{
+      var s=localStorage.getItem(KEY);
+      if(s==="light"||s==="dark") return s;
+    }catch(e){}
+    return "light";
+  }
+  var btn=document.getElementById("intel-theme-toggle");
+  if(btn){
+    btn.addEventListener("click",function(){
+      apply(document.documentElement.dataset.theme==="dark"?"light":"dark");
+    });
+  }
+  if(!document.documentElement.dataset.theme) apply(preferred());
+  else apply(document.documentElement.dataset.theme);
+})();
+</script>
+</body></html>

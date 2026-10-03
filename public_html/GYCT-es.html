@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Youth Climate Training (GYCT) 2026 | Formación en política climática para jóvenes</title>
+<meta name="description" content="GYCT 2026 prepara a la juventud para la política climática internacional y el camino hacia la COP31 en Antalya. Desarrollo de capacidades gratuito y en línea para personas de 16 a 35 años. Impartido por la Global Youth Coalition con el apoyo estratégico de Oxford Net Zero.">
+<meta property="og:title" content="Global Youth Climate Training 2026">
+<meta property="og:description" content="GYCT 2026: formación gratuita y en línea en política climática para personas de 16 a 35 años rumbo a la COP31 de Antalya. Liderado por la Global Youth Coalition con el apoyo de Oxford Net Zero. 5.400 jóvenes formados; 27.000 solicitudes desde 2023.">
+<meta name="twitter:description" content="GYCT 2026: formación gratuita y en línea en política climática para personas de 16 a 35 años rumbo a la COP31 de Antalya. Liderado por GYC con el apoyo de Oxford Net Zero.">
+<meta property="og:image" content="https://theglobalyouth.co/assets/gyct2026/social/gyct2026-og-image-1200x630.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://theglobalyouth.co/assets/gyct2026/social/gyct2026-og-image-1200x630.png">
+<link rel="alternate" hreflang="en" href="https://theglobalyouth.co/public_html/GYCT.html">
+<link rel="alternate" hreflang="es" href="https://theglobalyouth.co/public_html/GYCT-es.html">
+<link rel="alternate" hreflang="pt" href="https://theglobalyouth.co/public_html/GYCT-pt.html">
+<link rel="alternate" hreflang="tr" href="https://theglobalyouth.co/public_html/GYCT-tr.html">
+<link rel="alternate" hreflang="x-default" href="https://theglobalyouth.co/public_html/GYCT.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/gyct2026/logos/gyct-logo.png">
+<style>
+  :root {
+    --teal-deep: #0a3d4c;
+    --teal: #0f5a6b;
+    --teal-mid: #1a7a8c;
+    --teal-bright: #2a9aad;
+    --teal-soft: #e6f4f6;
+    --ink: #1a2b33;
+    --ink-soft: #3d5560;
+    --mute: #5d7380;
+    --white: #fff;
+    --paper: #f4f7f8;
+    --line: #d5e2e6;
+    --gold: #c9a227;
+    --gold-soft: #f7f0d8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--teal-mid); }
+  .wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+
+  /* TOP BAR */
+  .topbar { background: var(--white); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
+  .topbar-inner {
+    width: min(1080px, calc(100% - 40px));
+    margin: 0 auto;
+    min-height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .logo-row { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--ink); }
+  .logo-mark {
+    height: 72px; width: auto; flex-shrink: 0; display: block;
+  }
+  .logo-text strong { display: block; font-size: 14px; font-weight: 800; color: var(--teal-deep); }
+  .logo-text span { display: block; font-size: 12px; color: var(--mute); font-weight: 600; }
+  .top-links { display: flex; align-items: center; gap: 18px; }
+  .top-links a { text-decoration: none; font-size: 14px; font-weight: 700; color: var(--ink-soft); }
+  .top-links a:hover { color: var(--teal-mid); }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 11px 18px; border-radius: 4px; font-size: 14px; font-weight: 700;
+    text-decoration: none; transition: background .15s ease, transform .15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-teal { background: var(--teal); color: #fff !important; }
+  .btn-teal:hover { background: var(--teal-deep); }
+  .btn-outline { background: transparent; color: #fff !important; border: 2px solid rgba(255,255,255,.55); }
+  .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+  .btn-dark { background: var(--teal-deep); color: #fff !important; }
+  .btn-ghost {
+    background: var(--white); color: var(--teal-deep) !important;
+    border: 1px solid var(--line);
+  }
+  .btn-ghost:hover { border-color: var(--teal-mid); }
+
+  /* HERO - GYCT 2026 visual asset pack */
+  .hero {
+    position: relative;
+    color: #fff;
+    padding: 0;
+    min-height: 520px;
+    background: var(--teal-deep);
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url("assets/gyct2026/hero/gyct2026-hero-background-v2-eye-map.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(7,35,45,0.28) 0%, rgba(7,35,45,0.18) 45%, rgba(7,35,45,0.05) 100%), linear-gradient(180deg, rgba(10,61,76,0.15) 0%, rgba(10,61,76,0.42) 100%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    width: min(1080px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 80px 0 120px;
+    display: block;
+    min-height: 520px;
+  }
+  .hero h1 {
+    font-family: 'Oswald', Impact, sans-serif;
+    font-weight: 700;
+    font-size: clamp(42px, 8vw, 84px);
+    line-height: 0.95;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    max-width: 12ch;
+    text-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    margin-bottom: 18px;
+  }
+  .hero-sub {
+    font-size: 18px;
+    max-width: 54ch;
+    color: rgba(255,255,255,0.92);
+    margin-bottom: 28px;
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.82);
+  }
+  .hero-meta span { display: inline-flex; align-items: center; gap: 8px; }
+  .hero-meta span::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #f2d56b; }
+
+  /* INTRO CARD */
+  .intro-shift { margin-top: -56px; position: relative; z-index: 2; padding-bottom: 24px; }
+  .intro-card {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 18px 50px rgba(10, 61, 76, 0.14);
+    padding: 36px;
+    border-top: 5px solid var(--teal-bright);
+  }
+  .intro-card p { font-size: 17px; color: var(--ink-soft); margin-bottom: 14px; }
+  .intro-card p:last-child { margin-bottom: 0; }
+  .intro-card a { font-weight: 700; text-decoration: none; }
+  .intro-card a:hover { text-decoration: underline; }
+  .intro-note {
+    margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line);
+    font-size: 14px; color: var(--mute);
+  }
+  .intro-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+
+  /* SECTIONS */
+  section { padding: 64px 0; }
+  .section-label {
+    font-size: 12px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--teal-mid); margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: 'Oswald', Impact, sans-serif;
+    font-size: clamp(28px, 4vw, 40px); font-weight: 600;
+    letter-spacing: 0.02em; text-transform: uppercase; color: var(--teal-deep);
+    margin-bottom: 12px; line-height: 1.1;
+  }
+  .section-lead { font-size: 16px; color: var(--mute); max-width: 70ch; margin-bottom: 28px; }
+
+  /* STATS */
+  .stats { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 28px 0; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .stat { text-align: center; padding: 8px; }
+  .stat .n { display: block; font-family: 'Oswald', sans-serif; font-size: 36px; font-weight: 700; color: var(--teal); line-height: 1; }
+  .stat .l { display: block; margin-top: 6px; font-size: 13px; font-weight: 700; color: var(--mute); text-transform: uppercase; letter-spacing: 0.05em; }
+
+  /* IMPACT OUTCOMES */
+  .outcomes { background: var(--teal-soft); border-bottom: 1px solid var(--line); padding: 36px 0; }
+  .outcomes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .outcome {
+    background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 22px;
+    text-align: center;
+  }
+  .outcome .n { display: block; font-family: 'Oswald', sans-serif; font-size: 40px; font-weight: 700; color: var(--teal-deep); line-height: 1; }
+  .outcome .l { display: block; margin-top: 8px; font-size: 14px; color: var(--ink-soft); font-weight: 600; }
+  .impact-cta {
+    margin-top: 22px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px;
+    padding: 18px 20px; background: var(--white); border: 1px solid var(--line); border-radius: 6px;
+  }
+  .impact-cta p { font-size: 15px; color: var(--ink-soft); max-width: 62ch; }
+
+  /* COP31 BAND */
+  .cop-band { background: linear-gradient(90deg, rgba(10,61,76,.96) 0%, rgba(19,78,74,.88) 55%, rgba(61,46,20,.70) 100%), url("assets/gyct2026/sections/gyct-programme-map-band-v1.png") center / cover no-repeat; color: #fff; padding: 28px 0; }
+  .cop-inner {
+    width: min(1080px, calc(100% - 40px)); margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+  }
+  .cop-inner h2 {
+    font-family: 'Oswald', sans-serif; font-size: clamp(22px, 3vw, 30px); font-weight: 600;
+    letter-spacing: 0.03em; text-transform: uppercase; line-height: 1.15;
+  }
+  .cop-inner p { margin-top: 6px; color: rgba(255,255,255,0.84); max-width: 56ch; font-size: 15px; }
+  .cop-pill {
+    display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 999px;
+    background: rgba(242, 213, 107, 0.14); border: 1px solid rgba(242, 213, 107, 0.35);
+    color: #f2d56b; font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap;
+  }
+
+  /* CARDS */
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .cards-3 { grid-template-columns: repeat(3, 1fr); }
+  .card { background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 24px; overflow: hidden; }
+  .card h3 { font-size: 18px; font-weight: 800; color: var(--teal-deep); margin-bottom: 8px; }
+  .card p { font-size: 15px; color: var(--ink-soft); }
+  .card .tag { display: inline-block; margin-bottom: 10px; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-mid); }
+  .card-visual { height: 132px; margin: -24px -24px 18px; background-size: cover; background-position: center; border-bottom: 1px solid var(--line); }
+  .card ul { margin-top: 10px; padding-left: 18px; color: var(--ink-soft); font-size: 14px; }
+  .card li { margin-bottom: 5px; }
+
+  /* TWO TRACKS */
+  .tracks { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 16px; }
+  .track { background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 28px; min-height: 100%; }
+  .track.yna { background: var(--teal-deep); color: #fff; border-color: var(--teal-deep); }
+  .track h3 { font-family: 'Oswald', sans-serif; font-size: 28px; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; margin-bottom: 10px; }
+  .track.yna h3 { color: #fff; }
+  .track p { color: var(--ink-soft); font-size: 15px; }
+  .track.yna p { color: rgba(255,255,255,0.86); }
+  .track ul { margin-top: 14px; padding-left: 18px; color: var(--ink-soft); font-size: 14px; }
+  .track.yna ul { color: rgba(255,255,255,0.86); }
+  .track li { margin-bottom: 6px; }
+  .track-visual { height: 150px; margin: -28px -28px 20px; border-radius: 6px 6px 0 0; background-size: cover; background-position: center; border-bottom: 1px solid rgba(10,61,76,.12); }
+  .track.yna .track-visual { border-bottom-color: rgba(255,255,255,.12); }
+
+  .sessions-section { background: linear-gradient(rgba(255,255,255,.94), rgba(255,255,255,.96)), url("assets/gyct2026/sections/gyct-programme-map-band-v1.png") center top / cover no-repeat; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+  /* TABLE */
+  .table-shell { background: var(--white); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  .table-scroll { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; min-width: 760px; }
+  th { text-align: left; background: var(--teal-deep); color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 16px; }
+  td { padding: 16px; border-bottom: 1px solid var(--line); font-size: 14px; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: #f8fbfc; }
+  .session-title { font-weight: 800; color: var(--ink); }
+  .session-lead { display: block; margin-top: 3px; color: var(--mute); font-size: 13px; font-weight: 600; }
+  .pill { display: inline-block; padding: 4px 9px; border-radius: 3px; font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
+  .pill-main { background: var(--teal-soft); color: var(--teal); }
+  .pill-yna { background: var(--gold-soft); color: #8a6a12; }
+  .pill-all { background: var(--teal); color: #fff; }
+
+  /* TIMELINE */
+  .timeline-list { display: grid; gap: 10px; }
+  .timeline-item {
+    display: grid; grid-template-columns: 150px 1fr; gap: 16px;
+    background: var(--white); border: 1px solid var(--line); border-left: 4px solid var(--teal-bright); border-radius: 4px; padding: 16px 18px;
+  }
+  .timeline-item .date {
+    font-family: 'Oswald', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--teal);
+  }
+  .timeline-item .desc { color: var(--ink-soft); font-size: 15px; }
+  .timeline-item.legacy { border-left-color: var(--gold); }
+
+  /* HISTORY YEAR BLOCKS */
+  .history-grid { display: grid; gap: 14px; }
+  .history-year {
+    background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 22px 24px;
+    display: grid; grid-template-columns: 90px 1fr; gap: 18px;
+  }
+  .history-year .yr {
+    font-family: 'Oswald', sans-serif; font-size: 28px; font-weight: 700; color: var(--teal); line-height: 1;
+  }
+  .history-year h3 { font-size: 17px; font-weight: 800; color: var(--teal-deep); margin-bottom: 6px; }
+  .history-year p { font-size: 15px; color: var(--ink-soft); }
+  .history-year ul { margin-top: 8px; padding-left: 18px; font-size: 14px; color: var(--ink-soft); }
+  .history-year li { margin-bottom: 4px; }
+
+  /* PAST SESSIONS */
+  .lang-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .lang-chip {
+    display: inline-flex; align-items: center; padding: 8px 14px; border-radius: 4px;
+    border: 1px solid var(--line); background: var(--white); color: var(--ink-soft);
+    font-size: 13px; font-weight: 700; text-decoration: none;
+  }
+  .lang-chip:hover, .lang-chip.active { background: var(--teal); color: #fff; border-color: var(--teal); }
+  .year-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .year-tab {
+    appearance: none; border: 1px solid var(--line); background: var(--white); color: var(--ink-soft);
+    padding: 9px 14px; border-radius: 4px; font-size: 13px; font-weight: 800; cursor: pointer;
+    font-family: inherit; letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .year-tab[aria-selected="true"] { background: var(--teal-deep); color: #fff; border-color: var(--teal-deep); }
+  .year-panel { display: none; }
+  .year-panel.active { display: block; }
+  .session-list { list-style: none; background: var(--white); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  .session-list li { border-bottom: 1px solid var(--line); }
+  .session-list li:last-child { border-bottom: none; }
+  .session-list a {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+    padding: 14px 18px; text-decoration: none; color: var(--ink); cursor: pointer;
+  }
+  .session-list a:hover { background: var(--teal-soft); }
+  .session-list a.is-playing {
+    background: var(--teal-soft);
+    box-shadow: inset 4px 0 0 var(--teal-bright);
+  }
+  .session-list a.is-playing .watch { color: var(--teal-deep); }
+  .session-list .num { font-weight: 800; color: var(--teal); min-width: 2ch; }
+  .session-list .ttl { flex: 1; font-weight: 700; font-size: 15px; }
+  .session-list .watch { font-size: 12px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal-mid); white-space: nowrap; }
+  .archive-note { margin-top: 14px; font-size: 14px; color: var(--mute); }
+  .playlist-embed {
+    position: relative; width: 100%; aspect-ratio: 16 / 9;
+    background: var(--teal-deep); border: 1px solid var(--line); border-radius: 6px;
+    overflow: hidden; margin-bottom: 10px;
+  }
+  .playlist-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .now-playing {
+    display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px;
+    margin-bottom: 18px; font-size: 14px; color: var(--ink-soft);
+  }
+  .now-playing strong { color: var(--teal-deep); font-weight: 800; }
+  .now-playing a { font-weight: 700; font-size: 13px; }
+
+  /* QUOTES / TESTIMONIALS */
+  .quote { background: var(--teal-soft); border-left: 5px solid var(--teal); padding: 28px 30px; border-radius: 0 6px 6px 0; }
+  .quote blockquote { font-size: 20px; line-height: 1.5; color: var(--teal-deep); font-weight: 600; margin-bottom: 10px; }
+  .quote cite { font-style: normal; font-size: 14px; font-weight: 700; color: var(--mute); }
+  .testimonials { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .testimonial {
+    background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 22px 24px;
+  }
+  .testimonial blockquote { font-size: 15px; color: var(--ink-soft); margin-bottom: 12px; line-height: 1.55; }
+  .testimonial cite { font-style: normal; font-size: 13px; font-weight: 800; color: var(--teal-deep); }
+
+  /* FAQ */
+  .faq-list { display: grid; gap: 10px; }
+  .faq-item {
+    background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 0;
+  }
+  .faq-item details { padding: 4px 0; }
+  .faq-item summary {
+    cursor: pointer; list-style: none; padding: 16px 20px; font-weight: 800; color: var(--teal-deep); font-size: 16px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: "+"; float: right; color: var(--teal-mid); font-weight: 700; }
+  .faq-item details[open] summary::after { content: "–"; }
+  .faq-item .answer { padding: 0 20px 18px; font-size: 15px; color: var(--ink-soft); }
+
+  /* WHO SHOULD APPLY */
+  .who-board {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-top: 5px solid var(--teal-bright);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .who-board-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px 32px;
+    padding: 28px 32px 24px;
+  }
+  .who-board-top .section-title { margin-bottom: 8px; }
+  .who-board-top .section-lead { margin-bottom: 0; max-width: 54ch; }
+  .who-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+    padding-top: 6px;
+  }
+  .who-age {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px; font-weight: 700; line-height: 1; letter-spacing: .04em;
+    color: var(--teal-deep);
+  }
+  .who-gate-note { margin: 4px 0 0; font-size: 13px; color: var(--mute); font-weight: 600; }
+  .who-traits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--line);
+  }
+  .who-trait {
+    padding: 22px 28px 26px;
+    border-right: 1px solid var(--line);
+  }
+  .who-trait:last-child { border-right: none; }
+  .who-key {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase;
+    color: var(--teal); margin-bottom: 8px;
+  }
+  .who-val { font-size: 15px; color: var(--ink-soft); line-height: 1.55; }
+  .who-priority {
+    margin: 0;
+    padding: 16px 32px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    color: var(--ink-soft);
+    background: #fbfaf4;
+  }
+  .who-priority strong { color: var(--teal-deep); }
+
+  /* PARTNER / FUND */
+  .fund { background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 36px; }
+  .fund-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0; }
+  .fund-card { border: 1px solid var(--line); border-radius: 4px; padding: 18px; background: var(--paper); }
+  .fund-card.featured { border-color: var(--teal-bright); background: var(--teal-soft); }
+  .fund-card .price { font-family: 'Oswald', sans-serif; font-size: 30px; font-weight: 700; color: var(--teal-deep); margin-bottom: 6px; }
+  .fund-card .desc { font-size: 14px; color: var(--ink-soft); }
+  .contact-box {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px;
+    margin-top: 8px; padding-top: 20px; border-top: 1px solid var(--line);
+  }
+  .contact-box strong { display: block; font-size: 20px; color: var(--teal-deep); }
+  .bursary-note {
+    margin-bottom: 20px; padding: 16px 18px; background: var(--paper); border-left: 4px solid var(--gold);
+    font-size: 15px; color: var(--ink-soft);
+  }
+
+  /* PARTNERS */
+  .partners { display: flex; flex-wrap: wrap; gap: 10px; }
+  .partner { background: var(--white); border: 1px solid var(--line); border-radius: 4px; padding: 10px 14px; font-size: 13px; font-weight: 700; color: var(--ink-soft); }
+  .partner.past { opacity: 0.72; font-weight: 600; }
+
+  /* FOOTER */
+  footer { background: linear-gradient(rgba(6,35,45,.82), rgba(6,35,45,.90)), url("assets/gyct2026/footer/gyct-footer-landscape-v1.png") center bottom / cover no-repeat; color: rgba(255,255,255,0.78); padding: 52px 0 42px; margin-top: 40px; }
+  footer a { color: #9ad8e3; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer .fine { margin-top: 8px; font-size: 13px; opacity: 0.85; }
+
+  @media (max-width: 860px) {
+    .stats-grid, .cards, .cards-3, .tracks, .fund-grid, .timeline-item, .outcomes-grid, .testimonials, .history-year, .who-traits { grid-template-columns: 1fr; }
+    .top-links a:not(.btn):not([href="#archive"]) { display: none; }
+    .intro-card { padding: 24px 20px; }
+    .hero { min-height: 620px; }
+    .hero-bg { background-image: url("assets/gyct2026/hero/gyct2026-hero-mobile-v2-eye-map.png"); background-position: center bottom; }
+    .hero-inner { padding: 56px 0 80px; min-height: 620px; }
+    .hero h1 { font-size: clamp(42px, 14vw, 64px); max-width: 9ch; }
+    .hero-sub { max-width: 30ch; }
+    .card-visual, .track-visual { height: 190px; }
+    .fund { padding: 24px 18px; }
+    .session-list a { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .who-board-top { padding: 22px 20px 18px; }
+    .who-trait { padding: 18px 20px; border-right: none; border-bottom: 1px solid var(--line); }
+    .who-trait:last-child { border-bottom: none; }
+    .who-priority { padding: 14px 20px; }
+    .who-actions { width: 100%; justify-content: space-between; }
+  }
+
+  /* site language switcher */
+  .site-lang { display: inline-flex; align-items: center; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 5px; background: var(--white); }
+  .site-lang a { padding: 5px 9px; border-radius: 3px; font-size: 12px; font-weight: 800; letter-spacing: .04em; color: var(--ink-soft); text-decoration: none; line-height: 1; }
+  .site-lang a:hover { background: var(--teal-soft); color: var(--teal-deep); }
+  .site-lang a.is-active { background: var(--teal); color: #fff; }
+  @media (max-width: 860px) {
+    .top-links .site-lang a { display: inline-flex; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="logo-row" href="/">
+      <img class="logo-mark" src="assets/gyct2026/logos/gyct-logo.png" width="68" height="72" alt="GYCT">
+      <span class="logo-text">
+        <strong>Global Youth Climate Training</strong>
+        <span>Liderado por GYC · con apoyo de Oxford Net Zero</span>
+      </span>
+    </a>
+    <div class="top-links">
+      <a href="#programme">Programa</a>
+      <a href="#sessions">Sesiones</a>
+      <a href="#archive">Sesiones anteriores</a>
+      <a href="#faq">Preguntas</a>
+      <div class="site-lang" role="group" aria-label="Site language"><a href="GYCT.html" hreflang="en" lang="en">EN</a><a href="GYCT-es.html" hreflang="es" lang="es" class="is-active" aria-current="true">ES</a><a href="GYCT-pt.html" hreflang="pt" lang="pt">PT</a><a href="GYCT-tr.html" hreflang="tr" lang="tr">TR</a></div>
+      <a class="btn btn-teal" href="https://docs.google.com/forms/d/e/1FAIpQLSdaR58cDUZDhZRGYCMM5WOB4lC57fF4CoszR5DFsy65ShSNXA/viewform" target="_blank" rel="noopener">Postúlate ya</a>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <h1>Global Youth<br>Climate Training</h1>
+    <p class="hero-sub">Desarrollo de capacidades gratuito y totalmente en línea para personas de 16 a 35 años. Adquiere el conocimiento y la confianza para participar en la política climática internacional de cara a la COP31 en Antalya (9-20 de noviembre de 2026).</p>
+    <div class="hero-actions">
+      <a class="btn btn-teal" href="https://docs.google.com/forms/d/e/1FAIpQLSdaR58cDUZDhZRGYCMM5WOB4lC57fF4CoszR5DFsy65ShSNXA/viewform" target="_blank" rel="noopener">Postúlate ya</a>
+      <a class="btn btn-outline" href="#sessions">Ver el programa 2026</a>
+      <a class="btn btn-outline" href="#archive">Ver sesiones anteriores</a>
+    </div>
+    <div class="hero-meta">
+      <span>2 sep - 13 oct 2026</span>
+      <span>13:00-14:30 UTC</span>
+      <span>Itinerarios: principal + YNA avanzado</span>
+      <span>Postula antes del 10 ago 2026, 23:59 BST</span>
+    </div>
+  </div>
+</header>
+
+<div class="intro-shift">
+  <div class="wrap">
+    <div class="intro-card">
+      <p>El <a href="https://netzeroclimate.org/global-youth-training/" target="_blank" rel="noopener"><strong>Global Youth Climate Training Programme (GYCT)</strong></a> es un programa gratuito y totalmente en línea de desarrollo de capacidades que brinda a personas de 16 a 35 años el conocimiento y la confianza necesarios para participar en la política climática internacional. Cada vez más, la juventud tiene un lugar en la mesa de la política climática nacional e internacional y, por tanto, necesita un desarrollo de capacidades adecuado para que sus intervenciones sean sólidas y pertinentes.</p>
+      <p>De 2023 a 2025, GYCT se impartió como una colaboración entre la <a href="/">Global Youth Coalition (GYC)</a> y personas investigadoras de la Universidad de Oxford (<a href="https://netzeroclimate.org/" target="_blank" rel="noopener">Oxford Net Zero</a>, <a href="https://www.smithschool.ox.ac.uk/" target="_blank" rel="noopener">Oxford Smith School of Enterprise and the Environment</a>). Sobre la base de ese éxito, <strong>la responsabilidad de impartir el programa pasa a la Global Youth Coalition en 2026</strong>, mientras Oxford Net Zero continúa aportando apoyo estratégico y académico. Esta evolución refleja nuestro compromiso compartido con el liderazgo juvenil: da a los y las jóvenes agentes de cambio climático mayor control sobre la dirección, el contenido y el futuro del programa, manteniendo el rigor académico.</p>
+      <p>El programa 2026 sigue combinando clases impartidas por personas expertas, aprendizaje interactivo entre pares y trabajos prácticos, con académicos de Oxford junto a profesionales destacados de todo el mundo, dando protagonismo a la experiencia del Sur Global y manteniendo a las voces jóvenes en el centro. Se ha desarrollado un itinerario avanzado con la Youth Negotiators Academy para el camino hacia la COP31 en Antalya.</p>
+      <div class="intro-note">Las consultas sobre el programa 2026 deben dirigirse al equipo de GYC en <a href="mailto:takeaction@theglobalyouth.co">takeaction@theglobalyouth.co</a>.</div>
+      <div class="intro-links">
+        <a class="btn btn-ghost" href="https://www.instagram.com/theglobalyouth_co/" target="_blank" rel="noopener">Sigue a @theglobalyouth_co</a>
+        <a class="btn btn-ghost" href="https://netzeroclimate.org/global-youth-training/" target="_blank" rel="noopener">Página de Oxford Net Zero</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat"><span class="n">27,000</span><span class="l">Solicitudes 2023–2025</span></div>
+    <div class="stat"><span class="n">5,400</span><span class="l">Jóvenes formados</span></div>
+    <div class="stat"><span class="n">65%</span><span class="l">Representación MAPA</span></div>
+    <div class="stat"><span class="n">21%</span><span class="l">Juventud indígena</span></div>
+  </div>
+</div>
+
+<div class="outcomes" id="impact">
+  <div class="wrap">
+    <div class="section-label">Impacto 2023–2025</div>
+    <h2 class="section-title" style="margin-bottom:20px">Lo que ganaron las participantes</h2>
+    <div class="outcomes-grid">
+      <div class="outcome"><span class="n">89%</span><span class="l">reforzó su conocimiento de la política climática internacional</span></div>
+      <div class="outcome"><span class="n">77%</span><span class="l">se sintió con más confianza para incidir en foros de la UNFCCC</span></div>
+      <div class="outcome"><span class="n">60%</span><span class="l">atribuye a GYCT su éxito en la política climática internacional</span></div>
+    </div>
+    <div class="impact-cta">
+      <p><strong>100.000+</strong> visualizaciones de sesiones grabadas · <strong>6</strong> idiomas de interpretación en directo · <strong>36.000 £</strong> distribuidas en becas juveniles · ~<strong>100</strong> ponentes expertos conectados</p>
+      <a class="btn btn-dark" href="https://netzeroclimate.org/wp-content/uploads/2025/11/GYCT-Impact-Report_2025.pdf" target="_blank" rel="noopener">Lee el Informe de Impacto</a>
+    </div>
+  </div>
+</div>
+
+<div class="cop-band">
+  <div class="cop-inner">
+    <div>
+      <h2>Preparando a la juventud para la COP31, Antalya 2026</h2>
+      <p>La COP31 se celebrará en Antalya, Türkiye, del 9 al 20 de noviembre de 2026. GYCT 2026 está programado para que las personas participantes terminen la formación antes de la cumbre, con un enfoque práctico en los roles dentro de la COP, las negociaciones, el financiamiento y las vías de incidencia.</p>
+    </div>
+    <div class="cop-pill">9-20 nov 2026, Antalya</div>
+  </div>
+</div>
+
+<section id="programme">
+  <div class="wrap">
+    <div class="section-label">Diseño del programa</div>
+    <h2 class="section-title">Qué ofrece GYCT 2026</h2>
+    <p class="section-lead">Construido sobre tres años de trabajo con Oxford Net Zero y las organizaciones aliadas de GYC, y rediseñado para el camino hacia Antalya.</p>
+    <div class="cards" style="margin-bottom:16px">
+      <article class="card">
+        <div class="card-visual" style="background-image:url('assets/gyct2026/cards/gyct-card-policy.png')" aria-hidden="true"></div>
+        <div class="tag">Acceso</div>
+        <h3>Alcance global, acceso abierto</h3>
+        <p>Entre 2023 y 2025, el 65 % de las personas participantes se identificó como parte de los Pueblos y Áreas Más Afectados (MAPA) y el 21 % como indígena. Para 2026 está prevista la interpretación en directo (incluido el español), y los idiomas definitivos se confirmarán a las personas seleccionadas. Está previsto publicar las grabaciones de las sesiones principales.</p>
+      </article>
+      <article class="card">
+        <div class="card-visual" style="background-image:url('assets/gyct2026/cards/gyct-card-negotiation.png')" aria-hidden="true"></div>
+        <div class="tag">Formato</div>
+        <h3>Con personas expertas, 90 minutos</h3>
+        <p>Sesiones semanales con aportes de personas expertas, debate moderado y preguntas. El itinerario principal se imparte en Zoom Webinar para un grupo abierto y amplio. El itinerario avanzado YNA se imparte en Zoom Meeting para un grupo reducido y seleccionado. Certificado mediante formularios de asistencia (80 % de asistencia en el itinerario principal).</p>
+      </article>
+    </div>
+    <div class="tracks">
+      <article class="track">
+        <div class="track-visual" style="background-image:url('assets/gyct2026/cards/gyct-card-youth-leadership.png')" aria-hidden="true"></div>
+        <div class="tag" style="color:var(--teal-mid);font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px">Itinerario principal · grupo abierto</div>
+        <h3>Grupo abierto</h3>
+        <p>Cuatro sesiones públicas sobre soberanía y clima, transición energética, educación y riesgo climático, y financiamiento climático. Diseñadas con el espíritu de acceso abierto de las ediciones anteriores de GYCT, con grabaciones pensadas para un uso público amplio.</p>
+        <ul>
+          <li>2, 8, 15 y 22 de septiembre de 2026</li>
+          <li>Zoom Webinar · impartido en inglés</li>
+          <li>Grabaciones públicas previstas</li>
+        </ul>
+      </article>
+      <article class="track yna">
+        <div class="track-visual" style="background-image:url('assets/gyct2026/cards/gyct-card-adaptation-resilience.png')" aria-hidden="true"></div>
+        <div class="tag" style="color:#f2d56b;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px">Itinerario YNA · participantes seleccionadas</div>
+        <h3>Preparación avanzada para la COP</h3>
+        <p>Tres sesiones específicas con el asesoramiento técnico de la Youth Negotiators Academy sobre práctica de negociación, roles en la COP e influencia estratégica. Un grupo reducido y seleccionado para una preparación más profunda rumbo a Antalya.</p>
+        <ul>
+          <li>29 sep, 6 oct y 13 oct de 2026</li>
+          <li>Zoom Meetings privados</li>
+          <li>Grabaciones no públicas</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="wrap">
+    <div class="section-label">Quién puede postular</div>
+    <div class="who-board">
+      <div class="who-board-top">
+        <div>
+          <h2 class="section-title">¿Te encaja?</h2>
+          <p class="section-lead">GYCT está diseñado para liderazgos climáticos emergentes que quieren participar de forma más eficaz en la política climática internacional.</p>
+        </div>
+        <div class="who-actions">
+          <div>
+            <p class="who-age">16–35</p>
+            <p class="who-gate-note">Abierto a personas de 16 a 35 años.</p>
+          </div>
+          <a class="btn btn-teal" href="https://docs.google.com/forms/d/e/1FAIpQLSdaR58cDUZDhZRGYCMM5WOB4lC57fF4CoszR5DFsy65ShSNXA/viewform" target="_blank" rel="noopener">Postúlate ya</a>
+        </div>
+      </div>
+      <div class="who-traits">
+        <article class="who-trait">
+          <div class="who-key">Activismo climático</div>
+          <p class="who-val">Experiencia demostrada en campañas, proyectos o trabajo comunitario.</p>
+        </article>
+        <article class="who-trait">
+          <div class="who-key">Conocimiento UNFCCC</div>
+          <p class="who-val">Cierto conocimiento del proceso de la UNFCCC y de los resultados recientes de las COP.</p>
+        </article>
+        <article class="who-trait">
+          <div class="who-key">Incidencia</div>
+          <p class="who-val">Trayectoria en comunicación, persuasión y colaboración para impulsar cambios.</p>
+        </article>
+      </div>
+      <p class="who-priority"><strong>Cómo se ofrecen las plazas.</strong> La selección da preferencia a candidaturas de regiones diversas y de los grupos más afectados por el cambio climático.</p>
+    </div>
+  </div>
+</section>
+
+<section id="sessions" class="sessions-section">
+  <div class="wrap">
+    <div class="section-label">Currículo 2026</div>
+    <h2 class="section-title">Calendario de sesiones</h2>
+    <p class="section-lead">Todas las sesiones son de 13:00 a 14:30 UTC, los martes de cada semana, salvo la sesión 1, que cae en miércoles 2 de septiembre. Formato: bienvenida, aportes de personas expertas, debate moderado, preguntas y cierre.</p>
+    <div class="table-shell">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>#</th><th>Itinerario</th><th>Sesión</th><th>Fecha</th><th>Plataforma</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td><span class="pill pill-main">Principal</span></td><td><span class="session-title">El realismo como orden mundial: soberanía y clima</span></td><td>Mié, 2 sep 2026</td><td>Zoom Webinar</td></tr>
+            <tr><td>2</td><td><span class="pill pill-main">Principal</span></td><td><span class="session-title">El estado de la transición energética</span></td><td>Mar, 8 sep 2026</td><td>Zoom Webinar</td></tr>
+            <tr><td>3</td><td><span class="pill pill-main">Principal</span></td><td><span class="session-title">Educación, ACE e inclusión de la discapacidad</span></td><td>Mar, 15 sep 2026</td><td>Zoom Webinar</td></tr>
+            <tr><td>4</td><td><span class="pill pill-main">Principal</span></td><td><span class="session-title">¿Sigue siendo prioritario el financiamiento climático?</span></td><td>Mar, 22 sep 2026</td><td>Zoom Webinar</td></tr>
+            <tr><td>5</td><td><span class="pill pill-yna">YNA</span></td><td><span class="session-title">Dentro de la COP: roles, poder e influencia informal</span></td><td>Mar, 29 sep 2026</td><td>Zoom Meeting</td></tr>
+            <tr><td>6</td><td><span class="pill pill-yna">YNA</span></td><td><span class="session-title">Cómo definir tu rol en la COP y cómo planificar y prepararte</span></td><td>Mar, 6 oct 2026</td><td>Zoom Meeting</td></tr>
+            <tr><td>7</td><td><span class="pill pill-yna">YNA</span></td><td><span class="session-title">Negociaciones 101: cómo se disputa el texto</span></td><td>Mar, 13 oct 2026</td><td>Zoom Meeting</td></tr>
+            <tr><td>8</td><td><span class="pill pill-all">Todos</span></td><td><span class="session-title">Ceremonia híbrida en la GYC House — durante la COP31 en Antalya, Türkiye</span></td><td>Mar, 10 nov 2026</td><td>Híbrido — GYC House + en línea</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="archive">
+  <div class="wrap">
+    <div class="section-label">Archivo de acceso abierto</div>
+    <h2 class="section-title">Mira sesiones anteriores de GYCT</h2>
+    <p class="section-lead">Las grabaciones de clases anteriores están disponibles gratuitamente en el canal de YouTube de Oxford Smith School, una parte esencial del enfoque de acceso abierto de GYCT. Úsalas para prepararte antes de 2026 o para recuperar sesiones que te perdiste.</p>
+
+    <div class="playlist-embed">
+      <iframe
+        id="archive-player"
+        src="https://www.youtube.com/embed/cmd_oqWzRKs?rel=0"
+        title="Bienvenida al programa GYCT"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        loading="lazy"></iframe>
+    </div>
+    <div class="now-playing" aria-live="polite">
+      <span>Reproduciendo ahora: <strong id="now-playing-title">Bienvenida al programa GYCT</strong></span>
+      <a id="now-playing-open" href="https://youtu.be/cmd_oqWzRKs" target="_blank" rel="noopener">Abrir en YouTube</a>
+    </div>
+
+    <div class="lang-row" aria-label="Listas de reproducción por idioma">
+      <a class="lang-chip active" href="https://www.youtube.com/playlist?list=PLRWM35qtBBofnvmdJt04SYu9tmRHXDJKv" target="_blank" rel="noopener">Inglés</a>
+      <a class="lang-chip" href="https://www.youtube.com/playlist?list=PLRWM35qtBBoddMGBu9RNjC1WUfeH9tmbc" target="_blank" rel="noopener">Francés</a>
+      <a class="lang-chip" href="https://www.youtube.com/playlist?list=PLRWM35qtBBodMj0d5-ns8g_x9MSb4Jg7n" target="_blank" rel="noopener">Español</a>
+      <a class="lang-chip" href="https://www.youtube.com/playlist?list=PLRWM35qtBBodL1t5ntXNrzTESJFQPDY0y" target="_blank" rel="noopener">Portugués</a>
+      <a class="lang-chip" href="https://www.youtube.com/playlist?list=PLRWM35qtBBofUsupYtpxRv4IIZN5KdbSx" target="_blank" rel="noopener">Árabe</a>
+      <a class="lang-chip" href="https://www.youtube.com/playlist?list=PLRWM35qtBBocq5Kn1XD11b7byZ23mdO1n" target="_blank" rel="noopener">Mandarín</a>
+      <a class="lang-chip" href="https://www.youtube.com/@oxfordsmithschool/playlists" target="_blank" rel="noopener">Todas las listas</a>
+    </div>
+
+    <div class="year-tabs" role="tablist" aria-label="Año del programa">
+      <button type="button" class="year-tab" role="tab" id="tab-2025" aria-controls="year-2025" aria-selected="true" data-year="2025">2025</button>
+      <button type="button" class="year-tab" role="tab" id="tab-2024" aria-controls="year-2024" aria-selected="false" data-year="2024">2024</button>
+      <button type="button" class="year-tab" role="tab" id="tab-2023" aria-controls="year-2023" aria-selected="false" data-year="2023">2023</button>
+    </div>
+
+    <div class="year-panel active" id="year-2025" role="tabpanel" aria-labelledby="tab-2025">
+      <ul class="session-list">
+        <li><a class="is-playing" href="https://youtu.be/cmd_oqWzRKs" target="_blank" rel="noopener"><span class="num">00</span><span class="ttl">Bienvenida al programa GYCT</span><span class="watch">En curso</span></a></li>
+        <li><a href="https://youtu.be/rzczr2QglvI" target="_blank" rel="noopener"><span class="num">01</span><span class="ttl">Dónde estamos ahora</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/Vef1aqAnGaw" target="_blank" rel="noopener"><span class="num">02</span><span class="ttl">Financiamiento climático</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/3Izf5MRT47E" target="_blank" rel="noopener"><span class="num">03</span><span class="ttl">Cambio climático y geopolítica</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/9JWRfrtdmIg" target="_blank" rel="noopener"><span class="num">04</span><span class="ttl">Las empresas y la acción climática</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/k4ep_uJnxYc" target="_blank" rel="noopener"><span class="num">04b</span><span class="ttl">GYC Lab: desmitificando la UNFCCC</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/ebnG0SCzNDg" target="_blank" rel="noopener"><span class="num">05</span><span class="ttl">Pueblos indígenas, comunidades locales y naturaleza</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/1qADS7DpXgQ" target="_blank" rel="noopener"><span class="num">06</span><span class="ttl">Litigio climático y tendencias jurídicas</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/q_M7wazePiI" target="_blank" rel="noopener"><span class="num">07</span><span class="ttl">Sesión de reencuentro</span><span class="watch">Ver</span></a></li>
+      </ul>
+    </div>
+
+    <div class="year-panel" id="year-2024" role="tabpanel" aria-labelledby="tab-2024" hidden>
+      <ul class="session-list">
+        <li><a href="https://youtu.be/2IwN15VDN8I" target="_blank" rel="noopener"><span class="num">01</span><span class="ttl">Arranque: presentación del curso y del grupo</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/90p6ngy__MI" target="_blank" rel="noopener"><span class="num">02</span><span class="ttl">Conocer y comprender el cambio ambiental</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/nCXgAc4Ubxk" target="_blank" rel="noopener"><span class="num">03</span><span class="ttl">Net Zero o Not Zero: gobernanza corporativa</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/fE-ONxEXFcE" target="_blank" rel="noopener"><span class="num">04</span><span class="ttl">Actores no estatales y desarrollo de las NDC</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/P1xAiQu8kms" target="_blank" rel="noopener"><span class="num">05</span><span class="ttl">¿Cómo interactúo con negociadores en la COP?</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/d5k7HbPHjc0" target="_blank" rel="noopener"><span class="num">06</span><span class="ttl">Eliminación gradual de los combustibles fósiles</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/KfDAtNVc21w" target="_blank" rel="noopener"><span class="num">07</span><span class="ttl">Muéstrame el dinero: financiar la transición verde</span><span class="watch">Ver</span></a></li>
+      </ul>
+    </div>
+
+    <div class="year-panel" id="year-2023" role="tabpanel" aria-labelledby="tab-2023" hidden>
+      <ul class="session-list">
+        <li><a href="https://youtu.be/0969PnyG4mg" target="_blank" rel="noopener"><span class="num">01</span><span class="ttl">¿Cómo llegamos hasta aquí?</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/zdZotZsh7Ko" target="_blank" rel="noopener"><span class="num">02</span><span class="ttl">Pérdidas y daños</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/fCscY_rXKQU" target="_blank" rel="noopener"><span class="num">03</span><span class="ttl">Adaptación</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/NhpMJflJPo8" target="_blank" rel="noopener"><span class="num">04</span><span class="ttl">Mitigación 1: emisiones de energía y procesos industriales</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/AZ7hXmQhyH8" target="_blank" rel="noopener"><span class="num">05</span><span class="ttl">Financiamiento climático</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/KMwoS3oop2A" target="_blank" rel="noopener"><span class="num">06</span><span class="ttl">Mitigación 2</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/5hx5HQX1R7s" target="_blank" rel="noopener"><span class="num">07</span><span class="ttl">Empresas y actores no estatales</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/utLPatu6QX4" target="_blank" rel="noopener"><span class="num">08</span><span class="ttl">Política climática</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/0_l-ZCA1H0M" target="_blank" rel="noopener"><span class="num">09</span><span class="ttl">Derechos indígenas y cambio climático</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/yB1XRGYsX30" target="_blank" rel="noopener"><span class="num">10</span><span class="ttl">Litigio climático</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/J7s6wDGRtRk" target="_blank" rel="noopener"><span class="num">11</span><span class="ttl">Género y cambio climático</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/37iIe7L033s" target="_blank" rel="noopener"><span class="num">12</span><span class="ttl">Cambio climático y naturaleza</span><span class="watch">Ver</span></a></li>
+        <li><a href="https://youtu.be/cmkBxFk07lg" target="_blank" rel="noopener"><span class="num">13</span><span class="ttl">Negociaciones dentro de la COP28</span><span class="watch">Ver</span></a></li>
+      </ul>
+    </div>
+
+    <p class="archive-note">Grabaciones alojadas por <a href="https://www.youtube.com/@oxfordsmithschool/playlists" target="_blank" rel="noopener">Oxford Smith School of Enterprise and the Environment</a>, con apoyo de interpretación de <a href="https://ecointerpreters.org/" target="_blank" rel="noopener">Eco Interpreters</a>. Las clases son públicas; los talleres interactivos por lo general no se graban.</p>
+  </div>
+</section>
+
+<section id="history">
+  <div class="wrap">
+    <div class="section-label">Trayectoria del programa</div>
+    <h2 class="section-title">Cómo creció GYCT</h2>
+    <p class="section-lead">Nacido de un encuentro casual en la COP27 entre Alexis McGivern (Oxford Net Zero) y Agustín Ocaña (Global Youth Coalition), GYCT se creó para eliminar las barreras a una participación juvenil significativa en la política climática internacional.</p>
+    <div class="history-grid">
+      <article class="history-year">
+        <div class="yr">2023</div>
+        <div>
+          <h3>Lanzado antes de la COP28</h3>
+          <p>Currículo elaborado consultando a 180 jóvenes activistas por la justicia climática. Abordó financiamiento climático, pérdidas y daños, adaptación y resiliencia, entre otros temas.</p>
+          <ul>
+            <li>~4.500 personas formadas en 177 países · 64 % MAPA</li>
+            <li>Creación de <em>The Climate Guidebook</em>, que resume las 13 sesiones</li>
+          </ul>
+        </div>
+      </article>
+      <article class="history-year">
+        <div class="yr">2024</div>
+        <div>
+          <h3>Integridad y ambición de la acción climática no estatal</h3>
+          <p>Grupo más reducido y centrado en la comunidad. Las primeras personas becadas asistieron a la COP29.</p>
+          <ul>
+            <li>285 participantes · 79 % MAPA · 135 países</li>
+            <li>Premio del Vicerrector de la Universidad de Oxford a la Sostenibilidad Ambiental</li>
+          </ul>
+        </div>
+      </article>
+      <article class="history-year">
+        <div class="yr">2025</div>
+        <div>
+          <h3>Geopolítica y evolución de la política climática</h3>
+          <p>Se impartió del 21 de mayo al 16 de julio de 2025, con preparación para los OS de Bonn y una sesión sobre la COP30 el 4 de noviembre. Con el apoyo de ClimateWorks Foundation.</p>
+          <ul>
+            <li>Documentos de posición, aprendizaje entre pares y cinco personas becadas para la COP30</li>
+            <li><a href="https://netzeroclimate.org/wp-content/uploads/2025/04/2025-Programme-Booklet-as-of-3-April-2025.pdf" target="_blank" rel="noopener">Folleto del programa 2025 (PDF)</a></li>
+          </ul>
+        </div>
+      </article>
+      <article class="history-year">
+        <div class="yr">2026</div>
+        <div>
+          <h3>Ejecución liderada por jóvenes rumbo a la COP31</h3>
+          <p>GYC lidera la ejecución del programa; Oxford Net Zero aporta apoyo estratégico y académico. Los itinerarios principal y YNA están planificados con vistas a Antalya.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <div class="wrap">
+    <div class="section-label">Fechas clave</div>
+    <h2 class="section-title">Calendario 2026 hacia Antalya</h2>
+    <p class="section-lead">Las postulaciones están abiertas y cierran el 10 de agosto de 2026 a las 23:59 BST.</p>
+    <div class="timeline-list">
+      <div class="timeline-item"><div class="date">Ahora</div><div class="desc">Postulaciones abiertas — <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaR58cDUZDhZRGYCMM5WOB4lC57fF4CoszR5DFsy65ShSNXA/viewform" target="_blank" rel="noopener">postula con el formulario GYCT 2026</a></div></div>
+      <div class="timeline-item"><div class="date">10 ago</div><div class="desc">Cierre de postulaciones, 23:59 BST</div></div>
+      <div class="timeline-item"><div class="date">17-18 ago</div><div class="desc">Se informa a las personas candidatas. Se confirman las plazas del grupo principal y del itinerario avanzado YNA. Envío de correos con la decisión.</div></div>
+      <div class="timeline-item"><div class="date">24-27 ago</div><div class="desc">Materiales de bienvenida y sesión de orientación</div></div>
+      <div class="timeline-item"><div class="date">2-22 sep</div><div class="desc">Sesiones del itinerario principal, cada semana (empieza el mié 2 sep y luego los martes)</div></div>
+      <div class="timeline-item"><div class="date">29 sep-13 oct</div><div class="desc">Itinerario avanzado YNA, centrado en la preparación para la COP</div></div>
+      <div class="timeline-item"><div class="date">15 oct</div><div class="desc">Cierre del programa</div></div>
+      <div class="timeline-item"><div class="date">9-20 nov</div><div class="desc">COP31, Antalya, Türkiye</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="wrap">
+    <div class="section-label">Voces del grupo</div>
+    <h2 class="section-title">Lo que dicen las participantes</h2>
+    <p class="section-lead">Reflexiones firmadas por participantes de ediciones anteriores de GYCT.</p>
+    <div class="testimonials">
+      <article class="testimonial">
+        <blockquote>«La formación que recibí a través de Global Youth Climate ha sido una experiencia transformadora en mi vida. No solo me ha dado conocimientos y habilidades valiosas, sino también la confianza y la motivación para contribuir de forma significativa a los esfuerzos globales frente al cambio climático. Como persona refugiada, esta oportunidad ha sido un rayo de esperanza.»</blockquote>
+        <cite>Byaombe Lumona</cite>
+      </article>
+      <article class="testimonial">
+        <blockquote>«Sinceramente, no tengo palabras para expresar lo que he aprendido con la oportunidad de asistir a esta formación. Mi visión sobre distintos aspectos y niveles del cambio climático se ha ampliado enormemente y eso ha ido dando forma a los proyectos locales en los que trabajo.»</blockquote>
+        <cite>Marilynn Holguín Clover</cite>
+      </article>
+      <article class="testimonial">
+        <blockquote>«A veces la agenda global y las negociaciones sobre cambio climático parecen muy lejanas… pero gracias a quienes organizan y a los ponentes jóvenes y brillantes veo que todo es posible, y este ambiente me inspira a seguir adelante.»</blockquote>
+        <cite>Linara Khadimullina</cite>
+      </article>
+      <article class="testimonial">
+        <blockquote>«¡Tres hurras! Para el equipo de Global Youth Training y el equipo de Oxford Net Zero. Me encantaron todas las sesiones. Una de las mejores formaciones juveniles que he conocido. ¡El contenido es excelente y está brillantemente curado!»</blockquote>
+        <cite>Shaurya Patel</cite>
+      </article>
+    </div>
+    <div class="quote" style="margin-top:16px">
+      <blockquote>«Una de las mejores cosas que me pasaron este año fue formar parte de este grupo. Me encanta estar aquí… ¡gracias por una sesión de aprendizaje tan enriquecedora!»</blockquote>
+      <cite>Nhlanhla Sibanda</cite>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-label">Preguntas frecuentes</div>
+    <h2 class="section-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <details open>
+          <summary>¿Cómo puedo acceder a la formación 2026?</summary>
+          <div class="answer">Las postulaciones están abiertas a través del <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaR58cDUZDhZRGYCMM5WOB4lC57fF4CoszR5DFsy65ShSNXA/viewform" target="_blank" rel="noopener">formulario de postulación GYCT 2026</a>. Fecha límite: <strong>10 de agosto de 2026, 23:59 BST</strong>. GYCT 2026 es totalmente en línea. El itinerario principal se imparte en Zoom Webinar (grupo abierto); el itinerario avanzado YNA se imparte en Zoom Meeting para participantes seleccionadas. Las sesiones son de 13:00 a 14:30 UTC, los martes de cada semana (2 sep–13 oct 2026), con la sesión 1 el miércoles 2 de septiembre. Está previsto publicar las grabaciones de las clases del itinerario principal; las sesiones interactivas y las de YNA por lo general no se graban.</div>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>¿En qué se centra GYCT 2026?</summary>
+          <div class="answer">En preparar a la juventud para la política climática internacional rumbo a la COP31 en Antalya. El itinerario principal abarca soberanía y clima, transición energética, educación/ACE e inclusión de la discapacidad, y financiamiento climático. El itinerario YNA se centra en los roles dentro de la COP, la preparación y la práctica de negociación.</div>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>¿Es un curso acreditado por la Universidad de Oxford?</summary>
+          <div class="answer"><strong>No.</strong> GYCT no es un curso acreditado de la Universidad de Oxford. Es una colaboración en la que participan Oxford Net Zero (un programa de investigación) y la Global Youth Coalition. Puedes decir que participas en GYCT, pero por favor no indiques en LinkedIn ni en otros lugares que estás cursando estudios en la Universidad de Oxford: eso podría causar problemas y poner en riesgo la continuidad del programa.</div>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>¿En qué idiomas está disponible el curso?</summary>
+          <div class="answer">Las ediciones anteriores ofrecieron interpretación en directo en inglés, francés, español, portugués, árabe y mandarín (con <a href="https://ecointerpreters.org/" target="_blank" rel="noopener">Eco Interpreters</a>). En 2026, las cuatro sesiones principales se imparten en inglés con subtítulos y algo de interpretación en directo, incluido el español. El itinerario YNA es en inglés con subtítulos y sin interpretación en directo. Un buen nivel de inglés ayuda en los talleres interactivos. Las grabaciones anteriores siguen disponibles en seis idiomas en YouTube.</div>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>¿Recibiré un certificado?</summary>
+          <div class="answer">Sí, mediante el registro de asistencia. En el itinerario principal, quienes completen los formularios de asistencia con alrededor del 80 % de las sesiones pueden optar a un certificado. Los detalles del itinerario YNA se compartirán con las personas seleccionadas.</div>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>¿Con quién puedo contactar sobre 2026?</summary>
+          <div class="answer">Consultas sobre el programa y alianzas: <a href="mailto:takeaction@theglobalyouth.co">takeaction@theglobalyouth.co</a>. También puedes seguir las novedades en <a href="https://www.instagram.com/theglobalyouth_co/" target="_blank" rel="noopener">Instagram</a>.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="partner">
+  <div class="wrap">
+    <div class="section-label">Alianzas</div>
+    <h2 class="section-title">Invierte en la juventud para la COP31 y más allá</h2>
+    <p class="section-lead">El financiamiento de ClimateWorks Foundation para 2024–2025 ha finalizado. Buscamos aliados para sostener la ejecución de GYCT, la interpretación y las vías de equidad durante la temporada de la COP31.</p>
+    <div class="bursary-note">
+      <strong>Legado de becas:</strong> GYCT ha distribuido 36.000 £ en becas juveniles, permitiendo que participantes asistieran a la COP29 y la COP30. Sostener esta vía para la COP31 en Antalya es una prioridad central de recaudación.
+    </div>
+    <div class="fund">
+      <div class="fund-grid">
+        <div class="fund-card"><div class="price">£106K</div><div class="desc"><strong>Programa básico</strong><br>3 idiomas, personal esencial, 5-10 becas para la COP</div></div>
+        <div class="fund-card featured"><div class="price">£177K</div><div class="desc"><strong>Programa ampliado</strong><br>5 idiomas, mentoría ampliada, becas centradas en la equidad, materiales creativos</div></div>
+        <div class="fund-card"><div class="price">A medida</div><div class="desc"><strong>Apoyo específico</strong><br>Patrocina becas, un módulo o el alcance regional</div></div>
+      </div>
+      <div class="contact-box">
+        <div>Contacto para alianzas y consultas sobre el programa<strong>takeaction@theglobalyouth.co</strong></div>
+        <a class="btn btn-dark" href="mailto:takeaction@theglobalyouth.co?subject=GYCT%20Partnership%20Inquiry">Conviértete en aliado</a>
+      </div>
+    </div>
+    <div class="give" style="margin-top:28px">
+      <div class="section-label">Dona directamente</div>
+      <p class="section-lead">¿No representas a una organización? Las donaciones individuales de cualquier importe ayudan a mantener GYCT gratuito para la juventud rumbo a la COP31.</p>
+      <div class="gfm-embed" data-url="https://www.gofundme.com/f/keep-global-youth-climate-training-free/widget/large?attribution_id=sl%3Aad6c73f0-100c-48b4-a83d-f0d94215b90d"></div>
+      <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+    </div>
+    <div style="margin-top:28px">
+      <div class="section-label">En alianza con</div>
+      <div class="partners">
+        <span class="partner">Global Youth Coalition</span>
+        <span class="partner">Oxford Net Zero</span>
+        <span class="partner">Smith School of Enterprise and the Environment</span>
+        <span class="partner">Youth Negotiators Academy</span>
+        <span class="partner">Eco Interpreters</span>
+      </div>
+      <div class="section-label" style="margin-top:18px">Financiadores anteriores</div>
+      <div class="partners">
+        <span class="partner past">ClimateWorks Foundation (2024–2025)</span>
+        <span class="partner past">INCITE</span>
+        <span class="partner past">van Houten Fund</span>
+        <span class="partner past">Quadrature Climate Foundation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:#fff">Global Youth Climate Training (GYCT) 2026</strong> · Un programa de la <a href="/">Global Youth Coalition</a>, con apoyo estratégico y académico de <a href="https://netzeroclimate.org/" target="_blank" rel="noopener">Oxford Net Zero</a></p>
+    <p class="fine">Página de referencia de Oxford: <a href="https://netzeroclimate.org/global-youth-training/" target="_blank" rel="noopener">netzeroclimate.org/global-youth-training</a> · Informe de Impacto: <a href="https://netzeroclimate.org/wp-content/uploads/2025/11/GYCT-Impact-Report_2025.pdf" target="_blank" rel="noopener">Descargar PDF</a> · Sesiones anteriores: <a href="https://www.youtube.com/@oxfordsmithschool/playlists" target="_blank" rel="noopener">Listas de YouTube</a> · Consultas: <a href="mailto:takeaction@theglobalyouth.co">takeaction@theglobalyouth.co</a></p>
+    <p class="fine" style="margin-top:10px">COP31 · Antalya, Türkiye · 9-20 de noviembre de 2026</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var player = document.getElementById("archive-player");
+  var titleEl = document.getElementById("now-playing-title");
+  var openEl = document.getElementById("now-playing-open");
+  var tabs = document.querySelectorAll(".year-tab");
+  var panels = document.querySelectorAll(".year-panel");
+  var sessionLinks = document.querySelectorAll(".session-list a");
+
+  function videoIdFromHref(href) {
+    if (!href) return null;
+    var m = href.match(/(?:youtu\.be\/|v=|embed\/)([A-Za-z0-9_-]{6,})/);
+    return m ? m[1] : null;
+  }
+
+  function setPlaying(link, autoplay) {
+    if (!player || !link) return;
+    var id = videoIdFromHref(link.getAttribute("href"));
+    if (!id) return;
+    var titleNode = link.querySelector(".ttl");
+    var title = titleNode ? titleNode.textContent.trim() : "Sesión GYCT";
+    player.src = "https://www.youtube.com/embed/" + id + "?rel=0" + (autoplay ? "&autoplay=1" : "");
+    player.title = title;
+    if (titleEl) titleEl.textContent = title;
+    if (openEl) {
+      openEl.href = "https://youtu.be/" + id;
+      openEl.textContent = "Abrir en YouTube";
+    }
+    sessionLinks.forEach(function (a) {
+      a.classList.remove("is-playing");
+      var watch = a.querySelector(".watch");
+      if (watch) watch.textContent = "Ver";
+    });
+    link.classList.add("is-playing");
+    var activeWatch = link.querySelector(".watch");
+    if (activeWatch) activeWatch.textContent = "En curso";
+  }
+
+  sessionLinks.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+      e.preventDefault();
+      setPlaying(link, true);
+      if (player && player.scrollIntoView) {
+        player.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+    });
+  });
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      var year = tab.getAttribute("data-year");
+      tabs.forEach(function (t) { t.setAttribute("aria-selected", t === tab ? "true" : "false"); });
+      panels.forEach(function (panel) {
+        var match = panel.id === "year-" + year;
+        panel.classList.toggle("active", match);
+        panel.hidden = !match;
+      });
+      var panel = document.getElementById("year-" + year);
+      if (panel) {
+        var first = panel.querySelector(".session-list a");
+        if (first) setPlaying(first, false);
+      }
+    });
+  });
+
+  var initial = document.querySelector("#year-2025 .session-list a");
+  if (initial) setPlaying(initial, false);
+})();
+</script>
+
+</body>
+</html>

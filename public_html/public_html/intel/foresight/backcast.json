@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "generated": "2026-08-30T00:00:00.000Z",
+  "source": {
+    "moments": "signals-kb/decision-moments.json",
+    "trends": "signals-kb/trends.json",
+    "alignment": "signals-kb/foresight/ie-progress.json"
+  },
+  "as_of": "2026-08-30",
+  "pathways": [
+    {
+      "lens": "ceb2-fairness",
+      "preferred_future": "Fairness between present and future generations",
+      "preferred_future_ref": "UN System Common Principles on Future Generations (2023), principle 2 — “Pursue fairness between present and future generations”",
+      "milestones": [
+        {
+          "moment_id": "eu-council-if-conclusions-adoption-2026",
+          "title": "Formal Council adoption of EU Intergenerational Fairness conclusions",
+          "date": "2026-06-30",
+          "venue": "Council of the EU, Brussels",
+          "status": "past",
+          "outcome": null,
+          "trend_ids": [
+            "intergenerational-equity-mainstreaming",
+            "intergenerational-fiscal-rebalancing"
+          ],
+          "success_looks_like": "Conclusions adopted with the youth-check and index commitments intact.",
+          "failure_looks_like": "Youth-check or index commitments dropped or watered down in the adopted text."
+        },
+        {
+          "moment_id": "fiscal-rebalancing-year-end-review-2026-12-31",
+          "title": "Fiscal fairness reform evidence review",
+          "date": "2026-12-31",
+          "venue": "Internal GYC foresight review",
+          "status": "future",
+          "outcome": null,
+          "trend_ids": [
+            "intergenerational-fiscal-rebalancing"
+          ],
+          "success_looks_like": "A credible reform package links fiscal sustainability with housing, tax-base, or youth opportunity measures under one generational-fairness frame.",
+          "failure_looks_like": "Reforms remain isolated, easily reversed, or framed only as deficit management without youth or future-generation distribution tests."
+        }
+      ],
+      "trend_ids": [
+        "intergenerational-fiscal-rebalancing",
+        "youth-climate-litigation",
+        "future-generations-institutions",
+        "ai-global-governance-architecture",
+        "youth-participation-governance",
+        "intergenerational-equity-mainstreaming",
+        "youth-climate-governance",
+        "disc-education-unesco"
+      ],
+      "net_direction": 101
+    },
+    {
+      "lens": "ceb4-good-ancestor",
+      "preferred_future": "Think, plan and act with future generations in mind",
+      "preferred_future_ref": "UN System Common Principles on Future Generations (2023), principle 4 — strategic foresight, long-term thinking, precautionary principle",
+      "milestones": [
+        {
+          "moment_id": "eu-council-if-conclusions-adoption-2026",
+          "title": "Formal Council adoption of EU Intergenerational Fairness conclusions",
+          "date": "2026-06-30",
+          "venue": "Council of the EU, Brussels",
+          "status": "past",
+          "outcome": null,
+          "trend_ids": [
+            "intergenerational-equity-mainstreaming",
+            "intergenerational-fiscal-rebalancing"
+          ],
+          "success_looks_like": "Conclusions adopted with the youth-check and index commitments intact.",
+          "failure_looks_like": "Youth-check or index commitments dropped or watered down in the adopted text."
+        },
+        {
+          "moment_id": "unga81-high-level-week-2026",
+          "title": "UNGA 81 high-level week — Declaration on Future Generations follow-up",
+          "date": "2026-09-22",
+          "venue": "United Nations, New York",
+          "status": "future",
+          "outcome": null,
+          "trend_ids": [
+            "future-generations-institutions",
+            "youth-participation-governance"
+          ],
+          "success_looks_like": "Named DFG implementation commitments in member-state statements; a secured youth side-event slot.",
+          "failure_looks_like": "DFG mentioned only rhetorically with no implementation commitments named."
+        },
+        {
+          "moment_id": "ie-mainstreaming-budget-review-2026-10-31",
+          "title": "Budget-cycle check on intergenerational fairness tests",
+          "date": "2026-10-31",
+          "venue": "Internal GYC foresight review",
+          "status": "future",
+          "outcome": null,
+          "trend_ids": [
+            "intergenerational-equity-mainstreaming"
+          ],
+          "success_looks_like": "At least two jurisdictions publish concrete budget or policy impact tests using intergenerational-fairness language.",
+          "failure_looks_like": "Signals remain concentrated in speeches, strategy documents, or non-binding references without implementation machinery."
+        },
+        {
+          "moment_id": "foresight-institutions-durability-review-2027-03-31",
+          "title": "Future-generations institution durability review",
+          "date": "2027-03-31",
+          "venue": "Internal GYC foresight review",
+          "status": "future",
+          "outcome": null,
+          "trend_ids": [
+            "future-generations-institutions",
+            "intergenerational-equity-mainstreaming"
+          ],
+          "success_looks_like": "A commissioner, parliamentary foresight body, or equivalent institution gains statutory powers, recurring funding, or a formal role in legislative review.",
+          "failure_looks_like": "Institutions remain isolated, personality-dependent, or vulnerable to defunding after political turnover."
+        }
+      ],
+      "trend_ids": [
+        "future-generations-institutions",
+        "ai-global-governance-architecture"
+      ],
+      "net_direction": 10
+    },
+    {
+      "lens": "ceb5-representation",
+      "preferred_future": "Representation of future generations",
+      "preferred_future_ref": "UN System Common Principles on Future Generations (2023), principle 5 — “Ensure meaningful representation of future generations and their interests”",
+      "milestones": [
+        {
+          "moment_id": "unga81-high-level-week-2026",
+          "title": "UNGA 81 high-level week — Declaration on Future Generations follow-up",
+          "date": "2026-09-22",
+          "venue": "United Nations, New York",
+          "status": "future",
+          "outcome": null,
+          "trend_ids": [
+            "future-generations-institutions",
+            "youth-participation-governance"
+          ],
+          "success_looks_like": "Named DFG implementation commitments in member-state statements; a secured youth side-event slot.",
+          "failure_looks_like": "DFG mentioned only rhetorically with no implementation commitments named."
+        },
+        {
+          "moment_id": "ie-mainstreaming-budget-review-2026-10-31",
+          "title": "Budget-cycle check on intergenerational fairness tests",
+          "date": "2026-10-31",
+          "venue": "Internal GYC foresight review",
+          "status": "future",
+          "outcome": null,
+          "trend_ids": [
+            "intergenerational-equity-mainstreaming"
+          ],
+          "success_looks_like": "At least two jurisdictions publish concrete budget or policy impact tests using intergenerational-fairness language.",
+          "failure_looks_like": "Signals remain concentrated in speeches, strategy documents, or non-binding references without implementation machinery."
+        },
+        {
+          "moment_id": "climate-litigation-duty-review-2026-12-31",
+          "title": "Climate duty transposition review",
+          "date": "2026-12-31",
+          "venue": "Internal GYC foresight review",
+          "status": "future",
+          "outcome": null,
+          "trend_ids": [
+            "youth-climate-litigation"
+          ],
+          "success_looks_like": "A domestic or regional merits decision cites international climate-duty reasoning in a way that expands youth or future-generation standing.",
+          "failure_looks_like": "Courts continue recognising climate harm in principle while denying standing, remedy, or enforceable duties to young people."
+        },
+        {
+          "moment_id": "foresight-institutions-durability-review-2027-03-31",
+          "title": "Future-generations institution durability review",
+          "date": "2027-03-31",
+          "venue": "Internal GYC foresight review",
+          "status": "future",
+          "outcome": null,
+          "trend_ids": [
+            "future-generations-institutions",
+            "intergenerational-equity-mainstreaming"
+          ],
+          "success_looks_like": "A commissioner, parliamentary foresight body, or equivalent institution gains statutory powers, recurring funding, or a formal role in legislative review.",
+          "failure_looks_like": "Institutions remain isolated, personality-dependent, or vulnerable to defunding after political turnover."
+        }
+      ],
+      "trend_ids": [
+        "future-generations-institutions"
+      ],
+      "net_direction": 28
+    },
+    {
+      "lens": "dfg2-rights",
+      "preferred_future": "Human rights and fundamental freedoms",
+      "preferred_future_ref": "UN Declaration on Future Generations (2024), guiding principle — “pursuit and enjoyment of human rights and fundamental freedoms for all”",
+      "milestones": [
+        {
+          "moment_id": "bonn-sb64-2026",
+          "title": "Bonn Climate Meetings (SB64) — ICJ/UNGA follow-through negotiations",
+          "date": "2026-06-30",
+          "venue": "Bonn, Germany",
+          "status": "past",
+          "outcome": null,
+          "trend_ids": [
+            "youth-climate-litigation",
+            "youth-climate-governance"
+          ],
+          "success_looks_like": "COP31 agenda language operationalising the ICJ opinion; youth-delegation submissions on the SB64 record.",
+          "failure_looks_like": "ICJ opinion referenced only in preamble; no youth-delegation submissions."
+        },
+        {
+          "moment_id": "cop31-antalya-2026",
+          "title": "COP31 — first COP after UNGA endorsement of the ICJ climate opinion",
+          "date": "2026-11-09",
+          "venue": "Antalya, Türkiye",
+          "status": "future",
+          "outcome": null,
+          "trend_ids": [
+            "youth-climate-litigation",
+            "youth-climate-governance"
+          ],
+          "success_looks_like": "Legal-duty (ICJ/UNGA) framing in the cover decision text; youth and Pacific delegations briefed on the litigation evidence base.",
+          "failure_looks_like": "Cover decision omits legal-duty framing; ICJ chain absent from operative text."
+        },
+        {
+          "moment_id": "climate-litigation-duty-review-2026-12-31",
+          "title": "Climate duty transposition review",
+          "date": "2026-12-31",
+          "venue": "Internal GYC foresight review",
+          "status": "future",
+          "outcome": null,
+          "trend_ids": [
+            "youth-climate-litigation"
+          ],
+          "success_looks_like": "A domestic or regional merits decision cites international climate-duty reasoning in a way that expands youth or future-generation standing.",
+          "failure_looks_like": "Courts continue recognising climate harm in principle while denying standing, remedy, or enforceable duties to young people."
+        }
+      ],
+      "trend_ids": [
+        "youth-climate-litigation",
+        "youth-digital-protection",
+        "intergenerational-equity-mainstreaming",
+        "youth-climate-governance"
+      ],
+      "net_direction": 69
+    },
+    {
+      "lens": "dfg3-prosperity",
+      "preferred_future": "Thrive in prosperity and sustainable development",
+      "preferred_future_ref": "UN Declaration on Future Generations (2024), guiding principle — “opportunity for future generations to thrive in prosperity and achieve sustainable development”",
+      "milestones": [
+        {
+          "moment_id": "ie-mainstreaming-budget-review-2026-10-31",
+          "title": "Budget-cycle check on intergenerational fairness tests",
+          "date": "2026-10-31",
+          "venue": "Internal GYC foresight review",
+          "status": "future",
+          "outcome": null,
+          "trend_ids": [
+            "intergenerational-equity-mainstreaming"
+          ],
+          "success_looks_like": "At least two jurisdictions publish concrete budget or policy impact tests using intergenerational-fairness language.",
+          "failure_looks_like": "Signals remain concentrated in speeches, strategy documents, or non-binding references without implementation machinery."
+        },
+        {
+          "moment_id": "fiscal-rebalancing-year-end-review-2026-12-31",
+          "title": "Fiscal fairness reform evidence review",
+          "date": "2026-12-31",
+          "venue": "Internal GYC foresight review",
+          "status": "future",
+          "outcome": null,
+          "trend_ids": [
+            "intergenerational-fiscal-rebalancing"
+          ],
+          "success_looks_like": "A credible reform package links fiscal sustainability with housing, tax-base, or youth opportunity measures under one generational-fairness frame.",
+          "failure_looks_like": "Reforms remain isolated, easily reversed, or framed only as deficit management without youth or future-generation distribution tests."
+        }
+      ],
+      "trend_ids": [
+        "intergenerational-fiscal-rebalancing",
+        "youth-climate-litigation",
+        "future-generations-institutions",
+        "youth-digital-protection",
+        "ai-global-governance-architecture",
+        "youth-participation-governance",
+        "intergenerational-equity-mainstreaming",
+        "youth-climate-governance",
+        "disc-education-unesco"
+      ],
+      "net_direction": 106
+    },
+    {
+      "lens": "dfg5-environment",
+      "preferred_future": "Clean, healthy and sustainable environment",
+      "preferred_future_ref": "UN Declaration on Future Generations (2024), guiding principle — “clean, healthy and sustainable environment, where humanity lives in harmony with nature”",
+      "milestones": [
+        {
+          "moment_id": "bonn-sb64-2026",
+          "title": "Bonn Climate Meetings (SB64) — ICJ/UNGA follow-through negotiations",
+          "date": "2026-06-30",
+          "venue": "Bonn, Germany",
+          "status": "past",
+          "outcome": null,
+          "trend_ids": [
+            "youth-climate-litigation",
+            "youth-climate-governance"
+          ],
+          "success_looks_like": "COP31 agenda language operationalising the ICJ opinion; youth-delegation submissions on the SB64 record.",
+          "failure_looks_like": "ICJ opinion referenced only in preamble; no youth-delegation submissions."
+        },
+        {
+          "moment_id": "cop31-antalya-2026",
+          "title": "COP31 — first COP after UNGA endorsement of the ICJ climate opinion",
+          "date": "2026-11-09",
+          "venue": "Antalya, Türkiye",
+          "status": "future",
+          "outcome": null,
+          "trend_ids": [
+            "youth-climate-litigation",
+            "youth-climate-governance"
+          ],
+          "success_looks_like": "Legal-duty (ICJ/UNGA) framing in the cover decision text; youth and Pacific delegations briefed on the litigation evidence base.",
+          "failure_looks_like": "Cover decision omits legal-duty framing; ICJ chain absent from operative text."
+        },
+        {
+          "moment_id": "climate-litigation-duty-review-2026-12-31",
+          "title": "Climate duty transposition review",
+          "date": "2026-12-31",
+          "venue": "Internal GYC foresight review",
+          "status": "future",
+          "outcome": null,
+          "trend_ids": [
+            "youth-climate-litigation"
+          ],
+          "success_looks_like": "A domestic or regional merits decision cites international climate-duty reasoning in a way that expands youth or future-generation standing.",
+          "failure_looks_like": "Courts continue recognising climate harm in principle while denying standing, remedy, or enforceable duties to young people."
+        }
+      ],
+      "trend_ids": [
+        "intergenerational-fiscal-rebalancing",
+        "youth-climate-litigation",
+        "future-generations-institutions",
+        "ai-global-governance-architecture",
+        "youth-participation-governance",
+        "intergenerational-equity-mainstreaming",
+        "youth-climate-governance",
+        "disc-education-unesco"
+      ],
+      "net_direction": 124
+    }
+  ],
+  "unassigned_moments": []
+}

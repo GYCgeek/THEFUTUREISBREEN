@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "id": "germany-intergenerational-equity",
+  "title": "Germany: Jugend-Check and Article 20a",
+  "language": "en",
+  "country_code": "DE",
+  "country_name": "Germany",
+  "region": "Europe",
+  "last_updated": "2026-08-17",
+  "confidence": "high",
+  "related_signal_ids": [
+    "germany-youth-check-third-report-490-federal-bills-screened-91-youth-impact-assessments-in-20th-bund",
+    "german-minijobs-government-draft-drops-jugend-check-youth-protective-time-recording-and-payslip-rule",
+    "komjc-ikjhg-checks-show-cabinet-dropped-a-youth-own-claim-the-bill-did-not-become-law-2024-12-09t00",
+    "thuringia-publishes-a-land-jugend-check-on-the-health-service-bill-now-before-the-landtag-2026-07-01",
+    "thuringia-enacts-rechtspfleger-robe-clause-after-land-jugend-check-on-the-court-organisation-bill-20"
+  ],
+  "executive_summary": "Germany has a constitutional future-generations clause (Basic Law Article 20a) and the densest published youth-impact series in the GYC corpus: KomJC screened 490 federal bills in the 20th Bundestag and published 91 Jugend-Checks. The check is not an Intergenerational Impact Assessment of unborn cohorts. It assesses living 12–27-year-olds; the Bundestag is not bound to amend; who can block: nobody. Documented bite is skip (minijobs 2022 dropped two youth-protective clauses after the check) or check-then-enact (Thuringia court-organisation statute kept the draft robe clause). Neubauer 2021 is intergenerational climate doctrine, not Jugend-Check review.",
+  "ui": {
+    "instrument_tab_label": "Jugend-Check",
+    "stats": { "recs_label": "Watch items" },
+    "case_search_placeholder": "Filter Jugend-Check bite cases…"
+  },
+  "three_layer_stack": {
+    "layers": [
+      {
+        "order": 1,
+        "id": "constitutional",
+        "label": "Constitutional foundation",
+        "instrument": "Basic Law Article 20a (1994)",
+        "in_force": "1994-11-15",
+        "primary_articles": ["Article 20a"],
+        "role": "Names future generations as the reason the state must protect the natural foundations of life. No commissioner and no statutory IIA annex."
+      },
+      {
+        "order": 2,
+        "id": "statutory",
+        "label": "Youth-check (administrative, published)",
+        "instrument": "KomJC Jugend-Check (since 2017)",
+        "in_force": "2017",
+        "role": "Independent scientific pre-screen of every federal government draft for effects on ages 12–27. Published. Bundestag not bound."
+      },
+      {
+        "order": 3,
+        "id": "judicial",
+        "label": "Climate freedom over time",
+        "instrument": "BVerfG Neubauer (24 March 2021)",
+        "role": "Offloading a radical post-2030 mitigation burden onto later generations threatens future freedom. Climate law, not Jugend-Check procedure."
+      }
+    ]
+  },
+  "constitutional_reform": {
+    "instrument": "Grundgesetz Artikel 20a",
+    "english_name": "Basic Law Article 20a",
+    "adopted": "1994-10-27",
+    "in_force": "1994-11-15",
+    "significance": "Germany named future generations in the Basic Law three decades before Italy's 2022 reform — as an environmental state-aim, not as an IIA duty.",
+    "articles": [
+      {
+        "article": "Article 20a",
+        "text_en": "Mindful also of its responsibility toward future generations, the state shall protect the natural foundations of life and animals by legislation and, in accordance with law and justice, by executive and judicial action, all within the framework of the constitutional order.",
+        "text_it": "Der Staat schützt auch in Verantwortung für die künftigen Generationen die natürlichen Lebensgrundlagen und die Tiere im Rahmen der verfassungsmäßigen Ordnung durch die Gesetzgebung und nach Maßgabe von Gesetz und Recht durch die vollziehende Gewalt und die Rechtsprechung.",
+        "source_url": "https://www.gesetze-im-internet.de/englisch_gg/englisch_gg.html#p0116"
+      }
+    ],
+    "gaps_heading": "What Germany does not have",
+    "what_lacks": [
+      "No statutory Intergenerational Impact Assessment of unborn cohorts",
+      "No Future Generations Commissioner",
+      "Jugend-Check cannot stall a dossier or bind the Bundestag",
+      "Land Jugend-Check exists only as a Thuringia cabinet pilot through end-2026"
+    ],
+    "what_italy_lacks": [
+      "No statutory Intergenerational Impact Assessment of unborn cohorts",
+      "No Future Generations Commissioner",
+      "Jugend-Check cannot stall a dossier or bind the Bundestag",
+      "Land Jugend-Check exists only as a Thuringia cabinet pilot through end-2026"
+    ]
+  },
+  "jurisprudence": {
+    "overview": "Two streams: (1) BVerfG climate doctrine under Article 20a; (2) KomJC/ProJCT bite — whether a published check changed the draft. Do not treat volume of checks as bite.",
+    "streams": [
+      {
+        "id": "environmental",
+        "label": "Article 20a / Neubauer",
+        "summary": "The Court required the legislature to specify post-2030 reductions so later generations are not left with a radical duty. This is constitutional climate law, not a missing-IA holding.",
+        "key_cases": [
+          {
+            "id": "neubauer-2021",
+            "citation": "BVerfG 1 BvR 2656/18 (24 March 2021)",
+            "nickname": "Neubauer",
+            "date": "2021-03-24",
+            "subject": "Federal Climate Change Act reduction path to 2030 without sufficient post-2030 specification",
+            "constitutional_anchors": ["Article 20a", "fundamental-rights freedom over time"],
+            "holding_en": "Offloading a radical mitigation burden onto later generations threatens their future freedom. Legislature had to set post-2030 provisions by 31 December 2022.",
+            "significance": "Intergenerational constitutional doctrine. Not Jugend-Check review.",
+            "source_url": "https://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/EN/2021/03/rs20210324_1bvr265618en.html",
+            "era": "doctrine",
+            "tag_label": "Constitutional climate",
+            "pre_reform": true
+          }
+        ]
+      },
+      {
+        "id": "fiscal",
+        "label": "Jugend-Check bite",
+        "summary": "Independent published checks. Completing a check is common; changing a cabinet draft in the youth-protective direction is not the documented pattern.",
+        "key_cases": [
+          {
+            "id": "minijobs-2022",
+            "citation": "Zweites Gesetz / Mindestlohn-Minijobs package",
+            "nickname": "Minijobs skip",
+            "date": "2022-02-23",
+            "subject": "MiLoG § 17 electronic hours record; GewO § 108 payslip minimum-wage line",
+            "holding_en": "KomJC 7 February 2022 Referentenentwurf check identified two youth-protective enforcement clauses. Both were deleted from the 23 February 2022 cabinet draft. Wage-threshold change remained.",
+            "significance": "Completed check, then skip — the clearest federal bite case.",
+            "source_url": "https://jugend-check.de/jugendcheck/aenderungen-minijobs/",
+            "era": "skip",
+            "tag_label": "Skip",
+            "pre_reform": false
+          },
+          {
+            "id": "ikjhg-2024",
+            "citation": "IKJHG Referentenentwurf vs Regierungsentwurf",
+            "nickname": "Own-claim dropped",
+            "date": "2024-11-27",
+            "subject": "Adolescents' own claim to out-of-home Hilfe zur Erziehung; help-plan review interval",
+            "holding_en": "Cabinet dropped the youth own-claim KomJC said would have strengthened standing. Help-plan review moved youth-friendlier without proven KomJC causation. Bill never enacted.",
+            "significance": "Mixed, then skipped at enactment. KomJC second report: not all RefE-to-RegE changes can be attributed to the check.",
+            "source_url": "https://jugend-check.de/jugendcheck/jugendhilfeinklusionsgesetz-ikjhg/",
+            "era": "mixed",
+            "tag_label": "Mixed / never enacted",
+            "pre_reform": false
+          },
+          {
+            "id": "th-robes-2025",
+            "citation": "Thuringia court-organisation statute GVBl. 2025 Nr. 14",
+            "nickname": "Rechtspfleger robes",
+            "date": "2025-12-15",
+            "subject": "Land Jugend-Check 29 July 2025 then enactment keeping § 4(5) Amtstracht",
+            "holding_en": "The enacted robe clause was already in the draft. Check-then-enact, not a rewrite. ThürGDG 8/3713 and prisoner-pay 8/3287 still pending.",
+            "significance": "Land pilot produces published checks; ministries can enact the draft as written.",
+            "source_url": "https://www.jugend-check-thueringen.de/",
+            "era": "check_then_enact",
+            "tag_label": "Check then enact",
+            "pre_reform": false
+          }
+        ]
+      }
+    ],
+    "operational_tests": [
+      {
+        "domain": "Who is assessed",
+        "test": "Ages 12–27 present youth life situations — not unborn future generations."
+      },
+      {
+        "domain": "Who can block",
+        "test": "Nobody. Published check; Bundestag and Landtag are not bound."
+      },
+      {
+        "domain": "Bite",
+        "test": "Compare Referentenentwurf check to Regierungsentwurf / enacted text. Volume of screens (490/91) is not bite."
+      }
+    ]
+  },
+  "vig_framework": {
+    "instrument": "KomJC Jugend-Check",
+    "gazette": "Administrative practice; third report 20th Bundestag",
+    "in_force": "2017",
+    "english_name": "Youth-Check — Kompetenzzentrum Jugend-Check",
+    "statutory_principle": "Every federal government draft law is pre-screened; a full Jugend-Check is written when effects on young people are identified. The Bundestag is not bound to amend.",
+    "definition": "Independent scientific assessment of intended and unintended effects on 12–27-year-olds across six life domains, sent via the youth ministry to the lead unit and published.",
+    "integration": "Referentenentwurf stage, with a cabinet-stage update when youth impacts change (34 of 91 published checks in the third report were RegE updates).",
+    "trigger": "Pre-screen of every federal government draft; full check when youth effects are identified.",
+    "exclusions": [
+      "Does not assess unborn cohorts",
+      "Does not bind the Bundestag",
+      "Member bills and Land bills (except Thuringia pilot) are outside KomJC"
+    ],
+    "institutions": [
+      {
+        "name": "Kompetenzzentrum Jugend-Check (KomJC / FÖV Speyer)",
+        "location": "Speyer",
+        "role": "Independent scientific unit funded by the federal youth ministry."
+      },
+      {
+        "name": "Projektstelle Jugend-Check Thüringen (ProJCT)",
+        "location": "Speyer / Thuringia",
+        "role": "Land cabinet pilot through end-2026; publishes all Thuringian checks; ministry decides uptake."
+      }
+    ],
+    "implementing_instruments": [
+      {
+        "instrument": "ThürGDG (Landtag 8/3713) after 1 July 2026 Land check",
+        "deadline": "Pending Landtag",
+        "status_as_of_2026_06_28": "Cabinet adopted; Landtag seized; bite versus final text unknown",
+        "status": "Cabinet adopted; Landtag seized; bite versus final text unknown"
+      },
+      {
+        "instrument": "Thuringia prisoner-pay reform (8/3287)",
+        "deadline": "Pending Landtag",
+        "status_as_of_2026_06_28": "Land check 27 April 2026; final text comparison not available",
+        "status": "Land check 27 April 2026; final text comparison not available"
+      }
+    ]
+  },
+  "implementation_status_2026": {
+    "as_of": "2026-08-17",
+    "headline": "Highest publication volume in the IIA family; weakest bindingness. Completing a check does not mean the youth-protective reading survived cabinet.",
+    "recommendations_heading": "Watch list",
+    "provvedimenti": [
+      {
+        "instrument": "20th Bundestag Jugend-Check series",
+        "vig_status": "490 screened / 91 published — COUNT, not bite",
+        "instrument_status": "490 screened / 91 published — COUNT, not bite"
+      },
+      {
+        "instrument": "Minijobs / Mindestlohn 2022",
+        "vig_status": "Skip — two youth-protective clauses dropped after the check",
+        "instrument_status": "Skip — two youth-protective clauses dropped after the check"
+      },
+      {
+        "instrument": "IKJHG 2024",
+        "vig_status": "Mixed then never enacted; 2026 successor 1. KJHSRG is a different bill",
+        "instrument_status": "Mixed then never enacted; 2026 successor 1. KJHSRG is a different bill"
+      },
+      {
+        "instrument": "Thuringia court organisation 2025",
+        "vig_status": "Check then enact as drafted (robes clause)",
+        "instrument_status": "Check then enact as drafted (robes clause)"
+      }
+    ],
+    "recommendations": [
+      { "order": 1, "text": "Do not treat 490/91 as evidence the Bundestag follows Jugend-Check." },
+      { "order": 2, "text": "Watch ThürGDG and prisoner-pay final texts versus published Land checks." },
+      { "order": 3, "text": "Keep Neubauer (constitutional climate) separate from KomJC (administrative youth check)." },
+      { "order": 4, "text": "KomJC's own reports say RefE-to-RegE changes cannot all be attributed to the check." }
+    ]
+  },
+  "local_practice": [
+    {
+      "entity": "Thuringia — ProJCT",
+      "since": "2021",
+      "detail": "First Land Jugend-Check. Published checks include ThürGDG (1 July 2026), prisoner-pay (27 April 2026), court organisation (29 July 2025). Pilot through end-2026.",
+      "source_url": "https://www.jugend-check-thueringen.de/"
+    }
+  ],
+  "comparative_notes": [
+    {
+      "jurisdiction": "Netherlands",
+      "contrast": "Dutch generatietoets is the closer future-generations tool (irreversible / redistributive effects). German Jugend-Check is denser, independent, and aimed at living 12–27-year-olds."
+    },
+    {
+      "jurisdiction": "Flanders",
+      "contrast": "JoKER can stall a missing report. Jugend-Check cannot stall anything."
+    },
+    {
+      "jurisdiction": "Austria",
+      "contrast": "WFA Jugend-Check is a mandatory ministry self-assessment bundled with the bill (Budgetbegleitgesetz 2025 then enacted a family-benefit freeze). KomJC is independent but non-binding."
+    }
+  ],
+  "litigation_track": [
+    {
+      "case": "Neubauer et al. v. Germany",
+      "court": "Bundesverfassungsgericht",
+      "year": 2021,
+      "status": "Decided — legislature required to specify post-2030 path",
+      "relevance": "Article 20a future-generations climate doctrine, not Jugend-Check."
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "de-stack",
+      "title": "German youth-check versus constitutional climate",
+      "mermaid": "flowchart TB\n  A[\"GG Art. 20a 1994\\nfuture generations\"] --> B[\"Neubauer 2021\\npost-2030 climate path\"]\n  C[\"KomJC Jugend-Check\\nages 12-27\"] --> D[\"490 screens / 91 checks\"]\n  C --> E[\"Minijobs 2022 skip\"]\n  C --> F[\"IKJHG 2024 mixed\\nnever enacted\"]\n  G[\"ProJCT Thuringia\\npilot to end-2026\"] --> H[\"Court org 2025\\ncheck then enact\"]\n  G --> I[\"ThürGDG pending\"]"
+    }
+  ],
+  "glossary": [
+    { "term": "Jugend-Check", "en": "Youth-Check: published assessment of federal (or Thuringian) drafts for effects on young people." },
+    { "term": "KomJC", "en": "Kompetenzzentrum Jugend-Check at FÖV Speyer." },
+    { "term": "Referentenentwurf / Regierungsentwurf", "en": "Ministry draft versus cabinet bill — the comparison window for bite." },
+    { "term": "Article 20a", "en": "Basic Law environmental state-aim, mindful of future generations." }
+  ],
+  "sources": [
+    { "title": "KomJC — Der Jugend-Check", "url": "https://www.jugend-check.de/der-jugend-check/" },
+    { "title": "Basic Law Article 20a (English)", "url": "https://www.gesetze-im-internet.de/englisch_gg/englisch_gg.html#p0116" },
+    { "title": "BVerfG Neubauer (English)", "url": "https://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/EN/2021/03/rs20210324_1bvr265618en.html" },
+    { "title": "Jugend-Check Thüringen", "url": "https://www.jugend-check-thueringen.de/" }
+  ]
+}

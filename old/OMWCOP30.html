@@ -1,0 +1,4824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMW to COP30 - Global Youth Coalition</title>
+    
+    <!-- Add favicon -->
+    <link rel="icon" href="assets/images/icon.png" type="image/x-icon" alt="GlobalYouth Favicon">
+    <link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon">
+    
+    <meta name="description" content="OMW to COP30 - Join the youth movement towards climate action. A Global Youth Coalition initiative.">
+    <meta name="keywords" content="COP30, climate action, youth movement, Global Youth Coalition, OMW">
+    <meta property="og:title" content="OMW to COP30 - Global Youth Coalition">
+    <meta property="og:description" content="Join the most ambitious youth-led climate voyage ever. 45 changemakers. 3 boats. 1 mission.">
+    <meta property="og:image" content="https://theglobalyouth.co/assets/images/HEROGPS.png">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Mapbox dependencies -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    
+    <meta name="theme-color" content="#FF1D65">
+    
+    <style>
+        :root {
+            --primary-color: #FF1D65;    /* Main brand color remains unchanged */
+            --primary-dark: #CC1751;     /* Hover state for primary */
+            
+            /* Change all blue colors to forest green */
+            --ocean-blue: #78D64B;       /* Was previously blue, now forest green */
+            --ocean-dark: #1e4230;       /* Darker shade for hover states */
+            --white: #FFFFFF;
+            --dark: #1A1A1A;
+            --text-dark: #333333;                   /* For better readability on light backgrounds */
+            --text-light: #FFFFFF;                  /* For better readability on dark backgrounds */
+            --text-muted: #666666;                  /* For secondary text */
+            --transition: all 0.3s ease;
+        }
+
+
+
+        body {
+            font-family: 'Impact', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            color: var(--text-dark);
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('assets/images/HEROGPS.png') center/cover;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: var(--text-light);
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.3s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            animation: fadeInUp 1s ease 0.6s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            background: var(--ocean-blue);
+            border: 2px solid var(--ocean-blue);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--ocean-dark);
+            transform: translateY(-3px);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            animation: bounce 2s infinite;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 80%;
+                text-align: center;
+            }
+        }
+
+        /* Get Involved Section Styles */
+        .get-involved {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .get-involved-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            color: var(--dark);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .involvement-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .involvement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .card-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .card-header i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-header h3 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .card-content {
+            padding: 2rem;
+        }
+
+        .card-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            min-height: 4.8rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+        .feature-list li {
+            padding: 0.5rem 0;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-list li i {
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+
+        .card-button {
+            display: inline-block;
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .card-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8); /* Darker semi-transparent background */
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+            margin: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Style the form elements for better visibility */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: white;
+            color: #333;
+        }
+
+        .submit-button {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .submit-button:hover {
+            background: var(--primary-dark);
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .close-modal:hover {
+            color: var(--primary-color);
+        }
+
+        /* Add modal title styling */
+        #modalTitle {
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Press & Media Section Styles */
+        .press-media {
+            background: var(--white);
+            padding: 6rem 2rem;
+            position: relative;
+        }
+
+        /* News Ticker */
+        .news-ticker {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 4rem;
+        }
+
+        .ticker-wrapper {
+            display: flex;
+            animation: ticker 30s linear infinite;
+        }
+
+        .ticker-item {
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+            white-space: nowrap;
+        }
+
+        .ticker-item i {
+            margin-right: 1rem;
+            color: var(--ocean-blue);
+        }
+
+        /* Press Resources */
+        .press-resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .press-kit {
+            background: linear-gradient(135deg, var(--deep-sea), var(--primary-color));
+            padding: 2rem;
+            border-radius: 20px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .press-kit:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .press-kit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+        }
+
+        .kit-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .download-button:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateX(10px);
+        }
+
+        .download-button i {
+            margin-right: 0.5rem;
+        }
+
+        /* Media Coverage Grid */
+        .media-coverage {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .coverage-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+
+        .coverage-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .coverage-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .coverage-content {
+            padding: 1.5rem;
+        }
+
+        .coverage-source {
+            color: var(--ocean-blue);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Early Access Form */
+        .early-access {
+            background: var(--wave-light);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .early-access-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        .early-access-input {
+            flex: 1;
+            padding: 1rem;
+            border: 2px solid var(--ocean-blue);
+            border-radius: 50px;
+            font-size: 1rem;
+        }
+
+        .early-access-button {
+            padding: 1rem 2rem;
+            background: var(--ocean-blue);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .early-access-button:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .early-access-form {
+                flex-direction: column;
+            }
+
+            .early-access-button {
+                width: 100%;
+            }
+        }
+
+        /* Add Accessibility Features */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* ARIA labels and roles */
+        [role="button"] {
+            cursor: pointer;
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            :root {
+                --primary-color: #FF1D65;
+                --primary-dark: #CC1751;
+                --text-dark: #000000;
+                --text-light: #FFFFFF;
+                --text-muted: #444444;
+            }
+        }
+
+        /* Reduced motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        /* Loading state for dynamic content */
+        .loading {
+            position: relative;
+            min-height: 200px;
+        }
+
+        .loading::after {
+            content: 'Loading...';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Modular scaling for typography */
+        html {
+            font-size: 16px;
+        }
+
+        @media (min-width: 768px) {
+            html {
+                font-size: 18px;
+            }
+        }
+
+        /* Add data attributes for dynamic content */
+        [data-update="partners"],
+        [data-update="events"],
+        [data-update="milestones"] {
+            transition: opacity 0.3s ease;
+        }
+
+        .coverage-item.featured {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            background: var(--secondary-color);
+            padding: 2rem;
+        }
+
+        .coverage-source {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .source-logo {
+            height: 30px;
+            width: auto;
+        }
+
+        .date {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .coverage-excerpt {
+            color: var(--text-dark);
+            font-style: italic;
+            margin: 1rem 0;
+            line-height: 1.6;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .author {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .read-more:hover {
+            color: var(--primary-dark);
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 768px) {
+            .coverage-item.featured {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* About OMW Section Styles */
+        .about-omw {
+            padding: 6rem 2rem;
+            background: var(--secondary-color);
+        }
+
+        /* Timeline Styles */
+        .timeline-container {
+            margin: 4rem 0;
+            position: relative;
+        }
+
+        .timeline-track {
+            height: 4px;
+            background: var(--primary-color);
+            position: relative;
+            margin: 4rem 0;
+        }
+
+        .timeline-point {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        /* Position timeline points */
+        .timeline-point:nth-child(1) { left: 0%; }
+        .timeline-point:nth-child(2) { left: 33%; }
+        .timeline-point:nth-child(3) { left: 66%; }
+        .timeline-point:nth-child(4) { left: 100%; }
+
+        .timeline-point::before {
+            content: attr(data-date);
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .point-content {
+            position: absolute;
+            width: 200px;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-point:hover {
+            transform: translateY(-50%) scale(1.2);
+        }
+
+        .timeline-point:hover .point-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(-10px);
+        }
+
+        /* Map Styles */
+        .route-map {
+            margin: 4rem 0;
+            text-align: center;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 0;
+        }
+
+        #journey-map {
+            width: 100%;
+            height: 500px;
+            margin: 2rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            position: relative;
+            z-index: 1;
+        }
+
+        .map-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: rgba(255,255,255,0.9);
+            border-radius: 10px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        /* Update dot colors in the legend */
+        .dot.start { background: var(--primary-color); }
+        .dot.stop { background: var(--ocean-blue); }
+        .dot.end { background: var(--primary-color); }
+
+        /* Trident Framework Styles */
+        .ships-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .ship-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .ship-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .ship-icon {
+            font-size: 3rem;
+            color: var(--ocean-blue);
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .ship-card:hover .ship-icon {
+            transform: scale(1.1);
+        }
+
+        .card-overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(to top, var(--ocean-blue), transparent);
+            color: white;
+            transition: bottom 0.3s ease;
+        }
+
+        .ship-card:hover .card-overlay {
+            bottom: 0;
+        }
+
+        .learn-more {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        /* Ship Modal Styles */
+        .ship-modal {
+            max-width: 800px;
+            width: 90%;
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+        }
+
+        .modal-content h3 {
+            color: var(--ocean-blue);
+            margin-bottom: 1rem;
+        }
+
+        .modal-content img {
+            width: 100%;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        /* Add video background */
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Add map-specific styles */
+        .map-marker {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .map-marker:hover {
+            transform: scale(1.2);
+        }
+
+        /* Press & Media Styles */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .resource-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .resource-icon {
+            font-size: 2.5rem;
+            color: var(--ocean-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .resource-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .resource-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+            color: var(--text-dark);
+        }
+
+        .resource-list i {
+            color: var(--primary-color);
+        }
+
+        .download-button, .contact-button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 1.5rem;
+            background: var(--ocean-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .download-button:hover, .contact-button:hover {
+            background: var(--ocean-dark);
+            transform: translateY(-3px);
+        }
+
+        .file-info {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .contact-button {
+            background: transparent;
+            border: 2px solid var(--ocean-blue);
+            color: var(--ocean-blue);
+        }
+
+        .contact-button:hover {
+            background: var(--ocean-blue);
+            color: white;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .download-button, .contact-button {
+                width: 80%;
+                justify-content: center;
+            }
+        }
+
+        /* Get Involved Styles */
+        .involvement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .involvement-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .involvement-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-header {
+            background: var(--ocean-blue);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .card-header i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-content {
+            padding: 2rem;
+        }
+
+        .impact-statement {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .impact-statement h4 {
+            color: var(--ocean-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .opportunity-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .opportunity-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+        }
+
+        .opportunity-list i {
+            color: var(--primary-color);
+        }
+
+        .action-button {
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .action-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+
+        .submit-button {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Add skip link styles */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Enhance focus styles */
+        :focus {
+            outline: 3px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        /* Improve button accessibility */
+        .btn,
+        .action-button,
+        .download-button,
+        .contact-button {
+            min-height: 44px; /* Touch target size */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Enhance contrast ratios */
+        .card-content p {
+            color: var(--text-dark);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Improve form field accessibility */
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(255,29,101,0.2);
+        }
+
+        /* Add loading states */
+        [aria-busy="true"] {
+            position: relative;
+            cursor: wait;
+        }
+
+        [aria-busy="true"]::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1em;
+            height: 1em;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s infinite linear;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Enhance mobile responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: clamp(2rem, 5vw, 4rem);
+            }
+
+            .timeline-point::before {
+                font-size: 0.8rem;
+            }
+
+            .point-content {
+                width: 180px;
+                font-size: 0.9rem;
+            }
+
+            .form-group label {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Support high contrast mode */
+        @media (prefers-contrast: high) {
+            .card-overlay {
+                background: var(--primary-color);
+            }
+
+            .timeline-track {
+                height: 6px;
+            }
+        }
+
+        /* Add styles for the introduction text */
+        .intro-text {
+            max-width: 800px;
+            margin: 2rem auto 4rem;
+            text-align: center;
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            padding: 0 1rem;
+        }
+
+        .intro-text p {
+            font-weight: 500;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive adjustment */
+        @media (max-width: 768px) {
+            .intro-text {
+                font-size: 1.1rem;
+                margin: 2rem auto 3rem;
+            }
+        }
+
+        /* Ensure ship cards are clickable */
+        .ship-card {
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ship-card * {
+            pointer-events: none; /* Ensures clicks go to the card itself */
+        }
+
+        /* Metrics Dashboard Styles */
+        .metrics-dashboard {
+            background: linear-gradient(175deg, #000000, #ff1d65); /* Deep forest green to purple gradient */
+            padding: 60px 0;
+            color: white; /* Ensure text is readable on dark background */
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .metric-card {
+            background-color: white;
+            color: #333; /* Dark text for contrast */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .metric-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #25503c; /* Match the starting color of the background gradient */
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+
+        .metric-unit {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .metric-trend {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .metric-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+
+        .stat {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .metric-location {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 1rem;
+        }
+
+        /* Loading animation */
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .loading {
+            animation: pulse 1.5s infinite;
+        }
+
+        #journey-map {
+            width: 100%;
+            height: 400px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        #map-debug {
+            max-height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+            background: #f5f5f5;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Add these styles for better error message display */
+        #map-debug ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        #map-debug li {
+            margin: 5px 0;
+        }
+
+        .webgl-error {
+            background: #fff3f3;
+            border: 1px solid #dc3545;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+
+        #journey-map {
+            width: 100%;
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        #map-debug {
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .mapboxgl-ctrl-logo {
+            display: none !important;
+        }
+
+        /* Premium Crew Story Slider Styles */
+        .crew-stories {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .crew-stories::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: repeat;
+            background-size: 500px;
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .crew-slider-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 60px;
+        }
+
+        .crew-slider {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .crew-slide {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.8s ease;
+        }
+
+        .crew-slide.active {
+            opacity: 1;
+            position: relative;
+        }
+
+        .crew-portrait {
+            flex: 0 0 40%;
+            position: relative;
+            overflow: hidden;
+            height: 400px; /* Fixed height for consistency */
+            background-color: #f5f5f5; /* Fallback color */
+        }
+
+        .crew-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* This will maintain aspect ratio while covering the space */
+            object-position: center; /* Center the image */
+        }
+
+        .crew-slide:hover .crew-image {
+            transform: scale(1.05);
+        }
+
+        .crew-story {
+            flex: 0 0 57%;
+            padding: 40px;
+            position: relative;
+            display: flex;           /* Add flex display */
+            flex-direction: column;  /* Stack children vertically */
+            justify-content: center; /* Center content vertically */
+            min-height: 400px;      /* Match portrait height */
+                        min-height: 400px;
+            height: fit-content;    /* Allow height to fit content */
+            overflow: visible;      /* Ensure content isn't cut off */
+        }
+
+        .crew-name {
+            font-size: 2rem;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .crew-role {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .quote-mark {
+            font-size: 2.5rem;
+            color: rgba(0, 119, 182, 0.1);
+            margin-bottom: 10px;
+        }
+
+        .crew-quote {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .crew-social {
+            display: flex;
+            gap: 15px;
+        }
+
+        .crew-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(0, 119, 182, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ocean-blue);
+            transition: all 0.3s ease;
+        }
+
+        .crew-social a:hover {
+            background-color: var(--ocean-blue);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .crew-slider-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .crew-prev, .crew-next {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--text-dark);
+        }
+
+        .crew-prev:hover, .crew-next:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .crew-dots {
+            display: flex;
+            gap: 10px;
+            margin: 0 20px;
+        }
+
+        .crew-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .crew-dot.active {
+            background-color: var(--primary-color);
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 991px) {
+            .crew-slide {
+                flex-direction: column;
+            }
+            
+            .crew-portrait, .crew-story {
+                flex: 0 0 100%;
+            }
+            
+            .crew-portrait {
+                height: 400px; /* Maintain full height on tablets */
+            }
+            
+            .crew-story {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .crew-slider-container {
+                padding: 0 15px;
+            }
+            
+            .crew-slide {
+                flex-direction: column;
+                height: auto; /* Allow natural height */
+            }
+            
+            .crew-portrait {
+                height: 450px; /* Taller on mobile to show full face */
+                width: 100%;
+                position: relative;
+                margin-bottom: 0; /* Remove bottom margin */
+            }
+            
+            .crew-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top center; /* Focus on face */
+            }
+            
+            .crew-story {
+                padding: 20px;
+                padding-top: 10px; /* Reduce top padding */
+                width: 100%;
+                margin-top: 0; /* Ensure no top margin */
+            }
+            
+            .crew-name {
+                font-size: 1.5rem;
+                margin-top: 0; /* Remove top margin */
+            }
+            
+            .crew-quote {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+            
+            /* Improve navigation on mobile */
+            .crew-slider-nav {
+                margin-top: 20px;
+            }
+            
+            .crew-prev, .crew-next {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .crew-dot {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        /* Add specific adjustments for very small screens */
+        @media (max-width: 480px) {
+            .crew-portrait {
+                height: 350px; /* Slightly shorter for very small screens */
+                margin-bottom: 0; /* Ensure no bottom margin on smaller screens */
+            }
+            
+            .crew-story {
+                padding: 15px;
+                padding-top: 8px; /* Even less padding for smaller screens */
+                margin-top: 0; /* Ensure no top margin on smaller screens */
+            }
+            
+            .crew-name {
+                font-size: 1.3rem;
+            }
+            
+            .crew-role {
+                font-size: 0.9rem;
+            }
+            
+            .crew-quote {
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+            }
+            
+            .crew-name {
+                margin-top: 0; /* Ensure no margin on smaller screens */
+            }
+        }
+
+        /* Add smooth transitions */
+        .crew-slide {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .crew-image {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Fix image aspect ratio */
+        .crew-portrait {
+            aspect-ratio: 3/4; /* Maintain consistent aspect ratio */
+            overflow: hidden;
+        }
+
+        /* Ensure images don't get stretched */
+        .crew-image {
+            object-fit: cover;
+            object-position: center 20%; /* Slightly favor the top of the image */
+        }
+
+        /* Card Styles */
+        .ship-card {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .ship-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Framework Details Styles */
+        .framework-details-container {
+            position: relative;
+        }
+
+        .framework-detail {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 1000;
+            overflow: auto;
+            animation: fadeIn 0.3s;
+        }
+
+        .framework-detail:target {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .backdrop-close {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .detail-content {
+            background-color: white;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            animation: slideIn 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .detail-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .detail-body {
+            padding: 20px;
+        }
+
+        .close-detail {
+            font-size: 24px;
+            color: #666;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .close-detail:hover {
+            color: #000;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Ocean/water related elements */
+        .ocean-bg,
+        .water-bg,
+        .blue-bg {
+            background-color: #25503c !important;
+        }
+
+        .ocean-text,
+        .water-text,
+        .blue-text {
+            color: #25503c !important;
+        }
+
+        /* Secondary buttons and elements */
+        .btn-secondary,
+        .secondary-button {
+            background-color: #78D64B;  /* Added missing semicolon here */
+            border-color: #25503c;
+        }
+
+        .btn-secondary:hover,
+        .secondary-button:hover {
+            background-color: #1e4230;
+            border-color: #1e4230;
+        }
+
+        /* Cards with blue backgrounds */
+        .card.blue-card,
+        .blue-gradient {
+            background: linear-gradient(135deg, #78D64B, #1e4230) !important;
+        }
+
+        /* Icons that were blue */
+        .fa-water,
+        .fa-ship,
+        .fa-wave-square,
+        .fa-tint,
+        .ocean-icon {
+            color: #25503c;
+        }
+
+        /* Map elements */
+        .map-marker,
+        .route-line {
+            background-color: #25503c;
+            border-color: #25503c;
+        }
+
+        /* Any blue accents or borders */
+        .border-blue,
+        .blue-accent {
+            border-color: #25503c !important;
+        }
+
+        /* Progress indicators */
+        .progress-bar.blue-progress {
+            background-color: #25503c;
+        }
+
+        /* Navigation elements that might be blue */
+        .nav-pills .nav-link.active {
+            background-color: #25503c;
+        }
+
+        /* Ensure metric icons use the new color */
+        .metric-icon {
+            color: #25503c;
+        }
+
+        /* Ocean health metric specifically */
+        #ocean-metric .metric-icon {
+            color: #25503c;
+        }
+
+        /* Debugging styles for FAQ section */
+        .faq-section {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .accordion-container {
+            max-width: 100%;
+            overflow-x: visible; /* Changed from hidden to allow dropdown to work */
+        }
+
+        .accordion-item {
+            max-width: 100%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            overflow: visible; /* Allow content to be visible when expanded */
+        }
+
+        .accordion-button {
+            white-space: normal;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .accordion-body {
+            max-width: 100%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .accordion-body p, 
+        .accordion-body ul, 
+        .accordion-body li {
+            max-width: 100%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        /* Fix the accordion collapse behavior */
+        .accordion-collapse {
+            max-height: none; /* Remove the max-height restriction */
+            overflow: visible; /* Allow content to be visible */
+            height: auto; /* Let height adjust naturally */
+            display: none; /* Hide by default */
+            transition: none; /* Remove transition temporarily */
+        }
+
+        .accordion-collapse.show {
+            display: block; /* Show when active */
+            max-height: none; /* No height restriction */
+        }
+
+        /* Timeline section - exactly 80% max-width */
+        .timeline-section,
+        section.timeline,
+        div.timeline-container,
+        .journey-timeline {
+            max-width: 80% !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        /* Add timeline title */
+        .timeline-section::before,
+        section.timeline::before,
+        div.timeline-container::before,
+        .journey-timeline::before {
+            content: "The Journey Timeline";
+            display: block;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #25503c;
+            margin-bottom: 30px;
+        }
+
+        /* Fix Press & Media Resources buttons */
+        .press-media-resources .btn.w-button,
+        .media-contact .btn.w-button,
+        a[href*="press-kit"],
+        a[href*="assets"],
+        a[href^="mailto:"],
+        a[href^="tel:"],
+        .download-press-kit,
+        .download-assets,
+        .email-button,
+        .phone-button {
+            width: auto !important;
+            max-width: 250px !important;
+            display: inline-block !important;
+            margin: 10px !important;
+            padding: 10px 20px !important;
+            text-align: center !important;
+            box-sizing: border-box !important;
+        }
+
+        /* Container for buttons */
+        .press-media-resources .button-container,
+        .media-contact .button-container,
+        .press-media-buttons,
+        .media-contact-buttons,
+        .flexhorizontal {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+            align-items: center !important;
+            gap: 15px !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 auto !important;
+            padding: 0 !important;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .press-media-resources .btn.w-button,
+            .media-contact .btn.w-button,
+            a[href*="press-kit"],
+            a[href*="assets"],
+            a[href^="mailto:"],
+            a[href^="tel:"],
+            .download-press-kit,
+            .download-assets,
+            .email-button,
+            .phone-button {
+                width: 80% !important;
+                max-width: 250px !important;
+                display: block !important;
+                margin: 10px auto !important;
+            }
+            
+            .press-media-resources .button-container,
+            .media-contact .button-container,
+            .press-media-buttons,
+            .media-contact-buttons,
+            .flexhorizontal {
+                flex-direction: column !important;
+            }
+        }
+
+        /* Fix for white space on the right side on mobile */
+        @media (max-width: 1024px) {
+            html, body {
+                overflow-x: hidden;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .absolute.animate-pulse {
+                display: none !important;
+            }
+            
+            /* Target the specific animation element */
+            .absolute.bottom-0.-right-64,
+            div[class*="-right-64"],
+            div[class*="animate-pulse"] {
+                display: none !important;
+            }
+            
+            /* Target the SVG gradient animation specifically */
+            .absolute .inset-x-0.-top-40.left-24.-z-10,
+            div[class*="-top-40"],
+            div[class*="-z-10"],
+            div[class*="overflow-hidden blur-3xl"] {
+                display: none !important;
+            }
+        }
+
+        /* ONLY HEADER BUTTONS - Mobile View FIX */
+        @media (max-width: 768px) {
+          .header-buttons {
+            display: flex !important;
+            flex-direction: column !important; /* Stack vertically */
+            align-items: center !important; /* Center horizontally */
+            gap: 10px !important; /* Consistent spacing */
+          }
+
+          .header-buttons .btn.w-button {
+            width: 70% !important; /* Fixed consistent width */
+            max-width: 250px !important; /* Prevent excessive stretch */
+            padding: 1px 20px !important; /* Comfortable padding */
+            box-sizing: border-box !important;
+            text-align: center !important; /* Properly aligned text */
+            margin-left: auto !important;
+            margin-right: auto !important; /* Ensure horizontal centering */
+            flex-shrink: 0 !important; /* Prevent shrinking */
+          }
+        }
+
+        /* Add at the beginning of the style section */
+        @font-face {
+            font-family: 'Nunito Sans Expanded';
+            src: url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Main Titles */
+        h1, h2, .hero-content, .section-title, .big-title, 
+        .heading-xl, .heading-lg, .hero-title, .main-title {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+            font-size: 48px !important;
+            font-weight: bold !important;
+            letter-spacing: 0.5px !important;
+        }
+
+        /* Subtitles */
+        h3, h4, strong, .subtitle, .section-starter {
+            font-family: 'Helvetica World', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+            font-size: 24px !important;
+            font-weight: bold !important;
+        }
+
+        /* Body Text */
+        p, span, div:not(.hero-content):not(.section-title):not(.subtitle):not(.btn):not(.w-button) {
+            font-family: 'Nunito Sans Expanded', 'Nunito Sans', sans-serif !important;
+            font-size: 16px !important;
+            line-height: 1.5 !important;
+        }
+
+        /* Button Text */
+        .btn, .w-button, .button, .cta-button, a[class*="btn"], button {
+            font-family: 'Nunito Sans Expanded', 'Nunito Sans', sans-serif !important;
+            font-size: 14px !important;
+            font-weight: bold !important;
+            color: #ffffff !important;
+            text-align: center !important;
+        }
+
+        /* FAQ/Accordion Styles */
+        h5, .accordion-title, .accordion-header, .accordion-button {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+            font-size: 20px !important;
+            color: #25503C !important; /* Change to dark green */
+        }
+
+        .accordion-body, .accordion-body p, .accordion-collapse p {
+            font-family: 'Nunito Sans Expanded', 'Nunito Sans', sans-serif !important;
+            font-size: 16px !important;
+            color: #000000 !important; /* Keep black for readability */
+        }
+
+        /* Mobile Typography */
+        @media (max-width: 768px) {
+            h1, h2, .hero-content, .section-title, .big-title, 
+            .heading-xl, .heading-lg, .hero-title, .main-title {
+                font-size: 32px !important;
+            }
+            
+            h3, h4, strong, .subtitle, .section-starter {
+                font-size: 20px !important;
+            }
+            
+            p, span, div:not(.hero-content):not(.section-title):not(.subtitle):not(.btn):not(.w-button) {
+                font-size: 15px !important;
+            }
+            
+            .btn, .w-button, .button, .cta-button {
+                max-width: 300px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
+
+        /* Fix Framework visibility */
+        .framework-content {
+            opacity: 1 !important; /* Make content always visible */
+            visibility: visible !important;
+        }
+
+        /* Update Live Impact Metrics title font */
+        .metrics-dashboard h2 {
+            font-family: 'Helvetica World', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+            font-size: 36px !important;
+        }
+
+        /* Update FAQ accordion colors */
+        .accordion-section {
+            background-color: #25503C !important;
+        }
+
+        /* Fix accordion text color */
+        .accordion-body, .accordion-body p, .accordion-collapse p {
+            color: #000000 !important; /* Keep black for readability */
+            font-family: 'Nunito Sans Expanded', 'Nunito Sans', sans-serif !important;
+            font-size: 16px !important;
+        }
+
+        /* Add hover effect for questions */
+        .accordion-button:hover {
+            color: #78D64B !important; /* Light green on hover */
+        }
+
+        /* Update button visibility */
+        .btn-outline-framework {
+            color: #25503c !important;
+            border: 2px solid #25503c !important;
+            padding: 8px 20px !important;
+            border-radius: 4px !important;
+            transition: all 0.3s ease !important;
+            background-color: transparent !important;
+            display: inline-block !important;
+            text-decoration: none !important;
+            margin: 20px 0 !important;
+        }
+
+        .btn-outline-framework:hover {
+            background-color: #78D64B !important;
+            border-color: #78D64B !important;
+            color: white !important;
+        }
+
+        /* Make framework button visible without animation */
+        .btn-outline-framework {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        /* Force "Live Impact Metrics" text to be white */
+        h2:contains("Live Impact Metrics") {
+          color: #ffffff !important;
+        }
+
+        /* Backup selectors in case the above doesn't work */
+        .impact-metrics-title,
+        #impact-metrics-title,
+        h2.metrics-title,
+        h2[id*="metrics"],
+        h2[class*="metrics"] {
+          color: #ffffff !important;
+        }
+
+        .framework-carousel {
+            background-color: #ffff;  /* Added missing semicolon here */
+            overflow: hidden;
+        }
+
+        .framework-images-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            padding: 20px 0;
+        }
+
+        .framework-images-container::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+        }
+
+        .framework-images-container {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        .framework-image-item {
+            flex: 0 0 auto;
+            width: 33.333%;
+            scroll-snap-align: start;
+            padding: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .framework-image-item:hover {
+            transform: scale(1.05);
+        }
+
+        .framework-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .framework-image-item {
+                width: 80%;
+            }
+        }
+
+        /* Add to your existing CSS */
+        .modal.loading .modal-content {
+            position: relative;
+        }
+
+        .modal.loading .modal-content::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .submit-button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        /* Loading spinner */
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .modal.loading .modal-content::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            margin: -15px 0 0 -15px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            z-index: 1;
+        }
+
+        /* Organizations Section */
+        .organizations-section,
+        .featured-section {
+            padding: 4rem 0;
+            background: #fff;
+        }
+
+        .logo-slider {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+
+        .logo-track {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .logo-item {
+            flex: 0 0 200px;
+            padding: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .logo-item img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .logo-item:hover img {
+            filter: grayscale(0%);
+        }
+
+        /* Featured Logos Section */
+        .featured-logos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            align-items: center;
+            justify-items: center;
+            margin-top: 2rem;
+        }
+
+        .featured-logo {
+            width: 150px;
+            padding: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .featured-logo img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .featured-logo:hover {
+            transform: translateY(-5px);
+        }
+
+        .featured-logo:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .logo-item {
+                flex: 0 0 150px;
+            }
+            
+            .featured-logos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Animation for logo track */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Optional: Add automatic scrolling for many logos */
+        @media (min-width: 992px) {
+            .logo-track {
+                animation: scroll 30s linear infinite;
+            }
+            
+            .logo-track:hover {
+                animation-play-state: paused;
+            }
+        }
+
+        /* Crew Slider Styles */
+        .crew-slide {
+            display: none; /* Hide all slides by default */
+        }
+
+        .crew-slide.active {
+            display: flex; /* Show only active slide */
+        }
+
+        /* Crew Navigation Styles */
+        .crew-slider-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .crew-prev, .crew-next {
+            background-color: var(--primary-color, #FF1D65);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .crew-prev:hover, .crew-next:hover {
+            background-color: var(--primary-dark, #CC1751);
+        }
+
+        .crew-dots {
+            display: flex;
+            gap: 10px;
+            margin: 0 20px;
+        }
+
+        .crew-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .crew-dot.active {
+            background-color: var(--primary-color, #FF1D65);
+        }
+
+        /* Fix for crew slider navigation buttons not being clickable */
+        .crew-slider-nav button,
+        .crew-prev,
+        .crew-next,
+        #crewPrev,
+        #crewNext {
+          cursor: pointer !important;
+          pointer-events: auto !important;
+          position: relative !important;
+          z-index: 100 !important;
+          opacity: 1 !important;
+          background-color: #FF1D65 !important; /* Pink color as requested */
+          border-radius: 50% !important;
+          width: 40px !important;
+          height: 40px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          border: none !important;
+          transition: all 0.2s ease !important;
+        }
+
+        /* Hover state for better UX */
+        .crew-slider-nav button:hover,
+        .crew-prev:hover,
+        .crew-next:hover {
+          background-color: #e01959 !important; /* Slightly darker on hover */
+          transform: scale(1.05) !important;
+        }
+
+        /* Make sure the icons inside buttons are visible */
+        .crew-prev i,
+        .crew-next i,
+        .fas.fa-chevron-left,
+        .fas.fa-chevron-right {
+          color: white !important;
+          font-size: 16px !important;
+          pointer-events: none !important;
+        }
+
+        /* Fix for dots container */
+        .crew-dots,
+        #crewDots {
+          display: flex !important;
+          gap: 10px !important;
+          pointer-events: auto !important;
+          margin: 0 15px !important;
+        }
+
+        /* Fix for individual dots */
+        .crew-dot {
+          width: 12px !important;
+          height: 12px !important;
+          border-radius: 50% !important;
+          background-color: rgba(255, 29, 101, 0.4) !important; /* Lighter pink */
+          cursor: pointer !important;
+          pointer-events: auto !important;
+          transition: all 0.3s ease !important;
+          border: none !important;
+        }
+
+        /* Active dot state */
+        .crew-dot.active,
+        .crew-dot[aria-selected="true"],
+        .crew-dot[data-active="true"],
+        .crew-dot.current {
+          background-color: #FF1D65 !important; /* Full pink when active */
+          transform: scale(1.2) !important;
+        }
+
+        /* Ensure the entire slider navigation is visible */
+        .crew-slider-nav {
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          margin-top: 20px !important;
+          margin-bottom: 20px !important;
+          width: 100% !important;
+        }
+    </style>
+</head>
+<body>
+    <section class="trident-happened" id="trident-happened" aria-labelledby="trident-happened-title">
+        <div class="trident-happened-inner">
+            <h2 id="trident-happened-title">It happened.</h2>
+            <p>In the month before COP30, The Trident sailed the Tapajós River, a tributary of the Amazon, through the territories of the Tupinambá and other communities, carrying their voices to COP30. It was GYC's first sailing expedition: more than three weeks on the river, not a crossing of the Atlantic. During COP30 in Belém, the boat became one of our bases, shared with our partners at UON.Earth.</p>
+            <p>Below is the vision we set out with. The ambition became reality.</p>
+            <dl class="trident-happened-facts">
+                <div class="trident-happened-fact"><dt>Route</dt><dd>Tapajós River → Belém</dd></div>
+                <div class="trident-happened-fact"><dt>On the river</dt><dd>3+ weeks, Oct–Nov 2025</dd></div>
+                <div class="trident-happened-fact"><dt>At COP30</dt><dd>Floating base with UON.Earth</dd></div>
+            </dl>
+        </div>
+    </section>
+    <style>
+    .trident-happened { background: #25503c; color: #fff; padding: 56px 20px; font-family: 'Poppins', sans-serif; }
+    .trident-happened-inner { max-width: 900px; margin: 0 auto; }
+    .trident-happened h2 { font-family: 'Montserrat', sans-serif; font-size: clamp(2rem, 6vw, 3rem); margin: 0 0 16px; color: #fff; }
+    .trident-happened p { font-size: 1.05rem; line-height: 1.7; margin: 0 0 14px; }
+    .trident-happened-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 28px 0 0; }
+    .trident-happened-fact { background: rgba(255,255,255,0.1); border-left: 4px solid #78D64B; border-radius: 8px; padding: 16px 18px; }
+    .trident-happened-fact dt { font-family: 'Montserrat', sans-serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: #c8f0b4; margin: 0 0 4px; }
+    .trident-happened-fact dd { margin: 0; font-size: 1.05rem; font-weight: 600; }
+    </style>
+    <!-- Add ARIA landmarks to major sections -->
+    <header class="hero" role="banner">
+        <!-- Add video background -->
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="assets/videos/0326.mp4" type="video/mp4">
+            <!-- Fallback image -->
+            <img src="assets/images/HEROGPS.png" alt="Ocean sailing">
+        </video>
+        
+        <div class="hero-content">
+            <h1>THE TRIDENT 🔱 20+10 </h1>
+            <p>The Journey That Turns Climate Promises into Tangible Impact</p>
+            <div class="cta-buttons">
+            <a href="https://theglobalyouth.co/" class="btn btn-primary" role="button" target="_blank">Join the Movement</a>
+                <a href="/whyavocado" class="btn btn-secondary"  role="button" target="_blank">Why avocado?</a>
+            </div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+ <br>
+<!-- Add this section before the Live Impact Metrics section -->
+        
+        <!-- Trident Framework Section -->
+<!-- Simplified Framework Section -->
+<section class="framework-section" id="framework">
+    <div class="container">            
+      <div class="text-center mt-3">
+            <a href="/whyavocado" class="btn btn-outline-framework">Explore Full Framework <i class="fas fa-arrow-right ms-2"></i></a>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Simplified styling */
+.framework-title {
+    color: #25503c;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.click-hint {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #666;
+    font-style: italic;
+}
+
+.btn-outline-framework {
+    background-color: #78D64B;         /* filled green button */
+    color: black;                      /* white text */
+    padding: 8px 20px;
+    border: none;                      /* remove border */
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-outline-framework:hover {
+    background-color: #66be3f;         /* slightly darker green on hover */
+    color: white;
+}
+
+</style>
+
+<section class="framework-carousel py-5" id="framework-carousel">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="framework-images-container">
+                    <!-- Image 1 -->
+                    <a href="/thetrident" class="framework-image-item">
+                        <img src="assets/images/THETRIDENT/5.png" class="framework-image" alt="Avocado Framework">
+                    </a>
+                    
+                    <!-- Image 2 -->
+                    <a href="/thetrident" class="framework-image-item">
+                        <img src="assets/images/THETRIDENT/6.png" class="framework-image" alt="Avocado Framework">
+                    </a>
+                    
+                    <!-- Image 3 -->
+                    <a href="/thetrident" class="framework-image-item">
+                        <img src="assets/images/THETRIDENT/10.png" class="framework-image" alt="Avocado Framework">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+             
+<!-- Add CSS for the framework carousel -->
+<style>
+.framework-carousel {
+    background-color: #ffff;  /* Added missing semicolon here */
+    overflow: hidden;
+}
+
+.framework-images-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 0;
+}
+
+.framework-images-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.framework-images-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.framework-image-item {
+    flex: 0 0 auto;
+    width: 33.333%;
+    scroll-snap-align: start;
+    padding: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.framework-image-item:hover {
+    transform: scale(1.05);
+}
+
+.framework-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .framework-image-item {
+        width: 80%;
+    }
+}
+</style>
+
+    <main role="main">
+    
+<!-- FAQ Accordion Section -->
+<section class="faq-section" id="faq">
+    <div class="container">
+        <h2 class="section-title text-center mb-4">Frequently Asked Questions</h2>
+        
+        <div class="accordion-container">
+            <!-- Accordion Item 1 -->
+            <div class="accordion-item">
+                <div class="accordion-header" id="heading-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+                        <span class="accordion-title">What is The Trident Journey?</span>
+                    </button>
+                </div>
+                <div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="heading-1">
+                    <div class="accordion-body">
+                        <p>The Trident is a youth-led, cross-continental sailing journey to COP30 in Brazil—an odyssey for action, collaboration, and climate innovation. This isn't just another climate gathering; it's a vibrant intersection of cultures, ideas, and solutions aboard three sailing vessels powered by vision, courage, and collective responsibility.</p>
+                        <p>Our crew—the "Tridents"—are changemakers from diverse corners of the globe, representing communities often left out of critical dialogues. Together, we're sailing beyond traditional boundaries to deliver fresh perspectives, bold climate solutions, and authentic stories from the frontline, directly into the heart of global negotiations.</p>
+                        <p>Forget standard conferences or petitions—we're navigating ocean miles as a powerful metaphor for bridging climate ambition and tangible results, making every wave count toward real, measurable action.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Accordion Item 2 -->
+            <div class="accordion-item">
+                <div class="accordion-header" id="heading-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+                        <span class="accordion-title">Why "20+10"?</span>
+                    </button>
+                </div>
+                <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2">
+                    <div class="accordion-body">
+                        <p>"Marking 20 years since the Kyoto Protocol came into effect and 10 years since the Paris Agreement was signed. These milestones represent critical turning points in global climate policy—but commitments alone won't save our planet. Now is the time to transition from promises to concrete action.</p>
+                        <p>The trident 20+10 symbolizes our commitment to transforming global goals into genuine, measurable progress. It's not just a reminder of promises made, but a powerful call-to-action: the next decade defines our planet's fate, and we're literally sailing towards the solutions we urgently need.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Accordion Item 3 -->
+            <div class="accordion-item">
+                <div class="accordion-header" id="heading-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+                        <span class="accordion-title">Why do we sail?</span>
+                    </button>
+                </div>
+                <div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-3">
+                    <div class="accordion-body">
+                        <p>We sail because climate action needs more than words—it needs visibility, leadership, and courage in motion. Sailing embodies sustainability, resilience, and the courage required to tackle the challenges ahead. Each mile at sea represents our collective commitment to responsible innovation, resilience, and authentic climate action.</p>
+                        <p>Sailing also unites. On board, cultures blend, ideas flow freely, and solutions are crafted by those whose voices are often drowned out by louder tides. By sailing, we symbolize our collective journey toward an inclusive, just, and sustainable future.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Accordion Item 4 -->
+            <div class="accordion-item">
+                <div class="accordion-header" id="heading-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+                        <span class="accordion-title">Who are The Tridents?</span>
+                    </button>
+                </div>
+                <div id="collapse-4" class="accordion-collapse collapse" aria-labelledby="heading-4">
+                    <div class="accordion-body">
+                        <p>Our crew, known as The Tridents, represents a carefully chosen group of passionate young changemakers, advocates, scientists, entrepreneurs, and storytellers. Each member brings unique experiences from diverse communities worldwide—many facing immediate climate threats.</p>
+                        <p>The Tridents aren't here to protest; they're here to propose. They share powerful insights, practical solutions, and authentic experiences directly with global leaders, media, and stakeholders. By funding The Tridents, you're amplifying genuine voices, investing in youth empowerment, and unlocking the immense potential of collaborative innovation.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Accordion Item 5 -->
+            <div class="accordion-item">
+                <div class="accordion-header" id="heading-5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+                        <span class="accordion-title">What exactly is the Avocado Framework?</span>
+                    </button>
+                </div>
+                <div id="collapse-5" class="accordion-collapse collapse" aria-labelledby="heading-5">
+                    <div class="accordion-body">
+                        <p>The Avocado Framework is our structured approach to turning global climate promises into actionable solutions. Built on three strategic pillars—the Trident of climate action:</p>
+                        <ul>
+                            <li><strong>Nature-Based Solutions</strong> – Harnessing ecosystems to build climate resilience.</li>
+                            <li><strong>Clean & Just Energy Transition</strong> – Promoting equitable access to renewable energy.</li>
+                            <li><strong>Loss & Damage Fund</strong> – Ensuring frontline communities have the resources to recover and thrive.</li>
+                        </ul>
+                        <p>By supporting the Avocado Framework, partners align their resources, reputation, and expertise with meaningful, measurable, and community-driven climate impact.</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="accordion-item">
+                <div class="accordion-header" id="heading-7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-7" aria-expanded="false" aria-controls="collapse-7">
+                        <span class="accordion-title">Common questions you might have</span>
+                    </button>
+                </div>
+                <div id="collapse-7" class="accordion-collapse collapse" aria-labelledby="heading-7">
+                    <div class="accordion-body">
+                        <p><strong>"Who manages logistics and safety?"</strong><br>
+                        A professional, experienced sailing and logistics team oversees safety, logistics, and training. Each crew member undergoes rigorous selection, training, and preparation to ensure a safe, impactful journey.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Accordion Item 8 -->
+            <div class="accordion-item">
+                <div class="accordion-header" id="heading-8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-8" aria-expanded="false" aria-controls="collapse-8">
+                        <span class="accordion-title">Why now?</span>
+                    </button>
+                </div>
+                <div id="collapse-8" class="accordion-collapse collapse" aria-labelledby="heading-8">
+                    <div class="accordion-body">
+                        <p>Because waiting isn't an option. Because promises must become actions. Because youth leadership must translate into policy influence. The climate crisis is urgent, but so is the opportunity: be part of something historic.</p>
+                        <p>Join us as we sail beyond promises—transforming global ambition into real-world impact. Together, we can chart a better course for our planet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Accordion Styles */
+.faq-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.accordion-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    margin-bottom: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.accordion-header {
+    width: 100%;
+}
+
+.accordion-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 16px 20px;
+    min-height: 48px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #25503c;
+    background-color: #fff;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.accordion-button:hover {
+    background-color: #f5f5f5;
+}
+
+.accordion-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(37, 80, 60, 0.25);
+}
+
+.accordion-button::after {
+    content: '►';
+    margin-left: auto;
+    color: #25503c;
+    transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+    content: '▼';
+    transform: rotate(0);
+}
+
+.accordion-collapse {
+    transition: height 0.3s ease;
+}
+
+.accordion-body {
+    padding: 0 20px 20px;
+}
+
+.accordion-body p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.accordion-body p:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-body ul {
+    padding-left: 20px;
+    margin-bottom: 16px;
+}
+
+.accordion-body li {
+    margin-bottom: 8px;
+}
+
+/* Ensure the accordion works without Bootstrap JS */
+.accordion-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-collapse.show {
+    max-height: 1000px; /* Arbitrary large value */
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all accordion buttons
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+    
+    // Add click event to each button
+    accordionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Toggle the collapsed class
+            this.classList.toggle('collapsed');
+            
+            // Get the target collapse element
+            const targetId = this.getAttribute('data-bs-target');
+            const targetCollapse = document.querySelector(targetId);
+            
+            // Toggle the show class
+            targetCollapse.classList.toggle('show');
+            
+            // Update aria-expanded attribute
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+        });
+    });
+});
+</script>
+                <!-- Timeline Animation -->
+                <div class="timeline-container">
+                    <div class="timeline-track">
+                        <div class="timeline-point" data-date="Feb 2025">
+                            <div class="point-content">
+                                <h3>Project Launch</h3>
+                                <p>Ship acquisition phase begins</p>
+                            </div>
+                        </div>
+                        <div class="timeline-point" data-date="May 2025">
+                            <div class="point-content">
+                                <h3>Preparation Phase</h3>
+                                <p>Ships secured and crew preparations</p>
+                            </div>
+                        </div>
+                        <div class="timeline-point" data-date="Sep 2025">
+                            <div class="point-content">
+                                <h3>Journey Begins</h3>
+                                <p>Departure from European ports</p>
+                            </div>
+                        </div>
+                        <div class="timeline-point" data-date="Oct 2025">
+                            <div class="point-content">
+                                <h3>COP30 Arrival</h3>
+                                <p>Reaching Brazil for the conference</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!-- Interactive Map -->
+<section class="journey-map" id="journey-map">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-2"> <!-- changed from mb-4 to mb-2 -->
+        <h2 class="section-title">The original plan: an Atlantic crossing</h2>
+        <p class="section-subtitle">Track our route from Lisbon to Belém for COP30</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full-width map container with updated height -->
+  <div id="map"></div>
+
+  <!-- Route information below the map -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="route-info-card">
+          <h3><i class="fas fa-route"></i> Route Details</h3>
+          <ul>
+            <li><strong>Distance:</strong> 4,800 nautical miles</li>
+            <li><strong>Duration:</strong> Approximately 45 days</li>
+            <li><strong>Departure:</strong> Lisbon, Portugal</li>
+            <li><strong>Arrival:</strong> Belém, Brazil</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="route-info-card">
+          <h3><i class="fas fa-anchor"></i> Key Waypoints</h3>
+          <ul>
+            <li>Lisbon, Portugal</li>
+            <li>Madeira</li>
+            <li>Canary Islands</li>
+            <li>Cape Verde</li>
+            <li>Equator Crossing</li>
+            <li>Belém, Brazil</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="route-info-card">
+          <h3><i class="fas fa-ship"></i> Vessel Information</h3>
+          <ul>
+            <li><strong>Name:</strong> Ocean Advocate</li>
+            <li><strong>Type:</strong> Sustainable Catamaran</li>
+            <li><strong>Length:</strong> 24 meters</li>
+            <li><strong>Propulsion:</strong> Solar & Wind Hybrid</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Styles -->
+<style>
+/* Bigger map with full screen height */
+#map {
+  width: 100%;
+  height: calc(100vh - 100px); /* takes full screen minus top padding */
+}
+
+/* Clean and compact section title styles */
+/* Clean and compact section title styles */
+.section-title {
+  font-size: 2rem;
+  margin: 0.5rem 0 0.25rem 0; /* tighter spacing */
+  color: #ff1d65;
+  font-family: Impact, sans-serif;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  margin: 0 0 0.75rem 0;
+  color: #666;
+  font-family: "Nunito Sans Expanded", sans-serif;
+  text-align: center;
+}
+
+/* Remove background from journey-map container */
+.journey-map .container {
+  background-color: transparent !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Route info card styles */
+.route-info-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  height: 100%;
+}
+
+.route-info-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.route-info-card ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.route-info-card li {
+  margin-bottom: 10px;
+  padding-left: 5px;
+  border-left: 3px solid var(--primary-color);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  #map {
+    height: 350px;
+    margin-bottom: 1rem; /* slight space after map */
+  }
+
+  .route-info-card {
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+</style>
+
+              
+
+<!-- Add the Mapbox script after your other scripts but before the closing body tag -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize Mapbox map
+    mapboxgl.accessToken = 'pk.eyJ1Ijoib213dG9jb3AiLCJhIjoiY204ZXYyMmhyMDVsczJrb3Y3amhmZGVzbyJ9.EwtKgipjYgHt6onUWyU32w';
+    
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-30, 20],
+        zoom: 3
+    });
+    
+    // Add navigation controls
+    map.addControl(new mapboxgl.NavigationControl(), 'top-right');
+    
+    // Define route coordinates
+    const routeCoordinates = [
+        { lng: -9.1333, lat: 38.7167, name: 'Lisbon' },
+        { lng: -16.9500, lat: 32.7500, name: 'Madeira' },
+        { lng: -15.4000, lat: 28.1000, name: 'Canary Islands' },
+        { lng: -23.5167, lat: 14.9167, name: 'Cape Verde' },
+        { lng: -29.0000, lat: 0.0000, name: 'Equator Crossing' },
+        { lng: -48.5039, lat: -1.4558, name: 'Belém' }
+    ];
+    
+    // Wait for map to load before adding route
+    map.on('load', () => {
+        // Add route line
+        map.addSource('route', {
+            'type': 'geojson',
+            'data': {
+                'type': 'Feature',
+                'properties': {},
+                'geometry': {
+                    'type': 'LineString',
+                    'coordinates': routeCoordinates.map(point => [point.lng, point.lat])
+                }
+            }
+        });
+        
+        map.addLayer({
+            'id': 'route',
+            'type': 'line',
+            'source': 'route',
+            'layout': {
+                'line-join': 'round',
+                'line-cap': 'round'
+            },
+            'paint': {
+                'line-color': '#0088cc',
+                'line-width': 4,
+                'line-dasharray': [0.5, 1.5]
+            }
+        });
+        
+        // Add markers for each waypoint
+        routeCoordinates.forEach(point => {
+            // Create a DOM element for the marker
+            const el = document.createElement('div');
+            el.className = 'waypoint-marker';
+            el.style.width = '20px';
+            el.style.height = '20px';
+            el.style.borderRadius = '50%';
+            el.style.backgroundColor = '#0088cc';
+            el.style.border = '2px solid white';
+            el.style.boxShadow = '0 0 10px rgba(0,0,0,0.3)';
+            
+            // Add marker to map
+            new mapboxgl.Marker(el)
+                .setLngLat([point.lng, point.lat])
+                .setPopup(new mapboxgl.Popup({ offset: 25 })
+                    .setHTML(`<h3>${point.name}</h3>`))
+                .addTo(map);
+        });
+        
+        // Add ship marker (current position)
+        // For demo purposes, placing it at the first waypoint
+        const shipEl = document.createElement('div');
+        shipEl.className = 'ship-marker';
+        shipEl.style.width = '30px';
+        shipEl.style.height = '30px';
+        shipEl.style.backgroundColor = '#FF1D65';
+        shipEl.style.borderRadius = '50%';
+        
+        new mapboxgl.Marker(shipEl)
+            .setLngLat([routeCoordinates[0].lng, routeCoordinates[0].lat])
+            .setPopup(new mapboxgl.Popup({ offset: 25 })
+                .setHTML('<h3>Ocean Advocate</h3><p>Current Position</p>'))
+            .addTo(map);
+    });
+});
+</script>
+
+<!-- Add some CSS for the route info cards -->
+<style>
+.route-info-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.route-info-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.route-info-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.route-info-card li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+    border-left: 3px solid var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    #map {
+        height: 350px;
+    }
+    
+    .route-info-card {
+        margin-bottom: 20px;
+    }
+}
+</style>
+<!-- Framework Cards Section -->
+<div class="trident-framework">
+  <h3>The Trident Avocado Framework</h3>
+  <div class="ships-grid">
+    <div class="ship-card" data-detail="energy">
+      <div class="ship-icon"><i class="fas fa-solar-panel"></i></div>
+      <h4>Clean Energy Transition</h4>
+    </div>
+    <div class="ship-card" data-detail="nature">
+      <div class="ship-icon"><i class="fas fa-leaf"></i></div>
+      <h4>Nature-Based Solutions</h4>
+    </div>
+    <div class="ship-card" data-detail="youth">
+      <div class="ship-icon"><i class="fas fa-users"></i></div>
+      <h4>Loss & Damage Fund</h4>
+    </div>
+  </div>
+</div>
+
+<!-- Minimal Modal for Details -->
+<div class="framework-modal" id="frameworkModal">
+  <div class="framework-backdrop" onclick="closeFrameworkModal()"></div>
+  <div class="framework-content">
+    <span class="framework-close" onclick="closeFrameworkModal()">&times;</span>
+    <h4 id="frameworkTitle"></h4>
+    <p id="frameworkText"></p>
+  </div>
+</div>
+
+<!-- JS Logic -->
+<script>
+  const contentMap = {
+    energy: {
+      title: "Clean Energy Transition",
+      text: "The sailing journey itself is a living example of clean and sustainable travel, reducing the carbon footprint compared to conventional transport. It symbolizes the commitment to clean energy initiatives, especially as we explore renewable or low-carbon technologies on board."
+    },
+    nature: {
+      title: "Nature-Based Solutions",
+      text: "The scientific research conducted during the sail focuses on ocean health, biodiversity, and the interplay of marine ecosystems with climate solutions. These findings support NBS projects and provide insights for NCQG grant-based initiatives."
+    },
+    youth: {
+      title: "Loss and Damage Fund",
+      text: "By connecting and training youth leaders across continents, The Trident 20+10 fosters resilience, knowledge-sharing, and support mechanisms that can aid communities impacted by climate change. Documenting this journey amplifies the voices often unheard in global climate negotiations, bringing stories of vulnerability and solutions to the forefront."
+    }
+  };
+
+  const cards = document.querySelectorAll(".ship-card");
+  const modal = document.getElementById("frameworkModal");
+  const titleEl = document.getElementById("frameworkTitle");
+  const textEl = document.getElementById("frameworkText");
+
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      const key = card.getAttribute("data-detail");
+      if (contentMap[key]) {
+        titleEl.innerText = contentMap[key].title;
+        textEl.innerText = contentMap[key].text;
+        modal.classList.add("show");
+      }
+    });
+  });
+
+  function closeFrameworkModal() {
+    modal.classList.remove("show");
+  }
+</script>
+
+<!-- Minimal Clean CSS -->
+<style>
+.trident-framework {
+  text-align: center;
+  padding: 40px 20px;
+}
+.ships-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.ship-card {
+  background: #f0f8ff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 220px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.ship-card:hover {
+  transform: translateY(-5px);
+}
+.ship-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #0077b6;
+}
+.framework-modal {
+  display: none;
+}
+.framework-modal.show {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+}
+.framework-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+.framework-content {
+  position: relative;
+  margin: 100px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  max-width: 600px;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease-in;
+}
+.framework-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+.framework-content h4 {
+  margin-top: 0;
+  color: #0077b6;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+           <!-- Fixed Crew Story Slider Section with ALL crew members -->
+<section class="crew-stories" id="crew-stories">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">THE TRIDENTS 🔱</h2>
+                <p class="section-subtitle">The passionate individuals driving our mission forward</p>
+            </div>
+        </div>
+        
+        <div class="crew-slider-container">
+            <div class="crew-slider" id="crewSlider">
+                <!-- Crew Member 1 - Agustin -->
+                <div class="crew-slide active">
+                    <div class="crew-portrait">
+                        <img src="assets/images/ADY07033.jpg" alt="Agustin Ocana" class="crew-image">
+                    </div>
+                    <div class="crew-story">
+                        <h3 class="crew-name">Agustin Ocaña</h3>
+                        <p class="crew-role">Solucionist & Founder Director</p>
+                        <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                        <p class="crew-quote">
+                            "GYC began as an impossible dream—planting a 3-meter tree of hope inside the heart of global negotiations at COP27.
+                             Three years later, we return not with a symbol, but with the wind itself at our back. What once stood as an inert 
+                                figure of leaves now breathes through us, as movement, as mission. The Avocado Framework is no longer a 
+                             concept—it is a current, guiding us across oceans and through systems. This voyage is not protest, but prophecy. 
+                             A call to global leaders: walk with us, or be left behind. 
+                             We are not arriving. We are already here. A collective of changemakers, aligned with the pulse of the Earth
+                              and the voices of millions. This is the journey that hope has been waiting for."
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Crew Member 2 - Marie-Claire -->
+                <div class="crew-slide">
+                    <div class="crew-portrait">
+                        <img src="assets/images/CREWOMW/MC.jpeg" alt="Marie Claire Graf" class="crew-image">
+                    </div>
+                    <div class="crew-story">
+                        <h3 class="crew-name">Marie-Claire Graf</h3>
+                        <p class="crew-role">Policy & Ship Logistics</p>
+                        <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                        <p class="crew-quote">
+                            ""As we sail in rough waters, we must adjust not only our sails but also our crew. 
+                                Intergenerational leadership is essential—when young people are enabled to take 
+                                the helm in diplomacy and decision-making, we catch the winds of innovation. 
+                                Only together can we navigate the stormy seas of environmental justice and set 
+                                a steady course for meaningful and lasting change. "
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Crew Member 3 - Ella -->
+                <div class="crew-slide">
+                    <div class="crew-portrait">
+                        <img src="assets/images/ella.enc" alt="Ella Matsdotter" class="crew-image">
+                    </div>
+                    <div class="crew-story">
+                        <h3 class="crew-name">Ella Matsdotter</h3>
+                        <p class="crew-role">Assistant Director & Logistics Lead</p>
+                        <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                        <p class="crew-quote">
+                            "Having lived in five different countries, I've learned that stories shape 
+                                the way we understand the world. Climate change is more than numbers and
+                                policies—it's lived experiences, it's resilience, and it's action.
+                                This journey is about documenting those stories in real time, bringing 
+                                the Atlantic crossing to the world, and making sure all the voices we take
+                                with us on our journey reach the decision-makers at COP30."
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Crew Member 4 - Marco -->
+                <div class="crew-slide">
+                    <div class="crew-portrait">
+                        <img src="assets/images/CREWOMW/MY.jpg" alt="Marco Yáñez" class="crew-image">
+                    </div>
+                    <div class="crew-story">
+                        <h3 class="crew-name">Marco Yáñez</h3>
+                        <p class="crew-role">Climate Change Negotiator</p>
+                        <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                        <p class="crew-quote">
+                            "Discussing our future at the United Nations changed my perspective of the planet that we live on. 
+                            The Ocean needs a voice, and for COP30 we will navigate to be that voice."
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Crew Member 5 - Kathleen -->
+                <div class="crew-slide">
+                    <div class="crew-portrait">
+                        <img src="assets/images/CREWOMW/KA.JPG" alt="Kathleen Arthur" class="crew-image">
+                    </div>
+                    <div class="crew-story">
+                        <h3 class="crew-name">Kathleen Arthur</h3>
+                        <p class="crew-role">Brand Partnerships</p>
+                        <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                        <p class="crew-quote">
+                            "I've spent my time over the years trying to translate theory into practice. Finally that chance fell into my lap with GYC. 
+                            Being a member of an International Community, born out of the Country Sides of Hong Kong, it's become more apparent that 
+                            if we redirect even a fraction of our attention to our current global climate status, this means we are ALREADY ENROUTE 
+                            to self awareness and development across all aspects of our lives. 1% better a day for 365 days is 365% better than the 
+                            day we began this journey. For our children. Let life's reality inform your daily decisions."
+                        </p>
+                                          </div>
+                </div>
+                
+                <!-- Crew Member 6 - Amalie -->
+                <div class="crew-slide">
+                    <div class="crew-portrait">
+                        <img src="assets/images/CREWOMW/Amalie.png" alt="Amalie Eikeland Holmefjord" class="crew-image">
+                    </div>
+                    <div class="crew-story">
+                        <h3 class="crew-name">Amalie Eikeland Holmefjord</h3>
+                        <p class="crew-role">Lead Norway Engagement</p>
+                        <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                        <p class="crew-quote">
+                            "I have been following COP as a youth delegate for Norway for the last two years, 
+                                and in the midst of all that happens (and not happens) at a COP, the young people I have met,
+                                who have started incredible initiatives all over the world, is what gives me hope for the future. OMW20+10 will bring this hope to COP30."
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Crew Member 7 - Michael -->
+                <div class="crew-slide">
+                    <div class="crew-portrait">
+                        <img src="assets/images/CREWOMW/MK.jpeg" alt="Michael Chan" class="crew-image">
+                    </div>
+                    <div class="crew-story">
+                        <h3 class="crew-name">Michael Chan</h3>
+                        <p class="crew-role">Strategic Advisor</p>
+                        <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                        <p class="crew-quote">
+                            "Lifelong ocean-lover and Marine Biologist turned entrepreneur. Surfer & kitesurfer who believes with a passion 
+                            in pursuing ocean-going skills. Michael promotes surf culture as a platform for professional self-development 
+                            and to cultivate a profound understanding of the ocean for change."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Crew Member 8 - Aarti -->
+                <div class="crew-slide">
+                    <div class="crew-portrait">
+                        <img src="assets/images/CREWOMW/VO.jpeg" alt="Valeria Ocaña" class="crew-image">
+                    </div>
+                    <div class="crew-story">
+                        <h3 class="crew-name">Valeria Ocaña</h3>
+                        <p class="crew-role">Digital Marketing Expert</p>
+                        <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                        <p class="crew-quote">
+                            "There is nothing more powerful than disconnecting in the sea. Nature has helped me 
+reconnect with myself, and that connection has driven me to empower creators around the world to make a difference 
+in digital media.
+The Global Youth Coalition has been an inspiring platform that allows me to use my skills to take care of Mother Earth.
+ There is nothing more meaningful than aligning what you do best with what you love most.
+
+Let's come together as a community of planet lovers and create real impact—because the world needs it now more than ever."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Crew Member 9 - Irene -->
+                <div class="crew-slide">
+                    <div class="crew-portrait">
+                        <img src="assets/images/CREWOMW/ID.jpeg" alt="Irene Delfanti" class="crew-image">
+                    </div>
+                    <div class="crew-story">
+                        <h3 class="crew-name">Irene Delfanti</h3>
+                        <p class="crew-role">GYC Champ & Project Designer</p>
+                        <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                        <p class="crew-quote">
+                            "I grew up seeing water coming and going every year, crystallized in the white snow of the Alps. 
+When I look out of my window now, I know that landscape has an expiry date and that that water is going to the ocean faster than ever. 
+I am sailing to ride hee same current, organizing with the people I know have my same vision. We are not going to stand on the side 
+and watch our world disappear, the time of nature is already here."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Crew Member 10 - Carlos Shanka -->
+                <div class="crew-slide">
+                    <div class="crew-portrait">
+                        <img src="assets/images/CREWOMW/CS.jpeg" alt="Carlos Shanka" class="crew-image">
+                    </div>
+                    <div class="crew-story">
+                        <h3 class="crew-name">Carlos Shanka</h3>
+                        <p class="crew-role">CoFounder GYC & Young Scientist</p>
+                        <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                        <p class="crew-quote">
+                            "Carlos Shanka is a Spanish-Senegalese environmental expert from the Canary Islands, Spain.
+His sustainability efforts at the University of Bristol, representing 29K students, earned him awards, including the most prestigious recognition in higher education in the UK and Ireland, the Sustainability Champion Green Gown Award.
+After interning at the UNDP, empowering youth and doing research on Nature-based Solutions, he founded Global Shapers Las Palmas, a pioneering youth hub in the Canary Islands, addressing local challenges by empowering and reuniting local talented youngsters.
+Conducting environmental research as a UNESCO Young Scientist, he is pursuing an MA in Development Studies at the Institute of Development Studies, the University of Sussex. He is an active member of different environmental organisations like UNFCCC's YOUNGO, or UNEP's CYMG, among others."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Simplified Slider Navigation -->
+        <div class="crew-slider-nav">
+            <button class="crew-prev" id="crewPrev" aria-label="Previous crew member">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="crew-dots" id="crewDots">
+                <!-- Dots will be added by JavaScript -->
+            </div>
+            <button class="crew-next" id="crewNext" aria-label="Next crew member">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+    <section class="trident-uon" id="trident-uon" aria-labelledby="trident-uon-title">
+        <div class="trident-uon-inner">
+            <h2 id="trident-uon-title">Our main supporter: the Union of Nature</h2>
+            <p>The Trident was made possible by the Union of Nature Foundation (UON), our main supporter for this expedition. UON is a member of the International Union for Conservation of Nature (IUCN) that brings nature-protection organisations together around one goal: protecting half the planet by 2050. Through UON.Earth, anyone can protect nature square metre by square metre, with geocoded proof of protection. During COP30, the boat became a shared base for GYC and UON in Belém.</p>
+            <h3>What the partnership left behind</h3>
+            <ul>
+                <li><strong><a href="https://yachana.com" target="_blank" rel="noopener">Yachana Foundation</a> joins UON.</strong> Through the work of GYC founder Agustín Ocaña, UON accepted Ecuador's Yachana Foundation into its network. Yachana has worked in the Ecuadorian Amazon since 1991, combining rainforest conservation with education for Indigenous and mestizo youth.</li>
+                <li><strong>More than 1,000 m² protected with students.</strong> A project with <a href="https://jkepler.edu.ec" target="_blank" rel="noopener">Colegio Johannes Kepler</a> in Quito, Ecuador, led personally by Agustín, already protects more than 1,000 m² through UON.Earth.</li>
+            </ul>
+            <a href="https://uon.earth" class="trident-uon-button" target="_blank" rel="noopener">Visit UON.Earth</a>
+        </div>
+    </section>
+    <style>
+    .trident-uon { background: #f4faf0; padding: 56px 20px; font-family: 'Poppins', sans-serif; color: #333; }
+    .trident-uon-inner { max-width: 900px; margin: 0 auto; }
+    .trident-uon h2 { font-family: 'Montserrat', sans-serif; color: #25503c; font-size: clamp(1.6rem, 4.5vw, 2.2rem); margin: 0 0 16px; }
+    .trident-uon h3 { font-family: 'Montserrat', sans-serif; color: #25503c; font-size: 1.25rem; margin: 28px 0 12px; }
+    .trident-uon p, .trident-uon li { font-size: 1.02rem; line-height: 1.7; }
+    .trident-uon ul { padding-left: 20px; margin: 0 0 24px; }
+    .trident-uon li { margin-bottom: 12px; }
+    .trident-uon li strong { font-size: inherit !important; line-height: inherit; }
+    .trident-uon a { color: #25503c; text-decoration: underline; }
+    .trident-uon a.trident-uon-button { display: inline-block; background: #78D64B; color: #000; font-weight: 700; text-decoration: none; padding: 12px 24px; border-radius: 4px; }
+    .trident-uon a.trident-uon-button:hover { background: #66be3f; color: #fff; }
+    </style>
+
+
+       <!-- Add this section before the Live Impact Metrics section -->
+<section class="omw-carousel py-5" id="omw-carousel">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="omw-images-container">
+                    <!-- Image 1 -->
+                    <div class="omw-image-item">
+                        <img src="assets/images/OMW/3.jpg" class="omw-image" alt="the project">
+                    </div>
+                    
+                    <!-- Image 2 -->
+                    <div class="omw-image-item">
+                        <img src="assets/images/OMW/6.jpg" class="omw-image" alt="the problem">
+                    </div>
+                    
+                    <!-- Image 3 -->
+                    <div class="omw-image-item">
+                        <img src="assets/images/OMW/7.jpg" class="omw-image" alt="the solution">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add CSS for the OMW carousel -->
+<style>
+.omw-carousel {
+    background-color: #f8f9fa;
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.omw-images-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.omw-images-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.omw-images-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.omw-image-item {
+    flex: 0 0 auto;
+    width: 33.333%;
+    scroll-snap-align: start;
+    padding: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.omw-image-item:hover {
+    transform: scale(1.05);
+}
+
+.omw-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .omw-image-item {
+        width: 80%;
+    }
+}
+</style>
+        <section class="get-involved" role="region" aria-labelledby="involved-title">
+            <h2 id="involved-title" class="section-title">Get Involved</h2>
+            <div class="container">
+                <div class="involvement-grid">
+                    <!-- Volunteer Card -->
+                    <div class="involvement-card">
+                        <div class="card-header">
+                            <i class="fas fa-hands-helping"></i>
+                            <h3>Volunteer</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="impact-statement">
+                                <h4>Your Impact</h4>
+                                <p>Help organize climate actions and support our mission across continents</p>
+                            </div>
+                            <ul class="opportunity-list">
+                                <li><i class="fas fa-check"></i> Lead local initiatives</li>
+                                <li><i class="fas fa-check"></i> Digital campaign support</li>
+                                <li><i class="fas fa-check"></i> Event coordination</li>
+                                <li><i class="fas fa-check"></i> Content creation</li>
+                            </ul>
+                            <button class="action-button" onclick="openInvolvementModal('volunteer')" aria-label="Apply to volunteer">
+                                Apply Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Partner Card -->
+                    <div class="involvement-card">
+                        <div class="card-header">
+                            <i class="fas fa-handshake"></i>
+                            <h3>Partner</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="impact-statement">
+                                <h4>Your Impact</h4>
+                                <p>Enable sustainable solutions through strategic collaboration</p>
+                            </div>
+                            <ul class="opportunity-list">
+                                <li><i class="fas fa-check"></i> Technical expertise</li>
+                                <li><i class="fas fa-check"></i> Resource sharing</li>
+                                <li><i class="fas fa-check"></i> Knowledge exchange</li>
+                                <li><i class="fas fa-check"></i> Network amplification</li>
+                            </ul>
+                            <button class="action-button" onclick="openInvolvementModal('partner')" aria-label="Become a partner">
+                                Partner With Us
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Involvement Modal Template -->
+            <div id="involvementModal" class="modal" role="dialog" aria-labelledby="modalTitle">
+                <div class="modal-content">
+                    <button class="close-modal" onclick="closeInvolvementModal()" aria-label="Close modal">&times;</button>
+                    <div id="modalContent"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="press-media" role="region" aria-labelledby="press-title">
+            <h2 id="press-title" class="section-title">Press & Media</h2>
+            <div class="container">
+                <div class="resource-grid">
+
+                    <!-- Media Contact -->
+                    <div class="resource-card contact">
+                        <div class="resource-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Media Contact</h3>
+                        <p>For press inquiries and interview requests:</p>
+                        <p>Speerstrasse 36, 8038 Zurich, Switzerland</p>
+                        <a href="mailto:takeaction@theglobalyouth.co" class="contact-button">
+                            <i class="fas fa-envelope"></i> takeaction@theglobalyouth.co
+                        </a>
+                        <a href="tel:+41778071068" class="contact-button">
+                            <i class="fas fa-phone"></i> +41 77 807 10 68
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Add skip link for keyboard navigation -->
+    <a href="#main" class="skip-link visually-hidden">Skip to main content</a>
+
+    <!-- Ship detail modals -->
+    <div id="shipModal" class="modal">
+        <div class="modal-content ship-modal">
+            <span class="close-modal" onclick="closeShipModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scroll functionality
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        function openModal(type) {
+            document.getElementById(`${type}Modal`).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(type) {
+            document.getElementById(`${type}Modal`).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function handleSubmit(event, type) {
+            event.preventDefault();
+            // Add form submission logic here
+            alert('Thank you for your interest! We will contact you soon.');
+            closeModal(type);
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Duplicate ticker items for continuous scroll
+        const ticker = document.querySelector('.ticker-wrapper');
+        ticker.innerHTML += ticker.innerHTML;
+
+        // Handle media signup
+        function handleMediaSignup(event) {
+            event.preventDefault();
+            // Add your form submission logic here
+            alert('Thank you for your interest! We will be in touch shortly.');
+        }
+
+        // Auto-update news ticker
+        function updateNewsTicker() {
+            // Add logic to fetch and update news items
+            console.log('Updating news ticker...');
+        }
+
+        // Update ticker every 5 minutes
+        setInterval(updateNewsTicker, 300000);
+
+        // Configuration object for dynamic updates
+        const config = {
+            updateInterval: 5000, // 5 seconds
+        };
+
+        // Function to handle dynamic content updates
+        async function updateDynamicContent() {
+            const updateElements = document.querySelectorAll('[data-update]');
+            
+            updateElements.forEach(async element => {
+                const updateType = element.dataset.update;
+                try {
+                    const response = await fetch(config.endpoints[updateType]);
+                    const data = await response.json();
+                    updateContentSection(element, data);
+                } catch (error) {
+                    console.error(`Error updating ${updateType}:`, error);
+                }
+            });
+        }
+
+        // Initialize dynamic updates
+        setInterval(updateDynamicContent, config.updateInterval);
+
+        // Handle lazy loading of images
+        document.addEventListener('DOMContentLoaded', () => {
+            const lazyImages = document.querySelectorAll('[data-src]');
+            
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => imageObserver.observe(img));
+        });
+
+        // Handle service worker for offline capabilities
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registered:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.error('ServiceWorker registration failed:', error);
+                    });
+            });
+        }
+
+        // Debug helper function
+        function debugLog(message, isError = false) {
+            const debugDiv = document.getElementById('map-debug');
+            const timestamp = new Date().toLocaleTimeString();
+            const logMessage = `[${timestamp}] ${message}`;
+            console.log(logMessage);
+            if (debugDiv) {
+                debugDiv.innerHTML += `<div style="color: ${isError ? 'red' : 'blue'}">${logMessage}</div>`;
+            }
+        }
+
+        // Check if Mapbox GL JS is loaded
+        if (typeof mapboxgl === 'undefined') {
+            debugLog('ERROR: Mapbox GL JS is not loaded. Check if the script is properly included.', true);
+        } else {
+            debugLog('Mapbox GL JS is loaded successfully');
+        }
+
+        // Check if access token is valid
+        if (!mapboxgl.accessToken) {
+            debugLog('ERROR: No access token found', true);
+        } else {
+            debugLog('Access token is set');
+        }
+
+        // Check if the container exists
+        if (!document.getElementById('journey-map')) {
+            debugLog('ERROR: Map container not found', true);
+        } else {
+            debugLog('Map container found');
+        }
+
+        // Comprehensive WebGL check
+        function checkWebGLSupport() {
+            // Create canvas element
+            const canvas = document.createElement('canvas');
+            const debugDiv = document.getElementById('map-debug');
+            
+            // Try to get WebGL context
+            let gl;
+            let message = "";
+
+            try {
+                // Try to get WebGL2 first
+                gl = canvas.getContext('webgl2') || 
+                     canvas.getContext('webgl') || 
+                     canvas.getContext('experimental-webgl');
+
+                if (!gl) {
+                    message = "Unable to initialize WebGL. Your browser may not support it.";
+                    debugLog(message, true);
+                    return false;
+                }
+
+                // Check for necessary extensions
+                const extensions = [
+                    'OES_texture_float',
+                    'OES_texture_float_linear',
+                    'OES_element_index_uint',
+                    'WEBGL_depth_texture'
+                ];
+
+                const missingExtensions = extensions.filter(ext => !gl.getExtension(ext));
+                
+                if (missingExtensions.length > 0) {
+                    message = `Missing WebGL extensions: ${missingExtensions.join(', ')}`;
+                    debugLog(message, true);
+                }
+
+                // Check maximum texture size
+                const maxTextureSize = gl.getParameter(gl.MAX_TEXTURE_SIZE);
+                debugLog(`Maximum texture size: ${maxTextureSize}`);
+
+                // Check maximum viewport dimensions
+                const maxViewportDims = gl.getParameter(gl.MAX_VIEWPORT_DIMS);
+                debugLog(`Maximum viewport dimensions: ${maxViewportDims[0]}x${maxViewportDims[1]}`);
+
+                // Check if WebGL is software rendered
+                const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+                if (debugInfo) {
+                    const renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
+                    const vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
+                    debugLog(`Graphics renderer: ${renderer}`);
+                    debugLog(`Graphics vendor: ${vendor}`);
+                }
+
+                return true;
+
+            } catch (e) {
+                message = "WebGL error: " + e.message;
+                debugLog(message, true);
+                return false;
+            } finally {
+                if (message) {
+                    // Show fallback content if WebGL is not properly supported
+                    const mapContainer = document.getElementById('journey-map');
+                    if (mapContainer) {
+                        mapContainer.innerHTML = `
+                            <div style="padding: 20px; text-align: center; background: #f8f9fa; border-radius: 8px;">
+                                <h3 style="color: #dc3545;">WebGL Support Issue</h3>
+                                <p>${message}</p>
+                                <p>Try these solutions:</p>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li>✓ Enable hardware acceleration in your browser</li>
+                                    <li>✓ Update your graphics drivers</li>
+                                    <li>✓ Try a different browser (Chrome or Firefox recommended)</li>
+                                </ul>
+                                <p>
+                                    <a href="https://get.webgl.org" 
+                                       target="_blank" 
+                                       style="color: #0066cc; text-decoration: none;">
+                                        Check WebGL Support →
+                                    </a>
+                                </p>
+                            </div>
+                        `;
+                    }
+                }
+            }
+        }
+
+        // Run WebGL check before initializing Mapbox
+        if (!checkWebGLSupport()) {
+            debugLog('WebGL support check failed. Map initialization aborted.', true);
+        } else {
+            debugLog('WebGL support confirmed. Proceeding with map initialization.');
+            // Initialize Mapbox map here
+            try {
+                mapboxgl.accessToken = 'pk.eyJ1Ijoib213dG9jb3AiLCJhIjoiY204ZXYyMmhyMDVsczJrb3Y3amhmZGVzbyJ9.EwtKgipjYgHt6onUWyU32w';
+                
+                const map = new mapboxgl.Map({
+                    container: 'journey-map',
+                    style: 'mapbox://styles/mapbox/streets-v11',
+                    center: [-30, 20],
+                    zoom: 3,
+                    maxZoom: 9,
+                    minZoom: 2
+                });
+
+                map.on('load', () => {
+                    debugLog('Map loaded successfully');
+                    
+                    // Add navigation controls
+                    map.addControl(new mapboxgl.NavigationControl());
+
+                    // Add the route
+                    const route = {
+                        'type': 'Feature',
+                        'properties': {},
+                        'geometry': {
+                            'type': 'LineString',
+                            'coordinates': [
+                                [-9.1427, 38.7223],  // Lisbon
+                                [-48.5000, -1.4558]  // Belém
+                            ]
+                        }
+                    };
+
+                    map.addSource('route', {
+                        'type': 'geojson',
+                        'data': route
+                    });
+
+                    map.addLayer({
+                        'id': 'route',
+                        'type': 'line',
+                        'source': 'route',
+                        'layout': {
+                            'line-join': 'round',
+                            'line-cap': 'round'
+                        },
+                        'paint': {
+                            'line-color': '#FF1D65',
+                            'line-width': 3
+                        }
+                    });
+                });
+
+                map.on('error', (e) => {
+                    document.getElementById('map-debug').innerHTML += `<br>❌ Map error: ${e.error.message}`;
+                });
+
+            } catch (error) {
+                debugLog(`Map initialization error: ${error.message}`, true);
+            }
+        }
+
+        function openShipModal(type) {
+            const modal = document.getElementById('shipModal');
+            const content = document.getElementById('modalContent');
+            
+            const modalContent = {
+                energy: {
+                    title: 'Clean Energy Transition',
+                    description: `<h3>Sustainable Sailing Innovation</h3>
+                        <p>Our vessels are equipped with cutting-edge renewable energy systems:</p>
+                        <ul>
+                            <li>Solar panels providing up to 80% of onboard power</li>
+                            <li>Wind turbine generators for supplementary power</li>
+                            <li>Advanced battery storage systems</li>
+                            <li>Real-time energy monitoring and optimization</li>
+                        </ul>`,
+                    image: 'path/to/energy-systems.jpg'
+                },
+                nature: {
+                    title: 'Nature-Based Solutions',
+                    description: `<h3>Ocean Research & Conservation</h3>
+                        <p>Our journey contributes to marine science through:</p>
+                        <ul>
+                            <li>Continuous ocean data collection</li>
+                            <li>Microplastic sampling</li>
+                            <li>Marine ecosystem monitoring</li>
+                            <li>Collaborative research with oceanographic institutions</li>
+                        </ul>`,
+                    image: 'path/to/ocean-research.jpg'
+                },
+                youth: {
+                    title: 'Youth Leadership',
+                    description: `<h3>Empowering Climate Action</h3>
+                        <p>Building capacity through:</p>
+                        <ul>
+                            <li>Onboard leadership training</li>
+                            <li>Climate policy workshops</li>
+                            <li>Cross-cultural collaboration</li>
+                            <li>Direct engagement with decision-makers</li>
+                        </ul>`,
+                    image: 'path/to/youth-leadership.jpg'
+                }
+            };
+
+            content.innerHTML = `
+                <h2>${modalContent[type].title}</h2>
+                ${modalContent[type].description}
+                <img src="${modalContent[type].image}" alt="${modalContent[type].title}">
+            `;
+            
+            modal.classList.add('active');
+        }
+
+        function closeShipModal() {
+            document.getElementById('shipModal').classList.remove('active');
+        }
+
+        function openInvolvementModal(type) {
+            const modal = document.getElementById('involvementModal');
+            const content = document.getElementById('modalContent');
+            
+            const forms = {
+                volunteer: {
+                    title: 'Volunteer Application',
+                    fields: [
+                        { type: 'text', name: 'name', label: 'Full Name', required: true },
+                        { type: 'email', name: 'email', label: 'Email Address', required: true },
+                        { type: 'select', name: 'role', label: 'Preferred Role', 
+                          options: ['Digital Campaign', 'Local Coordinator', 'Event Organizer', 'Content Creator'] },
+                        { type: 'textarea', name: 'motivation', label: 'What motivates you to join?' }
+                    ]
+                },
+                partner: {
+                    title: 'Partnership Inquiry',
+                    fields: [
+                        { type: 'text', name: 'organization', label: 'Organization Name', required: true },
+                        { type: 'text', name: 'contact', label: 'Contact Person', required: true },
+                        { type: 'email', name: 'email', label: 'Email Address', required: true },
+                        { type: 'select', name: 'partnership_type', label: 'Partnership Type',
+                          options: ['Technical', 'Resources', 'Knowledge', 'Network'] },
+                        { type: 'textarea', name: 'proposal', label: 'Partnership Proposal' }
+                    ]
+                },
+                support: {
+                    title: 'Support Form',
+                    fields: [
+                        { type: 'text', name: 'name', label: 'Name', required: true },
+                        { type: 'email', name: 'email', label: 'Email Address', required: true },
+                        { type: 'select', name: 'support_type', label: 'Support Type',
+                          options: ['Equipment', 'Travel', 'Training', 'Project'] },
+                        { type: 'textarea', name: 'message', label: 'Message' }
+                    ]
+                }
+            };
+
+            const formHTML = generateForm(forms[type]);
+            content.innerHTML = `
+                <h2 id="modalTitle">${forms[type].title}</h2>
+                <form id="involvementForm" onsubmit="handleInvolvementSubmit(event, '${type}')">
+                    ${formHTML}
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            `;
+            
+            modal.classList.add('active');
+        }
+
+        function generateForm(formConfig) {
+            return formConfig.fields.map(field => {
+                const required = field.required ? 'required' : '';
+                switch(field.type) {
+                    case 'select':
+                        return `
+                            <div class="form-group">
+                                <label for="${field.name}">${field.label}</label>
+                                <select id="${field.name}" name="${field.name}" ${required}>
+                                    <option value="">Select ${field.label}</option>
+                                    ${field.options.map(opt => `<option value="${opt}">${opt}</option>`).join('')}
+                                </select>
+                            </div>
+                        `;
+                    case 'textarea':
+                        return `
+                            <div class="form-group">
+                                <label for="${field.name}">${field.label}</label>
+                                <textarea id="${field.name}" name="${field.name}" rows="4" ${required}></textarea>
+                            </div>
+                        `;
+                    default:
+                        return `
+                            <div class="form-group">
+                                <label for="${field.name}">${field.label}</label>
+                                <input type="${field.type}" id="${field.name}" name="${field.name}" ${required}>
+                            </div>
+                        `;
+                }
+            }).join('');
+        }
+
+        function closeInvolvementModal() {
+            const modal = document.getElementById('involvementModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+
+        // Add event listener for ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeInvolvementModal();
+                closeShipModal();
+            }
+        });
+
+    </script>
+
+
+    <!-- Improved JavaScript for the crew slider -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all slider elements
+        const slider = document.getElementById('crewSlider');
+        const slides = slider.querySelectorAll('.crew-slide');
+        const dotsContainer = document.getElementById('crewDots');
+        const prevBtn = document.getElementById('crewPrev');
+        const nextBtn = document.getElementById('crewNext');
+        
+        // Exit if elements don't exist
+        if (!slider || !slides.length || !dotsContainer || !prevBtn || !nextBtn) {
+            console.error('Crew slider elements not found');
+            return;
+        }
+        
+        console.log(`Found ${slides.length} crew slides`);
+        
+        let currentIndex = 0;
+        let slideInterval;
+        const intervalDuration = 8000; // 8 seconds to allow more reading time
+        
+        // Create dots for each slide
+        slides.forEach((_, index) => {
+            const dot = document.createElement('span');
+            dot.classList.add('crew-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+        
+        // Set up navigation buttons
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlider();
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider();
+        });
+        
+        // Start autoplay
+        startAutoplay();
+        
+        // Helper functions
+        function updateSlider() {
+            // Remove active class with fade
+            slides.forEach(slide => {
+                slide.style.opacity = '0';
+                setTimeout(() => {
+                    slide.classList.remove('active');
+                }, 300);
+            });
+            
+            // Add active class with fade
+            setTimeout(() => {
+                slides[currentIndex].classList.add('active');
+                slides[currentIndex].style.opacity = '1';
+            }, 300);
+            
+            // Update dots
+            document.querySelectorAll('.crew-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+            
+            resetAutoplay();
+        }
+        
+        function goToSlide(index) {
+            currentIndex = index;
+            updateSlider();
+        }
+        
+        function startAutoplay() {
+            slideInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateSlider();
+            }, intervalDuration);
+        }
+        
+        function resetAutoplay() {
+            clearInterval(slideInterval);
+            startAutoplay();
+        }
+        
+        // Pause on hover
+        slider.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        
+        slider.addEventListener('mouseleave', () => {
+            startAutoplay();
+        });
+        
+        // Handle touch events for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        let touchStartY = 0;
+        let touchEndY = 0;
+        
+        slider.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+        }, {passive: true});
+        
+        slider.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            touchEndY = e.changedTouches[0].screenY;
+            handleSwipe();
+        }, {passive: true});
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const verticalMovement = Math.abs(touchEndY - touchStartY);
+            const horizontalMovement = Math.abs(touchEndX - touchStartX);
+            
+            // Only handle horizontal swipes
+            if (horizontalMovement > verticalMovement && horizontalMovement > swipeThreshold) {
+                if (touchEndX < touchStartX) {
+                    // Swipe left
+                    currentIndex = (currentIndex + 1) % slides.length;
+                } else {
+                    // Swipe right
+                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                }
+                updateSlider();
+            }
+        }
+    });
+    </script>
+
+    <!-- Add this function after your other JavaScript code -->
+    <script>
+    async function handleInvolvementSubmit(event, type) {
+        event.preventDefault();
+        
+        // Get form data
+        const form = document.getElementById('involvementForm');
+        const formData = new FormData(form);
+        const data = {};
+        
+        // Convert FormData to object
+        for (let [key, value] of formData.entries()) {
+            data[key] = value;
+        }
+        
+        // Add type and subject
+        data.type = type;
+        data.subject = {
+            volunteer: 'New Volunteer Application - OMW to COP30',
+            partner: 'New Partnership Inquiry - OMW to COP30',
+            support: 'New Support Inquiry - OMW to COP30'
+        }[type];
+
+        try {
+            // Show loading state
+            const submitButton = form.querySelector('.submit-button');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+
+            // Log the request URL
+            console.log('Sending request to:', '/DB/TRIDENTDB/send-involvement.php');
+
+            // Send data to PHP endpoint
+            const response = await fetch('/DB/TRIDENTDB/send-involvement.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+
+            // Log the raw response
+            console.log('Raw response:', response);
+
+            // Check if response is ok
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const result = await response.json();
+            console.log('Parsed response:', result);
+
+            if (result.success) {
+                alert('Thank you for your interest! We will contact you soon.');
+                closeInvolvementModal();
+                form.reset();
+            } else {
+                throw new Error(result.message || 'Submission failed');
+            }
+
+        } catch (error) {
+            console.error('Form submission error:', error);
+            alert(`Error submitting form: ${error.message}`);
+        } finally {
+            // Reset button state
+            const submitButton = form.querySelector('.submit-button');
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+        }
+    }
+
+    // Add this function to show loading state in the modal
+    function setModalLoading(isLoading) {
+        const modal = document.getElementById('involvementModal');
+        if (isLoading) {
+            modal.classList.add('loading');
+        } else {
+            modal.classList.remove('loading');
+        }
+    }
+    </script>
+
+    <!-- Add this section before your FAQ section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="section-title">Our Journey</h2>
+                    <p class="section-subtitle">Watch how we're making waves of change</p>
+                </div>
+                <div class="col-12 col-lg-10">
+                    <div class="video-container">
+                        <iframe 
+                            width="560" 
+                            height="315" 
+                            src="https://www.youtube-nocookie.com/embed/9iDI9zqPdLM?si=mmcQE93MoF4SDEbf&amp;start=1&amp;controls=1&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add these styles to your CSS -->
+    <style>
+    .video-section {
+        padding: 4rem 0;
+        background: #f8f9fa;
+    }
+
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media (max-width: 768px) {
+        .video-section {
+            padding: 2rem 0;
+        }
+    }
+    </style>
+
+    <!-- Add this right after the video section -->
+    <section class="organizations-section">
+        <div class="container">
+            <h2 class="section-title">Organizations Involved</h2>
+            <div class="logo-slider">
+                <div class="logo-track">
+                    <!-- Add your organization logos here -->
+                    <div class="logo-item">
+                        <img src="assets/images/logos/TRIDENTS/gyc.png" alt="Global Youth Coalition" loading="lazy">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/logos/TRIDENTS/YNA.png" alt="Youth Negotiators Academy" loading="lazy">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/logos/Partners R4P/WorldClimate.png" alt="World Climate School" loading="lazy">
+                    </div>
+						<div class="logo-item">
+                        <img src="assets/images/logos/TRIDENTS/dao.png" alt="BoatDao" loading="lazy">
+                    </div>
+<div class="logo-item">
+                        <img src="assets/images/logos/TRIDENTS/NKN.svg" alt="BoatDao" loading="lazy">
+                    </div>
+
+                    <!-- Add more logos as needed -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add this before your final CTA -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">As Featured In</h2>
+            <div class="featured-logos">
+                <!-- Add your media logos here -->
+                <div class="featured-logo">
+                    <img src="assets/images/logos/Featured R4P/Wedonthavetime.png" alt="Reuters" loading="lazy">
+                </div>
+                <div class="featured-logo">
+                    <img src="assets/images/logos/TRIDENTS/forbes.png" alt="Forbes" loading="lazy">
+                </div>
+                <div class="featured-logo">
+                    <img src="assets/images/logos/TRIDENTS/TCD.svg" alt="The Cool Down" loading="lazy">
+                </div>
+
+                <!-- Add more logos as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Add these styles to your CSS -->
+    <style>
+    /* Organizations Section */
+    .organizations-section,
+    .featured-section {
+        padding: 4rem 0;
+        background: #fff;
+    }
+
+    .logo-slider {
+        position: relative;
+        overflow: hidden;
+        padding: 2rem 0;
+    }
+
+    .logo-track {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .logo-item {
+        flex: 0 0 200px;
+        padding: 1rem;
+        transition: transform 0.3s ease;
+    }
+
+    .logo-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .logo-item img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+    }
+
+    .logo-item:hover img {
+        filter: grayscale(0%);
+    }
+
+    /* Featured Logos Section */
+    .featured-logos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 2rem;
+        align-items: center;
+        justify-items: center;
+        margin-top: 2rem;
+    }
+
+    .featured-logo {
+        width: 150px;
+        padding: 1rem;
+        transition: transform 0.3s ease;
+    }
+
+    .featured-logo img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: all 0.3s ease;
+    }
+
+    .featured-logo:hover {
+        transform: translateY(-5px);
+    }
+
+    .featured-logo:hover img {
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .logo-item {
+            flex: 0 0 150px;
+        }
+        
+        .featured-logos {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* Animation for logo track */
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+
+    /* Optional: Add automatic scrolling for many logos */
+    @media (min-width: 992px) {
+        .logo-track {
+            animation: scroll 30s linear infinite;
+        }
+        
+        .logo-track:hover {
+            animation-play-state: paused;
+        }
+    }
+    </style>
+
+  
+    <!-- Add CSS for the FAQ section with background -->
+    <style>
+    .faq-section {
+      padding: 80px 0;
+      background-image: url('assets/images/background/SWAN.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    /* Add overlay to make text more readable */
+    .faq-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for better text readability */
+      z-index: 1;
+    }
+
+    .faq-section .container {
+      position: relative;
+      z-index: 2; /* Place content above the overlay */
+    }
+
+    .faq-section .section-title,
+    .faq-section .section-subtitle {
+      color: white;
+    }
+
+    /* Style the accordion cards */
+    .faq-section .card {
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-section .card-header {
+      background-color: white;
+      padding: 0;
+      border-bottom: none;
+    }
+
+    .faq-section .btn-link {
+      width: 100%;
+      text-align: left;
+      color: #333;
+      font-weight: 600;
+      padding: 15px 20px;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .faq-section .btn-link:hover,
+    .faq-section .btn-link:focus {
+      text-decoration: none;
+      color: var(--primary-color, #FF1D65);
+    }
+
+    .faq-section .btn-link::after {
+      content: '\f107'; /* Font Awesome down arrow */
+      font-family: 'Font Awesome 5 Free';
+      position: absolute;
+      right: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-section .btn-link[aria-expanded="true"]::after {
+      transform: rotate(180deg);
+    }
+
+    .faq-section .card-body {
+      padding: 20px;
+      background-color: white;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .faq-section {
+        padding: 50px 0;
+      }
+      
+      .faq-section .btn-link {
+        font-size: 0.95rem;
+        padding: 12px 15px;
+      }
+    }
+    </style>
+</body>
+</html>

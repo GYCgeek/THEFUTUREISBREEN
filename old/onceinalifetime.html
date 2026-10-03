@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Once In A Lifetime - Global Youth Coalition</title>
+    
+    <!-- Add favicon -->
+    <link rel="icon" href="assets/images/icon.png" type="image/x-icon" alt="GlobalYouth Favicon">
+    <link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon">
+    
+    <!-- Social Media Meta Tags -->
+    <meta name="description" content="Once in a lifetime - The Trident Journey to COP30">
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://theglobalyouth.co/TT">
+    <meta property="og:title" content="Once In A Lifetime">
+    <meta property="og:description" content="The Trident Journey - A once in a lifetime opportunity to make climate action real">
+    <meta property="og:image" content="https://theglobalyouth.co/assets/images/THETRIDENT/5.png">
+    <meta property="og:image:alt" content="Once In A Lifetime - The Trident Journey">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://theglobalyouth.co/TT">
+    <meta property="twitter:title" content="Once In A Lifetime">
+    <meta property="twitter:description" content="The Trident Journey - A once in a lifetime opportunity to make climate action real">
+    <meta property="twitter:image" content="https://theglobalyouth.co/assets/images/THETRIDENT/5.png">
+    <meta property="twitter:image:alt" content="Once In A Lifetime - The Trident Journey">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-color: #000;
+        }
+        
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+        
+        .slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        /* Navigation controls */
+        .nav-controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 15px;
+            z-index: 100;
+        }
+        
+        .nav-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+        
+        .nav-btn:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .exit-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 100;
+            font-size: 16px;
+        }
+        
+        .exit-btn:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        /* Optional loading indicator */
+        .loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container" id="slideshow">
+        <!-- Slides will be dynamically added here -->
+        <div class="loading" id="loading">Loading presentation...</div>
+    </div>
+    
+    <!-- Navigation controls -->
+    <div class="nav-controls">
+        <div class="nav-btn" id="prevBtn" title="Previous slide">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="nav-btn" id="playPauseBtn" title="Play/Pause">
+            <i class="fas fa-pause" id="playPauseIcon"></i>
+        </div>
+        <div class="nav-btn" id="nextBtn" title="Next slide">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+    </div>
+    
+    <!-- Exit button -->
+    <div class="exit-btn" id="exitBtn" title="Exit presentation">
+        <i class="fas fa-times"></i>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slideshowContainer = document.getElementById('slideshow');
+            const loadingIndicator = document.getElementById('loading');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            const playPauseIcon = document.getElementById('playPauseIcon');
+            const exitBtn = document.getElementById('exitBtn');
+            
+            const totalSlides = 22;
+            let currentSlide = 0;
+            let slides = [];
+            let slideInterval;
+            let isPlaying = true;
+            
+            // Preload all images
+            function preloadImages() {
+                let loadedCount = 0;
+                
+                for (let i = 1; i <= totalSlides; i++) {
+                    const slide = document.createElement('div');
+                    slide.className = 'slide';
+                    
+                    const img = document.createElement('img');
+                    img.src = `assets/images/THETRIDENT/${i}.png`;
+                    img.alt = `Once In A Lifetime - The Trident Journey - Slide ${i}`;
+                    
+                    // When image loads, increment counter
+                    img.onload = function() {
+                        loadedCount++;
+                        if (loadedCount === totalSlides) {
+                            // All images loaded, start slideshow
+                            loadingIndicator.style.display = 'none';
+                            startSlideshow();
+                        }
+                    };
+                    
+                    // If image fails to load
+                    img.onerror = function() {
+                        console.error(`Failed to load image: assets/images/THETRIDENT/${i}.png`);
+                        loadedCount++;
+                        if (loadedCount === totalSlides) {
+                            loadingIndicator.style.display = 'none';
+                            startSlideshow();
+                        }
+                    };
+                    
+                    slide.appendChild(img);
+                    slideshowContainer.appendChild(slide);
+                    slides.push(slide);
+                }
+            }
+            
+            // Start the slideshow
+            function startSlideshow() {
+                // Show first slide
+                showSlide(0);
+                
+                // Set interval - first slide gets 6 seconds, others get 18 seconds
+                scheduleNextSlide();
+            }
+            
+            // Schedule the next slide based on current slide
+            function scheduleNextSlide() {
+                clearInterval(slideInterval);
+                
+                // First slide gets 6 seconds, others get 18 seconds
+                const delay = currentSlide === 0 ? 6000 : 18000;
+                
+                if (isPlaying) {
+                    slideInterval = setInterval(nextSlide, delay);
+                }
+            }
+            
+            // Show a specific slide
+            function showSlide(index) {
+                // Hide all slides
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                
+                // Show the selected slide
+                slides[index].classList.add('active');
+                currentSlide = index;
+                
+                // Reset the timer for the new slide
+                scheduleNextSlide();
+            }
+            
+            // Go to next slide
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                showSlide(currentSlide);
+            }
+            
+            // Go to previous slide
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                showSlide(currentSlide);
+            }
+            
+            // Toggle play/pause
+            function togglePlayPause() {
+                isPlaying = !isPlaying;
+                
+                if (isPlaying) {
+                    playPauseIcon.className = 'fas fa-pause';
+                    scheduleNextSlide();
+                } else {
+                    playPauseIcon.className = 'fas fa-play';
+                    clearInterval(slideInterval);
+                }
+            }
+            
+            // Exit presentation
+            function exitPresentation() {
+                window.location.href = 'OMWCOP30.html';
+            }
+            
+            // Initialize
+            preloadImages();
+            
+            // Event listeners for navigation buttons
+            prevBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                prevSlide();
+            });
+            
+            nextBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                nextSlide();
+            });
+            
+            playPauseBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                togglePlayPause();
+            });
+            
+            exitBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                exitPresentation();
+            });
+            
+            // Make the entire slideshow clickable to exit
+            slideshowContainer.addEventListener('click', function(e) {
+                // Only exit if clicking directly on the container (not on controls)
+                if (e.target === slideshowContainer || e.target.classList.contains('slide')) {
+                    exitPresentation();
+                }
+            });
+            
+            // Add keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowRight' || e.key === ' ') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                } else if (e.key === 'p' || e.key === 'P') {
+                    togglePlayPause();
+                } else if (e.key === 'Escape') {
+                    exitPresentation();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

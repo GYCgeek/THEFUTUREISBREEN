@@ -1,0 +1,77 @@
+# Weekly autonomous improvement cycle for theglobalyouth.co
+# Needs: repo secret ANTHROPIC_API_KEY (or CLAUDE_CODE_OAUTH_TOKEN — see claude-code-action docs).
+# Optional: repo variable AUTO_MERGE_SAFE=true to auto-merge PRs labelled `safe-auto` once checks pass.
+name: improve-loop
+
+on:
+  schedule:
+    - cron: "0 2 * * 1"   # Mondays 02:00 UTC (10:00 Hong Kong)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: improve-loop
+  cancel-in-progress: false
+
+jobs:
+  cycle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+
+      - name: Install measurement tools
+        run: |
+          [ -f package.json ] || npm init -y
+          npm i -D playwright js-yaml
+          npx playwright install --with-deps chromium
+
+      - name: Validate facts.yaml
+        run: node -e "require('js-yaml').load(require('fs').readFileSync('docs/brand/facts.yaml','utf8')); console.log('facts.yaml ok')"
+
+      - name: Baseline audit (live site)
+        run: |
+          [ -f reports/audit-latest.json ] && cp reports/audit-latest.json reports/audit-previous.json || true
+          node scripts/audit.mjs --base https://theglobalyouth.co
+
+      - name: Run one improvement cycle
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: |
+            Today is ${{ github.run_started_at }}.
+            Read CLAUDE.md, then follow .claude/commands/improve-cycle.md exactly.
+            If the "Stack and deploy" section in CLAUDE.md says UNKNOWN, follow .claude/commands/bootstrap.md instead.
+            Open pull requests with `gh`. Never push to main.
+          claude_args: "--max-turns 120"
+
+      - name: Upload audit and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: loop-reports
+          path: reports/
+
+  automerge-safe:
+    needs: cycle
+    if: vars.AUTO_MERGE_SAFE == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto-merge safe PRs from the loop
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          for pr in $(gh pr list -R "$REPO" --label safe-auto --state open --json number,headRefName \
+                       -q '.[] | select(.headRefName | startswith("loop/")) | .number'); do
+            gh pr merge "$pr" -R "$REPO" --squash --auto || echo "PR $pr not mergeable yet"
+          done

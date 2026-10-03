@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GYC AI Labs — Foresight Intelligence Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,750&family=Archivo:wght@400;600;750;850&family=Spline+Sans+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #12201a;
+    --muted: #4d5e55;
+    --green: #08775d;
+    --lime: #c9ff5b;
+    --sky: #c9edff;
+    --paper: #f4f1e8;
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-sans: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'Spline Sans Mono', ui-monospace, 'Cascadia Mono', monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    overflow: hidden;
+    color: var(--ink);
+    font-family: var(--font-sans);
+    background:
+      radial-gradient(900px 520px at 88% -6%, #d9ffa1 0%, transparent 58%),
+      radial-gradient(720px 500px at -12% 30%, #cdeadf 0%, transparent 55%),
+      radial-gradient(640px 460px at 70% 105%, #cfe9f8 0%, transparent 52%),
+      var(--paper);
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: none;
+    overflow-y: auto;
+    padding: 5vh 6vw 11vh;
+  }
+  .slide.is-active { display: flex; animation: slide-in .45s cubic-bezier(.22,1,.36,1); }
+  @keyframes slide-in {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+  }
+  .slide-inner { width: 100%; max-width: 1060px; margin: auto; }
+
+  .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-family: var(--font-mono);
+    font-size: clamp(.6rem, 1.1vw, .74rem);
+    font-weight: 600;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--green);
+  }
+  .kicker::before {
+    content: '';
+    display: inline-block;
+    width: 28px; height: 2px;
+    background: var(--green);
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 750;
+    font-size: clamp(2.2rem, 5.2vw, 4.2rem);
+    line-height: 1.08;
+    margin: .3em 0 .2em;
+    letter-spacing: -.02em;
+  }
+  h1 em { font-style: normal; color: var(--green); }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+    line-height: 1.15;
+    margin: .2em 0 .3em;
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+    margin: 0 0 .4em;
+  }
+
+  .sub {
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    line-height: 1.5;
+    color: var(--muted);
+    max-width: 640px;
+  }
+  .sub strong { color: var(--ink); font-weight: 600; }
+
+  .stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 2.5vw, 2.5rem);
+    margin: 2em 0;
+  }
+  .stat {
+    flex: 1 1 120px;
+  }
+  .stat-num {
+    font-family: var(--font-display);
+    font-weight: 750;
+    font-size: clamp(2rem, 3.6vw, 3rem);
+    line-height: 1;
+    color: var(--green);
+  }
+  .stat-label {
+    font-size: clamp(.7rem, .9vw, .82rem);
+    color: var(--muted);
+    margin-top: .2em;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1rem, 2vw, 2rem);
+    margin: 1.5em 0;
+  }
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: clamp(1rem, 2vw, 2rem);
+    margin: 1.5em 0;
+  }
+
+  .card {
+    background: rgba(255,255,255,.55);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+    border: 1px solid rgba(0,0,0,.06);
+  }
+  .card h3 { margin-top: 0; }
+  .card p { font-size: .88rem; line-height: 1.5; color: var(--muted); margin: .3em 0; }
+  .card p strong { color: var(--ink); }
+
+  .tag {
+    display: inline-block;
+    background: var(--lime);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: .65rem;
+    font-weight: 600;
+    padding: .2em .6em;
+    border-radius: 4px;
+    letter-spacing: .02em;
+  }
+
+  .nav-dots {
+    position: fixed;
+    bottom: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+  }
+  .nav-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--green);
+    background: transparent;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  .nav-dot.is-active { background: var(--green); }
+
+  .nav-arrows {
+    position: fixed;
+    bottom: 2.4vh;
+    right: 4vw;
+    display: flex;
+    gap: 6px;
+    z-index: 10;
+  }
+  .nav-arrow {
+    background: var(--green);
+    color: #fff;
+    border: none;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .2s;
+  }
+  .nav-arrow:disabled { opacity: .3; cursor: default; }
+
+  .slide-number {
+    position: fixed;
+    bottom: 3.2vh;
+    left: 4vw;
+    font-family: var(--font-mono);
+    font-size: .7rem;
+    color: var(--muted);
+    z-index: 10;
+  }
+
+  .arch-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+    margin: 1.5em 0;
+  }
+  .arch-box {
+    background: rgba(255,255,255,.6);
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 8px;
+    padding: .6rem 1rem;
+    font-size: .78rem;
+    font-weight: 600;
+    text-align: center;
+    min-width: 80px;
+  }
+  .arch-arrow {
+    font-size: 1.2rem;
+    color: var(--green);
+  }
+
+  .bullet-list {
+    list-style: none;
+    padding: 0;
+    margin: .8em 0;
+  }
+  .bullet-list li {
+    padding: .35em 0 .35em 1.2em;
+    position: relative;
+    font-size: .92rem;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+  .bullet-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: 600;
+  }
+  .bullet-list li strong { color: var(--ink); }
+
+  @media (max-width: 700px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    .slide { padding: 3vh 5vw 12vh; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: Title -->
+<div class="slide is-active" data-slide="0">
+  <div class="slide-inner" style="text-align:center;padding-top:8vh">
+    <div class="kicker" style="justify-content:center">GYC AI Labs</div>
+    <h1 style="max-width:800px;margin:.4em auto .2em">Foresight Intelligence<br><em>Platform</em></h1>
+    <p class="sub" style="margin:1em auto 2em;max-width:600px">
+      A horizon-scanning intelligence platform tracking <strong>1,300+ signals</strong> across <strong>80+ countries</strong> on intergenerational equity, climate governance, and the futures of fairness.
+    </p>
+    <div class="stat-row" style="justify-content:center;max-width:700px;margin:2em auto">
+      <div class="stat"><div class="stat-num">1,322</div><div class="stat-label">Signals tracked</div></div>
+      <div class="stat"><div class="stat-num">80+</div><div class="stat-label">Countries</div></div>
+      <div class="stat"><div class="stat-num">8</div><div class="stat-label">Active trends</div></div>
+      <div class="stat"><div class="stat-num">10</div><div class="stat-label">Domain categories</div></div>
+    </div>
+    <p style="font-size:.78rem;color:var(--muted);margin-top:3em">
+      GYC AI Labs · Youth-led · Open-source intelligence for intergenerational fairness
+    </p>
+  </div>
+</div>
+
+<!-- SLIDE 2: What is GYC AI Labs -->
+<div class="slide" data-slide="1">
+  <div class="slide-inner">
+    <div class="kicker">About</div>
+    <h1>GYC AI Labs</h1>
+    <p class="sub">
+      A youth-led AI and climate capacity lab. We build open-source intelligence tools for the intergenerational equity movement — from horizon scanning to policy-ready analysis.
+    </p>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Youth-led</h3>
+        <p>Founded and operated by young people. 27,000+ youth applications across 177 countries. Oxford award-recognised.</p>
+      </div>
+      <div class="card">
+        <h3>Open intelligence</h3>
+        <p>All platform outputs are public. Signal database, trends, briefings — accessible to anyone working on intergenerational fairness.</p>
+      </div>
+      <div class="card">
+        <h3>AI-augmented</h3>
+        <p>LLM-powered signal extraction, classification, trend detection, and synthesis. Human-in-the-loop for review and calibration.</p>
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat"><div class="stat-num">27K+</div><div class="stat-label">Youth applications</div></div>
+      <div class="stat"><div class="stat-num">177</div><div class="stat-label">Countries reached</div></div>
+      <div class="stat"><div class="stat-num">Oxford</div><div class="stat-label">Award-recognised</div></div>
+      <div class="stat"><div class="stat-num">UN</div><div class="stat-label">Spaces & partners</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 3: The Platform -->
+<div class="slide" data-slide="2">
+  <div class="slide-inner">
+    <div class="kicker">Platform</div>
+    <h1>Foresight Intelligence</h1>
+    <p class="sub">
+      A live, static-site intelligence dashboard. No backend, no database servers — just generated HTML, JSON, and embedded JavaScript, deployed over FTP.
+    </p>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Signal database</h3>
+        <p><strong>1,322 signals</strong> from policy, litigation, economics, technology, and social movements. Each signal has a source, summary, confidence score, country, and intergenerational lens classification.</p>
+      </div>
+      <div class="card">
+        <h3>Trend detection</h3>
+        <p><strong>8 active trends</strong> tracked weekly — intergenerational fiscal rebalancing, youth climate litigation, future generations institutions, youth digital protection, and more. Weekly momentum charts.</p>
+      </div>
+      <div class="card">
+        <h3>Foresight views</h3>
+        <p>Three Horizons map, impact-uncertainty matrix, futures wheels, projection strips, counter-signals. Built-in foresight methodology, not just a database.</p>
+      </div>
+      <div class="card">
+        <h3>Workshop packs</h3>
+        <p>Exportable workshop kits for each major trend — S-curve analysis, evidence packs, implication maps, four futures scenarios, decision moments.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4: Architecture -->
+<div class="slide" data-slide="3">
+  <div class="slide-inner">
+    <div class="kicker">Architecture</div>
+    <h1>How it works</h1>
+    <p class="sub">A fully static pipeline. No servers, no databases, no runtime dependencies.</p>
+    <div class="arch-flow">
+      <div class="arch-box">Signal ingest<br><span style="font-weight:400;font-size:.7rem">JSON + web scans</span></div>
+      <span class="arch-arrow">→</span>
+      <div class="arch-box">Migration &amp; classification<br><span style="font-weight:400;font-size:.7rem">LLM + rule-based</span></div>
+      <span class="arch-arrow">→</span>
+      <div class="arch-box">Build scripts<br><span style="font-weight:400;font-size:.7rem">Node.js generators</span></div>
+      <span class="arch-arrow">→</span>
+      <div class="arch-box">Static HTML + JSON<br><span style="font-weight:400;font-size:.7rem">signals-kb/</span></div>
+      <span class="arch-arrow">→</span>
+      <div class="arch-box">FTP deploy<br><span style="font-weight:400;font-size:.7rem">Awardspace</span></div>
+    </div>
+    <div class="grid-3" style="margin-top:2em">
+      <div class="card">
+        <h3>Data layer</h3>
+        <p><span class="tag">signals-db.json</span> — canonical source of truth. Each signal has id, topic, domain, country, source, summary, confidence, policy areas, and intergenerational lens.</p>
+      </div>
+      <div class="card">
+        <h3>Build layer</h3>
+        <p><span class="tag">migrate-signals-v3.mjs</span> → <span class="tag">build-brief-html.mjs</span> → <span class="tag">verify-briefing.mjs</span>. 10+ build scripts, all passing.</p>
+      </div>
+      <div class="card">
+        <h3>Deploy layer</h3>
+        <p><span class="tag">intel-sync-deploy.mjs</span> → <span class="tag">ftp-upload.ps1</span>. 73 files, ~15 MB total, deployed in under 2 minutes.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 5: Domains & Topics -->
+<div class="slide" data-slide="4">
+  <div class="slide-inner">
+    <div class="kicker">Taxonomy</div>
+    <h1>10 domain categories</h1>
+    <p class="sub">Every signal is classified into a domain and a topic, enabling multi-dimensional filtering and thematic synthesis.</p>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Justice & Rights</h3>
+        <p>Intergenerational equity, climate justice, environmental defenders, disability rights, global governance fairness</p>
+      </div>
+      <div class="card">
+        <h3>Economy & Finance</h3>
+        <p>Fiscal policy, youth economic governance, anti-poverty, housing equity, social fairness strategy</p>
+      </div>
+      <div class="card">
+        <h3>Climate & Environment</h3>
+        <p>Climate governance, youth climate governance, energy, water, bioeconomy, resilience, circular economy</p>
+      </div>
+      <div class="card">
+        <h3>Food Systems</h3>
+        <p>Food systems transformation — school feeding, agriculture, nutrition, public procurement for food security</p>
+      </div>
+      <div class="card">
+        <h3>Society & Culture</h3>
+        <p>Youth governance, education equity, intercultural youth governance, digital participation</p>
+      </div>
+      <div class="card">
+        <h3>Futures & Strategic Foresight</h3>
+        <p>Future generations institutions, foresight governance, demographic foresight, space governance</p>
+      </div>
+    </div>
+    <p style="font-size:.78rem;color:var(--muted);margin-top:1em">Plus: Technology & AI, Children's Rights, Jobs & Labor Rights, Governance & Policy</p>
+  </div>
+</div>
+
+<!-- SLIDE 6: Live Dashboard -->
+<div class="slide" data-slide="5">
+  <div class="slide-inner">
+    <div class="kicker">Live</div>
+    <h1>Dashboard features</h1>
+    <p class="sub">The live briefing at <strong>theglobalyouth.co/public_html/intel/</strong> includes:</p>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Weekly briefing</h3>
+        <p>New signals, re-sighted signals, trend momentum, futures wheels, review queue, high-priority watchlist, going-stale signals.</p>
+      </div>
+      <div class="card">
+        <h3>All signals view</h3>
+        <p>Filter by domain chip (10 categories) + topic dropdown. Search, sort by score/date/country. Thematic synthesis pages per topic.</p>
+      </div>
+      <div class="card">
+        <h3>Three Horizons map</h3>
+        <p>Signals plotted by time horizon (H1 present, H2 transition, H3 transformation). Dot colour = domain, size = corroboration, ring = high priority.</p>
+      </div>
+      <div class="card">
+        <h3>Impact-uncertainty matrix</h3>
+        <p>Every signal on one map. Four quadrants for action prioritisation. Click to drill into domain breakdown and ranked signal list.</p>
+      </div>
+      <div class="card">
+        <h3>Country analysis</h3>
+        <p>Country ambition index, similarity analysis, gap analysis. 80+ country profiles with signal counts and policy area coverage.</p>
+      </div>
+      <div class="card">
+        <h3>Finance graph</h3>
+        <p>Knowledge graph of funders, dimensions, and signals. 68 funders, 14 finance dimensions, $19B+ tracked. Force-directed canvas.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 7: Trends -->
+<div class="slide" data-slide="6">
+  <div class="slide-inner">
+    <div class="kicker">Trends</div>
+    <h1>8 active trends</h1>
+    <p class="sub">Each trend is tracked weekly with signal counts, country spread, and momentum direction.</p>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Intergenerational equity mainstreaming</h3>
+        <p><strong>711 signals</strong> · 75 countries · accelerating. The core trend: intergenerational equity language migrating from advocacy into budgets, courts, and policy.</p>
+      </div>
+      <div class="card">
+        <h3>Youth digital protection</h3>
+        <p><strong>219 signals</strong> · 53 countries · accelerating. Online safety regulation, platform accountability, digital rights for minors.</p>
+      </div>
+      <div class="card">
+        <h3>Intergenerational fiscal rebalancing</h3>
+        <p><strong>495 signals</strong> · 68 countries · accelerating. Tax reform, pension restructuring, sovereign wealth, baby bonds, debt-for-future swaps.</p>
+      </div>
+      <div class="card">
+        <h3>Youth climate litigation</h3>
+        <p><strong>169 signals</strong> · 34 countries · accelerating. Strategic climate lawsuits by and for young people, from Montana to the ICJ.</p>
+      </div>
+      <div class="card">
+        <h3>Future generations institutions</h3>
+        <p><strong>92 signals</strong> · 33 countries · accelerating. Commissioners, ombudspersons, parliamentary committees for future generations.</p>
+      </div>
+      <div class="card">
+        <h3>Youth participation governance</h3>
+        <p><strong>271 signals</strong> · 66 countries · accelerating. Youth councils, advisory bodies, voting age reform, participatory budgeting.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 8: Use cases -->
+<div class="slide" data-slide="7">
+  <div class="slide-inner">
+    <div class="kicker">Use cases</div>
+    <h1>Who is this for</h1>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Policy analysts</h3>
+        <p>Track emerging legislation on intergenerational fairness across 80+ countries. Filter by topic, country, or time horizon. Export evidence packs.</p>
+      </div>
+      <div class="card">
+        <h3>Advocacy organisations</h3>
+        <p>Monitor trend momentum to time campaigns. Identify partner organisations and aligned signals. Use workshop packs for strategy sessions.</p>
+      </div>
+      <div class="card">
+        <h3>Researchers</h3>
+        <p>Access a curated, classified signal database with source URLs, confidence scores, and intergenerational lens tagging. Weekly briefings for literature scanning.</p>
+      </div>
+      <div class="card">
+        <h3>Funders</h3>
+        <p>See the full landscape of intergenerational equity work. Identify gaps, emerging fields, and high-leverage intervention points. Finance graph shows who is funding what.</p>
+      </div>
+      <div class="card">
+        <h3>Journalists</h3>
+        <p>Find stories in the signal database — new laws, court rulings, youth movements, fiscal innovations. Country-level analysis for local angles.</p>
+      </div>
+      <div class="card">
+        <h3>Youth networks</h3>
+        <p>See where your work fits in the global picture. Find peer organisations, track shared trends, and use the platform for advocacy evidence.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 9: Partners -->
+<div class="slide" data-slide="8">
+  <div class="slide-inner">
+    <div class="kicker">Network</div>
+    <h1>Partners & collaborators</h1>
+    <p class="sub">GYC AI Labs works alongside a growing network of institutions and movements.</p>
+    <div class="grid-2">
+      <div class="card">
+        <p><strong>School of International Futures (SOIF)</strong> — NGFP fellowship director Cat Tully, strategic foresight partnership</p>
+      </div>
+      <div class="card">
+        <p><strong>UCL Institute for Global Prosperity</strong> — The New Alignment policy advisory hub, G20 engagement</p>
+      </div>
+      <div class="card">
+        <p><strong>Youth Negotiators Academy</strong> — Climate negotiation capacity building</p>
+      </div>
+      <div class="card">
+        <p><strong>ClimateWorks Foundation</strong> — Climate finance and governance</p>
+      </div>
+      <div class="card">
+        <p><strong>Oxford Net Zero / University of Oxford</strong> — Award-recognised collaboration</p>
+      </div>
+      <div class="card">
+        <p><strong>UN Major Group for Children and Youth</strong> — UN spaces and youth constituency</p>
+      </div>
+    </div>
+    <p style="font-size:.82rem;color:var(--muted);margin-top:1em">Plus: Global Environmental Governance Project, Intergenerational Center for Global Action, Sustenta Honduras, Young Africans Research Academy, Global Youth Biodiversity Network, UNU-CPR Geneva, and more.</p>
+  </div>
+</div>
+
+<!-- SLIDE 10: Call to action -->
+<div class="slide" data-slide="9">
+  <div class="slide-inner" style="text-align:center;padding-top:8vh">
+    <div class="kicker" style="justify-content:center">Get involved</div>
+    <h1 style="max-width:700px;margin:.4em auto .2em">Help us build the<br><em>intelligence layer</em></h1>
+    <p class="sub" style="margin:1em auto 2em;max-width:560px">
+      GYC AI Labs is raising <strong>$8,500</strong> for a complete first operating cycle. Every milestone unlocks continuity between conference cycles and implementation.
+    </p>
+    <div class="stat-row" style="justify-content:center;max-width:500px;margin:2em auto">
+      <div class="stat"><div class="stat-num">$2,140</div><div class="stat-label">Raised so far</div></div>
+      <div class="stat"><div class="stat-num">$8,500</div><div class="stat-label">Goal</div></div>
+    </div>
+    <p style="margin-top:2em">
+      <a href="https://theglobalyouth.co/public_html/intel/donate.html" style="display:inline-block;background:var(--green);color:#fff;text-decoration:none;padding:.7em 2em;border-radius:8px;font-weight:600;font-size:1rem">Sponsor the lab →</a>
+    </p>
+    <p style="font-size:.78rem;color:var(--muted);margin-top:2em">
+      <a href="https://theglobalyouth.co/public_html/intel/" style="color:var(--green)">Explore the platform</a> · 
+      <a href="https://theglobalyouth.co/public_html/intel/sponsor-brief.html" style="color:var(--green)">Sponsor brief</a> · 
+      <a href="https://theglobalyouth.co/public_html/intel/briefing.html" style="color:var(--green)">Live dashboard</a>
+    </p>
+  </div>
+</div>
+
+<!-- Navigation -->
+<div class="slide-number" id="slideNum">1 / 10</div>
+<div class="nav-dots" id="navDots"></div>
+<div class="nav-arrows">
+  <button class="nav-arrow" id="prevBtn" disabled>←</button>
+  <button class="nav-arrow" id="nextBtn">→</button>
+</div>
+
+<script>
+(function(){
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.getElementById('navDots');
+  const num = document.getElementById('slideNum');
+  const prev = document.getElementById('prevBtn');
+  const next = document.getElementById('nextBtn');
+  let i = 0;
+
+  slides.forEach((_, idx) => {
+    const d = document.createElement('button');
+    d.className = 'nav-dot' + (idx === 0 ? ' is-active' : '');
+    d.addEventListener('click', () => go(idx));
+    dots.appendChild(d);
+  });
+
+  function go(n) {
+    slides[i].classList.remove('is-active');
+    dots.children[i].classList.remove('is-active');
+    i = Math.max(0, Math.min(n, slides.length - 1));
+    slides[i].classList.add('is-active');
+    dots.children[i].classList.add('is-active');
+    num.textContent = (i + 1) + ' / ' + slides.length;
+    prev.disabled = i === 0;
+    next.disabled = i === slides.length - 1;
+  }
+
+  prev.addEventListener('click', () => go(i - 1));
+  next.addEventListener('click', () => go(i + 1));
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); go(i + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); go(i - 1); }
+  });
+
+  let tx = 0;
+  document.addEventListener('touchstart', e => { tx = e.changedTouches[0].screenX; }, {passive:true});
+  document.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].screenX - tx;
+    if (Math.abs(dx) > 60) { go(i + (dx < 0 ? 1 : -1)); }
+  }, {passive:true});
+})();
+</script>
+</body>
+</html>

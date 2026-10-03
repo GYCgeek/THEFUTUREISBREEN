@@ -1,0 +1,12 @@
+# Enable PHP handler for this directory (required on some shared hosts)
+AddHandler application/x-httpd-php .php
+
+# Protect generated/internal JSON files from direct browser access
+<Files "reviews-incoming.json">
+    Order allow,deny
+    Deny from all
+</Files>
+<Files "reviews-incoming.json.lock">
+    Order allow,deny
+    Deny from all
+</Files>

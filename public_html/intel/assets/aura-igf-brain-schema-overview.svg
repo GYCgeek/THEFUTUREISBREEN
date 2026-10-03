@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">IGF Brain Aura — overview</title>
+  <desc id="desc">Joined intergenerational-justice graph schema; aggregate metadata only. Schema-only aggregate diagram; no record-level data.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#688077"/></marker>
+    <style>
+      .title{font:700 34px Georgia,serif;fill:#14261e}
+      .subtitle{font:15px "Segoe UI",sans-serif;fill:#496158}
+      .eyebrow{font:700 12px "Segoe UI",sans-serif;letter-spacing:1.8px;text-transform:uppercase;fill:#b7552b}
+      .node-title{font:700 15px Georgia,serif;fill:#14261e}
+      .node-meta,.legend-meta{font:11px "Segoe UI",sans-serif;fill:#60736b}
+      .legend-type{font:700 12px "Segoe UI",sans-serif;fill:#243b31}
+      .badge{font:700 10px "Segoe UI",sans-serif;fill:#314b40}
+      .category{font:700 11px "Segoe UI",sans-serif;letter-spacing:.6px;text-transform:uppercase;fill:#496158}
+      .note{font:12px "Segoe UI",sans-serif;fill:#60736b}
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#eef3ef"/>
+  <rect x="32" y="32" width="1536" height="936" rx="24" fill="#f7f3ea" stroke="#cbd8d1"/>
+  <text x="72" y="82" class="eyebrow">Neo4j Aura · schema projection</text>
+  <text x="72" y="128" class="title">IGF Brain Aura — overview</text>
+  <text x="72" y="157" class="subtitle">Joined intergenerational-justice graph schema; aggregate metadata only</text>
+  <text x="1070" y="85" class="eyebrow">Relationship legend</text>
+  <text x="1070" y="112" class="note">Numbers on paths map to aggregate schema relationships.</text>
+  <text x="1070" y="134" class="note">Snapshot 2026-08-30</text>
+  <line x1="1035" y1="170" x2="1035" y2="908" stroke="#cbd8d1"/>
+  <g>
+      <path d="M 907 540 Q 685 576 535 540" fill="none" stroke="#688077" stroke-opacity=".42" stroke-width="2.57978359661681" marker-end="url(#arrow)"/>
+      <circle cx="703" cy="558" r="11" fill="#f7f3ea" stroke="#688077"/>
+      <text x="703" y="562" text-anchor="middle" class="badge">1</text>
+    </g>
+<g>
+      <path d="M 721 540 Q 703 558 721 540" fill="none" stroke="#688077" stroke-opacity=".42" stroke-width="3.681241237375587" marker-end="url(#arrow)"/>
+      <circle cx="712" cy="549" r="11" fill="#f7f3ea" stroke="#688077"/>
+      <text x="712" y="553" text-anchor="middle" class="badge">2</text>
+    </g>
+<g>
+      <path d="M 349 540 Q 442 540 535 540" fill="none" stroke="#688077" stroke-opacity=".42" stroke-width="4.9857407410500745" marker-end="url(#arrow)"/>
+      <circle cx="442" cy="540" r="11" fill="#f7f3ea" stroke="#688077"/>
+      <text x="442" y="544" text-anchor="middle" class="badge">3</text>
+    </g>
+<g>
+      <path d="M 535 540 Q 553 522 535 540" fill="none" stroke="#688077" stroke-opacity=".42" stroke-width="1.3010299956639813" marker-end="url(#arrow)"/>
+      <circle cx="544" cy="531" r="11" fill="#f7f3ea" stroke="#688077"/>
+      <text x="544" y="535" text-anchor="middle" class="badge">4</text>
+    </g>
+<g>
+      <path d="M 721 540 Q 850 504 907 540" fill="none" stroke="#688077" stroke-opacity=".42" stroke-width="2.6020599913279625" marker-end="url(#arrow)"/>
+      <circle cx="832" cy="522" r="11" fill="#f7f3ea" stroke="#688077"/>
+      <text x="832" y="526" text-anchor="middle" class="badge">5</text>
+    </g>
+<g>
+      <path d="M 349 540 Q 313 576 349 540" fill="none" stroke="#688077" stroke-opacity=".42" stroke-width="4.602710944957558" marker-end="url(#arrow)"/>
+      <circle cx="331" cy="558" r="11" fill="#f7f3ea" stroke="#688077"/>
+      <text x="331" y="562" text-anchor="middle" class="badge">6</text>
+    </g>
+<g>
+      <path d="M 907 540 Q 796 558 721 540" fill="none" stroke="#688077" stroke-opacity=".42" stroke-width="2.3010299956639813" marker-end="url(#arrow)"/>
+      <circle cx="805" cy="549" r="11" fill="#f7f3ea" stroke="#688077"/>
+      <text x="805" y="553" text-anchor="middle" class="badge">7</text>
+    </g>
+<g>
+      <path d="M 349 540 Q 535 540 721 540" fill="none" stroke="#688077" stroke-opacity=".42" stroke-width="2" marker-end="url(#arrow)"/>
+      <circle cx="535" cy="540" r="11" fill="#f7f3ea" stroke="#688077"/>
+      <text x="535" y="544" text-anchor="middle" class="badge">8</text>
+    </g>
+<g>
+      <path d="M 907 540 Q 925 522 907 540" fill="none" stroke="#688077" stroke-opacity=".42" stroke-width="2" marker-end="url(#arrow)"/>
+      <circle cx="916" cy="531" r="11" fill="#f7f3ea" stroke="#688077"/>
+      <text x="916" y="535" text-anchor="middle" class="badge">9</text>
+    </g>
+<g>
+      <path d="M 721 540 Q 571 504 349 540" fill="none" stroke="#688077" stroke-opacity=".42" stroke-width="3.734799829588847" marker-end="url(#arrow)"/>
+      <circle cx="553" cy="522" r="11" fill="#f7f3ea" stroke="#688077"/>
+      <text x="553" y="526" text-anchor="middle" class="badge">10</text>
+    </g>
+<g>
+      <path d="M 349 540 Q 220 576 163 540" fill="none" stroke="#688077" stroke-opacity=".42" stroke-width="4.469822015978163" marker-end="url(#arrow)"/>
+      <circle cx="238" cy="558" r="11" fill="#f7f3ea" stroke="#688077"/>
+      <text x="238" y="562" text-anchor="middle" class="badge">11</text>
+    </g>
+<g>
+      <path d="M 535 540 Q 331 558 163 540" fill="none" stroke="#688077" stroke-opacity=".42" stroke-width="1.3010299956639813" marker-end="url(#arrow)"/>
+      <circle cx="340" cy="549" r="11" fill="#f7f3ea" stroke="#688077"/>
+      <text x="340" y="553" text-anchor="middle" class="badge">12</text>
+    </g>
+<g>
+      <path d="M 907 540 Q 628 540 349 540" fill="none" stroke="#688077" stroke-opacity=".42" stroke-width="2.380211241711606" marker-end="url(#arrow)"/>
+      <circle cx="628" cy="540" r="11" fill="#f7f3ea" stroke="#688077"/>
+      <text x="628" y="544" text-anchor="middle" class="badge">13</text>
+    </g>
+<g>
+      <path d="M 721 540 Q 646 522 535 540" fill="none" stroke="#688077" stroke-opacity=".42" stroke-width="1.4771212547196624" marker-end="url(#arrow)"/>
+      <circle cx="637" cy="531" r="11" fill="#f7f3ea" stroke="#688077"/>
+      <text x="637" y="535" text-anchor="middle" class="badge">14</text>
+    </g>
+<g>
+      <path d="M 349 540 Q 664 504 907 540" fill="none" stroke="#688077" stroke-opacity=".42" stroke-width="2.255272505103306" marker-end="url(#arrow)"/>
+      <circle cx="646" cy="522" r="11" fill="#f7f3ea" stroke="#688077"/>
+      <text x="646" y="526" text-anchor="middle" class="badge">15</text>
+    </g>
+<g>
+      <path d="M 163 540 Q 499 576 907 540" fill="none" stroke="#688077" stroke-opacity=".42" stroke-width="2.8976270912904414" marker-end="url(#arrow)"/>
+      <circle cx="517" cy="558" r="11" fill="#f7f3ea" stroke="#688077"/>
+      <text x="517" y="562" text-anchor="middle" class="badge">16</text>
+    </g>
+  <g transform="translate(626 506)">
+      <rect width="190" height="68" rx="14" fill="#fffdf7" stroke="#367357" stroke-width="2"/>
+      <rect width="8" height="68" rx="4" fill="#367357"/>
+      <text x="22" y="28" class="node-title">People</text>
+      <text x="22" y="50" class="node-meta">293 nodes · people</text>
+    </g>
+<g transform="translate(812 506)">
+      <rect width="190" height="68" rx="14" fill="#fffdf7" stroke="#a06a20" stroke-width="2"/>
+      <rect width="8" height="68" rx="4" fill="#a06a20"/>
+      <text x="22" y="28" class="node-title">Programme</text>
+      <text x="22" y="50" class="node-meta">73 nodes · programme</text>
+    </g>
+<g transform="translate(254 506)">
+      <rect width="190" height="68" rx="14" fill="#fffdf7" stroke="#b7552b" stroke-width="2"/>
+      <rect width="8" height="68" rx="4" fill="#b7552b"/>
+      <text x="22" y="28" class="node-title">Evidence</text>
+      <text x="22" y="50" class="node-meta">5.9K nodes · evidence</text>
+    </g>
+<g transform="translate(68 506)">
+      <rect width="190" height="68" rx="14" fill="#fffdf7" stroke="#28728a" stroke-width="2"/>
+      <rect width="8" height="68" rx="4" fill="#28728a"/>
+      <text x="22" y="28" class="node-title">Context</text>
+      <text x="22" y="50" class="node-meta">336 nodes · context</text>
+    </g>
+<g transform="translate(440 506)">
+      <rect width="190" height="68" rx="14" fill="#fffdf7" stroke="#6857a6" stroke-width="2"/>
+      <rect width="8" height="68" rx="4" fill="#6857a6"/>
+      <text x="22" y="28" class="node-title">Foresight</text>
+      <text x="22" y="50" class="node-meta">72 nodes · foresight</text>
+    </g>
+  <g transform="translate(1070 218)">
+      <circle cx="11" cy="-4" r="10" fill="#f7f3ea" stroke="#688077"/>
+      <text x="11" y="0" text-anchor="middle" class="badge">1</text>
+      <text x="32" y="-1" class="legend-type">2 relationship types</text>
+      <text x="32" y="15" class="legend-meta">programme → foresight · 37</text>
+    </g>
+<g transform="translate(1070 246)">
+      <circle cx="11" cy="-4" r="10" fill="#f7f3ea" stroke="#688077"/>
+      <text x="11" y="0" text-anchor="middle" class="badge">2</text>
+      <text x="32" y="-1" class="legend-type">16 relationship types</text>
+      <text x="32" y="15" class="legend-meta">people → people · 479</text>
+    </g>
+<g transform="translate(1070 274)">
+      <circle cx="11" cy="-4" r="10" fill="#f7f3ea" stroke="#688077"/>
+      <text x="11" y="0" text-anchor="middle" class="badge">3</text>
+      <text x="32" y="-1" class="legend-type">3 relationship types</text>
+      <text x="32" y="15" class="legend-meta">evidence → foresight · 9.7K</text>
+    </g>
+<g transform="translate(1070 302)">
+      <circle cx="11" cy="-4" r="10" fill="#f7f3ea" stroke="#688077"/>
+      <text x="11" y="0" text-anchor="middle" class="badge">4</text>
+      <text x="32" y="-1" class="legend-type">1 relationship type</text>
+      <text x="32" y="15" class="legend-meta">foresight → foresight · 1</text>
+    </g>
+<g transform="translate(1070 330)">
+      <circle cx="11" cy="-4" r="10" fill="#f7f3ea" stroke="#688077"/>
+      <text x="11" y="0" text-anchor="middle" class="badge">5</text>
+      <text x="32" y="-1" class="legend-type">5 relationship types</text>
+      <text x="32" y="15" class="legend-meta">people → programme · 39</text>
+    </g>
+<g transform="translate(1070 358)">
+      <circle cx="11" cy="-4" r="10" fill="#f7f3ea" stroke="#688077"/>
+      <text x="11" y="0" text-anchor="middle" class="badge">6</text>
+      <text x="32" y="-1" class="legend-type">5 relationship types</text>
+      <text x="32" y="15" class="legend-meta">evidence → evidence · 4K</text>
+    </g>
+<g transform="translate(1070 386)">
+      <circle cx="11" cy="-4" r="10" fill="#f7f3ea" stroke="#688077"/>
+      <text x="11" y="0" text-anchor="middle" class="badge">7</text>
+      <text x="32" y="-1" class="legend-type">1 relationship type</text>
+      <text x="32" y="15" class="legend-meta">programme → people · 19</text>
+    </g>
+<g transform="translate(1070 414)">
+      <circle cx="11" cy="-4" r="10" fill="#f7f3ea" stroke="#688077"/>
+      <text x="11" y="0" text-anchor="middle" class="badge">8</text>
+      <text x="32" y="-1" class="legend-type">1 relationship type</text>
+      <text x="32" y="15" class="legend-meta">evidence → people · 9</text>
+    </g>
+<g transform="translate(1070 442)">
+      <circle cx="11" cy="-4" r="10" fill="#f7f3ea" stroke="#688077"/>
+      <text x="11" y="0" text-anchor="middle" class="badge">9</text>
+      <text x="32" y="-1" class="legend-type">4 relationship types</text>
+      <text x="32" y="15" class="legend-meta">programme → programme · 9</text>
+    </g>
+<g transform="translate(1070 470)">
+      <circle cx="11" cy="-4" r="10" fill="#f7f3ea" stroke="#688077"/>
+      <text x="11" y="0" text-anchor="middle" class="badge">10</text>
+      <text x="32" y="-1" class="legend-type">3 relationship types</text>
+      <text x="32" y="15" class="legend-meta">people → evidence · 542</text>
+    </g>
+<g transform="translate(1070 498)">
+      <circle cx="11" cy="-4" r="10" fill="#f7f3ea" stroke="#688077"/>
+      <text x="11" y="0" text-anchor="middle" class="badge">11</text>
+      <text x="32" y="-1" class="legend-type">2 relationship types</text>
+      <text x="32" y="15" class="legend-meta">evidence → context · 2.9K</text>
+    </g>
+<g transform="translate(1070 526)">
+      <circle cx="11" cy="-4" r="10" fill="#f7f3ea" stroke="#688077"/>
+      <text x="11" y="0" text-anchor="middle" class="badge">12</text>
+      <text x="32" y="-1" class="legend-type">1 relationship type</text>
+      <text x="32" y="15" class="legend-meta">foresight → context · 1</text>
+    </g>
+<g transform="translate(1070 554)">
+      <circle cx="11" cy="-4" r="10" fill="#f7f3ea" stroke="#688077"/>
+      <text x="11" y="0" text-anchor="middle" class="badge">13</text>
+      <text x="32" y="-1" class="legend-type">1 relationship type</text>
+      <text x="32" y="15" class="legend-meta">programme → evidence · 23</text>
+    </g>
+<g transform="translate(1070 582)">
+      <circle cx="11" cy="-4" r="10" fill="#f7f3ea" stroke="#688077"/>
+      <text x="11" y="0" text-anchor="middle" class="badge">14</text>
+      <text x="32" y="-1" class="legend-type">1 relationship type</text>
+      <text x="32" y="15" class="legend-meta">people → foresight · 2</text>
+    </g>
+<g transform="translate(1070 610)">
+      <circle cx="11" cy="-4" r="10" fill="#f7f3ea" stroke="#688077"/>
+      <text x="11" y="0" text-anchor="middle" class="badge">15</text>
+      <text x="32" y="-1" class="legend-type">1 relationship type</text>
+      <text x="32" y="15" class="legend-meta">evidence → programme · 17</text>
+    </g>
+<g transform="translate(1070 638)">
+      <circle cx="11" cy="-4" r="10" fill="#f7f3ea" stroke="#688077"/>
+      <text x="11" y="0" text-anchor="middle" class="badge">16</text>
+      <text x="32" y="-1" class="legend-type">2 relationship types</text>
+      <text x="32" y="15" class="legend-meta">context → programme · 78</text>
+    </g>
+  
+  <g transform="translate(80 936)">
+      <circle cx="7" cy="-4" r="7" fill="#367357"/>
+      <text x="20" y="0" class="category">people</text>
+    </g>
+<g transform="translate(225 936)">
+      <circle cx="7" cy="-4" r="7" fill="#a06a20"/>
+      <text x="20" y="0" class="category">programme</text>
+    </g>
+<g transform="translate(370 936)">
+      <circle cx="7" cy="-4" r="7" fill="#b7552b"/>
+      <text x="20" y="0" class="category">evidence</text>
+    </g>
+<g transform="translate(515 936)">
+      <circle cx="7" cy="-4" r="7" fill="#28728a"/>
+      <text x="20" y="0" class="category">context</text>
+    </g>
+<g transform="translate(660 936)">
+      <circle cx="7" cy="-4" r="7" fill="#6857a6"/>
+      <text x="20" y="0" class="category">foresight</text>
+    </g>
+  <text x="1035" y="946" text-anchor="end" class="note">6,657 nodes · 17,886 relationships</text>
+</svg>

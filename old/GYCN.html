@@ -1,0 +1,2585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Youth Coalition</title>
+    <link rel="icon" href="assets/images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #000;
+            overflow-x: hidden;
+        }
+        
+        /* Navigation Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+        
+        .header.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-weight: 600;
+            font-size: 1.2rem;
+            letter-spacing: 0.05em;
+            color: #000;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-item {
+            margin-left: 2rem;
+            position: relative;
+        }
+        
+        .nav-link {
+            color: #000;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #333;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+        
+        .hamburger-line {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: #000;
+            margin: 5px 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                height: 100vh;
+                background-color: #fff;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: right 0.3s ease;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-item {
+                margin: 1.5rem 0;
+            }
+            
+            .hamburger {
+                display: block;
+                z-index: 1001;
+            }
+            
+            .hamburger.active .hamburger-line:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+            
+            .hamburger.active .hamburger-line:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active .hamburger-line:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+            
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease;
+                z-index: 999;
+            }
+            
+            .overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        
+        /* For demo purposes - hero section */
+        .hero {
+            height: 100vh;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .hero-tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: #fff;
+            color: #000;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            letter-spacing: 0.05em;
+        }
+        
+        .cta-button:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .hero-tagline {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        .about-section {
+            padding: 8rem 0;
+            background-color: #f8f8f8;
+        }
+        
+        .about-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .about-left {
+            flex: 1;
+            padding-right: 4rem;
+        }
+        
+        .about-right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+        
+        .image-container {
+            margin-top: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .image-container:hover img {
+            transform: scale(1.03);
+        }
+        
+        .about-content {
+            max-width: 540px;
+        }
+        
+        .lead-text {
+            font-size: 1.5rem;
+            line-height: 1.4;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .learn-more {
+            display: inline-flex;
+            align-items: center;
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            margin-top: 1rem;
+            position: relative;
+        }
+        
+        .learn-more::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+        
+        .learn-more:hover::after {
+            width: 100%;
+        }
+        
+        .arrow {
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .learn-more:hover .arrow {
+            transform: translateX(5px);
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .about-container {
+                flex-direction: column;
+            }
+            
+            .about-left {
+                padding-right: 0;
+                margin-bottom: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2.8rem;
+            }
+            
+            .about-content {
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .about-section {
+                padding: 5rem 0;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .lead-text {
+                font-size: 1.3rem;
+            }
+        }
+        
+        /* Programs Section with Horizontal Scrolling Cards */
+        .programs-section {
+            padding: 8rem 0;
+            background-color: #fff;
+        }
+        
+        .programs-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .programs-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .programs-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+        
+        .programs-subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .cards-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 2rem;
+            padding: 1.5rem 0.5rem;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+        }
+        
+        .cards-container::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+        
+        .program-card {
+            flex: 0 0 auto;
+            width: 350px;
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            scroll-snap-align: start;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 2rem;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #000;
+        }
+        
+        .card-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #f8f8f8;
+            color: #000;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+        
+        .card-button:hover {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        .scroll-indicator {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .scroll-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin: 0 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .scroll-dot.active {
+            background-color: #000;
+        }
+        
+        @media (max-width: 768px) {
+            .programs-section {
+                padding: 5rem 0;
+            }
+            
+            .programs-title {
+                font-size: 2.5rem;
+            }
+            
+            .program-card {
+                width: 300px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .program-card {
+                width: 280px;
+            }
+        }
+        
+        /* Events Section with Vertical List and Filters */
+        .events-section {
+            padding: 8rem 0;
+            background-color: #f8f8f8;
+        }
+        
+        .events-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .events-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .events-subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 1rem auto 0;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .events-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .filter-button {
+            padding: 0.6rem 1.2rem;
+            background: none;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #555;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-button.active, .filter-button:hover {
+            background-color: #000;
+            color: #fff;
+            border-color: #000;
+        }
+        
+        .events-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .event-card {
+            display: flex;
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .event-date {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width: 100px;
+            padding: 1.5rem;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .event-month {
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+        
+        .event-day {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+        
+        .event-details {
+            padding: 2rem;
+            flex: 1;
+        }
+        
+        .event-tag {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        
+        .event-tag.webinar {
+            background-color: #e6f7ff;
+            color: #0088cc;
+        }
+        
+        .event-tag.workshop {
+            background-color: #fff2e6;
+            color: #ff8c00;
+        }
+        
+        .event-tag.cop {
+            background-color: #e6ffe6;
+            color: #00cc00;
+        }
+        
+        .event-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: #000;
+        }
+        
+        .event-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        
+        .event-button {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background-color: #f8f8f8;
+            color: #000;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+        
+        .event-button:hover {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        .events-footer {
+            margin-top: 3rem;
+            text-align: center;
+        }
+        
+        .view-all-button {
+            display: inline-flex;
+            align-items: center;
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+        }
+        
+        .view-all-button::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+        
+        .view-all-button:hover::after {
+            width: 100%;
+        }
+        
+        .view-all-button .arrow {
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .view-all-button:hover .arrow {
+            transform: translateX(5px);
+        }
+        
+        @media (max-width: 768px) {
+            .events-section {
+                padding: 5rem 0;
+            }
+            
+            .event-card {
+                flex-direction: column;
+            }
+            
+            .event-date {
+                flex-direction: row;
+                padding: 1rem;
+                min-width: auto;
+                width: 100%;
+            }
+            
+            .event-month {
+                margin-bottom: 0;
+                margin-right: 0.5rem;
+            }
+            
+            .event-details {
+                padding: 1.5rem;
+            }
+        }
+        
+        /* Community Stories Section */
+        .community-section {
+            padding: 8rem 0;
+            background-color: #fff;
+        }
+        
+        .community-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .community-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .community-subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 1rem auto 0;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+        
+        .story-card {
+            cursor: pointer;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .story-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .story-thumbnail {
+            position: relative;
+            overflow: hidden;
+            height: 0;
+            padding-bottom: 100%; /* Creates a square aspect ratio */
+        }
+        
+        .story-thumbnail img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .story-card:hover .story-thumbnail img {
+            transform: scale(1.05);
+        }
+        
+        .story-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+            color: #fff;
+        }
+        
+        .member-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        
+        .member-country {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .community-cta {
+            text-align: center;
+            padding: 4rem;
+            background-color: #f8f8f8;
+            border-radius: 12px;
+        }
+        
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-text {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #333;
+            transform: translateY(-3px);
+        }
+        
+        /* Modal Styles */
+        .story-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            overflow-y: auto;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .story-modal.active {
+            display: block;
+            opacity: 1;
+        }
+        
+        .modal-content {
+            position: relative;
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 0;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            animation: modalIn 0.5s ease;
+        }
+        
+        @keyframes modalIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            color: #000;
+            cursor: pointer;
+            z-index: 10;
+            transition: transform 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            transform: rotate(90deg);
+        }
+        
+        .modal-body {
+            padding: 3rem;
+        }
+        
+        .story-content {
+            display: none;
+        }
+        
+        .story-content.active {
+            display: block;
+        }
+        
+        .story-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .story-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1.5rem;
+        }
+        
+        .story-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        
+        .story-location {
+            font-size: 1rem;
+            color: #555;
+        }
+        
+        .story-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        
+        .story-video {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .story-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .stories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .community-section {
+                padding: 5rem 0;
+            }
+            
+            .stories-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .community-cta {
+                padding: 3rem 1.5rem;
+            }
+            
+            .cta-title {
+                font-size: 1.8rem;
+            }
+            
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+            }
+            
+            .modal-body {
+                padding: 2rem;
+            }
+        }
+        
+        /* Media Hub Section */
+        .media-section {
+            padding: 8rem 0;
+            background-color: #f8f8f8;
+        }
+        
+        .media-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .media-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .media-subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 1rem auto 0;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .media-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .media-filter-button {
+            padding: 0.6rem 1.2rem;
+            background: none;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #555;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .media-filter-button.active, .media-filter-button:hover {
+            background-color: #000;
+            color: #fff;
+            border-color: #000;
+        }
+        
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .media-card {
+            position: relative;
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .media-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .media-thumbnail {
+            position: relative;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+        }
+        
+        .media-thumbnail img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .media-card:hover .media-thumbnail img {
+            transform: scale(1.05);
+        }
+        
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .media-card:hover .play-icon {
+            background-color: #000;
+        }
+        
+        .media-content {
+            padding: 1.5rem;
+        }
+        
+        .media-tag {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+        }
+        
+        .media-tag.video {
+            background-color: #e6f7ff;
+            color: #0088cc;
+        }
+        
+        .media-tag.podcast {
+            background-color: #fff2e6;
+            color: #ff8c00;
+        }
+        
+        .media-tag.blog {
+            background-color: #e6ffe6;
+            color: #00cc00;
+        }
+        
+        .media-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: #000;
+            line-height: 1.4;
+        }
+        
+        .media-description {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+        
+        .media-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .media-footer {
+            margin-top: 3rem;
+            text-align: center;
+        }
+        
+        /* Media Modal */
+        .media-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            overflow-y: auto;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .media-modal.active {
+            display: block;
+            opacity: 1;
+        }
+        
+        .media-embed {
+            display: none;
+        }
+        
+        .media-embed.active {
+            display: block;
+        }
+        
+        .video-container, .podcast-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+        
+        .video-container iframe, .podcast-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .podcast-container {
+            padding-bottom: 232px;
+        }
+        
+        .embed-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .embed-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .media-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .media-section {
+                padding: 5rem 0;
+            }
+            
+            .media-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .embed-title {
+                font-size: 1.5rem;
+            }
+            
+            .embed-description {
+                font-size: 1rem;
+            }
+        }
+        
+        /* Support Us Section */
+        .support-section {
+            padding: 8rem 0;
+            background-color: #fff;
+            position: relative;
+        }
+        
+        .support-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/images/pattern-light.png');
+            background-size: 200px;
+            opacity: 0.05;
+            z-index: 0;
+        }
+        
+        .support-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .support-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .support-subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 1rem auto 0;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .support-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-bottom: 5rem;
+        }
+        
+        .support-card {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .support-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .support-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: #000;
+            transition: color 0.3s ease;
+        }
+        
+        .support-card:hover .support-icon {
+            color: #555;
+        }
+        
+        .support-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            color: #000;
+        }
+        
+        .support-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+        
+        .donate-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .donate-button:hover {
+            background-color: #333;
+            transform: translateY(-3px);
+        }
+        
+        .support-link {
+            display: inline-flex;
+            align-items: center;
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+        }
+        
+        .support-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+        
+        .support-link:hover::after {
+            width: 100%;
+        }
+        
+        .support-link .arrow {
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .support-link:hover .arrow {
+            transform: translateX(5px);
+        }
+        
+        .support-testimonial {
+            background-color: #f8f8f8;
+            border-radius: 12px;
+            padding: 4rem;
+            text-align: center;
+        }
+        
+        .testimonial-quote {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            font-weight: 300;
+            font-style: italic;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+        
+        .testimonial-quote::before,
+        .testimonial-quote::after {
+            content: '"';
+            font-size: 3rem;
+            line-height: 0;
+            position: absolute;
+        }
+        
+        .testimonial-quote::before {
+            left: -1.5rem;
+            top: 0.5rem;
+        }
+        
+        .testimonial-quote::after {
+            right: -1.5rem;
+            bottom: 0;
+        }
+        
+        .author-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        
+        .author-title {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .support-options {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .support-section {
+                padding: 5rem 0;
+            }
+            
+            .support-options {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .support-testimonial {
+                padding: 3rem 1.5rem;
+            }
+            
+            .testimonial-quote {
+                font-size: 1.1rem;
+            }
+            
+            .testimonial-quote::before,
+            .testimonial-quote::after {
+                display: none;
+            }
+        }
+        
+        /* Footer Section */
+        .footer {
+            background-color: #f8f8f8;
+            padding: 5rem 0 2rem;
+            color: #333;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .footer-logo {
+            font-weight: 600;
+            font-size: 1.2rem;
+            letter-spacing: 0.05em;
+            color: #000;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-tagline {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #eee;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: #000;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+        
+        .footer-nav {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        
+        .footer-heading {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            color: #000;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #555;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #000;
+        }
+        
+        .newsletter-text {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        
+        .newsletter-input {
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            width: 100%;
+            transition: border-color 0.3s ease;
+        }
+        
+        .newsletter-input:focus {
+            border-color: #000;
+            outline: none;
+        }
+        
+        .newsletter-button {
+            padding: 0.8rem 1rem;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .newsletter-button:hover {
+            background-color: #333;
+        }
+        
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .copyright {
+            font-size: 0.8rem;
+            color: #777;
+        }
+        
+        .footer-legal {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .footer-legal a {
+            font-size: 0.8rem;
+            color: #777;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-legal a:hover {
+            color: #000;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .footer-nav {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            
+            .newsletter {
+                grid-column: span 2;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .footer {
+                padding: 4rem 0 2rem;
+            }
+            
+            .footer-nav {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .newsletter {
+                grid-column: span 1;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">GLOBAL YOUTH COALITION</a>
+            
+            <button class="hamburger" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
+                <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="community.html" class="nav-link">Community</a></li>
+                <li class="nav-item"><a href="media.html" class="nav-link">Media Hub</a></li>
+                <li class="nav-item"><a href="support.html" class="nav-link">Support Us</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="overlay"></div>
+    
+    <!-- For demo purposes - hero section -->
+    <section class="hero">
+        <!-- Option 1: Video Background -->
+        <video class="hero-background" autoplay muted loop playsinline>
+            <source src="assets/videos/youth-movement.mp4" type="video/mp4">
+            <!-- Fallback image if video doesn't load -->
+            <img class="hero-background" src="assets/images/youth-action.jpg" alt="Youth in action">
+        </video>
+        
+        <!-- Option 2: Image Background (uncomment to use instead of video) -->
+        <!-- <img class="hero-background" src="assets/images/youth-action.jpg" alt="Youth in action"> -->
+        
+        <div class="hero-content">
+            <h1 class="hero-title">GLOBAL YOUTH COALITION</h1>
+            <p class="hero-tagline">Empowering Youth, Shaping the Future</p>
+            <a href="#impact" class="cta-button">Explore Our Impact</a>
+        </div>
+    </section>
+    
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-left">
+                <h2 class="section-title">Who We Are</h2>
+                <div class="image-container">
+                    <img src="assets/images/youth-collaboration.jpg" alt="Youth collaborating on global solutions">
+                </div>
+            </div>
+            <div class="about-right">
+                <div class="about-content">
+                    <p class="lead-text">The Global Youth Coalition is a worldwide network of young changemakers united by a shared vision for a sustainable future.</p>
+                    
+                    <p>Operating across 178 countries, we empower youth to transform climate challenges into opportunities for innovation and leadership. Our community brings together diverse perspectives, skills, and experiences to create meaningful impact where it matters most.</p>
+                    
+                    <p>Through collaborative projects, capacity building, and advocacy, we're not just talking about change—we're making it happen.</p>
+                    
+                    <a href="about.html" class="learn-more">
+                        Learn More
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Programs Section with Horizontal Scrolling Cards -->
+    <section class="programs-section">
+        <div class="programs-container">
+            <div class="programs-header">
+                <h2 class="programs-title">Our Programs</h2>
+                <p class="programs-subtitle">Discover our initiatives that are making a real difference in communities around the world.</p>
+            </div>
+            
+            <div class="cards-container">
+                <!-- Program Card 1 -->
+                <div class="program-card">
+                    <img src="assets/images/reforesting.jpg" alt="Reforesting for Peace" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Reforesting for Peace</h3>
+                        <p class="card-description">A global initiative connecting youth-led reforestation projects with local communities to restore ecosystems while building peace.</p>
+                        <a href="programs.html#reforesting" class="card-button">Discover More</a>
+                    </div>
+                </div>
+                
+                <!-- Program Card 2 -->
+                <div class="program-card">
+                    <img src="assets/images/climate-training.jpg" alt="Global Youth Climate Training" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Global Youth Climate Training</h3>
+                        <p class="card-description">Empowering young leaders with the knowledge, skills, and networks to drive climate action in their communities.</p>
+                        <a href="programs.html#climate-training" class="card-button">Discover More</a>
+                    </div>
+                </div>
+                
+                <!-- Program Card 3 -->
+                <div class="program-card">
+                    <img src="assets/images/ecoverse.jpg" alt="Ecoverse" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Ecoverse</h3>
+                        <p class="card-description">A digital platform connecting young environmental innovators with mentors, resources, and funding to scale their solutions.</p>
+                        <a href="programs.html#ecoverse" class="card-button">Discover More</a>
+                    </div>
+                </div>
+                
+                <!-- Program Card 4 -->
+                <div class="program-card">
+                    <img src="assets/images/youth-policy.jpg" alt="Youth Policy Lab" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Youth Policy Lab</h3>
+                        <p class="card-description">Bridging the gap between youth voices and policy decisions through research, advocacy, and direct engagement with decision-makers.</p>
+                        <a href="programs.html#policy-lab" class="card-button">Discover More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <span class="scroll-dot active"></span>
+                <span class="scroll-dot"></span>
+                <span class="scroll-dot"></span>
+                <span class="scroll-dot"></span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Events Section with Vertical List and Filters -->
+    <section class="events-section">
+        <div class="events-container">
+            <div class="events-header">
+                <h2 class="section-title">Upcoming Events</h2>
+                <p class="events-subtitle">Join us at our upcoming events and be part of the global youth movement.</p>
+            </div>
+            
+            <div class="events-filter">
+                <button class="filter-button active" data-filter="all">All Events</button>
+                <button class="filter-button" data-filter="workshop">Workshops</button>
+                <button class="filter-button" data-filter="webinar">Webinars</button>
+                <button class="filter-button" data-filter="cop">COP Events</button>
+            </div>
+            
+            <div class="events-list">
+                <!-- Event 1 -->
+                <div class="event-card" data-category="webinar">
+                    <div class="event-date">
+                        <span class="event-month">JUN</span>
+                        <span class="event-day">15</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-tag webinar">Webinar</div>
+                        <h3 class="event-title">Climate Action in Urban Communities</h3>
+                        <p class="event-description">Join experts and youth leaders to discuss innovative approaches to climate action in urban settings and how young people can lead the change.</p>
+                        <a href="events.html#urban-climate" class="event-button">Register Now</a>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="event-card" data-category="workshop">
+                    <div class="event-date">
+                        <span class="event-month">JUL</span>
+                        <span class="event-day">08</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-tag workshop">Workshop</div>
+                        <h3 class="event-title">Youth Leadership Development Workshop</h3>
+                        <p class="event-description">A hands-on workshop designed to equip young environmental leaders with the skills needed to mobilize communities and drive sustainable change.</p>
+                        <a href="events.html#leadership-workshop" class="event-button">Register Now</a>
+                    </div>
+                </div>
+                
+                <!-- Event 3 -->
+                <div class="event-card" data-category="cop">
+                    <div class="event-date">
+                        <span class="event-month">AUG</span>
+                        <span class="event-day">22</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-tag cop">COP Event</div>
+                        <h3 class="event-title">Pre-COP Youth Summit</h3>
+                        <p class="event-description">Prepare for the upcoming COP conference with this youth-focused summit. Develop policy positions and advocacy strategies alongside peers from around the world.</p>
+                        <a href="events.html#pre-cop-summit" class="event-button">Details</a>
+                    </div>
+                </div>
+                
+                <!-- Event 4 -->
+                <div class="event-card" data-category="webinar">
+                    <div class="event-date">
+                        <span class="event-month">SEP</span>
+                        <span class="event-day">05</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-tag webinar">Webinar</div>
+                        <h3 class="event-title">Funding Your Environmental Project</h3>
+                        <p class="event-description">Learn about grants, crowdfunding, and partnership opportunities to help turn your environmental initiative from idea to reality.</p>
+                        <a href="events.html#funding-webinar" class="event-button">Register Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="events-footer">
+                <a href="events.html" class="view-all-button">View All Events <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Community Stories Section -->
+    <section class="community-section">
+        <div class="community-container">
+            <div class="community-header">
+                <h2 class="section-title">Community Stories</h2>
+                <p class="community-subtitle">Hear from young changemakers around the world who are part of our global movement.</p>
+            </div>
+            
+            <div class="stories-grid">
+                <!-- Story 1 -->
+                <div class="story-card" data-story="story1">
+                    <div class="story-thumbnail">
+                        <img src="assets/images/stories/maria.jpg" alt="Maria from Brazil">
+                        <div class="story-info">
+                            <h3 class="member-name">Maria Silva</h3>
+                            <p class="member-country">Brazil</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Story 2 -->
+                <div class="story-card" data-story="story2">
+                    <div class="story-thumbnail">
+                        <img src="assets/images/stories/ahmed.jpg" alt="Ahmed from Egypt">
+                        <div class="story-info">
+                            <h3 class="member-name">Ahmed Hassan</h3>
+                            <p class="member-country">Egypt</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Story 3 -->
+                <div class="story-card" data-story="story3">
+                    <div class="story-thumbnail">
+                        <img src="assets/images/stories/priya.jpg" alt="Priya from India">
+                        <div class="story-info">
+                            <h3 class="member-name">Priya Sharma</h3>
+                            <p class="member-country">India</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Story 4 -->
+                <div class="story-card" data-story="story4">
+                    <div class="story-thumbnail">
+                        <img src="assets/images/stories/james.jpg" alt="James from Kenya">
+                        <div class="story-info">
+                            <h3 class="member-name">James Odhiambo</h3>
+                            <p class="member-country">Kenya</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Story 5 -->
+                <div class="story-card" data-story="story5">
+                    <div class="story-thumbnail">
+                        <img src="assets/images/stories/sofia.jpg" alt="Sofia from Mexico">
+                        <div class="story-info">
+                            <h3 class="member-name">Sofia Mendez</h3>
+                            <p class="member-country">Mexico</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Story 6 -->
+                <div class="story-card" data-story="story6">
+                    <div class="story-thumbnail">
+                        <img src="assets/images/stories/chen.jpg" alt="Chen from China">
+                        <div class="story-info">
+                            <h3 class="member-name">Chen Wei</h3>
+                            <p class="member-country">China</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="community-cta">
+                <h3 class="cta-title">Ready to make a difference?</h3>
+                <p class="cta-text">Join thousands of young people from around the world who are taking action for a sustainable future.</p>
+                <a href="community.html#join" class="cta-button">Join Our Community</a>
+            </div>
+        </div>
+        
+        <!-- Story Modal -->
+        <div class="story-modal" id="storyModal">
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                
+                <!-- Story Content will be loaded here -->
+                <div class="modal-body">
+                    <!-- Story 1 Content -->
+                    <div class="story-content" id="story1">
+                        <div class="story-header">
+                            <img src="assets/images/stories/maria.jpg" alt="Maria from Brazil" class="story-avatar">
+                            <div>
+                                <h3 class="story-name">Maria Silva</h3>
+                                <p class="story-location">Rio de Janeiro, Brazil</p>
+                            </div>
+                        </div>
+                        <div class="story-text">
+                            <p>"After joining the Global Youth Coalition's reforestation program, I was able to mobilize over 200 young people in my community to plant 5,000 native trees in degraded areas of the Atlantic Forest. What started as a small local initiative has now grown into a regional movement with support from local government and businesses."</p>
+                            <p>"The training and network I gained through GYC gave me the confidence and resources to turn my passion into real impact. Now I'm mentoring other young environmental leaders in Brazil to start their own projects."</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Story 2 Content -->
+                    <div class="story-content" id="story2">
+                        <div class="story-header">
+                            <img src="assets/images/stories/ahmed.jpg" alt="Ahmed from Egypt" class="story-avatar">
+                            <div>
+                                <h3 class="story-name">Ahmed Hassan</h3>
+                                <p class="story-location">Cairo, Egypt</p>
+                            </div>
+                        </div>
+                        <div class="story-text">
+                            <p>"Water scarcity has always been a critical issue in my community. Through the Global Youth Climate Training program, I developed the skills to create a water conservation initiative that combines traditional knowledge with modern technology."</p>
+                            <p>"Our project has reduced water consumption by 30% in participating households and has been recognized by the Ministry of Environment. The GYC platform connected me with experts and funding opportunities that made this possible."</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Story 3 Content -->
+                    <div class="story-content" id="story3">
+                        <div class="story-header">
+                            <img src="assets/images/stories/priya.jpg" alt="Priya from India" class="story-avatar">
+                            <div>
+                                <h3 class="story-name">Priya Sharma</h3>
+                                <p class="story-location">Mumbai, India</p>
+                            </div>
+                        </div>
+                        <div class="story-video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/EXAMPLE" title="Priya's Story" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    
+                    <!-- Other stories content would be defined similarly -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Media Hub Section -->
+    <section class="media-section">
+        <div class="media-container">
+            <div class="media-header">
+                <h2 class="section-title">Media Hub</h2>
+                <p class="media-subtitle">Explore our latest videos, podcasts, and articles about youth climate action.</p>
+            </div>
+            
+            <div class="media-filter">
+                <button class="media-filter-button active" data-filter="all">All Media</button>
+                <button class="media-filter-button" data-filter="video">Videos</button>
+                <button class="media-filter-button" data-filter="podcast">Podcasts</button>
+                <button class="media-filter-button" data-filter="blog">Blog Posts</button>
+            </div>
+            
+            <div class="media-grid">
+                <!-- Media Item 1 - Video -->
+                <div class="media-card" data-type="video">
+                    <div class="media-thumbnail">
+                        <img src="assets/images/media/youth-summit.jpg" alt="Youth Climate Summit Highlights">
+                        <div class="play-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                                <path fill="#ffffff" d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="media-content">
+                        <span class="media-tag video">Video</span>
+                        <h3 class="media-title">Youth Climate Summit Highlights</h3>
+                        <p class="media-description">Watch the key moments from our international youth climate summit featuring speakers from 45 countries.</p>
+                    </div>
+                    <a href="#" class="media-link" data-media="video1"></a>
+                </div>
+                
+                <!-- Media Item 2 - Podcast -->
+                <div class="media-card" data-type="podcast">
+                    <div class="media-thumbnail">
+                        <img src="assets/images/media/future-voices.jpg" alt="Future Voices Podcast">
+                        <div class="play-icon podcast">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                                <path fill="#ffffff" d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="media-content">
+                        <span class="media-tag podcast">Podcast</span>
+                        <h3 class="media-title">Future Voices: Indigenous Youth Perspectives</h3>
+                        <p class="media-description">Listen to indigenous youth leaders discuss traditional ecological knowledge and climate resilience.</p>
+                    </div>
+                    <a href="#" class="media-link" data-media="podcast1"></a>
+                </div>
+                
+                <!-- Media Item 3 - Blog -->
+                <div class="media-card" data-type="blog">
+                    <div class="media-thumbnail">
+                        <img src="assets/images/media/policy-brief.jpg" alt="Youth Policy Brief">
+                    </div>
+                    <div class="media-content">
+                        <span class="media-tag blog">Blog</span>
+                        <h3 class="media-title">5 Ways Youth Are Influencing Climate Policy</h3>
+                        <p class="media-description">Explore how young advocates are successfully shaping climate policy at local, national, and international levels.</p>
+                    </div>
+                    <a href="media.html#policy-brief" class="media-link"></a>
+                </div>
+                
+                <!-- Media Item 4 - Video -->
+                <div class="media-card" data-type="video">
+                    <div class="media-thumbnail">
+                        <img src="assets/images/media/workshop-series.jpg" alt="Workshop Series">
+                        <div class="play-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                                <path fill="#ffffff" d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="media-content">
+                        <span class="media-tag video">Video</span>
+                        <h3 class="media-title">Climate Communication Workshop</h3>
+                        <p class="media-description">Learn effective strategies for communicating climate science to different audiences in this recorded workshop.</p>
+                    </div>
+                    <a href="#" class="media-link" data-media="video2"></a>
+                </div>
+                
+                <!-- Media Item 5 - Podcast -->
+                <div class="media-card" data-type="podcast">
+                    <div class="media-thumbnail">
+                        <img src="assets/images/media/climate-innovators.jpg" alt="Climate Innovators Podcast">
+                        <div class="play-icon podcast">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                                <path fill="#ffffff" d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="media-content">
+                        <span class="media-tag podcast">Podcast</span>
+                        <h3 class="media-title">Climate Innovators: Youth Entrepreneurs</h3>
+                        <p class="media-description">Meet young entrepreneurs who are building successful businesses while addressing climate challenges.</p>
+                    </div>
+                    <a href="#" class="media-link" data-media="podcast2"></a>
+                </div>
+                
+                <!-- Media Item 6 - Blog -->
+                <div class="media-card" data-type="blog">
+                    <div class="media-thumbnail">
+                        <img src="assets/images/media/cop-insights.jpg" alt="COP Insights">
+                    </div>
+                    <div class="media-content">
+                        <span class="media-tag blog">Blog</span>
+                        <h3 class="media-title">Inside COP: A Youth Delegate's Perspective</h3>
+                        <p class="media-description">First-hand account from our youth delegates at the latest UN Climate Change Conference.</p>
+                    </div>
+                    <a href="media.html#cop-insights" class="media-link"></a>
+                </div>
+            </div>
+            
+            <div class="media-footer">
+                <a href="media.html" class="view-all-button">Explore Full Media Library <span class="arrow">→</span></a>
+            </div>
+        </div>
+        
+        <!-- Media Modal -->
+        <div class="media-modal" id="mediaModal">
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                <div class="modal-body">
+                    <!-- Video 1 -->
+                    <div class="media-embed" id="video1">
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/EXAMPLE1" title="Youth Climate Summit Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h3 class="embed-title">Youth Climate Summit Highlights</h3>
+                        <p class="embed-description">This video captures the energy and insights from our international youth climate summit, featuring keynote speeches, panel discussions, and collaborative workshops with participants from 45 countries. Young leaders share their visions for climate action and the concrete steps they're taking in their communities.</p>
+                    </div>
+                    
+                    <!-- Video 2 -->
+                    <div class="media-embed" id="video2">
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/EXAMPLE2" title="Climate Communication Workshop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h3 class="embed-title">Climate Communication Workshop</h3>
+                        <p class="embed-description">In this workshop recording, communication experts and youth advocates share strategies for effectively communicating climate science to different audiences. Learn how to craft compelling narratives, use data effectively, and tailor your message for maximum impact.</p>
+                    </div>
+                    
+                    <!-- Podcast 1 -->
+                    <div class="media-embed" id="podcast1">
+                        <div class="podcast-container">
+                            <iframe src="https://open.spotify.com/embed/episode/EXAMPLE1" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div>
+                        <h3 class="embed-title">Future Voices: Indigenous Youth Perspectives</h3>
+                        <p class="embed-description">In this episode, we speak with indigenous youth leaders from the Amazon, Arctic, and Pacific Islands about how traditional ecological knowledge can inform climate solutions. Our guests share their communities' experiences with climate impacts and their innovative approaches to building resilience.</p>
+                    </div>
+                    
+                    <!-- Podcast 2 -->
+                    <div class="media-embed" id="podcast2">
+                        <div class="podcast-container">
+                            <iframe src="https://open.spotify.com/embed/episode/EXAMPLE2" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div>
+                        <h3 class="embed-title">Climate Innovators: Youth Entrepreneurs</h3>
+                        <p class="embed-description">Meet three young entrepreneurs who are building successful businesses while addressing climate challenges. From sustainable fashion to food waste reduction to clean energy solutions, these innovators share their journeys, challenges, and advice for other aspiring eco-entrepreneurs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Support Us Section -->
+    <section class="support-section">
+        <div class="support-container">
+            <div class="support-header">
+                <h2 class="section-title">Support Our Mission</h2>
+                <p class="support-subtitle">Join us in empowering young climate leaders around the world. Your support makes our work possible.</p>
+            </div>
+            
+            <div class="support-options">
+                <!-- Donate Option -->
+                <div class="support-card">
+                    <div class="support-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64">
+                            <path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <h3 class="support-title">Donate</h3>
+                    <p class="support-description">Your financial contribution directly supports youth-led climate initiatives in communities around the world. Whether it's a one-time gift or monthly donation, every amount makes a difference.</p>
+                    <a href="support.html#donate" class="donate-button">Donate Now</a>
+                </div>
+                
+                <!-- Volunteer Option -->
+                <div class="support-card">
+                    <div class="support-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64">
+                            <path fill="currentColor" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="support-title">Volunteer</h3>
+                    <p class="support-description">Share your skills and time with our global community. From mentoring young leaders to supporting events or contributing professional expertise, volunteers are essential to our impact.</p>
+                    <a href="support.html#volunteer" class="support-link">Learn How <span class="arrow">→</span></a>
+                </div>
+                
+                <!-- Partner Option -->
+                <div class="support-card">
+                    <div class="support-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64">
+                            <path fill="currentColor" d="M21 10.12h-6.78l2.74-2.82c-2.73-2.7-7.15-2.8-9.88-.1-2.73 2.71-2.73 7.08 0 9.79 2.73 2.71 7.15 2.71 9.88 0C18.32 15.65 19 14.08 19 12.1h2c0 1.98-.88 4.55-2.64 6.29-3.51 3.48-9.21 3.48-12.72 0-3.5-3.47-3.53-9.11-.02-12.58 3.51-3.47 9.14-3.47 12.65 0L21 3v7.12zM12.5 8v4.25l3.5 2.08-.72 1.21L11 13V8h1.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="support-title">Partner With Us</h3>
+                    <p class="support-description">Organizations and businesses can amplify our impact through strategic partnerships. We collaborate with partners who share our vision for youth empowerment and climate action.</p>
+                    <a href="support.html#partner" class="support-link">Explore Partnerships <span class="arrow">→</span></a>
+                </div>
+            </div>
+            
+            <div class="support-testimonial">
+                <div class="testimonial-content">
+                    <p class="testimonial-quote">"Supporting the Global Youth Coalition has been one of the most rewarding investments we've made. Seeing young leaders develop solutions for their communities gives us hope for the future."</p>
+                    <div class="testimonial-author">
+                        <p class="author-name">Sarah Johnson</p>
+                        <p class="author-title">Director of Sustainability, EcoFuture Partners</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo-section">
+                    <a href="index.html" class="footer-logo">GLOBAL YOUTH COALITION</a>
+                    <p class="footer-tagline">Empowering Youth, Shaping the Future</p>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/" class="social-icon" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/" class="social-icon" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+                            </svg>
+                        </a>
+                        <a href="https://youtube.com/" class="social-icon" aria-label="YouTube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav">
+                    <div class="footer-nav-column">
+                        <h3 class="footer-heading">About</h3>
+                        <ul class="footer-links">
+                            <li><a href="about.html#mission">Our Mission</a></li>
+                            <li><a href="about.html#team">Our Team</a></li>
+                            <li><a href="about.html#impact">Impact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h3 class="footer-heading">Programs</h3>
+                        <ul class="footer-links">
+                            <li><a href="programs.html#reforesting">Reforesting for Peace</a></li>
+                            <li><a href="programs.html#climate-training">Climate Training</a></li>
+                            <li><a href="programs.html#ecoverse">Ecoverse</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h3 class="footer-heading">Connect</h3>
+                        <ul class="footer-links">
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="media.html">Media Hub</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column newsletter">
+                        <h3 class="footer-heading">Stay Updated</h3>
+                        <p class="newsletter-text">Subscribe to our newsletter for the latest updates on our programs and events.</p>
+                        <form class="newsletter-form" action="#" method="post">
+                            <input type="email" name="email" placeholder="Your email address" required class="newsletter-input">
+                            <button type="submit" class="newsletter-button">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© Global Youth Coalition 2025</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Toggle mobile menu
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const overlay = document.querySelector('.overlay');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        overlay.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        // Change header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Scroll indicator for program cards
+        const cardsContainer = document.querySelector('.cards-container');
+        const scrollDots = document.querySelectorAll('.scroll-dot');
+        
+        if (cardsContainer && scrollDots.length) {
+            cardsContainer.addEventListener('scroll', () => {
+                const scrollPosition = cardsContainer.scrollLeft;
+                const cardWidth = document.querySelector('.program-card').offsetWidth + 32; // width + gap
+                const activeIndex = Math.round(scrollPosition / cardWidth);
+                
+                scrollDots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === activeIndex);
+                });
+            });
+            
+            // Click on dots to scroll
+            scrollDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    const cardWidth = document.querySelector('.program-card').offsetWidth + 32; // width + gap
+                    cardsContainer.scrollTo({
+                        left: index * cardWidth,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        }
+        
+        // Event filtering functionality
+        const filterButtons = document.querySelectorAll('.filter-button');
+        const eventCards = document.querySelectorAll('.event-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // Filter events
+                const filter = button.getAttribute('data-filter');
+                
+                eventCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Community Stories Modal Functionality
+        const storyCards = document.querySelectorAll('.story-card');
+        const storyModal = document.getElementById('storyModal');
+        const closeModal = document.querySelector('.close-modal');
+        const storyContents = document.querySelectorAll('.story-content');
+        const body = document.body;
+
+        // Open modal when clicking on a story card
+        storyCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const storyId = card.getAttribute('data-story');
+                
+                // Hide all story contents
+                storyContents.forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Show the selected story content
+                document.getElementById(storyId).classList.add('active');
+                
+                // Show modal
+                storyModal.classList.add('active');
+                body.style.overflow = 'hidden'; // Prevent scrolling behind modal
+            });
+        });
+
+        // Close modal when clicking the close button
+        closeModal.addEventListener('click', () => {
+            storyModal.classList.remove('active');
+            body.style.overflow = ''; // Restore scrolling
+        });
+
+        // Close modal when clicking outside the content
+        storyModal.addEventListener('click', (e) => {
+            if (e.target === storyModal) {
+                storyModal.classList.remove('active');
+                body.style.overflow = ''; // Restore scrolling
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && storyModal.classList.contains('active')) {
+                storyModal.classList.remove('active');
+                body.style.overflow = ''; // Restore scrolling
+            }
+        });
+
+        // Media Hub Filtering and Modal Functionality
+        const mediaFilterButtons = document.querySelectorAll('.media-filter-button');
+        const mediaCards = document.querySelectorAll('.media-card');
+        const mediaModal = document.getElementById('mediaModal');
+        const mediaLinks = document.querySelectorAll('.media-link');
+        const mediaEmbeds = document.querySelectorAll('.media-embed');
+        const closeMediaModal = document.querySelector('#mediaModal .close-modal');
+
+        // Filter media items
+        mediaFilterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                mediaFilterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // Filter media items
+                const filter = button.getAttribute('data-filter');
+                
+                mediaCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-type') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Open media modal
+        mediaLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                const mediaId = link.getAttribute('data-media');
+                
+                // If it's a blog post or doesn't have a media ID, navigate to the link
+                if (!mediaId) {
+                    window.location.href = link.getAttribute('href');
+                    return;
+                }
+                
+                // Hide all media embeds
+                mediaEmbeds.forEach(embed => {
+                    embed.classList.remove('active');
+                });
+                
+                // Show the selected media embed
+                const selectedEmbed = document.getElementById(mediaId);
+                if (selectedEmbed) {
+                    selectedEmbed.classList.add('active');
+                    
+                    // Show modal
+                    mediaModal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling behind modal
+                }
+            });
+        });
+
+        // Close media modal
+        if (closeMediaModal) {
+            closeMediaModal.addEventListener('click', () => {
+                mediaModal.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+                
+                // Pause videos and audio when closing the modal
+                const activeIframes = mediaModal.querySelectorAll('iframe');
+                activeIframes.forEach(iframe => {
+                    const src = iframe.src;
+                    iframe.src = src; // Reload iframe to stop playback
+                });
+            });
+            
+            // Close modal when clicking outside the content
+            mediaModal.addEventListener('click', (e) => {
+                if (e.target === mediaModal) {
+                    closeMediaModal.click();
+                }
+            });
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && mediaModal.classList.contains('active')) {
+                    closeMediaModal.click();
+                }
+            });
+        }
+    </script>
+</body>
+</html>

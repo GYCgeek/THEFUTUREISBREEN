@@ -1,0 +1,444 @@
+{
+  "updated": "2026-04-13",
+  "workspace": "theglobalyouth.co",
+  "organizationMode": "documentation-led-non-breaking",
+  "zones": [
+    {
+      "id": "marketing",
+      "label": "Coalition and marketing pages"
+    },
+    {
+      "id": "campaigns",
+      "label": "Programs and campaign microsites"
+    },
+    {
+      "id": "research",
+      "label": "Research and special standalone pages"
+    },
+    {
+      "id": "operations",
+      "label": "Operations, forms, and persistence"
+    },
+    {
+      "id": "shared-assets",
+      "label": "Shared frontend framework"
+    }
+  ],
+  "surfaces": [
+    {
+      "path": "index.html",
+      "zone": "marketing",
+      "type": "html",
+      "title": "GlobalYouth",
+      "purpose": "Primary homepage",
+      "status": "active",
+      "risk": "high"
+    },
+    {
+      "path": "about-us.html",
+      "zone": "marketing",
+      "type": "html",
+      "title": "GlobalYouth",
+      "purpose": "About page",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "contact-us.html",
+      "zone": "marketing",
+      "type": "html",
+      "title": "GlobalYouth",
+      "purpose": "Contact page",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "mission_vision.html",
+      "zone": "marketing",
+      "type": "html",
+      "title": "GlobalYouth",
+      "purpose": "Mission and vision page",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "ourproject.html",
+      "zone": "marketing",
+      "type": "html",
+      "title": "GlobalYouth",
+      "purpose": "Projects overview",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "PrivacyPolicy.html",
+      "zone": "marketing",
+      "type": "html",
+      "title": "Privacy Policy | Global Youth Coalition",
+      "purpose": "Policy page",
+      "status": "active",
+      "risk": "low"
+    },
+    {
+      "path": "error.html",
+      "zone": "marketing",
+      "type": "html",
+      "title": "404 Not Found",
+      "purpose": "Error page",
+      "status": "active",
+      "risk": "low"
+    },
+    {
+      "path": "OMW.html",
+      "zone": "campaigns",
+      "type": "html",
+      "title": "OMW Journey",
+      "purpose": "Program page",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "OMWCOP30.html",
+      "zone": "campaigns",
+      "type": "html",
+      "title": "OMW to COP30 - Global Youth Coalition",
+      "purpose": "Campaign page with involvement submission",
+      "status": "active",
+      "risk": "high"
+    },
+    {
+      "path": "Reeforesting4Peace.html",
+      "zone": "campaigns",
+      "type": "html",
+      "title": "Reeforesting 4 Peace | GYC",
+      "purpose": "Campaign page",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "report2025.html",
+      "zone": "campaigns",
+      "type": "html",
+      "title": "GYC Report 2025 - The Global Youth Coalition",
+      "purpose": "Report landing page",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "GYCN.html",
+      "zone": "campaigns",
+      "type": "html",
+      "title": "Global Youth Coalition",
+      "purpose": "Program page",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "GYCT.html",
+      "zone": "campaigns",
+      "type": "html",
+      "title": "GYCT | Global Youth Coalition",
+      "purpose": "Training program page",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "GYX.html",
+      "zone": "campaigns",
+      "type": "html",
+      "title": "Interactive Wheel of Sessions",
+      "purpose": "Interactive session page",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "avocado.html",
+      "zone": "campaigns",
+      "type": "html",
+      "title": "Avocado Framework | Bridging Climate Policy with Action",
+      "purpose": "Framework intro page",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "AvocadoF.html",
+      "zone": "campaigns",
+      "type": "html",
+      "title": "Avocado Framework",
+      "purpose": "Framework detail page",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "Ecoverse.html",
+      "zone": "campaigns",
+      "type": "html",
+      "title": "Reeforesting 4 Peace | GYC",
+      "purpose": "Program page with likely reused content",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "impact-tech.html",
+      "zone": "campaigns",
+      "type": "html",
+      "title": "Impact Tech - GlobalYouth",
+      "purpose": "Initiative page",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "mission-control.html",
+      "zone": "campaigns",
+      "type": "html",
+      "title": "Mission Control â€” AI Consulting Launch",
+      "purpose": "Mission-control landing page",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "onceinalifetime.html",
+      "zone": "campaigns",
+      "type": "html",
+      "title": "Once In A Lifetime - Global Youth Coalition",
+      "purpose": "Campaign page",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "kit.html",
+      "zone": "campaigns",
+      "type": "html",
+      "title": "Reeforesting 4 Peace | GYC",
+      "purpose": "Resource/supporting page",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "map-test.html",
+      "zone": "campaigns",
+      "type": "html",
+      "title": "Map Test - Updated Journey",
+      "purpose": "Experimental map page",
+      "status": "experimental",
+      "risk": "low"
+    },
+    {
+      "path": "Foresight-ResearchOLD.html",
+      "zone": "research",
+      "type": "html",
+      "title": "Youth Futures & Intergenerational Equity Research | Global Youth Coalition",
+      "purpose": "Legacy foresight research page",
+      "status": "legacy",
+      "risk": "low"
+    },
+    {
+      "path": "public_html/Foresight-Research-updated.html",
+      "zone": "research",
+      "type": "html",
+      "title": "Youth Futures & Intergenerational Equity Research | Global Youth Coalition",
+      "purpose": "Updated foresight research page",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "Article-test",
+      "zone": "research",
+      "type": "extensionless-html",
+      "title": "Youth Futures & Intergenerational Equity Research | Global Youth Coalition",
+      "purpose": "Standalone research page",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "test2",
+      "zone": "research",
+      "type": "extensionless-html",
+      "title": "Youth Futures & Intergenerational Equity Research | Global Youth Coalition",
+      "purpose": "Standalone research variant",
+      "status": "experimental",
+      "risk": "low"
+    },
+    {
+      "path": "FfD4",
+      "zone": "research",
+      "type": "extensionless-html",
+      "title": "FfD4 Side Event: Intergenerational Fairness in Financing for Development | Global Youth Coalition",
+      "purpose": "Side-event page",
+      "status": "active",
+      "risk": "medium"
+    },
+    {
+      "path": "save.php",
+      "zone": "operations",
+      "type": "php",
+      "title": "",
+      "purpose": "Generic save endpoint",
+      "status": "active",
+      "risk": "high"
+    },
+    {
+      "path": "DB/TRIDENTDB/send-involvement.php",
+      "zone": "operations",
+      "type": "php",
+      "title": "",
+      "purpose": "TRIDENT involvement submission endpoint",
+      "status": "active",
+      "risk": "high"
+    },
+    {
+      "path": "public_html/horizon-scanning",
+      "zone": "operations",
+      "type": "extensionless-html",
+      "title": "Horizon Scanning | Global Youth Coalition",
+      "purpose": "Signal workflow application",
+      "status": "active",
+      "risk": "high"
+    },
+    {
+      "path": "public_html/dashboard.html",
+      "zone": "operations",
+      "type": "html",
+      "title": "FORESIGHT // Horizon Scanning",
+      "purpose": "Moderation dashboard",
+      "status": "active",
+      "risk": "high"
+    },
+    {
+      "path": "public_html/submit_signal.php",
+      "zone": "operations",
+      "type": "php",
+      "title": "",
+      "purpose": "Root submit endpoint",
+      "status": "active-duplicate",
+      "risk": "high"
+    },
+    {
+      "path": "public_html/approve_signal.php",
+      "zone": "operations",
+      "type": "php",
+      "title": "",
+      "purpose": "Root approve endpoint",
+      "status": "active-duplicate",
+      "risk": "high"
+    },
+    {
+      "path": "public_html/reject_signal.php",
+      "zone": "operations",
+      "type": "php",
+      "title": "",
+      "purpose": "Root reject endpoint",
+      "status": "active-duplicate",
+      "risk": "high"
+    },
+    {
+      "path": "public_html/sign_signal.php",
+      "zone": "operations",
+      "type": "php",
+      "title": "",
+      "purpose": "Root sign endpoint",
+      "status": "active-duplicate",
+      "risk": "high"
+    },
+    {
+      "path": "public_html/comment_signal.php",
+      "zone": "operations",
+      "type": "php",
+      "title": "",
+      "purpose": "Root comment endpoint",
+      "status": "active-duplicate",
+      "risk": "high"
+    },
+    {
+      "path": "public_html/data/submit_signal.php",
+      "zone": "operations",
+      "type": "php",
+      "title": "",
+      "purpose": "Data submit endpoint",
+      "status": "active",
+      "risk": "high"
+    },
+    {
+      "path": "public_html/data/approve_signal.php",
+      "zone": "operations",
+      "type": "php",
+      "title": "",
+      "purpose": "Data approve endpoint",
+      "status": "active",
+      "risk": "high"
+    },
+    {
+      "path": "public_html/data/reject_signal.php",
+      "zone": "operations",
+      "type": "php",
+      "title": "",
+      "purpose": "Data reject endpoint",
+      "status": "active",
+      "risk": "high"
+    },
+    {
+      "path": "public_html/data/sign_signal.php",
+      "zone": "operations",
+      "type": "php",
+      "title": "",
+      "purpose": "Data sign endpoint",
+      "status": "active",
+      "risk": "high"
+    },
+    {
+      "path": "public_html/data/comment_signal.php",
+      "zone": "operations",
+      "type": "php",
+      "title": "",
+      "purpose": "Data comment endpoint",
+      "status": "active",
+      "risk": "high"
+    },
+    {
+      "path": "public_html/data/upload.php",
+      "zone": "operations",
+      "type": "php",
+      "title": "",
+      "purpose": "Data upload endpoint",
+      "status": "active",
+      "risk": "high"
+    },
+    {
+      "path": "public_html/data/check_updates.php",
+      "zone": "operations",
+      "type": "php",
+      "title": "",
+      "purpose": "Polling/update helper endpoint",
+      "status": "active",
+      "risk": "medium"
+    }
+  ],
+  "folders": [
+    {
+      "path": "assets",
+      "role": "shared-assets"
+    },
+    {
+      "path": "DB/TRIDENTDB",
+      "role": "backend-integration"
+    },
+    {
+      "path": "FT",
+      "role": "supporting-media"
+    },
+    {
+      "path": "public_html",
+      "role": "workflow-app"
+    },
+    {
+      "path": "docs",
+      "role": "agent-documentation"
+    }
+  ],
+  "knownIssues": [
+    "Missing files linked from index.html footer: services.html and blog.html",
+    "Duplicated endpoint layer under public_html root and public_html/data",
+    "Mixed naming conventions across legacy files",
+    "Some extensionless files are valid HTML surfaces and should not be ignored"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 3,
+  "generated": "2026-06-30T00:02:00.025Z",
+  "source": "signals-db.json",
+  "migration": "scripts/migrate-signals-v3.mjs",
+  "edge_types": [
+    "supports",
+    "contradicts",
+    "precedes"
+  ],
+  "edges": [],
+  "threads": []
+}

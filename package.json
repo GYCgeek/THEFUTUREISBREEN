@@ -1,0 +1,20 @@
+{
+  "name": "theglobalyouth.co",
+  "version": "1.0.0",
+  "description": "Start here for orientation.",
+  "main": "service-worker.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "js-yaml": "^5.4.2",
+    "playwright": "^1.63.0"
+  }
+}

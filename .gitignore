@@ -1,0 +1,20 @@
+# Generated and local cache files
+assets/.sass-cache/
+docs/*.tmp
+
+# Logs
+*.log
+
+# OS artifacts
+Thumbs.db
+Desktop.ini
+
+# --- local loop (added 2026-10-03) ---
+# Server-side backup copies and heavy media stay on disk but out of git
+*.bak-*
+*.backup-*
+*.mp4
+*.pdf
+node_modules/
+reports/screens/
+reports/*.log

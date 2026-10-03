@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Respuesta a la persona experta en foresight — LCAW Hackathon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Spline+Sans+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+ :root {
+ --ink: #1a1d1a; --ink-soft: #3d433d; --paper: #f4f1e8; --paper-deep: #ebe6d6;
+ --sage: #4a6b52; --sage-deep: #2f4536; --rust: #a8482a; --gold: #b8893a;
+ --line: #c9c2ad; --card: #faf8f1;
+ }
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body {
+ font-family: 'Newsreader', Georgia, serif; background: var(--paper); color: var(--ink);
+ line-height: 1.7; font-size: 18px;
+ background-image:
+ radial-gradient(circle at 15% 20%, rgba(74,107,82,0.04) 0%, transparent 40%),
+ radial-gradient(circle at 85% 70%, rgba(168,72,42,0.03) 0%, transparent 45%);
+ }
+ .wrap { max-width: 820px; margin: 0 auto; padding: 0 32px; }
+
+ header.mast { padding: 80px 0 48px; border-bottom: 2px solid var(--ink); margin-bottom: 8px; }
+ .eyebrow {
+ font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.28em;
+ text-transform: uppercase; color: var(--rust); margin-bottom: 24px;
+ display: flex; align-items: center; gap: 12px;
+ }
+ .eyebrow::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+ h1.title {
+ font-family: 'Fraunces', serif; font-weight: 600;
+ font-size: clamp(38px, 6vw, 58px); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 16px;
+ }
+ h1.title .glyph { color: var(--sage); font-style: italic; }
+ .standfirst { font-size: 20px; color: var(--ink-soft); max-width: 60ch; font-style: italic; }
+ .meta-row {
+ display: flex; flex-wrap: wrap; gap: 28px; margin-top: 32px;
+ font-family: 'Spline Sans Mono', monospace; font-size: 12px;
+ letter-spacing: 0.04em; color: var(--ink-soft);
+ }
+ .meta-row b { color: var(--ink); font-weight: 600; }
+
+ section { padding: 56px 0; border-bottom: 1px solid var(--line); }
+ .sec-num {
+ font-family: 'Spline Sans Mono', monospace; font-size: 13px; letter-spacing: 0.2em;
+ color: var(--rust); text-transform: uppercase; margin-bottom: 14px;
+ }
+ h2 {
+ font-family: 'Fraunces', serif; font-weight: 500;
+ font-size: clamp(28px, 4vw, 38px); letter-spacing: -0.015em; line-height: 1.1; margin-bottom: 16px;
+ }
+ h3 {
+ font-family: 'Fraunces', serif; font-weight: 600; font-size: 21px;
+ color: var(--sage-deep); margin: 32px 0 12px;
+ }
+ p { margin-bottom: 18px; color: var(--ink-soft); }
+ p:last-child { margin-bottom: 0; }
+ .lede { font-size: 19px; color: var(--ink-soft); max-width: 62ch; margin-bottom: 8px; }
+
+ /* Table */
+ .moments-table {
+ width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 16px;
+ }
+ .moments-table thead th {
+ text-align: left; padding: 12px 14px;
+ font-family: 'Spline Sans Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em;
+ text-transform: uppercase; color: var(--rust);
+ border-bottom: 2px solid var(--ink);
+ }
+ .moments-table tbody td {
+ padding: 14px; vertical-align: top;
+ border-bottom: 1px solid var(--line);
+ }
+ .moments-table tbody td:first-child {
+ font-weight: 600; color: var(--ink); white-space: nowrap; font-size: 15px;
+ }
+ .moments-table tbody td:last-child {
+ color: var(--ink-soft);
+ }
+
+ /* Cards */
+ .card {
+ background: var(--card); border: 1px solid var(--line); border-radius: 3px;
+ padding: 24px 28px; margin: 18px 0;
+ }
+ .card h4 {
+ font-family: 'Fraunces', serif; font-weight: 600; font-size: 19px; margin-bottom: 8px;
+ }
+ .card p { font-size: 16.5px; margin-bottom: 0; }
+
+ .urgent { border-left: 4px solid var(--rust); }
+ .week { border-left: 4px solid var(--gold); }
+ .before { border-left: 4px solid var(--sage); }
+
+ /* Coherence callout */
+ .callout {
+ margin-top: 32px; padding: 30px 34px;
+ background: linear-gradient(135deg, var(--sage-deep), #243528);
+ color: var(--paper); border-radius: 4px; position: relative; overflow: hidden;
+ }
+ .callout::before {
+ content: "◇"; position: absolute; top: -10px; right: 18px;
+ font-size: 120px; color: rgba(255,255,255,0.05); line-height: 1;
+ }
+ .callout .label {
+ font-family: 'Spline Sans Mono', monospace; font-size: 10px; letter-spacing: 0.18em;
+ text-transform: uppercase; color: var(--gold); margin-bottom: 8px;
+ }
+ .callout p { color: rgba(244,241,232,0.92); font-size: 17px; }
+ .callout strong { color: #fff; }
+
+ .signal-box {
+ background: var(--card); border: 1px dashed var(--sage); border-radius: 4px;
+ padding: 26px 30px; margin: 24px 0;
+ }
+ .signal-box .label {
+ font-family: 'Spline Sans Mono', monospace; font-size: 10px; letter-spacing: 0.16em;
+ text-transform: uppercase; color: var(--sage); margin-bottom: 10px;
+ }
+ .signal-box p { font-size: 17.5px; color: var(--ink); }
+ .signal-box p em { color: var(--sage-deep); }
+
+ .footnote {
+ margin-top: 28px; font-size: 15px; color: var(--ink-soft); font-style: italic;
+ padding: 16px 20px; background: var(--paper-deep); border-radius: 3px;
+ }
+
+ footer {
+ padding: 50px 0 70px; text-align: center;
+ font-family: 'Spline Sans Mono', monospace; font-size: 12px;
+ letter-spacing: 0.1em; color: var(--ink-soft);
+ }
+ footer .dot { color: var(--sage); margin: 0 10px; }
+
+ @media (max-width: 560px) {
+ body { font-size: 16px; }
+ .wrap { padding: 0 20px; }
+ .moments-table thead { display: none; }
+ .moments-table tbody td { display: block; padding: 10px 8px; }
+ .moments-table tbody td:first-child { font-size: 14px; padding-bottom: 2px; }
+ .moments-table tbody td:last-child { padding-top: 0; font-size: 15px; }
+ .card { padding: 20px 22px; }
+ }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+ <header class="mast">
+ <div class="eyebrow">AI for Climate Action Hackathon · GYC AI Labs</div>
+ <h1 class="title">Respuesta a la persona experta en <span class="glyph">foresight</span></h1>
+ <p class="standfirst">Objetivo del documento, cómo se conecta con cada momento del proceso, y qué necesitamos de tu mirada.</p>
+ <div class="meta-row">
+ <span>Hackathon: <b>22 junio 2026</b></span>
+ <span>Registro abre: <b>29 mayo</b></span>
+ <span>Workshop: <b>20 junio</b></span>
+ </div>
+ </header>
+
+ <!-- 1. OBJETIVO -->
+ <section>
+ <div class="sec-num">1</div>
+ <h2>Objetivo de este documento</h2>
+ <p class="lede">Son dos documentos complementarios. Te llegó el de referencia; el otro es un briefing interno.</p>
+
+ <div class="card">
+ <h4>Documento que recibiste — «Foresight Layer: Application Reference»</h4>
+ <p>Fija las <strong>tres preguntas de la capa de foresight</strong> que van dentro del formulario de inscripción al hackathon. No es un documento teórico — es lo que va al formulario que lanzamos <strong>este viernes 29 de mayo</strong>. Su propósito es operacional: asegurar que las preguntas midan pensamiento de futuros real, no solo buenas intenciones con etiqueta climática. Incluye también la guía para revisores, el briefing de mentores para el día del hackathon, y las cinco decisiones abiertas ya resueltas.</p>
+ </div>
+
+ <div class="card">
+ <h4>Documento complementario — «Foresight Flow: Team Briefing»</h4>
+ <p>Explica cómo esas mismas tres preguntas viajan a través de <strong>todo el proceso</strong>: aplicación → selección → workshop online → hackathon → judging. Es para el equipo interno de GYC AI Labs, no para aplicantes. Está publicado en <a href="https://gycailabs.org/foresight-flow-team-briefing.html" style="color: var(--sage);">gycailabs.org/foresight-flow-team-briefing.html</a>.</p>
+ </div>
+ </section>
+
+ <!-- 2. CONEXIÓN CON LOS MOMENTOS -->
+ <section>
+ <div class="sec-num">2</div>
+ <h2>Cómo sus diferentes partes se conectan con cada momento del proceso</h2>
+ <p class="lede">Las tres preguntas forman una cadena causal, no tres filtros independientes. La misma señal viaja de una etapa a la siguiente, ganando profundidad.</p>
+
+ <table class="moments-table">
+ <thead>
+ <tr><th>Momento</th><th>Qué pasa con A3, A4 y A5</th></tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Aplicación<br><span style="font-weight:400;color:var(--ink-soft);">29 mayo – 12 junio</span></td>
+ <td><strong>A3</strong> — Escenario futuro: el/la aplicante elige un horizonte (2030, 2040 o 2050) y describe una cosa concreta que cambió. <strong>A4</strong> — Mecanismo causal: en una frase, conecta el problema actual con ese futuro. <strong>A5</strong> — Fallos (opcional): qué podría salir mal si la solución funciona y escala. <em>Semilla plantada.</em></td>
+ </tr>
+ <tr>
+ <td>Selección<br><span style="font-weight:400;color:var(--ink-soft);">12–14 junio</span></td>
+ <td>Dos revisores por aplicación, tres criterios breves: ¿Es específico el futuro? ¿Conecta la cadena causal? ¿El riesgo nace del éxito? El <strong>tie-breaker</strong> es la coherencia A4↔A5: que el mecanismo que hace funcionar la solución sea el mismo que podría fallar al escalar. Coherencia interna gana sobre tres respuestas pulidas pero desconectadas.</td>
+ </tr>
+ <tr>
+ <td>Workshop online<br><span style="font-weight:400;color:var(--ink-soft);">20 junio</span></td>
+ <td>La persona especialista en foresight da metodología más profunda: construcción de escenarios, backcasting, mapeo de riesgos. Una <strong>frase puente</strong> en toda comunicación pre-evento deja explícito que el escenario de la aplicación es el punto de partida del deliverable final, no un filtro descartable. Los equipos revisitan su A3 con nuevas herramientas.</td>
+ </tr>
+ <tr>
+ <td>Hackathon<br><span style="font-weight:400;color:var(--ink-soft);">22 junio</span></td>
+ <td><strong>09:30:</strong> Briefing de 30 min para todos los mentores (AI + clima + foresight). Tres preguntas que llevan a cada mesa, mapeadas 1:1: <em>«¿Qué cambió si esto funciona?» «¿Cómo se llega de hoy a eso?» «¿Qué se rompe si escala?»</em> Uno o dos mentores especialistas en foresight flotan entre equipos para casos profundos. <strong>17:00:</strong> Entregables: escenario futuro desarrollado + mapa de riesgos (A5 ahora obligatorio, tensionado contra lo que realmente construyeron).</td>
+ </tr>
+ <tr>
+ <td>Judging<br><span style="font-weight:400;color:var(--ink-soft);">22 junio, tarde</span></td>
+ <td><strong>Criterio 3 de 5:</strong> calidad del escenario futuro y mapeo de riesgos. La misma señal de coherencia que los revisores usaron en selección, ahora evaluada contra lo construido. ¿El mapa de riesgos aborda el mecanismo real del prototipo, o es un añadido genérico?</td>
+ </tr>
+ </tbody>
+ </table>
+
+ <div class="signal-box">
+ <div class="label">La señal que atraviesa todo el proceso</div>
+ <p><strong>A4 y A5 deben apuntar al mismo mecanismo.</strong> <em>Lo que hace que la solución funcione es también lo que podría hacerla fallar a escala.</em> Esa coherencia es lo que los revisores detectan en selección, lo que los mentores empujan durante el día, y lo que los jueces premian al final. No es un concepto abstracto: es un patrón que aparece o no aparece en las respuestas, y que se puede enseñar, practicar y evaluar.</p>
+ </div>
+ </section>
+
+ <!-- 3. QUÉ NECESITAMOS -->
+ <section>
+ <div class="sec-num">3</div>
+ <h2>Qué necesitamos de tu mirada</h2>
+ <p class="lede">Tres cosas, en orden de urgencia. Las preguntas se congelan el viernes; todo lo demás puede iterarse.</p>
+
+ <div class="card urgent">
+ <h4>Urgente — antes del viernes 29 de mayo</h4>
+ <p><strong>Revisión de la redacción de A3, A4 y A5.</strong> ¿Miden lo que dicen medir? ¿La palabra «one» en A3 realmente fuerza concreción o es demasiado restrictiva? ¿El scaffold de A4 (<em>today → mechanism → A3 future</em>) ayuda sin producir respuestas templateizadas? ¿«Failure through success» en A5 es el encuadre correcto o debería ser más amplio? La redacción se congela al lanzar el formulario — si hay que ajustar una palabra, una coma, o el orden de las preguntas, este es el momento.</p>
+ </div>
+
+ <div class="card week">
+ <h4>Esta semana</h4>
+ <p><strong>Validación epistemológica.</strong> ¿El marco de «una cadena causal con coherence signal» tiene sentido desde la práctica de futures y foresight? ¿O estamos simplificando algo que requiere más matiz? Si la rúbrica de revisores o el briefing de mentores necesitan ajustes para capturar mejor lo que un buen escenario de futuros realmente es — más allá de nuestra formulación actual — ese ajuste debería hacerse esta semana, antes de que entremos en modo ejecución con la apertura de aplicaciones.</p>
+ </div>
+
+ <div class="card before">
+ <h4>Antes del workshop — 20 de junio</h4>
+ <p><strong>Alineación con el contenido del pre-workshop.</strong> Las preguntas A3-A5 son la entrada; el workshop es donde vos das metodología más profunda. ¿Lo que planeás enseñar se conecta naturalmente con el escenario que los equipos ya escribieron en la aplicación? ¿O necesitamos ajustar el puente para que no se sientan como dos momentos desconectados? La frase puente ya está redactada — ¿es suficiente? ¿Debería incluir algo más específico sobre la metodología que vas a usar?</p>
+ </div>
+ </section>
+
+ <footer>
+ GYC AI Labs <span class="dot">◆</span> Para revisión de la persona experta en foresight <span class="dot">◆</span> 26 mayo 2026
+ </footer>
+</div>
+</body>
+</html>

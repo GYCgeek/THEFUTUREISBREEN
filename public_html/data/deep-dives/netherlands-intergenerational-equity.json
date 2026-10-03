@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "id": "netherlands-intergenerational-equity",
+  "title": "Netherlands: Generatietoets and Kinderrechtentoets",
+  "language": "en",
+  "country_code": "NL",
+  "country_name": "Netherlands",
+  "region": "Europe",
+  "last_updated": "2026-08-17",
+  "confidence": "high",
+  "related_signal_ids": [
+    "netherlands-senate-generatietoets-motion-adopted-2025-11-25",
+    "netherlands-beleidskompas-generatietoets-integration-2025-12-04",
+    "netherlands-publishes-a-completed-generatietoets-on-the-national-circular-economy-programme-2023-203",
+    "dutch-senate-instructs-government-to-apply-the-kinderrechtentoets-to-all-future-youth-care-bills-202",
+    "dutch-reikwijdte-jeugdwet-consultation-publishes-a-kinderrechtentoets-that-adjusted-two-bill-safegua",
+    "netherlands-raad-van-state-intergenerational-justice-2026-04-16"
+  ],
+  "executive_summary": "The Netherlands is one of two countries GYC classifies as having an enacted national Intergenerational Impact Assessment — but the instrument is administrative, not a veto. The Beleidskompas generatietoets asks ministries to test irreversible or redistributive effects on current and future generations before a decision; nobody can stall a dossier for a missing toets. A cousin tool, the Kinderrechtentoets, is a living-child CRIA now instructed for jeugdzorg bills. Bite is thin: Miljoenennota 2026 skipped the Senate's generatietoets motion; the only documented amendment is two consultation-stage safeguards on Wet reikwijdte Jeugdwet. Next public test is Prinsjesdag 15 September 2026.",
+  "ui": {
+    "instrument_tab_label": "Generatietoets",
+    "stats": { "recs_label": "Watch items" },
+    "case_search_placeholder": "Filter bite cases by name, subject, or holding…"
+  },
+  "three_layer_stack": {
+    "layers": [
+      {
+        "order": 1,
+        "id": "administrative",
+        "label": "Administrative IIA (enacted method)",
+        "instrument": "Beleidskompas step 4 + Leidraad Toekomstgericht Beleid generatietoets",
+        "in_force": "2025-12-04",
+        "primary_articles": ["Beleidskompas Q4 consequences", "Leidraad ch. 3 four steps"],
+        "role": "Ministries should run a generatietoets when effects may redistribute across generations, are irreversible, or lock later cohorts in. Hulpmiddel, not a statutory veto."
+      },
+      {
+        "order": 2,
+        "id": "child-rights",
+        "label": "Child-rights cousin (youth-care bills)",
+        "instrument": "Kinderrechtentoets — Senate motion 36.546, I (7 Oct 2025)",
+        "in_force": "2025-10-07",
+        "role": "Four-step CRC assessment on future jeugdzorg bills, recorded in the memorie van toelichting. Kinderombudsman advises; cannot void a bill."
+      },
+      {
+        "order": 3,
+        "id": "judicial",
+        "label": "Climate duty (not IIA review)",
+        "instrument": "Urgenda (Hoge Raad 2019) via ECHR Arts. 2 and 8",
+        "role": "Intergenerational climate duty of care. Does not require a pre-decision generatietoets and does not review a missing one."
+      }
+    ]
+  },
+  "constitutional_reform": {
+    "instrument": "Grondwet — no future-generations amendment",
+    "english_name": "Dutch Constitution (no FG clause)",
+    "adopted": "1814 (current charter; no FG amendment)",
+    "in_force": "1815-03-16",
+    "significance": "Unlike Italy Art. 9 or Germany Art. 20a, the Grondwet does not name future generations. Dutch IIA is method, not constitutional operationalisation.",
+    "articles": [
+      {
+        "article": "No Article naming future generations",
+        "text_en": "There is no Grondwet paragraph equivalent to Italy's Article 9 third paragraph or Germany's Article 20a. Intergenerational claims have been litigated through the ECHR as applied by the Hoge Raad in Urgenda.",
+        "source_url": "https://www.denederlandsegrondwet.nl/"
+      }
+    ],
+    "what_lacks": [
+      "No constitutional future-generations clause",
+      "No Future Generations Commissioner",
+      "No statutory veto or Council-of-State stall for a missing generatietoets",
+      "No published generatietoets on Miljoenennota 2026",
+      "Kinderrechtentoets is not a general-statute duty — youth-care bills only"
+    ],
+    "gaps_heading": "What the Netherlands does not have",
+    "what_italy_lacks": [
+      "No constitutional future-generations clause",
+      "No Future Generations Commissioner",
+      "No statutory veto or Council-of-State stall for a missing generatietoets",
+      "No published generatietoets on Miljoenennota 2026",
+      "Kinderrechtentoets is not a general-statute duty — youth-care bills only"
+    ]
+  },
+  "jurisprudence": {
+    "overview": "Dutch 'case law' for IIA is mostly administrative bite: completed toets versus changed decision. Constitutional climate doctrine (Urgenda) sits beside the tools and does not police them.",
+    "streams": [
+      {
+        "id": "fiscal",
+        "label": "Budget and generatietoets",
+        "summary": "Senate motion 36.800 D instructed a generatietoets on the Miljoenennota. MN 2026 skipped it. NPCE 2023–2030 is the only public completed toets and issued recommendations only.",
+        "key_cases": [
+          {
+            "id": "mn-2026-skip",
+            "citation": "Miljoenennota 2026 — missing generatietoets",
+            "nickname": "Senate motion skip",
+            "date": "2025-09-16",
+            "subject": "Eerste Kamer motion 36.800 D versus published MN 2026 bundle",
+            "constitutional_anchors": ["Beleidskompas step 4", "political instruction, not statute"],
+            "holding_en": "The motion was adopted; the 16 September 2025 Prinsjesdag bundle did not include a generatietoets annex. Completing the political instruction is still open for MN 2027.",
+            "significance": "Documented skip of the flagship national IIA on the budget. Next test 15 September 2026.",
+            "source_url": "https://www.eerstekamer.nl/motiedossier/36800_d_motie_aerdts_d66_c_s_over",
+            "era": "skip",
+            "tag_label": "Skip",
+            "pre_reform": false
+          },
+          {
+            "id": "npce-2024",
+            "citation": "NPCE 2023–2030 generatietoets (Sira, 18 Dec 2024)",
+            "nickname": "First public toets",
+            "date": "2024-12-18",
+            "subject": "National Circular Economy Programme — nine themes × four living age bands",
+            "holding_en": "Contractor Sira Consulting completed the second v1 pilot. Recommendations issued. No primary evidence an NPCE measure was rewritten.",
+            "significance": "Worked example of the method; bite = none found.",
+            "source_url": "https://www.kcbr.nl/beleid-en-regelgeving-ontwikkelen/beleidskompas",
+            "era": "none",
+            "tag_label": "Recommendations only",
+            "pre_reform": false
+          }
+        ]
+      },
+      {
+        "id": "social_solidarity",
+        "label": "Kinderrechtentoets on youth-care bills",
+        "summary": "The only documented Dutch IIA-family amendment is consultation-stage, not enacted law. A claimed second toets on jeugdbescherming is unverified.",
+        "key_cases": [
+          {
+            "id": "reikwijdte-2026",
+            "citation": "Wet reikwijdte Jeugdwet consultation MvT §7.4",
+            "nickname": "Only amendment",
+            "date": "2026-02-13",
+            "subject": "Two safeguards added after youth conversations",
+            "holding_en": "Immediate additional jeugdhulp when necessary; usual-care test must allow help where parents cannot provide it. Bill not yet a statute.",
+            "significance": "Only proven Dutch IIA-family rewrite — and it is still consultation text.",
+            "source_url": "https://www.internetconsultatie.nl/",
+            "era": "amendment",
+            "tag_label": "Amendment (consultation)",
+            "pre_reform": false
+          },
+          {
+            "id": "jeugdbescherming-unverified",
+            "citation": "Versterking rechtsbescherming jeugdbescherming",
+            "date": "2026-05-20",
+            "subject": "Minister Sterk claimed a Kinderrechtentoets; public consultation MvT has none",
+            "holding_en": "Consultation MvT (internetconsultatie document 13475) has no Kinderrechtentoets section — only §4.4 CRC framing. Post-consultation MvT was at the Raad van State as of 30 June 2026 (kst 31839-1180) and unpublished.",
+            "significance": "Do not treat the ministerial claim as a completed toets until the Tweede Kamer MvT is public.",
+            "source_url": "https://internetconsultatie.nl/jeugdbescherming/document/13475",
+            "era": "none",
+            "tag_label": "Unverified claim",
+            "pre_reform": false
+          }
+        ]
+      }
+    ],
+    "operational_tests": [
+      {
+        "domain": "Generatietoets trigger",
+        "test": "Run after a generatiescan when effects may redistribute across generations, are irreversible, or lock later cohorts into costly-to-reverse choices. Not required on every file."
+      },
+      {
+        "domain": "Bite",
+        "test": "A completed toets that leaves the decision unchanged is a skip or none-found, not success. Only a recorded change to the draft counts as amendment."
+      },
+      {
+        "domain": "Kinderrechtentoets scope",
+        "test": "Living children as CRC rights-holders on jeugdzorg bills. Not an unborn-cohort test and not a general RIA duty."
+      }
+    ]
+  },
+  "vig_framework": {
+    "instrument": "Beleidskompas generatietoets",
+    "gazette": "KCBR method pages (updated 27 May 2026)",
+    "in_force": "2025-12-04",
+    "english_name": "Generation test inside the national policy compass",
+    "statutory_principle": "Nobody can block. Missing a toets does not void a bill or budget. Political pressure exists via the Eerste Kamer.",
+    "definition": "A four-step assessment (scope; inventory; normative frames and futures; verification and reporting) of effects on current and future generations, documented for Beleidskompas step 5 and for beslisnota / memorie van toelichting.",
+    "integration": "Beleidskompas step 4 (consequences), optional alongside Toekomst aan Tafel.",
+    "trigger": "Strongly advised / necessary if effects may (a) redistribute burdens and benefits across generations, (b) be irreversible or lock future generations in, or (c) involve high uncertainty on high-impact long-term policy.",
+    "exclusions": [
+      "Not required for every file",
+      "Not a statutory veto",
+      "NPCE v1 scored living age bands (<20, 20–45, 45–67, 67+), not the unborn as a legal person"
+    ],
+    "institutions": [
+      {
+        "name": "Sponsoring-ministry policy officials",
+        "location": "Rijksoverheid",
+        "role": "Write the toets using Beleidskompas / Leidraad Toekomstgericht Beleid (BZK-authored; hosted by KCBR)."
+      },
+      {
+        "name": "Kinderombudsman",
+        "location": "The Hague",
+        "role": "Owns the Kinderrechtentoets toolkit; advises; no formal toetsingsrol (minister, 20 May 2026)."
+      }
+    ],
+    "implementing_instruments": [
+      {
+        "instrument": "Prinsjesdag / Miljoenennota 2027 generatietoets",
+        "deadline": "2026-09-15",
+        "status_as_of_2026_06_28": "Not published as of 17 August 2026; official hub still shows MN 2026",
+        "status": "Not published as of 17 August 2026; official hub still shows MN 2026"
+      },
+      {
+        "instrument": "Versterking jeugdbescherming post-Raad van State MvT",
+        "deadline": "After RvS advice; Tweede Kamer introduction pending",
+        "status_as_of_2026_06_28": "Unpublished; Sterk claim unverified",
+        "status": "Unpublished; Sterk claim unverified"
+      }
+    ]
+  },
+  "implementation_status_2026": {
+    "as_of": "2026-08-17",
+    "headline": "Method exists; budget skip is still the last public fact; one consultation-stage child-rights amendment.",
+    "recommendations_heading": "Watch list — do not invent a toets",
+    "provvedimenti": [
+      {
+        "instrument": "Miljoenennota 2026",
+        "vig_status": "Skip — no generatietoets annex",
+        "instrument_status": "Skip — no generatietoets annex",
+        "note": "Senate motion 36.800 D unexecuted"
+      },
+      {
+        "instrument": "NPCE 2023–2030",
+        "vig_status": "Completed toets (Sira, 18 Dec 2024); recommendations only",
+        "instrument_status": "Completed toets (Sira, 18 Dec 2024); recommendations only"
+      },
+      {
+        "instrument": "Wet reikwijdte Jeugdwet",
+        "vig_status": "Kinderrechtentoets in consultation MvT §7.4; two safeguards; not yet statute",
+        "instrument_status": "Kinderrechtentoets in consultation MvT §7.4; two safeguards; not yet statute"
+      },
+      {
+        "instrument": "Versterking rechtsbescherming jeugdbescherming",
+        "vig_status": "At Raad van State 30 June 2026; public Kinderrechtentoets not verified",
+        "instrument_status": "At Raad van State 30 June 2026; public Kinderrechtentoets not verified"
+      }
+    ],
+    "recommendations": [
+      { "order": 1, "text": "Treat Prinsjesdag 15 September 2026 as the next generatietoets test — do not clone MN 2026." },
+      { "order": 2, "text": "Wait for the Tweede Kamer MvT before counting a Kinderrechtentoets on jeugdbescherming." },
+      { "order": 3, "text": "Do not confuse Raad van State intergenerational-justice advice (16 April 2026) with a completed generatietoets." },
+      { "order": 4, "text": "Keep generatietoets (future cohorts / irreversible effects) distinct from Kinderrechtentoets (living children / CRC)." }
+    ]
+  },
+  "local_practice": [
+    {
+      "entity": "Sira Consulting / NPCE pilot",
+      "since": "2024-12-18",
+      "detail": "Only public completed generatietoets. Four living age bands; short term to 10 years; long term from 30 years. Recommendations, not rewrites.",
+      "source_url": "https://www.kcbr.nl/beleid-en-regelgeving-ontwikkelen/beleidskompas"
+    }
+  ],
+  "comparative_notes": [
+    {
+      "jurisdiction": "Italy",
+      "contrast": "Italy has constitutional Art. 9 plus statutory VIG in AIR — but implementing DPCMs are unpublished, so the flagship is not operating. The Netherlands has an operating method and a budget skip."
+    },
+    {
+      "jurisdiction": "Flanders (Belgium)",
+      "contrast": "JoKER can stall a missing report at the Council of State. The Dutch generatietoets cannot."
+    },
+    {
+      "jurisdiction": "Germany",
+      "contrast": "Jugend-Check is independent and published at volume (490/91) but assesses ages 12–27, not future unborn cohorts. Dutch generatietoets is the closer future-generations tool."
+    }
+  ],
+  "litigation_track": [
+    {
+      "case": "Urgenda Foundation v. State of the Netherlands",
+      "court": "Hoge Raad",
+      "year": 2019,
+      "status": "Final — emissions duty",
+      "relevance": "Climate duty of care via ECHR; not IIA procedure."
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "nl-stack",
+      "title": "Dutch IIA-family stack",
+      "mermaid": "flowchart TB\n  A[\"Grondwet — no FG clause\"] --> B[\"Urgenda 2019\\nECHR Arts 2 and 8\"]\n  C[\"Beleidskompas 2025\\ngeneratietoets\"] --> D[\"NPCE 2024 toets\\nrecommendations only\"]\n  C --> E[\"MN 2026 skip\"]\n  F[\"Kinderrechtentoets\\nSenate 2025\"] --> G[\"Reikwijdte Jeugdwet\\n2 consultation safeguards\"]\n  F --> H[\"Jeugdbescherming MvT\\nunverified\"]\n  E -.->|\"Prinsjesdag 15 Sep 2026\"| I[\"MN 2027 watch\"]"
+    }
+  ],
+  "glossary": [
+    { "term": "Generatietoets", "en": "Generation test inside Beleidskompas / Leidraad Toekomstgericht Beleid." },
+    { "term": "Kinderrechtentoets", "en": "Child-rights impact assessment (CRC), Kinderombudsman four-step toolkit." },
+    { "term": "Beleidskompas", "en": "Rijksoverheid five-step policy compass; generatietoets sits at step 4." },
+    { "term": "Bite", "en": "Evidence the assessment changed the decision object, not merely that a form was completed." }
+  ],
+  "sources": [
+    { "title": "KCBR Beleidskompas", "url": "https://www.kcbr.nl/beleid-en-regelgeving-ontwikkelen/beleidskompas" },
+    { "title": "Kinderrechtentoets toolkit", "url": "https://kinderrechtentoets.nl/" },
+    { "title": "Eerste Kamer motion 36.800 D", "url": "https://www.eerstekamer.nl/motiedossier/36800_d_motie_aerdts_d66_c_s_over" },
+    { "title": "Rijksoverheid Prinsjesdag hub", "url": "https://www.rijksoverheid.nl/themas/overheid-en-democratie/prinsjesdag" }
+  ]
+}

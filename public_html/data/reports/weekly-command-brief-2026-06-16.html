@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GYC AI Labs | Weekly Command Brief</title>
+    <style>
+      :root {
+        --bg: #09111d;
+        --panel: #101b2d;
+        --panel-2: #14233a;
+        --line: #23384d;
+        --text: #dce7f1;
+        --muted: #8ea6bc;
+        --accent: #4fc3f7;
+        --green: #8fdb74;
+        --amber: #ffd166;
+        --red: #ff7b72;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Inter, Arial, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 88% 8%, rgba(79, 195, 247, 0.18), transparent 30%),
+          radial-gradient(circle at 12% 88%, rgba(143, 219, 116, 0.12), transparent 36%),
+          var(--bg);
+      }
+      .wrap { width: min(1120px, 100%); margin: 0 auto; padding: 20px; }
+      .hero {
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 20px;
+        background: linear-gradient(145deg, rgba(79, 195, 247, 0.16), rgba(11, 20, 35, 0.97));
+      }
+      h1, h2, h3, p { margin: 0; }
+      .kicker {
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 700;
+      }
+      h1 { margin-top: 8px; font-size: clamp(30px, 5vw, 48px); color: #fff; }
+      .lede { margin-top: 10px; color: #e8f1f8; max-width: 74ch; }
+      .stats { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+      .stat {
+        border-radius: 999px;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.08);
+        color: var(--muted);
+        padding: 8px 12px;
+        font-size: 12px;
+      }
+      .section { margin-top: 18px; }
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 10px;
+      }
+      h2 {
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      .section-head span { color: var(--muted); font-size: 12px; }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 12px;
+      }
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 14px;
+        background: var(--panel);
+      }
+      .meta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 8px;
+      }
+      .badge {
+        font-size: 11px;
+        border-radius: 999px;
+        padding: 4px 8px;
+        background: rgba(79, 195, 247, 0.12);
+        color: #bfefff;
+        border: 1px solid rgba(79, 195, 247, 0.2);
+      }
+      .badge-high, .badge-critical { background: rgba(255, 123, 114, 0.12); color: #ffc2bd; border-color: rgba(255,123,114,0.2); }
+      .badge-medium { background: rgba(255, 209, 102, 0.12); color: #ffe5a9; border-color: rgba(255,209,102,0.2); }
+      .badge-low { background: rgba(143,219,116,0.12); color: #d2f3be; border-color: rgba(143,219,116,0.2); }
+      .badge-subtle { background: rgba(255,255,255,0.05); color: var(--muted); border-color: rgba(255,255,255,0.06); }
+      h3 { font-size: 17px; color: #fff; margin-bottom: 8px; }
+      p { color: var(--muted); font-size: 14px; line-height: 1.55; }
+      .detail { margin-top: 8px; color: #afc4d8; font-size: 12px; }
+      .empty {
+        border: 1px dashed var(--line);
+        border-radius: 16px;
+        padding: 16px;
+        color: var(--muted);
+        background: var(--panel-2);
+      }
+      .footer { margin-top: 22px; color: #677f97; font-size: 12px; text-align: center; }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <p class="kicker">Weekly Command Brief</p>
+        <h1>Intelligence OS</h1>
+        <p class="lede">First internal command brief generated from the local registry. This is a decision-support artifact for Genn and GYC AI Labs, not a public report.</p>
+        <div class="stats">
+          <span class="stat">Generated: 2026-06-16T15:02:01.988Z</span>
+          <span class="stat">Registry items: 81</span>
+          <span class="stat">Decision verbs: act, watch, delegate, archive, escalate, publish</span>
+        </div>
+      </section>
+      
+      <section class="section">
+        <div class="section-head">
+          <h2>📊 Board Alignment</h2>
+          <span>20% match (1/5)</span>
+        </div>
+        <p class="muted" style="margin-bottom:8px;">Cross-reference between this brief and the calibration board's active queue.</p>
+        <div class="card" style="border-left:3px solid var(--amber);margin-bottom:6px;"><h3>⚠ In queue but missing from brief</h3><ul style="margin:0;padding-left:18px;"><li style="font-size:13px;color:var(--muted);"><strong style="color:#fff;">GYC AI Labs — Interest in Climate Innovation Forum 2026</strong> (score 48)</li><li style="font-size:13px;color:var(--muted);"><strong style="color:#fff;">Climate Impact Innovations Challenge (CIIC) 2026</strong> (score 45)</li><li style="font-size:13px;color:var(--muted);"><strong style="color:#fff;">Fwd: Mmabatho Maboya: London Climate Action Week</strong> (score 41)</li><li style="font-size:13px;color:var(--muted);"><strong style="color:#fff;">Fwd: Possible collaboration and venue support for Climate Ac</strong> (score 41)</li></ul></div>
+        <div class="card" style="border-left:3px solid var(--accent);margin-top:6px;"><h3>ℹ In brief but not in queue top-5</h3><ul style="margin:0;padding-left:18px;"><li style="font-size:13px;color:var(--muted);">Climate Democracy Accelerator 2026 — People Powered</li><li style="font-size:13px;color:var(--muted);">LCAW season — let&#39;s find the right collaboration lane</li><li style="font-size:13px;color:var(--muted);">Just Transition in AI Panel — GYC AI Labs would love to cont</li><li style="font-size:13px;color:var(--muted);">Re: Alex Dale: Introducing Genaro Godoy González Re London C</li></ul></div>
+      </section>
+      
+      
+    <section class="section">
+      <div class="section-head">
+        <h2>Urgent decisions</h2>
+        <span>5 items</span>
+      </div>
+      <div class="grid">
+        
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">opportunity</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">internal</span>
+      </div>
+      <h3>Climate Democracy Accelerator 2026 — People Powered</h3>
+      <p>Six-month practice-oriented accelerator supporting government and civil society leaders to design and implement participatory climate programs focused on regenerative agriculture, renewable energy, and just transitions. All 30 participants receive a $10,000 implementation grant; top 5 action plans receive an additio...</p>
+      <div class="detail">Decision: <strong>act</strong> | Bucket: act_now</div>
+      <div class="detail">Action: check match for citizen intelligence and civic participation angle</div>
+      <div class="detail">Owner: Genn | Due: 2026-06-26T17:00:00Z</div>
+      <div class="detail">Why: deadline pressure (11d); strategic fit with NGO / public-good intelligence work; priority flag high</div>
+      <div class="detail">Escalate: escalate if no decision within 48h or by 2026-06-26T17:00:00Z</div>
+      <div class="detail">Source: research/funding-opportunities-latest.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">email_thread</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">private</span>
+      </div>
+      <h3>LCAW season — let&#39;s find the right collaboration lane</h3>
+      <p>LCAW season — let&#39;s find the right collaboration lane GYC AI LABS Hi Pooja, Hope you&#39;re doing well! I saw your LCAW matchmaking entry and was excited to see the scope you&#39;re planning — five events across youth climate action, intergenerational governance, funder connections, mental health, and UNFCCC consultation. T...</p>
+      <div class="detail">Decision: <strong>act</strong> | Bucket: decide_this_week</div>
+      <div class="detail">Action: pick one concrete LCAW collaboration lane and follow up</div>
+      <div class="detail">Owner: Genn | Due: no deadline</div>
+      <div class="detail">Why: high-value relationship thread; priority flag high</div>
+      <div class="detail">Escalate: escalate if no owner decision by end of this week</div>
+      <div class="detail">Source: knowledge/gyc-ai-labs-email-kb.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">email_thread</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">private</span>
+      </div>
+      <h3>Re: AI for public good and civic protection</h3>
+      <p>Hi Genn, Thank you for the conversation and for the alignment around what could become a meaningful long-term collaboration between YARA and GYC AI Labs. I wanted to share a short high-level summary of the discussion and some of the strategic directions we explored together, and for Joshua&#39; context. The conversation...</p>
+      <div class="detail">Decision: <strong>act</strong> | Bucket: decide_this_week</div>
+      <div class="detail">Action: shape portal / organizational AI proposal for Isaac and Joshua thread</div>
+      <div class="detail">Owner: Genn | Due: no deadline</div>
+      <div class="detail">Why: high-value relationship thread; strategic fit with NGO / public-good intelligence work; priority flag high</div>
+      <div class="detail">Escalate: escalate if no owner decision by end of this week</div>
+      <div class="detail">Source: knowledge/gyc-ai-labs-email-kb.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">email_thread</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">private</span>
+      </div>
+      <h3>Just Transition in AI Panel — GYC AI Labs would love to contribute</h3>
+      <p>Just Transition in AI Panel — GYC AI Labs would love to contribute GYC AI LABS Hi Karla, I saw your note in the LCAW matchmaking sheet about the panel you&#39;re planning on &quot;what a just transition in AI looks like&quot; at Globant&#39;s London office during LCAW. This is exactly the conversation we need to be having, and I&#39;d lo...</p>
+      <div class="detail">Decision: <strong>act</strong> | Bucket: delegate</div>
+      <div class="detail">Action: review for follow-up</div>
+      <div class="detail">Owner: unassigned | Due: no deadline</div>
+      <div class="detail">Why: high-value relationship thread; still unreviewed; priority flag high</div>
+      <div class="detail">Escalate: escalate if no follow-up owner is assigned within 3 days</div>
+      <div class="detail">Source: knowledge/gyc-ai-labs-email-kb.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">email_thread</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">private</span>
+      </div>
+      <h3>Re: Alex Dale: Introducing Genaro Godoy González Re London Climate Action Week</h3>
+      <p>Reply to Alexander Dale GYC AI LABS LCAW HACKATHON / AI FOR YOUTH CLIMATE ACTION Follow-up with MIT Solve Exploratory conversation with Alexander Dale Hi Alexander, Great to be in touch, and thank you Cat for the introduction. Next Wednesday, 27 May , works well for me. I am available at either 4:00pm UTC+2 or 6:00p...</p>
+      <div class="detail">Decision: <strong>act</strong> | Bucket: delegate</div>
+      <div class="detail">Action: review for follow-up</div>
+      <div class="detail">Owner: unassigned | Due: no deadline</div>
+      <div class="detail">Why: high-value relationship thread; still unreviewed; priority flag high</div>
+      <div class="detail">Escalate: escalate if no follow-up owner is assigned within 3 days</div>
+      <div class="detail">Source: knowledge/gyc-ai-labs-email-kb.json</div>
+    </article>
+  
+      </div>
+    </section>
+  
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Partner moves</h2>
+        <span>5 items</span>
+      </div>
+      <div class="grid">
+        
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">email_thread</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">private</span>
+      </div>
+      <h3>LCAW season — let&#39;s find the right collaboration lane</h3>
+      <p>LCAW season — let&#39;s find the right collaboration lane GYC AI LABS Hi Pooja, Hope you&#39;re doing well! I saw your LCAW matchmaking entry and was excited to see the scope you&#39;re planning — five events across youth climate action, intergenerational governance, funder connections, mental health, and UNFCCC consultation. T...</p>
+      <div class="detail">Decision: <strong>delegate</strong> | Bucket: decide_this_week</div>
+      <div class="detail">Action: pick one concrete LCAW collaboration lane and follow up</div>
+      <div class="detail">Owner: Genn | Due: no deadline</div>
+      <div class="detail">Why: high-value relationship thread; priority flag high</div>
+      <div class="detail">Escalate: escalate if no owner decision by end of this week</div>
+      <div class="detail">Source: knowledge/gyc-ai-labs-email-kb.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">email_thread</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">private</span>
+      </div>
+      <h3>Re: AI for public good and civic protection</h3>
+      <p>Hi Genn, Thank you for the conversation and for the alignment around what could become a meaningful long-term collaboration between YARA and GYC AI Labs. I wanted to share a short high-level summary of the discussion and some of the strategic directions we explored together, and for Joshua&#39; context. The conversation...</p>
+      <div class="detail">Decision: <strong>delegate</strong> | Bucket: decide_this_week</div>
+      <div class="detail">Action: shape portal / organizational AI proposal for Isaac and Joshua thread</div>
+      <div class="detail">Owner: Genn | Due: no deadline</div>
+      <div class="detail">Why: high-value relationship thread; strategic fit with NGO / public-good intelligence work; priority flag high</div>
+      <div class="detail">Escalate: escalate if no owner decision by end of this week</div>
+      <div class="detail">Source: knowledge/gyc-ai-labs-email-kb.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">email_thread</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">private</span>
+      </div>
+      <h3>Just Transition in AI Panel — GYC AI Labs would love to contribute</h3>
+      <p>Just Transition in AI Panel — GYC AI Labs would love to contribute GYC AI LABS Hi Karla, I saw your note in the LCAW matchmaking sheet about the panel you&#39;re planning on &quot;what a just transition in AI looks like&quot; at Globant&#39;s London office during LCAW. This is exactly the conversation we need to be having, and I&#39;d lo...</p>
+      <div class="detail">Decision: <strong>delegate</strong> | Bucket: delegate</div>
+      <div class="detail">Action: review for follow-up</div>
+      <div class="detail">Owner: unassigned | Due: no deadline</div>
+      <div class="detail">Why: high-value relationship thread; still unreviewed; priority flag high</div>
+      <div class="detail">Escalate: escalate if no follow-up owner is assigned within 3 days</div>
+      <div class="detail">Source: knowledge/gyc-ai-labs-email-kb.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">email_thread</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">private</span>
+      </div>
+      <h3>Re: Alex Dale: Introducing Genaro Godoy González Re London Climate Action Week</h3>
+      <p>Reply to Alexander Dale GYC AI LABS LCAW HACKATHON / AI FOR YOUTH CLIMATE ACTION Follow-up with MIT Solve Exploratory conversation with Alexander Dale Hi Alexander, Great to be in touch, and thank you Cat for the introduction. Next Wednesday, 27 May , works well for me. I am available at either 4:00pm UTC+2 or 6:00p...</p>
+      <div class="detail">Decision: <strong>delegate</strong> | Bucket: delegate</div>
+      <div class="detail">Action: review for follow-up</div>
+      <div class="detail">Owner: unassigned | Due: no deadline</div>
+      <div class="detail">Why: high-value relationship thread; still unreviewed; priority flag high</div>
+      <div class="detail">Escalate: escalate if no follow-up owner is assigned within 3 days</div>
+      <div class="detail">Source: knowledge/gyc-ai-labs-email-kb.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">email_thread</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">private</span>
+      </div>
+      <h3>Just Transition in AI Panel — GYC AI Labs would love to contribute</h3>
+      <p>GYC AI LABS Hi Karla, I saw your note in the LCAW matchmaking sheet about the panel on &quot;what a just transition in AI looks like&quot; at Globant&#39;s London office. This is exactly the conversation we need, and I&#39;d love for GYC AI Labs to contribute. We are a youth-led initiative building practical AI tools for climate acti...</p>
+      <div class="detail">Decision: <strong>delegate</strong> | Bucket: delegate</div>
+      <div class="detail">Action: review for follow-up</div>
+      <div class="detail">Owner: unassigned | Due: no deadline</div>
+      <div class="detail">Why: high-value relationship thread; still unreviewed; priority flag high</div>
+      <div class="detail">Escalate: escalate if no follow-up owner is assigned within 3 days</div>
+      <div class="detail">Source: knowledge/gyc-ai-labs-email-kb.json</div>
+    </article>
+  
+      </div>
+    </section>
+  
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Funding moves</h2>
+        <span>5 items</span>
+      </div>
+      <div class="grid">
+        
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">opportunity</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">internal</span>
+      </div>
+      <h3>Climate Democracy Accelerator 2026 — People Powered</h3>
+      <p>Six-month practice-oriented accelerator supporting government and civil society leaders to design and implement participatory climate programs focused on regenerative agriculture, renewable energy, and just transitions. All 30 participants receive a $10,000 implementation grant; top 5 action plans receive an additio...</p>
+      <div class="detail">Decision: <strong>act</strong> | Bucket: act_now</div>
+      <div class="detail">Action: check match for citizen intelligence and civic participation angle</div>
+      <div class="detail">Owner: Genn | Due: 2026-06-26T17:00:00Z</div>
+      <div class="detail">Why: deadline pressure (11d); strategic fit with NGO / public-good intelligence work; priority flag high</div>
+      <div class="detail">Escalate: escalate if no decision within 48h or by 2026-06-26T17:00:00Z</div>
+      <div class="detail">Source: research/funding-opportunities-latest.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">opportunity</span>
+        <span class="badge badge-medium">medium</span>
+        <span class="badge badge-subtle">internal</span>
+      </div>
+      <h3>ARIA Opportunity Seeds — Future Proofing Our Climate and Weather</h3>
+      <p>Early-stage research funding for bold, high-risk ideas exploring new pathways for climate adaptation and resilience. Focus areas include carbon dioxide removal, extreme weather forecasting, and climate intervention approaches. Grants range from £10,000 to £500,000 per project with durations up to three years. Releva...</p>
+      <div class="detail">Decision: <strong>act</strong> | Bucket: watch</div>
+      <div class="detail">Action: review funding fit</div>
+      <div class="detail">Owner: genn | Due: 2026-07-31</div>
+      <div class="detail">Why: still unreviewed</div>
+      <div class="detail">Escalate: escalate if it blocks a live decision</div>
+      <div class="detail">Source: research/funding-opportunities-latest.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">opportunity</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">internal</span>
+      </div>
+      <h3>Anthropic — Claude for Nonprofits</h3>
+      <p>Rolling program offering up to 75% discount on Claude Team and Enterprise plans for eligible nonprofits, plus free AI fluency training and nonprofit connector resources. Immediate operational leverage for grant writing, donor research, program analysis, research support, and fundraising workflows. High-leverage supp...</p>
+      <div class="detail">Decision: <strong>act</strong> | Bucket: watch</div>
+      <div class="detail">Action: review funding fit</div>
+      <div class="detail">Owner: genn | Due: no deadline</div>
+      <div class="detail">Why: still unreviewed; priority flag high</div>
+      <div class="detail">Escalate: escalate if it blocks a live decision</div>
+      <div class="detail">Source: research/funding-opportunities-latest.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">opportunity</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">internal</span>
+      </div>
+      <h3>Microsoft for Nonprofits — Azure Grant</h3>
+      <p>Rolling program offering $2,000 USD in Azure credits per year for eligible nonprofit organizations, plus skilling and onboarding resources. Useful for AI-enabled internal tooling, analytics, copilot workflows, data platforms, and nonprofit operations. Complements AWS credits for a diversified infrastructure stack.</p>
+      <div class="detail">Decision: <strong>act</strong> | Bucket: watch</div>
+      <div class="detail">Action: review funding fit</div>
+      <div class="detail">Owner: genn | Due: no deadline</div>
+      <div class="detail">Why: still unreviewed; priority flag high</div>
+      <div class="detail">Escalate: escalate if it blocks a live decision</div>
+      <div class="detail">Source: research/funding-opportunities-latest.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">opportunity</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">internal</span>
+      </div>
+      <h3>AWS Nonprofit Credit Program</h3>
+      <p>Rolling program providing up to $5,000 USD in AWS Promotional Credits for eligible nonprofit organizations. Practical infrastructure support for hosting Mission Control, hackathon systems, research pipelines, databases, web apps, and AI experimentation. Not cash funding but meaningful cost relief for cloud infrastru...</p>
+      <div class="detail">Decision: <strong>act</strong> | Bucket: watch</div>
+      <div class="detail">Action: review funding fit</div>
+      <div class="detail">Owner: genn | Due: no deadline</div>
+      <div class="detail">Why: still unreviewed; priority flag high</div>
+      <div class="detail">Escalate: escalate if it blocks a live decision</div>
+      <div class="detail">Source: research/funding-opportunities-latest.json</div>
+    </article>
+  
+      </div>
+    </section>
+  
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Signals to watch</h2>
+        <span>0 items</span>
+      </div>
+      <div class="grid">
+        <p class="empty">No items.</p>
+      </div>
+    </section>
+  
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Project blockers</h2>
+        <span>5 items</span>
+      </div>
+      <div class="grid">
+        
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">email_thread</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">private</span>
+      </div>
+      <h3>Re: Alex Dale: Introducing Genaro Godoy González Re London Climate Action Week</h3>
+      <p>Reply to Alexander Dale GYC AI LABS LCAW HACKATHON / AI FOR YOUTH CLIMATE ACTION Follow-up with MIT Solve Exploratory conversation with Alexander Dale Hi Alexander, Great to be in touch, and thank you Cat for the introduction. Next Wednesday, 27 May , works well for me. I am available at either 4:00pm UTC+2 or 6:00p...</p>
+      <div class="detail">Decision: <strong>escalate</strong> | Bucket: delegate</div>
+      <div class="detail">Action: review for follow-up</div>
+      <div class="detail">Owner: unassigned | Due: no deadline</div>
+      <div class="detail">Why: high-value relationship thread; still unreviewed; priority flag high</div>
+      <div class="detail">Escalate: escalate if no follow-up owner is assigned within 3 days</div>
+      <div class="detail">Source: knowledge/gyc-ai-labs-email-kb.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">briefing</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">internal</span>
+      </div>
+      <h3>Mission Control topic: lcaw-collaboration</h3>
+      <p>Mission Control currently tracks 10 items in this topic.</p>
+      <div class="detail">Decision: <strong>escalate</strong> | Bucket: watch</div>
+      <div class="detail">Action: review MC topic relevance</div>
+      <div class="detail">Owner: unassigned | Due: no deadline</div>
+      <div class="detail">Why: high-value relationship thread; still unreviewed; priority flag high</div>
+      <div class="detail">Escalate: escalate if it blocks a live decision</div>
+      <div class="detail">Source: research/intelligence-os/mc-opportunities.snapshot.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">briefing</span>
+        <span class="badge badge-medium">medium</span>
+        <span class="badge badge-subtle">internal</span>
+      </div>
+      <h3>Mission Control relationship lane: lcaw-collaboration</h3>
+      <p>Mission Control relationship/collaboration lane with 10 tracked items.</p>
+      <div class="detail">Decision: <strong>escalate</strong> | Bucket: delegate</div>
+      <div class="detail">Action: align local follow-up priorities with MC lane</div>
+      <div class="detail">Owner: unassigned | Due: no deadline</div>
+      <div class="detail">Why: high-value relationship thread; still unreviewed</div>
+      <div class="detail">Escalate: escalate if no follow-up owner is assigned within 3 days</div>
+      <div class="detail">Source: research/intelligence-os/mc-relationships.snapshot.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">briefing</span>
+        <span class="badge badge-medium">medium</span>
+        <span class="badge badge-subtle">internal</span>
+      </div>
+      <h3>Mission Control relationship lane: relationship-intel</h3>
+      <p>Mission Control relationship/collaboration lane with 3 tracked items.</p>
+      <div class="detail">Decision: <strong>escalate</strong> | Bucket: delegate</div>
+      <div class="detail">Action: align local follow-up priorities with MC lane</div>
+      <div class="detail">Owner: unassigned | Due: no deadline</div>
+      <div class="detail">Why: high-value relationship thread; still unreviewed</div>
+      <div class="detail">Escalate: escalate if no follow-up owner is assigned within 3 days</div>
+      <div class="detail">Source: research/intelligence-os/mc-relationships.snapshot.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">briefing</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">internal</span>
+      </div>
+      <h3>Mission Control intelligence summary snapshot</h3>
+      <p>Open count 89, high priority 48, manual review 8.</p>
+      <div class="detail">Decision: <strong>escalate</strong> | Bucket: watch</div>
+      <div class="detail">Action: review queue health</div>
+      <div class="detail">Owner: unassigned | Due: no deadline</div>
+      <div class="detail">Why: still unreviewed; priority flag high</div>
+      <div class="detail">Escalate: escalate if it blocks a live decision</div>
+      <div class="detail">Source: research/mc-intel-latest.json</div>
+    </article>
+  
+      </div>
+    </section>
+  
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Items needing manual review</h2>
+        <span>5 items</span>
+      </div>
+      <div class="grid">
+        
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">opportunity</span>
+        <span class="badge badge-medium">medium</span>
+        <span class="badge badge-subtle">internal</span>
+      </div>
+      <h3>ARIA Opportunity Seeds — Future Proofing Our Climate and Weather</h3>
+      <p>Early-stage research funding for bold, high-risk ideas exploring new pathways for climate adaptation and resilience. Focus areas include carbon dioxide removal, extreme weather forecasting, and climate intervention approaches. Grants range from £10,000 to £500,000 per project with durations up to three years. Releva...</p>
+      <div class="detail">Decision: <strong>review</strong> | Bucket: watch</div>
+      <div class="detail">Action: review funding fit</div>
+      <div class="detail">Owner: genn | Due: 2026-07-31</div>
+      <div class="detail">Why: still unreviewed</div>
+      <div class="detail">Escalate: escalate if it blocks a live decision</div>
+      <div class="detail">Source: research/funding-opportunities-latest.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">email_thread</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">private</span>
+      </div>
+      <h3>Just Transition in AI Panel — GYC AI Labs would love to contribute</h3>
+      <p>Just Transition in AI Panel — GYC AI Labs would love to contribute GYC AI LABS Hi Karla, I saw your note in the LCAW matchmaking sheet about the panel you&#39;re planning on &quot;what a just transition in AI looks like&quot; at Globant&#39;s London office during LCAW. This is exactly the conversation we need to be having, and I&#39;d lo...</p>
+      <div class="detail">Decision: <strong>review</strong> | Bucket: delegate</div>
+      <div class="detail">Action: review for follow-up</div>
+      <div class="detail">Owner: unassigned | Due: no deadline</div>
+      <div class="detail">Why: high-value relationship thread; still unreviewed; priority flag high</div>
+      <div class="detail">Escalate: escalate if no follow-up owner is assigned within 3 days</div>
+      <div class="detail">Source: knowledge/gyc-ai-labs-email-kb.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">email_thread</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">private</span>
+      </div>
+      <h3>Re: Alex Dale: Introducing Genaro Godoy González Re London Climate Action Week</h3>
+      <p>Reply to Alexander Dale GYC AI LABS LCAW HACKATHON / AI FOR YOUTH CLIMATE ACTION Follow-up with MIT Solve Exploratory conversation with Alexander Dale Hi Alexander, Great to be in touch, and thank you Cat for the introduction. Next Wednesday, 27 May , works well for me. I am available at either 4:00pm UTC+2 or 6:00p...</p>
+      <div class="detail">Decision: <strong>review</strong> | Bucket: delegate</div>
+      <div class="detail">Action: review for follow-up</div>
+      <div class="detail">Owner: unassigned | Due: no deadline</div>
+      <div class="detail">Why: high-value relationship thread; still unreviewed; priority flag high</div>
+      <div class="detail">Escalate: escalate if no follow-up owner is assigned within 3 days</div>
+      <div class="detail">Source: knowledge/gyc-ai-labs-email-kb.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">email_thread</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">private</span>
+      </div>
+      <h3>Just Transition in AI Panel — GYC AI Labs would love to contribute</h3>
+      <p>GYC AI LABS Hi Karla, I saw your note in the LCAW matchmaking sheet about the panel on &quot;what a just transition in AI looks like&quot; at Globant&#39;s London office. This is exactly the conversation we need, and I&#39;d love for GYC AI Labs to contribute. We are a youth-led initiative building practical AI tools for climate acti...</p>
+      <div class="detail">Decision: <strong>review</strong> | Bucket: delegate</div>
+      <div class="detail">Action: review for follow-up</div>
+      <div class="detail">Owner: unassigned | Due: no deadline</div>
+      <div class="detail">Why: high-value relationship thread; still unreviewed; priority flag high</div>
+      <div class="detail">Escalate: escalate if no follow-up owner is assigned within 3 days</div>
+      <div class="detail">Source: knowledge/gyc-ai-labs-email-kb.json</div>
+    </article>
+  
+
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge">email_thread</span>
+        <span class="badge badge-high">high</span>
+        <span class="badge badge-subtle">private</span>
+      </div>
+      <h3>GYC AI Labs — Interest in Climate Innovation Forum 2026</h3>
+      <p>GYC AI Labs — Interest in Climate Innovation Forum 2026 GYC AI LABS Hi Maria, I&#39;m reaching out as the lead of GYC AI Labs — a youth-led initiative building practical AI tools for climate action and intergenerational equity. We saw that the Climate Innovation Forum is the opening flagship of LCAW 2026 and we&#39;d love t...</p>
+      <div class="detail">Decision: <strong>review</strong> | Bucket: delegate</div>
+      <div class="detail">Action: review for follow-up</div>
+      <div class="detail">Owner: unassigned | Due: no deadline</div>
+      <div class="detail">Why: high-value relationship thread; still unreviewed; priority flag high</div>
+      <div class="detail">Escalate: escalate if no follow-up owner is assigned within 3 days</div>
+      <div class="detail">Source: knowledge/gyc-ai-labs-email-kb.json</div>
+    </article>
+  
+      </div>
+    </section>
+  
+      <p class="footer">GYC AI Labs Lobster - Weekly command brief - Internal only</p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apply — Youth access to GYC House</title>
+  <meta name="description" content="Apply for youth delegate access to GYC House moments, including London Climate Action Week 2026 and Builder Labs." />
+  <meta name="theme-color" content="#0a3d4c" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">GYC</span>
+        <span class="logo-text">
+          <strong>GYC House</strong>
+          <span>Global Youth Coalition</span>
+        </span>
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="houses/lcaw-2026.html">LCAW 2026</a>
+        <a href="partners.html">Partners</a>
+        <a href="apply.html" aria-current="page">Apply</a>
+        <a class="btn btn-teal" href="#form">Start application</a>
+      </nav>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+    </div>
+    <nav class="nav-mobile" id="mobile-nav" data-nav-mobile aria-label="Mobile">
+      <a href="houses/lcaw-2026.html">LCAW 2026</a>
+      <a href="partners.html">Partners</a>
+      <a href="apply.html" aria-current="page">Apply</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="crumbs"><a href="index.html">Home</a> / Apply</p>
+        <h1>Youth access to the House</h1>
+        <p>
+          Delegates, builders, and champs: apply for seats at GYC House moments.
+          GYCT alumni are prioritised. Scholarship / equity seats depend on Access Ally partners.
+        </p>
+      </div>
+    </header>
+
+    <section aria-labelledby="paths-title">
+      <div class="wrap">
+        <p class="section-label" data-reveal>Paths</p>
+        <h2 class="section-title" id="paths-title" data-reveal>How people get in the room</h2>
+        <div class="grid-2">
+          <article class="card accent" data-reveal>
+            <h3>GYCT alumni track</h3>
+            <p>Graduates of Global Youth Climate Training get priority review and a prep pack before the moment.</p>
+          </article>
+          <article class="card accent" data-reveal>
+            <h3>Open call delegates</h3>
+            <p>Selective application for youth practitioners, organisers, and builders (typically 16–35).</p>
+          </article>
+          <article class="card gold" data-reveal>
+            <h3>Builder Lab</h3>
+            <p>Hack for the Futures and similar labs may have a separate application — mark interest below.</p>
+          </article>
+          <article class="card gold" data-reveal>
+            <h3>Equity / scholarship seats</h3>
+            <p>Travel and access support when funded. Tell us what you need; we never sell access via pay-to-play for youth.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="form" style="background:var(--white);border-block:1px solid var(--line)" aria-labelledby="form-title">
+      <div class="wrap">
+        <p class="section-label" data-reveal>Application</p>
+        <h2 class="section-title" id="form-title" data-reveal>Apply for access</h2>
+        <p class="section-lead" data-reveal>
+          Required fields use HTML5 validation. Submissions save locally in this browser (v0) until CRM is wired.
+        </p>
+
+        <form
+          class="form-card"
+          data-gyc-form="youth-apply"
+          data-success="Application saved. If selected, you will receive a prep pack and next steps by email."
+          data-reveal
+          novalidate
+        >
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Full name <span class="hint">required</span></label>
+              <input id="name" name="name" type="text" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="hint">required</span></label>
+              <input id="email" name="email" type="email" required autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="country">Country / territory <span class="hint">required</span></label>
+              <input id="country" name="country" type="text" required autocomplete="country-name" />
+            </div>
+            <div class="field">
+              <label for="age">Age band <span class="hint">required</span></label>
+              <select id="age" name="age_band" required>
+                <option value="">Select…</option>
+                <option value="under-16">Under 16 (guardian required)</option>
+                <option value="16-20">16–20</option>
+                <option value="21-25">21–25</option>
+                <option value="26-30">26–30</option>
+                <option value="31-35">31–35</option>
+                <option value="35-plus">35+</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="role">Role / focus <span class="hint">required</span></label>
+              <input id="role" name="role" type="text" required placeholder="e.g. climate finance, negotiation, builder…" />
+            </div>
+            <div class="field">
+              <label for="affiliation">Affiliation</label>
+              <input id="affiliation" name="affiliation" type="text" placeholder="Org, university, collective…" />
+            </div>
+            <div class="field">
+              <label for="moment">Moment interest <span class="hint">required</span></label>
+              <select id="moment" name="moment" required>
+                <option value="lcaw-2026">LCAW 2026 House</option>
+                <option value="lab-h4tf">Builder Lab — Hack for the Futures</option>
+                <option value="both">House + Lab</option>
+                <option value="cop-2026">COP 2026 (interest list)</option>
+                <option value="other">Other / keep me informed</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="gyct">GYCT alumni?</label>
+              <select id="gyct" name="gyct_alumni">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+                <option value="enrolled">Currently enrolled / applying</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="motivation">Why this room, and what will you bring? <span class="hint">required · short</span></label>
+              <textarea id="motivation" name="motivation" required maxlength="1200" placeholder="~150–400 words max equivalent; keep it concrete."></textarea>
+            </div>
+            <div class="field">
+              <label for="link">Portfolio / LinkedIn / site</label>
+              <input id="link" name="link" type="url" placeholder="https://" />
+            </div>
+            <div class="field">
+              <label for="access">Access needs</label>
+              <input id="access" name="access_needs" type="text" placeholder="Mobility, interpretation, quiet space…" />
+            </div>
+            <div class="field full">
+              <label for="support">Equity / travel support needed?</label>
+              <select id="support" name="equity_support">
+                <option value="no">No</option>
+                <option value="partial">Partial support would help</option>
+                <option value="full">Full support needed to attend</option>
+                <option value="unsure">Not sure yet</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label class="checkbox-row">
+                <input type="checkbox" name="conduct" value="yes" required />
+                <span>I agree to the <a href="legal/code-of-conduct.html">code of conduct</a> and safeguarding expectations.</span>
+              </label>
+            </div>
+            <div class="field full">
+              <label class="checkbox-row">
+                <input type="checkbox" name="privacy" value="yes" required />
+                <span>I agree to the <a href="legal/privacy.html">privacy notice</a> for processing this application.</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-teal" type="submit">Submit application</button>
+            <a class="btn btn-outline-dark" href="houses/lcaw-2026.html">Read LCAW details</a>
+          </div>
+          <div class="form-status" data-form-status role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <strong>GYC House</strong>
+          <p style="font-size:0.9rem;max-width:36ch">Youth access designed in — not bolted on.</p>
+        </div>
+        <div>
+          <strong>Navigate</strong>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="houses/lcaw-2026.html">LCAW 2026</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong>Legal</strong>
+          <ul>
+            <li><a href="legal/code-of-conduct.html">Code of conduct</a></li>
+            <li><a href="legal/privacy.html">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Global Youth Coalition · GYC House</span>
+        <span>Selective · prepared · equitable</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

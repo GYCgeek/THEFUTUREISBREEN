@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Youth Climate Training (GYCT) 2026 | Gençler için iklim politikası eğitimi</title>
+<meta name="description" content="GYCT 2026, gençleri uluslararası iklim politikasına ve Antalya'daki COP31 yolculuğuna hazırlıyor. 16-35 yaş arası için ücretsiz, çevrim içi kapasite geliştirme. Global Youth Coalition tarafından, Oxford Net Zero'nun stratejik desteğiyle yürütülüyor.">
+<meta property="og:title" content="Global Youth Climate Training 2026">
+<meta property="og:description" content="GYCT 2026: Antalya'daki COP31 yolunda 16-35 yaş arası için ücretsiz, çevrim içi iklim politikası eğitimi. Global Youth Coalition liderliğinde, Oxford Net Zero desteğiyle. 5.400 genç eğitildi; 2023'ten bu yana 27.000 başvuru.">
+<meta name="twitter:description" content="GYCT 2026: Antalya'daki COP31 yolunda 16-35 yaş arası için ücretsiz, çevrim içi iklim politikası eğitimi. GYC liderliğinde, Oxford Net Zero desteğiyle.">
+<meta property="og:image" content="https://theglobalyouth.co/assets/gyct2026/social/gyct2026-og-image-1200x630.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://theglobalyouth.co/assets/gyct2026/social/gyct2026-og-image-1200x630.png">
+<link rel="alternate" hreflang="en" href="https://theglobalyouth.co/public_html/GYCT.html">
+<link rel="alternate" hreflang="es" href="https://theglobalyouth.co/public_html/GYCT-es.html">
+<link rel="alternate" hreflang="pt" href="https://theglobalyouth.co/public_html/GYCT-pt.html">
+<link rel="alternate" hreflang="tr" href="https://theglobalyouth.co/public_html/GYCT-tr.html">
+<link rel="alternate" hreflang="x-default" href="https://theglobalyouth.co/public_html/GYCT.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/gyct2026/logos/gyct-logo.png">
+<style>
+  :root {
+    --teal-deep: #0a3d4c;
+    --teal: #0f5a6b;
+    --teal-mid: #1a7a8c;
+    --teal-bright: #2a9aad;
+    --teal-soft: #e6f4f6;
+    --ink: #1a2b33;
+    --ink-soft: #3d5560;
+    --mute: #5d7380;
+    --white: #fff;
+    --paper: #f4f7f8;
+    --line: #d5e2e6;
+    --gold: #c9a227;
+    --gold-soft: #f7f0d8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--teal-mid); }
+  .wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+
+  /* TOP BAR */
+  .topbar { background: var(--white); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
+  .topbar-inner {
+    width: min(1080px, calc(100% - 40px));
+    margin: 0 auto;
+    min-height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .logo-row { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--ink); }
+  .logo-mark {
+    height: 72px; width: auto; flex-shrink: 0; display: block;
+  }
+  .logo-text strong { display: block; font-size: 14px; font-weight: 800; color: var(--teal-deep); }
+  .logo-text span { display: block; font-size: 12px; color: var(--mute); font-weight: 600; }
+  .top-links { display: flex; align-items: center; gap: 18px; }
+  .top-links a { text-decoration: none; font-size: 14px; font-weight: 700; color: var(--ink-soft); }
+  .top-links a:hover { color: var(--teal-mid); }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 11px 18px; border-radius: 4px; font-size: 14px; font-weight: 700;
+    text-decoration: none; transition: background .15s ease, transform .15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-teal { background: var(--teal); color: #fff !important; }
+  .btn-teal:hover { background: var(--teal-deep); }
+  .btn-outline { background: transparent; color: #fff !important; border: 2px solid rgba(255,255,255,.55); }
+  .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+  .btn-dark { background: var(--teal-deep); color: #fff !important; }
+  .btn-ghost {
+    background: var(--white); color: var(--teal-deep) !important;
+    border: 1px solid var(--line);
+  }
+  .btn-ghost:hover { border-color: var(--teal-mid); }
+
+  /* HERO - GYCT 2026 visual asset pack */
+  .hero {
+    position: relative;
+    color: #fff;
+    padding: 0;
+    min-height: 520px;
+    background: var(--teal-deep);
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url("assets/gyct2026/hero/gyct2026-hero-background-v2-eye-map.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(7,35,45,0.28) 0%, rgba(7,35,45,0.18) 45%, rgba(7,35,45,0.05) 100%), linear-gradient(180deg, rgba(10,61,76,0.15) 0%, rgba(10,61,76,0.42) 100%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    width: min(1080px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 80px 0 120px;
+    display: block;
+    min-height: 520px;
+  }
+  .hero h1 {
+    font-family: 'Oswald', Impact, sans-serif;
+    font-weight: 700;
+    font-size: clamp(42px, 8vw, 84px);
+    line-height: 0.95;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    max-width: 12ch;
+    text-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    margin-bottom: 18px;
+  }
+  .hero-sub {
+    font-size: 18px;
+    max-width: 54ch;
+    color: rgba(255,255,255,0.92);
+    margin-bottom: 28px;
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.82);
+  }
+  .hero-meta span { display: inline-flex; align-items: center; gap: 8px; }
+  .hero-meta span::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #f2d56b; }
+
+  /* INTRO CARD */
+  .intro-shift { margin-top: -56px; position: relative; z-index: 2; padding-bottom: 24px; }
+  .intro-card {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 18px 50px rgba(10, 61, 76, 0.14);
+    padding: 36px;
+    border-top: 5px solid var(--teal-bright);
+  }
+  .intro-card p { font-size: 17px; color: var(--ink-soft); margin-bottom: 14px; }
+  .intro-card p:last-child { margin-bottom: 0; }
+  .intro-card a { font-weight: 700; text-decoration: none; }
+  .intro-card a:hover { text-decoration: underline; }
+  .intro-note {
+    margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line);
+    font-size: 14px; color: var(--mute);
+  }
+  .intro-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+
+  /* SECTIONS */
+  section { padding: 64px 0; }
+  .section-label {
+    font-size: 12px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--teal-mid); margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: 'Oswald', Impact, sans-serif;
+    font-size: clamp(28px, 4vw, 40px); font-weight: 600;
+    letter-spacing: 0.02em; text-transform: uppercase; color: var(--teal-deep);
+    margin-bottom: 12px; line-height: 1.1;
+  }
+  .section-lead { font-size: 16px; color: var(--mute); max-width: 70ch; margin-bottom: 28px; }
+
+  /* STATS */
+  .stats { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 28px 0; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .stat { text-align: center; padding: 8px; }
+  .stat .n { display: block; font-family: 'Oswald', sans-serif; font-size: 36px; font-weight: 700; color: var(--teal); line-height: 1; }
+  .stat .l { display: block; margin-top: 6px; font-size: 13px; font-weight: 700; color: var(--mute); text-transform: uppercase; letter-spacing: 0.05em; }
+
+  /* IMPACT OUTCOMES */
+  .outcomes { background: var(--teal-soft); border-bottom: 1px solid var(--line); padding: 36px 0; }
+  .outcomes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .outcome {
+    background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 22px;
+    text-align: center;
+  }
+  .outcome .n { display: block; font-family: 'Oswald', sans-serif; font-size: 40px; font-weight: 700; color: var(--teal-deep); line-height: 1; }
+  .outcome .l { display: block; margin-top: 8px; font-size: 14px; color: var(--ink-soft); font-weight: 600; }
+  .impact-cta {
+    margin-top: 22px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px;
+    padding: 18px 20px; background: var(--white); border: 1px solid var(--line); border-radius: 6px;
+  }
+  .impact-cta p { font-size: 15px; color: var(--ink-soft); max-width: 62ch; }
+
+  /* COP31 BAND */
+  .cop-band { background: linear-gradient(90deg, rgba(10,61,76,.96) 0%, rgba(19,78,74,.88) 55%, rgba(61,46,20,.70) 100%), url("assets/gyct2026/sections/gyct-programme-map-band-v1.png") center / cover no-repeat; color: #fff; padding: 28px 0; }
+  .cop-inner {
+    width: min(1080px, calc(100% - 40px)); margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+  }
+  .cop-inner h2 {
+    font-family: 'Oswald', sans-serif; font-size: clamp(22px, 3vw, 30px); font-weight: 600;
+    letter-spacing: 0.03em; text-transform: uppercase; line-height: 1.15;
+  }
+  .cop-inner p { margin-top: 6px; color: rgba(255,255,255,0.84); max-width: 56ch; font-size: 15px; }
+  .cop-pill {
+    display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 999px;
+    background: rgba(242, 213, 107, 0.14); border: 1px solid rgba(242, 213, 107, 0.35);
+    color: #f2d56b; font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap;
+  }
+
+  /* CARDS */
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .cards-3 { grid-template-columns: repeat(3, 1fr); }
+  .card { background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 24px; overflow: hidden; }
+  .card h3 { font-size: 18px; font-weight: 800; color: var(--teal-deep); margin-bottom: 8px; }
+  .card p { font-size: 15px; color: var(--ink-soft); }
+  .card .tag { display: inline-block; margin-bottom: 10px; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-mid); }
+  .card-visual { height: 132px; margin: -24px -24px 18px; background-size: cover; background-position: center; border-bottom: 1px solid var(--line); }
+  .card ul { margin-top: 10px; padding-left: 18px; color: var(--ink-soft); font-size: 14px; }
+  .card li { margin-bottom: 5px; }
+
+  /* TWO TRACKS */
+  .tracks { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 16px; }
+  .track { background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 28px; min-height: 100%; }
+  .track.yna { background: var(--teal-deep); color: #fff; border-color: var(--teal-deep); }
+  .track h3 { font-family: 'Oswald', sans-serif; font-size: 28px; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; margin-bottom: 10px; }
+  .track.yna h3 { color: #fff; }
+  .track p { color: var(--ink-soft); font-size: 15px; }
+  .track.yna p { color: rgba(255,255,255,0.86); }
+  .track ul { margin-top: 14px; padding-left: 18px; color: var(--ink-soft); font-size: 14px; }
+  .track.yna ul { color: rgba(255,255,255,0.86); }
+  .track li { margin-bottom: 6px; }
+  .track-visual { height: 150px; margin: -28px -28px 20px; border-radius: 6px 6px 0 0; background-size: cover; background-position: center; border-bottom: 1px solid rgba(10,61,76,.12); }
+  .track.yna .track-visual { border-bottom-color: rgba(255,255,255,.12); }
+
+  .sessions-section { background: linear-gradient(rgba(255,255,255,.94), rgba(255,255,255,.96)), url("assets/gyct2026/sections/gyct-programme-map-band-v1.png") center top / cover no-repeat; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+  /* TABLE */
+  .table-shell { background: var(--white); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  .table-scroll { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; min-width: 760px; }
+  th { text-align: left; background: var(--teal-deep); color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 16px; }
+  td { padding: 16px; border-bottom: 1px solid var(--line); font-size: 14px; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: #f8fbfc; }
+  .session-title { font-weight: 800; color: var(--ink); }
+  .session-lead { display: block; margin-top: 3px; color: var(--mute); font-size: 13px; font-weight: 600; }
+  .pill { display: inline-block; padding: 4px 9px; border-radius: 3px; font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
+  .pill-main { background: var(--teal-soft); color: var(--teal); }
+  .pill-yna { background: var(--gold-soft); color: #8a6a12; }
+  .pill-all { background: var(--teal); color: #fff; }
+
+  /* TIMELINE */
+  .timeline-list { display: grid; gap: 10px; }
+  .timeline-item {
+    display: grid; grid-template-columns: 150px 1fr; gap: 16px;
+    background: var(--white); border: 1px solid var(--line); border-left: 4px solid var(--teal-bright); border-radius: 4px; padding: 16px 18px;
+  }
+  .timeline-item .date {
+    font-family: 'Oswald', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--teal);
+  }
+  .timeline-item .desc { color: var(--ink-soft); font-size: 15px; }
+  .timeline-item.legacy { border-left-color: var(--gold); }
+
+  /* HISTORY YEAR BLOCKS */
+  .history-grid { display: grid; gap: 14px; }
+  .history-year {
+    background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 22px 24px;
+    display: grid; grid-template-columns: 90px 1fr; gap: 18px;
+  }
+  .history-year .yr {
+    font-family: 'Oswald', sans-serif; font-size: 28px; font-weight: 700; color: var(--teal); line-height: 1;
+  }
+  .history-year h3 { font-size: 17px; font-weight: 800; color: var(--teal-deep); margin-bottom: 6px; }
+  .history-year p { font-size: 15px; color: var(--ink-soft); }
+  .history-year ul { margin-top: 8px; padding-left: 18px; font-size: 14px; color: var(--ink-soft); }
+  .history-year li { margin-bottom: 4px; }
+
+  /* PAST SESSIONS */
+  .lang-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .lang-chip {
+    display: inline-flex; align-items: center; padding: 8px 14px; border-radius: 4px;
+    border: 1px solid var(--line); background: var(--white); color: var(--ink-soft);
+    font-size: 13px; font-weight: 700; text-decoration: none;
+  }
+  .lang-chip:hover, .lang-chip.active { background: var(--teal); color: #fff; border-color: var(--teal); }
+  .year-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .year-tab {
+    appearance: none; border: 1px solid var(--line); background: var(--white); color: var(--ink-soft);
+    padding: 9px 14px; border-radius: 4px; font-size: 13px; font-weight: 800; cursor: pointer;
+    font-family: inherit; letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .year-tab[aria-selected="true"] { background: var(--teal-deep); color: #fff; border-color: var(--teal-deep); }
+  .year-panel { display: none; }
+  .year-panel.active { display: block; }
+  .session-list { list-style: none; background: var(--white); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  .session-list li { border-bottom: 1px solid var(--line); }
+  .session-list li:last-child { border-bottom: none; }
+  .session-list a {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+    padding: 14px 18px; text-decoration: none; color: var(--ink); cursor: pointer;
+  }
+  .session-list a:hover { background: var(--teal-soft); }
+  .session-list a.is-playing {
+    background: var(--teal-soft);
+    box-shadow: inset 4px 0 0 var(--teal-bright);
+  }
+  .session-list a.is-playing .watch { color: var(--teal-deep); }
+  .session-list .num { font-weight: 800; color: var(--teal); min-width: 2ch; }
+  .session-list .ttl { flex: 1; font-weight: 700; font-size: 15px; }
+  .session-list .watch { font-size: 12px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal-mid); white-space: nowrap; }
+  .archive-note { margin-top: 14px; font-size: 14px; color: var(--mute); }
+  .playlist-embed {
+    position: relative; width: 100%; aspect-ratio: 16 / 9;
+    background: var(--teal-deep); border: 1px solid var(--line); border-radius: 6px;
+    overflow: hidden; margin-bottom: 10px;
+  }
+  .playlist-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .now-playing {
+    display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px;
+    margin-bottom: 18px; font-size: 14px; color: var(--ink-soft);
+  }
+  .now-playing strong { color: var(--teal-deep); font-weight: 800; }
+  .now-playing a { font-weight: 700; font-size: 13px; }
+
+  /* QUOTES / TESTIMONIALS */
+  .quote { background: var(--teal-soft); border-left: 5px solid var(--teal); padding: 28px 30px; border-radius: 0 6px 6px 0; }
+  .quote blockquote { font-size: 20px; line-height: 1.5; color: var(--teal-deep); font-weight: 600; margin-bottom: 10px; }
+  .quote cite { font-style: normal; font-size: 14px; font-weight: 700; color: var(--mute); }
+  .testimonials { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .testimonial {
+    background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 22px 24px;
+  }
+  .testimonial blockquote { font-size: 15px; color: var(--ink-soft); margin-bottom: 12px; line-height: 1.55; }
+  .testimonial cite { font-style: normal; font-size: 13px; font-weight: 800; color: var(--teal-deep); }
+
+  /* FAQ */
+  .faq-list { display: grid; gap: 10px; }
+  .faq-item {
+    background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 0;
+  }
+  .faq-item details { padding: 4px 0; }
+  .faq-item summary {
+    cursor: pointer; list-style: none; padding: 16px 20px; font-weight: 800; color: var(--teal-deep); font-size: 16px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: "+"; float: right; color: var(--teal-mid); font-weight: 700; }
+  .faq-item details[open] summary::after { content: "–"; }
+  .faq-item .answer { padding: 0 20px 18px; font-size: 15px; color: var(--ink-soft); }
+
+  /* WHO SHOULD APPLY */
+  .who-board {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-top: 5px solid var(--teal-bright);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .who-board-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px 32px;
+    padding: 28px 32px 24px;
+  }
+  .who-board-top .section-title { margin-bottom: 8px; }
+  .who-board-top .section-lead { margin-bottom: 0; max-width: 54ch; }
+  .who-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+    padding-top: 6px;
+  }
+  .who-age {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px; font-weight: 700; line-height: 1; letter-spacing: .04em;
+    color: var(--teal-deep);
+  }
+  .who-gate-note { margin: 4px 0 0; font-size: 13px; color: var(--mute); font-weight: 600; }
+  .who-traits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--line);
+  }
+  .who-trait {
+    padding: 22px 28px 26px;
+    border-right: 1px solid var(--line);
+  }
+  .who-trait:last-child { border-right: none; }
+  .who-key {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase;
+    color: var(--teal); margin-bottom: 8px;
+  }
+  .who-val { font-size: 15px; color: var(--ink-soft); line-height: 1.55; }
+  .who-priority {
+    margin: 0;
+    padding: 16px 32px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    color: var(--ink-soft);
+    background: #fbfaf4;
+  }
+  .who-priority strong { color: var(--teal-deep); }
+
+  /* PARTNER / FUND */
+  .fund { background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 36px; }
+  .fund-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0; }
+  .fund-card { border: 1px solid var(--line); border-radius: 4px; padding: 18px; background: var(--paper); }
+  .fund-card.featured { border-color: var(--teal-bright); background: var(--teal-soft); }
+  .fund-card .price { font-family: 'Oswald', sans-serif; font-size: 30px; font-weight: 700; color: var(--teal-deep); margin-bottom: 6px; }
+  .fund-card .desc { font-size: 14px; color: var(--ink-soft); }
+  .contact-box {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px;
+    margin-top: 8px; padding-top: 20px; border-top: 1px solid var(--line);
+  }
+  .contact-box strong { display: block; font-size: 20px; color: var(--teal-deep); }
+  .bursary-note {
+    margin-bottom: 20px; padding: 16px 18px; background: var(--paper); border-left: 4px solid var(--gold);
+    font-size: 15px; color: var(--ink-soft);
+  }
+
+  /* PARTNERS */
+  .partners { display: flex; flex-wrap: wrap; gap: 10px; }
+  .partner { background: var(--white); border: 1px solid var(--line); border-radius: 4px; padding: 10px 14px; font-size: 13px; font-weight: 700; color: var(--ink-soft); }
+  .partner.past { opacity: 0.72; font-weight: 600; }
+
+  /* FOOTER */
+  footer { background: linear-gradient(rgba(6,35,45,.82), rgba(6,35,45,.90)), url("assets/gyct2026/footer/gyct-footer-landscape-v1.png") center bottom / cover no-repeat; color: rgba(255,255,255,0.78); padding: 52px 0 42px; margin-top: 40px; }
+  footer a { color: #9ad8e3; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer .fine { margin-top: 8px; font-size: 13px; opacity: 0.85; }
+
+  @media (max-width: 860px) {
+    .stats-grid, .cards, .cards-3, .tracks, .fund-grid, .timeline-item, .outcomes-grid, .testimonials, .history-year, .who-traits { grid-template-columns: 1fr; }
+    .top-links a:not(.btn):not([href="#archive"]) { display: none; }
+    .intro-card { padding: 24px 20px; }
+    .hero { min-height: 620px; }
+    .hero-bg { background-image: url("assets/gyct2026/hero/gyct2026-hero-mobile-v2-eye-map.png"); background-position: center bottom; }
+    .hero-inner { padding: 56px 0 80px; min-height: 620px; }
+    .hero h1 { font-size: clamp(42px, 14vw, 64px); max-width: 9ch; }
+    .hero-sub { max-width: 30ch; }
+    .card-visual, .track-visual { height: 190px; }
+    .fund { padding: 24px 18px; }
+    .session-list a { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .who-board-top { padding: 22px 20px 18px; }
+    .who-trait { padding: 18px 20px; border-right: none; border-bottom: 1px solid var(--line); }
+    .who-trait:last-child { border-bottom: none; }
+    .who-priority { padding: 14px 20px; }
+    .who-actions { width: 100%; justify-content: space-between; }
+  }
+
+  /* site language switcher */
+  .site-lang { display: inline-flex; align-items: center; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 5px; background: var(--white); }
+  .site-lang a { padding: 5px 9px; border-radius: 3px; font-size: 12px; font-weight: 800; letter-spacing: .04em; color: var(--ink-soft); text-decoration: none; line-height: 1; }
+  .site-lang a:hover { background: var(--teal-soft); color: var(--teal-deep); }
+  .site-lang a.is-active { background: var(--teal); color: #fff; }
+  @media (max-width: 860px) {
+    .top-links .site-lang a { display: inline-flex; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="logo-row" href="/">
+      <img class="logo-mark" src="assets/gyct2026/logos/gyct-logo.png" width="68" height="72" alt="GYCT">
+      <span class="logo-text">
+        <strong>Global Youth Climate Training</strong>
+        <span>GYC liderliğinde · Oxford Net Zero desteğiyle</span>
+      </span>
+    </a>
+    <div class="top-links">
+      <a href="#programme">Program</a>
+      <a href="#sessions">Oturumlar</a>
+      <a href="#archive">Geçmiş oturumlar</a>
+      <a href="#faq">SSS</a>
+      <div class="site-lang" role="group" aria-label="Site language"><a href="GYCT.html" hreflang="en" lang="en">EN</a><a href="GYCT-es.html" hreflang="es" lang="es">ES</a><a href="GYCT-pt.html" hreflang="pt" lang="pt">PT</a><a href="GYCT-tr.html" hreflang="tr" lang="tr" class="is-active" aria-current="true">TR</a></div>
+      <a class="btn btn-teal" href="https://docs.google.com/forms/d/e/1FAIpQLSdaR58cDUZDhZRGYCMM5WOB4lC57fF4CoszR5DFsy65ShSNXA/viewform" target="_blank" rel="noopener">Hemen başvur</a>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <h1>Global Youth<br>Climate Training</h1>
+    <p class="hero-sub">16-35 yaş arasındaki herkes için ücretsiz, tamamen çevrim içi kapasite geliştirme. Antalya'da düzenlenecek COP31 (9-20 Kasım 2026) öncesinde uluslararası iklim politikasına katılmak için gereken bilgi ve özgüveni kazan.</p>
+    <div class="hero-actions">
+      <a class="btn btn-teal" href="https://docs.google.com/forms/d/e/1FAIpQLSdaR58cDUZDhZRGYCMM5WOB4lC57fF4CoszR5DFsy65ShSNXA/viewform" target="_blank" rel="noopener">Hemen başvur</a>
+      <a class="btn btn-outline" href="#sessions">2026 programını gör</a>
+      <a class="btn btn-outline" href="#archive">Geçmiş oturumları izle</a>
+    </div>
+    <div class="hero-meta">
+      <span>2 Eyl - 13 Eki 2026</span>
+      <span>13:00-14:30 UTC</span>
+      <span>Ana izlek + ileri düzey YNA izleği</span>
+      <span>Son başvuru 10 Ağu 2026, 23:59 BST</span>
+    </div>
+  </div>
+</header>
+
+<div class="intro-shift">
+  <div class="wrap">
+    <div class="intro-card">
+      <p><a href="https://netzeroclimate.org/global-youth-training/" target="_blank" rel="noopener"><strong>Global Youth Climate Training Programme (GYCT)</strong></a>, 16-35 yaş arasındaki kişilere uluslararası iklim politikasına katılmak için gereken bilgi ve özgüveni kazandıran ücretsiz ve tamamen çevrim içi bir kapasite geliştirme programıdır. Gençlere ulusal ve uluslararası iklim politikasında giderek daha fazla söz hakkı tanınıyor; bu nedenle müdahalelerinin tutarlı ve yerinde olması için uygun bir kapasite geliştirme desteğine ihtiyaç duyuyorlar.</p>
+      <p>2023'ten 2025'e kadar GYCT, <a href="/">Global Youth Coalition (GYC)</a> ile Oxford Üniversitesi'nden araştırmacıların (<a href="https://netzeroclimate.org/" target="_blank" rel="noopener">Oxford Net Zero</a>, <a href="https://www.smithschool.ox.ac.uk/" target="_blank" rel="noopener">Oxford Smith School of Enterprise and the Environment</a>) iş birliğiyle yürütüldü. Bu başarının üzerine, <strong>programın yürütme sorumluluğu 2026'da Global Youth Coalition'a geçiyor</strong>; Oxford Net Zero ise stratejik ve akademik desteği sürdürüyor. Bu değişim, gençlik liderliğine olan ortak bağlılığımızı yansıtıyor: akademik titizliği korurken genç iklim değişim öncülerine programın yönü, içeriği ve uzun vadeli geleceği üzerinde daha fazla söz hakkı veriyor.</p>
+      <p>2026 programı; uzmanların verdiği dersleri, etkileşimli akran öğrenmesini ve uygulamalı çalışmaları bir araya getirmeyi sürdürüyor. Oxford'lu akademisyenlerin yanı sıra dünyanın önde gelen uygulayıcılarını ağırlıyor, Küresel Güney'in birikimini öne çıkarıyor ve genç konuşmacıları merkezde tutuyor. Antalya'daki COP31 yolculuğu için Youth Negotiators Academy ile birlikte ileri düzey bir izlek geliştirildi.</p>
+      <div class="intro-note">2026 programına ilişkin sorularınızı GYC ekibine <a href="mailto:takeaction@theglobalyouth.co">takeaction@theglobalyouth.co</a> adresinden iletebilirsiniz.</div>
+      <div class="intro-links">
+        <a class="btn btn-ghost" href="https://www.instagram.com/theglobalyouth_co/" target="_blank" rel="noopener">@theglobalyouth_co hesabını takip et</a>
+        <a class="btn btn-ghost" href="https://netzeroclimate.org/global-youth-training/" target="_blank" rel="noopener">Oxford Net Zero sayfası</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat"><span class="n">27,000</span><span class="l">Başvuru 2023–2025</span></div>
+    <div class="stat"><span class="n">5,400</span><span class="l">Eğitilen genç</span></div>
+    <div class="stat"><span class="n">65%</span><span class="l">MAPA temsili</span></div>
+    <div class="stat"><span class="n">21%</span><span class="l">Yerli genç</span></div>
+  </div>
+</div>
+
+<div class="outcomes" id="impact">
+  <div class="wrap">
+    <div class="section-label">Etki 2023–2025</div>
+    <h2 class="section-title" style="margin-bottom:20px">Katılımcılar ne kazandı</h2>
+    <div class="outcomes-grid">
+      <div class="outcome"><span class="n">89%</span><span class="l">uluslararası iklim politikası bilgisini güçlendirdi</span></div>
+      <div class="outcome"><span class="n">77%</span><span class="l">UNFCCC forumlarında savunuculuk yapmak için kendini daha güvende hissetti</span></div>
+      <div class="outcome"><span class="n">60%</span><span class="l">uluslararası iklim politikasındaki başarısını GYCT'ye bağladı</span></div>
+    </div>
+    <div class="impact-cta">
+      <p><strong>100.000+</strong> kayıtlı oturum izlenmesi · <strong>6</strong> dilde canlı çeviri · <strong>36.000 £</strong> gençlik bursu dağıtıldı · ~<strong>100</strong> uzman konuşmacı bir araya getirildi</p>
+      <a class="btn btn-dark" href="https://netzeroclimate.org/wp-content/uploads/2025/11/GYCT-Impact-Report_2025.pdf" target="_blank" rel="noopener">Etki Raporu'nu oku</a>
+    </div>
+  </div>
+</div>
+
+<div class="cop-band">
+  <div class="cop-inner">
+    <div>
+      <h2>Gençleri COP31'e hazırlıyoruz, Antalya 2026</h2>
+      <p>COP31, 9-20 Kasım 2026 tarihlerinde Antalya, Türkiye'de düzenlenecek. GYCT 2026'nın takvimi, katılımcıların zirve öncesinde eğitimlerini tamamlayacağı şekilde planlandı; COP'taki roller, müzakereler, finansman ve etki yolları üzerine uygulamalı bir odak sunuyor.</p>
+    </div>
+    <div class="cop-pill">9-20 Kas 2026, Antalya</div>
+  </div>
+</div>
+
+<section id="programme">
+  <div class="wrap">
+    <div class="section-label">Program tasarımı</div>
+    <h2 class="section-title">GYCT 2026 ne sunuyor</h2>
+    <p class="section-lead">Oxford Net Zero ve GYC paydaşlarıyla geçirilen üç yılın birikimi üzerine kuruldu ve Antalya yolculuğu için yeniden tasarlandı.</p>
+    <div class="cards" style="margin-bottom:16px">
+      <article class="card">
+        <div class="card-visual" style="background-image:url('assets/gyct2026/cards/gyct-card-policy.png')" aria-hidden="true"></div>
+        <div class="tag">Erişim</div>
+        <h3>Küresel erişim, açık katılım</h3>
+        <p>2023-2025 arasında katılımcıların %65'i En Çok Etkilenen Halklar ve Bölgeler'den (MAPA), %21'i ise yerli halklardan olduğunu belirtti. 2026 için canlı çeviri planlanıyor (İspanyolca dahil); kesin diller seçilen başvuru sahiplerine bildirilecek. Ana oturum kayıtlarının kamuya açılması öngörülüyor.</p>
+      </article>
+      <article class="card">
+        <div class="card-visual" style="background-image:url('assets/gyct2026/cards/gyct-card-negotiation.png')" aria-hidden="true"></div>
+        <div class="tag">Biçim</div>
+        <h3>Uzman önderliğinde, 90 dakika</h3>
+        <p>Uzman katkısı, moderatörlü tartışma ve soru-cevap içeren haftalık oturumlar. Ana izlek, geniş ve açık bir grup için Zoom Webinar üzerinden. İleri düzey YNA izleği, daha küçük ve seçilmiş bir grup için Zoom Meeting üzerinden. Katılım formlarıyla sertifika yolu (ana izlekte %80 katılım).</p>
+      </article>
+    </div>
+    <div class="tracks">
+      <article class="track">
+        <div class="track-visual" style="background-image:url('assets/gyct2026/cards/gyct-card-youth-leadership.png')" aria-hidden="true"></div>
+        <div class="tag" style="color:var(--teal-mid);font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px">Ana izlek · açık grup</div>
+        <h3>Açık grup</h3>
+        <p>Egemenlik ve iklim, enerji dönüşümü, eğitim ve iklim riski ile iklim finansmanını kapsayan dört halka açık oturum. Önceki GYCT yıllarının açık erişim anlayışıyla tasarlandı; kayıtların daha geniş bir kamusal kullanıma sunulması öngörülüyor.</p>
+        <ul>
+          <li>2, 8, 15, 22 Eylül 2026</li>
+          <li>Zoom Webinar · İngilizce anlatım</li>
+          <li>Kayıtların yayımlanması planlanıyor</li>
+        </ul>
+      </article>
+      <article class="track yna">
+        <div class="track-visual" style="background-image:url('assets/gyct2026/cards/gyct-card-adaptation-resilience.png')" aria-hidden="true"></div>
+        <div class="tag" style="color:#f2d56b;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px">YNA izleği · seçilmiş katılımcılar</div>
+        <h3>İleri düzey COP hazırlığı</h3>
+        <p>Youth Negotiators Academy'nin teknik danışmanlığıyla müzakere pratiği, COP'taki roller ve stratejik etki üzerine üç odaklı oturum. Antalya yolculuğunda daha derin bir hazırlık için küçük ve seçilmiş bir grup.</p>
+        <ul>
+          <li>29 Eyl, 6 Eki, 13 Eki 2026</li>
+          <li>Özel Zoom Meeting oturumları</li>
+          <li>Kayıtlar kamuya açık değil</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="wrap">
+    <div class="section-label">Kimler başvurmalı</div>
+    <div class="who-board">
+      <div class="who-board-top">
+        <div>
+          <h2 class="section-title">Size uygun mu?</h2>
+          <p class="section-lead">GYCT, uluslararası iklim politikasına daha etkili biçimde katılmak isteyen yükselen iklim liderleri için tasarlandı.</p>
+        </div>
+        <div class="who-actions">
+          <div>
+            <p class="who-age">16–35</p>
+            <p class="who-gate-note">16–35 yaş arasındaki kişilere açıktır.</p>
+          </div>
+          <a class="btn btn-teal" href="https://docs.google.com/forms/d/e/1FAIpQLSdaR58cDUZDhZRGYCMM5WOB4lC57fF4CoszR5DFsy65ShSNXA/viewform" target="_blank" rel="noopener">Hemen başvur</a>
+        </div>
+      </div>
+      <div class="who-traits">
+        <article class="who-trait">
+          <div class="who-key">İklim çalışması</div>
+          <p class="who-val">Kampanyalar, projeler veya topluluk çalışmasında kanıtlanmış deneyim.</p>
+        </article>
+        <article class="who-trait">
+          <div class="who-key">UNFCCC okuryazarlığı</div>
+          <p class="who-val">UNFCCC süreci ve son COP sonuçları hakkında belirli bir bilgi düzeyi.</p>
+        </article>
+        <article class="who-trait">
+          <div class="who-key">Savunuculuk</div>
+          <p class="who-val">Değişimi ilerletmek için iletişim, ikna ve iş birliği deneyimi.</p>
+        </article>
+      </div>
+      <p class="who-priority"><strong>Yerler nasıl verilir.</strong> Seçimde farklı bölgelerden ve iklim değişikliğinden en çok etkilenen gruplardan gelen başvurulara öncelik verilir.</p>
+    </div>
+  </div>
+</section>
+
+<section id="sessions" class="sessions-section">
+  <div class="wrap">
+    <div class="section-label">2026 müfredatı</div>
+    <h2 class="section-title">Oturum takvimi</h2>
+    <p class="section-lead">Tüm oturumlar 13:00-14:30 UTC saatleri arasında, her hafta salı günü yapılır; yalnızca 1. oturum çarşamba gününe, 2 Eylül'e denk gelir. Akış: karşılama, uzman katkısı, moderatörlü tartışma, soru-cevap ve kapanış.</p>
+    <div class="table-shell">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>#</th><th>İzlek</th><th>Oturum</th><th>Tarih</th><th>Platform</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td><span class="pill pill-main">Ana</span></td><td><span class="session-title">Bir dünya düzeni olarak realizm: egemenlik ve iklim</span></td><td>2 Eyl 2026, Çar</td><td>Zoom Webinar</td></tr>
+            <tr><td>2</td><td><span class="pill pill-main">Ana</span></td><td><span class="session-title">Enerji dönüşümünün bugünü</span></td><td>8 Eyl 2026, Sal</td><td>Zoom Webinar</td></tr>
+            <tr><td>3</td><td><span class="pill pill-main">Ana</span></td><td><span class="session-title">Eğitim, ACE ve engelli kapsayıcılığı</span></td><td>15 Eyl 2026, Sal</td><td>Zoom Webinar</td></tr>
+            <tr><td>4</td><td><span class="pill pill-main">Ana</span></td><td><span class="session-title">İklim finansmanı hâlâ gündemde mi?</span></td><td>22 Eyl 2026, Sal</td><td>Zoom Webinar</td></tr>
+            <tr><td>5</td><td><span class="pill pill-yna">YNA</span></td><td><span class="session-title">COP'un içinden: roller, güç ve gayriresmî etki</span></td><td>29 Eyl 2026, Sal</td><td>Zoom Meeting</td></tr>
+            <tr><td>6</td><td><span class="pill pill-yna">YNA</span></td><td><span class="session-title">COP'taki rolünü nasıl belirlersin, nasıl planlar ve hazırlanırsın</span></td><td>6 Eki 2026, Sal</td><td>Zoom Meeting</td></tr>
+            <tr><td>7</td><td><span class="pill pill-yna">YNA</span></td><td><span class="session-title">Müzakere 101: metin üzerinde nasıl mücadele edilir</span></td><td>13 Eki 2026, Sal</td><td>Zoom Meeting</td></tr>
+            <tr><td>8</td><td><span class="pill pill-all">Tümü</span></td><td><span class="session-title">GYC House'ta hibrit tören — Antalya, Türkiye'deki COP31 sırasında</span></td><td>10 Kas 2026, Sal</td><td>Hibrit — GYC House + çevrim içi</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="archive">
+  <div class="wrap">
+    <div class="section-label">Açık erişim arşivi</div>
+    <h2 class="section-title">Geçmiş GYCT oturumlarını izle</h2>
+    <p class="section-lead">Önceki ders kayıtları, Oxford Smith School YouTube kanalında ücretsiz olarak erişilebilir; bu, GYCT'nin açık erişim yaklaşımının temel bir parçasıdır. 2026 öncesinde hazırlanmak veya kaçırdığın oturumları yakalamak için kullanabilirsin.</p>
+
+    <div class="playlist-embed">
+      <iframe
+        id="archive-player"
+        src="https://www.youtube.com/embed/cmd_oqWzRKs?rel=0"
+        title="GYCT programına hoş geldiniz"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        loading="lazy"></iframe>
+    </div>
+    <div class="now-playing" aria-live="polite">
+      <span>Şimdi oynatılıyor: <strong id="now-playing-title">GYCT programına hoş geldiniz</strong></span>
+      <a id="now-playing-open" href="https://youtu.be/cmd_oqWzRKs" target="_blank" rel="noopener">YouTube'da aç</a>
+    </div>
+
+    <div class="lang-row" aria-label="Dil oynatma listeleri">
+      <a class="lang-chip active" href="https://www.youtube.com/playlist?list=PLRWM35qtBBofnvmdJt04SYu9tmRHXDJKv" target="_blank" rel="noopener">İngilizce</a>
+      <a class="lang-chip" href="https://www.youtube.com/playlist?list=PLRWM35qtBBoddMGBu9RNjC1WUfeH9tmbc" target="_blank" rel="noopener">Fransızca</a>
+      <a class="lang-chip" href="https://www.youtube.com/playlist?list=PLRWM35qtBBodMj0d5-ns8g_x9MSb4Jg7n" target="_blank" rel="noopener">İspanyolca</a>
+      <a class="lang-chip" href="https://www.youtube.com/playlist?list=PLRWM35qtBBodL1t5ntXNrzTESJFQPDY0y" target="_blank" rel="noopener">Portekizce</a>
+      <a class="lang-chip" href="https://www.youtube.com/playlist?list=PLRWM35qtBBofUsupYtpxRv4IIZN5KdbSx" target="_blank" rel="noopener">Arapça</a>
+      <a class="lang-chip" href="https://www.youtube.com/playlist?list=PLRWM35qtBBocq5Kn1XD11b7byZ23mdO1n" target="_blank" rel="noopener">Mandarin</a>
+      <a class="lang-chip" href="https://www.youtube.com/@oxfordsmithschool/playlists" target="_blank" rel="noopener">Tüm listeler</a>
+    </div>
+
+    <div class="year-tabs" role="tablist" aria-label="Program yılı">
+      <button type="button" class="year-tab" role="tab" id="tab-2025" aria-controls="year-2025" aria-selected="true" data-year="2025">2025</button>
+      <button type="button" class="year-tab" role="tab" id="tab-2024" aria-controls="year-2024" aria-selected="false" data-year="2024">2024</button>
+      <button type="button" class="year-tab" role="tab" id="tab-2023" aria-controls="year-2023" aria-selected="false" data-year="2023">2023</button>
+    </div>
+
+    <div class="year-panel active" id="year-2025" role="tabpanel" aria-labelledby="tab-2025">
+      <ul class="session-list">
+        <li><a class="is-playing" href="https://youtu.be/cmd_oqWzRKs" target="_blank" rel="noopener"><span class="num">00</span><span class="ttl">GYCT programına hoş geldiniz</span><span class="watch">Oynatılıyor</span></a></li>
+        <li><a href="https://youtu.be/rzczr2QglvI" target="_blank" rel="noopener"><span class="num">01</span><span class="ttl">Şu anda neredeyiz</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/Vef1aqAnGaw" target="_blank" rel="noopener"><span class="num">02</span><span class="ttl">İklim finansmanı</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/3Izf5MRT47E" target="_blank" rel="noopener"><span class="num">03</span><span class="ttl">İklim değişikliği ve jeopolitika</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/9JWRfrtdmIg" target="_blank" rel="noopener"><span class="num">04</span><span class="ttl">Şirketler ve iklim eylemi</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/k4ep_uJnxYc" target="_blank" rel="noopener"><span class="num">04b</span><span class="ttl">GYC Lab: UNFCCC'yi anlamak</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/ebnG0SCzNDg" target="_blank" rel="noopener"><span class="num">05</span><span class="ttl">Yerli halklar, yerel topluluklar ve doğa</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/1qADS7DpXgQ" target="_blank" rel="noopener"><span class="num">06</span><span class="ttl">İklim davaları ve hukuki eğilimler</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/q_M7wazePiI" target="_blank" rel="noopener"><span class="num">07</span><span class="ttl">Buluşma oturumu</span><span class="watch">İzle</span></a></li>
+      </ul>
+    </div>
+
+    <div class="year-panel" id="year-2024" role="tabpanel" aria-labelledby="tab-2024" hidden>
+      <ul class="session-list">
+        <li><a href="https://youtu.be/2IwN15VDN8I" target="_blank" rel="noopener"><span class="num">01</span><span class="ttl">Açılış: kursun ve grubun tanıtımı</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/90p6ngy__MI" target="_blank" rel="noopener"><span class="num">02</span><span class="ttl">Çevresel değişimi bilmek ve anlamak</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/nCXgAc4Ubxk" target="_blank" rel="noopener"><span class="num">03</span><span class="ttl">Net Zero mu Not Zero mu: kurumsal yönetişim</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/fE-ONxEXFcE" target="_blank" rel="noopener"><span class="num">04</span><span class="ttl">Devlet dışı aktörler ve NDC geliştirme</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/P1xAiQu8kms" target="_blank" rel="noopener"><span class="num">05</span><span class="ttl">COP'ta müzakerecilerle nasıl iletişim kurarım?</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/d5k7HbPHjc0" target="_blank" rel="noopener"><span class="num">06</span><span class="ttl">Fosil yakıtların aşamalı olarak terk edilmesi</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/KfDAtNVc21w" target="_blank" rel="noopener"><span class="num">07</span><span class="ttl">Parayı göster: yeşil dönüşümün finansmanı</span><span class="watch">İzle</span></a></li>
+      </ul>
+    </div>
+
+    <div class="year-panel" id="year-2023" role="tabpanel" aria-labelledby="tab-2023" hidden>
+      <ul class="session-list">
+        <li><a href="https://youtu.be/0969PnyG4mg" target="_blank" rel="noopener"><span class="num">01</span><span class="ttl">Buraya nasıl geldik?</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/zdZotZsh7Ko" target="_blank" rel="noopener"><span class="num">02</span><span class="ttl">Kayıp ve zarar</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/fCscY_rXKQU" target="_blank" rel="noopener"><span class="num">03</span><span class="ttl">Uyum</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/NhpMJflJPo8" target="_blank" rel="noopener"><span class="num">04</span><span class="ttl">Azaltım 1: enerji ve sanayi süreçleri emisyonları</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/AZ7hXmQhyH8" target="_blank" rel="noopener"><span class="num">05</span><span class="ttl">İklim finansmanı</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/KMwoS3oop2A" target="_blank" rel="noopener"><span class="num">06</span><span class="ttl">Azaltım 2</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/5hx5HQX1R7s" target="_blank" rel="noopener"><span class="num">07</span><span class="ttl">İş dünyası ve devlet dışı aktörler</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/utLPatu6QX4" target="_blank" rel="noopener"><span class="num">08</span><span class="ttl">İklim politikası</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/0_l-ZCA1H0M" target="_blank" rel="noopener"><span class="num">09</span><span class="ttl">Yerli halkların hakları ve iklim değişikliği</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/yB1XRGYsX30" target="_blank" rel="noopener"><span class="num">10</span><span class="ttl">İklim davaları</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/J7s6wDGRtRk" target="_blank" rel="noopener"><span class="num">11</span><span class="ttl">Toplumsal cinsiyet ve iklim değişikliği</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/37iIe7L033s" target="_blank" rel="noopener"><span class="num">12</span><span class="ttl">İklim değişikliği ve doğa</span><span class="watch">İzle</span></a></li>
+        <li><a href="https://youtu.be/cmkBxFk07lg" target="_blank" rel="noopener"><span class="num">13</span><span class="ttl">COP28'in içinden müzakereler</span><span class="watch">İzle</span></a></li>
+      </ul>
+    </div>
+
+    <p class="archive-note">Kayıtlar <a href="https://www.youtube.com/@oxfordsmithschool/playlists" target="_blank" rel="noopener">Oxford Smith School of Enterprise and the Environment</a> tarafından barındırılıyor; çeviri desteği <a href="https://ecointerpreters.org/" target="_blank" rel="noopener">Eco Interpreters</a> tarafından sağlanıyor. Dersler herkese açıktır; etkileşimli atölyeler genellikle kaydedilmez.</p>
+  </div>
+</section>
+
+<section id="history">
+  <div class="wrap">
+    <div class="section-label">Programın geçmişi</div>
+    <h2 class="section-title">GYCT nasıl büyüdü</h2>
+    <p class="section-lead">COP27'de Alexis McGivern (Oxford Net Zero) ile Agustín Ocaña'nın (Global Youth Coalition) tesadüfi karşılaşmasından doğan GYCT, gençlerin uluslararası iklim politikasına anlamlı katılımının önündeki engelleri kaldırmak için kuruldu.</p>
+    <div class="history-grid">
+      <article class="history-year">
+        <div class="yr">2023</div>
+        <div>
+          <h3>COP28 öncesinde başlatıldı</h3>
+          <p>Müfredat, iklim adaleti için çalışan 180 genç aktivistle görüşülerek şekillendirildi. İklim finansmanı, kayıp ve zarar, uyum ve dayanıklılık gibi konuları kapsadı.</p>
+          <ul>
+            <li>177 ülkede ~4.500 kişi eğitildi · %64 MAPA</li>
+            <li>13 oturumun tamamını özetleyen <em>The Climate Guidebook</em> hazırlandı</li>
+          </ul>
+        </div>
+      </article>
+      <article class="history-year">
+        <div class="yr">2024</div>
+        <div>
+          <h3>Devlet dışı iklim eyleminin bütünlüğü ve hırsı</h3>
+          <p>Daha küçük, topluluk odaklı bir grup. İlk COP bursiyerleri COP29'a katıldı.</p>
+          <ul>
+            <li>285 katılımcı · %79 MAPA · 135 ülke</li>
+            <li>Oxford Üniversitesi Rektörlük Çevresel Sürdürülebilirlik Ödülü</li>
+          </ul>
+        </div>
+      </article>
+      <article class="history-year">
+        <div class="yr">2025</div>
+        <div>
+          <h3>Jeopolitika ve değişen iklim politikası</h3>
+          <p>21 Mayıs–16 Temmuz 2025 arasında yürütüldü; Bonn Yardımcı Organlar (SB) hazırlığı ve 4 Kasım'da bir COP30 oturumu içerdi. ClimateWorks Foundation desteğiyle.</p>
+          <ul>
+            <li>Pozisyon belgeleri, akran öğrenmesi ve beş COP30 bursiyeri</li>
+            <li><a href="https://netzeroclimate.org/wp-content/uploads/2025/04/2025-Programme-Booklet-as-of-3-April-2025.pdf" target="_blank" rel="noopener">2025 program broşürü (PDF)</a></li>
+          </ul>
+        </div>
+      </article>
+      <article class="history-year">
+        <div class="yr">2026</div>
+        <div>
+          <h3>COP31 yolunda gençlerin yürüttüğü bir program</h3>
+          <p>Programı GYC yürütüyor; Oxford Net Zero stratejik ve akademik destek sağlıyor. Ana izlek ve YNA izleği Antalya'ya göre planlandı.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <div class="wrap">
+    <div class="section-label">Önemli tarihler</div>
+    <h2 class="section-title">Antalya'ya giden 2026 takvimi</h2>
+    <p class="section-lead">Başvurular açık ve 10 Ağustos 2026, saat 23:59 BST'de kapanıyor.</p>
+    <div class="timeline-list">
+      <div class="timeline-item"><div class="date">Şimdi</div><div class="desc">Başvurular açık — <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaR58cDUZDhZRGYCMM5WOB4lC57fF4CoszR5DFsy65ShSNXA/viewform" target="_blank" rel="noopener">GYCT 2026 formuyla başvur</a></div></div>
+      <div class="timeline-item"><div class="date">10 Ağu</div><div class="desc">Başvurular kapanıyor, 23:59 BST</div></div>
+      <div class="timeline-item"><div class="date">17-18 Ağu</div><div class="desc">Başvuru sahiplerine bilgi verilir. Ana grup ve ileri düzey YNA kontenjanları kesinleşir. Sonuç e-postaları gönderilir.</div></div>
+      <div class="timeline-item"><div class="date">24-27 Ağu</div><div class="desc">Tanışma paketi ve oryantasyon oturumu</div></div>
+      <div class="timeline-item"><div class="date">2-22 Eyl</div><div class="desc">Ana izlek oturumları, haftalık (2 Eyl çarşamba başlar, sonra salı günleri)</div></div>
+      <div class="timeline-item"><div class="date">29 Eyl-13 Eki</div><div class="desc">İleri düzey YNA izleği, COP hazırlığı odaklı</div></div>
+      <div class="timeline-item"><div class="date">15 Eki</div><div class="desc">Program kapanışı</div></div>
+      <div class="timeline-item"><div class="date">9-20 Kas</div><div class="desc">COP31, Antalya, Türkiye</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="wrap">
+    <div class="section-label">Gruptan sesler</div>
+    <h2 class="section-title">Katılımcılar ne diyor</h2>
+    <p class="section-lead">Geçmiş GYCT katılımcılarının kendi adlarıyla paylaştığı değerlendirmeler.</p>
+    <div class="testimonials">
+      <article class="testimonial">
+        <blockquote>“Global Youth Climate aracılığıyla aldığım eğitim hayatımda dönüştürücü bir deneyim oldu. Bana yalnızca değerli bilgi ve beceriler kazandırmakla kalmadı, iklim değişikliğiyle mücadeleye yönelik küresel çabalara anlamlı biçimde katkı sunma özgüvenini ve motivasyonunu da verdi. Bir mülteci olarak bu fırsat benim için bir umut ışığı oldu.”</blockquote>
+        <cite>Byaombe Lumona</cite>
+      </article>
+      <article class="testimonial">
+        <blockquote>“Açıkçası bu eğitime katılma fırsatıyla öğrendiklerimi anlatacak kelime bulamıyorum. İklim değişikliğinin farklı boyutlarına ve düzeylerine dair bakışım muazzam ölçüde genişledi ve bu, üzerinde çalıştığım yerel projeleri şekillendirdi.”</blockquote>
+        <cite>Marilynn Holguín Clover</cite>
+      </article>
+      <article class="testimonial">
+        <blockquote>“Bazen küresel gündem ve iklim değişikliği müzakereleri bana çok uzak geliyor… ama düzenleyenler ile zeki ve genç konuşmacılar sayesinde her şeyin mümkün olduğunu görüyorum; bu ortam beni ilerlemeye devam etmek için ilhamlandırıyor.”</blockquote>
+        <cite>Linara Khadimullina</cite>
+      </article>
+      <article class="testimonial">
+        <blockquote>“Global Youth Training ekibine ve Oxford Net Zero ekibine bravo! Tüm oturumlara bayıldım. Karşılaştığım en iyi gençlik eğitimlerinden biri. İçerik harika ve mükemmel biçimde derlenmiş!”</blockquote>
+        <cite>Shaurya Patel</cite>
+      </article>
+    </div>
+    <div class="quote" style="margin-top:16px">
+      <blockquote>“Bu yıl başıma gelen en güzel şeylerden biri bu grubun parçası olmaktı. Burada olmayı çok seviyorum… böylesine öğretici bir oturum için teşekkürler!”</blockquote>
+      <cite>Nhlanhla Sibanda</cite>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-label">SSS</div>
+    <h2 class="section-title">Sıkça sorulan sorular</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <details open>
+          <summary>2026 eğitimine nasıl katılabilirim?</summary>
+          <div class="answer">Başvurular <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaR58cDUZDhZRGYCMM5WOB4lC57fF4CoszR5DFsy65ShSNXA/viewform" target="_blank" rel="noopener">GYCT 2026 başvuru formu</a> üzerinden açık. Son tarih: <strong>10 Ağustos 2026, 23:59 BST</strong>. GYCT 2026 tamamen çevrim içidir. Ana izlek Zoom Webinar üzerinden (açık grup), ileri düzey YNA izleği ise seçilmiş katılımcılar için Zoom Meeting üzerinden yürütülür. Oturumlar 13:00–14:30 UTC saatleri arasında, her hafta salı günü yapılır (2 Eyl–13 Eki 2026); 1. oturum çarşamba, 2 Eylül'dedir. Ana izlek ders kayıtlarının yayımlanması öngörülüyor; etkileşimli oturumlar ve YNA oturumları genellikle kaydedilmez.</div>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>GYCT 2026'nın odağı nedir?</summary>
+          <div class="answer">Antalya'daki COP31 yolunda gençleri uluslararası iklim politikasına hazırlamak. Ana izlek; egemenlik ve iklim, enerji dönüşümü, eğitim/ACE ve engelli kapsayıcılığı ile iklim finansmanını kapsar. YNA izleği ise COP'taki roller, hazırlık ve müzakere pratiğine odaklanır.</div>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>Bu, Oxford Üniversitesi'nin akredite bir kursu mu?</summary>
+          <div class="answer"><strong>Hayır.</strong> GYCT, Oxford Üniversitesi'nin akredite bir kursu değildir. Oxford Net Zero (bir araştırma programı) ile Global Youth Coalition'ın yer aldığı bir iş birliğidir. GYCT'ye katıldığınızı söyleyebilirsiniz; ancak lütfen LinkedIn'de veya başka bir yerde Oxford Üniversitesi'nde bir kurs yaptığınızı belirtmeyin: bu, sorunlara yol açabilir ve programın devamlılığını riske atabilir.</div>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>Kurs hangi dillerde sunuluyor?</summary>
+          <div class="answer">Önceki edisyonlarda İngilizce, Fransızca, İspanyolca, Portekizce, Arapça ve Mandarin dillerinde canlı çeviri sunuldu (<a href="https://ecointerpreters.org/" target="_blank" rel="noopener">Eco Interpreters</a> ile). 2026'da dört ana oturum, altyazılı ve İspanyolca dahil kısmi canlı çeviriyle İngilizce olarak yapılır. YNA izleği altyazılı İngilizcedir ve canlı çeviri içermez. Etkileşimli atölyeler için iyi düzeyde İngilizce yararlı olur. Geçmiş kayıtlar YouTube'da altı dilde erişilebilir durumdadır.</div>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>Sertifika alacak mıyım?</summary>
+          <div class="answer">Evet, katılım yoluyla. Ana izlekte, katılım formlarını dolduran ve oturumların yaklaşık %80'ini tamamlayan katılımcılar sertifika alabilir. YNA izleğine ilişkin ayrıntılar seçilen katılımcılarla paylaşılacaktır.</div>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>2026 hakkında kiminle iletişime geçmeliyim?</summary>
+          <div class="answer">Program ve iş birliği soruları: <a href="mailto:takeaction@theglobalyouth.co">takeaction@theglobalyouth.co</a>. Ayrıca güncellemeleri <a href="https://www.instagram.com/theglobalyouth_co/" target="_blank" rel="noopener">Instagram</a>'dan takip edebilirsiniz.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="partner">
+  <div class="wrap">
+    <div class="section-label">İş birliği</div>
+    <h2 class="section-title">COP31 ve ötesi için gençliğe yatırım yapın</h2>
+    <p class="section-lead">ClimateWorks Foundation'ın 2024–2025 dönemine ilişkin desteği sona erdi. GYCT'nin yürütülmesini, çeviri hizmetlerini ve eşitlik yollarını COP31 sezonuna taşımak için paydaşlar arıyoruz.</p>
+    <div class="bursary-note">
+      <strong>Burs mirası:</strong> GYCT bugüne kadar 36.000 £ tutarında gençlik bursu dağıttı ve katılımcıların COP29 ile COP30'a katılmasını sağladı. Bu yolu Antalya'daki COP31 için sürdürmek, kaynak geliştirmede temel önceliğimizdir.
+    </div>
+    <div class="fund">
+      <div class="fund-grid">
+        <div class="fund-card"><div class="price">£106K</div><div class="desc"><strong>Temel program</strong><br>3 dil, çekirdek ekip, 5-10 COP bursu</div></div>
+        <div class="fund-card featured"><div class="price">£177K</div><div class="desc"><strong>Genişletilmiş program</strong><br>5 dil, genişletilmiş mentorluk, eşitlik odaklı burslar, yaratıcı materyaller</div></div>
+        <div class="fund-card"><div class="price">Özel</div><div class="desc"><strong>Hedefli destek</strong><br>Burslara, bir modüle veya bölgesel erişime destek olun</div></div>
+      </div>
+      <div class="contact-box">
+        <div>İş birliği ve program soruları için iletişim<strong>takeaction@theglobalyouth.co</strong></div>
+        <a class="btn btn-dark" href="mailto:takeaction@theglobalyouth.co?subject=GYCT%20Partnership%20Inquiry">Paydaş olun</a>
+      </div>
+    </div>
+    <div class="give" style="margin-top:28px">
+      <div class="section-label">Doğrudan bağış yapın</div>
+      <p class="section-lead">Bir kurumu temsil etmiyor musunuz? Her miktardaki bireysel bağış, GYCT'yi COP31 yolundaki gençler için ücretsiz tutmaya yardımcı olur.</p>
+      <div class="gfm-embed" data-url="https://www.gofundme.com/f/keep-global-youth-climate-training-free/widget/large?attribution_id=sl%3Aad6c73f0-100c-48b4-a83d-f0d94215b90d"></div>
+      <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+    </div>
+    <div style="margin-top:28px">
+      <div class="section-label">İş birliğiyle</div>
+      <div class="partners">
+        <span class="partner">Global Youth Coalition</span>
+        <span class="partner">Oxford Net Zero</span>
+        <span class="partner">Smith School of Enterprise and the Environment</span>
+        <span class="partner">Youth Negotiators Academy</span>
+        <span class="partner">Eco Interpreters</span>
+      </div>
+      <div class="section-label" style="margin-top:18px">Önceki fon sağlayıcılar</div>
+      <div class="partners">
+        <span class="partner past">ClimateWorks Foundation (2024–2025)</span>
+        <span class="partner past">INCITE</span>
+        <span class="partner past">van Houten Fund</span>
+        <span class="partner past">Quadrature Climate Foundation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:#fff">Global Youth Climate Training (GYCT) 2026</strong> · <a href="/">Global Youth Coalition</a> programıdır; <a href="https://netzeroclimate.org/" target="_blank" rel="noopener">Oxford Net Zero</a> stratejik ve akademik destek sağlar</p>
+    <p class="fine">Oxford referans sayfası: <a href="https://netzeroclimate.org/global-youth-training/" target="_blank" rel="noopener">netzeroclimate.org/global-youth-training</a> · Etki Raporu: <a href="https://netzeroclimate.org/wp-content/uploads/2025/11/GYCT-Impact-Report_2025.pdf" target="_blank" rel="noopener">PDF indir</a> · Geçmiş oturumlar: <a href="https://www.youtube.com/@oxfordsmithschool/playlists" target="_blank" rel="noopener">YouTube listeleri</a> · Sorular: <a href="mailto:takeaction@theglobalyouth.co">takeaction@theglobalyouth.co</a></p>
+    <p class="fine" style="margin-top:10px">COP31 · Antalya, Türkiye · 9-20 Kasım 2026</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var player = document.getElementById("archive-player");
+  var titleEl = document.getElementById("now-playing-title");
+  var openEl = document.getElementById("now-playing-open");
+  var tabs = document.querySelectorAll(".year-tab");
+  var panels = document.querySelectorAll(".year-panel");
+  var sessionLinks = document.querySelectorAll(".session-list a");
+
+  function videoIdFromHref(href) {
+    if (!href) return null;
+    var m = href.match(/(?:youtu\.be\/|v=|embed\/)([A-Za-z0-9_-]{6,})/);
+    return m ? m[1] : null;
+  }
+
+  function setPlaying(link, autoplay) {
+    if (!player || !link) return;
+    var id = videoIdFromHref(link.getAttribute("href"));
+    if (!id) return;
+    var titleNode = link.querySelector(".ttl");
+    var title = titleNode ? titleNode.textContent.trim() : "GYCT oturumu";
+    player.src = "https://www.youtube.com/embed/" + id + "?rel=0" + (autoplay ? "&autoplay=1" : "");
+    player.title = title;
+    if (titleEl) titleEl.textContent = title;
+    if (openEl) {
+      openEl.href = "https://youtu.be/" + id;
+      openEl.textContent = "YouTube'da aç";
+    }
+    sessionLinks.forEach(function (a) {
+      a.classList.remove("is-playing");
+      var watch = a.querySelector(".watch");
+      if (watch) watch.textContent = "İzle";
+    });
+    link.classList.add("is-playing");
+    var activeWatch = link.querySelector(".watch");
+    if (activeWatch) activeWatch.textContent = "Oynatılıyor";
+  }
+
+  sessionLinks.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+      e.preventDefault();
+      setPlaying(link, true);
+      if (player && player.scrollIntoView) {
+        player.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+    });
+  });
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      var year = tab.getAttribute("data-year");
+      tabs.forEach(function (t) { t.setAttribute("aria-selected", t === tab ? "true" : "false"); });
+      panels.forEach(function (panel) {
+        var match = panel.id === "year-" + year;
+        panel.classList.toggle("active", match);
+        panel.hidden = !match;
+      });
+      var panel = document.getElementById("year-" + year);
+      if (panel) {
+        var first = panel.querySelector(".session-list a");
+        if (first) setPlaying(first, false);
+      }
+    });
+  });
+
+  var initial = document.querySelector("#year-2025 .session-list a");
+  if (initial) setPlaying(initial, false);
+})();
+</script>
+
+</body>
+</html>

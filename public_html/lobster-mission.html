@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GYC AI Labs Lobster Mission | Global Youth Coalition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --gyc-teal: #00a09a;
+  --bg-void: #030508;
+  --bg-panel: #080c12;
+  --bg-panel-2: #0c121b;
+  --border-dim: #102031;
+  --border-bright: #1d3b52;
+  --green: #00ff88;
+  --cyan: #00e5ff;
+  --amber: #ffb300;
+  --text-primary: #d4e2f0;
+  --text-secondary: #8294a8;
+  --text-muted: #4c6076;
+  --font-display: 'Orbitron', monospace;
+  --font-body: 'Rajdhani', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7;
+  background: var(--bg-void);
+  color: var(--text-primary);
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.main-header {
+  background: #fff;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.logo a {
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--gyc-teal);
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.main-nav a {
+  color: #333;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--gyc-teal);
+  border-bottom: 2px solid var(--gyc-teal);
+}
+.nav-cta-button {
+  background: var(--gyc-teal);
+  color: #fff !important;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+.header-social a { font-size: 1.35rem; color: #0077B5; }
+.mission-zone {
+  position: relative;
+  min-height: 80vh;
+  overflow: hidden;
+}
+.mission-zone::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(0,255,136,0.08), transparent 28%),
+    radial-gradient(circle at 82% 22%, rgba(0,229,255,0.08), transparent 30%),
+    linear-gradient(rgba(0,255,136,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,136,0.018) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 44px 44px, 44px 44px;
+  pointer-events: none;
+}
+.mission-zone::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,255,136,0.014) 2px, rgba(0,255,136,0.014) 4px);
+  pointer-events: none;
+}
+.mission-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 54px 24px 72px;
+}
+.mission-kicker {
+  font-family: var(--font-mono);
+  color: var(--green);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  margin-bottom: 14px;
+}
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+  gap: 28px;
+  align-items: stretch;
+}
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+  color: #f2fbff;
+  max-width: 900px;
+}
+.hero-copy {
+  font-family: var(--font-body);
+  font-size: 1.18rem;
+  color: var(--text-secondary);
+  max-width: 760px;
+  margin-top: 18px;
+}
+.status-panel,
+.mission-card,
+.progress-card {
+  background: linear-gradient(180deg, rgba(12,18,27,0.94), rgba(8,12,18,0.94));
+  border: 1px solid var(--border-dim);
+  border-radius: 6px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+}
+.status-panel {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+}
+.lobster-mark {
+  font-family: var(--font-display);
+  font-size: 3.8rem;
+  line-height: 1;
+}
+.status-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+}
+.pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 12px var(--green);
+}
+.status-panel h2 {
+  font-family: var(--font-display);
+  color: #fff;
+  font-size: 1rem;
+  margin: 20px 0 8px;
+}
+.status-panel p {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+.mission-card {
+  padding: 22px;
+  min-height: 230px;
+}
+.mission-card .label,
+.progress-card .label {
+  font-family: var(--font-mono);
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.68rem;
+  margin-bottom: 12px;
+}
+.mission-card h3,
+.progress-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 1.35;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.mission-card p,
+.progress-card p,
+.progress-card li {
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+.progress {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+.progress-card {
+  padding: 24px;
+}
+.progress-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+.progress-list li {
+  border-left: 2px solid var(--green);
+  padding-left: 12px;
+}
+.progress-list strong {
+  color: #fff;
+  font-weight: 600;
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+.mission-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 8px 13px;
+  border: 1px solid rgba(0,255,136,0.22);
+  color: var(--green);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 3px;
+  background: rgba(0,255,136,0.045);
+}
+.mission-link:hover {
+  border-color: var(--green);
+  background: rgba(0,255,136,0.09);
+}
+.main-footer {
+  background: #333;
+  color: #ccc;
+  text-align: center;
+  padding: 40px 0;
+}
+.footer-logos img {
+  height: 50px;
+  filter: brightness(0) invert(1) opacity(0.8);
+  margin-bottom: 15px;
+}
+.social-icons { margin-top: 15px; }
+.social-icons a {
+  color: #ccc;
+  margin: 0 10px;
+  font-size: 1.2em;
+}
+.social-icons a:hover { color: var(--gyc-teal); }
+@media (max-width: 880px) {
+  .main-header .container,
+  .hero,
+  .progress {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-header .container { display: flex; }
+  .grid { grid-template-columns: 1fr; }
+  .status-panel { min-height: 220px; }
+}
+</style>
+</head>
+<body>
+<header class="main-header">
+  <div class="container">
+    <div class="logo">
+      <a href="http://theglobalyouth.co/">Global Youth Coalition</a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="http://theglobalyouth.co/">Home</a></li>
+        <li><a href="http://theglobalyouth.co/about">About</a></li>
+        <li><a href="horizon-scanning.html">Horizon Scanning</a></li>
+        <li><a href="lobster-mission.html" class="active">Lobster Mission</a></li>
+        <li><a href="https://theglobalyouth.co/GYCT" class="nav-cta-button">GYCT</a></li>
+      </ul>
+    </nav>
+    <div class="header-social">
+      <a href="https://www.linkedin.com/company/the-global-youth-coalition/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="mission-zone">
+  <div class="mission-inner">
+    <section class="hero">
+      <div>
+        <div class="mission-kicker">GYC AI Labs // Agent Mission</div>
+        <h1>The Lobster keeps the lab moving.</h1>
+        <p class="hero-copy">A working log for the GYC AI Labs assistant: project tracking, email intelligence, mission-control handoffs, and intergenerational equity horizon scanning.</p>
+        <div class="links">
+          <a class="mission-link" href="horizon-scanning.html">Open Horizon Scanning</a>
+          <a class="mission-link" href="data/signals-db.json">Signals Database</a>
+        </div>
+      </div>
+      <aside class="status-panel" aria-label="Agent status">
+        <div>
+          <div class="status-line"><span class="pulse"></span> Mission Online</div>
+          <div class="lobster-mark">LOBSTER // AI</div>
+        </div>
+        <div>
+          <h2>Operating posture</h2>
+          <p>Track the work, surface useful signals, document progress, and ask before pushing anything sensitive or external.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid" aria-label="Mission pillars">
+      <article class="mission-card">
+        <div class="label">Pillar 01</div>
+        <h3>Project continuity</h3>
+        <p>Maintain a map of active GYC AI Labs projects, next actions, blockers, scripts, research files, and deployment paths.</p>
+      </article>
+      <article class="mission-card">
+        <div class="label">Pillar 02</div>
+        <h3>Email to mission control</h3>
+        <p>Scan the UNMGCY inbox when authorized, extract relevant opportunities or obligations, and prepare structured updates for Railway mission control.</p>
+      </article>
+      <article class="mission-card">
+        <div class="label">Pillar 03</div>
+        <h3>Horizon scanning</h3>
+        <p>Monitor intergenerational equity signals, help score and summarize them, and keep the public horizon scanning workflow ready for contribution.</p>
+      </article>
+    </section>
+
+    <section class="progress" aria-label="Progress log">
+      <article class="progress-card">
+        <div class="label">Current progress</div>
+        <h3>Workspace recovery</h3>
+        <ul class="progress-list">
+          <li><strong>Identity set:</strong> GYC AI Labs Lobster is the active assistant identity.</li>
+          <li><strong>Files found:</strong> copied research, scripts, signal data, and website deployment bundles are present locally.</li>
+          <li><strong>Website page:</strong> this page documents the mission and gives the lab a public progress surface.</li>
+        </ul>
+      </article>
+      <article class="progress-card">
+        <div class="label">Next checkpoints</div>
+        <h3>Operational setup</h3>
+        <ul class="progress-list">
+          <li><strong>Email scan:</strong> confirm inbox access method and define what counts as mission-control-worthy.</li>
+          <li><strong>Railway handoff:</strong> inspect the GYC AI Labs mission-control API or upload path before sending data.</li>
+          <li><strong>Horizon sync:</strong> decide whether Awardspace updates should be manual, FTP scripted, or Git-based.</li>
+        </ul>
+      </article>
+    </section>
+  </div>
+</main>
+
+<footer class="main-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logos">
+        <img src="https://theglobalyouth.co/assets/images/global_logo1.png" alt="Global Youth Coalition Logo">
+      </div>
+      <p>&copy; 2026 Global Youth Coalition. All Rights Reserved.</p>
+      <div class="social-icons">
+        <a href="https://twitter.com/theglobalyouthc" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/theglobalyouth_co/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/the-global-youth-coalition/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

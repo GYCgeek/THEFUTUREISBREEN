@@ -1,0 +1,2364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horizon Scanning | Global Youth Coalition</title>
+
+<!-- GYC Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<style>
+/* ═══════════════════════════════════════
+   LAYER 1 — GYC SHELL (header + footer)
+   ═══════════════════════════════════════ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7;
+  background: #fff;
+  color: #333;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* GYC Header — matches existing site */
+.main-header {
+  background: #fff;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+.main-header.collapsed {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+.gyc-close-btn {
+  background: none;
+  border: 1px solid #ddd;
+  color: #999;
+  font-size: 1.1rem;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  margin-left: 12px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.gyc-close-btn:hover { border-color: #00a09a; color: #00a09a; }
+
+/* Reopen button — shown when header is collapsed */
+.gyc-reopen-btn {
+  position: fixed;
+  top: 10px;
+  right: 16px;
+  z-index: 10001;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  background: rgba(255,255,255,0.95);
+  border: 1px solid #ddd;
+  color: #00a09a;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.25s;
+  display: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  letter-spacing: 0.03em;
+}
+.gyc-reopen-btn:hover {
+  background: #00a09a;
+  color: #fff;
+  border-color: #00a09a;
+}
+.gyc-reopen-btn.visible { display: block; }
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo a {
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #00a09a;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.main-nav ul li { margin-left: 20px; }
+.main-nav ul li a {
+  color: #333;
+  text-decoration: none;
+  padding-bottom: 5px;
+  transition: border-bottom 0.2s, color 0.2s;
+}
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+  color: #00a09a;
+  border-bottom: 2px solid #00a09a;
+}
+.nav-cta-button {
+  background: #00a09a;
+  color: #fff !important;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  letter-spacing: 0.5px;
+  transition: background 0.3s;
+}
+.nav-cta-button:hover {
+  background: #008782;
+  color: #fff !important;
+  text-decoration: none;
+  border-bottom: none !important;
+}
+.header-social a {
+  font-size: 1.35rem;
+  color: #0077B5;
+  margin-left: 20px;
+  transition: color .3s;
+}
+.header-social a:hover { color: #00a09a; }
+
+/* GYC Footer — matches existing site */
+.main-footer {
+  background: #333;
+  color: #ccc;
+  text-align: center;
+  padding: 40px 0;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-logos img {
+  height: 50px;
+  filter: brightness(0) invert(1) opacity(0.8);
+  margin-bottom: 15px;
+}
+.main-footer p {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  color: #aaa;
+}
+.social-icons { margin-top: 15px; }
+.social-icons a {
+  color: #ccc;
+  margin: 0 10px;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+.social-icons a:hover { color: #00a09a; }
+
+@media (max-width: 768px) {
+  .main-header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .main-nav { margin-top: 10px; }
+  .main-nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
+  .main-nav ul li { margin: 5px 10px; }
+}
+
+
+/* ═══════════════════════════════════════
+   LAYER 2 — HORIZON SCANNING ZONE
+   Everything below lives in the dark zone
+   ═══════════════════════════════════════ */
+:root {
+  --bg-void: #030508;
+  --bg-panel: #080c12;
+  --bg-panel-hover: #0c1119;
+  --bg-surface: #0a0f16;
+  --border-dim: #0f1a25;
+  --border-mid: #152233;
+  --border-bright: #1e3350;
+  --green-phosphor: #00ff88;
+  --green-dim: #00cc6a;
+  --green-glow: rgba(0,255,136,0.15);
+  --green-faint: rgba(0,255,136,0.04);
+  --cyan-bright: #00e5ff;
+  --cyan-dim: #0099aa;
+  --amber-bright: #ffb300;
+  --amber-dim: #cc8f00;
+  --red-bright: #ff3d5a;
+  --purple-bright: #b388ff;
+  --text-primary: #c8d6e5;
+  --text-secondary: #6b7d93;
+  --text-muted: #3a4d63;
+  --teal: #00a09a;
+  --font-display: 'Orbitron', monospace;
+  --font-body: 'Rajdhani', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+}
+
+.hz-zone {
+  background: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  position: relative;
+  min-height: 80vh;
+}
+
+/* Scanlines */
+.hz-zone::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,255,136,0.012) 2px, rgba(0,255,136,0.012) 4px);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Grid */
+.hz-zone::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 15%, rgba(0,255,136,0.03) 0%, transparent 50%),
+    radial-gradient(circle at 85% 85%, rgba(0,229,255,0.02) 0%, transparent 50%),
+    linear-gradient(rgba(0,255,136,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,136,0.018) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hz-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ── Transition edge: GYC → Sci-fi ── */
+.hz-transition-in {
+  height: 6px;
+  background: linear-gradient(180deg, #fff 0%, var(--bg-void) 100%);
+}
+.hz-transition-out {
+  height: 6px;
+  background: linear-gradient(180deg, var(--bg-void) 0%, #333 100%);
+}
+
+/* ══════════════════════════
+   HZ HEADER
+   ══════════════════════════ */
+.hz-header {
+  padding: 2rem 2rem 1.5rem;
+  border-bottom: 1px solid var(--border-dim);
+  position: relative;
+  overflow: hidden;
+}
+.hz-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 200px; height: 1px;
+  background: linear-gradient(90deg, var(--green-phosphor), transparent);
+  animation: headerScan 4s linear infinite;
+}
+@keyframes headerScan {
+  0% { transform: translateX(-200px); }
+  100% { transform: translateX(1400px); }
+}
+
+.hz-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hz-logo-block {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Radar */
+.radar-icon {
+  width: 42px; height: 42px;
+  position: relative;
+  flex-shrink: 0;
+}
+.radar-icon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--green-phosphor);
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.radar-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 50%; height: 2px;
+  background: var(--green-phosphor);
+  transform-origin: left center;
+  animation: radarSweep 3s linear infinite;
+  box-shadow: 0 0 8px var(--green-phosphor);
+}
+@keyframes radarSweep { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.radar-dot {
+  position: absolute;
+  width: 6px; height: 6px;
+  background: var(--green-phosphor);
+  border-radius: 50%;
+  top: 8px; right: 10px;
+  box-shadow: 0 0 6px var(--green-phosphor);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.6); }
+}
+
+.hz-logo-text { display: flex; flex-direction: column; }
+.hz-logo-main {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--green-phosphor);
+  text-shadow: 0 0 20px rgba(0,255,136,0.3);
+  line-height: 1.2;
+}
+.hz-logo-sub {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.hz-status-cluster {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.sys-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 5px 12px;
+  border-radius: 3px;
+}
+.sys-badge.online {
+  color: var(--green-phosphor);
+  background: var(--green-faint);
+  border: 1px solid rgba(0,255,136,0.15);
+}
+.sys-badge .dot {
+  width: 5px; height: 5px;
+  background: var(--green-phosphor);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--green-phosphor);
+  animation: pulse 2s ease-in-out infinite;
+}
+.hz-clock {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ══════════════════════════
+   TAB BAR (Signals / Submit / Admin)
+   ══════════════════════════ */
+.hz-tabs {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0 2rem;
+  border-bottom: 1px solid var(--border-dim);
+  margin-bottom: 0;
+}
+.hz-tab {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.5rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.hz-tab:hover { color: var(--text-secondary); }
+.hz-tab.active {
+  color: var(--green-phosphor);
+  border-bottom-color: var(--green-phosphor);
+}
+.hz-tab.admin-tab { margin-left: auto; color: var(--amber-dim); }
+.hz-tab.admin-tab.active { color: var(--amber-bright); border-bottom-color: var(--amber-bright); }
+
+/* Tab panels */
+.hz-panel { display: none; }
+.hz-panel.active { display: block; }
+
+/* ══════════════════════════
+   STATS GRID
+   ══════════════════════════ */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  margin: 1.5rem 2rem;
+  background: var(--border-dim);
+  border: 1px solid var(--border-dim);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.stat-cell {
+  background: var(--bg-panel);
+  padding: 1rem;
+  position: relative;
+  transition: background 0.2s;
+}
+.stat-cell:hover { background: var(--bg-panel-hover); }
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--green-phosphor);
+  text-shadow: 0 0 12px rgba(0,255,136,0.2);
+  font-variant-numeric: tabular-nums;
+}
+.stat-value.cyan { color: var(--cyan-bright); text-shadow: 0 0 12px rgba(0,229,255,0.2); }
+.stat-value.amber { color: var(--amber-bright); text-shadow: 0 0 12px rgba(255,179,0,0.2); }
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-top: 3px;
+}
+
+/* ══════════════════════════
+   FILTER CONTROLS
+   ══════════════════════════ */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.ctrl-btn {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 6px 14px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+.ctrl-btn:hover { border-color: var(--green-dim); color: var(--green-phosphor); }
+.ctrl-btn.active {
+  border-color: var(--green-phosphor);
+  color: var(--green-phosphor);
+  background: rgba(0,255,136,0.06);
+  box-shadow: 0 0 10px rgba(0,255,136,0.08);
+}
+.ctrl-select {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-primary);
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  border-radius: 2px;
+  padding: 5px 8px;
+  min-width: 160px;
+  max-width: 220px;
+  appearance: none;
+  outline: none;
+  transition: all 0.15s;
+}
+.ctrl-select:hover, .ctrl-select:focus {
+  border-color: var(--green-dim);
+  box-shadow: 0 0 8px rgba(0,255,136,0.12);
+}
+.ctrl-select[multiple] {
+  min-width: 350px;
+  max-width: 450px;
+  height: 160px;
+  background: var(--bg-panel);
+  color: var(--text-primary);
+}
+.filter-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-left: 0.8rem;
+}
+.search-wrap {
+  flex: 1; min-width: 200px; max-width: 340px;
+  margin-left: auto;
+  position: relative;
+}
+.search-wrap::before {
+  content: '>';
+  position: absolute; left: 12px; top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--green-dim);
+  opacity: 0.5;
+}
+.search-wrap input {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 8px 14px 8px 28px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  color: var(--text-primary);
+  outline: none;
+  border-radius: 2px;
+  transition: all 0.15s;
+  caret-color: var(--green-phosphor);
+}
+.search-wrap input::placeholder { color: var(--text-muted); }
+.search-wrap input:focus { border-color: var(--green-dim); box-shadow: 0 0 12px rgba(0,255,136,0.06); }
+.filter-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0 2rem 0.8rem;
+}
+.filter-hint {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+.hidden { display: none !important; }
+.sort-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin: 0 0.5rem 0 1rem;
+  white-space: nowrap;
+}
+.policy-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.8rem 2rem 0.25rem;
+}
+.policy-pill {
+  display: inline-flex;
+  background: rgba(0,255,136,0.1);
+  color: var(--green-phosphor);
+  border: 1px solid rgba(0,255,136,0.23);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+}
+.sort-status {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0.6rem 2rem 0;
+}
+
+/* ══════════════════════════
+   SIGNAL CARDS
+   ══════════════════════════ */
+.feed { padding: 0 2rem 3rem; }
+
+.date-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.75rem 0 0.75rem;
+}
+.date-divider-text {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--cyan-bright);
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 0 10px rgba(0,229,255,0.2);
+}
+.date-divider-line { flex: 1; height: 1px; background: linear-gradient(90deg, var(--border-mid), transparent); }
+.date-theme {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.signal {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  border-left: 3px solid var(--border-dim);
+  margin-bottom: 8px;
+  padding: 1.4rem 1.75rem;
+  border-radius: 2px;
+  transition: all 0.25s;
+  position: relative;
+  overflow: hidden;
+  animation: signalIn 0.4s ease-out both;
+}
+.signal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--green-faint), transparent 30%);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.signal:hover { border-color: var(--border-mid); background: var(--bg-panel-hover); transform: translateX(3px); }
+.signal:hover::before { opacity: 1; }
+.signal.conf-High { border-left-color: var(--green-phosphor); }
+.signal.conf-Medium { border-left-color: var(--amber-bright); }
+.signal.conf-Low { border-left-color: var(--red-bright); }
+
+@keyframes signalIn {
+  from { opacity: 0; transform: translateX(-12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.signal-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+  position: relative;
+  z-index: 1;
+}
+.signal-id {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--cyan-dim);
+  background: rgba(0,229,255,0.05);
+  border: 1px solid rgba(0,229,255,0.1);
+  padding: 4px 10px;
+  border-radius: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.signal-title {
+  flex: 1;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.45;
+}
+.signal-conf-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 4px 10px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.badge-High { color: var(--green-phosphor); background: rgba(0,255,136,0.08); border: 1px solid rgba(0,255,136,0.15); }
+.badge-Medium { color: var(--amber-bright); background: rgba(255,179,0,0.08); border: 1px solid rgba(255,179,0,0.15); }
+.badge-Low { color: var(--red-bright); background: rgba(255,61,90,0.08); border: 1px solid rgba(255,61,90,0.15); }
+
+.signal-body { position: relative; z-index: 1; }
+
+.signal-content-row { display: flex; gap: 1.25rem; align-items: flex-start; }
+.signal-img-wrap {
+  flex-shrink: 0;
+  width: 160px; height: 100px;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid var(--border-dim);
+  background: var(--bg-surface);
+}
+.signal-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.85) brightness(0.9);
+  transition: filter 0.3s, transform 0.3s;
+}
+.signal:hover .signal-img-wrap img { filter: saturate(1) brightness(1); transform: scale(1.03); }
+.signal-img-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono); font-size: 0.55rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--bg-surface), var(--bg-panel));
+}
+.signal-text-col { flex: 1; min-width: 0; }
+
+.signal-summary { font-size: 1rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 0.6rem; }
+
+.signal-why {
+  font-size: 0.95rem; line-height: 1.65; color: var(--text-secondary);
+  padding: 0.75rem 1rem;
+  background: rgba(0,229,255,0.02);
+  border-left: 2px solid var(--border-mid);
+  border-radius: 0 2px 2px 0;
+  margin-bottom: 0.75rem;
+}
+.signal-why em {
+  color: var(--cyan-dim); font-style: normal; font-size: 0.72rem;
+  font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em;
+  display: block; margin-bottom: 4px;
+}
+
+.signal-meta {
+  display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;
+  font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);
+}
+.signal-meta a { color: var(--cyan-dim); text-decoration: none; transition: color 0.15s; }
+.signal-meta a:hover { color: var(--cyan-bright); }
+
+.signal-status { display: inline-flex; align-items: center; gap: 4px; }
+.status-dot {
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--green-phosphor);
+  box-shadow: 0 0 4px var(--green-phosphor);
+}
+.status-dot.inactive { background: var(--text-muted); box-shadow: none; }
+
+.signal-update-note {
+  margin-top: 0.6rem;
+  font-family: var(--font-mono); font-size: 0.8rem; color: var(--amber-dim);
+  padding: 0.5rem 0.85rem;
+  background: rgba(255,179,0,0.03);
+  border-left: 2px solid rgba(255,179,0,0.2);
+  border-radius: 0 2px 2px 0;
+}
+
+.signal-country-row {
+  margin-top: 0.5rem;
+}
+.signal-country-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,229,255,0.35);
+  background: rgba(0,229,255,0.10);
+  color: #aef5ff;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.03em;
+}
+
+.signal-policy-row {
+  margin-top: 0.55rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.signal-policy-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+}
+
+/* ══════════════════════════
+   SUBMIT SIGNAL FORM
+   ══════════════════════════ */
+.submit-panel { padding: 2rem; }
+.submit-panel h2 {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--cyan-bright);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.submit-panel p.form-desc {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.hz-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 800px;
+}
+.hz-form .full-width { grid-column: 1 / -1; }
+
+.hz-field label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
+.hz-field input,
+.hz-field select,
+.hz-field textarea {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: 10px 12px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  color: var(--text-primary);
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.15s;
+  caret-color: var(--green-phosphor);
+}
+.hz-field input:focus,
+.hz-field select:focus,
+.hz-field textarea:focus {
+  border-color: var(--green-dim);
+}
+.hz-field textarea { resize: vertical; min-height: 80px; }
+.hz-field select { cursor: pointer; }
+.hz-field select option { background: var(--bg-panel); color: var(--text-primary); }
+
+.hz-submit-btn {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 32px;
+  background: rgba(0,255,136,0.08);
+  border: 1px solid var(--green-phosphor);
+  color: var(--green-phosphor);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 0.5rem;
+}
+.hz-submit-btn:hover {
+  background: rgba(0,255,136,0.15);
+  box-shadow: 0 0 15px rgba(0,255,136,0.12);
+}
+.hz-submit-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.submit-success {
+  padding: 1rem 1.25rem;
+  background: rgba(0,255,136,0.05);
+  border: 1px solid rgba(0,255,136,0.15);
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--green-phosphor);
+  margin-top: 1rem;
+  display: none;
+}
+
+/* ══════════════════════════
+   ADMIN REVIEW PANEL
+   ══════════════════════════ */
+.admin-panel { padding: 2rem; }
+
+.admin-login {
+  max-width: 360px;
+  margin: 3rem auto;
+  text-align: center;
+}
+.admin-login label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+.admin-login input {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 10px 14px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  color: var(--text-primary);
+  border-radius: 2px;
+  outline: none;
+  text-align: center;
+  caret-color: var(--amber-bright);
+  margin-bottom: 0.75rem;
+}
+.admin-login input:focus { border-color: var(--amber-dim); }
+.admin-login-btn {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 10px 28px;
+  background: rgba(255,179,0,0.06);
+  border: 1px solid var(--amber-bright);
+  color: var(--amber-bright);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.admin-login-btn:hover {
+  background: rgba(255,179,0,0.12);
+  box-shadow: 0 0 12px rgba(255,179,0,0.1);
+}
+.admin-error {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--red-bright);
+  margin-top: 0.75rem;
+  display: none;
+}
+
+.admin-queue { display: none; }
+.admin-queue h2 {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: var(--amber-bright);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.queue-empty {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 3rem;
+}
+
+.pending-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--amber-dim);
+  border-left: 3px solid var(--amber-bright);
+  padding: 1.25rem 1.5rem;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.pending-card .signal-title { color: var(--text-primary); }
+.pending-card .pending-meta {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin: 0.5rem 0;
+  line-height: 1.7;
+}
+.pending-card .pending-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.pending-card .approve-btn,
+.pending-card .reject-btn {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.approve-btn {
+  background: rgba(0,255,136,0.06);
+  border: 1px solid var(--green-phosphor);
+  color: var(--green-phosphor);
+}
+.approve-btn:hover { background: rgba(0,255,136,0.15); box-shadow: 0 0 10px rgba(0,255,136,0.1); }
+.reject-btn {
+  background: rgba(255,61,90,0.06);
+  border: 1px solid var(--red-bright);
+  color: var(--red-bright);
+}
+.reject-btn:hover { background: rgba(255,61,90,0.12); }
+
+/* ── Loading / Empty ── */
+.loading-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+.loader-ring {
+  width: 28px; height: 28px;
+  border: 2px solid var(--border-dim);
+  border-top-color: var(--green-phosphor);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+  margin: 0 auto 1rem;
+  box-shadow: 0 0 12px rgba(0,255,136,0.1);
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.empty-state { text-align: center; padding: 3rem 2rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); }
+.error-msg { color: var(--red-bright); font-family: var(--font-mono); font-size: 0.75rem; text-align: center; padding: 2rem; }
+
+/* ══════════════════════════
+   SIGNAL SIGNATURES (endorsements)
+   ══════════════════════════ */
+.signal-signatures {
+  margin-top: 0.75rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--border-dim);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.sig-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+}
+.sig-names {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.sig-chip {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--cyan-dim);
+  background: rgba(0,229,255,0.05);
+  border: 1px solid rgba(0,229,255,0.1);
+  padding: 2px 8px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.sig-form {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+.sig-form input {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  color: var(--text-primary);
+  border-radius: 2px;
+  outline: none;
+  width: 120px;
+  caret-color: var(--green-phosphor);
+  transition: border-color 0.15s;
+}
+.sig-form input:focus { border-color: var(--green-dim); }
+.sig-form input::placeholder { color: var(--text-muted); }
+.sig-form button {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  padding: 4px 10px;
+  background: rgba(0,255,136,0.06);
+  border: 1px solid rgba(0,255,136,0.2);
+  color: var(--green-phosphor);
+  border-radius: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.sig-form button:hover {
+  background: rgba(0,255,136,0.12);
+  box-shadow: 0 0 8px rgba(0,255,136,0.08);
+}
+
+/* ══════════════════════════
+   IN-REVIEW / COMMUNITY SIGNALS
+   ══════════════════════════ */
+.community-section {
+  padding: 0 2rem 2rem;
+}
+.community-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0 1rem;
+  cursor: pointer;
+}
+.community-header-text {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--amber-bright);
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 0 10px rgba(255,179,0,0.2);
+}
+.community-header-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,179,0,0.3), transparent);
+}
+.community-count {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--amber-dim);
+  background: rgba(255,179,0,0.06);
+  border: 1px solid rgba(255,179,0,0.15);
+  padding: 3px 10px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.community-toggle {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  transition: transform 0.2s;
+}
+.community-toggle.collapsed { transform: rotate(-90deg); }
+
+.community-feed { }
+.community-feed.hidden { display: none; }
+
+.signal.in-review {
+  border-left-color: var(--amber-bright);
+  opacity: 0.85;
+}
+.signal.in-review:hover { opacity: 1; }
+
+.review-badge {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--amber-bright);
+  background: rgba(255,179,0,0.08);
+  border: 1px solid rgba(255,179,0,0.2);
+  padding: 3px 10px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+.review-badge .review-pulse {
+  width: 5px; height: 5px;
+  background: var(--amber-bright);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+.submitted-by-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--purple-bright);
+  margin-left: 0.5rem;
+}
+
+/* ══════════════════════════
+   COMMENTS / SUGGESTIONS
+   ══════════════════════════ */
+.signal-comments-toggle {
+  margin-top: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.15s;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.signal-comments-toggle:hover { color: var(--text-secondary); }
+.signal-comments-toggle .cmt-count {
+  color: var(--cyan-dim);
+}
+
+.comments-drawer {
+  margin-top: 0.6rem;
+  padding: 0.75rem 0 0;
+  border-top: 1px solid var(--border-dim);
+  display: none;
+}
+.comments-drawer.open { display: block; }
+
+.cmt-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.cmt-item {
+  padding: 0.6rem 0.85rem;
+  background: rgba(0,229,255,0.02);
+  border-left: 2px solid var(--border-mid);
+  border-radius: 0 3px 3px 0;
+}
+.cmt-item-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 3px;
+}
+.cmt-author {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--cyan-dim);
+  font-weight: 500;
+}
+.cmt-time {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--text-muted);
+}
+.cmt-text {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.cmt-form {
+  display: flex;
+  gap: 0.4rem;
+  align-items: flex-end;
+}
+.cmt-form-fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.cmt-form input,
+.cmt-form textarea {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  color: var(--text-primary);
+  border-radius: 2px;
+  outline: none;
+  caret-color: var(--green-phosphor);
+  transition: border-color 0.15s;
+}
+.cmt-form input:focus,
+.cmt-form textarea:focus { border-color: var(--green-dim); }
+.cmt-form input::placeholder,
+.cmt-form textarea::placeholder { color: var(--text-muted); }
+.cmt-form textarea {
+  resize: vertical;
+  min-height: 42px;
+  max-height: 120px;
+}
+.cmt-submit-btn {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  padding: 8px 14px;
+  background: rgba(0,255,136,0.06);
+  border: 1px solid rgba(0,255,136,0.2);
+  color: var(--green-phosphor);
+  border-radius: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.15s;
+  white-space: nowrap;
+  align-self: flex-end;
+}
+.cmt-submit-btn:hover {
+  background: rgba(0,255,136,0.12);
+  box-shadow: 0 0 8px rgba(0,255,136,0.08);
+}
+.cmt-empty {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  padding: 0.5rem 0;
+}
+
+/* HZ Footer strip */
+.hz-footer {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  border-top: 1px solid var(--border-dim);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .hz-header, .stats-grid, .controls, .feed, .submit-panel, .admin-panel { padding-left: 1rem; padding-right: 1rem; }
+  .stats-grid { margin-left: 1rem; margin-right: 1rem; grid-template-columns: repeat(2, 1fr); }
+  .signal-header { flex-wrap: wrap; }
+  .signal-id { order: 3; }
+  .search-wrap { min-width: 100%; margin-left: 0; }
+  .hz-logo-main { font-size: 0.9rem; }
+  .signal-content-row { flex-direction: column; }
+  .signal-img-wrap { width: 100%; height: 140px; }
+  .hz-form { grid-template-columns: 1fr; }
+  .hz-tabs { padding: 0 1rem; overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- Reopen GYC nav button (hidden by default) -->
+<button class="gyc-reopen-btn" id="gycReopen" onclick="toggleGYCHeader(false)">GYC Nav ▼</button>
+
+<!-- ═══════════════════════════════════
+     GYC HEADER (matches existing site)
+     ═══════════════════════════════════ -->
+<header class="main-header" id="gycHeader">
+  <div class="container">
+    <div class="logo">
+      <a href="http://theglobalyouth.co/">Global Youth Coalition</a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="http://theglobalyouth.co/">Home</a></li>
+        <li><a href="http://theglobalyouth.co/about">About</a></li>
+        <li><a href="http://theglobalyouth.co/FfD4">FfD4</a></li>
+        <li><a href="http://theglobalyouth.co/contact">Contact</a></li>
+        <li><a href="https://theglobalyouth.co/thetrident">The Trident</a></li>
+        <li><a href="lobster-mission.html">Lobster Mission</a></li>
+        <li><a href="https://theglobalyouth.co/GYCT" class="nav-cta-button">GYCT</a></li>
+      </ul>
+    </nav>
+    <div class="header-social">
+      <a href="https://www.linkedin.com/company/the-global-youth-coalition/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+    <button class="gyc-close-btn" onclick="toggleGYCHeader(true)" title="Hide navigation">×</button>
+  </div>
+</header>
+
+<!-- Transition: white → dark -->
+<div class="hz-transition-in"></div>
+
+<!-- ═══════════════════════════════════
+     HORIZON SCANNING ZONE
+     ═══════════════════════════════════ -->
+<div class="hz-zone">
+<div class="hz-inner">
+
+  <!-- HZ Header -->
+  <header class="hz-header">
+    <div class="hz-header-row">
+      <div class="hz-logo-block">
+        <div class="radar-icon"><div class="radar-dot"></div></div>
+        <div class="hz-logo-text">
+          <div class="hz-logo-main">FORESIGHT</div>
+          <div class="hz-logo-sub">Horizon Scanning Network</div>
+        </div>
+      </div>
+      <div class="hz-status-cluster">
+        <div class="sys-badge online"><span class="dot"></span><span>System Online</span></div>
+        <div class="hz-clock" id="clockReadout"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Tab Bar -->
+  <div class="hz-tabs">
+    <button class="hz-tab active" onclick="switchTab('signals', this)">Signals</button>
+    <button class="hz-tab" onclick="switchTab('submit', this)">Submit Signal</button>
+    <button class="hz-tab admin-tab" onclick="switchTab('admin', this)">Review Queue</button>
+  </div>
+
+  <!-- ═══ TAB: SIGNALS ═══ -->
+  <div class="hz-panel active" id="panel-signals">
+    <div class="stats-grid">
+      <div class="stat-cell"><div class="stat-value" id="sTotal">--</div><div class="stat-label">Signals Tracked</div></div>
+      <div class="stat-cell"><div class="stat-value cyan" id="sActive">--</div><div class="stat-label">Active</div></div>
+      <div class="stat-cell"><div class="stat-value" id="sHigh">--</div><div class="stat-label">High Confidence</div></div>
+      <div class="stat-cell"><div class="stat-value amber" id="sMedium">--</div><div class="stat-label">Medium</div></div>
+      <div class="stat-cell"><div class="stat-value cyan" id="sSources">--</div><div class="stat-label">Unique Sources</div></div>
+      <div class="stat-cell"><div class="stat-value" id="sUpdated">--</div><div class="stat-label">Last Sync</div></div>
+    </div>
+    <div class="sort-status" id="sortStatus">Sort: Newest → Oldest</div>
+
+    <div class="filter-toggle-row">
+      <button class="ctrl-btn" id="filterToggleBtn" onclick="toggleFilterPanel()">Show Filters</button>
+      <span class="filter-hint">Expand to apply country/policy and confidence filters</span>
+    </div>
+
+    <div class="controls hidden" id="filtersPanel">
+      <button class="ctrl-btn filter-btn active" onclick="setFilter('all',this)">ALL</button>
+      <button class="ctrl-btn filter-btn" onclick="setFilter('High',this)">HIGH</button>
+      <button class="ctrl-btn filter-btn" onclick="setFilter('Medium',this)">MED</button>
+      <button class="ctrl-btn filter-btn" onclick="setFilter('Low',this)">LOW</button>
+      <button class="ctrl-btn filter-btn" onclick="setFilter('active',this)">ACTIVE</button>
+
+      <span class="sort-label">Sort by date (default newest first):</span>
+      <button class="ctrl-btn sort-btn active" onclick="setSort('desc', this)">Newest → Oldest</button>
+      <button class="ctrl-btn sort-btn" onclick="setSort('asc', this)">Oldest → Newest</button>
+
+      <label class="filter-label" for="countryFilter">Country:</label>
+      <select id="countryFilter" class="ctrl-select" onchange="setCountryFilter(this.value)">
+        <option value="all">All</option>
+        <option value="US">US</option>
+        <option value="UK">UK</option>
+        <option value="EU">EU</option>
+        <option value="CA">CA</option>
+        <option value="International">International</option>
+      </select>
+
+      <label class="filter-label" for="policyFilter">Policy areas:</label>
+      <select id="policyFilter" class="ctrl-select" multiple size="6" onchange="setPolicyFilter(Array.from(this.selectedOptions).map(o=>o.value))">
+        <option value="Culture/Heritage">Culture/Heritage</option>
+        <option value="Education">Education</option>
+        <option value="Environment and Sustainable Development">Environment and Sustainable Development</option>
+        <option value="Health">Health</option>
+        <option value="Human Rights">Human Rights</option>
+        <option value="Monitoring, Audit, Evaluation of policies (+ impact Assessment)">Monitoring, Audit, Evaluation of policies (+ impact Assessment)</option>
+        <option value="Nuclear">Nuclear</option>
+        <option value="Outer space">Outer space</option>
+        <option value="Peace and Security">Peace and Security</option>
+        <option value="Planning, Futures and Foresight">Planning, Futures and Foresight</option>
+        <option value="Public Finance (Budget, Fiscality)">Public Finance (Budget, Fiscality)</option>
+      </select>
+
+      <div class="search-wrap">
+        <input type="text" id="searchInput" placeholder="search signals..." oninput="debounceSearch()">
+      </div>
+    </div>
+
+    <div class="policy-pill-row" id="policyPills"></div>
+    <button class="ctrl-btn" id="clearPolicyBtn" style="display:none;" onclick="clearPolicySelection()">Clear policy selection</button>
+
+    <div class="feed" id="signalFeed">
+      <div class="loading-state"><div class="loader-ring"></div>Scanning the horizon...</div>
+    </div>
+
+    <!-- Community submitted signals (in review) -->
+    <div class="community-section" id="communitySection" style="display:none;">
+      <div class="community-header" onclick="toggleCommunity()">
+        <span class="community-header-text">Community Submitted — In Review</span>
+        <span class="community-header-line"></span>
+        <span class="community-count" id="communityCount">0 pending</span>
+        <span class="community-toggle" id="communityArrow">▼</span>
+      </div>
+      <div class="community-feed" id="communityFeed"></div>
+    </div>
+  </div>
+
+  <!-- ═══ TAB: SUBMIT SIGNAL ═══ -->
+  <div class="hz-panel" id="panel-submit">
+    <div class="submit-panel">
+      <h2>Submit a Signal</h2>
+      <p class="form-desc">Spotted something relevant to intergenerational equity? Submit it here for the research team to review. Approved signals will appear on the public feed.</p>
+
+      <div class="hz-form" id="submitForm">
+        <div class="hz-field full-width">
+          <label>Signal Title *</label>
+          <input type="text" id="f-title" placeholder="e.g. UK Wellbeing of Future Generations Bill progressing">
+        </div>
+        <div class="hz-field">
+          <label>Source URL</label>
+          <input type="url" id="f-source-url" placeholder="https://...">
+        </div>
+        <div class="hz-field">
+          <label>Source Name</label>
+          <input type="text" id="f-source-name" placeholder="e.g. UK Parliament">
+        </div>
+        <div class="hz-field">
+          <label>Topic / Theme</label>
+          <input type="text" id="f-topic" placeholder="e.g. Future generations legislation">
+        </div>
+        <div class="hz-field">
+          <label>Confidence</label>
+          <select id="f-confidence">
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            <option value="Low">Low</option>
+          </select>
+        </div>
+        <div class="hz-field full-width">
+          <label>Summary *</label>
+          <textarea id="f-summary" placeholder="Brief description of the signal (2-3 sentences)"></textarea>
+        </div>
+        <div class="hz-field full-width">
+          <label>Why it matters</label>
+          <textarea id="f-why" placeholder="Strategic significance for intergenerational equity"></textarea>
+        </div>
+        <div class="hz-field full-width">
+          <label>Submitted by</label>
+          <input type="text" id="f-author" placeholder="Your name (optional)">
+        </div>
+        <div class="hz-field full-width">
+          <button class="hz-submit-btn" onclick="submitSignal()">Submit for Review</button>
+        </div>
+      </div>
+      <div class="submit-success" id="submitSuccess">
+        ✓ Signal submitted for review. The research team will evaluate it before publishing.
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ TAB: ADMIN REVIEW ═══ -->
+  <div class="hz-panel" id="panel-admin">
+    <div class="admin-panel">
+      <!-- Login gate -->
+      <div class="admin-login" id="adminLogin">
+        <label>Admin Token</label>
+        <input type="password" id="adminPass" placeholder="Enter admin token" onkeydown="if(event.key==='Enter')adminAuth()">
+        <br>
+        <button class="admin-login-btn" onclick="adminAuth()">Authenticate</button>
+        <div class="admin-error" id="adminError">Invalid or missing token</div>
+      </div>
+
+      <!-- Queue (hidden until auth) -->
+      <div class="admin-queue" id="adminQueue">
+        <h2>Pending Review Queue</h2>
+        <div id="queueList">
+          <div class="queue-empty">No pending signals.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hz-footer">
+    FORESIGHT // Horizon Scanning // Intergenerational Equity Research
+  </div>
+
+</div>
+</div>
+
+<!-- Transition: dark → footer grey -->
+<div class="hz-transition-out"></div>
+
+<!-- ═══════════════════════════════════
+     GYC FOOTER (matches existing site)
+     ═══════════════════════════════════ -->
+<footer class="main-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logos">
+        <img src="https://theglobalyouth.co/assets/images/global_logo1.png" alt="Global Youth Coalition Logo">
+      </div>
+      <p>&copy; 2026 Global Youth Coalition. All Rights Reserved.</p>
+      <div class="social-icons">
+        <a href="https://twitter.com/theglobalyouthc" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/theglobalyouth_co/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/the-global-youth-coalition/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ════════════════════════════════════════════
+// CONFIG
+// ════════════════════════════════════════════
+const DATA_SOURCE = './data/signals-db.json';
+const PENDING_SOURCE = './data/signals-pending.json';
+const SUBMIT_ENDPOINT = './data/submit_signal.php';
+const APPROVE_ENDPOINT = './data/approve_signal.php';
+const REJECT_ENDPOINT = './data/reject_signal.php';
+const SIGN_ENDPOINT = './data/sign_signal.php';
+const COMMENT_ENDPOINT = './data/comment_signal.php';
+
+// Admin token is entered by the operator at login and held only in this
+// browser session — it is NEVER hardcoded here. The server (_auth.php)
+// is the real gate: approve/reject reject any request without a valid token.
+let adminToken = sessionStorage.getItem('gyc_admin_token') || '';
+
+const REFRESH_MS = 120000;
+
+// ════════════════════════════════════════════
+// STATE
+// ════════════════════════════════════════════
+let allSignals = [];
+let pendingSignals = [];
+let signatureData = {}; // { signalId: ['name1', 'name2'] }
+let commentsData = {}; // { signalId: [{author, text, time}] }
+let dbMeta = {};
+let currentFilter = 'all';
+let currentCountry = 'all';
+let currentPolicyAreas = [];
+let currentSort = 'desc'; // desc = newest first, asc = oldest first
+let searchTimeout = null;
+let isAdmin = false;
+let communityOpen = true;
+
+// ════════════════════════════════════════════
+// CLOCK
+// ════════════════════════════════════════════
+function tickClock() {
+  const now = new Date();
+  document.getElementById('clockReadout').textContent =
+    now.toISOString().replace('T', ' // ').substring(0, 22) + ' UTC';
+}
+tickClock();
+setInterval(tickClock, 1000);
+
+// ════════════════════════════════════════════
+// TAB SWITCHING
+// ════════════════════════════════════════════
+function switchTab(name, btn) {
+  document.querySelectorAll('.hz-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.hz-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('panel-' + name).classList.add('active');
+
+  if (name === 'admin' && isAdmin) loadPendingQueue();
+}
+
+// ════════════════════════════════════════════
+// LOAD SIGNALS
+// ════════════════════════════════════════════
+async function loadData() {
+  try {
+    const res = await fetch(DATA_SOURCE + '?t=' + Date.now());
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const db = await res.json();
+    dbMeta = { updated_at: db.updated_at, notes: db.notes };
+    allSignals = db.signals.value || db.signals || [];
+    renderStats();
+    renderFeed();
+  } catch (err) {
+    console.error('Load failed:', err);
+    document.getElementById('signalFeed').innerHTML =
+      `<div class="error-msg">⚠ HORIZON SCAN FAILED: ${esc(err.message)}</div>`;
+  }
+
+  // Load pending community signals
+  try {
+    const pRes = await fetch(PENDING_SOURCE + '?t=' + Date.now());
+    if (pRes.ok) {
+      const pData = await pRes.json();
+      pendingSignals = pData.pending || [];
+      renderCommunitySignals();
+    }
+  } catch (e) { /* pending file may not exist yet */ }
+
+  // Load signatures
+  try {
+    const sRes = await fetch('./data/signatures.json?t=' + Date.now());
+    if (sRes.ok) {
+      signatureData = await sRes.json();
+      renderFeed();
+      renderCommunitySignals();
+    }
+  } catch (e) { /* signatures file may not exist yet */ }
+
+  // Load comments
+  try {
+    const cRes = await fetch('./data/comments.json?t=' + Date.now());
+    if (cRes.ok) {
+      commentsData = await cRes.json();
+      renderFeed();
+      renderCommunitySignals();
+    }
+  } catch (e) { /* comments file may not exist yet */ }
+}
+
+// ════════════════════════════════════════════
+// STATS
+// ════════════════════════════════════════════
+function renderStats() {
+  const s = allSignals;
+  animateCounter('sTotal', s.length);
+  animateCounter('sActive', s.filter(x => x.status === 'active').length);
+  animateCounter('sHigh', s.filter(x => x.confidence === 'High').length);
+  animateCounter('sMedium', s.filter(x => x.confidence === 'Medium').length);
+  animateCounter('sSources', new Set(s.map(x => x.source_name).filter(Boolean)).size);
+  document.getElementById('sUpdated').textContent = dbMeta.updated_at || '—';
+}
+
+function animateCounter(id, target) {
+  const el = document.getElementById(id);
+  const start = parseInt(el.textContent) || 0;
+  if (start === target) { el.textContent = target; return; }
+  const steps = 12, inc = (target - start) / steps;
+  let step = 0;
+  const t = setInterval(() => {
+    step++;
+    el.textContent = step === steps ? target : Math.round(start + inc * step);
+    if (step >= steps) clearInterval(t);
+  }, 30);
+}
+
+// ════════════════════════════════════════════
+// FILTERS + RENDER
+// ════════════════════════════════════════════
+function getFiltered() {
+  let list = [...allSignals];
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  if (currentFilter === 'active') list = list.filter(s => s.status === 'active');
+  else if (currentFilter !== 'all') list = list.filter(s => s.confidence === currentFilter);
+
+  if (currentCountry !== 'all') {
+    list = list.filter(s => String(s.country || '').toLowerCase() === currentCountry.toLowerCase());
+  }
+
+  if (currentPolicyAreas.length > 0) {
+    list = list.filter(s => {
+      const areaList = (Array.isArray(s.policy_areas)
+        ? s.policy_areas
+        : (typeof s.policy_areas === 'string' ? s.policy_areas.split(',') : []))
+        .map(a => a.trim().toLowerCase())
+        .filter(Boolean);
+      return currentPolicyAreas.some(pa => areaList.includes(pa.toLowerCase()));
+    });
+  }
+
+  if (q) list = list.filter(s =>
+    [s.title, s.topic, s.summary, s.why_it_matters, s.source_name]
+      .some(f => (f || '').toLowerCase().includes(q))
+  );
+
+  const dateScore = (s) => {
+    const d = s.last_posted_date || s.last_seen_date || s.first_seen_date || '';
+    const t = Date.parse(d);
+    return Number.isNaN(t) ? 0 : t;
+  };
+
+  list.sort((a, b) => {
+    const diff = dateScore(b) - dateScore(a);
+    if (diff !== 0) return currentSort === 'desc' ? diff : -diff;
+    // stable fallback by id/title to avoid random jumps
+    const ak = (a.id || a.title || '').toString();
+    const bk = (b.id || b.title || '').toString();
+    return ak.localeCompare(bk);
+  });
+
+  return list;
+}
+
+function setSort(order, btn) {
+  currentSort = order;
+  document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderSortStatus();
+  renderFeed();
+}
+
+function renderSortStatus() {
+  const statusEl = document.getElementById('sortStatus');
+  if (!statusEl) return;
+  statusEl.textContent = `Sort: ${currentSort === 'desc' ? 'Newest → Oldest' : 'Oldest → Newest'}`;
+}
+
+function setFilter(f, btn) {
+  currentFilter = f;
+  document.querySelectorAll('.ctrl-btn.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderFeed();
+}
+
+function setCountryFilter(country) {
+  currentCountry = country;
+  renderFeed();
+}
+
+function setPolicyFilter(areas) {
+  currentPolicyAreas = areas;
+  renderPolicyPills();
+  renderFeed();
+}
+
+function clearPolicySelection() {
+  currentPolicyAreas = [];
+  const policySelect = document.getElementById('policyFilter');
+  if (policySelect) Array.from(policySelect.options).forEach(o => o.selected = false);
+  renderPolicyPills();
+  renderFeed();
+}
+
+function toggleFilterPanel() {
+  const panel = document.getElementById('filtersPanel');
+  const btn = document.getElementById('filterToggleBtn');
+  if (!panel || !btn) return;
+  const isHidden = panel.classList.contains('hidden');
+  panel.classList.toggle('hidden');
+  btn.textContent = isHidden ? 'Hide Filters' : 'Show Filters';
+}
+
+function renderPolicyPills() {
+  const pillContainer = document.getElementById('policyPills');
+  const clearBtn = document.getElementById('clearPolicyBtn');
+  if (!pillContainer || !clearBtn) return;
+
+  if (currentPolicyAreas.length === 0) {
+    pillContainer.innerHTML = '';
+    clearBtn.style.display = 'none';
+    return;
+  }
+
+  pillContainer.innerHTML = currentPolicyAreas.map(area =>
+    `<span class="policy-pill">${esc(area)}</span>`
+  ).join('');
+
+  clearBtn.style.display = 'inline-block';
+}
+
+function debounceSearch() {
+  clearTimeout(searchTimeout);
+  searchTimeout = setTimeout(renderFeed, 200);
+}
+
+function renderFeed() {
+  renderSortStatus();
+  renderPolicyPills();
+  const feed = document.getElementById('signalFeed');
+  const signals = getFiltered();
+  if (!signals.length) { feed.innerHTML = '<div class="empty-state">No signals match current filter parameters.</div>'; return; }
+
+  const groups = {};
+  signals.forEach(s => { const d = s.last_seen_date || s.first_seen_date || 'Unknown'; (groups[d] = groups[d] || []).push(s); });
+
+  let html = '', ci = 0;
+  Object.entries(groups).forEach(([date, sigs]) => {
+    html += `<div class="date-divider"><span class="date-divider-text">${fmtDate(date)}</span><span class="date-divider-line"></span><span class="date-theme">${sigs.length} signal${sigs.length>1?'s':''}</span></div>`;
+    sigs.forEach(s => {
+      const dl = Math.min(ci * 0.04, 0.6), conf = s.confidence || 'Medium', dom = extractDomain(s.source_url);
+      const sigId = s.id || ('signal-' + ci);
+      const sigs_list = signatureData[sigId] || [];
+      html += `
+      <div class="signal conf-${conf}" style="animation-delay:${dl}s">
+        <div class="signal-header">
+          <span class="signal-id">${esc(s.id||'—')}</span>
+          <span class="signal-title">${esc(s.title)}</span>
+          <span class="signal-conf-badge badge-${conf}">${conf}</span>
+        </div>
+        <div class="signal-body">
+          <div class="signal-content-row">
+            ${s.image_url ? `<div class="signal-img-wrap"><img src="${esc(s.image_url)}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<div class=signal-img-placeholder>No Image</div>'"></div>` : ''}
+            <div class="signal-text-col">
+              ${s.summary ? `<div class="signal-summary">${esc(s.summary)}</div>` : ''}
+              ${s.why_it_matters ? `<div class="signal-why"><em>Why it matters</em>${esc(s.why_it_matters)}</div>` : ''}
+            </div>
+          </div>
+          <div class="signal-meta">
+            <span class="signal-status"><span class="status-dot ${s.status==='active'?'':'inactive'}"></span>${esc(s.status||'unknown')}</span>
+            ${s.source_name ? `<span>src: ${esc(s.source_name)}</span>` : ''}
+            ${s.source_url ? `<span><a href="${esc(s.source_url)}" target="_blank" rel="noopener">${dom} ↗</a></span>` : ''}
+            ${s.first_seen_date ? `<span>first: ${s.first_seen_date}</span>` : ''}
+            ${s.last_posted_date ? `<span>posted: ${s.last_posted_date}</span>` : ''}
+          </div>
+          ${renderCountryChip(s.country)}
+          ${renderPolicyChips(s.policy_areas)}
+          ${s.update_note ? `<div class="signal-update-note">▸ UPDATE: ${esc(s.update_note)}</div>` : ''}
+          ${renderSignatures(sigId, sigs_list)}
+          ${renderComments(sigId)}
+        </div>
+      </div>`;
+      ci++;
+    });
+  });
+  feed.innerHTML = html;
+}
+
+// ════════════════════════════════════════════
+// SIGNATURES
+// ════════════════════════════════════════════
+function renderSignatures(signalId, names) {
+  const chips = names.map(n => `<span class="sig-chip">${esc(n)}</span>`).join('');
+  return `
+  <div class="signal-signatures">
+    <span class="sig-label">Signed by${names.length ? ` (${names.length})` : ''}:</span>
+    <span class="sig-names">${chips || '<span style="color:var(--text-muted);font-family:var(--font-mono);font-size:0.65rem;">No signatures yet</span>'}</span>
+    <span class="sig-form">
+      <input type="text" placeholder="Your name / alias" id="sig-input-${esc(signalId)}" onkeydown="if(event.key==='Enter')signSignal('${esc(signalId)}')">
+      <button onclick="signSignal('${esc(signalId)}')">Sign</button>
+    </span>
+  </div>`;
+}
+
+async function signSignal(signalId) {
+  const input = document.getElementById('sig-input-' + signalId);
+  if (!input) return;
+  const name = input.value.trim();
+  if (!name) { input.focus(); return; }
+  if (name.length > 40) { alert('Name too long (max 40 chars)'); return; }
+
+  // Optimistic update
+  if (!signatureData[signalId]) signatureData[signalId] = [];
+  if (signatureData[signalId].includes(name)) { input.value = ''; return; } // already signed
+  signatureData[signalId].push(name);
+  input.value = '';
+  renderFeed();
+  renderCommunitySignals();
+
+  // Persist to server
+  try {
+    await fetch(SIGN_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ signal_id: signalId, name: name }),
+    });
+  } catch (err) {
+    console.error('Sign failed:', err);
+  }
+}
+
+// ════════════════════════════════════════════
+// COMMUNITY (IN-REVIEW) SIGNALS
+// ════════════════════════════════════════════
+function renderCommunitySignals() {
+  const section = document.getElementById('communitySection');
+  const feed = document.getElementById('communityFeed');
+  const countEl = document.getElementById('communityCount');
+
+  if (!pendingSignals.length) {
+    section.style.display = 'none';
+    return;
+  }
+
+  section.style.display = 'block';
+  countEl.textContent = pendingSignals.length + ' pending';
+
+  let html = '';
+  pendingSignals.forEach((s, i) => {
+    const sigId = 'pending-' + i;
+    const sigs_list = signatureData[sigId] || [];
+    html += `
+    <div class="signal in-review" style="animation-delay:${i * 0.05}s">
+      <div class="signal-header">
+        <span class="review-badge"><span class="review-pulse"></span> In Review</span>
+        <span class="signal-title">${esc(s.title)}</span>
+        ${s.submitted_by ? `<span class="submitted-by-tag">by ${esc(s.submitted_by)}</span>` : ''}
+      </div>
+      <div class="signal-body">
+        ${s.summary ? `<div class="signal-summary">${esc(s.summary)}</div>` : ''}
+        ${s.why_it_matters ? `<div class="signal-why"><em>Why it matters</em>${esc(s.why_it_matters)}</div>` : ''}
+        <div class="signal-meta">
+          ${s.topic ? `<span>topic: ${esc(s.topic)}</span>` : ''}
+          ${s.source_name ? `<span>src: ${esc(s.source_name)}</span>` : ''}
+          ${s.source_url ? `<span><a href="${esc(s.source_url)}" target="_blank" rel="noopener">${extractDomain(s.source_url)} ↗</a></span>` : ''}
+          ${s.confidence ? `<span>conf: ${esc(s.confidence)}</span>` : ''}
+          ${s.submitted_at ? `<span>submitted: ${esc(s.submitted_at.substring(0,10))}</span>` : ''}
+        </div>
+        ${renderSignatures(sigId, sigs_list)}
+        ${renderComments(sigId)}
+      </div>
+    </div>`;
+  });
+  feed.innerHTML = html;
+}
+
+function toggleCommunity() {
+  communityOpen = !communityOpen;
+  document.getElementById('communityFeed').classList.toggle('hidden', !communityOpen);
+  document.getElementById('communityArrow').classList.toggle('collapsed', !communityOpen);
+}
+
+// ════════════════════════════════════════════
+// SUBMIT SIGNAL
+// ════════════════════════════════════════════
+async function submitSignal() {
+  const title = document.getElementById('f-title').value.trim();
+  const summary = document.getElementById('f-summary').value.trim();
+  if (!title || !summary) { alert('Title and Summary are required.'); return; }
+
+  const signal = {
+    title,
+    summary,
+    source_url: document.getElementById('f-source-url').value.trim(),
+    source_name: document.getElementById('f-source-name').value.trim(),
+    topic: document.getElementById('f-topic').value.trim(),
+    confidence: document.getElementById('f-confidence').value,
+    why_it_matters: document.getElementById('f-why').value.trim(),
+    submitted_by: document.getElementById('f-author').value.trim(),
+    submitted_at: new Date().toISOString(),
+  };
+
+  try {
+    const res = await fetch(SUBMIT_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(signal),
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    // Clear form
+    ['f-title','f-source-url','f-source-name','f-topic','f-summary','f-why','f-author']
+      .forEach(id => document.getElementById(id).value = '');
+    document.getElementById('submitSuccess').style.display = 'block';
+    setTimeout(() => document.getElementById('submitSuccess').style.display = 'none', 5000);
+  } catch (err) {
+    alert('Submission failed: ' + err.message + '\n\nIs submit_signal.php uploaded?');
+  }
+}
+
+// ════════════════════════════════════════════
+// ADMIN AUTH + REVIEW QUEUE
+// ════════════════════════════════════════════
+function adminAuth() {
+  const pass = document.getElementById('adminPass').value.trim();
+  if (!pass) {
+    document.getElementById('adminError').style.display = 'block';
+    setTimeout(() => document.getElementById('adminError').style.display = 'none', 2000);
+    return;
+  }
+  // Hold the token for this session only; the server validates it on
+  // approve/reject. A wrong token surfaces as a 401 there, not here.
+  adminToken = pass;
+  sessionStorage.setItem('gyc_admin_token', adminToken);
+  isAdmin = true;
+  document.getElementById('adminLogin').style.display = 'none';
+  document.getElementById('adminQueue').style.display = 'block';
+  document.getElementById('adminError').style.display = 'none';
+  loadPendingQueue();
+}
+
+async function loadPendingQueue() {
+  const list = document.getElementById('queueList');
+  try {
+    const res = await fetch(PENDING_SOURCE + '?t=' + Date.now());
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    const pending = data.pending || [];
+
+    if (!pending.length) {
+      list.innerHTML = '<div class="queue-empty">No pending signals. All clear.</div>';
+      return;
+    }
+
+    list.innerHTML = pending.map((s, i) => `
+      <div class="pending-card" id="pending-${i}">
+        <div class="signal-title">${esc(s.title)}</div>
+        <div class="pending-meta">
+          ${s.topic ? `<strong>Topic:</strong> ${esc(s.topic)}<br>` : ''}
+          <strong>Summary:</strong> ${esc(s.summary)}<br>
+          ${s.why_it_matters ? `<strong>Why it matters:</strong> ${esc(s.why_it_matters)}<br>` : ''}
+          ${s.source_url ? `<strong>Source:</strong> <a href="${esc(s.source_url)}" target="_blank" style="color:var(--cyan-dim)">${esc(s.source_name || s.source_url)}</a><br>` : ''}
+          <strong>Confidence:</strong> ${esc(s.confidence)}<br>
+          ${s.submitted_by ? `<strong>Submitted by:</strong> ${esc(s.submitted_by)}<br>` : ''}
+          <strong>Submitted:</strong> ${esc(s.submitted_at || '—')}
+        </div>
+        <div class="pending-actions">
+          <button class="approve-btn" onclick="reviewAction(${i}, 'approve')">✓ Approve</button>
+          <button class="reject-btn" onclick="reviewAction(${i}, 'reject')">✕ Reject</button>
+        </div>
+      </div>
+    `).join('');
+  } catch (err) {
+    list.innerHTML = `<div class="queue-empty">Could not load pending queue: ${esc(err.message)}</div>`;
+  }
+}
+
+async function reviewAction(index, action) {
+  const endpoint = action === 'approve' ? APPROVE_ENDPOINT : REJECT_ENDPOINT;
+  try {
+    const res = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Admin-Token': adminToken,
+      },
+      body: JSON.stringify({ index }),
+    });
+    if (res.status === 401) {
+      // Token was wrong / expired — drop it and send the operator back to login.
+      sessionStorage.removeItem('gyc_admin_token');
+      adminToken = '';
+      isAdmin = false;
+      document.getElementById('adminQueue').style.display = 'none';
+      document.getElementById('adminLogin').style.display = 'block';
+      document.getElementById('adminError').style.display = 'block';
+      return;
+    }
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    // Visual feedback
+    const card = document.getElementById('pending-' + index);
+    if (card) {
+      card.style.opacity = '0.3';
+      card.style.pointerEvents = 'none';
+    }
+
+    // Reload queue and signals
+    setTimeout(() => { loadPendingQueue(); loadData(); }, 500);
+  } catch (err) {
+    alert('Action failed: ' + err.message);
+  }
+}
+
+// ════════════════════════════════════════════
+// GYC HEADER TOGGLE
+// ════════════════════════════════════════════
+function toggleGYCHeader(collapse) {
+  const header = document.getElementById('gycHeader');
+  const reopen = document.getElementById('gycReopen');
+  const transition = document.querySelector('.hz-transition-in');
+  if (collapse) {
+    header.classList.add('collapsed');
+    reopen.classList.add('visible');
+    if (transition) transition.style.display = 'none';
+  } else {
+    header.classList.remove('collapsed');
+    reopen.classList.remove('visible');
+    if (transition) transition.style.display = '';
+  }
+}
+
+// ════════════════════════════════════════════
+// COMMENTS / SUGGESTIONS
+// ════════════════════════════════════════════
+function renderComments(signalId) {
+  const cmts = commentsData[signalId] || [];
+  const count = cmts.length;
+  return `
+  <button class="signal-comments-toggle" onclick="toggleComments('${esc(signalId)}')">
+    💬 <span class="cmt-count">${count}</span> comment${count !== 1 ? 's' : ''} / suggestions — click to ${count ? 'view' : 'add'}
+  </button>
+  <div class="comments-drawer" id="cmt-drawer-${esc(signalId)}">
+    <div class="cmt-list" id="cmt-list-${esc(signalId)}">
+      ${count ? cmts.map(c => `
+        <div class="cmt-item">
+          <div class="cmt-item-header">
+            <span class="cmt-author">${esc(c.author || 'Anonymous')}</span>
+            <span class="cmt-time">${c.time ? esc(c.time.substring(0, 10)) : ''}</span>
+          </div>
+          <div class="cmt-text">${esc(c.text)}</div>
+        </div>`).join('') : '<div class="cmt-empty">No comments yet. Be the first to share your thoughts.</div>'}
+    </div>
+    <div class="cmt-form">
+      <div class="cmt-form-fields">
+        <input type="text" placeholder="Your name / alias" id="cmt-author-${esc(signalId)}">
+        <textarea placeholder="Your comment or suggestion..." id="cmt-text-${esc(signalId)}" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postComment('${esc(signalId)}')}"></textarea>
+      </div>
+      <button class="cmt-submit-btn" onclick="postComment('${esc(signalId)}')">Post</button>
+    </div>
+  </div>`;
+}
+
+function toggleComments(signalId) {
+  const drawer = document.getElementById('cmt-drawer-' + signalId);
+  if (drawer) drawer.classList.toggle('open');
+}
+
+async function postComment(signalId) {
+  const authorInput = document.getElementById('cmt-author-' + signalId);
+  const textInput = document.getElementById('cmt-text-' + signalId);
+  if (!textInput) return;
+
+  const text = textInput.value.trim();
+  if (!text) { textInput.focus(); return; }
+  if (text.length > 500) { alert('Comment too long (max 500 chars)'); return; }
+
+  const author = (authorInput ? authorInput.value.trim() : '') || 'Anonymous';
+  const comment = { author: author.substring(0, 40), text, time: new Date().toISOString() };
+
+  // Optimistic update
+  if (!commentsData[signalId]) commentsData[signalId] = [];
+  commentsData[signalId].push(comment);
+  textInput.value = '';
+  renderFeed();
+  renderCommunitySignals();
+
+  // Re-open the drawer after re-render
+  setTimeout(() => {
+    const drawer = document.getElementById('cmt-drawer-' + signalId);
+    if (drawer) drawer.classList.add('open');
+  }, 50);
+
+  // Persist to server
+  try {
+    await fetch(COMMENT_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ signal_id: signalId, author: comment.author, text: comment.text }),
+    });
+  } catch (err) {
+    console.error('Comment post failed:', err);
+  }
+}
+
+// ════════════════════════════════════════════
+// HELPERS
+// ════════════════════════════════════════════
+function renderCountryChip(country) {
+  if (!country) return '';
+  return `<div class="signal-country-row"><span class="signal-country-chip">🌍 ${esc(country)}</span></div>`;
+}
+
+function renderPolicyChips(policyAreas) {
+  const list = Array.isArray(policyAreas)
+    ? policyAreas
+    : (typeof policyAreas === 'string' ? policyAreas.split(',').map(s => s.trim()).filter(Boolean) : []);
+
+  if (!list.length) return '';
+
+  const chips = list.map(area => {
+    const c = policyColor(area);
+    return `<span class="signal-policy-chip" style="background:${c.bg};border-color:${c.border};color:${c.fg}">${esc(area)}</span>`;
+  }).join('');
+
+  return `<div class="signal-policy-row">${chips}</div>`;
+}
+
+function policyColor(area) {
+  const key = (area || '').toLowerCase();
+  const map = {
+    'environment and sustainable development': { bg: 'rgba(0,255,136,0.10)', border: 'rgba(0,255,136,0.35)', fg: '#7dffbf' },
+    'human rights': { bg: 'rgba(179,136,255,0.12)', border: 'rgba(179,136,255,0.35)', fg: '#d4b8ff' },
+    'education': { bg: 'rgba(0,229,255,0.10)', border: 'rgba(0,229,255,0.35)', fg: '#9ff3ff' },
+    'peace and security': { bg: 'rgba(255,179,0,0.12)', border: 'rgba(255,179,0,0.35)', fg: '#ffd27a' },
+    'public finance (budget, fiscality)': { bg: 'rgba(255,61,90,0.10)', border: 'rgba(255,61,90,0.35)', fg: '#ff9aae' },
+    'planning, futures and foresight': { bg: 'rgba(0,160,154,0.12)', border: 'rgba(0,160,154,0.35)', fg: '#8ff3ef' },
+    'monitoring, audit, evaluation of policies (+ impact assessment)': { bg: 'rgba(107,125,147,0.18)', border: 'rgba(107,125,147,0.45)', fg: '#d2dfed' },
+    'culture/heritage': { bg: 'rgba(255,140,0,0.12)', border: 'rgba(255,140,0,0.35)', fg: '#ffd2a0' },
+    'health': { bg: 'rgba(255,80,120,0.12)', border: 'rgba(255,80,120,0.35)', fg: '#ffc0d2' },
+    'nuclear': { bg: 'rgba(220,220,220,0.10)', border: 'rgba(220,220,220,0.35)', fg: '#efefef' },
+    'outer space': { bg: 'rgba(120,180,255,0.12)', border: 'rgba(120,180,255,0.35)', fg: '#cfe5ff' }
+  };
+  return map[key] || { bg: 'rgba(0,255,136,0.08)', border: 'rgba(0,255,136,0.25)', fg: '#bdf8d9' };
+}
+
+function fmtDate(s) {
+  try { return new Date(s+'T00:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'}); }
+  catch { return s; }
+}
+function extractDomain(u) {
+  if (!u) return '';
+  try { return new URL(u).hostname.replace('www.',''); } catch { return u.substring(0,30); }
+}
+function esc(s) {
+  if (!s) return '';
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+// ════════════════════════════════════════════
+// LIVE UPDATE POLLING
+// ════════════════════════════════════════════
+let lastKnownSignalsDbMtime = 0;
+let lastKnownPendingMtime = 0;
+
+async function checkForUpdates() {
+  try {
+    const res = await fetch('./data/check_updates.php?t=' + Date.now());
+    if (!res.ok) return;
+    
+    const data = await res.json();
+    const signalsChanged = data.signals_db_mtime > lastKnownSignalsDbMtime;
+    const pendingChanged = data.pending_mtime > lastKnownPendingMtime;
+    
+    if (signalsChanged || pendingChanged) {
+      console.log('🔄 Database updated, reloading signals...');
+      
+      // Show subtle notification
+      showUpdateNotification();
+      
+      // Reload data
+      await loadData();
+      
+      // Update known timestamps
+      lastKnownSignalsDbMtime = data.signals_db_mtime;
+      lastKnownPendingMtime = data.pending_mtime;
+    }
+  } catch (err) {
+    console.error('Update check failed:', err);
+  }
+}
+
+function showUpdateNotification() {
+  const notif = document.createElement('div');
+  notif.style.cssText = `
+    position: fixed; top: 20px; right: 20px; z-index: 10000;
+    background: rgba(0,160,154,0.95); color: #fff;
+    padding: 12px 20px; border-radius: 8px;
+    font-size: 0.9rem; font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    animation: slideInRight 0.3s ease;
+  `;
+  notif.textContent = '🔄 New signals detected';
+  document.body.appendChild(notif);
+  
+  setTimeout(() => {
+    notif.style.opacity = '0';
+    notif.style.transform = 'translateX(100%)';
+    notif.style.transition = 'all 0.3s';
+    setTimeout(() => notif.remove(), 300);
+  }, 3000);
+}
+
+// ════════════════════════════════════════════
+// INIT
+// ════════════════════════════════════════════
+loadData().then(() => {
+  // After initial load, store timestamps for comparison
+  fetch('./data/check_updates.php?t=' + Date.now())
+    .then(r => r.json())
+    .then(data => {
+      lastKnownSignalsDbMtime = data.signals_db_mtime;
+      lastKnownPendingMtime = data.pending_mtime;
+      console.log('✅ Live updates enabled (polling every 15 seconds)');
+    });
+});
+
+// Poll for updates every 15 seconds (lightweight timestamp check)
+setInterval(checkForUpdates, 15000);
+</script>
+</body>
+</html>

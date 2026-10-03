@@ -1,0 +1,461 @@
+{
+  "schema_version": 1,
+  "id": "italy-intergenerational-equity",
+  "title": "Italy: Constitutional Intergenerational Equity",
+  "language": "en",
+  "country_code": "IT",
+  "country_name": "Italy",
+  "region": "Europe",
+  "last_updated": "2026-06-28",
+  "confidence": "high",
+  "related_signal_ids": [
+    "italy-constitutional-law-art9-future-generations-2022-02-11",
+    "italy-vig-generational-impact-assessment-law-2025-11-20",
+    "italy-mase-youth-climate-consultation-table-2026-03",
+    "italy-youth-peace-security-nap-2026-06-17",
+    "italy-eni-climate-lawsuit-supreme-court-jurisdiction-2025-07-21"
+  ],
+  "executive_summary": "Italy's intergenerational equity model is a three-layer stack: (1) constitutional entrenchment via Constitutional Law 1/2022 (Articles 9 and 41), naming future generations and environmental limits on economic activity; (2) administrative operationalisation through Generational Impact Assessment (VIG) in Law 167/2025, integrated into regulatory impact analysis for government bills; and (3) judicial enforcement through Constitutional Court doctrine on equità intergenerazionale, spanning public finance (from 2019) and environment (especially post-2022). Italy does not have a Wales-style Future Generations Commissioner, but it is among the few states that constitutionally name future generations alongside environment and biodiversity. As of mid-2026, VIG is legally binding but the implementing DPCM and Observatory are still being stood up, while municipalities (Parma, Bologna) already run local VIG ahead of central government practice.",
+  "three_layer_stack": {
+    "layers": [
+      {
+        "order": 1,
+        "id": "constitutional",
+        "label": "Constitutional foundation",
+        "instrument": "Constitutional Law No. 1 of 11 February 2022",
+        "in_force": "2022-03-09",
+        "primary_articles": ["Article 9 (third paragraph)", "Article 41 (paragraphs 2–3)"],
+        "role": "Binds legislature, executive, and courts; elevates future generations from policy language to fundamental principles."
+      },
+      {
+        "order": 2,
+        "id": "statutory",
+        "label": "Statutory operationalisation",
+        "instrument": "Law No. 167 of 10 November 2025 (Art. 4–5)",
+        "in_force": "2025-11-29",
+        "role": "VIG in AIR for government normative acts; National Observatory at Presidency of the Council of Ministers."
+      },
+      {
+        "order": 3,
+        "id": "judicial",
+        "label": "Judicial doctrine",
+        "instrument": "Constitutional Court jurisprudence (2019–2026)",
+        "role": "Equità intergenerazionale as legitimacy parameter in fiscal discipline and environmental derogations."
+      }
+    ]
+  },
+  "constitutional_reform": {
+    "instrument": "Legge costituzionale 11 febbraio 2022, n. 1",
+    "english_name": "Constitutional Law No. 1/2022",
+    "adopted": "2022-02-11",
+    "in_force": "2022-03-09",
+    "significance": "First amendment to Italy's fundamental principles since 1948; promoted by ASviS from 2016; passed with near-unanimous parliamentary support.",
+    "articles": [
+      {
+        "article": "Article 9 (new third paragraph)",
+        "text_en": "The Republic protects the environment, biodiversity and ecosystems, also in the interest of future generations. State law regulates the ways and forms of animal protection.",
+        "text_it": "La Repubblica tutela l'ambiente, la biodiversità e gli ecosistemi, anche nell'interesse delle future generazioni. La legge dello Stato disciplina i modi e le forme della tutela degli animali.",
+        "source_url": "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=22G00019"
+      },
+      {
+        "article": "Article 41 (paragraph 2)",
+        "text_en": "Private economic initiative is free. It may not be carried out in contrast with social utility or in such a way as to damage health, the environment, security, freedom, or human dignity.",
+        "source_url": "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=22G00019"
+      },
+      {
+        "article": "Article 41 (paragraph 3)",
+        "text_en": "Law determines programmes and controls so that public and private economic activity may be directed and coordinated to social and environmental purposes.",
+        "source_url": "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=22G00019"
+      }
+    ],
+    "what_italy_lacks": [
+      "No standalone Future Generations Commissioner or Well-being of Future Generations Act (unlike Wales)",
+      "No freestanding constitutional right to a healthy environment as a single justiciable right — protection is framed through Article 9 duties and administrative/civil routes",
+      "VIG applies to government rulemaking, not Parliament's primary legislation in the same way"
+    ]
+  },
+  "jurisprudence": {
+    "overview": "Before the 2022 reform, the Constitutional Court developed equità intergenerazionale as a cross-cutting legitimacy test, especially in public finance. After 2022, environmental cases explicitly cite Article 9's future-generations language.",
+    "streams": [
+      {
+        "id": "fiscal",
+        "label": "Public finance and debt",
+        "summary": "Structural deficit prolongation and dilated debt-repayment timelines that shift burdens onto future cohorts without correlated benefits violate Articles 81 and 97, linked to the golden rule in Article 119(6).",
+        "key_cases": [
+          {
+            "id": "cc-18-2019",
+            "citation": "Constitutional Court judgment No. 18/2019",
+            "nickname": "San Valentino",
+            "date": "2019-02-14",
+            "deposited": "2019-02-14",
+            "subject": "Thirty-year rescheduling of municipal financial recovery (Comune di Pagani)",
+            "constitutional_anchors": ["Article 81", "Article 97", "Article 119(6)"],
+            "holding_en": "Intergenerational equity requires not placing a disproportionate burden on future generations' growth opportunities, ensuring sufficient resources for balanced development. Permanent deficit normalisation through legislative deferrals collides with both intra- and intergenerational equity.",
+            "key_quote_en": "Intergenerational equity also requires not placing a disproportionate burden on the growth opportunities of future generations, guaranteeing them sufficient resources for balanced development.",
+            "significance": "First explicit equità intergenerazionale as constitutional review parameter in fiscal law.",
+            "source_url": "https://giurcost.org/decisioni/2019/0018s-19.html",
+            "pre_reform": true
+          },
+          {
+            "id": "cc-80-2021",
+            "citation": "Constitutional Court judgment No. 80/2021",
+            "date": "2021",
+            "subject": "Multi-year dilution of deficit recovery obligations",
+            "constitutional_anchors": ["Article 81", "Article 97", "equità intergenerazionale"],
+            "holding_en": "Pluriennial dilution of deficit recovery violates electoral accountability and intergenerational equity; administrators must not leave indefinite financial 'inheritances' to successors.",
+            "significance": "Consolidates 18/2019 line; prelude to 2022 constitutional reform.",
+            "source_url": "https://www.cortecostituzionale.it/actionSchedaPronuncia.do?anno=2021&numero=80",
+            "pre_reform": true
+          },
+          {
+            "id": "cc-235-2021",
+            "citation": "Constitutional Court judgment No. 235/2021",
+            "date": "2021-12-02",
+            "subject": "Abruzzo regional budget; indefinite deficit sanatorie",
+            "constitutional_anchors": ["Articles 81, 97, 119", "equità intergenerazionale"],
+            "holding_en": "Credibility, sustainability, and progressivity of deficit recovery are essential for sound financial management, electoral accountability, and intergenerational equity.",
+            "significance": "Stabilises fiscal intergenerational doctrine with 80/2021.",
+            "source_url": "https://giurcost.org/decisioni/2021/0235s-21.html",
+            "pre_reform": true
+          }
+        ]
+      },
+      {
+        "id": "environmental",
+        "label": "Environment, territory, and energy",
+        "summary": "Post-2022 cases apply Article 9 directly. Environmental derogations must be temporary, proportionate, and aimed at remediation—not permanent lowering of protection standards.",
+        "key_cases": [
+          {
+            "id": "cc-93-2017",
+            "citation": "Constitutional Court judgment No. 93/2017",
+            "date": "2017",
+            "subject": "Water resources",
+            "holding_en": "Early reference to future generations in resource protection (predates explicit Article 9 reform).",
+            "significance": "Precursor environmental line.",
+            "pre_reform": true
+          },
+          {
+            "id": "cc-228-2021",
+            "citation": "Constitutional Court judgment No. 228/2021",
+            "date": "2021-12-02",
+            "subject": "Civil uses and collective land domains (usi civici)",
+            "constitutional_anchors": ["Article 9", "Law 168/2017"],
+            "holding_en": "Collective domains are 'inter-generational co-ownership'; future generations cannot be deprived of equal opportunity to use the asset. Diachronic projection ensures environment and landscape for those not yet born.",
+            "significance": "Bridges property/environment law with intergenerational framing before 2022 reform.",
+            "source_url": "https://giurcost.org/decisioni/2021/0228s-21.html",
+            "pre_reform": true
+          },
+          {
+            "id": "cc-105-2024",
+            "citation": "Constitutional Court judgment No. 105/2024",
+            "nickname": "Priolo",
+            "date": "2024-06-13",
+            "subject": "Government decree on Siracusa petrochemical hub continuity",
+            "constitutional_anchors": ["Articles 2, 9, 32, 41"],
+            "holding_en": "First explicit application of reformed Articles 9 and 41. Crisis measures allowing strategic industrial continuity are constitutional only if temporary and aimed at rapid environmental remediation. Court declared unconstitutional the absence of a maximum 36-month operating term.",
+            "key_quote_en": "The perspective of protection indicated by the constitutional legislator extends to the interests of future generations: persons not yet in existence, towards whom present generations owe a duty to preserve environmental conditions.",
+            "significance": "Landmark post-reform environmental constitutional case; 36-month cap read into law.",
+            "source_url": "https://www.cortecostituzionale.it/documenti/comunicatistampa/CC_CS_20240613111322.pdf",
+            "pre_reform": false
+          },
+          {
+            "id": "cc-134-2025",
+            "citation": "Constitutional Court judgment No. 134/2025",
+            "date": "2025",
+            "subject": "Regional restrictions on renewable energy in parks",
+            "constitutional_anchors": ["Article 9", "renewable energy development"],
+            "holding_en": "Renewable energy development is of crucial importance for environmental protection including in the interest of future generations; absolute NIMBY bans without ecosystem justification are illegitimate.",
+            "significance": "Balances regional autonomy with national climate/Art. 9 duties.",
+            "source_url": "https://giurcost.org/decisioni/2025/0134s-25.html",
+            "pre_reform": false
+          },
+          {
+            "id": "cc-184-2025",
+            "citation": "Constitutional Court judgment No. 184/2025",
+            "date": "2025",
+            "subject": "Sardinia regional law on non-suitable areas for FER plants",
+            "holding_en": "Non-suitability cannot mean absolute aprioristic prohibition; retroactive invalidation of authorisations in non-suitable areas violates proportionality and renewable development imperative for future generations.",
+            "significance": "Companion to 134/2025 on renewables vs. regional vetoes.",
+            "source_url": "https://www.cortecostituzionale.it/scheda-pronuncia/2025/184",
+            "pre_reform": false
+          }
+        ]
+      },
+      {
+        "id": "social_solidarity",
+        "label": "Social solidarity (analogous use)",
+        "summary": "Uses intergenerational solidarity language in pensions/family law—not environmental doctrine.",
+        "key_cases": [
+          {
+            "id": "cc-91-2026",
+            "citation": "Constitutional Court judgment No. 91/2026",
+            "date": "2026-05-28",
+            "subject": "Survivor pension for same-sex couples married abroad before Law 76/2016",
+            "constitutional_anchors": ["Article 3"],
+            "holding_en": "Reversibility pension as ultrattive family solidarity; exclusion of surviving partner where marriage abroad could not be recognised before partner's death violates equality.",
+            "significance": "Intergenerational chain in pension financing cited, but case is equality/solidarity—not Art. 9 environmental IE.",
+            "source_url": "https://www.cortecostituzionale.it/uploads/release/6a1820fd70504.pdf",
+            "pre_reform": false,
+            "tangential": true
+          }
+        ]
+      }
+    ],
+    "operational_tests": [
+      {
+        "domain": "Fiscal",
+        "test": "Choices that consume future fiscal space beyond the electoral/budget cycle without correlated benefits are more vulnerable to unconstitutionality."
+      },
+      {
+        "domain": "Environmental",
+        "test": "Derogations from health/environment protection must be proportionate, time-limited, and remediation-oriented—not permanent standard-lowering."
+      },
+      {
+        "domain": "Energy/climate",
+        "test": "Regional obstacles to renewables face stricter scrutiny when they conflict with Article 9 and decarbonisation imperatives."
+      }
+    ]
+  },
+  "vig_framework": {
+    "instrument": "Law No. 167 of 10 November 2025",
+    "gazette": "G.U. No. 265 of 14 November 2025",
+    "in_force": "2025-11-29",
+    "english_name": "Measures for regulatory simplification and improvement of regulatory quality",
+    "statutory_principle": "The laws of the Republic promote intergenerational equity also in the interest of future generations (Art. 4(1)).",
+    "definition": "Generational Impact Assessment (VIG) is a preventive, informational analysis of government normative acts (excluding decree-laws) on environmental or social effects on young people and future generations, with particular attention to intergenerational equity.",
+    "integration": "VIG is conducted within Regulatory Impact Analysis (AIR) under Law 246/2005.",
+    "trigger": "Mandatory when a government act has significant environmental or social effects on younger generations and future generations.",
+    "exclusions": ["Decree-laws (decreti-legge) — structural loophole given volume of urgent legislation"],
+    "institutions": [
+      {
+        "name": "National Observatory for Generational Impact of Laws",
+        "location": "Presidency of the Council of Ministers",
+        "law_article": "Art. 5",
+        "functions": ["Monitoring", "Analysis", "Study", "Proposals for tools to define and implement Art. 4 objectives"],
+        "dpcm_deadline_days": 60,
+        "resources": "Existing staff/budget only; no new public spending; members unpaid"
+      },
+      {
+        "name": "COVIGE (predecessor committee)",
+        "established": "2021-06-03",
+        "role": "Guidelines for generational impact on policies targeting ages 14–35; methodological precursor to VIG",
+        "source_url": "https://www.politichegiovanili.gov.it/"
+      }
+    ],
+    "implementing_instruments": [
+      {
+        "instrument": "DPCM updating AIR regulation (Art. 14, Law 246/2005)",
+        "deadline": "180 days from Law 167 entry into force (~28 May 2026)",
+        "concert": "Political authority delegated for youth policies",
+        "status_as_of_2026_06_28": "Not located in Gazzetta Ufficiale; ASviS/Save the Children Future Paper (March 2026) treats adoption as pending"
+      },
+      {
+        "instrument": "DPCM on Observatory organisation",
+        "deadline": "60 days from entry into force",
+        "status_as_of_2026_06_28": "Unclear public publication status"
+      }
+    ],
+    "art_4_summary": [
+      "Art. 4(1): Statutory promotion of intergenerational equity",
+      "Art. 4(2): VIG definition and scope (government acts, excl. decree-laws)",
+      "Art. 4(3): VIG within AIR per DPCM criteria",
+      "Art. 4(4): Mandatory VIG for significant environmental/social effects"
+    ],
+    "source_urls": [
+      "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=25G00174&art.idArticolo=4",
+      "https://www.programmagoverno.gov.it/it/notizie/equita-tra-generazioni-e-inclusione-di-genere-nelle-leggi-introdotte-la-valutazione-di-impatto-generazionale-e-quella-di-impatto-di-genere",
+      "https://www.senato.it/show-doc?id=1428481&leg=19&tipodoc=DOSSIER"
+    ]
+  },
+  "implementation_status_2026": {
+    "as_of": "2026-06-28",
+    "headline": "Legal obligation exists; operational manual still emerging.",
+    "provvedimenti": [
+      {
+        "instrument": "2026 Budget Law (Law 199/2025, 30 December 2025)",
+        "vig_status": "Adopted immediately after Law 167 entered force; no published VIG schedule identified; framework described in government focus but not as pilot VIG annex",
+        "note": "Primary budget legislation may not have been subject to fully operational VIG methodology"
+      },
+      {
+        "instrument": "Draft delegation law on youth policies and Universal Civic Service (Cabinet approval 22 December 2025)",
+        "vig_status": "Pipeline — should embed intergenerational equity per government framing; VIG to be verified in parliamentary passage",
+        "note": "Would establish permanent Youth Observatory and National Youth Strategy"
+      },
+      {
+        "instrument": "Government bills after May 2026",
+        "vig_status": "Legal duty for significant effects; without DPCM, risk of formalism or inconsistent thresholds"
+      },
+      {
+        "instrument": "Decree-laws",
+        "vig_status": "Excluded from mandatory VIG — major implementation gap"
+      }
+    ],
+    "civil_society": {
+      "future_paper": {
+        "title": "The generational impact assessment of laws: a paradigm shift for public policy",
+        "authors": ["ASviS", "Save the Children"],
+        "date": "2026-03-05",
+        "url": "https://asvis.it/public/asvis2/files/Pubblicazioni/Futuro/FuturePaperVIG.pdf",
+        "recommendations_count": 10
+      }
+    },
+    "recommendations": [
+      {
+        "order": 1,
+        "text": "Treat VIG as permanent cognitive infrastructure for normative design, not a box-ticking exercise."
+      },
+      {
+        "order": 2,
+        "text": "Shift from defensive (avoid harm) to generative (create opportunities) policy logic."
+      },
+      {
+        "order": 3,
+        "text": "Embed structured youth and citizen participation in assessments."
+      },
+      {
+        "order": 4,
+        "text": "Ensure technical independence and adequate resources for Observatory and line ministries."
+      },
+      {
+        "order": 5,
+        "text": "Strengthen Parliament's capacity to assess intergenerational impact of amendments."
+      },
+      {
+        "order": 6,
+        "text": "Ensure timeliness — especially for decree-laws (currently excluded)."
+      },
+      {
+        "order": 7,
+        "text": "Promote local VIG and exchange of municipal good practice."
+      },
+      {
+        "order": 8,
+        "text": "Strengthen national data on childhood, adolescence, and generational transitions."
+      },
+      {
+        "order": 9,
+        "text": "Build integrated methodological models and indicators."
+      },
+      {
+        "order": 10,
+        "text": "Include medium/long-term demographic trends in every assessment."
+      }
+    ]
+  },
+  "local_practice": [
+    {
+      "entity": "Comune di Parma",
+      "since": "2023",
+      "detail": "VIG integrated into municipal programming (DUP); mandatory labeling of measures as generational / potentially generational / neutral / anti-generational from 2025.",
+      "source_url": "https://atti.comune.parma.it/"
+    },
+    {
+      "entity": "Comune di Bologna",
+      "since": "2024",
+      "detail": "Municipal VIG guidelines adopted May 2024; Brundtland and Agenda 2030 framing.",
+      "source_url": "http://atti9.comune.bologna.it/"
+    },
+    {
+      "entity": "ANCI",
+      "since": "2025",
+      "detail": "National guidelines for generational impact assessment in municipal Single Programming Documents (DUP).",
+      "source_url": "https://anci.lombardia.it/"
+    },
+    {
+      "entity": "Metropolitan City of Reggio Calabria",
+      "since": "2025-12",
+      "detail": "Formal VIG adoption in DUP 2026–2028."
+    }
+  ],
+  "comparative_notes": [
+    {
+      "jurisdiction": "Wales",
+      "contrast": "Institutional commissioner + statutory well-being duties; Italy has constitutional entrenchment + VIG in rulemaking but no national commissioner."
+    },
+    {
+      "jurisdiction": "European Union",
+      "contrast": "Political intergenerational fairness strategy and Commissioner portfolio; Italy transposes via membership and domestic VIG."
+    },
+    {
+      "jurisdiction": "United Kingdom",
+      "contrast": "No constitutional future-generations clause; fiscal and youth-governance debate without Art. 9 equivalent."
+    }
+  ],
+  "litigation_track": [
+    {
+      "case": "Giudizio Universale (A Sud et al. v. Italy)",
+      "court": "Tribunale di Roma",
+      "year": 2024,
+      "status": "Dismissed on jurisdiction",
+      "relevance": "Invoked Art. 9 future generations; procedural barrier not merits."
+    },
+    {
+      "case": "Greenpeace et al. v. ENI",
+      "court": "Civil courts; Cassazione on jurisdiction 2025",
+      "status": "Proceeding",
+      "relevance": "Corporate climate liability using constitutional future-generations framing.",
+      "linked_signal_id": "italy-eni-climate-lawsuit-supreme-court-jurisdiction-2025-07-21"
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "three-layer-stack",
+      "title": "Italy's three-layer intergenerational equity stack",
+      "mermaid": "flowchart TB\n  A[\"Constitutional Law 1/2022<br/>Art. 9 + Art. 41\"] --> B[\"Law 167/2025<br/>VIG in rulemaking\"]\n  A --> C[\"Constitutional Court<br/>equità generazionale\"]\n  B --> D[\"National Observatory<br/>Palazzo Chigi\"]\n  C --> E[\"Fiscal + environment<br/>legitimacy tests\"]\n  A --> F[\"Climate litigation<br/>e.g. ENI case\"]"
+    },
+    {
+      "id": "jurisprudence-timeline",
+      "title": "Constitutional Court — intergenerational equity timeline",
+      "mermaid": "timeline\n  title Equità generazionale — key judgments\n  2015 : 70/2015 — fiscal precursors\n  2017 : 93/2017 — water resources\n  2019 : 18/2019 — fiscal milestone\n  2021 : 80/2021 + 235/2021 — fiscal consolidation\n  2021 : 228/2021 — environmental co-ownership\n  2022 : Constitutional reform Art. 9 + 41\n  2024 : 105/2024 — Priolo / first Art. 9 use\n  2025 : 134/2025 + 184/2025 — renewables\n  2026 : 91/2026 — pensions solidarity (tangential)"
+    },
+    {
+      "id": "court-vig-intersection",
+      "title": "How court doctrine and VIG interact",
+      "mermaid": "flowchart LR\n  A[\"Art. 9 + 41 Cost. 2022\"] --> B[\"Sent. 105/2024+\"]\n  A --> C[\"Law 167/2025 VIG\"]\n  D[\"Sent. 18/2019+ fiscal\"] --> E[\"Budget / debt control\"]\n  C --> F[\"Government AIR\"]\n  B --> G[\"Constitutional litigation\"]\n  F --> H[\"Observatory Palazzo Chigi\"]\n  H -.->|\"DPCM pending\"| F\n  I[\"Local VIG Parma/Bologna\"] --> F"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Equità intergenerazionale",
+      "en": "Intergenerational equity — fairness in distributing costs, benefits, and risks across age cohorts and over time."
+    },
+    {
+      "term": "VIG",
+      "en": "Valutazione di Impatto Generazionale — Generational Impact Assessment."
+    },
+    {
+      "term": "AIR",
+      "en": "Analisi di Impatto della Regolamentazione — Regulatory Impact Analysis."
+    },
+    {
+      "term": "COVIGE",
+      "en": "Committee for evaluation of generational impact of public policies (2021–), methodological precursor."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Constitutional Law 1/2022 — Normattiva",
+      "url": "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=22G00019"
+    },
+    {
+      "title": "Law 167/2025 Art. 4 — Gazzetta Ufficiale",
+      "url": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=25G00174&art.idArticolo=4"
+    },
+    {
+      "title": "Senate dossier on Law 167 — VIG",
+      "url": "https://www.senato.it/show-doc?id=1428481"
+    },
+    {
+      "title": "Priolo judgment press release — Constitutional Court",
+      "url": "https://www.cortecostituzionale.it/documenti/comunicatistampa/CC_CS_20240613111322.pdf"
+    },
+    {
+      "title": "ASviS / Save the Children Future Paper VIG",
+      "url": "https://asvis.it/public/asvis2/files/Pubblicazioni/Futuro/FuturePaperVIG.pdf"
+    },
+    {
+      "title": "Government programme — intergenerational equity focus 2026",
+      "url": "https://www.programmagoverno.gov.it/it/approfondimenti/focus-e-dossier-a-cura-del-dipartimento/introduzione-sezione-focus/focus-provvedimenti-normativi/focus-dei-provvedimenti-analizzati-nel-2026/focus-sulle-politiche-giovanili/equita-intergenerazionale-e-qualita-della-normazione/"
+    }
+  ]
+}

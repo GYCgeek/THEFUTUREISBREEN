@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script data-intel-theme="boot">
+(function(){
+  var k="gyc-foresight-theme";
+  try{
+    var t=localStorage.getItem(k);
+    if(t==="light"||t==="dark") document.documentElement.dataset.theme=t;
+  }catch(e){}
+})();
+</script>
+<script data-intel-shell="boot">
+(function(){
+  var k="gyc-foresight-nav";
+  try{
+    var v=localStorage.getItem(k);
+    if(v==="collapsed"||v==="expanded") document.documentElement.dataset.nav=v;
+  }catch(e){}
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%233B68F6%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2222%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2Csans-serif%22%20font-size%3D%2216%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%3EF%3C%2Ftext%3E%3C%2Fsvg%3E" type="image/svg+xml">
+<meta name="description" content="GYC Intelligence Platform — monthly operating budget plan with three funding tiers.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Foresight for Intergenerational Fairness Intelligence platform">
+<meta property="og:title" content="Operating Budget Plan · GYC Intelligence Platform">
+<meta property="og:description" content="Three monthly funding tiers for the GYC Intelligence Platform — more funding means faster features, dedicated tools, and open infrastructure.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Operating Budget Plan · GYC Intelligence Platform">
+<meta name="twitter:description" content="Three monthly funding tiers for the GYC Intelligence Platform — more funding means faster features, dedicated tools, and open infrastructure.">
+<title>Operating Budget Plan · GYC Intelligence Platform</title>
+<style>
+:root,[data-theme="light"]{
+  color-scheme:light;
+  --color-primary:#3B68F6;
+  --color-secondary:#0858F7;
+  --color-tertiary:#002253;
+  --color-bg:#FFFFFF;
+  --color-bg-subtle:#F7F9FF;
+  --color-surface:#FFFFFF;
+  --color-on-surface:#002253;
+  --color-muted:#6B7280;
+  --color-border:#DFDFE0;
+  --color-overlay:#F7F9FF;
+  --color-error:#E5484D;
+  --color-success:#0D9B6A;
+  --color-warning:#D97706;
+  --color-info:#3B68F6;
+  --radius-sm:4px;
+  --radius-md:8px;
+  --radius-lg:12px;
+  --radius-xl:18px;
+  --radius-full:9999px;
+  --space-xs:6px;
+  --space-sm:14px;
+  --space-md:32px;
+  --space-lg:56px;
+  --space-gutter:24px;
+  --space-section:64px;
+  --container-max:1200px;
+  --font-display:"Instrument Sans","DM Sans","Segoe UI Variable","Segoe UI",system-ui,sans-serif;
+  --font-body:"DM Sans","Segoe UI Variable","Segoe UI",system-ui,sans-serif;
+  --shadow-sm:0 1px 3px rgba(0,34,83,.06);
+  --shadow-md:0 4px 16px rgba(0,34,83,.08);
+  --shadow-lg:0 12px 40px rgba(0,34,83,.12);
+  --bg:var(--color-bg);
+  --bg2:var(--color-bg-subtle);
+  --panel:var(--color-surface);
+  --panel2:var(--color-bg-subtle);
+  --line:var(--color-border);
+  --line2:var(--color-border);
+  --text:var(--color-on-surface);
+  --muted:var(--color-muted);
+  --faint:#94A3B8;
+  --accent:var(--color-primary);
+  --accent2:var(--color-secondary);
+  --hi:var(--color-error);
+  --hi-bg:rgba(229,72,77,.12);
+  --strong:var(--color-warning);
+  --strong-bg:rgba(217,119,6,.12);
+  --useful:var(--color-success);
+  --useful-bg:rgba(13,155,106,.12);
+  --r:var(--radius-lg);
+  font-size:16px;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --color-tertiary:#E8EDF7;
+  --color-bg:#0B1220;
+  --color-bg-subtle:#121A2E;
+  --color-surface:#161F33;
+  --color-on-surface:#E8EDF7;
+  --color-muted:#94A3B8;
+  --color-border:#2A3548;
+  --color-overlay:#121A2E;
+  --faint:#64748B;
+  --hi-bg:rgba(229,72,77,.18);
+  --strong-bg:rgba(217,119,6,.18);
+  --useful-bg:rgba(13,155,106,.18);
+  --shadow-sm:0 1px 3px rgba(0,0,0,.28);
+  --shadow-md:0 4px 16px rgba(0,0,0,.35);
+  --shadow-lg:0 12px 40px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--color-bg);
+  color:var(--color-on-surface);
+  font-family:var(--font-body);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--color-secondary);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{
+  outline:2px solid var(--color-primary);
+  outline-offset:2px;
+}
+.mono{font-family:"Cascadia Code","Consolas",ui-monospace,monospace}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+
+/* ---- slim top bar ---- */
+.intel-shell-header{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb, var(--color-bg) 88%, transparent);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--color-border);
+}
+.intel-shell-header-inner{
+  position:relative;
+  min-height:60px;margin:0 auto;
+  padding:9px var(--space-gutter);
+  display:flex;align-items:center;gap:14px;
+}
+.intel-shell-brand{
+  display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit;min-width:0;
+}
+.intel-shell-brand:hover{text-decoration:none}
+.intel-shell-mark{
+  width:34px;height:34px;border-radius:10px;
+  background:linear-gradient(150deg,var(--color-primary),var(--color-secondary));
+  color:#fff;display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-weight:700;font-size:1rem;flex-shrink:0;
+  box-shadow:0 2px 8px rgba(59,104,246,.28);
+}
+.intel-brand-logo{width:150px;height:auto;display:block}
+.intel-brand-mark{width:38px;height:auto;display:none}
+.intel-shell-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.intel-theme-toggle{
+  background:var(--color-surface);border:1px solid var(--color-border);
+  border-radius:var(--radius-full);width:38px;height:38px;padding:0;
+  font-size:1rem;line-height:1;cursor:pointer;color:var(--color-muted);
+  transition:background .15s,border-color .15s,color .15s;flex-shrink:0;
+}
+.intel-theme-toggle:hover{color:var(--color-on-surface);border-color:var(--color-primary)}
+
+/* ---- page layout ---- */
+.bp-wrap{max-width:960px;margin:0 auto;padding:0 var(--space-gutter) 80px}
+.bp-hero{margin:40px 0 32px}
+.bp-kicker{color:var(--color-primary);font-size:.8rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px}
+.bp-hero h1{font-family:var(--font-display);font-size:2.1rem;font-weight:700;color:var(--color-tertiary);line-height:1.2;margin:0 0 12px}
+.bp-hero p{color:var(--color-muted);font-size:1.05rem;line-height:1.6;max-width:68ch}
+
+/* ---- platform snapshot ---- */
+.bp-snapshot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 40px}
+@media(max-width:640px){.bp-snapshot{grid-template-columns:1fr 1fr}}
+.bp-stat{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:16px;text-align:center}
+.bp-stat .n{font-size:1.6rem;font-weight:800;color:var(--color-primary);line-height:1.1}
+.bp-stat .l{color:var(--color-muted);font-size:.74rem;font-weight:600;margin-top:5px}
+
+/* ---- tier cards ---- */
+.bp-tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 40px}
+@media(max-width:800px){.bp-tiers{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}}
+.bp-tier{
+  background:var(--color-surface);
+  border:1px solid var(--color-border);
+  border-radius:var(--radius-lg);
+  padding:24px 20px 20px;
+  display:flex;flex-direction:column;
+  position:relative;
+  transition:border-color .2s,box-shadow .2s;
+}
+.bp-tier:hover{border-color:var(--color-primary);box-shadow:var(--shadow-md)}
+.bp-tier.featured{
+  border-color:var(--color-primary);
+  box-shadow:0 0 0 1px var(--color-primary),var(--shadow-lg);
+  transform:scale(1.03);
+  z-index:2;
+}
+@media(max-width:800px){.bp-tier.featured{transform:none}}
+.bp-tier.featured::before{
+  content:"Best value";
+  position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+  background:var(--color-primary);color:#fff;
+  padding:4px 14px;border-radius:var(--radius-full);
+  font-size:.72rem;font-weight:700;letter-spacing:.03em;
+  white-space:nowrap;
+}
+.bp-tier-label{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--color-muted);margin-bottom:6px}
+.bp-tier-price{font-family:var(--font-display);font-size:2.4rem;font-weight:800;color:var(--color-tertiary);line-height:1;margin-bottom:2px}
+.bp-tier-price span{font-size:.9rem;font-weight:500;color:var(--color-muted)}
+.bp-tier-tagline{color:var(--color-primary);font-size:.85rem;font-weight:600;margin-bottom:16px;line-height:1.3}
+.bp-tier-divider{height:1px;background:var(--color-border);margin:0 0 16px}
+.bp-tier h4{font-size:.8rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--color-muted);margin-bottom:8px}
+.bp-tier ul{list-style:none;padding:0;margin:0 0 auto;flex:1}
+.bp-tier li{
+  padding:6px 0;font-size:.86rem;line-height:1.4;
+  display:flex;align-items:flex-start;gap:8px;
+  color:var(--color-on-surface);
+}
+.bp-tier li::before{
+  content:"✓";color:var(--color-success);font-weight:700;flex-shrink:0;margin-top:1px;
+}
+.bp-tier li.dim{color:var(--color-muted)}
+.bp-tier li.dim::before{content:"—";color:var(--color-border)}
+.bp-tier .bp-velocity{
+  margin-top:16px;padding:12px;
+  background:var(--color-bg-subtle);
+  border-radius:var(--radius-md);
+  font-size:.82rem;line-height:1.45;color:var(--color-muted);
+}
+.bp-tier .bp-velocity strong{color:var(--color-on-surface)}
+
+/* ---- feature velocity table ---- */
+.bp-delta{margin:0 0 40px}
+.bp-delta h2{font-family:var(--font-display);font-size:1.3rem;color:var(--color-tertiary);margin:0 0 16px}
+.bp-delta-table{width:100%;border-collapse:collapse;font-size:.88rem}
+.bp-delta-table thead th{
+  text-align:left;padding:10px 14px;border-bottom:2px solid var(--color-border);
+  font-weight:700;color:var(--color-muted);font-size:.76rem;letter-spacing:.04em;text-transform:uppercase;
+}
+.bp-delta-table thead th:first-child{color:var(--color-on-surface)}
+.bp-delta-table tbody td{
+  padding:10px 14px;border-bottom:1px solid var(--color-border);
+  vertical-align:top;line-height:1.45;
+}
+.bp-delta-table tbody tr:last-child td{border-bottom:none}
+.bp-delta-table .dim{color:var(--color-muted)}
+.bp-delta-table .ok{color:var(--color-success);font-weight:600}
+.bp-delta-table .boost{color:var(--color-primary);font-weight:600}
+
+/* ---- budget breakdown ---- */
+.bp-breakdown{margin:0 0 40px}
+.bp-breakdown h2{font-family:var(--font-display);font-size:1.3rem;color:var(--color-tertiary);margin:0 0 16px}
+.bp-breakdown-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:700px){.bp-breakdown-grid{grid-template-columns:1fr}}
+.bp-bb{
+  background:var(--color-surface);border:1px solid var(--color-border);
+  border-radius:var(--radius-md);padding:16px;
+}
+.bp-bb h4{font-size:.9rem;color:var(--color-tertiary);margin:0 0 10px}
+.bp-bb .line{display:flex;justify-content:space-between;padding:4px 0;font-size:.84rem;border-bottom:1px solid color-mix(in srgb,var(--color-border) 50%,transparent)}
+.bp-bb .line:last-child{border-bottom:none;font-weight:700;color:var(--color-primary);padding-top:6px}
+.bp-bb .line .amt{font-variant-numeric:tabular-nums;font-weight:600}
+
+/* ---- narrative section ---- */
+.bp-narrative{margin:0 0 40px}
+.bp-narrative h2{font-family:var(--font-display);font-size:1.3rem;color:var(--color-tertiary);margin:0 0 12px}
+.bp-narrative p{color:var(--color-muted);font-size:.95rem;line-height:1.6;max-width:72ch;margin-bottom:12px}
+
+/* ---- contact ---- */
+.bp-contact{
+  background:var(--color-bg-subtle);border:1px solid var(--color-border);
+  border-radius:var(--radius-lg);padding:24px;margin-top:8px;
+}
+.bp-contact h3{font-family:var(--font-display);font-size:1.1rem;color:var(--color-tertiary);margin:0 0 8px}
+.bp-contact p{color:var(--color-muted);font-size:.9rem;line-height:1.5;margin:0}
+.bp-contact a{color:var(--color-secondary);font-weight:600}
+
+/* ---- footer ---- */
+.intel-shell-footer{
+  max-width:var(--container-max);margin:0 auto;
+  padding:24px var(--space-gutter) 48px;
+  border-top:1px solid var(--color-border);
+  color:var(--color-muted);font-size:.8rem;
+  display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;
+}
+.intel-shell-footer a{color:var(--color-secondary);font-weight:500}
+
+@media print{
+  .intel-shell-header,.intel-shell-footer,.bp-contact{display:none!important}
+  body{background:#fff}
+  .bp-wrap{max-width:none}
+  .bp-tier.featured{box-shadow:none;transform:none}
+}
+</style>
+</head>
+<body>
+<header class="intel-shell-header" data-intel-shell="v5">
+  <div class="intel-shell-header-inner">
+    <a class="intel-shell-brand" href="index.html" aria-label="Foresight for Intergenerational Fairness Intelligence platform — home">
+      <img class="intel-brand-logo" src="assets/gyc-ai-labs-lockup.webp" alt="Foresight for Intergenerational Fairness Intelligence platform" width="160" height="152" decoding="async">
+      <img class="intel-brand-mark" src="assets/gyc-ai-labs-mark.webp" alt="Foresight for Intergenerational Fairness Intelligence platform" aria-hidden="true" width="40" height="31" decoding="async">
+    </a>
+    <div class="intel-shell-actions">
+      <button type="button" class="intel-theme-toggle" id="intel-theme-toggle" aria-label="Switch to dark mode">&#9790;</button>
+    </div>
+  </div>
+</header>
+
+<main class="bp-wrap">
+  <div class="bp-hero">
+    <div class="bp-kicker">GYC Intelligence Platform · Operating Budget</div>
+    <h1>More funding = faster features, better tools</h1>
+    <p>The GYC Intelligence Platform tracks 1,300+ signals across intergenerational equity, youth governance, and climate foresight. Each funding tier unlocks a faster development cycle and a richer set of deliverables — from a basic web dashboard to a dedicated application with personalized briefings, public APIs, and open-source tooling.</p>
+  </div>
+
+  <!-- Platform snapshot -->
+  <div class="bp-snapshot">
+    <div class="bp-stat"><div class="n">1,355</div><div class="l">Signals tracked</div></div>
+    <div class="bp-stat"><div class="n">177</div><div class="l">Countries covered</div></div>
+    <div class="bp-stat"><div class="n">10</div><div class="l">Thematic domains</div></div>
+    <div class="bp-stat"><div class="n">Weekly</div><div class="l">Briefing cadence</div></div>
+  </div>
+
+  <!-- Three tiers -->
+  <div class="bp-tiers">
+    <!-- Option 1 -->
+    <div class="bp-tier">
+      <div class="bp-tier-label">Option 1</div>
+      <div class="bp-tier-price">$100<span>/month</span></div>
+      <div class="bp-tier-tagline">Web platform, steady pace</div>
+      <div class="bp-tier-divider"></div>
+      <h4>What you get</h4>
+      <ul>
+        <li>Web dashboard with all signals</li>
+        <li>Automated weekly briefing</li>
+        <li>Basic signal ingestion pipeline</li>
+        <li>Public website, always online</li>
+        <li class="dim">Dedicated desktop application</li>
+        <li class="dim">Personalized briefings by topic</li>
+        <li class="dim">Public API for partners</li>
+        <li class="dim">Open-source tooling &amp; SDKs</li>
+        <li class="dim">Custom feature requests</li>
+      </ul>
+      <div class="bp-velocity">
+        <strong>Development velocity:</strong> Slow. One small feature per month. The platform stays online and the pipeline runs, but new capabilities arrive at a crawl. Good for maintaining what exists, not for building what comes next.
+      </div>
+    </div>
+
+    <!-- Option 2 -->
+    <div class="bp-tier featured">
+      <div class="bp-tier-label">Option 2</div>
+      <div class="bp-tier-price">$200<span>/month</span></div>
+      <div class="bp-tier-tagline">Dedicated app, personalized briefings</div>
+      <div class="bp-tier-divider"></div>
+      <h4>What you get</h4>
+      <ul>
+        <li>Web dashboard with all signals</li>
+        <li>Automated weekly briefing</li>
+        <li>Basic signal ingestion pipeline</li>
+        <li>Public website, always online</li>
+        <li>Dedicated desktop application</li>
+        <li>Personalized briefings by topic</li>
+        <li>AI-powered trend detection</li>
+        <li>Richer signal analysis &amp; summaries</li>
+        <li class="dim">Public API for partners</li>
+        <li class="dim">Open-source tooling &amp; SDKs</li>
+        <li class="dim">Custom feature requests</li>
+      </ul>
+      <div class="bp-velocity">
+        <strong>Development velocity:</strong> Moderate. Two to three features per month. The dedicated app and personalized briefings ship within the first quarter. Partners get tailored intelligence. But the platform stays closed — no APIs, no community tooling.
+      </div>
+    </div>
+
+    <!-- Option 3 -->
+    <div class="bp-tier">
+      <div class="bp-tier-label">Option 3</div>
+      <div class="bp-tier-price">$400<span>/month</span></div>
+      <div class="bp-tier-tagline">APIs, open-source tools, rapid delivery</div>
+      <div class="bp-tier-divider"></div>
+      <h4>What you get</h4>
+      <ul>
+        <li>Web dashboard with all signals</li>
+        <li>Automated weekly briefing</li>
+        <li>Basic signal ingestion pipeline</li>
+        <li>Public website, always online</li>
+        <li>Dedicated desktop application</li>
+        <li>Personalized briefings by topic</li>
+        <li>AI-powered trend detection</li>
+        <li>Richer signal analysis &amp; summaries</li>
+        <li>Public API for partners</li>
+        <li>Open-source tooling &amp; SDKs</li>
+        <li>Custom feature requests</li>
+      </ul>
+      <div class="bp-velocity">
+        <strong>Development velocity:</strong> Fast. Four to six features per month. The dedicated app, personalized briefings, public API, and open-source SDKs all ship within the first quarter. Partners integrate directly. The platform becomes infrastructure, not just a website.
+      </div>
+    </div>
+  </div>
+
+  <!-- What ships at each level -->
+  <div class="bp-delta">
+    <h2>What ships, and how fast</h2>
+    <table class="bp-delta-table">
+      <thead>
+        <tr>
+          <th>Deliverable</th>
+          <th>$100/mo</th>
+          <th>$200/mo</th>
+          <th>$400/mo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Web dashboard</strong><br><span style="color:var(--color-muted);font-size:.8rem">Live signals, trends, country analysis, briefings</span></td>
+          <td class="ok">✓ Now</td>
+          <td class="ok">✓ Now</td>
+          <td class="ok">✓ Now</td>
+        </tr>
+        <tr>
+          <td><strong>Dedicated desktop app</strong><br><span style="color:var(--color-muted);font-size:.8rem">Offline-capable, notifications, saved searches</span></td>
+          <td class="dim">—</td>
+          <td class="ok">Q1–Q2</td>
+          <td class="boost">Q1</td>
+        </tr>
+        <tr>
+          <td><strong>Personalized briefings</strong><br><span style="color:var(--color-muted);font-size:.8rem">Custom topic feeds, email digests, saved filters</span></td>
+          <td class="dim">—</td>
+          <td class="ok">Q1–Q2</td>
+          <td class="boost">Q1</td>
+        </tr>
+        <tr>
+          <td><strong>Public API</strong><br><span style="color:var(--color-muted);font-size:.8rem">REST endpoints for signals, trends, country data</span></td>
+          <td class="dim">—</td>
+          <td class="dim">—</td>
+          <td class="boost">Q1–Q2</td>
+        </tr>
+        <tr>
+          <td><strong>Open-source SDKs</strong><br><span style="color:var(--color-muted);font-size:.8rem">Python &amp; JavaScript libraries, Jupyter notebooks</span></td>
+          <td class="dim">—</td>
+          <td class="dim">—</td>
+          <td class="boost">Q2</td>
+        </tr>
+        <tr>
+          <td><strong>Custom feature requests</strong><br><span style="color:var(--color-muted);font-size:.8rem">Partner-specific views, exports, integrations</span></td>
+          <td class="dim">—</td>
+          <td class="dim">—</td>
+          <td class="boost">Ongoing</td>
+        </tr>
+        <tr>
+          <td><strong>New features per month</strong></td>
+          <td class="dim">~1</td>
+          <td class="ok">~2–3</td>
+          <td class="boost">~4–6</td>
+        </tr>
+        <tr>
+          <td><strong>Time to full platform</strong></td>
+          <td class="dim">12+ months</td>
+          <td class="ok">6–9 months</td>
+          <td class="boost">3–4 months</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Budget breakdown -->
+  <div class="bp-breakdown">
+    <h2>Where the money goes</h2>
+    <div class="bp-breakdown-grid">
+      <div class="bp-bb">
+        <h4>$100/month</h4>
+        <div class="line"><span>API tokens (basic pipeline)</span><span class="amt">$70</span></div>
+        <div class="line"><span>Web hosting &amp; infrastructure</span><span class="amt">$30</span></div>
+        <div class="line"><span>Total</span><span class="amt">$100</span></div>
+      </div>
+      <div class="bp-bb">
+        <h4>$200/month</h4>
+        <div class="line"><span>API tokens (deep analysis)</span><span class="amt">$160</span></div>
+        <div class="line"><span>Web hosting &amp; infrastructure</span><span class="amt">$30</span></div>
+        <div class="line"><span>Operations buffer</span><span class="amt">$10</span></div>
+        <div class="line"><span>Total</span><span class="amt">$200</span></div>
+      </div>
+      <div class="bp-bb">
+        <h4>$400/month</h4>
+        <div class="line"><span>API tokens (full pipeline)</span><span class="amt">$200</span></div>
+        <div class="line"><span>Web hosting &amp; infrastructure</span><span class="amt">$30</span></div>
+        <div class="line"><span>Developer/analyst stipend</span><span class="amt">$170</span></div>
+        <div class="line"><span>Total</span><span class="amt">$400</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Strategic narrative -->
+  <div class="bp-narrative">
+    <h2>Why more money means faster, better features</h2>
+    <p>At $100/month, the platform runs on tokens alone. The web dashboard stays online, the pipeline ingests signals, and the weekly briefing generates. But there is no development capacity. New features arrive slowly because every improvement competes with basic operations for the same limited token budget.</p>
+    <p>At $200/month, the token budget doubles. This unlocks the dedicated desktop application and personalized briefings — features that need sustained AI processing to tailor content per user and per topic. Development accelerates because the pipeline has headroom. But the platform remains a closed system: partners consume what we publish, with no way to integrate directly.</p>
+    <p>At $400/month, the stipend changes everything. A dedicated developer/analyst ships features continuously: the public API, open-source SDKs in Python and JavaScript, Jupyter notebooks for researchers, and custom integrations for partners. The platform stops being a website and becomes infrastructure — something other organizations build on top of. This is the tier where the platform compounds: every feature makes the next one faster to build.</p>
+    <p>The $400 tier ships the full platform in a single quarter. At $100, the same feature set takes over a year.</p>
+  </div>
+
+  <div class="bp-contact">
+    <h3>Next steps</h3>
+    <p>This budget plan is a starting point. We can adjust the feature roadmap, phase the rollout, or design a custom tier for your partnership goals. Reach out at <a href="mailto:ai_lab@theglobalyouth.co?subject=Budget%20Plan%20%E2%80%94%20GYC%20Intelligence%20Platform">ai_lab@theglobalyouth.co</a> to discuss.</p>
+  </div>
+</main>
+
+<footer class="intel-shell-footer">
+  <span>Built 2026-07-08 · 1,355 signals tracked · GYC AI Labs · Intergenerational Foresight</span>
+  <span><a href="index.html">Platform home</a> · <a href="sponsor-brief.html">Sponsor brief</a></span>
+</footer>
+
+<script data-intel-theme="init">
+(function(){
+  var KEY="gyc-fo…heme";
+  function apply(theme){
+    document.documentElement.dataset.theme=theme;
+    var btn=document.getElementById("intel-theme-toggle");
+    if(btn){
+      btn.textContent=theme==="dark"?"\u2600":"\u{1F319}";
+      btn.setAttribute("aria-label",theme==="dark"?"Switch to light mode":"Switch to dark mode");
+    }
+    try{localStorage.setItem(KEY,theme);}catch(e){}
+  }
+  function preferred(){
+    try{var s=localStorage.getItem(KEY);if(s==="light"||s==="dark") return s;}catch(e){}
+    return "light";
+  }
+  var btn=document.getElementById("intel-theme-toggle");
+  if(btn){
+    btn.addEventListener("click",function(){
+      apply(document.documentElement.dataset.theme==="dark"?"light":"dark");
+    });
+  }
+  if(!document.documentElement.dataset.theme) apply(preferred());
+  else apply(document.documentElement.dataset.theme);
+})();
+</script>
+</body>
+</html>

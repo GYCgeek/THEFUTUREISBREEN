@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" fill="none">
+  <defs>
+    <style>
+      .tile{fill:#083F4A}
+      .ring{stroke:#7CB9C4;stroke-width:6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .line{stroke:#D5EEF0;stroke-width:6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .thin{stroke:#7CB9C4;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .accent{stroke:#F3C64E;stroke-width:7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .fill-a{fill:#7CB9C4}
+      .fill-b{fill:#F3C64E}
+      .fill-c{fill:#A7CF72}
+      text{font-family:Arial, sans-serif;font-weight:700;letter-spacing:.08em;fill:#D5EEF0}
+    </style>
+  </defs>
+
+  <g transform="translate(32 32)">
+    <rect class="tile" width="256" height="256" rx="18"/>
+    <circle class="ring" cx="128" cy="112" r="62"/>
+    <path class="thin" d="M66 112h124M128 50c24 31 24 93 0 124M128 50c-24 31-24 93 0 124"/>
+    <path class="line" d="M106 155h58l18 46H88l18-46Z"/>
+    <path class="accent" d="M91 201h74"/>
+    <text x="128" y="236" font-size="19" text-anchor="middle">POLICY</text>
+  </g>
+
+  <g transform="translate(352 32)">
+    <rect class="tile" width="256" height="256" rx="18"/>
+    <circle class="ring" cx="128" cy="120" r="72"/>
+    <path class="line" d="M76 111c20-18 39-18 58 0M122 139c20 18 39 18 58 0"/>
+    <path class="line" d="M80 150h-28c-13 0-23-10-23-23v-8M176 90h28c13 0 23 10 23 23v8"/>
+    <path class="accent" d="M93 88h70M93 172h70"/>
+    <circle class="fill-a" cx="80" cy="88" r="7"/>
+    <circle class="fill-b" cx="176" cy="172" r="7"/>
+    <text x="128" y="236" font-size="19" text-anchor="middle">NEGOTIATE</text>
+  </g>
+
+  <g transform="translate(672 32)">
+    <rect class="tile" width="256" height="256" rx="18"/>
+    <circle class="ring" cx="128" cy="118" r="42"/>
+    <path class="line" d="M128 160v39M89 100l-33-20M167 100l33-20M91 138l-35 23M165 138l35 23"/>
+    <circle class="fill-c" cx="128" cy="118" r="16"/>
+    <circle class="fill-a" cx="56" cy="80" r="13"/>
+    <circle class="fill-a" cx="200" cy="80" r="13"/>
+    <circle class="fill-a" cx="56" cy="161" r="13"/>
+    <circle class="fill-a" cx="200" cy="161" r="13"/>
+    <circle class="fill-b" cx="128" cy="199" r="13"/>
+    <text x="128" y="236" font-size="19" text-anchor="middle">SYSTEMS</text>
+  </g>
+
+  <g transform="translate(32 352)">
+    <rect class="tile" width="256" height="256" rx="18"/>
+    <path class="line" d="M128 81c-24 0-43 19-43 43 0 17 10 32 24 39v32h38v-32c14-7 24-22 24-39 0-24-19-43-43-43Z"/>
+    <path class="accent" d="M128 50v-20M82 69 68 55M174 69l14-14M61 120H41M215 120h-20"/>
+    <path class="thin" d="M111 195h34M111 211h34"/>
+    <path class="fill-c" d="M77 171c-19-9-32-26-39-51 26 7 43 20 52 39l-13 12ZM179 171c19-9 32-26 39-51-26 7-43 20-52 39l13 12Z"/>
+    <text x="128" y="236" font-size="19" text-anchor="middle">LEADERSHIP</text>
+  </g>
+
+  <g transform="translate(352 352)">
+    <rect class="tile" width="256" height="256" rx="18"/>
+    <circle class="ring" cx="96" cy="145" r="42"/>
+    <path class="line" d="M62 197h126M150 175V94M184 175V70M218 175v-48"/>
+    <path class="accent" d="M74 104c38-36 74-41 121-13"/>
+    <path class="accent" d="m187 72 18 18-26 5"/>
+    <path class="fill-c" d="M96 119c18 12 27 27 26 47-20 1-35-8-47-26 12-3 18-9 21-21Z"/>
+    <text x="128" y="236" font-size="19" text-anchor="middle">FINANCE</text>
+  </g>
+
+  <g transform="translate(672 352)">
+    <rect class="tile" width="256" height="256" rx="18"/>
+    <path class="ring" d="M128 49 198 78v55c0 45-27 76-70 96-43-20-70-51-70-96V78l70-29Z"/>
+    <path class="line" d="M128 94v81M94 133c20 8 34 21 34 42M162 119c-20 12-34 29-34 56"/>
+    <path class="accent" d="M81 185c24-14 41-14 62 0 20 14 38 14 62 0"/>
+    <path class="fill-c" d="M127 81c20 14 31 31 31 52-26 1-43-10-52-31 9-4 16-11 21-21Z"/>
+    <text x="128" y="236" font-size="19" text-anchor="middle">ADAPTATION</text>
+  </g>
+</svg>

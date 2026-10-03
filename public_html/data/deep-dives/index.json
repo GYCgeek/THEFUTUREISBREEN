@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-17T04:55:00.000Z",
+  "description": "In-depth country databases separate from the live signals feed. Italy is the constitutional + VIG stack. Netherlands, Germany and Belgium are Intergenerational Impact Assessment (IIA) mechanism dives: enacted vs cousin vs bite.",
+  "entries": [
+    {
+      "id": "italy-intergenerational-equity",
+      "title": "Italy: Constitutional Intergenerational Equity",
+      "subtitle": "Constitutional reform, Constitutional Court doctrine, and Generational Impact Assessment (VIG)",
+      "country_code": "IT",
+      "language": "en",
+      "database_path": "italy-intergenerational-equity/database.json",
+      "reader_path": "italy-intergenerational-equity/reader.html",
+      "last_updated": "2026-06-28",
+      "tags": [
+        "intergenerational-equity",
+        "constitutional-law",
+        "environment",
+        "vig",
+        "italy"
+      ],
+      "related_signal_ids": [
+        "italy-constitutional-law-art9-future-generations-2022-02-11",
+        "italy-vig-generational-impact-assessment-law-2025-11-20",
+        "italy-mase-youth-climate-consultation-table-2026-03",
+        "italy-youth-peace-security-nap-2026-06-17",
+        "italy-eni-climate-lawsuit-supreme-court-jurisdiction-2025-07-21"
+      ],
+      "related_country_framework": "../country-legal-frameworks/IT.json"
+    },
+    {
+      "id": "netherlands-intergenerational-equity",
+      "title": "Netherlands: Generatietoets and Kinderrechtentoets",
+      "subtitle": "Enacted administrative IIA, budget skip on MN 2026, one consultation-stage child-rights amendment",
+      "country_code": "NL",
+      "language": "en",
+      "database_path": "netherlands-intergenerational-equity/database.json",
+      "reader_path": "netherlands-intergenerational-equity/reader.html",
+      "last_updated": "2026-08-17",
+      "tags": [
+        "intergenerational-equity",
+        "iia",
+        "generatietoets",
+        "kinderrechtentoets",
+        "netherlands"
+      ],
+      "related_signal_ids": [
+        "netherlands-senate-generatietoets-motion-adopted-2025-11-25",
+        "netherlands-beleidskompas-generatietoets-integration-2025-12-04",
+        "netherlands-publishes-a-completed-generatietoets-on-the-national-circular-economy-programme-2023-203",
+        "dutch-reikwijdte-jeugdwet-consultation-publishes-a-kinderrechtentoets-that-adjusted-two-bill-safegua"
+      ],
+      "related_country_framework": "../country-legal-frameworks/NL.json"
+    },
+    {
+      "id": "germany-intergenerational-equity",
+      "title": "Germany: Jugend-Check and Article 20a",
+      "subtitle": "Independent youth-check at volume, Bundestag not bound, documented skips",
+      "country_code": "DE",
+      "language": "en",
+      "database_path": "germany-intergenerational-equity/database.json",
+      "reader_path": "germany-intergenerational-equity/reader.html",
+      "last_updated": "2026-08-17",
+      "tags": [
+        "intergenerational-equity",
+        "iia",
+        "jugend-check",
+        "article-20a",
+        "germany"
+      ],
+      "related_signal_ids": [
+        "germany-youth-check-third-report-490-federal-bills-screened-91-youth-impact-assessments-in-20th-bund",
+        "german-minijobs-government-draft-drops-jugend-check-youth-protective-time-recording-and-payslip-rule",
+        "thuringia-enacts-rechtspfleger-robe-clause-after-land-jugend-check-on-the-court-organisation-bill-20"
+      ],
+      "related_country_framework": "../country-legal-frameworks/DE.json"
+    },
+    {
+      "id": "belgium-intergenerational-equity",
+      "title": "Belgium: Flanders JoKER — the stall gate",
+      "subtitle": "Subnational statutory youth-effect report; Council of State can stall a missing JoKER",
+      "country_code": "BE",
+      "language": "en",
+      "database_path": "belgium-intergenerational-equity/database.json",
+      "reader_path": "belgium-intergenerational-equity/reader.html",
+      "last_updated": "2026-08-17",
+      "tags": [
+        "intergenerational-equity",
+        "iia",
+        "joker",
+        "flanders",
+        "belgium"
+      ],
+      "related_signal_ids": [
+        "flanders-expands-mandatory-joker-child-and-youth-impact-reports-from-under-25-to-age-30-2026-03-13",
+        "flanders-files-a-completed-joker-with-the-community-institution-school-bill-after-the-13-march-2026",
+        "flemish-council-of-state-required-a-missing-joker-before-the-2021-closed-supervision-youth-justice-b"
+      ],
+      "related_country_framework": "../country-legal-frameworks/BE.json"
+    }
+  ]
+}

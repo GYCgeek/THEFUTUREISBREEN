@@ -1,0 +1,90 @@
+DirectoryIndex index.html
+
+# No public folder listings (they exposed /public_html/data/ and /DB/).
+Options -Indexes
+
+<IfModule mod_alias.c>
+	Redirect 301 /whyavocado https://www.theglobalyouth.co/assets/documents/Avocado-Framework-Introduction.pdf
+</IfModule>
+
+# Extensionless HTML files get no Content-Type from Apache.
+# Chrome sniffs HTML; Safari iOS and some Android / in-app browsers show the
+# source instead. Force the type on the pretty-URL copies.
+<IfModule mod_mime.c>
+	<Files "GYCT">
+		ForceType text/html
+	</Files>
+	<Files "Foresight-Research">
+		ForceType text/html
+	</Files>
+	<Files "FfD4">
+		ForceType text/html
+	</Files>
+</IfModule>
+<IfModule mod_headers.c>
+	<Files "GYCT">
+		Header set Content-Type "text/html; charset=UTF-8"
+	</Files>
+	<Files "Foresight-Research">
+		Header set Content-Type "text/html; charset=UTF-8"
+	</Files>
+	<Files "FfD4">
+		Header set Content-Type "text/html; charset=UTF-8"
+	</Files>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+
+	# Internal material that must not be public (personal CVs and letters,
+	# email-thread analyses, operating budget). Files stay on the server; the web gets 403.
+	RewriteRule ^public_html/data/Genaro_Godoy_[^/]*$ - [F,NC]
+	RewriteRule ^public_html/(public_html/)?data/cv\.html$ - [F,NC]
+	RewriteRule ^public_html/(public_html/)?data/([^/]*-)?email-analysis[^/]*(/.*)?$ - [F,NC]
+	RewriteRule ^public_html/(public_html/)?intel/budget-plan\.html$ - [F,NC]
+	# GYCT applicant eligibility list (participant names and emails).
+	RewriteRule ^public_html/(public_html/)?age\.html$ - [F,NC]
+	# Developer notes and deploy probes (local machine paths, test pages).
+	RewriteRule (^|/)README\.md$ - [F,NC]
+	RewriteRule ^public_html/(public_html/)?(intel/)?[^/]*-probe[^/]*$ - [F,NC]
+
+	# 301s for retired and mistyped URLs (see docs/site-map.md).
+	RewriteRule ^energy/?$ /GYCT [R=301,L,NC]
+	RewriteRule ^services\.html$ /about [R=301,L,NC]
+	RewriteRule ^ourproject\.html$ /ourprojects [R=301,L,NC]
+	RewriteRule ^ForesightResearch/?$ /Foresight-Research [R=301,L,NC]
+	RewriteRule ^TT/?$ /thetrident [R=301,L,NC]
+	RewriteRule ^report2025/?$ /reports [R=301,L,NC]
+	RewriteRule ^public_html/horizon-scanning$ /Foresight-Research#horizon-scanning [R=301,NE,L]
+	# Stale copies of live pages (old personal emails / internal form links).
+	RewriteRule ^public_html/public_html/GYCT(\.html)?$ /GYCT [R=301,L,NC]
+	RewriteRule ^old/GYCT\.html$ /GYCT [R=301,L,NC]
+	RewriteRule ^old/Foresight-ResearchOLD\.html$ /Foresight-Research [R=301,L,NC]
+	RewriteRule ^old/Article-test$ /Foresight-Research [R=301,L,NC]
+	RewriteRule ^test2$ /Foresight-Research [R=301,L,NC]
+
+	# Leave real files and directories untouched.
+	RewriteCond %{REQUEST_FILENAME} -f [OR]
+	RewriteCond %{REQUEST_FILENAME} -d
+	RewriteRule ^ - [L]
+
+	# Map the site's clean routes to the actual legacy filenames.
+	RewriteRule ^index/?$ index.html [L,NC]
+	RewriteRule ^about/?$ about-us.html [L,NC]
+	RewriteRule ^contact/?$ contact-us.html [L,NC]
+	RewriteRule ^gyct/?$ GYCT.html [L,NC]
+	RewriteRule ^ffd4/?$ FfD4.html [L,NC]
+	RewriteRule ^foresight-research/?$ Foresight-Research.html [L,NC]
+	RewriteRule ^omwcop30/?$ old/OMWCOP30.html [L,NC]
+	RewriteRule ^reports/?$ reports.html [L,NC]
+	RewriteRule ^reeforesting4peace/?$ Reeforesting4Peace.html [L,NC]
+	RewriteRule ^report2025/?$ report2025.html [L,NC]
+	RewriteRule ^ourprojects/?$ old/ourproject.html [L,NC]
+	RewriteRule ^thetrident/?$ old/onceinalifetime.html [L,NC]
+	RewriteRule ^mission_vision(\.html)?/?$ old/mission_vision.html [L,NC]
+	# Fallback for routes that already match an html filename without the extension.
+	RewriteRule ^([^./]+)/?$ $1.html [L,NC]
+</IfModule>
+
+ErrorDocument 404 /error.html

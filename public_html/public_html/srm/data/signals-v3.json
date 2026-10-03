@@ -1,0 +1,406 @@
+{
+  "schema_version": 3,
+  "generated": "2026-06-28T18:54:47.677Z",
+  "source": "signals-db.json",
+  "migration": "scripts/migrate-signals-v3.mjs",
+  "count": 5,
+  "signals": [
+    {
+      "id": "cbd-geoengineering-moratorium-reaffirmed-2026-06",
+      "title": "CBD parties reaffirm de facto moratorium on climate geoengineering",
+      "topic": "moratorium",
+      "domain": "Governance & Law",
+      "signal_type": "legal",
+      "tags": [
+        "governance",
+        "moratorium",
+        "international law"
+      ],
+      "time_horizon": "H3",
+      "maturity": "emerging",
+      "country": "International",
+      "mentioned_countries": [],
+      "policy_areas": [
+        "International law",
+        "Environment"
+      ],
+      "first_seen_date": "2026-06-20",
+      "last_seen_date": "2026-06-20",
+      "last_posted_date": "2026-06-20",
+      "status": "active",
+      "summary": "Parties to the Convention on Biological Diversity restated the 2010 guidance discouraging climate-related geoengineering, including solar radiation modification, in the absence of an adequate scientific basis and appropriate global governance.",
+      "why_it_matters": "The CBD decision is the most widely-cited international restraint on open-air geoengineering and anchors the cautious pole of the governance debate.",
+      "confidence": "Medium",
+      "update_note": null,
+      "sightings": [
+        {
+          "source_url": "https://www.cbd.int/decisions",
+          "source_name": "Convention on Biological Diversity",
+          "source_type": "unknown",
+          "source_class": "multilateral",
+          "seen_date": "2026-06-20",
+          "publication_date": "2026-06-20",
+          "retrieved_at": "2026-06-28T00:00:00.000Z",
+          "evidence_role": "commentary",
+          "image_url": null,
+          "image_source": "none",
+          "note": null
+        }
+      ],
+      "corroboration": 1,
+      "corroboration_count": 1,
+      "contradiction_count": 0,
+      "evidence_depth": "thin",
+      "claim_status": "candidate",
+      "signal_stage": "announcement",
+      "image_url": null,
+      "image_source": "none",
+      "scores": {
+        "credibility": 3,
+        "novelty": 3,
+        "strategic_relevance": 5,
+        "potential_impact": 4,
+        "urgency": 4,
+        "geographic_significance": 3,
+        "composite": 3.8,
+        "priority_band": "strong-monitoring",
+        "rationale": "Heuristic AI first pass: credibility from stated confidence + source authority; novelty/impact from first-ever & multilateral markers; urgency from recency; relevance from topic centrality.",
+        "review_status": "ai_provisional",
+        "reviewed_by": null,
+        "source": "rules",
+        "decayed_composite": 3.8
+      },
+      "ie_lens": [
+        "moratorium-nonuse",
+        "outdoor-experiments",
+        "international-law"
+      ],
+      "thread_id": null,
+      "related": [],
+      "trend_ids": [
+        "moratoria-and-non-use"
+      ],
+      "entities": [],
+      "merged_ids": [],
+      "classification_status": "ai_provisional",
+      "staleness_days": 8,
+      "freshness": "fresh"
+    },
+    {
+      "id": "us-ostp-srm-research-plan-2026-05",
+      "title": "US science office advances a governed solar radiation modification research plan",
+      "topic": "research-governance",
+      "domain": "Governance & Law",
+      "signal_type": "policy",
+      "tags": [
+        "governance",
+        "deployment"
+      ],
+      "time_horizon": "H3",
+      "maturity": "emerging",
+      "country": "US",
+      "mentioned_countries": [],
+      "policy_areas": [
+        "Research governance",
+        "Climate"
+      ],
+      "first_seen_date": "2026-05-30",
+      "last_seen_date": "2026-05-30",
+      "last_posted_date": "2026-05-30",
+      "status": "active",
+      "summary": "The US federal science office continued work on a congressionally-mandated research plan covering solar and atmospheric interventions, emphasising transparency, oversight and impact assessment rather than any deployment commitment.",
+      "why_it_matters": "A formal national research framework legitimises governed SRM study and sets a template other governments may follow or contest.",
+      "confidence": "Medium",
+      "update_note": null,
+      "sightings": [
+        {
+          "source_url": "https://www.whitehouse.gov/ostp/",
+          "source_name": "US Office of Science and Technology Policy",
+          "source_type": "official",
+          "source_class": "institution",
+          "seen_date": "2026-05-30",
+          "publication_date": "2026-05-30",
+          "retrieved_at": "2026-06-28T00:00:00.000Z",
+          "evidence_role": "primary",
+          "image_url": null,
+          "image_source": "none",
+          "note": null
+        }
+      ],
+      "corroboration": 1,
+      "corroboration_count": 1,
+      "contradiction_count": 0,
+      "evidence_depth": "thin",
+      "claim_status": "candidate",
+      "signal_stage": "announcement",
+      "image_url": null,
+      "image_source": "none",
+      "scores": {
+        "credibility": 4,
+        "novelty": 3,
+        "strategic_relevance": 5,
+        "potential_impact": 3,
+        "urgency": 3,
+        "geographic_significance": 4,
+        "composite": 3.8,
+        "priority_band": "strong-monitoring",
+        "rationale": "Heuristic AI first pass: credibility from stated confidence + source authority; novelty/impact from first-ever & multilateral markers; urgency from recency; relevance from topic centrality.",
+        "review_status": "ai_provisional",
+        "reviewed_by": null,
+        "source": "rules",
+        "decayed_composite": 3.57
+      },
+      "ie_lens": [],
+      "thread_id": null,
+      "related": [],
+      "trend_ids": [
+        "srm-research-governance"
+      ],
+      "entities": [],
+      "merged_ids": [],
+      "classification_status": "ai_provisional",
+      "staleness_days": 29,
+      "freshness": "aging"
+    },
+    {
+      "id": "mexico-restricts-solar-geoengineering-experiments-2026-04",
+      "title": "Mexico moves to restrict solar geoengineering experiments on its territory",
+      "topic": "moratorium",
+      "domain": "Governance & Law",
+      "signal_type": "legal",
+      "tags": [
+        "stratospheric aerosol injection",
+        "governance",
+        "moratorium"
+      ],
+      "time_horizon": "H3",
+      "maturity": "emerging",
+      "country": "MX",
+      "mentioned_countries": [],
+      "policy_areas": [
+        "National policy",
+        "Environment"
+      ],
+      "first_seen_date": "2026-04-18",
+      "last_seen_date": "2026-04-18",
+      "last_posted_date": "2026-04-18",
+      "status": "active",
+      "summary": "Mexican authorities reiterated steps to prohibit solar geoengineering experimentation following an unauthorised private stratospheric aerosol release, citing precaution and the absence of international governance.",
+      "why_it_matters": "Mexico is among the first states to move toward an explicit national restriction on SRM field activity, a potential model for the restrictive governance pole.",
+      "confidence": "Medium",
+      "update_note": null,
+      "sightings": [
+        {
+          "source_url": "https://www.gob.mx/",
+          "source_name": "Gobierno de Mexico",
+          "source_type": "unknown",
+          "source_class": "institution",
+          "seen_date": "2026-04-18",
+          "publication_date": "2026-04-18",
+          "retrieved_at": "2026-06-28T00:00:00.000Z",
+          "evidence_role": "commentary",
+          "image_url": null,
+          "image_source": "none",
+          "note": null
+        }
+      ],
+      "corroboration": 1,
+      "corroboration_count": 1,
+      "contradiction_count": 0,
+      "evidence_depth": "thin",
+      "claim_status": "candidate",
+      "signal_stage": "announcement",
+      "image_url": null,
+      "image_source": "none",
+      "scores": {
+        "credibility": 3,
+        "novelty": 3,
+        "strategic_relevance": 5,
+        "potential_impact": 3,
+        "urgency": 2,
+        "geographic_significance": 4,
+        "composite": 3.5,
+        "priority_band": "strong-monitoring",
+        "rationale": "Heuristic AI first pass: credibility from stated confidence + source authority; novelty/impact from first-ever & multilateral markers; urgency from recency; relevance from topic centrality.",
+        "review_status": "ai_provisional",
+        "reviewed_by": null,
+        "source": "rules",
+        "decayed_composite": 2.7
+      },
+      "ie_lens": [
+        "moratorium-nonuse",
+        "international-law"
+      ],
+      "thread_id": null,
+      "related": [],
+      "trend_ids": [
+        "moratoria-and-non-use"
+      ],
+      "entities": [],
+      "merged_ids": [],
+      "classification_status": "ai_provisional",
+      "staleness_days": 71,
+      "freshness": "stale"
+    },
+    {
+      "id": "make-sunsets-commercial-aerosol-deployment-2026-06",
+      "title": "Commercial start-up continues selling cooling credits tied to aerosol releases",
+      "topic": "commercial-actors",
+      "domain": "Actors & Funding",
+      "signal_type": "economic",
+      "tags": [
+        "stratospheric aerosol injection",
+        "governance",
+        "deployment",
+        "commercial actor"
+      ],
+      "time_horizon": "H2",
+      "maturity": "emerging",
+      "country": "US",
+      "mentioned_countries": [],
+      "policy_areas": [
+        "Commercial activity",
+        "Deployment"
+      ],
+      "first_seen_date": "2026-06-10",
+      "last_seen_date": "2026-06-10",
+      "last_posted_date": "2026-06-10",
+      "status": "active",
+      "summary": "A commercial start-up continued marketing 'cooling credits' tied to releasing reflective sulfate aerosols via balloons, drawing renewed scrutiny over unilateral, unregulated stratospheric aerosol injection by non-state actors.",
+      "why_it_matters": "Unilateral commercial deployment tests the gap between research governance and real-world action, raising moral-hazard and accountability questions.",
+      "confidence": "Medium",
+      "update_note": null,
+      "sightings": [
+        {
+          "source_url": "https://makesunsets.com/",
+          "source_name": "Make Sunsets",
+          "source_type": "unknown",
+          "source_class": "media",
+          "seen_date": "2026-06-10",
+          "publication_date": "2026-06-10",
+          "retrieved_at": "2026-06-28T00:00:00.000Z",
+          "evidence_role": "commentary",
+          "image_url": null,
+          "image_source": "none",
+          "note": null
+        }
+      ],
+      "corroboration": 1,
+      "corroboration_count": 1,
+      "contradiction_count": 0,
+      "evidence_depth": "thin",
+      "claim_status": "candidate",
+      "signal_stage": "announcement",
+      "image_url": null,
+      "image_source": "none",
+      "scores": {
+        "credibility": 3,
+        "novelty": 3,
+        "strategic_relevance": 4,
+        "potential_impact": 3,
+        "urgency": 3,
+        "geographic_significance": 4,
+        "composite": 3.35,
+        "priority_band": "useful",
+        "rationale": "Heuristic AI first pass: credibility from stated confidence + source authority; novelty/impact from first-ever & multilateral markers; urgency from recency; relevance from topic centrality.",
+        "review_status": "ai_provisional",
+        "reviewed_by": null,
+        "source": "rules",
+        "decayed_composite": 3.3
+      },
+      "ie_lens": [
+        "research-governance",
+        "outdoor-experiments",
+        "methods-cdr-boundary"
+      ],
+      "thread_id": null,
+      "related": [],
+      "trend_ids": [
+        "commercial-and-non-state-actors"
+      ],
+      "entities": [],
+      "merged_ids": [],
+      "classification_status": "ai_provisional",
+      "staleness_days": 18,
+      "freshness": "aging"
+    },
+    {
+      "id": "switzerland-unea-srm-governance-push-2026-03",
+      "title": "Switzerland renews push for UN review of solar radiation modification",
+      "topic": "international-law",
+      "domain": "Governance & Law",
+      "signal_type": "policy",
+      "tags": [
+        "governance",
+        "international law"
+      ],
+      "time_horizon": "H3",
+      "maturity": "emerging",
+      "country": "CH",
+      "mentioned_countries": [],
+      "policy_areas": [
+        "International law",
+        "Governance"
+      ],
+      "first_seen_date": "2026-03-12",
+      "last_seen_date": "2026-03-12",
+      "last_posted_date": "2026-03-12",
+      "status": "active",
+      "summary": "Switzerland sought to place solar radiation modification on the UN Environment Assembly agenda, proposing an expert review to inform multilateral governance of the technology.",
+      "why_it_matters": "A successful UNEA process would be the first broadly multilateral governance track dedicated to SRM, shifting the debate beyond the CBD.",
+      "confidence": "Medium",
+      "update_note": null,
+      "sightings": [
+        {
+          "source_url": "https://www.unep.org/environmentassembly/",
+          "source_name": "UN Environment Assembly",
+          "source_type": "official",
+          "source_class": "multilateral",
+          "seen_date": "2026-03-12",
+          "publication_date": "2026-03-12",
+          "retrieved_at": "2026-06-28T00:00:00.000Z",
+          "evidence_role": "primary",
+          "image_url": null,
+          "image_source": "none",
+          "note": null
+        }
+      ],
+      "corroboration": 1,
+      "corroboration_count": 1,
+      "contradiction_count": 0,
+      "evidence_depth": "thin",
+      "claim_status": "dormant",
+      "signal_stage": "announcement",
+      "image_url": null,
+      "image_source": "none",
+      "scores": {
+        "credibility": 3,
+        "novelty": 3,
+        "strategic_relevance": 5,
+        "potential_impact": 3,
+        "urgency": 2,
+        "geographic_significance": 4,
+        "composite": 3.5,
+        "priority_band": "strong-monitoring",
+        "rationale": "Heuristic AI first pass: credibility from stated confidence + source authority; novelty/impact from first-ever & multilateral markers; urgency from recency; relevance from topic centrality.",
+        "review_status": "ai_provisional",
+        "reviewed_by": null,
+        "source": "rules",
+        "decayed_composite": 2.45
+      },
+      "ie_lens": [
+        "international-law"
+      ],
+      "thread_id": null,
+      "related": [],
+      "trend_ids": [
+        "moratoria-and-non-use"
+      ],
+      "entities": [],
+      "merged_ids": [],
+      "classification_status": "ai_provisional",
+      "staleness_days": 108,
+      "freshness": "dormant"
+    }
+  ]
+}

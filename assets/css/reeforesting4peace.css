@@ -1,0 +1,110 @@
+/* reeforesting4peace.css */
+
+/* Custom styles for Reeforesting 4 Peace page */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+}
+
+.btn-warning, .custom-orange-button {
+    background-color: #ff6600; /* Vibrant Orange */
+    color: white;
+    border: none;
+}
+
+.btn-warning:hover, .custom-orange-button:hover {
+    background-color: #e65c00; /* Slightly darker */
+}
+
+.article-section, .partners-logos {
+    padding: 40px 0;
+}
+
+.r4p-intro-section {
+    padding-top: 24px;
+}
+
+.r4p-intro-title {
+    max-width: 15ch;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(2rem, 4.4vw, 4rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+}
+
+.partners-logos h3, .featured-logos h3 {
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1140px;
+}
+
+/* Responsive font size for article paragraphs */
+.article-section .col-lg-7 p {
+    font-size: 1rem; /* Default size for mobile */
+    text-align: justify; /* Align text to both left and right margins */
+    padding-right: 15px; /* Add padding if needed */
+    padding-left: 15px;  /* Add padding if needed */
+    margin-bottom: 1rem; /* Add some space between paragraphs */
+}
+
+@media (min-width: 768px) {
+    .article-section .col-lg-7 p {
+        font-size: 1.1rem; /* Slightly larger for tablets */
+    }
+}
+
+@media (max-width: 767.98px) {
+    .r4p-intro-section {
+        padding-top: 12px;
+    }
+
+    .r4p-intro-title {
+        max-width: 14ch;
+        font-size: clamp(1.55rem, 6.8vw, 2.4rem);
+        line-height: 1.12;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .article-section .col-lg-7 p {
+        font-size: 1.2rem; /* Larger for desktops */
+    }
+}
+
+@media (min-width: 1200px) {
+    .article-section .col-lg-7 p {
+        font-size: 1.3rem; /* Extra large for large desktops */
+    }
+}
+
+.text-block {
+    padding: 20px; /* Add padding to the text block for better spacing */
+}
+
+.text-block p {
+    text-align: justify; /* Align text to both left and right margins */
+    margin-bottom: 1rem; /* Add some space between paragraphs */
+}
+
+.text-block .btn-warning {
+    display: block; /* Make the button a block to center it */
+    width: fit-content; /* Adjust the width of the button to its content */
+    margin: 0 auto; /* Center the button horizontally */
+    margin-top: 20px; /* Add space above the button */
+}
+
+.logos a img {
+    max-height: 50px; /* Maximum height for logos */
+    width: auto;       /* Width is automatic to maintain aspect ratio */
+    margin: 10px;      /* Optional: Adds some space around the logos */
+}
+/* Add other styles as needed... */

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FfD4 Side Event: Intergenerational Fairness in Financing for Development | Global Youth Coalition</title>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Basic Reset & Body Styling */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; line-height: 1.7; background: #fff; color: #333; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+    /* Header Styling */
+    .main-header { background: #fff; padding: 15px 0; border-bottom: 1px solid #eee; }
+    .main-header .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo a { text-decoration: none; font-size: 1.5em; font-weight: 700; color: #00a09a; }
+    .main-nav ul { list-style: none; display: flex; align-items: center; }
+    .main-nav ul li { margin-left: 20px; }
+    .main-nav ul li a { color: #333; text-decoration: none; padding-bottom: 5px; transition: border-bottom 0.2s; }
+    .main-nav ul li a:hover,
+    .main-nav ul li a.active { color: #00a09a; border-bottom: 2px solid #00a09a; }
+    .trident-button { background: #00a09a; color: #fff; padding: 8px 15px; border-radius: 5px; font-weight: 600; text-transform: uppercase; font-size: 0.85em; letter-spacing: 0.5px; transition: background 0.3s; }
+    .trident-button:hover { background: #008782; }
+
+    /* Main Content Area */
+    .content-area { padding: 40px 0; }
+    .event-title-section { text-align: center; margin-bottom: 40px; padding: 30px 15px; background: #f8f8f8; border-bottom: 3px solid #00a09a; }
+    .event-logos { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+    .event-logos img { height: 80px; margin: 0 20px; }
+    .event-title-section h1 { color: #333; font-size: 2.2em; margin-bottom: 10px; }
+    .event-title-section .subtitle { font-size: 1.2em; color: #555; font-style: italic; }
+    .cta-button { display: inline-block; background: #00a09a; color: #fff; padding: 12px 25px; border-radius: 5px; margin-top: 20px; font-weight: bold; transition: background 0.3s; }
+    .cta-button:hover { background: #008782; }
+
+    /* Advocacy Banner */
+    .advocacy-banner { background: #f2f7f7; border: 2px solid #00a09a; border-radius: 8px; padding: 20px; margin: 30px 0; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+    .advocacy-banner h3 { color: #00a09a; font-size: 1.5em; margin-bottom: 10px; }
+    .advocacy-banner p { margin-bottom: 15px; font-size: 1.1em; }
+    .document-button { display: inline-block; background: #00a09a; color: #fff; padding: 12px 20px; border-radius: 5px; font-weight: bold; margin-top: 10px; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+    .document-button:hover { background: #008782; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.2); text-decoration: none; }
+    .document-button i { margin-right: 8px; }
+
+    /* Headings */
+    h2 { color: #00a09a; margin-top: 30px; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 8px; font-size: 1.8em; }
+    p, ul { margin-bottom: 15px; }
+    ul { list-style: disc; margin-left: 25px; }
+    li { margin-bottom: 8px; }
+    a { color: #00a09a; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Research Box */
+    .research-box { background: #f8f8f8; border: 2px solid #00a09a; border-radius: 8px; padding: 25px; margin: 30px 0; text-align: center; }
+    .research-box h3 { color: #00a09a; font-size: 1.6em; margin-bottom: 15px; }
+    .research-box p { font-size: 1.1em; margin-bottom: 20px; }
+
+    /* PDF Embed */
+    .pdf-embed { margin: 40px 0; }
+    .pdf-embed iframe { width: 100%; height: 600px; border: 1px solid #eee; border-radius: 4px; }
+
+    /* Table Styling */
+    table { width: 100%; border-collapse: collapse; margin: 25px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    th, td { border: 1px solid #eee; padding: 12px 15px; text-align: left; }
+    th { background: #f7f7f7; font-weight: 700; }
+    tr:nth-child(even) { background: #fdfdfd; }
+    .tbc { font-style: italic; color: #888; }
+    .contact-list li { list-style: none; }
+    .contact-list a { font-weight: bold; }
+
+    /* Organizers Grid */
+    .organizers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; }
+    .organizer-card { text-align: center; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .organizer-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+    /* Footer Styling */
+    .main-footer { background: #333; color: #f4f4f4; text-align: center; padding: 30px 0; margin-top: 40px; }
+    .social-icons a { color: #fff; margin: 0 10px; font-size: 1.2em; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .main-header .container { flex-direction: column; text-align: center; }
+      .main-nav ul { justify-content: center; flex-wrap: wrap; }
+      .organizers-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+      .event-logos img { height: 60px; margin: 0 10px; }
+    }
+    @media (max-width: 480px) {
+      .event-logos { flex-direction: column; }
+      .event-logos img { margin: 10px 0; }
+      h1 { font-size: 1.8em; }
+      .subtitle { font-size: 1em; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <a href="https://theglobalyouth.co/">Global Youth Coalition</a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="https://theglobalyouth.co/">Home</a></li>
+          <li><a href="https://theglobalyouth.co/about">About</a></li>
+          <li><a href="https://theglobalyouth.co/FfD4" class="active">FfD4</a></li>
+          <li><a href="https://theglobalyouth.co/contact">Contact</a></li>
+          <li><a href="https://theglobalyouth.co/thetrident" class="trident-button">The Trident</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="event-title-section">
+    <div class="container">
+      <div class="event-logos">
+        <img src="https://theglobalyouth.co/assets/images/global_logo1.png" alt="Global Youth Coalition Logo">
+        <!-- FfD4 logo hidden: the UN DESA hotlink is blocked (403); self-host the file to restore it. -->
+      </div>
+      <h1>FfD4 Side Event: Intergenerational Fairness in Financing for Development</h1>
+      <p class="subtitle">Youth-Led Futures for FfD4 Implementation</p>
+    </div>
+  </section>
+
+  <main class="content-area">
+    <div class="container">
+
+      <div class="advocacy-banner">
+        <h3>Want to advocate at FfD4?</h3>
+        <p>Start by reading the First Draft of the FfD4 Outcome Document to understand the elements of the negotiated outcome of the conference.</p>
+        <a href="https://financing.desa.un.org/sites/default/files/2025-03/FFD4%20Outcome%20First%20Draft.pdf" class="document-button" download>
+          <i class="fas fa-file-pdf"></i> Download FfD4 Outcome First Draft
+        </a>
+      </div>
+
+  
+            <h2>Abstract</h2>
+            <p>As the Fourth International Conference on Financing for Development (FfD4) charts the path toward a more just and sustainable global financial system, this side event will explore how intergenerational fairness perspectives and strategic foresight can be integrated into the implementation of FfD4 outcomes. Anchored in a global youth-led research initiative, the session will feature insights from a pre-conference workshop in Sevilla and bring together young leaders, foresight experts, and policymakers to reimagine financing systems that serve both present and future generations.</p>
+            <p>Participants will unpack how FfD4 outcome areas—debt sustainability, systemic issues, international development cooperation, the global financing framework, and follow-up mechanisms—can be approached through the lens of intergenerational justice. The event will also highlight tools and strategies to make these systems more inclusive, accountable, and future-resilient, while supporting youth mobilization and coalition-building for long-term impact.</p>
+            <p><strong>This space is a launchpad for action—bridging generational divides to deliver financing solutions that endure beyond 2030.</strong></p>
+
+            <h2>Background</h2>
+            <p>In the Pact for the Future and the Declaration on Future Generations (DFG), UN Member States acknowledged that sustainable, fair, and equitable development requires the meaningful participation of youth and the protection of the needs of future generations. These values are essential in shaping and implementing the outcomes of the Fourth International Conference on Financing for Development (FfD4).</p>
+            <p>As the global community seeks to reform international financial frameworks to deliver the Sustainable Development Goals (SDGs), in the eyes of young people, current governance mechanisms are increasingly seen as outdated and inequitable. Intergenerational fairness and futures-thinking offer new lenses and tools to break through inertia and embed long-term responsibility into climate and development financing decisions.</p>
+            <p>This side event aims to convene a diverse set of stakeholders to explore how intergenerational fairness and strategic foresight can be integrated into the implementation of FfD4's outcomes, taking steps to ensure they serve both present and future generations.</p>
+
+            <h2>About the Research Project</h2>
+            <p>This side event is part of a youth-led global <a href="#co-organizers">research initiative</a> exploring intergenerational equity/fairness, including in climate and development finance. As a contribution to this project, a youth-led workshop will be held in Sevilla (outside the FfD4 venue) on <strong>Tuesday, 1 July 2025</strong>, to gather perspectives, practices, expectations, and priorities from youth advocates - which will be shared during the side event.</p>
+                <!-- New Research Box -->
+      <div class="research-box">
+        <h3>Youth‑Led Global Research Initiative</h3>
+        <p>
+          This workshop in Sevilla (1 July 2025) drives a global initiative on intergenerational equity in climate &amp; development finance.
+        </p>
+        <a href="https://coral-liuka-68.tiiny.site" target="_blank" class="document-button">
+          <i class="fas fa-file-pdf"></i> Read the Research Concept Note
+        </a>
+      </div>
+
+      <!-- Embedded PDF Preview -->
+      <div class="pdf-embed">
+        <iframe
+          src="https://coral-liuka-68.tiiny.site"
+          title="Research Concept Note">
+          Your browser doesn’t support embedded PDFs. 
+          <a href="https://coral-liuka-68.tiiny.site" target="_blank">Download it here</a>.
+        </iframe>
+      </div>
+
+
+
+            <h2>Event Objectives</h2>
+            <ul>
+                <li>Integrate intergenerational perspectives into the implementation and follow-up of FfD4 outcomes.</li>
+                <li>Explore how foresight and future-thinking tools can make financing decisions more inclusive and future-resilient.</li>
+                <li>Feed into a broader youth-led research initiative focused on Intergenerational equity in climate and development finance.</li>
+                <li>Identify the barriers, enablers, and change levers for embedding intergenerational fairness into financial systems.</li>
+                <li>Support youth coalition-building and futures-thinking skills development around the FfD4 agenda.</li>
+            </ul>
+
+            <h2>Key Issues to Explore</h2>
+            <ul>
+                <li>How can FfD4 outcomes help mobilize intergenerational fairness? On the contrary, what are potential risks for intergenerational fairness?</li>
+                <li>Why and how should intergenerational fairness and futures-thinking be operationalized in global financial frameworks at national and international levels?</li>
+                <li>What accountability mechanisms can we ensure for FfD4 outcomes implementation to uphold commitments to future generations?</li>
+                <li>How can we use the youth-led research to mobilize young people and build intergenerational coalitions that hold FfD-related actors and ecosystems accountable?</li>
+            </ul>
+
+            <!-- Hidden until Q9 (past event: archive or redirect): date, time, venue and two speakers were never confirmed on this page. -->
+            <div class="tbc-block" hidden>
+            <h2>Date, Time & Location</h2>
+            <p><strong>Date:</strong> <span class="tbc">To Be Confirmed (TBC) - During the FfD4 Conference</span></p>
+            <p><strong>Time:</strong> <span class="tbc">To Be Confirmed (TBC) - Duration: 1h30min</span></p>
+            <p><strong>Location:</strong> <span class="tbc">To Be Confirmed (TBC) - FfD4 Side Event Venue</span></p>
+            <p><em>(Note: A related youth workshop will take place in Sevilla on July 1, 2025)</em></p>
+
+<!-- Workshop Apply CTA -->
+<div class="workshop-cta" hidden style="text-align: center; margin: 30px 0;">
+  <a
+    href="#"
+    class="cta-button"
+    aria-disabled="true"
+    title="Link will be shared before the conference"
+    onclick="alert('The application link will be shared before the conference.')"
+  >
+    Apply to In‑Person Workshop
+  </a>
+  <p style="font-size:0.9em; color:#555; margin-top:8px;">
+    (Link will be activated close to FfD4)
+  </p>
+</div>
+
+
+            <h2>Agenda / Run of Show (1h30)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Segment</th>
+                        <th>Speaker</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10 min</td>
+                        <td>Introduction</td>
+                        <td>Facilitator (GYC)</td>
+                    </tr>
+                    <tr>
+                        <td>5-10 min</td>
+                        <td>High-Level Opening</td>
+                        <td>Dr. Mahmoud Mohieldin <span class="tbc">(tbc)</span></td>
+                    </tr>
+                     <tr>
+                        <td>5 min</td>
+                        <td>Presentation of Speakers</td>
+                        <td>Moderator</td>
+                    </tr>
+                    <tr>
+                        <td>10 min</td>
+                        <td><strong>Speaker 1</strong> - An Intergenerational Fairness Lens to Discuss FfD4 Outcomes</td>
+                        <td>ICGA</td>
+                    </tr>
+                    <tr>
+                        <td>10 min</td>
+                        <td><strong>Speaker 2</strong> - Youth-Led Research: Intergenerational Equity in Climate and Development Finance</td>
+                        <td>Facilitator (GYC)</td>
+                    </tr>
+                     <tr>
+                        <td>10 min</td>
+                        <td><strong>Speaker 3</strong> - IGF and Futures Thinking in Global Financial Frameworks: Why?</td>
+                        <td>SOIF</td>
+                    </tr>
+                     <tr>
+                        <td>10 min</td>
+                        <td><strong>Speaker 4</strong> - Case Study: IGF and Futures Thinking in an FfD-related ecosystem</td>
+                        <td><span class="tbc">TBD</span></td>
+                    </tr>
+                     <tr>
+                        <td>10 min</td>
+                        <td><strong>Speaker 5</strong> - What's Next: Youth Mobilization and Intergenerational Community Building</td>
+                        <td><span class="tbc">TBD</span></td>
+                    </tr>
+                     <tr>
+                        <td>20 min</td>
+                        <td>Q&A and Interactive Segment</td>
+                        <td>Facilitator + All Speakers</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <h2 id="co-organizers">Co-Organisers</h2>
+            <div class="organizers-grid">
+                <div class="organizer-card">
+                    <h3>Global Youth Coalition</h3>
+                    <p>via Youthinkgreen - jugend denkt um.welt (lead)</p>
+                </div>
+                <div class="organizer-card">
+                    <h3>ICGA</h3>
+                    <p>Intergenerational Center for Global Action</p>
+                </div>
+                <div class="organizer-card">
+                    <h3>SOIF</h3>
+                    <p>School of International Futures</p>
+                </div>
+                <div class="organizer-card">
+                    <h3>REDFIS</h3> 
+                    <p> LAC Network for Sustainable Finance </p>
+                </div>
+                <div class="organizer-card">
+                    <h3>Life of Pachamama</h3>
+                </div>
+                <div class="organizer-card">
+                    <h3>The Millennials Movement</h3>
+                </div>
+            </div>
+
+            <h2>Contact Information</h2>
+            <p>For inquiries, please contact:</p>
+            <ul class="contact-list">
+                <li><a href="mailto:gen@theglobalyouth.co">gen@theglobalyouth.co</a></li>
+                <li><a href="mailto:takeaction@theglobalyouth.co">takeaction@theglobalyouth.co</a></li>
+            </ul>
+
+        </div><!-- /.container -->
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logos">
+                    <img src="https://theglobalyouth.co/assets/images/global_logo1.png" alt="Global Youth Coalition Logo" style="height: 50px; filter: brightness(0) invert(1);">
+                </div>
+                <p>© 2026 Global Youth Coalition. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="https://twitter.com/theglobalyouthc" aria-label="X (Twitter)" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/theglobalyouth_co/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/the-global-youth-coalition/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for social icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+</body>
+</html>

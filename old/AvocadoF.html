@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avocado Framework</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .framework-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .framework-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .framework-image:hover {
+            transform: scale(1.02);
+        }
+
+        /* Fullscreen viewer styles */
+        .fullscreen-viewer {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            touch-action: none; /* Prevents default touch behaviors */
+        }
+
+        .fullscreen-image {
+            max-width: 90%;
+            max-height: 90vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .navigation-hint {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            .framework-container {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+            
+            .navigation-hint {
+                text-align: center;
+                left: 50%;
+                transform: translateX(-50%);
+                white-space: nowrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="framework-container">
+        <img src="https://theglobalyouth.co/assets/images/FRAMEWORK/1.jpg" alt="Framework 1" class="framework-image">
+        <img src="https://theglobalyouth.co/assets/images/FRAMEWORK/2.jpg" alt="Framework 2" class="framework-image">
+        <img src="https://theglobalyouth.co/assets/images/FRAMEWORK/3.jpg" alt="Framework 3" class="framework-image">
+        <img src="https://theglobalyouth.co/assets/images/FRAMEWORK/4.jpg" alt="Framework 4" class="framework-image">
+        <img src="https://theglobalyouth.co/assets/images/FRAMEWORK/5.jpg" alt="Framework 5" class="framework-image">
+        <img src="https://theglobalyouth.co/assets/images/FRAMEWORK/6.jpg" alt="Framework 6" class="framework-image">
+        <img src="https://theglobalyouth.co/assets/images/FRAMEWORK/7.jpg" alt="Framework 7" class="framework-image">
+        <img src="https://theglobalyouth.co/assets/images/FRAMEWORK/8.jpg" alt="Framework 8" class="framework-image">
+        <img src="https://theglobalyouth.co/assets/images/FRAMEWORK/9.jpg" alt="Framework 9" class="framework-image">
+        <img src="https://theglobalyouth.co/assets/images/FRAMEWORK/10.jpg" alt="Framework 10" class="framework-image">
+        <img src="https://theglobalyouth.co/assets/images/FRAMEWORK/11.jpg" alt="Framework 11" class="framework-image">
+        <img src="https://theglobalyouth.co/assets/images/FRAMEWORK/12.jpg" alt="Framework 12" class="framework-image">
+        <img src="https://theglobalyouth.co/assets/images/FRAMEWORK/13.jpg" alt="Framework 13" class="framework-image">
+    </div>
+
+    <!-- Fullscreen viewer -->
+    <div class="fullscreen-viewer">
+        <img class="fullscreen-image" src="" alt="Fullscreen view">
+        <div class="navigation-hint">Swipe or use ← → arrows to navigate • ESC to exit</div>
+    </div>
+
+    <script>
+        const viewer = document.querySelector('.fullscreen-viewer');
+        const fullscreenImage = document.querySelector('.fullscreen-image');
+        const images = document.querySelectorAll('.framework-image');
+        const totalImages = images.length;
+        let currentImageIndex = 0;
+
+        // Touch handling variables
+        let touchStartX = 0;
+        let touchEndX = 0;
+        let mouseStartX = 0;
+        let mouseEndX = 0;
+        let isDragging = false;
+
+        // Helper function to get image number from src
+        function getImageNumber(src) {
+            return parseInt(src.match(/(\d+)\.jpg$/)[1]);
+        }
+
+        // Helper function to construct image URL
+        function getImageUrl(number) {
+            return `https://theglobalyouth.co/assets/images/FRAMEWORK/${number}.jpg`;
+        }
+
+        // Open fullscreen
+        images.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                currentImageIndex = index;
+                fullscreenImage.src = img.src;
+                viewer.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Navigate to next image
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % totalImages;
+            fullscreenImage.src = getImageUrl(currentImageIndex + 1);
+        }
+
+        // Navigate to previous image
+        function showPrevImage() {
+            currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+            fullscreenImage.src = getImageUrl(currentImageIndex + 1);
+        }
+
+        // Touch event handlers
+        viewer.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        }, false);
+
+        viewer.addEventListener('touchmove', (e) => {
+            e.preventDefault(); // Prevent default scrolling
+        }, false);
+
+        viewer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].clientX;
+            handleSwipe();
+        }, false);
+
+        // Mouse event handlers
+        viewer.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            mouseStartX = e.clientX;
+            e.preventDefault();
+        }, false);
+
+        viewer.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                e.preventDefault();
+            }
+        }, false);
+
+        viewer.addEventListener('mouseup', (e) => {
+            if (isDragging) {
+                mouseEndX = e.clientX;
+                handleMouseSwipe();
+                isDragging = false;
+            }
+        }, false);
+
+        viewer.addEventListener('mouseleave', () => {
+            isDragging = false;
+        });
+
+        function handleSwipe() {
+            const swipeDistance = touchEndX - touchStartX;
+            const minSwipeDistance = 50; // Minimum distance for swipe
+
+            if (Math.abs(swipeDistance) > minSwipeDistance) {
+                if (swipeDistance > 0) {
+                    showPrevImage();
+                } else {
+                    showNextImage();
+                }
+            }
+        }
+
+        function handleMouseSwipe() {
+            const swipeDistance = mouseEndX - mouseStartX;
+            const minSwipeDistance = 50;
+
+            if (Math.abs(swipeDistance) > minSwipeDistance) {
+                if (swipeDistance > 0) {
+                    showPrevImage();
+                } else {
+                    showNextImage();
+                }
+            } else {
+                // Handle as a click if the movement was small
+                viewer.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Handle keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (viewer.style.display === 'block') {
+                switch(e.key) {
+                    case 'ArrowRight':
+                        showNextImage();
+                        e.preventDefault();
+                        break;
+                    case 'ArrowLeft':
+                        showPrevImage();
+                        e.preventDefault();
+                        break;
+                    case 'Escape':
+                        viewer.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                        break;
+                }
+            }
+        });
+
+        // Close fullscreen on click
+        viewer.addEventListener('click', (e) => {
+            if (e.target === viewer) {
+                viewer.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html> 

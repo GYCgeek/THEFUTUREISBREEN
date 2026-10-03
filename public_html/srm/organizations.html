@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script data-intel-theme="boot">
+(function(){
+  var k="srm-watch-theme";
+  try{
+    var t=localStorage.getItem(k);
+    if(t==="light"||t==="dark") document.documentElement.dataset.theme=t;
+  }catch(e){}
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%230E8FA8%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2222%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2Csans-serif%22%20font-size%3D%2216%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%3ES%3C%2Ftext%3E%3C%2Fsvg%3E" type="image/svg+xml">
+<meta name="description" content="Register of organizations working on solar radiation modification and geoengineering, tagged by type and stance.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SRM Watch">
+<meta property="og:title" content="Organizations · SRM Watch">
+<meta property="og:description" content="Register of organizations working on solar radiation modification and geoengineering, tagged by type and stance.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Organizations · SRM Watch">
+<meta name="twitter:description" content="Register of organizations working on solar radiation modification and geoengineering, tagged by type and stance.">
+<title>Organizations · SRM Watch</title>
+<style>
+:root,[data-theme="light"]{
+  color-scheme:light;
+  /* —— Gamma Bright (canonical) —— */
+  --color-primary:#0E8FA8;
+  --color-secondary:#0B6E90;
+  --color-tertiary:#062B3A;
+  --color-bg:#FFFFFF;
+  --color-bg-subtle:#F7F9FF;
+  --color-surface:#FFFFFF;
+  --color-on-surface:#002253;
+  --color-muted:#6B7280;
+  --color-border:#DFDFE0;
+  --color-overlay:#F7F9FF;
+  --color-error:#E5484D;
+  --color-success:#0D9B6A;
+  --color-warning:#D97706;
+  --color-info:#0E8FA8;
+  --color-neutral:#FFFFFF;
+
+  --priority-high:var(--color-error);
+  --priority-strong:var(--color-warning);
+  --priority-monitor:var(--color-muted);
+  --priority-reviewed:var(--color-success);
+
+  --radius-sm:4px;
+  --radius-md:8px;
+  --radius-lg:12px;
+  --radius-xl:18px;
+  --radius-full:9999px;
+
+  --space-xs:6px;
+  --space-sm:14px;
+  --space-md:32px;
+  --space-lg:56px;
+  --space-gutter:24px;
+  --space-section:64px;
+
+  --container-max:1200px;
+
+  --font-display:"Instrument Sans","DM Sans","Segoe UI Variable","Segoe UI",system-ui,sans-serif;
+  --font-body:"DM Sans","Segoe UI Variable","Segoe UI",system-ui,sans-serif;
+
+  --shadow-sm:0 1px 3px rgba(0,34,83,.06);
+  --shadow-md:0 4px 16px rgba(0,34,83,.08);
+
+  /* —— Legacy aliases (pre-rebrand builders) —— */
+  --bg:var(--color-bg);
+  --bg2:var(--color-bg-subtle);
+  --panel:var(--color-surface);
+  --panel2:var(--color-bg-subtle);
+  --line:var(--color-border);
+  --line2:var(--color-border);
+  --text:var(--color-on-surface);
+  --muted:var(--color-muted);
+  --faint:#94A3B8;
+  --accent:var(--color-primary);
+  --accent2:var(--color-secondary);
+  --hi:var(--color-error);
+  --hi-bg:rgba(229,72,77,.12);
+  --strong:var(--color-warning);
+  --strong-bg:rgba(217,119,6,.12);
+  --useful:var(--color-success);
+  --useful-bg:rgba(13,155,106,.12);
+  --r:var(--radius-lg);
+
+  font-size:16px;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --color-tertiary:#E8EDF7;
+  --color-bg:#0B1220;
+  --color-bg-subtle:#121A2E;
+  --color-surface:#161F33;
+  --color-on-surface:#E8EDF7;
+  --color-muted:#94A3B8;
+  --color-border:#2A3548;
+  --color-overlay:#121A2E;
+  --color-neutral:#E8EDF7;
+  --faint:#64748B;
+  --hi-bg:rgba(229,72,77,.18);
+  --strong-bg:rgba(217,119,6,.18);
+  --useful-bg:rgba(13,155,106,.18);
+  --shadow-sm:0 1px 3px rgba(0,0,0,.28);
+  --shadow-md:0 4px 16px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--color-bg);
+  color:var(--color-on-surface);
+  font-family:var(--font-body);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--color-secondary);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
+  outline:2px solid var(--color-primary);
+  outline-offset:2px;
+}
+.mono{font-family:"Cascadia Code","Consolas",ui-monospace,monospace}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+.skip-link{
+  position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus{
+  position:fixed;left:var(--space-gutter);top:12px;z-index:100;
+  width:auto;height:auto;padding:10px 16px;
+  background:var(--color-primary);color:var(--color-neutral,#fff);
+  border-radius:var(--radius-md);font-weight:600;text-decoration:none;
+}
+.intel-shell-header{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb, var(--color-bg) 94%, transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--color-border);
+  box-shadow:var(--shadow-sm);
+}
+.intel-shell-header-inner{
+  max-width:var(--container-max);margin:0 auto;
+  padding:12px var(--space-gutter);
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.intel-shell-brand{
+  display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;
+}
+.intel-shell-brand:hover{text-decoration:none}
+.intel-shell-mark{
+  width:36px;height:36px;border-radius:var(--radius-lg);
+  background:var(--color-primary);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-weight:700;font-size:1rem;flex-shrink:0;
+}
+.intel-shell-brand-text{display:flex;flex-direction:column;gap:1px}
+.intel-shell-brand-name{
+  font-family:var(--font-display);font-weight:600;font-size:.95rem;
+  color:var(--color-tertiary);letter-spacing:-.02em;line-height:1.2;
+}
+.intel-shell-brand-name span{color:var(--color-primary)}
+.intel-shell-subtitle{font-size:.78rem;color:var(--color-muted);line-height:1.3}
+.intel-shell-nav{
+  display:flex;gap:6px;flex-wrap:wrap;margin-left:auto;
+}
+.intel-shell-nav a{
+  padding:7px 14px;border-radius:var(--radius-full);
+  font-size:.84rem;font-weight:500;color:var(--color-muted);
+  border:1px solid transparent;transition:background .15s,color .15s,border-color .15s;
+  text-decoration:none;
+}
+.intel-shell-nav a:hover{
+  color:var(--color-on-surface);background:var(--color-bg-subtle);text-decoration:none;
+}
+.intel-shell-nav a.active{
+  color:#fff;background:var(--color-primary);border-color:var(--color-primary);
+}
+.intel-shell-nav a .nav-badge{
+  display:inline-block;margin-left:6px;min-width:1.25em;padding:1px 6px;
+  border-radius:var(--radius-full);font-size:.68rem;font-weight:700;line-height:1.35;
+  background:var(--color-error);color:#fff;vertical-align:1px;
+}
+.intel-shell-nav a.active .nav-badge{background:#fff;color:var(--color-primary)}
+.intel-shell-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.intel-theme-toggle{
+  background:var(--color-surface);border:1px solid var(--color-border);
+  border-radius:var(--radius-full);width:38px;height:38px;padding:0;
+  font-size:1rem;line-height:1;cursor:pointer;color:var(--color-muted);
+  transition:background .15s,border-color .15s,color .15s;
+  flex-shrink:0;
+}
+.intel-theme-toggle:hover{color:var(--color-on-surface);border-color:var(--color-primary)}
+.intel-shell-header-inner:has(.intel-shell-nav) .intel-shell-actions{margin-left:0}
+.intel-shell-header-inner:has(.intel-shell-nav) .intel-shell-nav{margin-left:auto}
+.intel-shell-main{max-width:var(--container-max);margin:0 auto;padding:0 var(--space-gutter) 80px}
+.intel-shell-footer{
+  max-width:var(--container-max);margin:0 auto;
+  padding:24px var(--space-gutter) 48px;
+  border-top:1px solid var(--color-border);
+  color:var(--color-muted);font-size:.8rem;
+  display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;
+}
+.intel-shell-footer a{color:var(--color-secondary);font-weight:500}
+@media(max-width:720px){
+  .intel-shell-nav{width:100%;margin-left:0;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}
+  .intel-shell-nav a{flex:0 0 auto}
+}
+.page-title{margin:28px 0 8px;font-family:var(--font-display);font-size:1.5rem;font-weight:600;color:var(--color-tertiary);letter-spacing:-.02em}
+.page-lead{color:var(--color-muted);font-size:.95rem;max-width:64ch;margin-bottom:20px;line-height:1.55}
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:18px 0}
+.controls input[type=search]{flex:1 1 240px;min-width:200px;padding:9px 14px;border:1px solid var(--color-border);border-radius:var(--radius-full);background:var(--color-surface);color:var(--color-on-surface);font:inherit;font-size:.88rem}
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap}
+.filter-bar button{background:var(--color-surface);border:1px solid var(--color-border);color:var(--color-muted);padding:8px 14px;border-radius:var(--radius-full);font:inherit;font-size:.8rem;font-weight:500;cursor:pointer;transition:color .15s,background .15s,border-color .15s}
+.filter-bar button:hover{color:var(--color-on-surface);background:var(--color-bg-subtle)}
+.filter-bar button.active{color:#fff;background:var(--color-primary);border-color:var(--color-primary)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:18px 20px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:8px}
+.card[hidden]{display:none}
+.card-top{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.pill{padding:3px 10px;border-radius:var(--radius-full);font-size:.7rem;font-weight:600}
+.pill.type{background:var(--color-primary);color:#fff}
+.pill.ghost{background:var(--color-bg-subtle);color:var(--color-muted);border:1px solid var(--color-border)}
+.stance-pro-research,.stance-supportive{background:var(--useful-bg);color:var(--color-success)}
+.stance-pro-deployment{background:var(--useful-bg);color:var(--color-success)}
+.stance-cautionary{background:var(--strong-bg);color:var(--color-warning)}
+.stance-opposed,.stance-critical{background:var(--hi-bg);color:var(--color-error)}
+.stance-neutral{background:var(--color-bg-subtle);color:var(--color-muted);border:1px solid var(--color-border)}
+.card-title{font-size:1.02rem;font-weight:600;line-height:1.4;color:var(--color-on-surface);margin:0}
+.card-title a{color:var(--color-on-surface)}
+.card-title a:hover{color:var(--color-primary)}
+.card-loc{font-size:.78rem;color:var(--color-muted)}
+.card-body{font-size:.86rem;color:var(--color-muted);line-height:1.5;margin:4px 0 0}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.tags span{background:var(--color-bg-subtle);border:1px solid var(--color-border);border-radius:var(--radius-full);padding:3px 10px;font-size:.72rem;color:var(--color-muted)}
+.empty{padding:40px;text-align:center;color:var(--color-muted)}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="intel-shell-header" data-intel-shell="v1">
+  <div class="intel-shell-header-inner">
+    <a class="intel-shell-brand" href="index.html">
+      <div class="intel-shell-mark" aria-hidden="true">S</div>
+      <div class="intel-shell-brand-text">
+        <div class="intel-shell-brand-name">SRM <span>Watch</span></div>
+        <div class="intel-shell-subtitle">Organizations</div>
+      </div>
+    </a>
+    <div class="intel-shell-actions">
+      <button type="button" class="intel-theme-toggle" id="intel-theme-toggle" aria-label="Switch to dark mode">🌙</button>
+    </div>
+    <nav class="intel-shell-nav" aria-label="Platform sections"><a class="" href="briefing.html">Brief</a><a class="" href="briefing.html#tab=watchlist">Watchlist</a><a class="" href="country-ambition.html">Countries</a><a class="" href="papers.html">Papers</a><a class="active" href="organizations.html">Organizations</a><a class="" href="review.html">Review</a></nav>
+  </div>
+</header>
+<main class="intel-shell-main" id="main-content">
+<h1 class="page-title">Organizations</h1>
+<p class="page-lead">Academic, governmental, intergovernmental, civil-society and commercial actors shaping the SRM and geoengineering field — tagged by type, focus and stance.</p>
+<div class="controls">
+  <input type="search" id="searchBox" placeholder="Search name, focus, country, description…" aria-label="Search organizations">
+</div>
+<div class="filter-bar" id="filterBar" role="toolbar" aria-label="Filter by type">
+  <button type="button" class="active" data-filter="all">All types</button>
+  <button type="button" data-filter="ngo">NGO</button>
+  <button type="button" data-filter="intergovernmental">Intergovernmental</button>
+  <button type="button" data-filter="academic">Academic</button>
+  <button type="button" data-filter="commercial">Commercial</button>
+</div>
+<div class="grid" id="grid">
+<article class="card" data-type="ngo" data-stance="neutral" data-search="carnegie climate governance initiative (c2g) impartial initiative working to catalyse the creation of effective governance for climate-altering approaches, in particular srm and large-scale carbon dioxide removal. ngo us international governance neutral international law governance multilateral general"><div class="card-top"><span class="pill type">NGO</span><span class="pill stance-neutral">neutral</span><span class="pill ghost">governance</span></div><h2 class="card-title"><a href="https://www.c2g2.net/" target="_blank" rel="noopener">Carnegie Climate Governance Initiative (C2G)</a></h2><div class="card-loc">US · International</div><p class="card-body">Impartial initiative working to catalyse the creation of effective governance for climate-altering approaches, in particular SRM and large-scale carbon dioxide removal.</p><div class="tags"><span>general</span><span>international law</span><span>governance</span><span>multilateral</span></div></article>
+<article class="card" data-type="intergovernmental" data-stance="cautionary" data-search="convention on biological diversity (cbd) un convention whose 2010 decision established a widely-cited de facto moratorium on climate-related geoengineering pending adequate scientific basis and governance. intergovernmental international international governance cautionary moratorium international law multilateral general"><div class="card-top"><span class="pill type">Intergovernmental</span><span class="pill stance-cautionary">cautionary</span><span class="pill ghost">governance</span></div><h2 class="card-title"><a href="https://www.cbd.int/" target="_blank" rel="noopener">Convention on Biological Diversity (CBD)</a></h2><div class="card-loc">International</div><p class="card-body">UN convention whose 2010 decision established a widely-cited de facto moratorium on climate-related geoengineering pending adequate scientific basis and governance.</p><div class="tags"><span>general</span><span>moratorium</span><span>international law</span><span>multilateral</span></div></article>
+<article class="card" data-type="academic" data-stance="pro-research" data-search="harvard solar geoengineering research program academic program advancing interdisciplinary solar geoengineering research; originator of the scopex stratospheric experiment proposal (since cancelled) and related governance work. academic us north america research pro-research research outdoor experiment atmospheric science sai"><div class="card-top"><span class="pill type">Academic</span><span class="pill stance-pro-research">pro-research</span><span class="pill ghost">research</span></div><h2 class="card-title"><a href="https://geoengineering.environment.harvard.edu/" target="_blank" rel="noopener">Harvard Solar Geoengineering Research Program</a></h2><div class="card-loc">US · North America</div><p class="card-body">Academic program advancing interdisciplinary solar geoengineering research; originator of the SCoPEx stratospheric experiment proposal (since cancelled) and related governance work.</p><div class="tags"><span>SAI</span><span>research</span><span>outdoor experiment</span><span>atmospheric science</span></div></article>
+<article class="card" data-type="commercial" data-stance="pro-deployment" data-search="make sunsets commercial start-up selling 'cooling credits' tied to releasing reflective sulfate aerosols via balloons; a frequent focal point in debates about unilateral, unregulated deployment. commercial us north america deployment pro-deployment commercial actor deployment unilateral sai"><div class="card-top"><span class="pill type">Commercial</span><span class="pill stance-pro-deployment">pro-deployment</span><span class="pill ghost">deployment</span></div><h2 class="card-title"><a href="https://makesunsets.com/" target="_blank" rel="noopener">Make Sunsets</a></h2><div class="card-loc">US · North America</div><p class="card-body">Commercial start-up selling 'cooling credits' tied to releasing reflective sulfate aerosols via balloons; a frequent focal point in debates about unilateral, unregulated deployment.</p><div class="tags"><span>SAI</span><span>commercial actor</span><span>deployment</span><span>unilateral</span></div></article>
+<article class="card" data-type="ngo" data-stance="pro-research" data-search="silverlining us non-profit advocating for research and governance of near-term climate interventions, including funding for atmospheric science and model intercomparison. ngo us north america research pro-research research funding governance sai mcb"><div class="card-top"><span class="pill type">NGO</span><span class="pill stance-pro-research">pro-research</span><span class="pill ghost">research</span></div><h2 class="card-title"><a href="https://www.silverlining.ngo/" target="_blank" rel="noopener">SilverLining</a></h2><div class="card-loc">US · North America</div><p class="card-body">US non-profit advocating for research and governance of near-term climate interventions, including funding for atmospheric science and model intercomparison.</p><div class="tags"><span>SAI</span><span>MCB</span><span>research funding</span><span>governance</span></div></article>
+<article class="card" data-type="ngo" data-stance="pro-research" data-search="the degrees initiative uk-based non-profit that builds the capacity of researchers in the global south to evaluate solar radiation modification and centres developing-country perspectives in the debate. ngo gb international research pro-research global south research equity sai mcb"><div class="card-top"><span class="pill type">NGO</span><span class="pill stance-pro-research">pro-research</span><span class="pill ghost">research</span></div><h2 class="card-title"><a href="https://www.degrees.ngo/" target="_blank" rel="noopener">The Degrees Initiative</a></h2><div class="card-loc">GB · International</div><p class="card-body">UK-based non-profit that builds the capacity of researchers in the Global South to evaluate solar radiation modification and centres developing-country perspectives in the debate.</p><div class="tags"><span>SAI</span><span>MCB</span><span>global south</span><span>research</span><span>equity</span></div></article>
+</div>
+<div class="empty" id="empty" hidden>No organizations match your filters.</div>
+</main>
+<footer class="intel-shell-footer">
+  <span>Built 2026-06-30 · 47 signals tracked · SRM Watch · Gamma Bright</span>
+  <span><a href="briefing.html">Brief</a> · <a href="briefing.html#tab=watchlist">Watchlist</a> · <a href="country-ambition.html">Countries</a> · <a href="papers.html">Papers</a></span>
+  <span><span class="mono">6 organizations</span></span>
+</footer>
+<script>
+(function(){
+  var grid=document.getElementById("grid");
+  var cards=[].slice.call(grid.querySelectorAll(".card"));
+  var search=document.getElementById("searchBox");
+  var bar=document.getElementById("filterBar");
+  var empty=document.getElementById("empty");
+  var type="all";
+  function apply(){
+    var q=(search.value||"").trim().toLowerCase();
+    var shown=0;
+    cards.forEach(function(c){
+      var okT=type==="all"||c.dataset.type===type;
+      var okQ=!q||c.dataset.search.indexOf(q)!==-1;
+      var vis=okT&&okQ;c.hidden=!vis;if(vis)shown++;
+    });
+    empty.hidden=shown!==0;
+  }
+  search.addEventListener("input",apply);
+  bar.addEventListener("click",function(e){
+    var b=e.target.closest("button");if(!b)return;
+    bar.querySelectorAll("button").forEach(function(x){x.classList.remove("active");});
+    b.classList.add("active");type=b.dataset.filter;apply();
+  });
+})();
+</script>
+<script data-intel-theme="init">
+(function(){
+  var KEY="srm-watch-theme";
+  function apply(theme){
+    document.documentElement.dataset.theme=theme;
+    var btn=document.getElementById("intel-theme-toggle");
+    if(btn){
+      btn.textContent=theme==="dark"?"\u2600":"\u{1F319}";
+      btn.setAttribute("aria-label",theme==="dark"?"Switch to light mode":"Switch to dark mode");
+    }
+    try{localStorage.setItem(KEY,theme);}catch(e){}
+    try{window.dispatchEvent(new CustomEvent("srm-theme-change",{detail:theme}));}catch(e){}
+  }
+  function preferred(){
+    try{
+      var s=localStorage.getItem(KEY);
+      if(s==="light"||s==="dark") return s;
+    }catch(e){}
+    return "light";
+  }
+  var btn=document.getElementById("intel-theme-toggle");
+  if(btn){
+    btn.addEventListener("click",function(){
+      apply(document.documentElement.dataset.theme==="dark"?"light":"dark");
+    });
+  }
+  if(!document.documentElement.dataset.theme) apply(preferred());
+  else apply(document.documentElement.dataset.theme);
+})();
+</script>
+</body>
+</html>

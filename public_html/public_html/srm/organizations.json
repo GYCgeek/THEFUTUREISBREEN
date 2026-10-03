@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "generated": "2026-06-28",
+  "notes": "Organization register for SRM Watch. Seed entries below are illustrative samples; the scanner/analyst pipeline expands this over time. type: academic | government | intergovernmental | ngo | civil-society | commercial | funder. stance: pro-research | cautionary | opposed | neutral | pro-deployment.",
+  "count": 6,
+  "organizations": [
+    {
+      "id": "degrees-initiative",
+      "name": "The Degrees Initiative",
+      "type": "ngo",
+      "country": "GB",
+      "region": "International",
+      "focus": "research",
+      "stance": "pro-research",
+      "url": "https://www.degrees.ngo/",
+      "description": "UK-based non-profit that builds the capacity of researchers in the Global South to evaluate solar radiation modification and centres developing-country perspectives in the debate.",
+      "srm_methods": ["SAI", "MCB"],
+      "tags": ["global south", "research", "equity"],
+      "added_date": "2026-06-28"
+    },
+    {
+      "id": "silverlining",
+      "name": "SilverLining",
+      "type": "ngo",
+      "country": "US",
+      "region": "North America",
+      "focus": "research",
+      "stance": "pro-research",
+      "url": "https://www.silverlining.ngo/",
+      "description": "US non-profit advocating for research and governance of near-term climate interventions, including funding for atmospheric science and model intercomparison.",
+      "srm_methods": ["SAI", "MCB"],
+      "tags": ["research funding", "governance"],
+      "added_date": "2026-06-28"
+    },
+    {
+      "id": "c2g",
+      "name": "Carnegie Climate Governance Initiative (C2G)",
+      "type": "ngo",
+      "country": "US",
+      "region": "International",
+      "focus": "governance",
+      "stance": "neutral",
+      "url": "https://www.c2g2.net/",
+      "description": "Impartial initiative working to catalyse the creation of effective governance for climate-altering approaches, in particular SRM and large-scale carbon dioxide removal.",
+      "srm_methods": ["general"],
+      "tags": ["international law", "governance", "multilateral"],
+      "added_date": "2026-06-28"
+    },
+    {
+      "id": "make-sunsets",
+      "name": "Make Sunsets",
+      "type": "commercial",
+      "country": "US",
+      "region": "North America",
+      "focus": "deployment",
+      "stance": "pro-deployment",
+      "url": "https://makesunsets.com/",
+      "description": "Commercial start-up selling 'cooling credits' tied to releasing reflective sulfate aerosols via balloons; a frequent focal point in debates about unilateral, unregulated deployment.",
+      "srm_methods": ["SAI"],
+      "tags": ["commercial actor", "deployment", "unilateral"],
+      "added_date": "2026-06-28"
+    },
+    {
+      "id": "cbd-secretariat",
+      "name": "Convention on Biological Diversity (CBD)",
+      "type": "intergovernmental",
+      "country": "International",
+      "region": "International",
+      "focus": "governance",
+      "stance": "cautionary",
+      "url": "https://www.cbd.int/",
+      "description": "UN convention whose 2010 decision established a widely-cited de facto moratorium on climate-related geoengineering pending adequate scientific basis and governance.",
+      "srm_methods": ["general"],
+      "tags": ["moratorium", "international law", "multilateral"],
+      "added_date": "2026-06-28"
+    },
+    {
+      "id": "harvard-solar-geo-research-program",
+      "name": "Harvard Solar Geoengineering Research Program",
+      "type": "academic",
+      "country": "US",
+      "region": "North America",
+      "focus": "research",
+      "stance": "pro-research",
+      "url": "https://geoengineering.environment.harvard.edu/",
+      "description": "Academic program advancing interdisciplinary solar geoengineering research; originator of the SCoPEx stratospheric experiment proposal (since cancelled) and related governance work.",
+      "srm_methods": ["SAI"],
+      "tags": ["research", "outdoor experiment", "atmospheric science"],
+      "added_date": "2026-06-28"
+    }
+  ]
+}

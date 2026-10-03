@@ -1,0 +1,96 @@
+{
+  "schema": "gyc-aura-schema-svg-manifest-v1",
+  "generated_at": "2026-08-30T12:20:50.715Z",
+  "privacy": "schema-only; aggregate counts; no record-level values",
+  "source": "verified local Aura export snapshots",
+  "graphs": [
+    {
+      "id": "foresight",
+      "title": "GYC Foresight Aura",
+      "subtitle": "Public foresight property-graph schema",
+      "snapshot": "2026-08-30T12:20:48.763Z",
+      "counts": {
+        "nodes": 6623,
+        "relationships": 17021,
+        "labels": 12,
+        "schema_paths": 16
+      },
+      "files": [
+        {
+          "file": "aura-foresight-schema-overview.svg",
+          "title": "Schema overview",
+          "kind": "overview"
+        },
+        {
+          "file": "aura-foresight-schema-evidence.svg",
+          "title": "Evidence chain",
+          "kind": "slice"
+        },
+        {
+          "file": "aura-foresight-schema-horizons.svg",
+          "title": "Horizons and pathways",
+          "kind": "slice"
+        },
+        {
+          "file": "aura-foresight-schema-policy.svg",
+          "title": "Policy alignment",
+          "kind": "slice"
+        },
+        {
+          "file": "aura-foresight-schema-context.svg",
+          "title": "Geography and finance",
+          "kind": "slice"
+        },
+        {
+          "file": "aura-foresight-schema-inventory.svg",
+          "title": "Complete schema inventory",
+          "kind": "inventory"
+        }
+      ]
+    },
+    {
+      "id": "igf-brain",
+      "title": "IGF Brain Aura",
+      "subtitle": "Joined intergenerational-justice graph schema; aggregate metadata only",
+      "snapshot": "2026-08-30T01:45:26.117Z",
+      "counts": {
+        "nodes": 6657,
+        "relationships": 17886,
+        "labels": 23,
+        "schema_paths": 54
+      },
+      "files": [
+        {
+          "file": "aura-igf-brain-schema-overview.svg",
+          "title": "Schema overview",
+          "kind": "overview"
+        },
+        {
+          "file": "aura-igf-brain-schema-evidence.svg",
+          "title": "Evidence and foresight",
+          "kind": "slice"
+        },
+        {
+          "file": "aura-igf-brain-schema-network.svg",
+          "title": "People and knowledge network",
+          "kind": "slice"
+        },
+        {
+          "file": "aura-igf-brain-schema-programme.svg",
+          "title": "Programme architecture",
+          "kind": "slice"
+        },
+        {
+          "file": "aura-igf-brain-schema-measurement.svg",
+          "title": "Measurement and cases",
+          "kind": "slice"
+        },
+        {
+          "file": "aura-igf-brain-schema-inventory.svg",
+          "title": "Complete schema inventory",
+          "kind": "inventory"
+        }
+      ]
+    }
+  ]
+}

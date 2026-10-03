@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>New Alignment IGS — invitee research</title>
+  <style>
+    :root {
+      --bg: #14201a;
+      --bg2: #1c2c24;
+      --card: #24362c;
+      --line: rgba(196, 181, 140, 0.22);
+      --text: #f3efe6;
+      --muted: #b7c4b8;
+      --dim: #7f917f;
+      --gold: #c4b58c;
+      --leaf: #7cb89a;
+      --warn: #e0a45a;
+      --font: "Segoe UI", "Source Sans 3", system-ui, sans-serif;
+      --display: "Fraunces", "Palatino Linotype", Georgia, serif;
+      --mono: "IBM Plex Mono", "Cascadia Mono", "SFMono-Regular", ui-monospace, monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font);
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(124, 184, 154, 0.18), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 100% 0%, rgba(196, 181, 140, 0.12), transparent 50%),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--leaf);
+      margin-bottom: 0.6rem;
+    }
+    h1 {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      letter-spacing: -0.02em;
+      max-width: 18ch;
+      margin-bottom: 0.75rem;
+    }
+    .lede { color: var(--muted); max-width: 62ch; margin-bottom: 1.25rem; }
+    .meta {
+      display: flex; flex-wrap: wrap; gap: 0.5rem 1rem;
+      font-family: var(--mono); font-size: 0.75rem; color: var(--dim);
+      margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--line);
+    }
+    .meta a { color: var(--gold); }
+    .toolbar {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+      margin-bottom: 1.25rem;
+    }
+    input[type="search"] {
+      flex: 1; min-width: 200px;
+      background: var(--bg2); border: 1px solid var(--line); color: var(--text);
+      border-radius: 10px; padding: 0.65rem 0.9rem; font: inherit;
+    }
+    select {
+      background: var(--bg2); border: 1px solid var(--line); color: var(--text);
+      border-radius: 10px; padding: 0.65rem 0.8rem; font: inherit;
+    }
+    h2 {
+      font-family: var(--display); font-size: 1.25rem; margin: 1.75rem 0 0.75rem;
+      color: var(--gold);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 0.85rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1rem 1.05rem;
+      cursor: pointer;
+      text-align: left;
+      color: inherit;
+      font: inherit;
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .card:hover, .card:focus-visible {
+      border-color: var(--leaf);
+      transform: translateY(-1px);
+      outline: none;
+    }
+    .card .name { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem; }
+    .card .role {
+      font-family: var(--mono); font-size: 0.68rem; color: var(--leaf);
+      text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.45rem;
+    }
+    .card .aff { color: var(--muted); font-size: 0.88rem; margin-bottom: 0.55rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+    .tag {
+      font-size: 0.72rem; color: var(--dim);
+      border: 1px solid var(--line); border-radius: 999px; padding: 0.12rem 0.45rem;
+    }
+    .conf {
+      display: inline-block; margin-top: 0.55rem;
+      font-family: var(--mono); font-size: 0.65rem; color: var(--warn);
+    }
+    .conf.ok { color: var(--leaf); }
+    .gap {
+      background: var(--bg2); border: 1px dashed var(--line);
+      border-radius: 12px; padding: 0.9rem 1rem; margin-bottom: 0.6rem;
+    }
+    .gap strong { display: block; margin-bottom: 0.25rem; }
+    .gap p { color: var(--muted); font-size: 0.92rem; }
+    .modal {
+      display: none; position: fixed; inset: 0; z-index: 40;
+      background: rgba(8, 14, 11, 0.72); align-items: center; justify-content: center;
+      padding: 1rem;
+    }
+    .modal.open { display: flex; }
+    .panel {
+      background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+      max-width: 560px; width: 100%; max-height: 85vh; overflow: auto; padding: 1.35rem;
+    }
+    .panel h3 { font-family: var(--display); font-size: 1.4rem; margin-bottom: 0.35rem; }
+    .panel .close {
+      float: right; background: transparent; border: 1px solid var(--line);
+      color: var(--muted); border-radius: 8px; padding: 0.25rem 0.55rem; cursor: pointer;
+    }
+    .panel p { color: var(--muted); margin: 0.55rem 0; }
+    .panel a { color: var(--gold); }
+    .panel ul { margin: 0.4rem 0 0.8rem 1.1rem; color: var(--muted); }
+    .panel .src { display: block; margin: 0.35rem 0; font-size: 0.9rem; }
+    @media (max-width: 640px) {
+      .wrap { padding: 1.15rem 1rem max(3rem, env(safe-area-inset-bottom)); }
+      h1 { max-width: none; font-size: 1.7rem; }
+      .toolbar { flex-direction: column; align-items: stretch; }
+      input[type="search"], select { width: 100%; min-width: 0; min-height: 44px; font-size: 1rem; }
+      .grid { grid-template-columns: 1fr; gap: 0.7rem; }
+      .card { padding: 1rem; min-height: 44px; }
+      .modal { align-items: flex-end; padding: 0; }
+      .panel {
+        max-width: none; width: 100%; max-height: min(88vh, 720px);
+        border-radius: 18px 18px 0 0; padding: 1.15rem 1.1rem max(1.2rem, env(safe-area-inset-bottom));
+      }
+      .panel .close { min-width: 44px; min-height: 36px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow">New Alignment Hub · research pack</div>
+    <h1>Intergenerational Justice &amp; Solidarity</h1>
+    <p class="lede" id="lede">Loading…</p>
+    <div class="meta" id="meta"></div>
+    <p style="margin:-0.5rem 0 1.5rem"><a href="./graph.html" style="color:var(--gold)">Open interactive knowledge graph →</a> &nbsp;·&nbsp; <a href="./ask.html" style="color:var(--gold)">Ask the graph (AI) →</a></p>
+
+    <div class="toolbar">
+      <input type="search" id="q" placeholder="Search people, expertise, countries…" aria-label="Search" />
+      <select id="role" aria-label="Filter by role">
+        <option value="">All roles</option>
+        <option value="co-chair">Co-chair</option>
+        <option value="invitee_batch_1">Invitee batch 1</option>
+      </select>
+    </div>
+
+    <h2>People</h2>
+    <div class="grid" id="people"></div>
+
+    <h2>Nomination gaps</h2>
+    <div id="gaps"></div>
+  </div>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true">
+    <div class="panel">
+      <button class="close" id="close" type="button">Close</button>
+      <a class="close" id="openGraph" href="./graph.html" style="float:right;margin-right:0.45rem;text-decoration:none">View in graph</a>
+      <h3 id="t"></h3>
+      <div id="body"></div>
+    </div>
+  </div>
+
+  <script src="./igs-knowledge-graph-data.js"></script>
+  <script>
+    function graphToDashboardMemory(G) {
+      const people = (G.nodes || [])
+        .filter(function (n) { return n.type === "person" && n.in_wg; })
+        .map(function (n) {
+          return {
+            id: String(n.id || "").replace(/^person:/, ""),
+            name: n.label || "",
+            name_as_invited: n.invited_as || null,
+            role_in_wg: n.role_in_wg || "",
+            identity_confidence: n.identity_confidence || null,
+            identity_note: n.identity_note || null,
+            affiliation: n.affiliation || "",
+            country_region: n.country_region || "",
+            summary: n.summary || "",
+            why_relevant: n.why_relevant || "",
+            expertise: n.expertise || n.tags || [],
+            key_works: n.key_works || [],
+            url: n.url || null,
+            sources: n.sources || []
+          };
+        });
+
+      return {
+        id: G.id || "new-alignment-igs-memory",
+        title: G.title || "New Alignment — Intergenerational Justice & Solidarity WG",
+        updated: G.updated || "",
+        definition: G.definition || { primary: "" },
+        working_group: G.working_group || {},
+        nomination_gaps: G.nomination_gaps || { gaps: [] },
+        people: people
+      };
+    }
+
+    if (!window.IGS_KNOWLEDGE_GRAPH) {
+      throw new Error("Missing IGS_KNOWLEDGE_GRAPH payload. Run node scripts/build-knowledge-graph.mjs.");
+    }
+    const D = graphToDashboardMemory(window.IGS_KNOWLEDGE_GRAPH);
+    const peopleEl = document.getElementById("people");
+    const gapsEl = document.getElementById("gaps");
+    const modal = document.getElementById("modal");
+    const openGraphEl = document.getElementById("openGraph");
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+
+    const qEl = document.getElementById("q");
+    const roleEl = document.getElementById("role");
+
+    document.getElementById("lede").textContent = (D.definition && D.definition.primary) || "";
+    const wg = D.working_group || {};
+    document.getElementById("meta").innerHTML =
+      '<span>Updated ' + (D.updated || "") + '</span>' +
+      (wg.inaugural_meeting
+        ? '<span>Inaugural ' + wg.inaugural_meeting.date + ' · ' + wg.inaugural_meeting.time + '</span>'
+        : "") +
+      (wg.hub_url ? '<a href="' + wg.hub_url + '" target="_blank" rel="noopener">WG page</a>' : "");
+
+    function confClass(c) {
+      return (c === "very_high" || c === "high") ? "conf ok" : "conf";
+    }
+
+    function render() {
+      const q = (qEl.value || "").toLowerCase().trim();
+      const role = roleEl.value;
+      const list = (D.people || []).filter(function (p) {
+        if (role && p.role_in_wg !== role) return false;
+        if (!q) return true;
+        const blob = [
+          p.name, p.name_as_invited, p.affiliation, p.country_region,
+          p.summary, p.why_relevant
+        ].concat(p.expertise || []).join(" ").toLowerCase();
+        return blob.indexOf(q) !== -1;
+      });
+
+      peopleEl.innerHTML = "";
+      list.forEach(function (p, i) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "card";
+        btn.dataset.i = String(i);
+        btn.dataset.id = p.id || "";
+        btn.innerHTML =
+          '<div class="role">' + esc(p.role_in_wg || "") + '</div>' +
+          '<div class="name">' + esc(p.name || "") + '</div>' +
+          (p.name_as_invited && p.name_as_invited !== p.name
+            ? '<div class="aff">Invited as: ' + esc(p.name_as_invited) + '</div>'
+            : "") +
+          '<div class="aff">' + esc(p.affiliation || "") + '</div>' +
+          '<div class="tags">' + (p.expertise || []).slice(0, 3).map(function (t) {
+            return '<span class="tag">' + esc(t) + '</span>';
+          }).join("") + '</div>' +
+          '<span class="' + confClass(p.identity_confidence) + '">ID: ' +
+            esc(p.identity_confidence || "n/a") + '</span>';
+        btn.addEventListener("click", function () { openPerson(p); });
+        btn.addEventListener("keydown", function (e) {
+          if (e.key && e.key.toLowerCase() === "g") {
+            e.preventDefault();
+            location.href = "./graph.html#node=" + encodeURIComponent("person:" + p.id);
+          }
+        });
+        peopleEl.appendChild(btn);
+      });
+      if (!list.length) {
+        peopleEl.innerHTML = '<p style="color:var(--muted)">No matches.</p>';
+      }
+    }
+
+    function openPerson(p) {
+      document.getElementById("t").textContent = p.name;
+      var html = "";
+      if (p.name_as_invited) html += '<p><strong>Invited as:</strong> ' + esc(p.name_as_invited) + '</p>';
+      html += '<p><strong>Affiliation:</strong> ' + esc(p.affiliation || "") + '</p>';
+      html += '<p><strong>Region:</strong> ' + esc(p.country_region || "") + '</p>';
+      html += '<p>' + esc(p.summary || "") + '</p>';
+      html += '<p><strong>Why relevant:</strong> ' + esc(p.why_relevant || "") + '</p>';
+      if (p.identity_note) html += '<p><strong>Identity note:</strong> ' + esc(p.identity_note) + '</p>';
+      if (p.key_works && p.key_works.length) {
+        html += '<ul>' + p.key_works.map(function (k) { return '<li>' + esc(k) + '</li>'; }).join("") + '</ul>';
+      }
+      html += '<p><strong>Sources</strong></p>';
+      (p.sources || []).forEach(function (s) {
+        html += '<a class="src" href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.title) + '</a>';
+      });
+      if (p.url) html += '<a class="src" href="' + esc(p.url) + '" target="_blank" rel="noopener">Primary profile</a>';
+      document.getElementById("body").innerHTML = html;
+      if (openGraphEl) openGraphEl.href = "./graph.html#node=" + encodeURIComponent("person:" + p.id);
+      modal.classList.add("open");
+      if (p.id) {
+        try { localStorage.setItem("igs-last-node", "person:" + p.id); } catch (e) {}
+        history.replaceState(null, "", "#person=" + encodeURIComponent(p.id));
+      }
+    }
+
+    function closeModal() {
+      modal.classList.remove("open");
+      history.replaceState(null, "", location.pathname + location.search);
+    }
+    document.getElementById("close").addEventListener("click", closeModal);
+    modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeModal(); });
+    qEl.addEventListener("input", render);
+    roleEl.addEventListener("change", render);
+
+    (D.nomination_gaps && D.nomination_gaps.gaps || []).forEach(function (g) {
+      var div = document.createElement("div");
+      div.className = "gap";
+      div.innerHTML = '<strong>' + esc(g.label) + '</strong><p>' + esc(g.why) + '</p>';
+      gapsEl.appendChild(div);
+    });
+
+    (function applyHash() {
+      var h = (location.hash || "").replace(/^#/, "");
+      if (!h) return;
+      var m = h.match(/^person=(.+)$/);
+      if (!m) return;
+      var id = decodeURIComponent(m[1]);
+      var p = (D.people || []).find(function (x) { return x.id === id; });
+      if (p) openPerson(p);
+    })();
+
+    render();
+  </script>
+</body>
+</html>

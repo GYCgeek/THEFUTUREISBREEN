@@ -1,0 +1,873 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Global Youth Coalition</title>
+    <meta name="description" content="Learn about the Global Youth Coalition, our mission, history, and global community of youth-led changemakers.">
+    <link rel="canonical" href="https://theglobalyouth.co/about">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://theglobalyouth.co/about">
+    <meta property="og:title" content="About Us | Global Youth Coalition">
+    <meta property="og:description" content="Learn about the Global Youth Coalition, our mission, history, and global community of youth-led changemakers.">
+    <meta property="og:image" content="https://theglobalyouth.co/assets/images/global_logo1.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us | Global Youth Coalition">
+    <meta name="twitter:description" content="Learn about the Global Youth Coalition, our mission, history, and global community of youth-led changemakers.">
+    <meta name="twitter:image" content="https://theglobalyouth.co/assets/images/global_logo1.png">
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=20261003a" />
+
+    <style>
+      body.intro-lock {
+        overflow: hidden;
+      }
+
+      .avocado-intro-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 2147483000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle at 20% 20%, #2f3c44 0%, #1b2429 50%, #12191d 100%);
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 520ms ease, visibility 520ms ease;
+      }
+
+      .avocado-intro-overlay.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .avocado-intro-canvas {
+        position: absolute;
+        inset: 0;
+      }
+
+      .avocado-intro-copy {
+        position: absolute;
+        bottom: 10vh;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: #f5f7f9;
+        padding: 0 18px;
+        width: min(90vw, 560px);
+      }
+
+      .avocado-intro-copy strong {
+        display: block;
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+        letter-spacing: 0.03em;
+        margin-bottom: 8px;
+      }
+
+      .avocado-intro-copy span {
+        font-size: 0.9rem;
+        opacity: 0.86;
+      }
+    </style>
+
+    <script type="module">
+      window.addEventListener('DOMContentLoaded', async () => {
+        // Show the avocado once per browser session; never for reduced-motion users.
+        let seen = false;
+        try { seen = sessionStorage.getItem('gyc-intro-seen') === '1'; sessionStorage.setItem('gyc-intro-seen', '1'); } catch (e) {}
+        if (seen || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          return;
+        }
+
+        const body = document.body;
+        body.classList.add('intro-lock');
+
+        const overlay = document.createElement('div');
+        overlay.className = 'avocado-intro-overlay';
+        overlay.innerHTML =
+          '<div class="avocado-intro-canvas" aria-hidden="true"></div>' +
+          '<div class="avocado-intro-copy"><strong>Global Youth Coalition</strong><span>Tap anywhere to enter</span></div>';
+
+        body.prepend(overlay);
+
+        const canvasHost = overlay.querySelector('.avocado-intro-canvas');
+        const startTime = performance.now();
+        let renderer;
+        let frame;
+
+        let closed = false;
+        const closeIntro = (instant) => {
+          if (closed) return;
+          closed = true;
+          cancelAnimationFrame(frame);
+          body.classList.remove('intro-lock');
+          const finish = () => { if (renderer) { renderer.dispose(); } overlay.remove(); };
+          if (instant === true) { finish(); return; }
+          overlay.classList.add('is-hidden');
+          window.setTimeout(finish, 620);
+        };
+        // Click, tap or any key: go straight to the site.
+        overlay.addEventListener('pointerdown', () => closeIntro(true));
+        window.addEventListener('keydown', () => closeIntro(true), { once: true });
+
+        try {
+          const [THREE, loaderModule] = await Promise.all([
+            import('https://esm.sh/three@0.161.0'),
+            import('https://esm.sh/three@0.161.0/examples/jsm/loaders/GLTFLoader.js')
+          ]);
+
+          renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+          renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.7));
+          renderer.setSize(window.innerWidth, window.innerHeight);
+          renderer.outputColorSpace = THREE.SRGBColorSpace;
+          canvasHost.appendChild(renderer.domElement);
+
+          const scene = new THREE.Scene();
+          const camera = new THREE.PerspectiveCamera(42, window.innerWidth / window.innerHeight, 0.1, 100);
+          camera.position.set(0, 0.05, 4.2);
+          camera.lookAt(0, 0, 0);
+
+          const hemi = new THREE.HemisphereLight(0xffffff, 0x2f3c44, 1.1);
+          scene.add(hemi);
+
+          const key = new THREE.DirectionalLight(0xffffff, 1.55);
+          key.position.set(2.4, 3.2, 2.8);
+          scene.add(key);
+
+          const fill = new THREE.DirectionalLight(0x91a6b4, 0.75);
+          fill.position.set(-2.4, 1.8, -1.4);
+          scene.add(fill);
+
+          const loader = new loaderModule.GLTFLoader();
+          const gltf = await loader.loadAsync('assets/models/avocado.glb');
+          const model = gltf.scene;
+            const spinGroup = new THREE.Group();
+            const pivot = new THREE.Group();
+
+            const rawBounds = new THREE.Box3().setFromObject(model);
+            const rawSize = rawBounds.getSize(new THREE.Vector3());
+            const maxAxis = Math.max(rawSize.x, rawSize.y, rawSize.z) || 1;
+          const targetSize = 2.2;
+          const scale = targetSize / maxAxis;
+
+          model.scale.setScalar(scale);
+            model.rotation.set(-Math.PI / 2, 0, 0.35);
+            model.updateMatrixWorld(true);
+
+            const scaledBounds = new THREE.Box3().setFromObject(model);
+            const scaledCenter = scaledBounds.getCenter(new THREE.Vector3());
+            model.position.set(-scaledCenter.x, -scaledCenter.y, -scaledCenter.z);
+
+              const introStartYaw = 0;
+              const introSpinSpeed = 0.015;
+              const introSpinDelayMs = 700;
+            pivot.add(model);
+              spinGroup.rotation.y = introStartYaw;
+            spinGroup.add(pivot);
+          scene.add(spinGroup);
+
+          const onResize = () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+          };
+
+          window.addEventListener('resize', onResize, { passive: true });
+
+          const spinStartAt = performance.now() + introSpinDelayMs;
+
+          const animate = () => {
+            if (performance.now() >= spinStartAt) {
+              spinGroup.rotation.y += introSpinSpeed;
+            }
+            renderer.render(scene, camera);
+            frame = requestAnimationFrame(animate);
+          };
+
+          animate();
+
+          const elapsed = performance.now() - startTime;
+          const minVisible = 5000;
+          const wait = Math.max(0, minVisible - elapsed);
+
+          window.setTimeout(() => {
+            cancelAnimationFrame(frame);
+            window.removeEventListener('resize', onResize);
+            closeIntro();
+          }, wait);
+        } catch (error) {
+          window.setTimeout(closeIntro, 500);
+        }
+      });
+    </script>
+
+    <!-- Add the favicon -->
+    <link rel="icon" href="assets/images/icon.png" type="image/x-icon" alt="GlobalYouth Favicon">
+</head>
+
+
+<body>
+  <!-- ======================header started====================== -->
+  <header>
+  <div class="my-nav">
+    <div class="container">
+      <div class="row">
+        <div class="nav-items">
+          <div class="logo">
+            <a href="index">
+              <img src="assets/images/global_logo1.png" alt="Global Youth Logo">
+            </a>
+          </div>
+          <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-items">
+            <div class="menu">
+              <ul>
+                <li><a href="index">Home</a></li>
+                <li><a href="Foresight-Research" class="nav-pill-link nav-pill-link-secondary"><i class="fal fa-search" aria-hidden="true"></i> Foresight Research</a></li>
+                <li><a href="GYCT" class="nav-pill-link"><i class="fal fa-book" aria-hidden="true"></i> GYCT</a></li>
+                <li><a href="https://gycailabs.org/" class="nav-pill-link" target="_blank" rel="noopener noreferrer"><i class="fal fa-robot" aria-hidden="true"></i> AI Labs</a></li>
+                <li class="nav-options">
+                  <details class="nav-options-details">
+                    <summary class="nav-options-toggle" aria-label="Open all navigation options" title="All navigation options">
+                      <span class="nav-options-icon" aria-hidden="true"></span>
+                      <span class="nav-options-label">See All Options</span>
+                    </summary>
+                    <div class="nav-options-menu">
+                      <a href="about">About Us</a>
+                      <a href="contact">Contact Us</a>
+                      <a href="Reeforesting4Peace">R4P</a>
+                      <a href="omwcop30">The Trident</a>
+                      <a href="FfD4">FfD4</a>
+                      <a href="reports">Reports</a>
+                      <a href="ourprojects">Our Projects</a>
+                      <a href="https://gycailabs.org/#open-source" target="_blank" rel="noopener">Horizon Scanning</a>
+                    </div>
+                  </details>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-overlay"></div>
+</header>
+
+  <!-- ======================Main started====================== -->
+
+  <main>
+      <!-- ============abt-01 Section  Start============ -->
+
+      <section class="abt-01">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12">
+                      <div class="heading-wrapper">
+                          <h3>About Us</h3>
+                          <ol>
+                              <a href="index"><li>Home<i class="far fa-angle-double-right"></i></li></a>
+                              <li>About Us</li>
+                          </ol>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section class="about-001">
+        <div class="container">
+            <div class="row">
+                <div class="text-part col-md-6">
+                    <h2 class="section-title">WHO WE ARE</h2>
+                    <div class="row">
+                        <div class="highlight-box">
+                            <p style="color:#fd580b;"><b>WE STARTED BY PLANTING A 3-METER TREE INSIDE THE BLUE ZONE OF COP27.
+                              WE'RE STILL PLANTING THINGS THE SYSTEM SAID WE COULDN'T.</b></p>
+                        </div>
+
+                        <div class="content-block">
+                            <h4 class="sub-heading">What we do</h4>
+                            <p>The Global Youth Coalition is a youth-led network that shows up where decisions are made &mdash; UN climate negotiations, financing-for-development tables, biodiversity and ocean conferences &mdash; and brings the people most affected by those decisions into the room. We train delegations, fund projects, run research, and build tools so young leaders don't just attend the future. They write it.</p>
+                        </div>
+
+                        <div class="content-block">
+                            <h4 class="sub-heading">How we work</h4>
+                            <p>We don't do panels for the sake of panels. Every program ends in a deliverable: a delegation at a COP, a published policy brief, a tree in the ground, a bursary in someone's bank account, a translated report in their language. Our members are scientists, organizers, lawyers, farmers, coders, and artists from <span class="highlight-stat">178</span> countries &mdash; and we move at the speed of the crisis, not the speed of the institutions.</p>
+                        </div>
+
+                        <div class="content-block">
+                            <h4 class="sub-heading">What we've moved so far</h4>
+                            <p><span class="highlight-stat">$350K+</span> invested into youth-led projects. <span class="highlight-stat">5,000</span> climate solutions mapped through our networks. <span class="highlight-stat">100,000+</span> views of our free training programmes with partners including the University of Oxford's Net Zero Initiative. Reports translated by volunteers into 6+ languages so the work reaches further than English.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="2000">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img class="d-block w-100" src="assets/images/team/1.jpg" alt="First slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/images/team/2.jpg" alt="Second slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/images/team/3.jpg" alt="Third slide">
+                          </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                      
+                    </div>
+                    <br>
+                    
+
+                </div>
+
+                <div class="text-part col-md-6">
+                  <h2 class="section-title">OUR STORY, BY ROOM</h2>
+                  <div class="timeline-container">
+                      <div class="timeline-item">
+                          <span class="timeline-year">COP27</span>
+                          <div class="timeline-content">
+                              <h4 class="timeline-title">An impossible tree, in the Blue Zone</h4>
+                              <p>Sharm El-Sheikh, 2022. A handful of young organizers walked a 3-meter <strong>Tree of Hope</strong> into the most restricted negotiating space on Earth. No budget, no permission, no precedent. That tree is the reason GYC exists &mdash; and the reason we still believe nothing about this system is fixed.</p>
+                          </div>
+                      </div>
+
+                      <div class="timeline-item">
+                          <span class="timeline-year">Road to COP28 &amp; COP29</span>
+                          <div class="timeline-content">
+                              <h4 class="timeline-title">Training a generation in climate finance</h4>
+                              <p>Two years on the road, one curriculum: in collaboration with the <strong>YOUNGO Climate Finance Academy</strong> we trained young negotiators in the language money speaks &mdash; loss &amp; damage, the new collective quantified goal, MDB reform &mdash; alongside our broader programs with the University of Oxford's Net Zero Initiative that reached <span class="highlight-stat">100,000+</span> views worldwide.</p>
+                          </div>
+                      </div>
+
+                      <div class="timeline-item">
+                          <span class="timeline-year">COP29</span>
+                          <div class="timeline-content">
+                              <h4 class="timeline-title">First GYCT delegation, Baku</h4>
+                              <p>Baku, 2024. Our <strong>first Global Youth Climate Training (GYCT) delegation</strong> walked into a COP whose entire fight was finance. Trained, accredited, and prepared to read the text &mdash; not just react to it.</p>
+                          </div>
+                      </div>
+
+                      <div class="timeline-item">
+                          <span class="timeline-year">2025 &mdash; The Finance Year</span>
+                          <div class="timeline-content">
+                              <h4 class="timeline-title">Following the money &mdash; D.C., Davos, Sevilla</h4>
+                              <p>If 2024 was the diagnosis, 2025 was the chase. <strong>CIF Trust meetings in Washington D.C.</strong>, <strong>collaboration caravans through the Alps to Davos</strong>, and our <strong>FfD4 side event in Sevilla</strong> on intergenerational fairness in financing for development. Wherever the money moved, we moved with it &mdash; with a youth seat and a written brief.</p>
+                          </div>
+                      </div>
+
+                      <div class="timeline-item">
+                          <span class="timeline-year">UNOC 2025</span>
+                          <div class="timeline-content">
+                              <h4 class="timeline-title">Ocean diplomacy, Nice</h4>
+                              <p>The UN Ocean Conference put the blue half of the planet back on the table. We brought youth voices into the negotiations in <strong>Nice</strong> &mdash; pushing on marine protection, the High Seas Treaty, and the rights of coastal and small-island communities who carry the ocean crisis first.</p>
+                          </div>
+                      </div>
+
+                      <div class="timeline-item">
+                          <span class="timeline-year">COP30</span>
+                          <div class="timeline-content">
+                              <h4 class="timeline-title">Second GYCT delegation, Bel&eacute;m</h4>
+                              <p>Bel&eacute;m, 2025. The COP that was always supposed to happen &mdash; in the Amazon, on the frontline. Our <strong>second GYCT delegation</strong> arrived with <strong>£3,000 bursaries</strong>, we ran <strong>Reeforesting 4 Peace</strong> in the field, and tied every action back to the communities defending the forest long before any of us showed up.</p>
+                          </div>
+                      </div>
+
+                      <div class="timeline-item">
+                          <span class="timeline-year">January&ndash;September 2026</span>
+                          <div class="timeline-content">
+                              <h4 class="timeline-title">From Davos to Singapore</h4>
+                              <p>At the World Economic Forum in Davos in January, we built the relationships that shaped our year, including with Prashanth Shanmugan of the Australian Council on Foreign Relations, who went on to open GYCT 2026. In September we joined Impact Week in Singapore, hosted by Tsao Pao Chee, connecting GYC with Asia's impact and philanthropy community. Both rooms pointed the same way: youth talent belongs where policy meets business.</p>
+                          </div>
+                      </div>
+
+                      <div class="timeline-item">
+                          <span class="timeline-year">2026 &mdash; The Year of the Sky</span>
+                          <div class="timeline-content">
+                              <h4 class="timeline-title">From policy to practice</h4>
+                              <p>Four COPs at the negotiating tables taught us that policies only matter when they turn into work. This year we built the structure to act on it: leadership passed to our new Chair, Merna A. Elboghdady, and our Champs now run a Skills Pipeline in clean energy and green jobs, governance and negotiation, and nature-based solutions with responsible AI. We launched Hack for the Futures at London Climate Action Week, ran GYCT with Oxford Net Zero and the Youth Negotiators Academy, published our first foresight findings from 1,000+ young people in 140+ countries, and started calling on companies and governments to open blue-green jobs to the people we train. In November, we open the Youth House at COP31 in Antalya. If you want in, the door is open.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+                
+            </div>
+            
+        </div>
+      </section>
+
+      <!-- ======================Bg-04 started====================== -->
+
+
+      <section class="about-04">
+        <div class="container">
+            <div class="row">
+                <div class="text-part col-md-12">
+                        <div class="heading">
+                         <center><h1>A GLOBAL MOVEMENT</h1></center> 
+                      </div>
+                    
+                      <img class="d-block w-100" src="assets/images/gy/HeatMapGYCT2024.jpeg" alt="First slide">
+                    </div>
+                  
+              </div>
+    
+                   
+    
+                
+            </div>
+            
+        </div>
+      </section>
+    
+    
+    
+    
+    
+       
+        <section class="bg-04">
+          <div class="network-background">
+            <div class="network-node node-1"></div>
+            <div class="network-node node-2"></div>
+            <div class="network-node node-3"></div>
+            <div class="network-node node-4"></div>
+            <div class="network-node node-5"></div>
+            <div class="network-node node-6"></div>
+            <div class="network-node node-7"></div>
+            <div class="network-node node-8"></div>
+            <div class="network-node node-9"></div>
+            <div class="network-node node-10"></div>
+            <div class="network-node node-11"></div>
+            <div class="network-node node-12"></div>
+            
+            <!-- Connection lines -->
+            <div class="connection" style="width: 200px; top: 20%; left: 15%; transform: rotate(30deg);"></div>
+            <div class="connection" style="width: 250px; top: 30%; left: 35%; transform: rotate(-15deg);"></div>
+            <div class="connection" style="width: 180px; top: 45%; left: 10%; transform: rotate(60deg);"></div>
+            <div class="connection" style="width: 220px; top: 60%; left: 25%; transform: rotate(-45deg);"></div>
+            <div class="connection" style="width: 300px; top: 75%; left: 45%; transform: rotate(10deg);"></div>
+            <div class="connection" style="width: 270px; top: 25%; left: 55%; transform: rotate(40deg);"></div>
+            <div class="connection" style="width: 190px; top: 50%; left: 70%; transform: rotate(-30deg);"></div>
+            <div class="connection" style="width: 230px; top: 65%; left: 60%; transform: rotate(20deg);"></div>
+          </div>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="heading">
+                  <h2>THE CHAMPS</h2>
+                  <p>Meet our dedicated team members who are driving change around the world</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="champs-showcase">
+                  <div class="champs-toolbar" role="tablist" aria-label="Champ roster years">
+                    <button type="button" class="champs-toggle is-active" data-champs-view="current" aria-selected="true" aria-controls="champs-current-panel" id="champs-current-tab">Champs 2026</button>
+                    <button type="button" class="champs-toggle" data-champs-view="archive" aria-selected="false" aria-controls="champs-archive-panel" id="champs-archive-tab">Champs 2025</button>
+                  </div>
+                  <section id="champs-current-panel" class="champs-panel champs-panel-current is-active" role="tabpanel" aria-labelledby="champs-current-tab">
+                    <div class="champs-current-grid">
+                  <article class="champ-poster-card">
+                    <img src="assets/images/champs/2026/4_20260418_002540_0003.jpg" alt="Merna A. Elboghdady, Chair · GYCT lead" loading="lazy">
+                    <div class="champ-poster-card__body">
+                      <h4>Merna A. Elboghdady</h4>
+                      <p>Chair · GYCT lead</p>
+                      <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Egypt</span>
+                    </div>
+                  </article>
+                  <article class="champ-poster-card">
+                    <img src="assets/images/champs/2026/9_20260418_002540_0008.jpg" alt="Julia Anting Wolff, Governance &amp; negotiation framing · Futures &amp; Shells" loading="lazy">
+                    <div class="champ-poster-card__body">
+                      <h4>Julia Anting Wolff</h4>
+                      <p>Governance &amp; negotiation framing · Futures &amp; Shells</p>
+                      <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Spain / Germany</span>
+                    </div>
+                  </article>
+                  <article class="champ-poster-card">
+                    <img src="assets/images/champs/2026/11_20260418_002540_0010.jpg" alt="Shahnoza (Sasha) Rakhmanova, COP31 &amp; policy continuity" loading="lazy">
+                    <div class="champ-poster-card__body">
+                      <h4>Shahnoza (Sasha) Rakhmanova</h4>
+                      <p>COP31 &amp; policy continuity</p>
+                      <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Uzbekistan</span>
+                    </div>
+                  </article>
+                  <article class="champ-poster-card">
+                    <img src="assets/images/champs/2026/3_20260418_002540_0002.jpg" alt="Ayooluwa F. Ogunsola, Clean energy storytelling · R4P co-lead" loading="lazy">
+                    <div class="champ-poster-card__body">
+                      <h4>Ayooluwa F. Ogunsola</h4>
+                      <p>Clean energy storytelling · R4P co-lead</p>
+                      <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Nigeria</span>
+                    </div>
+                  </article>
+                  <article class="champ-poster-card">
+                    <img src="assets/images/champs/2026/6_20260418_002540_0005.jpg" alt="Zach Lubin, Sport &amp; Clean Energy Transition · Avocado Framework steward" loading="lazy">
+                    <div class="champ-poster-card__body">
+                      <h4>Zach Lubin</h4>
+                      <p>Sport &amp; Clean Energy Transition · Avocado Framework steward</p>
+                      <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> US</span>
+                    </div>
+                  </article>
+                  <article class="champ-poster-card">
+                    <img src="assets/images/champs/2026/10_20260418_002540_0009.jpg" alt="Seruni Salsabila, Partnerships" loading="lazy">
+                    <div class="champ-poster-card__body">
+                      <h4>Seruni Salsabila</h4>
+                      <p>Partnerships</p>
+                      <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Indonesia</span>
+                    </div>
+                  </article>
+                  <article class="champ-poster-card">
+                    <img src="assets/images/champs/2026/2_20260418_002540_0001.jpg" alt="Finlay Wilson, GYC Champ" loading="lazy">
+                    <div class="champ-poster-card__body">
+                      <h4>Finlay Wilson</h4>
+                      <p>GYC Champ</p>
+                      <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> UK</span>
+                    </div>
+                  </article>
+                  <article class="champ-poster-card">
+                    <img src="assets/images/champs/2026/8_20260418_002540_0007.jpg" alt="Tan Yin Yi (Henry), Youth House coordinator" loading="lazy">
+                    <div class="champ-poster-card__body">
+                      <h4>Tan Yin Yi (Henry)</h4>
+                      <p>Youth House coordinator</p>
+                      <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Malaysia</span>
+                    </div>
+                  </article>
+                  <article class="champ-poster-card">
+                    <img src="assets/images/champs/2026/12_20260418_002540_0011.jpg" alt="Alice Piva, R4P co-lead · resilience" loading="lazy">
+                    <div class="champ-poster-card__body">
+                      <h4>Alice Piva</h4>
+                      <p>R4P co-lead · resilience</p>
+                      <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Brazil</span>
+                    </div>
+                  </article>
+                  <article class="champ-poster-card">
+                    <img src="assets/images/champs/2026/1_20260418_002539_0000.jpg" alt="Bianca Malfert, Director of Communication" loading="lazy">
+                    <div class="champ-poster-card__body">
+                      <h4>Bianca Malfert</h4>
+                      <p>Director of Communication</p>
+                      <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Bolivia</span>
+                    </div>
+                  </article>
+                  <article class="champ-poster-card">
+                    <img src="assets/images/champs/2026/7_20260418_002540_0006.jpg" alt="Genaro (Genn) Godoy, AI Labs &amp; Foresight lead" loading="lazy">
+                    <div class="champ-poster-card__body">
+                      <h4>Genaro (Genn) Godoy</h4>
+                      <p>AI Labs &amp; Foresight lead</p>
+                      <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Chile</span>
+                    </div>
+                  </article>
+                  <article class="champ-poster-card">
+                    <img src="assets/images/champs/2026/5_20260418_002540_0004.png" alt="Agustín Ocaña Escobar, Founder &amp; Strategic Director" loading="lazy">
+                    <div class="champ-poster-card__body">
+                      <h4>Agustín Ocaña Escobar</h4>
+                      <p>Founder &amp; Strategic Director</p>
+                      <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Ecuador</span>
+                    </div>
+                  </article>
+                    </div>
+                  </section>
+                  <section id="champs-archive-panel" class="champs-panel champs-panel-archive" role="tabpanel" aria-labelledby="champs-archive-tab" hidden>
+                <div class="main-team-card">
+                  <!-- Agustin Ocaña -->
+                  <div class="team-setup">
+                    <div class="team-items">
+                      <div class="team-user">
+                        <img src="assets/images/team/Agustin.jpg" alt="Agustin Ocaña">
+                      </div>
+                      <div class="team-name">
+                        <h2>Agustin Ocaña</h2>
+                        <b>CHAIRPERSON</b>
+                        <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Ecuador</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Lujain Romouzy -->
+                  <div class="team-setup">
+                    <div class="team-items">
+                      <div class="team-user">
+                        <img src="assets/images/team/Lujain.jpg" alt="Lujain Romouzy">
+                      </div>
+                      <div class="team-name">
+                        <h2>Lujain Romouzy</h2>
+                        <b>VICE CHAIRPERSON</b>
+                        <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Egypt</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Shura Mercado -->
+                  <div class="team-setup">
+                    <div class="team-items">
+                      <div class="team-user">
+                        <img src="assets/images/team/shura.jpg" alt="Shura Mercado">
+                      </div>
+                      <div class="team-name">
+                        <h2>Shura Mercado</h2>
+                        <b>ECO DYNAMO</b>
+                        <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Mexico</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Genaro Godoy -->
+                  <div class="team-setup">
+                    <div class="team-items">
+                      <div class="team-user">
+                        <img src="assets/images/team/Genaro_Godoy_Gonzalez.jpg" alt="Genaro Godoy">
+                      </div>
+                      <div class="team-name">
+                        <h2>Genaro Godoy</h2>
+                        <b>ECO GEEK GURU</b>
+                        <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Chile</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Merna Ahmed -->
+                  <div class="team-setup">
+                    <div class="team-items">
+                      <div class="team-user">
+                        <img src="assets/images/team/Merna.jpg" alt="Merna Ahmed">
+                      </div>
+                      <div class="team-name">
+                        <h2>Merna Ahmed</h2>
+                        <b>CLIMATE CRUSADER</b>
+                        <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Egypt</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Raul Fretes -->
+                  <div class="team-setup">
+                    <div class="team-items">
+                      <div class="team-user">
+                        <img src="assets/images/team/RaulF.jpg" alt="Raul Fretes">
+                      </div>
+                      <div class="team-name">
+                        <h2>Raul Fretes</h2>
+                        <b>GREEN STRATEGIST</b>
+                        <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Paraguay</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Sueley Calvacante -->
+                  <div class="team-setup">
+                    <div class="team-items">
+                      <div class="team-user">
+                        <img src="assets/images/team/Sueley.jpg" alt="Sueley Calvacante">
+                      </div>
+                      <div class="team-name">
+                        <h2>Sueley Calvacante</h2>
+                        <b>BIO TACTICIAN</b>
+                        <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Brazil</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Fredrick Binamungu -->
+                  <div class="team-setup">
+                    <div class="team-items">
+                      <div class="team-user">
+                        <img src="assets/images/team/Fredrick.jpg" alt="Fredrick Binamungu">
+                      </div>
+                      <div class="team-name">
+                        <h2>Fredrick Binamungu</h2>
+                        <b>ECO PROMOTER</b>
+                        <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Tanzania</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Bianca Malfert -->
+                  <div class="team-setup">
+                    <div class="team-items">
+                      <div class="team-user">
+                        <img src="assets/images/team/Bianca.jpg" alt="Bianca Malfert">
+                      </div>
+                      <div class="team-name">
+                        <h2>Bianca Malfert</h2>
+                        <b>EARTH GUARDIAN</b>
+                        <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Bolivia</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Seruni Salsabila -->
+                  <div class="team-setup">
+                    <div class="team-items">
+                      <div class="team-user">
+                        <img src="assets/images/team/Seruni.jpg" alt="Seruni Salsabila">
+                      </div>
+                      <div class="team-name">
+                        <h2>Seruni Salsabila</h2>
+                        <b>SOLUCIONIST NBS</b>
+                        <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Indonesia</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Zach Lubin (with placeholder) -->
+                  <div class="team-setup">
+                    <div class="team-items">
+                      <div class="team-user">
+                        <img src="assets/images/team/zach.jpg" alt="Zach Lubin">
+                      </div>
+                      <div class="team-name">
+                        <h2>Zach Lubin</h2>
+                        <b>SPORTS DINAMO</b>
+                        <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> US</span>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <!-- Add Irene Delfanti before the "Become a Champ" card -->
+                  <div class="team-setup">
+                    <div class="team-items">
+                      <div class="team-user">
+                        <img src="assets/images/team/irene.jpeg" alt="Irene Delfanti">
+                      </div>
+                      <div class="team-name">
+                        <h2>Irene Delfanti</h2>
+                        <b>DESIGN GOAT</b>
+                        <span class="champ-country"><i class="fal fa-map-marker-alt" aria-hidden="true"></i> Italy</span>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <!-- Become a Champ Card -->
+                  <div class="team-setup">
+                    <div class="team-items become-champ" aria-label="Apply to be a Champ" onclick="document.getElementById('champModal').style.display='block'">
+                      <div class="team-user question-mark">
+                        <div class="question-mark-icon">?</div>
+                      </div>
+                      <div class="team-name">
+                        <h2>Your Face Here?</h2>
+                        <b>BECOME A GYC CHAMP</b>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+      </main>
+    
+      <!-- =====================>>>>>Footer Started>>>>>======================== -->
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+              <div class="footer-content">
+                <h2>YOU HAVE ANY SUGGESTION? <br>LET US KNOW. <br>COMMUNICATION IS THE BEST TOOL WE GOT</h2>
+                 <form action="https://formspree.io/f/xldjznyr" method="POST">
+                            <div class="mb-3">
+                              
+                              <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                             
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-warning">Submit</button>
+                        </form>
+               
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+              <div class="footer-content">
+                <h2>QUICK LINKS</h2>
+                <ol>
+                  <li><a href="index"><i class="fal fa-angle-double-right"></i>Home</a></li>
+                  <li><a href="about"><i class="fal fa-angle-double-right"></i>About us</a></li>
+                  <li><a href="GYCT"><i class="fal fa-angle-double-right"></i>GYCT</a></li>
+                  <li><a href="ourprojects"><i class="fal fa-angle-double-right"></i>Our projects</a></li>
+                  <li><a href="contact"><i class="fal fa-angle-double-right"></i>Contact us</a></li>
+                </ol>
+              </div>
+    
+    
+    
+    
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+              <div class="footer-content">
+                <h3 class="contact-heading">CONTACT US</h3>
+                <li><i class="fal fa-map-marker"></i>Speerstrasse 36, 8038 Zurich, Switzerland</li>
+                <li><i class="fal fa-envelope"></i>takeaction@theglobalyouth.co</li>
+                <li><i class="fal fa-phone"></i>+41 77 807 10 68</li>
+                <br>
+                  <h2>GET ACTIVE</h2>
+                <ol>
+              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe8ageTzIA0tmtsmmvX3KqdoOjrdyoN6FsYpNRyyauJv1kaWw/viewform" target="_blank" rel="noopener"><i class="fal fa-angle-double-right"></i>Join GYC</a></li>
+              <li><a href="GYCT"><i class="fal fa-angle-double-right"></i>GYCT 2026</a></li>
+            </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copy-right">
+          <div class="container">
+            <div class="copy-right-card">
+             <p>© 2026 Global Youth Coalition. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </body>
+    
+    
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js?v=20260428c"></script>
+    
+    <!-- Add this at the bottom of the page, right before the closing </body> tag -->
+    <!-- Modal Popup Form -->
+    <div id="champModal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <span class="close" onclick="document.getElementById('champModal').style.display='none'">&times;</span>
+        <h3>Apply to Join The GYC Champs</h3>
+        <form action="https://formspree.io/f/xldjznyr" method="POST">
+          <label>Your email:<br><input type="email" name="email" required></label><br><br>
+          <label>Your message:<br><textarea name="message" rows="5" required></textarea></label><br><br>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    </html>

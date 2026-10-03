@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script data-intel-theme="boot">
+(function(){
+  var k="srm-watch-theme";
+  try{
+    var t=localStorage.getItem(k);
+    if(t==="light"||t==="dark") document.documentElement.dataset.theme=t;
+  }catch(e){}
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%230E8FA8%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2222%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2Csans-serif%22%20font-size%3D%2216%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%3ES%3C%2Ftext%3E%3C%2Fsvg%3E" type="image/svg+xml">
+<meta name="description" content="Horizon scanning for solar radiation modification and geoengineering governance. Offline horizon-scanning for solar radiation modification and geoengineering.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SRM Watch">
+<meta property="og:title" content="SRM Watch">
+<meta property="og:description" content="Horizon scanning for solar radiation modification and geoengineering governance. Offline horizon-scanning for solar radiation modification and geoengineering.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SRM Watch">
+<meta name="twitter:description" content="Horizon scanning for solar radiation modification and geoengineering governance. Offline horizon-scanning for solar radiation modification and geoengineering.">
+<title>SRM Watch — Horizon scanning for solar radiation modification and geoengineering governance.</title>
+<style>
+:root,[data-theme="light"]{
+  color-scheme:light;
+  /* —— Gamma Bright (canonical) —— */
+  --color-primary:#0E8FA8;
+  --color-secondary:#0B6E90;
+  --color-tertiary:#062B3A;
+  --color-bg:#FFFFFF;
+  --color-bg-subtle:#F7F9FF;
+  --color-surface:#FFFFFF;
+  --color-on-surface:#002253;
+  --color-muted:#6B7280;
+  --color-border:#DFDFE0;
+  --color-overlay:#F7F9FF;
+  --color-error:#E5484D;
+  --color-success:#0D9B6A;
+  --color-warning:#D97706;
+  --color-info:#0E8FA8;
+  --color-neutral:#FFFFFF;
+
+  --priority-high:var(--color-error);
+  --priority-strong:var(--color-warning);
+  --priority-monitor:var(--color-muted);
+  --priority-reviewed:var(--color-success);
+
+  --radius-sm:4px;
+  --radius-md:8px;
+  --radius-lg:12px;
+  --radius-xl:18px;
+  --radius-full:9999px;
+
+  --space-xs:6px;
+  --space-sm:14px;
+  --space-md:32px;
+  --space-lg:56px;
+  --space-gutter:24px;
+  --space-section:64px;
+
+  --container-max:1200px;
+
+  --font-display:"Instrument Sans","DM Sans","Segoe UI Variable","Segoe UI",system-ui,sans-serif;
+  --font-body:"DM Sans","Segoe UI Variable","Segoe UI",system-ui,sans-serif;
+
+  --shadow-sm:0 1px 3px rgba(0,34,83,.06);
+  --shadow-md:0 4px 16px rgba(0,34,83,.08);
+
+  /* —— Legacy aliases (pre-rebrand builders) —— */
+  --bg:var(--color-bg);
+  --bg2:var(--color-bg-subtle);
+  --panel:var(--color-surface);
+  --panel2:var(--color-bg-subtle);
+  --line:var(--color-border);
+  --line2:var(--color-border);
+  --text:var(--color-on-surface);
+  --muted:var(--color-muted);
+  --faint:#94A3B8;
+  --accent:var(--color-primary);
+  --accent2:var(--color-secondary);
+  --hi:var(--color-error);
+  --hi-bg:rgba(229,72,77,.12);
+  --strong:var(--color-warning);
+  --strong-bg:rgba(217,119,6,.12);
+  --useful:var(--color-success);
+  --useful-bg:rgba(13,155,106,.12);
+  --r:var(--radius-lg);
+
+  font-size:16px;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --color-tertiary:#E8EDF7;
+  --color-bg:#0B1220;
+  --color-bg-subtle:#121A2E;
+  --color-surface:#161F33;
+  --color-on-surface:#E8EDF7;
+  --color-muted:#94A3B8;
+  --color-border:#2A3548;
+  --color-overlay:#121A2E;
+  --color-neutral:#E8EDF7;
+  --faint:#64748B;
+  --hi-bg:rgba(229,72,77,.18);
+  --strong-bg:rgba(217,119,6,.18);
+  --useful-bg:rgba(13,155,106,.18);
+  --shadow-sm:0 1px 3px rgba(0,0,0,.28);
+  --shadow-md:0 4px 16px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--color-bg);
+  color:var(--color-on-surface);
+  font-family:var(--font-body);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--color-secondary);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
+  outline:2px solid var(--color-primary);
+  outline-offset:2px;
+}
+.mono{font-family:"Cascadia Code","Consolas",ui-monospace,monospace}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+.skip-link{
+  position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus{
+  position:fixed;left:var(--space-gutter);top:12px;z-index:100;
+  width:auto;height:auto;padding:10px 16px;
+  background:var(--color-primary);color:var(--color-neutral,#fff);
+  border-radius:var(--radius-md);font-weight:600;text-decoration:none;
+}
+.intel-shell-header{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb, var(--color-bg) 94%, transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--color-border);
+  box-shadow:var(--shadow-sm);
+}
+.intel-shell-header-inner{
+  max-width:var(--container-max);margin:0 auto;
+  padding:12px var(--space-gutter);
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.intel-shell-brand{
+  display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;
+}
+.intel-shell-brand:hover{text-decoration:none}
+.intel-shell-mark{
+  width:36px;height:36px;border-radius:var(--radius-lg);
+  background:var(--color-primary);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-weight:700;font-size:1rem;flex-shrink:0;
+}
+.intel-shell-brand-text{display:flex;flex-direction:column;gap:1px}
+.intel-shell-brand-name{
+  font-family:var(--font-display);font-weight:600;font-size:.95rem;
+  color:var(--color-tertiary);letter-spacing:-.02em;line-height:1.2;
+}
+.intel-shell-brand-name span{color:var(--color-primary)}
+.intel-shell-subtitle{font-size:.78rem;color:var(--color-muted);line-height:1.3}
+.intel-shell-nav{
+  display:flex;gap:6px;flex-wrap:wrap;margin-left:auto;
+}
+.intel-shell-nav a{
+  padding:7px 14px;border-radius:var(--radius-full);
+  font-size:.84rem;font-weight:500;color:var(--color-muted);
+  border:1px solid transparent;transition:background .15s,color .15s,border-color .15s;
+  text-decoration:none;
+}
+.intel-shell-nav a:hover{
+  color:var(--color-on-surface);background:var(--color-bg-subtle);text-decoration:none;
+}
+.intel-shell-nav a.active{
+  color:#fff;background:var(--color-primary);border-color:var(--color-primary);
+}
+.intel-shell-nav a .nav-badge{
+  display:inline-block;margin-left:6px;min-width:1.25em;padding:1px 6px;
+  border-radius:var(--radius-full);font-size:.68rem;font-weight:700;line-height:1.35;
+  background:var(--color-error);color:#fff;vertical-align:1px;
+}
+.intel-shell-nav a.active .nav-badge{background:#fff;color:var(--color-primary)}
+.intel-shell-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.intel-theme-toggle{
+  background:var(--color-surface);border:1px solid var(--color-border);
+  border-radius:var(--radius-full);width:38px;height:38px;padding:0;
+  font-size:1rem;line-height:1;cursor:pointer;color:var(--color-muted);
+  transition:background .15s,border-color .15s,color .15s;
+  flex-shrink:0;
+}
+.intel-theme-toggle:hover{color:var(--color-on-surface);border-color:var(--color-primary)}
+.intel-shell-header-inner:has(.intel-shell-nav) .intel-shell-actions{margin-left:0}
+.intel-shell-header-inner:has(.intel-shell-nav) .intel-shell-nav{margin-left:auto}
+.intel-shell-main{max-width:var(--container-max);margin:0 auto;padding:0 var(--space-gutter) 80px}
+.intel-shell-footer{
+  max-width:var(--container-max);margin:0 auto;
+  padding:24px var(--space-gutter) 48px;
+  border-top:1px solid var(--color-border);
+  color:var(--color-muted);font-size:.8rem;
+  display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;
+}
+.intel-shell-footer a{color:var(--color-secondary);font-weight:500}
+@media(max-width:720px){
+  .intel-shell-nav{width:100%;margin-left:0;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}
+  .intel-shell-nav a{flex:0 0 auto}
+}
+.landing-hero{
+  background:
+    radial-gradient(900px 420px at 70% -10%, rgba(59,104,246,.12), transparent 60%),
+    radial-gradient(700px 380px at 15% 0%, rgba(8,88,247,.08), transparent 55%),
+    var(--color-bg-subtle);
+  border-bottom:1px solid var(--color-border);
+  padding:56px var(--space-gutter) 48px;
+}
+.landing-hero .inner{max-width:var(--container-max);margin:0 auto}
+.landing-hero h1{
+  font-family:var(--font-display);font-size:2.4rem;font-weight:700;
+  color:var(--color-tertiary);letter-spacing:-.03em;line-height:1.1;
+}
+.landing-hero h1 span{color:var(--color-primary)}
+.kicker{color:var(--color-primary);font-size:.8rem;font-weight:600;margin-bottom:12px}
+.lede{color:var(--color-muted);font-size:1.1rem;max-width:62ch;margin-top:14px;line-height:1.55}
+.cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;align-items:center}
+.btn{
+  display:inline-block;background:var(--color-primary);color:#fff;font-weight:600;
+  padding:12px 24px;border-radius:var(--radius-full);text-decoration:none;font-size:1rem;
+  box-shadow:var(--shadow-sm);
+}
+.btn:hover{filter:brightness(1.05);text-decoration:none}
+.btn.ghost{background:var(--color-surface);color:var(--color-secondary);border:1px solid var(--color-border)}
+.statbar{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.statbar .stat{
+  background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);
+  padding:12px 18px;min-width:118px;box-shadow:var(--shadow-sm);
+}
+.statbar .stat .n{font-size:1.5rem;font-weight:700;color:var(--color-primary)}
+.statbar .stat.hi .n{color:var(--color-error)}
+.statbar .stat.rev .n{color:var(--color-success)}
+.statbar .stat .k{color:var(--color-muted);font-size:.74rem;font-weight:600;margin-top:4px}
+.statbar a.stat{display:block;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s}
+.statbar a.stat:hover{border-color:var(--color-primary);box-shadow:var(--shadow-md);text-decoration:none}
+.page-section{padding:52px var(--space-gutter);border-bottom:1px solid var(--color-border)}
+.page-section .inner{max-width:var(--container-max);margin:0 auto}
+.page-section h2{font-size:1.45rem;font-weight:600;color:var(--color-tertiary);margin-bottom:8px}
+.page-section .sub{color:var(--color-muted);max-width:70ch;margin-bottom:28px;line-height:1.55}
+.page-section h2 .tag{color:var(--color-primary);font-size:.78rem;font-weight:600;display:block;margin-bottom:8px}
+.pipe{display:flex;gap:0;flex-wrap:wrap;align-items:stretch;margin:26px 0 10px}
+.pstep{
+  background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);
+  padding:16px 18px;flex:1 1 168px;position:relative;margin-right:26px;margin-bottom:14px;box-shadow:var(--shadow-sm);
+}
+.pstep h3{font-size:.95rem;color:var(--color-primary);margin-bottom:6px;font-weight:600}
+.pstep p{color:var(--color-muted);font-size:.84rem;line-height:1.5}
+.pstep::after{content:"→";position:absolute;right:-22px;top:50%;transform:translateY(-50%);color:var(--color-muted)}
+.pstep:last-child::after{content:""}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:8px}
+.grid .card{
+  background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);
+  padding:22px;box-shadow:var(--shadow-sm);
+}
+.grid .card h3{font-size:1.02rem;margin-bottom:8px;color:var(--color-tertiary)}
+.grid .card p{color:var(--color-muted);font-size:.92rem;line-height:1.55}
+.grid .card code{color:var(--color-primary);background:var(--color-bg-subtle);padding:2px 7px;border-radius:var(--radius-sm);font-size:.82rem}
+.hlist{list-style:none;display:flex;flex-direction:column;gap:16px;margin-top:8px}
+.hlist li{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:16px 20px}
+.hlist b{display:block;margin-bottom:4px;font-weight:600;color:var(--color-tertiary)}
+.hlist .why{color:var(--color-muted);font-size:.9rem}
+.hlist .lim b{color:var(--color-warning)}
+.hlist .imp b{color:var(--color-secondary)}
+.lim{border-left:3px solid var(--color-warning)}
+.imp{border-left:3px solid var(--color-primary)}
+.badge{font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:var(--radius-full);margin-left:10px}
+.badge.now{color:var(--color-success);border:1px solid rgba(13,155,106,.35)}
+.badge.next{color:var(--color-secondary);border:1px solid rgba(8,88,247,.35)}
+.badge.later{color:var(--color-muted);border:1px solid var(--color-border)}
+@media(max-width:640px){.landing-hero h1{font-size:1.75rem}.pstep{margin-right:0}.pstep::after{content:""}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="intel-shell-header" data-intel-shell="v1">
+  <div class="intel-shell-header-inner">
+    <a class="intel-shell-brand" href="index.html">
+      <div class="intel-shell-mark" aria-hidden="true">S</div>
+      <div class="intel-shell-brand-text">
+        <div class="intel-shell-brand-name">SRM <span>Watch</span></div>
+        <div class="intel-shell-subtitle">Horizon scanning for solar radiation modification and geoengineering governance.</div>
+      </div>
+    </a>
+    <div class="intel-shell-actions">
+      <button type="button" class="intel-theme-toggle" id="intel-theme-toggle" aria-label="Switch to dark mode">🌙</button>
+    </div>
+    <nav class="intel-shell-nav" aria-label="Platform sections"><a class="" href="briefing.html">Brief</a><a class="" href="briefing.html#tab=watchlist">Watchlist</a><a class="" href="country-ambition.html">Countries</a><a class="" href="papers.html">Papers</a><a class="" href="organizations.html">Organizations</a><a class="" href="review.html">Review</a></nav>
+  </div>
+</header>
+<header class="landing-hero">
+  <div class="inner">
+    <div class="kicker">SRM · Geoengineering Intelligence</div>
+    <h1>SRM <span>Watch</span></h1>
+    <p class="lede">Horizon scanning for solar radiation modification and geoengineering governance. A local, fully offline pipeline that turns solar radiation modification and geoengineering signals — governance moves, country positions, science articles and the organizations driving the field — into ranked intelligence, named trends, and decision-ready briefs.</p>
+    <div class="cta">
+      <a class="btn" href="briefing.html">Open the dashboard</a>
+      <a class="btn ghost" href="papers.html">Science articles</a>
+      <a class="btn ghost" href="organizations.html">Organizations</a>
+      <a class="btn ghost" href="#limits">Read the honest limitations</a>
+    </div>
+    <div class="statbar" data-stat-signals="47" data-stat-trends="6" data-stat-threads="0">
+      <a class="stat" href="briefing.html#tab=all"><div class="n">47</div><div class="k">signals tracked</div></a>
+      <a class="stat" href="briefing.html#tab=trends"><div class="n">6</div><div class="k">named trends</div></a>
+      <a class="stat" href="briefing.html#tab=threads"><div class="n">0</div><div class="k">story threads</div></a>
+      <a class="stat hi" href="briefing.html#tab=watchlist"><div class="n">0</div><div class="k">high-priority</div></a>
+      <a class="stat rev" href="briefing.html#tab=watchlist"><div class="n">0/47</div><div class="k">analyst-reviewed</div></a>
+      <a class="stat" href="review.html"><div class="n">0</div><div class="k">LLM-assessed</div></a>
+    </div>
+  </div>
+</header>
+
+<section class="page-section">
+  <div class="inner">
+    <h2><span class="tag">What it does</span>From raw sightings to ranked judgment</h2>
+    <p class="sub">An automated scanner feeds raw signals into a deterministic Node.js pipeline. Every stage is inspectable, every output is a plain file, and a scripted verification suite runs after every build.</p>
+    <div class="pipe">
+      <div class="pstep"><h3>1 · Scan</h3><p>A scheduled scanner collects developments in solar radiation modification, geoengineering governance, outdoor experiments, country positions and the scientific literature into a raw signals database.</p></div>
+      <div class="pstep"><h3>2 · Fuse</h3><p>Migration merges duplicates, fixes encodings, links sightings, and classifies every signal by domain, horizon, maturity and the SRM governance framework (research governance, moratoria, deployment, oversight).</p></div>
+      <div class="pstep"><h3>3 · Judge</h3><p>Signals are scored on six dimensions (credibility, novelty, relevance, impact, urgency, geography). LLM-assessed scores with written rationales replace rule heuristics as coverage grows; analyst review overrides both.</p></div>
+      <div class="pstep"><h3>4 · Act</h3><p>Outputs: an offline dashboard, a weekly diff digest led by upcoming decision moments, advocacy triggers with pre-agreed playbooks, and markdown briefs ready to paste into position notes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="inner">
+    <h2><span class="tag">How it helps an organization</span>Built to close the insight-to-decision gap</h2>
+    <p class="sub">Intelligence tools die when they end at a dashboard. Every feature here terminates in something you can act on or hand to someone.</p>
+    <div class="grid">
+      <div class="card"><h3><span class="ico">📅</span>Timed to your calendar</h3><p>0 decision moments (CBD COP, UNEA resolutions, IPCC cycles, national reviews) lead the weekly digest. Each one shows the strongest relevant signals and the outcome you want at that table, so preparation starts from evidence.</p></div>
+      <div class="card"><h3><span class="ico">⚡</span>Pre-agreed triggers</h3><p>Anticipatory-action rules ("any climate-litigation signal enters high-priority") fire automatically in the digest with a written playbook. The response path is defined in advance.</p></div>
+      <div class="card"><h3><span class="ico">📄</span>Decision artifacts</h3><p>One command exports a litigation thread, a trend dossier or the top-15 watchlist as clean markdown. That creates briefing packs for a legal working group, a board meeting or a funder call in seconds.</p></div>
+      <div class="card"><h3><span class="ico">📈</span>Evidence for funders</h3><p>Weekly trend histories with sparklines and an auditable scoring rationale per signal demonstrate a live, disciplined intelligence function. That can strengthen grant applications.</p></div>
+      <div class="card"><h3><span class="ico">🌍</span>Geography that's real</h3><p>Signals map to 12 home countries plus 6 signals carrying verified country mentions. Pacific states can surface through ICJ coverage instead of disappearing into "International".</p></div>
+      <div class="card"><h3><span class="ico">✓</span>Human judgment stays in charge</h3><p>Every AI score is provisional until an analyst confirms, overrides or archives it via an append-only review journal. <code>review --batch</code> clears the queue in minutes; nothing is ever silently overwritten.</p></div>
+      <div class="card" style="border-left:3px solid var(--color-primary)"><h3><span class="ico">📚</span>Science articles &amp; organizations</h3><p>A curated register of peer-reviewed <a href="papers.html">science articles</a> on SRM methods and impacts, plus the <a href="organizations.html">organizations</a> — academic, governmental, civil-society and commercial — shaping the field, each tagged by stance and focus area.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="limits" class="page-section">
+  <div class="inner">
+    <h2><span class="tag">Honest limitations</span>What this system is <em>not</em></h2>
+    <p class="sub">An intelligence tool that oversells itself produces worse decisions than no tool. Read these before trusting any number on the dashboard.</p>
+    <ul class="hlist">
+      <li class="lim"><b>Most judgment is still provisional.</b><span class="why">0 of 47 signals are analyst-reviewed and 0 carry LLM-assessed scores. The remaining 47 are scored by keyword heuristics that cluster heavily. Treat rankings as triage.</span></li>
+      <li class="lim"><b>Coverage is biased toward English-language, EU and institutional sources.</b><span class="why">One scanner, largely official feeds. Only 0 of 47 signals are multi-source, so corroboration is weak and entire regions are under-observed. Absence of a signal is not evidence of absence.</span></li>
+      <li class="lim"><b>Threads are hand-curated.</b><span class="why">The 0 story threads are defined in code. A discovery engine now proposes emergent trend candidates for analyst confirmation, but it is keyword-based. It surfaces patterns, a human still decides which are real, and thread detection remains manual.</span></li>
+      <li class="lim"><b>Matching is lexical.</b><span class="why">The SRM-governance lens (44/47 tagged), country mentions and the dashboard chatbot all run on word-boundary regex. They miss paraphrase and non-English text, and the chatbot answers only what keyword search can reach.</span></li>
+      <li class="lim"><b>No track record yet.</b><span class="why">Scores are judgments. The system does not yet record whether what it flagged actually materialized, so there is no calibration evidence behind the priority bands.</span></li>
+      <li class="lim"><b>Single-analyst, local-first.</b><span class="why">No accounts, no concurrent editing, and no push notifications. The digest file is the alert channel. Calendar dates in decision moments are approximate until manually confirmed.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="inner">
+    <h2><span class="tag">Potential improvements</span>The roadmap, in order of leverage</h2>
+    <p class="sub">Each item attacks a limitation above. "Now" means the machinery already exists and only needs use. "Next" is designed but not built. "Later" needs new architecture.</p>
+    <ul class="hlist">
+      <li class="imp"><b>Extend LLM scoring to the full knowledge base<span class="badge now">now</span></b><span class="why">The enrichment sidecar, validation and fallback logic are live. 0/47 are covered. Each batch of 20 takes one LLM session via <code>enrich-signals.mjs prompt to apply</code>.</span></li>
+      <li class="imp"><b>Work the review queue weekly<span class="badge now">now</span></b><span class="why">A click-through review console (<code>node scripts/dev-serve.mjs</code> to <a href="review.html">review.html</a>) or the terminal <code>review --batch</code> converts provisional scores into accountable human judgment in minutes. It also builds the dataset that later recalibrates the AI.</span></li>
+      <li class="imp"><b>Trend &amp; thread discovery<span class="badge next">next</span></b><span class="why">A weekly job that clusters unassigned or fast-growing topic groups and <em>proposes</em> trend candidates in the digest. That would turn the tracker into a scanner of unknown patterns.</span></li>
+      <li class="imp"><b>More source channels<span class="badge next">next</span></b><span class="why">Court dockets, parliamentary trackers and UN document feeds flowing into the same raw-signal shape would make corroboration a real signal and reduce regional blind spots.</span></li>
+      <li class="imp"><b>Resolution tracking &amp; calibration<span class="badge now">now</span></b><span class="why">Live: <code>predictions.mjs</code> logs dated, falsifiable forecasts tied to signals (0 seeded) and computes hit rate + Brier score as they resolve. The digest nudges you to grade them. Keep logging 1 to 2 per high-priority signal to build the track record.</span></li>
+      <li class="imp"><b>Digest delivery &amp; multi-analyst review<span class="badge later">later</span></b><span class="why">Email or WhatsApp delivery of the weekly digest, and a review journal that supports several named reviewers with disagreement surfaced clearly.</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer class="intel-shell-footer">
+  <span>Built 2026-06-30 · 47 signals tracked · SRM Watch · Gamma Bright</span>
+  <span><a href="briefing.html">Brief</a> · <a href="briefing.html#tab=watchlist">Watchlist</a> · <a href="country-ambition.html">Countries</a> · <a href="papers.html">Papers</a></span>
+  <span><span class="mono">Offline HTML · zero runtime dependencies</span></span>
+</footer>
+
+<script data-intel-theme="init">
+(function(){
+  var KEY="srm-watch-theme";
+  function apply(theme){
+    document.documentElement.dataset.theme=theme;
+    var btn=document.getElementById("intel-theme-toggle");
+    if(btn){
+      btn.textContent=theme==="dark"?"\u2600":"\u{1F319}";
+      btn.setAttribute("aria-label",theme==="dark"?"Switch to light mode":"Switch to dark mode");
+    }
+    try{localStorage.setItem(KEY,theme);}catch(e){}
+    try{window.dispatchEvent(new CustomEvent("srm-theme-change",{detail:theme}));}catch(e){}
+  }
+  function preferred(){
+    try{
+      var s=localStorage.getItem(KEY);
+      if(s==="light"||s==="dark") return s;
+    }catch(e){}
+    return "light";
+  }
+  var btn=document.getElementById("intel-theme-toggle");
+  if(btn){
+    btn.addEventListener("click",function(){
+      apply(document.documentElement.dataset.theme==="dark"?"light":"dark");
+    });
+  }
+  if(!document.documentElement.dataset.theme) apply(preferred());
+  else apply(document.documentElement.dataset.theme);
+})();
+</script>
+</body>
+</html>

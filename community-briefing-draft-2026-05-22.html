@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GYC AI Labs Community Briefings · Issue 001 Draft</title>
+<style>
+  /*
+   * GYC AI Labs Community Briefings
+   * Design direction: Editorial + Organic Warmth
+   * Cohere-inspired structure, blue-forward palette, tactile depth
+   * Type: Cormorant Garamond (display) + DM Sans (body) + JetBrains Mono (labels)
+   */
+
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --ink: #0f1729;
+    --ink-soft: #2d3748;
+    --muted: #64748b;
+    --slate: #94a3b8;
+    --hairline: #e2e8f0;
+    --border-light: #edf2f7;
+    --canvas: #fafbfd;
+    --surface: #ffffff;
+    --stone: #f5f4f0;
+
+    --deep-blue: #0b1d3a;
+    --navy: #13294b;
+    --action-blue: #1a56db;
+    --focus-blue: #2563eb;
+    --electric: #3b82f6;
+    --steel: #93b4e8;
+
+    --coral: #e84a42;
+    --coral-warm: #f06b5b;
+    --coral-soft: #fde9e7;
+    --green: #0c7c50;
+    --green-soft: #e7f7ee;
+    --amber: #c48f0a;
+    --amber-soft: #fef9ec;
+
+    --display: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+    --body: 'DM Sans', 'SF Pro Text', system-ui, -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+
+    --radius-xs: 4px;
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-pill: 9999px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--ink);
+    font-family: var(--body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .email-wrapper {
+    max-width: 640px;
+    margin: 0 auto;
+    background: var(--surface);
+    position: relative;
+  }
+
+  .email-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .email-wrapper > * { position: relative; z-index: 2; }
+
+  .announcement-bar {
+    background: var(--deep-blue);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 20px;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 56px 36px 44px;
+    background: linear-gradient(180deg, var(--surface) 0%, #f8f9fd 100%);
+  }
+
+  .hero-issue-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--action-blue);
+    background: rgba(59, 130, 246, 0.06);
+    border: 1px solid rgba(59, 130, 246, 0.12);
+    padding: 5px 14px;
+    border-radius: var(--radius-pill);
+    letter-spacing: 0.06em;
+    margin-bottom: 28px;
+  }
+
+  .hero-issue-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--electric);
+  }
+
+  .hero-brand-icon {
+    width: 80px;
+    height: auto;
+    margin: 0 auto 8px;
+    display: block;
+  }
+
+  .hero-lobster {
+    width: 120px;
+    height: auto;
+    margin: 0 auto 16px;
+    display: block;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(37, 99, 235, 0.08);
+  }
+
+  .partner-photo {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--hairline);
+    display: block;
+    margin: 0 auto 16px;
+  }
+
+  .stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 22px;
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-num {
+    display: block;
+    font-family: var(--display);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--action-blue);
+  }
+
+  .stat-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--slate);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .meetings-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--body);
+    font-size: 13px;
+    margin-top: 8px;
+  }
+
+  .meetings-table th {
+    text-align: left;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    border-bottom: 2px solid var(--hairline);
+  }
+
+  .meetings-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--hairline);
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  .meetings-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .meetings-table .when-col {
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .meetings-table .who-col {
+    font-weight: 500;
+  }
+
+  .partner-chip {
+    display: inline-block;
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    margin: 0 6px 8px 0;
+  }
+
+  .partner-chip.strong {
+    border-color: rgba(37, 99, 235, 0.2);
+    background: rgba(37, 99, 235, 0.04);
+    color: var(--action-blue);
+    font-weight: 600;
+  }
+
+  .links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .link-card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--action-blue);
+    transition: border-color 0.15s ease;
+  }
+
+  .link-card:hover {
+    border-color: var(--focus-blue);
+  }
+
+  .link-card::after {
+    content: "↗";
+    font-size: 11px;
+    margin-left: auto;
+    opacity: 0.6;
+  }
+
+  .stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 22px;
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-num {
+    display: block;
+    font-family: var(--display);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--action-blue);
+  }
+
+  .stat-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--slate);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .email-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--body);
+    font-size: 13px;
+    margin-top: 8px;
+  }
+
+  .email-table th {
+    text-align: left;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    border-bottom: 2px solid var(--hairline);
+  }
+
+  .email-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--hairline);
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  .email-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .email-table .date-col {
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .email-table .thread-col {
+    font-weight: 500;
+  }
+
+  .email-table .cc-col {
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .status-sent {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--green);
+    background: var(--green-soft);
+    padding: 2px 8px;
+    border-radius: var(--radius-pill);
+  }
+
+  .hero-brand-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--slate);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: var(--display);
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 14px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--action-blue);
+  }
+
+  .hero-lede {
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--muted);
+    max-width: 420px;
+    margin: 0 auto 20px;
+    font-weight: 400;
+  }
+
+  .hero-rule {
+    width: 40px;
+    height: 3px;
+    background: var(--coral);
+    margin: 0 auto;
+    border: none;
+    border-radius: 3px;
+  }
+
+  .dark-band {
+    background: var(--navy);
+    color: #ffffff;
+    padding: 48px 36px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .dark-band::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.06;
+    background: radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.5), transparent 60%);
+    pointer-events: none;
+  }
+
+  .dark-band-content {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .dark-band-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .dark-band h2 {
+    font-family: var(--display);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0;
+    margin-bottom: 14px;
+    color: #ffffff;
+  }
+
+  .dark-band p {
+    font-family: var(--body);
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.78);
+    max-width: 460px;
+    margin: 0 auto;
+    font-weight: 400;
+  }
+
+  .dark-band .lobster-note {
+    margin-top: 18px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.55);
+    font-style: italic;
+  }
+
+  .section {
+    padding: 48px 36px;
+  }
+
+  .section + .section {
+    padding-top: 0;
+  }
+
+  .section-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--focus-blue);
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .section h2 {
+    font-family: var(--display);
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: 0;
+    color: var(--ink);
+    margin-bottom: 22px;
+  }
+
+  .update-card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-sm);
+    padding: 22px;
+    margin-bottom: 12px;
+  }
+
+  .update-card.accent-green { border-left: 3px solid var(--green); }
+  .update-card.accent-teal { border-left: 3px solid #0d9488; }
+  .update-card.accent-blue { border-left: 3px solid var(--focus-blue); }
+  .update-card.accent-amber { border-left: 3px solid var(--amber); }
+
+  .update-card-heading {
+    font-family: var(--body);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .update-card-body {
+    font-family: var(--body);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  .update-card-body a {
+    color: var(--action-blue);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(26, 86, 219, 0.25);
+    transition: border-color 0.15s ease;
+  }
+
+  .update-card-body a:hover {
+    border-color: var(--action-blue);
+  }
+
+  .project-chips {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+  }
+
+  .project-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--focus-blue);
+    background: rgba(37, 99, 235, 0.06);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    padding: 5px 12px;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .project-chip::after {
+    content: "↗";
+    font-size: 10px;
+    opacity: 0.7;
+  }
+
+  .action-panel {
+    background: var(--surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 26px;
+    margin-bottom: 14px;
+  }
+
+  .action-panel h3 {
+    font-family: var(--body);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .action-list {
+    list-style: none;
+  }
+
+  .action-list li {
+    display: flex;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--hairline);
+    font-family: var(--body);
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink);
+    font-weight: 400;
+  }
+
+  .action-list li:last-child {
+    border-bottom: none;
+  }
+
+  .action-num {
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: var(--radius-pill);
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--focus-blue);
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--deep-blue);
+    color: #ffffff;
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 11px 24px;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    margin-top: 16px;
+    transition: background 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    background: #162d52;
+  }
+
+  .support-card {
+    background: var(--surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 26px;
+    margin-top: 14px;
+  }
+
+  .support-card h3 {
+    font-family: var(--body);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--ink-soft);
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+
+  .support-tagline {
+    font-family: var(--body);
+    font-size: 13px;
+    color: var(--coral);
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+
+  .support-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 12px 0 16px;
+  }
+
+  .support-chip {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--muted);
+    background: var(--stone);
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    letter-spacing: 0.02em;
+  }
+
+  .support-note {
+    font-family: var(--body);
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--slate);
+  }
+
+  .btn-donate {
+    display: inline-block;
+    background: var(--green);
+    color: #ffffff;
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 11px 24px;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    margin-top: 14px;
+    transition: background 0.2s ease;
+  }
+
+  .btn-donate:hover {
+    background: #0a6b42;
+  }
+
+  .signals-panel {
+    background: var(--green-soft);
+    border-radius: var(--radius-md);
+    padding: 26px;
+  }
+
+  .signal-item {
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(12, 124, 80, 0.12);
+  }
+
+  .signal-item:first-child { padding-top: 0; }
+  .signal-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .signal-chip {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--green);
+    background: #ffffff;
+    border: 1px solid rgba(12, 124, 80, 0.15);
+    padding: 4px 10px;
+    border-radius: var(--radius-pill);
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+  }
+
+  .signal-text {
+    font-family: var(--body);
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+
+  .signal-context {
+    margin-top: 18px;
+    font-family: var(--body);
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .community-panel {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-md);
+    padding: 26px;
+  }
+
+  .community-panel h3 {
+    font-family: var(--body);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+
+  .footer {
+    background: var(--deep-blue);
+    color: #ffffff;
+    padding: 36px;
+    text-align: center;
+  }
+
+  .draft-badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--coral-warm);
+    background: rgba(240, 107, 91, 0.12);
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+    border: 1px solid rgba(240, 107, 91, 0.2);
+    letter-spacing: 0.08em;
+    margin-bottom: 14px;
+  }
+
+  .footer-brand {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .footer p {
+    font-family: var(--body);
+    font-size: 12px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .footer a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  @media (max-width: 480px) {
+    .hero { padding: 40px 22px 34px; }
+    .hero h1 { font-size: 34px; }
+    .section { padding: 34px 22px; }
+    .dark-band { padding: 36px 22px; }
+    .footer { padding: 28px 22px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="email-wrapper">
+
+<div class="announcement-bar">
+  GYC AI Labs Community Briefings · Issue 001 · 22 May 2026
+</div>
+
+<div class="hero">
+  <img class="hero-brand-icon" src="https://gycailabs.org/gyc-logo.png" alt="GYC AI Labs">
+  <div class="hero-brand-label">GYC AI Labs</div>
+  <h1>A week of building <em>shared infrastructure</em></h1>
+  <p class="hero-lede">Youth climate action, intergenerational foresight, and practical next steps for our community.</p>
+  <div class="stats-row">
+    <div class="stat-item">
+      <span class="stat-num">3</span>
+      <span class="stat-label">Emails sent</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">2</span>
+      <span class="stat-label">Partners onboarded</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">5</span>
+      <span class="stat-label">Meetings held</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">8+</span>
+      <span class="stat-label">Lobster actions</span>
+    </div>
+  </div>
+  <hr class="hero-rule">
+</div>
+
+<div class="dark-band">
+  <div class="dark-band-content">
+    <div class="dark-band-label">Welcome</div>
+    <h2>Hello from GYC AI Labs</h2>
+    <p>This first Community Briefing is a warm recap of what moved this week, what the community can help shape right now, and the signals of change we are watching together.</p>
+    <p class="lobster-note">This newsletter was generated with help from our GYC AI Labs Lobster assistant 🦞, who learns from interactions across our emails and workflows so we can build better collective intelligence together. Every conversation helps it get sharper about what matters.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Weekly Recap</div>
+  <h2>What happened this week</h2>
+
+  <div class="update-card accent-green">
+    <div class="update-card-heading">Children-led DevOps partnership launched</div>
+    <div class="update-card-body">
+      We started a new partnership with Selena (Planetary Stories) and Francisco (EcoEsperanza / Guardianes por la Vida) to support child-led projects, build capacity in their organizations, and co-develop a children engagement policy. Concrete support includes a story knowledge base, foresight intelligence for intergenerational equity, and translation automation for Letters of Peace.
+      <div class="project-chips">
+        <a href="https://planetarystories.com" class="project-chip">Planetary Stories</a>
+        <a href="https://ecoesperanza.org" class="project-chip">EcoEsperanza</a>
+        <a href="https://pmnch.who.int/news-and-events/news/item/04-12-2024-guardianes-por-la-vida" class="project-chip">Guardianes por la Vida</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="update-card accent-blue">
+    <div class="update-card-heading">Governance, foresight, and youth infrastructure</div>
+    <div class="update-card-body">
+      The IE Foresight team is preparing to launch its report. GYCT is seeking interpretation funding. We met with Marcele Oliveira to align PYCC and COP30 youth engagement pathways. YOUNGO automation support is being explored to reduce administrative burdens. Plans are forming to meet with youth delegates and presidencies during SB64 to validate Mycelium features, targeting a public launch at COP31.
+    </div>
+  </div>
+
+  <div class="update-card accent-amber">
+    <div class="update-card-heading">Lab infrastructure and community systems</div>
+    <div class="update-card-body">
+      We refreshed public project surfaces, advanced Mission Control tracking for the new partnership, created a Community Briefings signup flow with action tracking, and deployed automated cron jobs for daily team briefings (18:15 weekdays) and community newsletters (09:00 daily) — all restricted to draft-for-review before any external send.
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Meeting Blog</div>
+  <h2>Who we met with this week</h2>
+
+  <div class="update-card accent-blue">
+    <table class="meetings-table">
+      <thead>
+        <tr>
+          <th>When</th>
+          <th>Meeting</th>
+          <th>What moved</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="when-col">14 May</td>
+          <td class="who-col">LCAW Stakeholder Briefing</td>
+          <td>Hackathon registration opened; participant applications launch by 26 May</td>
+        </tr>
+        <tr>
+          <td class="when-col">21 May</td>
+          <td class="who-col">Children-led DevOps &mdash; Selena &amp; Francisco</td>
+          <td>Partnership launched: Planetary Stories, EcoEsperanza, Guardianes por la Vida. Children engagement policy co-development, knowledge base, translation automation, Lobster builds agreed</td>
+        </tr>
+        <tr>
+          <td class="when-col">21 May</td>
+          <td class="who-col">Marcele Oliveira &mdash; PYCC / COP30</td>
+          <td>Logistics and youth engagement pathways for COP30 aligned</td>
+        </tr>
+        <tr>
+          <td class="when-col">22 May</td>
+          <td class="who-col">Alexander Dale &mdash; Cat Tully intro</td>
+          <td>Exploratory meeting confirmed for next Wednesday (28 May)</td>
+        </tr>
+        <tr>
+          <td class="when-col">Ongoing</td>
+          <td class="who-col">Team briefings &mdash; Valery, Julia</td>
+          <td>LCW Hackathon sprint, Mycelium development, briefing automation</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Useful Links</div>
+  <h2>Explore GYC AI Labs</h2>
+
+  <div class="links-grid">
+    <a href="https://gycailabs.org" class="link-card">GYC AI Labs</a>
+    <a href="https://theglobalyouth.co" class="link-card">Global Youth Coalition</a>
+    <a href="https://planetarystories.com" class="link-card">Planetary Stories</a>
+    <a href="https://ecoesperanza.org" class="link-card">EcoEsperanza</a>
+    <a href="https://gycailabs.org/#use-cases" class="link-card">Mycelium</a>
+    <a href="https://www.gofundme.com/f/gyc-ai-lab-help-us-launch-our-lab-for-youth-climate-action" class="link-card">GoFundMe</a>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Our Partners</div>
+  <h2>Who makes this possible</h2>
+
+  <div class="update-card accent-blue">
+    <div class="update-card-heading">Strategic Partners</div>
+    <div class="update-card-body">
+      <span class="partner-chip strong">Youth Climate Lab</span>
+      <span class="partner-chip strong">Sustenta Honduras</span>
+      <span class="partner-chip strong">Young Africans Research Academy</span>
+      <span class="partner-chip strong">Children-led DevOps</span>
+      <span class="partner-chip strong">Guardianes por la Vida</span>
+      <span class="partner-chip strong">SOIF &mdash; School of International Futures</span>
+      <span class="partner-chip strong">Major Group for Children and Youth</span>
+    </div>
+  </div>
+
+  <div class="update-card accent-teal">
+    <div class="update-card-heading">Initiative Partners</div>
+    <div class="update-card-body">
+      <span class="partner-chip">AIcology</span>
+      <span class="partner-chip">Youth Negotiators Academy</span>
+      <span class="partner-chip">YOUNGO</span>
+      <span class="partner-chip">ClimateWorks Foundation</span>
+      <span class="partner-chip">Oxford Net Zero</span>
+      <span class="partner-chip">Global Environmental Governance Project</span>
+      <span class="partner-chip">Intergenerational Center for Global Action</span>
+      <span class="partner-chip">Global Youth Biodiversity Network</span>
+      <span class="partner-chip">Children and Youth Major Group to UNEP</span>
+      <span class="partner-chip">Financing for Development Children &amp; Youth</span>
+      <span class="partner-chip">UNU-CPR Future Generations Platform</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Email Activity</div>
+  <h2>What the Lobster has been doing</h2>
+
+  <div class="update-card accent-blue">
+    <div class="update-card-heading">&#x1F99E; Lobster actions this week</div>
+    <div class="update-card-body" style="margin-bottom:12px;">
+      Our Lobster assistant actively helped draft, review, and send communications across multiple threads. Here is what moved:
+    </div>
+    <table class="email-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Thread</th>
+          <th>Copy to</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="date-col">21 May</td>
+          <td class="thread-col">Team briefing &#x2192; Valery, Julia</td>
+          <td class="cc-col">GYC, team</td>
+          <td><span class="status-sent">Sent</span></td>
+        </tr>
+        <tr>
+          <td class="date-col">21 May</td>
+          <td class="thread-col">Alexander Dale &#x2192; Cat intro</td>
+          <td class="cc-col">Cat, Valery, Julia, GYC</td>
+          <td><span class="status-sent">Sent</span></td>
+        </tr>
+        <tr>
+          <td class="date-col">22 May</td>
+          <td class="thread-col">Community Briefings &#x2192; Issue 001</td>
+          <td class="cc-col">&#x2014;</td>
+          <td><span class="status-draft">Drafting</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="text-align:center;margin-top:20px;">
+    <img class="hero-lobster" src="https://gycailabs.org/lobster-hero.jpg" alt="GYC AI Labs Lobster">
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Community Actions</div>
+  <h2>What you can do this week</h2>
+
+  <div class="action-panel">
+    <h3>Help shape what we build next</h3>
+    <ol class="action-list">
+      <li>
+        <span class="action-num">1</span>
+        <span><strong>Shape Mycelium</strong> &mdash; tell us what coordination, knowledge, and follow-up support youth-led projects need to succeed.</span>
+      </li>
+      <li>
+        <span class="action-num">2</span>
+        <span><strong>Explore the new projects</strong> &mdash; visit Planetary Stories and EcoEsperanza and tell us what support would make child-led work stronger.</span>
+      </li>
+      <li>
+        <span class="action-num">3</span>
+        <span><strong>Share the briefing</strong> &mdash; invite people who care about youth climate action, foresight, and responsible AI infrastructure.</span>
+      </li>
+    </ol>
+    <a href="https://gycailabs.org/#use-cases" class="btn-primary">Respond to Mycelium</a>
+  </div>
+
+  <div class="support-card">
+    <h3>Help keep this Lobster energized &#x1F99E;</h3>
+    <div class="support-tagline">Powering children and youth projects with climate advocacy at heart</div>
+    <div class="update-card-body">
+      A practical lab runs on energy. You can help power the work by supporting tokens, hackathon expenses, capacity-building programs, foresight research, or core infrastructure. Choose the kind of launch support you want to help move forward.
+    </div>
+    <div class="support-options">
+      <span class="support-chip">Tokens</span>
+      <span class="support-chip">Hackathon expenses</span>
+      <span class="support-chip">Capacity building</span>
+      <span class="support-chip">Foresight research</span>
+      <span class="support-chip">Infrastructure</span>
+    </div>
+    <p class="support-note">
+      Supporter features will be opt-in. We will only celebrate you publicly if you say yes.
+    </p>
+    <a href="https://www.gofundme.com/f/gyc-ai-lab-help-us-launch-our-lab-for-youth-climate-action" class="btn-donate">Support the launch on GoFundMe</a>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Signals of Change</div>
+  <h2>What we are watching</h2>
+
+  <div class="signals-panel">
+    <div class="signal-item">
+      <div class="signal-chip">United States</div>
+      <div class="signal-text">Youth climate plaintiffs are challenging climate rollbacks as a threat to rights and futures.</div>
+    </div>
+    <div class="signal-item">
+      <div class="signal-chip">Wales</div>
+      <div class="signal-text">Wales is being pushed to think in 100-year terms through its Future Generations governance model.</div>
+    </div>
+    <div class="signal-item">
+      <div class="signal-chip">European Union</div>
+      <div class="signal-text">EU youth climate dialogue is increasingly linking resilience policy with intergenerational fairness.</div>
+    </div>
+    <p class="signal-context">
+      These signals help us ask better questions: what should youth institutions build now, and what should public systems stop postponing?
+    </p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="community-panel">
+    <h3>Build collective intelligence with us</h3>
+    <div class="update-card-body">
+      Reply with what you are seeing, testing, learning, or needing. The community grows smarter when stories, signals, and action points can move together.
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="draft-badge">Draft for review</div>
+  <div class="footer-brand">GYC AI Labs Community Briefings</div>
+  <p>
+    Draft for review only. Not for distribution.<br>
+    GYC AI Labs Community Briefings are prepared with help from the Lobster assistant &#x1F99E; and sent only after human approval.<br>
+    <a href="https://gycailabs.org">gycailabs.org</a> &middot; <a href="https://theglobalyouth.co">theglobalyouth.co</a>
+  </p>
+</div>
+
+</div>
+
+</body>
+</html>

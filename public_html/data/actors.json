@@ -1,0 +1,4138 @@
+{
+  "schema_version": 2,
+  "generated": "2026-08-30",
+  "notes": "Unified actors register: organization | institution | initiative. FGP categories for website display. Source of truth — organizations.json is a derived compatibility view.",
+  "count": 112,
+  "actors": [
+    {
+      "id": "african-commission-on-human-and-peoples-rights",
+      "name": "African Commission on Human and Peoples' Rights",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "regional-human-rights-body",
+      "country": "International",
+      "region": "Africa",
+      "focus": "regional human-rights monitoring",
+      "status": "active",
+      "established": 1987,
+      "url": "https://www.achpr.org/",
+      "description": "African regional human-rights body relevant to youth protest, climate, and governance accountability cases.",
+      "mandate_type": "regional human-rights commission",
+      "tags": [
+        "human rights",
+        "Africa",
+        "youth"
+      ],
+      "related_countries": [],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "african-commission-egypt-youth-protest-criminalization-2025"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "African Commission on Human and Peoples' Rights",
+        "African Commission",
+        "ACHPR"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "ai-singapore-ai-for-good",
+      "name": "AI for Good (AI Singapore)",
+      "actor_class": "organization",
+      "fgp_category": "institution",
+      "type": "ai-education-program",
+      "country": "SG",
+      "region": "Southeast Asia",
+      "focus": "inclusive AI literacy and workforce development",
+      "status": "active",
+      "established": "2024",
+      "url": "https://aiforgood.aisingapore.org",
+      "description": "AI Singapore's flagship initiative scaling inclusive AI education across ASEAN and beyond. Reached 100K+ beneficiaries across 14 countries. Runs the AI Ready ASEAN Youth Challenge across all 11 ASEAN member states, trains 200 Master Trainers, and convenes national policy dialogues on AI in Education. Partners include ASEAN Foundation, Google.org, UNDP, AWS, and Micron Foundation. Also runs the AI for Good Festival — a gamified AI literacy event with interactive booths, workshops, and hackathon-style showcases.",
+      "mandate_type": "national AI programme with regional reach",
+      "tags": [
+        "AI literacy",
+        "education",
+        "youth",
+        "ASEAN",
+        "hackathons",
+        "workforce development",
+        "SDG 4"
+      ],
+      "related_countries": [
+        "SG",
+        "BN",
+        "KH",
+        "ID",
+        "LA",
+        "MY",
+        "MM",
+        "PH",
+        "TH",
+        "TL",
+        "VN",
+        "BD",
+        "PK",
+        "LK"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "dfg6-technology"
+      ],
+      "aliases": [
+        "AI for Good (AI Singapore)"
+      ],
+      "added_date": "2026-07-07"
+    },
+    {
+      "id": "au-parliamentary-group-future-generations",
+      "name": "Australian Parliamentary Group for Future Generations",
+      "actor_class": "organization",
+      "fgp_category": "campaign",
+      "type": "parliamentary-caucus",
+      "country": "AU",
+      "region": "Oceania",
+      "focus": "future generations law reform",
+      "status": "active",
+      "established": 2023,
+      "url": "https://www.foundationsfortomorrow.org/australian-parliamentary-group-for-future-generations",
+      "description": "Cross-party parliamentary caucus supporting the Wellbeing of Future Generations Bill and a national Future Generations Commissioner.",
+      "mandate_type": "informal parliamentary group",
+      "tags": [
+        "future generations",
+        "parliamentary advocacy"
+      ],
+      "related_countries": [
+        "AU"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "ceb5-representation",
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "Australian Parliamentary Group for Future Generations",
+        "Parliamentary Group for Future Generations"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "balearic-law-10-2023-wellbeing-generations",
+      "name": "Balearic Law 10/2023 — Wellbeing for Present and Future Generations",
+      "actor_class": "initiative",
+      "fgp_category": "legislation",
+      "type": "subnational-framework-law",
+      "country": "ES",
+      "region": "Iberia",
+      "focus": "wellbeing impact assessment",
+      "status": "active",
+      "established": 2023,
+      "url": "https://www.boe.es/eli/es-ib/l/2023/04/05/10",
+      "description": "Spain's first subnational wellbeing-for-future-generations statute, born from a popular legislative initiative led by GOB Mallorca.",
+      "mandate_type": "autonomous community law",
+      "tags": [
+        "wellbeing impact assessment",
+        "popular legislative initiative",
+        "subnational"
+      ],
+      "related_countries": [
+        "ES"
+      ],
+      "parent_actor_ids": [
+        "gob-baleares",
+        "spain-baleares-comision-bienestar-generaciones"
+      ],
+      "signal_ids": [],
+      "aliases": [
+        "Law 10/2023",
+        "Balearic wellbeing law",
+        "Ley 10/2023"
+      ],
+      "ie_lens": [
+        "ceb2-fairness"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "british-group-interparliamentary-union",
+      "name": "British Group of the Inter-Parliamentary Union",
+      "actor_class": "organization",
+      "fgp_category": "institution",
+      "type": "parliamentary-group",
+      "country": "GB",
+      "region": "Europe",
+      "focus": "parliamentary diplomacy and youth representation",
+      "status": "active",
+      "established": 1888,
+      "url": "https://www.ipu.org/",
+      "description": "UK parliamentary branch of the IPU, relevant to youth representation, inter-parliamentary democracy, and future-generations work.",
+      "mandate_type": "parliamentary association",
+      "tags": [
+        "parliamentary diplomacy",
+        "youth representation",
+        "IPU",
+        "future generations"
+      ],
+      "related_countries": [
+        "GB"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "r2-m03-ipu-youth-participation-parliaments-2025-cost"
+      ],
+      "ie_lens": [
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "British Group of the Inter-Parliamentary Union",
+        "British IPU Group",
+        "British Group of IPU"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "california-youth-empowerment-commission",
+      "name": "California Youth Empowerment Commission",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "youth-commission",
+      "country": "US_CA",
+      "region": "North America",
+      "focus": "youth governance and state policy",
+      "status": "active",
+      "established": 2021,
+      "url": null,
+      "description": "California's statutory youth commission, using planning and budget scrutiny to institutionalize youth voice in state governance.",
+      "mandate_type": "state youth commission",
+      "tags": [
+        "youth governance",
+        "budget",
+        "policy"
+      ],
+      "related_countries": [
+        "US"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "california-youth-empowerment-commission-plan-2025-2030"
+      ],
+      "ie_lens": [
+        "dfg3-prosperity"
+      ],
+      "aliases": [
+        "California Youth Empowerment Commission",
+        "CYEC"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "cepal-red-comisiones-futuro",
+      "name": "CEPAL Red de Comisiones de Futuro Parlamentarias",
+      "actor_class": "organization",
+      "fgp_category": "institution",
+      "type": "network",
+      "country": "International",
+      "region": "Latin America and Caribbean",
+      "focus": "parliamentary foresight",
+      "status": "active",
+      "established": "2024",
+      "url": "https://www.cepal.org/es/proyectos/red-comisiones-futuro-parlamentarias/la-red",
+      "description": "UN ECLAC network promoting anticipatory governance and legislative foresight across Latin American parliaments. Member legislatures include Chile, Brazil, Colombia, Mexico, Uruguay, Paraguay, and Córdoba (Argentina). Partners with the UNU Future Generations Platform and delivers regional conferences, self-paced courses, and technical assistance.",
+      "mandate_type": "inter-parliamentary network",
+      "tags": [
+        "intergenerational equity",
+        "anticipatory governance",
+        "parliamentary futures",
+        "CEPAL"
+      ],
+      "related_countries": [
+        "CL",
+        "BR",
+        "CO",
+        "MX",
+        "UY",
+        "PY",
+        "AR"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "cepal-second-regional-futures-conference-2025-06-26",
+        "brazil-senate-futures-commission-dissolved-resolucao-14-2023"
+      ],
+      "ie_lens": [
+        "ceb5-representation",
+        "ceb4-good-ancestor",
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "CEPAL Red de Comisiones de Futuro Parlamentarias",
+        "Red de Comisiones de Futuro Parlamentarias",
+        "CEPAL Red de Comisiones de Futuro",
+        "CEPAL parliamentary futures network",
+        "ECLAC Parliamentary Futures Commissions",
+        "Second Regional Conference of Parliamentary Futures Commissions"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "england-childrens-commissioner",
+      "name": "Children's Commissioner for England",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "childrens-commissioner",
+      "country": "GB",
+      "region": "Europe",
+      "focus": "children's rights and wellbeing",
+      "status": "active",
+      "established": 2004,
+      "url": "https://www.childrenscommissioner.gov.uk/",
+      "description": "Independent statutory advocate for children in England, increasingly engaging intergenerational fairness, democracy anxiety, and long-term wellbeing.",
+      "mandate_type": "statutory children's commissioner",
+      "tags": [
+        "children's rights",
+        "intergenerational fairness",
+        "England"
+      ],
+      "related_countries": [
+        "GB"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "england-childrens-commissioner-big-future-democracy-anxiety-2026-05-02"
+      ],
+      "ie_lens": [
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "Children's Commissioner for England",
+        "Children's Commissioner England"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "childrens-commissioner-england",
+      "name": "Children's Commissioner for England",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "childrens-commissioner",
+      "country": "GB",
+      "region": "Europe",
+      "focus": "children's rights and wellbeing",
+      "status": "active",
+      "established": 2004,
+      "url": "https://www.childrenscommissioner.gov.uk/",
+      "description": "Independent statutory advocate for children in England, increasingly engaging intergenerational fairness, democracy anxiety, and long-term wellbeing.",
+      "mandate_type": "statutory children's commissioner",
+      "tags": [
+        "children's rights",
+        "intergenerational fairness",
+        "England"
+      ],
+      "related_countries": [
+        "GB"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "england-childrens-commissioner-big-future-democracy-anxiety-2026-05-02",
+        "d01-england-dfe-childrens-commissioner-ai-education-advisory-board-2026-07-04"
+      ],
+      "ie_lens": [
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "Children's Commissioner for England",
+        "Children’s Commissioner for England",
+        "Children's Commissioner England",
+        "Children?s Commissioner for England"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "eu-cjeu-ilva-climate-ruling",
+      "name": "CJEU Ilva Industrial Emissions Climate Ruling (2024)",
+      "actor_class": "initiative",
+      "fgp_category": "litigation",
+      "type": "court-judgment",
+      "country": "EU",
+      "region": "Europe",
+      "focus": "industrial emissions and climate duty",
+      "status": "active",
+      "established": 2024,
+      "url": null,
+      "description": "CJEU Grand Chamber judgment in C.Z. and Others v Ilva SpA (C-626/22) requiring assessment of harmful pollutants and suspension of high-risk industrial plants under the Industrial Emissions Directive and EU Charter environmental rights.",
+      "mandate_type": "supranational court judgment",
+      "tags": [
+        "climate litigation",
+        "CJEU",
+        "industrial emissions",
+        "Ilva"
+      ],
+      "related_countries": [
+        "IT",
+        "EU"
+      ],
+      "parent_actor_ids": [
+        "eu-court-of-justice"
+      ],
+      "signal_ids": [
+        "eu-cjeu-ilva-industrial-emissions-climate-ruling-2024-06-25"
+      ],
+      "aliases": [
+        "Court of Justice of the European Union Ilva",
+        "CJEU Ilva case",
+        "Ilva SpA CJEU",
+        "C-626/22"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg3-prosperity",
+        "dfg5-environment"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "au-climate-change-authority",
+      "name": "Climate Change Authority (Australia)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "statutory-advisory-body",
+      "country": "AU",
+      "region": "Oceania",
+      "focus": "emissions targets advice",
+      "status": "active",
+      "established": 2012,
+      "url": "https://www.climatechangeauthority.gov.au/",
+      "description": "Independent body advising on Australia's emissions targets under the Climate Change Act 2022.",
+      "mandate_type": "independent statutory body",
+      "tags": [
+        "climate governance",
+        "emissions targets"
+      ],
+      "related_countries": [
+        "AU"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Climate Change Authority (Australia)",
+        "Climate Change Authority"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "uk-climate-change-committee",
+      "name": "Climate Change Committee (UK)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "statutory-advisory-body",
+      "country": "GB",
+      "region": "Europe",
+      "focus": "carbon budgets and adaptation",
+      "status": "active",
+      "established": 2008,
+      "url": "https://www.theccc.org.uk/",
+      "description": "Independent statutory body under the Climate Change Act 2008 advising on emissions targets and long-term decarbonisation pathways.",
+      "mandate_type": "statutory advisory body",
+      "tags": [
+        "climate governance",
+        "carbon budgets"
+      ],
+      "related_countries": [
+        "GB"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "uk-ccc-well-adapted-wales-commissioner-climate-negligence-2026-05-20"
+      ],
+      "ie_lens": [
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Climate Change Committee (UK)",
+        "Climate Change Committee (CCC)",
+        "Climate Change Committee",
+        "UK Climate Change Committee"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "colombia-constitutional-court-t390-awa",
+      "name": "Colombia Constitutional Court T-390/25 (Awá Future Generations)",
+      "actor_class": "initiative",
+      "fgp_category": "litigation",
+      "type": "constitutional-tutela",
+      "country": "CO",
+      "region": "Latin America and Caribbean",
+      "focus": "indigenous future generations rights",
+      "status": "active",
+      "established": 2025,
+      "url": null,
+      "description": "Constitutional Court Sentencia T-390/25 protecting Awá indigenous people including rights of future generations over Trans-Andean pipeline oil contamination.",
+      "mandate_type": "constitutional court judgment",
+      "tags": [
+        "future generations",
+        "Indigenous rights",
+        "T-390/25",
+        "Awá"
+      ],
+      "related_countries": [
+        "CO"
+      ],
+      "parent_actor_ids": [
+        "colombia-constitutional-court"
+      ],
+      "signal_ids": [
+        "colombia-t-390-25-awa-future-generations-2025-09-24"
+      ],
+      "aliases": [
+        "Constitutional Court of Colombia T-390",
+        "T-390/25",
+        "Awá future generations ruling",
+        "Sentencia T-390/25"
+      ],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg2-rights"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "chile-senado-comision-desafios-futuro",
+      "name": "Comisión de Desafíos del Futuro, Ciencia, Tecnología e Innovación (Senado de Chile)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "parliamentary",
+      "country": "CL",
+      "region": "Latin America",
+      "focus": "legislative foresight",
+      "status": "active",
+      "established": "2012",
+      "url": "https://www.senado.cl/comisiones/permanente/desafios-del-futuro-ciencia-tecnologia-e-innovacion",
+      "description": "Standing Senate commission (since 2012) promoting strategic foresight and anticipatory governance in Chilean legislation. Co-requested the Inter-American Court climate advisory opinion AO-32/25 with Colombia and participates in CEPAL's parliamentary futures network.",
+      "mandate_type": "standing parliamentary commission",
+      "tags": [
+        "committee for the future",
+        "climate governance",
+        "science and technology"
+      ],
+      "related_countries": [
+        "CL"
+      ],
+      "parent_actor_ids": [
+        "cepal-red-comisiones-futuro"
+      ],
+      "signal_ids": [
+        "cepal-second-regional-futures-conference-2025-06-26",
+        "chile-national-future-development-institution-bill-16441-2025-06"
+      ],
+      "ie_lens": [
+        "ceb4-good-ancestor",
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Comisión de Desafíos del Futuro, Ciencia, Tecnología e Innovación (Senado de Chile)",
+        "Comisión de Desafíos del Futuro",
+        "Senate Future Challenges Commission Chile",
+        "Senado de Chile Comisión de Desafíos del Futuro"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "colombia-congreso-comision-futuro",
+      "name": "Comisión de Futuro (Congreso de la República de Colombia)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "parliamentary",
+      "country": "CO",
+      "region": "Latin America",
+      "focus": "legislative foresight",
+      "status": "active",
+      "established": null,
+      "url": "https://www.camara.gov.co/",
+      "description": "Member of CEPAL's parliamentary futures network. Colombia co-requested Inter-American Court advisory opinion AO-32/25 and hosts significant climate litigation recognizing future generations (e.g., Amazon youth lawsuit, T-390/25 Awa case).",
+      "mandate_type": "parliamentary commission",
+      "tags": [
+        "committee for the future",
+        "climate litigation",
+        "CEPAL network"
+      ],
+      "related_countries": [
+        "CO"
+      ],
+      "parent_actor_ids": [
+        "cepal-red-comisiones-futuro"
+      ],
+      "signal_ids": [
+        "cepal-second-regional-futures-conference-2025-06-26"
+      ],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Comisión de Futuro (Congreso de la República de Colombia)",
+        "Colombia Comisión de Futuro parlamentaria"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "paraguay-congreso-comision-futuro",
+      "name": "Comisión de Futuro (Congreso Nacional del Paraguay)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "parliamentary",
+      "country": "PY",
+      "region": "Latin America",
+      "focus": "legislative foresight",
+      "status": "active",
+      "established": "2022",
+      "url": "https://www.congreso.gov.py/",
+      "description": "Parliamentary futures commission member of CEPAL's regional network. Paraguay also maintains a Congressional Futures Commission in the lower house (since 2022) as part of the Latin American parliamentary foresight movement.",
+      "mandate_type": "parliamentary commission",
+      "tags": [
+        "committee for the future",
+        "CEPAL network"
+      ],
+      "related_countries": [
+        "PY"
+      ],
+      "parent_actor_ids": [
+        "cepal-red-comisiones-futuro"
+      ],
+      "signal_ids": [
+        "cepal-second-regional-futures-conference-2025-06-26"
+      ],
+      "ie_lens": [
+        "ceb4-good-ancestor"
+      ],
+      "aliases": [
+        "Comisión de Futuro (Congreso Nacional del Paraguay)",
+        "Paraguay Comisión de Futuro parlamentaria"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "mexico-senado-comision-futuro",
+      "name": "Comisión de Futuro (Senado de México)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "parliamentary",
+      "country": "MX",
+      "region": "Latin America",
+      "focus": "legislative foresight",
+      "status": "active",
+      "established": null,
+      "url": "https://www.senado.gob.mx/",
+      "description": "Senate futures commission participating in CEPAL's Red de Comisiones de Futuro Parlamentarias.",
+      "mandate_type": "parliamentary commission",
+      "tags": [
+        "committee for the future",
+        "intergenerational equity",
+        "CEPAL network"
+      ],
+      "related_countries": [
+        "MX"
+      ],
+      "parent_actor_ids": [
+        "cepal-red-comisiones-futuro"
+      ],
+      "signal_ids": [
+        "cepal-second-regional-futures-conference-2025-06-26",
+        "mexico-senate-comision-futuro-gobernanza-anticipatoria-2025-06-30"
+      ],
+      "ie_lens": [
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "Comisión de Futuro (Senado de México)",
+        "Comisión de Futuro y Gobernanza Anticipatoria",
+        "Senado de México Comisión de Futuro",
+        "Mexican Senate futures commission"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "argentina-cordoba-comision-futuro",
+      "name": "Comisión de Futuro Parlamentaria (Legislatura de Córdoba)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "parliamentary",
+      "country": "AR",
+      "region": "Latin America",
+      "focus": "subnational legislative foresight",
+      "status": "active",
+      "established": "2025",
+      "url": "https://legislaturacba.gob.ar/la-unicameral-de-cordoba-puso-en-funcionamiento-la-comision-de-futuro/",
+      "description": "First subnational parliamentary futures commission in Latin America, established May 2025 via Resolution 42800. Mandated to institutionalize strategic and anticipatory perspective in provincial legislation with technical support from COPEC and CEPAL.",
+      "mandate_type": "special non-permanent commission",
+      "tags": [
+        "subnational",
+        "anticipatory governance",
+        "intergenerational dialogue"
+      ],
+      "related_countries": [
+        "AR"
+      ],
+      "parent_actor_ids": [
+        "cepal-red-comisiones-futuro",
+        "argentina-copec"
+      ],
+      "signal_ids": [
+        "cordoba-comision-futuro-parlamentaria-2025-05-28"
+      ],
+      "ie_lens": [
+        "ceb4-good-ancestor"
+      ],
+      "aliases": [
+        "Comisión de Futuro Parlamentaria (Legislatura de Córdoba)",
+        "Comisión de Futuro Parlamentaria Córdoba",
+        "Legislatura de Córdoba Comisión de Futuro"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "uruguay-comision-especial-futuros",
+      "name": "Comisión Especial de Futuros (Asamblea General del Uruguay)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "parliamentary",
+      "country": "UY",
+      "region": "Latin America",
+      "focus": "legislative foresight",
+      "status": "active",
+      "established": "2017",
+      "url": "https://parlamento.gub.uy/comisiones/comision/com00017",
+      "description": "Special parliamentary commission created under Law 19.509 (2017) to address strategic long-term issues including climate, AI, education, and demographic change through anticipatory governance and collective intelligence methods. Chaired by Senator Blanca Rodríguez as of May 2026.",
+      "mandate_type": "special parliamentary commission",
+      "tags": [
+        "committee for the future",
+        "anticipatory governance",
+        "education futures",
+        "AI governance"
+      ],
+      "related_countries": [
+        "UY"
+      ],
+      "parent_actor_ids": [
+        "cepal-red-comisiones-futuro"
+      ],
+      "signal_ids": [
+        "cepal-second-regional-futures-conference-2025-06-26",
+        "uruguay-comision-futuros-president-rodriguez-2026-05"
+      ],
+      "ie_lens": [
+        "ceb4-good-ancestor",
+        "dfg5-environment",
+        "dfg6-technology"
+      ],
+      "aliases": [
+        "Comisión Especial de Futuros (Asamblea General del Uruguay)",
+        "Comisión Especial de Futuros Uruguay",
+        "Uruguay Comisión de Futuros",
+        "Comisión de Futuros Uruguay"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "spain-baleares-comision-bienestar-generaciones",
+      "name": "Comisión para el Bienestar de las Generaciones Presentes y Futuras (Illes Balears)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "government",
+      "country": "ES",
+      "region": "Iberia",
+      "focus": "intergenerational impact assessment",
+      "status": "active",
+      "established": "2023",
+      "url": "https://www.boe.es/eli/es-ib/l/2023/04/05/10",
+      "description": "Independent consultative body under Balearic Law 10/2023 — Spain's first subnational wellbeing-for-future-generations statute. Oversees wellbeing impact assessments on legislation, budgets, and public planning; born from a popular legislative initiative led by GOB.",
+      "mandate_type": "statutory consultative commission",
+      "tags": [
+        "future generations law",
+        "wellbeing impact assessment",
+        "subnational"
+      ],
+      "related_countries": [
+        "ES"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "Comisión para el Bienestar de las Generaciones Presentes y Futuras (Illes Balears)"
+      ],
+      "added_date": "2026-07-01"
+    },
+    {
+      "id": "brasil-senado-comissao-futuro",
+      "name": "Comissão Senado do Futuro (Senado Federal do Brasil) — dissolved 2023",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "parliamentary",
+      "country": "BR",
+      "region": "Latin America",
+      "focus": "legislative foresight (historical)",
+      "status": "dissolved",
+      "established": "2013",
+      "url": "https://legis.senado.leg.br/norma/37139388",
+      "description": "Senate Futures Commission (2013–2023) examining long-term strategic issues including technology and climate. Extinct under Senate Resolution 14/2023 (June 2023), transformed into the Comissão de Defesa da Democracia. Brazil's CEPAL network participation continues through other chambers, but the dedicated Senate futures mandate ended.",
+      "mandate_type": "parliamentary commission (extinct)",
+      "tags": [
+        "committee for the future",
+        "dissolved",
+        "CEPAL network"
+      ],
+      "related_countries": [
+        "BR"
+      ],
+      "parent_actor_ids": [
+        "cepal-red-comisiones-futuro"
+      ],
+      "signal_ids": [
+        "brazil-senate-futures-commission-dissolved-resolucao-14-2023"
+      ],
+      "ie_lens": [
+        "dfg5-environment",
+        "dfg6-technology"
+      ],
+      "aliases": [
+        "Comissão Senado do Futuro (Senado Federal do Brasil) — dissolved 2023",
+        "Comissão Senado do Futuro",
+        "Brazil Senate Futures Commission"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "argentina-copec",
+      "name": "Consejo para la Planificación Estratégica de Córdoba (CoPEC)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "government",
+      "country": "AR",
+      "region": "Latin America",
+      "focus": "strategic planning",
+      "status": "active",
+      "established": null,
+      "url": "https://www.cba.gov.ar/copec/",
+      "description": "Provincial strategic planning council providing technical assistance to Córdoba's parliamentary Future Commission and co-organizing CEPAL training on demographic ageing and legislative foresight.",
+      "mandate_type": "government advisory body",
+      "tags": [
+        "foresight",
+        "strategic planning",
+        "subnational"
+      ],
+      "related_countries": [
+        "AR"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "cordoba-comision-futuro-parlamentaria-2025-05-28"
+      ],
+      "ie_lens": [
+        "ceb4-good-ancestor"
+      ],
+      "aliases": [
+        "Consejo para la Planificación Estratégica de Córdoba (CoPEC)",
+        "Consejo para la Planificación Estratégica de Córdoba"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "portugal-pcs-conselho-futuro",
+      "name": "Conselho do Futuro (Plataforma Crescimento Sustentável)",
+      "actor_class": "organization",
+      "fgp_category": "campaign",
+      "type": "civil-society",
+      "country": "PT",
+      "region": "Iberia",
+      "focus": "youth policy advocacy",
+      "status": "active",
+      "established": "2021",
+      "url": "https://crescimentosustentavel.org/quem-somos/orgaos-sociais/conselho-do-futuro/",
+      "description": "Youth-led council within the Sustainable Growth Platform producing policy papers and engaging decision-makers on intergenerational fairness principles. Fills part of the institutional gap where Portugal lacks a statutory future-generations commissioner.",
+      "mandate_type": "civil society youth council",
+      "tags": [
+        "youth governance",
+        "intergenerational fairness",
+        "policy papers"
+      ],
+      "related_countries": [
+        "PT"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg6-technology"
+      ],
+      "aliases": [
+        "Conselho do Futuro (Plataforma Crescimento Sustentável)"
+      ],
+      "added_date": "2026-07-01"
+    },
+    {
+      "id": "colombia-constitutional-court",
+      "name": "Constitutional Court of Colombia",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "constitutional-court",
+      "country": "CO",
+      "region": "Latin America and Caribbean",
+      "focus": "constitutional rights and tutela",
+      "status": "active",
+      "established": 1991,
+      "url": "https://www.corteconstitucional.gov.co/",
+      "description": "Colombia's constitutional court; landmark climate, Indigenous, and future generations jurisprudence including T-390/25 Awá ruling and rights-of-nature precedents.",
+      "mandate_type": "constitutional court",
+      "tags": [
+        "future generations",
+        "climate litigation",
+        "rights of nature"
+      ],
+      "related_countries": [
+        "CO"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "colombia-t-390-25-awa-future-generations-2025-09-24",
+        "colombia-c280-eia-climate-impacts-mandatory-2024",
+        "colombia-t123-climate-environmental-displacement-2024"
+      ],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Constitutional Court of Colombia",
+        "Corte Constitucional de Colombia"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "constitutional-court-of-hungary",
+      "name": "Constitutional Court of Hungary",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "constitutional-court",
+      "country": "HU",
+      "region": "Europe",
+      "focus": "constitutional review",
+      "status": "active",
+      "established": 2012,
+      "url": "https://hunconcourt.hu/",
+      "description": "Hungary's constitutional court, relevant to child-protection and intergenerational-justice constitutional disputes.",
+      "mandate_type": "constitutional court",
+      "tags": [
+        "constitutional law",
+        "children",
+        "intergenerational justice"
+      ],
+      "related_countries": [
+        "HU"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg2-rights"
+      ],
+      "aliases": [
+        "Constitutional Court of Hungary",
+        "Hungarian Constitutional Court"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "constitutional-court-of-korea",
+      "name": "Constitutional Court of Korea",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "constitutional-court",
+      "country": "KR",
+      "region": "Asia",
+      "focus": "constitutional review and climate rights",
+      "status": "active",
+      "established": 1988,
+      "url": "https://www.ccourt.go.kr/",
+      "description": "South Korea's constitutional court, which imposed a deadline for climate-law reform to protect future generations.",
+      "mandate_type": "constitutional court",
+      "tags": [
+        "constitutional law",
+        "climate rights"
+      ],
+      "related_countries": [
+        "KR"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "korea-constitutional-court-climate-deadline-2026-02-28"
+      ],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Constitutional Court of Korea",
+        "South Korea Constitutional Court"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "corteidh",
+      "name": "Corte Interamericana de Derechos Humanos (Inter-American Court of Human Rights)",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "intergovernmental",
+      "country": "International",
+      "region": "Latin America and Caribbean",
+      "focus": "human rights jurisprudence",
+      "status": "active",
+      "established": "1979",
+      "url": "https://www.corteidh.or.cr/",
+      "description": "Regional human rights court whose Advisory Opinion AO-32/25 (May 2025) recognized a right to a healthy climate and affirmed intergenerational equity as essential to climate rights across 20 OAS member states.",
+      "mandate_type": "regional human rights court",
+      "tags": [
+        "climate litigation",
+        "intergenerational equity",
+        "binding advisory opinions"
+      ],
+      "related_countries": [
+        "CL",
+        "CO",
+        "MX",
+        "BR",
+        "AR"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Corte Interamericana de Derechos Humanos (Inter-American Court of Human Rights)"
+      ],
+      "added_date": "2026-07-01"
+    },
+    {
+      "id": "us-council-environmental-quality",
+      "name": "Council on Environmental Quality (CEQ)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "advisory-body",
+      "country": "US",
+      "region": "North America",
+      "focus": "NEPA implementation",
+      "status": "active",
+      "established": 1970,
+      "url": "https://ceq.doe.gov/",
+      "description": "White House council overseeing NEPA environmental review for federal actions.",
+      "mandate_type": "federal advisory body",
+      "tags": [
+        "NEPA",
+        "environmental review"
+      ],
+      "related_countries": [
+        "US"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Council on Environmental Quality (CEQ)",
+        "Council on Environmental Quality"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "eu-court-of-justice",
+      "name": "Court of Justice of the European Union",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "supranational-court",
+      "country": "EU",
+      "region": "Europe",
+      "focus": "EU law adjudication",
+      "status": "active",
+      "established": 1952,
+      "url": "https://curia.europa.eu/",
+      "description": "Supreme court of the European Union interpreting EU law, including environmental and climate obligations under the EU Charter and directives.",
+      "mandate_type": "supranational court",
+      "tags": [
+        "CJEU",
+        "EU law",
+        "climate litigation"
+      ],
+      "related_countries": [
+        "EU"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "eu-cjeu-ilva-industrial-emissions-climate-ruling-2024-06-25"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Court of Justice of the European Union",
+        "European Court of Justice"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "court-of-kings-bench-alberta",
+      "name": "Court of King's Bench of Alberta",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "provincial-court",
+      "country": "CA_AB",
+      "region": "North America",
+      "focus": "provincial civil and constitutional adjudication",
+      "status": "active",
+      "established": 1875,
+      "url": "https://albertacourts.ca/kb",
+      "description": "Alberta's superior court, relevant to privacy, AI, and constitutional litigation with long-term implications.",
+      "mandate_type": "superior court",
+      "tags": [
+        "privacy",
+        "AI governance",
+        "constitutional law"
+      ],
+      "related_countries": [
+        "CA"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "ca-clearview-ai-privacy-constitutional-ruling-2025-05-08"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg6-technology"
+      ],
+      "aliases": [
+        "Court of King's Bench of Alberta",
+        "Alberta Court of King's Bench",
+        "King's Bench Alberta"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "court-of-session-scotland",
+      "name": "Court of Session, Scotland",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "high-court",
+      "country": "GB",
+      "region": "Europe",
+      "focus": "civil appellate and judicial review",
+      "status": "active",
+      "established": 1532,
+      "url": "https://www.scotcourts.gov.uk/the-courts/supreme-courts/court-of-session/",
+      "description": "Scotland's supreme civil court, central to environmental and climate litigation with long-term consequences.",
+      "mandate_type": "senior civil court",
+      "tags": [
+        "scotland",
+        "climate litigation",
+        "judicial review"
+      ],
+      "related_countries": [
+        "GB"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "scotland-rosebank-jackdaw-court-quash-2025-01-30"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Court of Session, Scotland",
+        "Court of Session"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "democracy-development-program",
+      "name": "Democracy Development Program",
+      "actor_class": "organization",
+      "fgp_category": "campaign",
+      "type": "civil-society-programme",
+      "country": "ZA",
+      "region": "Africa",
+      "focus": "democracy, youth participation, and civic education",
+      "status": "active",
+      "established": 1995,
+      "url": "https://www.ddp.org.za/",
+      "description": "South African civic organisation focused on democracy, participation, intergenerational fairness, and evidence on youth voter apathy and engagement.",
+      "mandate_type": "civil society programme",
+      "tags": [
+        "democracy",
+        "youth participation",
+        "voting",
+        "intergenerational fairness"
+      ],
+      "related_countries": [
+        "ZA"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "ddp-south-africa-youth-voter-apathy-survey-2026"
+      ],
+      "ie_lens": [
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "Democracy Development Program",
+        "DDP South Africa",
+        "DDP"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "canada-digital-safety-commission",
+      "name": "Digital Safety Commission of Canada",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "digital-safety-regulator",
+      "country": "CA",
+      "region": "North America",
+      "focus": "online safety and AI chatbot duties for children",
+      "status": "proposed",
+      "established": 2026,
+      "url": null,
+      "description": "Proposed federal regulator under Bill C-34 for child online safety, AI chatbots, transparency, and enforcement duties.",
+      "mandate_type": "proposed federal regulator",
+      "tags": [
+        "online safety",
+        "children",
+        "AI governance",
+        "digital safety"
+      ],
+      "related_countries": [
+        "CA"
+      ],
+      "parent_actor_ids": [
+        "parliament-of-canada"
+      ],
+      "signal_ids": [
+        "canada-bill-c34-digital-safety-act-2026-06"
+      ],
+      "ie_lens": [
+        "dfg6-technology"
+      ],
+      "aliases": [
+        "Digital Safety Commission of Canada",
+        "Digital Safety Commission",
+        "Commission of Canada. The"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "efta-court",
+      "name": "EFTA Court",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "regional-court",
+      "country": "International",
+      "region": "Europe",
+      "focus": "EEA legal interpretation",
+      "status": "active",
+      "established": 1994,
+      "url": "https://eftacourt.int/",
+      "description": "The EFTA Court interprets EEA law, including climate-impact and lifecycle-emissions standards affecting future generations.",
+      "mandate_type": "EEA court",
+      "tags": [
+        "EEA",
+        "climate litigation",
+        "future generations"
+      ],
+      "related_countries": [
+        "NO",
+        "IS",
+        "LI"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "efta-court-scope3-oil-emissions-judgment-2025-05-21"
+      ],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "EFTA Court",
+        "Court of Justice of the European Free Trade Association"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "esafety-commissioner",
+      "name": "eSafety Commissioner (Australia)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "digital-safety-regulator",
+      "country": "AU",
+      "region": "Oceania",
+      "focus": "online safety and age assurance",
+      "status": "active",
+      "established": 2015,
+      "url": "https://www.esafety.gov.au/",
+      "description": "Australia's online-safety regulator, now enforcing the under-16 social-media minimum-age obligation and platform compliance duties.",
+      "mandate_type": "independent regulator",
+      "tags": [
+        "online safety",
+        "age assurance",
+        "children"
+      ],
+      "related_countries": [
+        "AU"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "australia-social-media-minimum-age-enforcement-2025-12-10",
+        "australia-esafety-smma-compliance-report-2026-03"
+      ],
+      "ie_lens": [
+        "dfg6-technology"
+      ],
+      "aliases": [
+        "eSafety Commissioner (Australia)",
+        "eSafety Commissioner",
+        "Australian eSafety Commissioner",
+        "eSafety"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "eu-bioeconomy-youth-platform",
+      "name": "EU Bioeconomy Youth Participatory Platform",
+      "actor_class": "initiative",
+      "fgp_category": "initiative",
+      "type": "youth-participation-platform",
+      "country": "EU",
+      "region": "Europe",
+      "focus": "youth bioeconomy governance",
+      "status": "proposed",
+      "established": 2026,
+      "url": null,
+      "description": "Permanent youth participatory platform proposed by EESC building on the EU Bioeconomy Youth Ambassadors initiative for bioeconomy strategy governance.",
+      "mandate_type": "advisory youth platform",
+      "tags": [
+        "bioeconomy",
+        "youth participation",
+        "EU"
+      ],
+      "related_countries": [],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "eesc-bioeconomy-safeguards-youth-platform-2026-05-05"
+      ],
+      "aliases": [
+        "EU Bioeconomy Youth Participatory Platform",
+        "EU Bioeconomy Youth Ambassadors programme"
+      ],
+      "ie_lens": [
+        "dfg6-technology"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "eu-commissioner-intergenerational-fairness",
+      "name": "EU Commissioner for Intergenerational Fairness, Youth, Culture and Sport",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "supranational-commissioner",
+      "country": "EU",
+      "region": "Europe",
+      "focus": "intergenerational fairness portfolio",
+      "status": "active",
+      "established": 2024,
+      "url": "https://commission.europa.eu/about/organisation/college-commissioners/glenn-micallef_en",
+      "description": "First explicit EU-level institutional mandate for intergenerational fairness, held by Commissioner Glenn Micallef from 2024.",
+      "mandate_type": "European Commissioner portfolio",
+      "tags": [
+        "intergenerational fairness",
+        "EU institutions"
+      ],
+      "related_countries": [
+        "IT",
+        "MT",
+        "ES"
+      ],
+      "parent_actor_ids": [
+        "european-commission"
+      ],
+      "signal_ids": [
+        "eu-strategy-intergenerational-fairness-2026-03-05"
+      ],
+      "ie_lens": [
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "EU Commissioner for Intergenerational Fairness, Youth, Culture and Sport",
+        "Commissioner for Intergenerational Fairness",
+        "Glenn Micallef"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "eu-intergenerational-fairness-strategy",
+      "name": "EU Strategy for Intergenerational Fairness",
+      "actor_class": "initiative",
+      "fgp_category": "initiative",
+      "type": "flagship-strategy",
+      "country": "EU",
+      "region": "Europe",
+      "focus": "intergenerational fairness mainstreaming",
+      "status": "active",
+      "established": 2026,
+      "url": "https://commission.europa.eu/",
+      "description": "European Commission flagship strategy (March 2026) mainstreaming intergenerational fairness across EU policy areas, citing member-state models including Malta, Wales, and Spain.",
+      "mandate_type": "EU policy strategy",
+      "tags": [
+        "intergenerational equity",
+        "EU governance",
+        "mainstreaming"
+      ],
+      "related_countries": [
+        "MT",
+        "GB",
+        "ES"
+      ],
+      "parent_actor_ids": [
+        "european-commission"
+      ],
+      "signal_ids": [
+        "eu-strategy-intergenerational-fairness-2026-03-05"
+      ],
+      "aliases": [
+        "EU Strategy for Intergenerational Fairness",
+        "EU intergenerational fairness strategy",
+        "Strategy on Intergenerational Fairness"
+      ],
+      "ie_lens": [
+        "ceb2-fairness"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "european-commission",
+      "name": "European Commission",
+      "actor_class": "organization",
+      "fgp_category": "institution",
+      "type": "supranational-executive",
+      "country": "EU",
+      "region": "Europe",
+      "focus": "EU policy and legislation",
+      "status": "active",
+      "established": 1958,
+      "url": "https://commission.europa.eu/",
+      "description": "Executive branch of the European Union, responsible for proposing legislation and implementing decisions including the EU Strategy for Intergenerational Fairness.",
+      "mandate_type": "supranational executive",
+      "tags": [
+        "EU governance",
+        "intergenerational fairness"
+      ],
+      "related_countries": [],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "European Commission"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "european-court-of-human-rights",
+      "name": "European Court of Human Rights",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "regional-court",
+      "country": "International",
+      "region": "Europe",
+      "focus": "human-rights adjudication",
+      "status": "active",
+      "established": 1959,
+      "url": "https://www.echr.coe.int/",
+      "description": "The Council of Europe court for human-rights cases, including climate and environmental rights claims.",
+      "mandate_type": "regional human-rights court",
+      "tags": [
+        "human rights",
+        "climate litigation"
+      ],
+      "related_countries": [],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "ecthr-greenpeace-nordic-v-norway-2025-10-28",
+        "echr-fliegenschnee-austria-climate-inadmissibility-2025-12-11"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "European Court of Human Rights",
+        "ECHR",
+        "Strasbourg Court"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "european-parliament",
+      "name": "European Parliament",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "supranational-parliament",
+      "country": "EU",
+      "region": "Europe",
+      "focus": "EU legislative scrutiny and democratic oversight",
+      "status": "active",
+      "established": 1952,
+      "url": "https://www.europarl.europa.eu/",
+      "description": "Directly elected EU legislature, a major venue for youth, platform, digital-rights, and climate governance signals.",
+      "mandate_type": "supranational legislature",
+      "tags": [
+        "EU",
+        "legislation",
+        "youth"
+      ],
+      "related_countries": [],
+      "parent_actor_ids": [
+        "european-commission"
+      ],
+      "signal_ids": [
+        "europarl-cyberbullying-platform-responsibility-2026-04-29",
+        "eu-parliament-protection-minors-online-resolution-2025-11-26",
+        "d07-eu-return-regulation-child-detention-return-hubs-2026-07-04"
+      ],
+      "ie_lens": [
+        "dfg5-environment",
+        "dfg6-technology"
+      ],
+      "aliases": [
+        "European Parliament",
+        "EU Parliament",
+        "Europarl"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "federal-court-of-australia",
+      "name": "Federal Court of Australia",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "federal-court",
+      "country": "AU",
+      "region": "Oceania",
+      "focus": "federal judicial review",
+      "status": "active",
+      "established": 1976,
+      "url": "https://www.fedcourt.gov.au/",
+      "description": "Australia's federal trial court, hearing major public-law and climate-related appeals.",
+      "mandate_type": "federal court",
+      "tags": [
+        "judiciary",
+        "climate litigation"
+      ],
+      "related_countries": [
+        "AU"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "australia-pabai-torres-strait-climate-appeal-2026-07"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Federal Court of Australia",
+        "Australian Federal Court"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "finance-commission",
+      "name": "Finance Commission",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "fiscal-commission",
+      "country": "IN",
+      "region": "Asia",
+      "focus": "tax devolution and fiscal federalism",
+      "status": "active",
+      "established": 1951,
+      "url": "https://financecommission.nic.in/",
+      "description": "India's constitutional finance commission, relevant to intergenerational taxation, devolution, and fiscal fairness debates.",
+      "mandate_type": "constitutional fiscal commission",
+      "tags": [
+        "fiscal policy",
+        "tax devolution",
+        "intergenerational equity"
+      ],
+      "related_countries": [
+        "IN"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "india-intergenerational-equity-tax-devolution-2026-06"
+      ],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg2-rights",
+        "dfg3-prosperity"
+      ],
+      "aliases": [
+        "Finance Commission",
+        "Indian Finance Commission"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "wales-future-generations-commissioner",
+      "name": "Future Generations Commissioner for Wales",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "commissioner",
+      "country": "GB",
+      "region": "Europe",
+      "focus": "future generations guardian",
+      "status": "active",
+      "established": 2016,
+      "url": "https://www.futuregenerations.wales/",
+      "description": "Independent statutory role under the Well-being of Future Generations (Wales) Act 2015. Acts as guardian for future generations' interests in Wales, monitoring public bodies and issuing recommendations.",
+      "mandate_type": "statutory commissioner",
+      "tags": [
+        "future generations",
+        "Wales model",
+        "well-being"
+      ],
+      "related_countries": [
+        "GB"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "wales-future-generations-commissioner-warning-2026-05-20",
+        "welsh-government-endorses-nearly-all-2025-future-generations-recommendations-2026-04-13"
+      ],
+      "ie_lens": [
+        "ceb5-representation",
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "Future Generations Commissioner for Wales",
+        "Future Generations Commissioner",
+        "Derek Walker"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "gob-baleares",
+      "name": "GOB (Grup Balear d'Ornitologia i Defensa de la Naturalesa)",
+      "actor_class": "organization",
+      "fgp_category": "campaign",
+      "type": "civil-society",
+      "country": "ES",
+      "region": "Iberia",
+      "focus": "advocacy",
+      "status": "active",
+      "established": "1973",
+      "url": "https://www.gobmallorca.com/",
+      "description": "Balearic environmental NGO that led the popular legislative initiative (ILP) resulting in Law 10/2023 on wellbeing for present and future generations — the first successful citizens' initiative of its kind in Spain.",
+      "mandate_type": "civil society advocate",
+      "tags": [
+        "popular legislative initiative",
+        "climate",
+        "intergenerational justice"
+      ],
+      "related_countries": [
+        "ES"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "GOB (Grup Balear d'Ornitologia i Defensa de la Naturalesa)"
+      ],
+      "added_date": "2026-07-01"
+    },
+    {
+      "id": "malta-guardian-future-generations",
+      "name": "Guardian of Future Generations (Malta)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "government",
+      "country": "MT",
+      "region": "Europe",
+      "focus": "intergenerational sustainable development",
+      "status": "active",
+      "established": "2012",
+      "url": "https://sustainabledevelopment.gov.mt/guardian-of-future-generations/",
+      "description": "Statutory commission under Malta's Sustainable Development Act (Cap. 521, Article 8) safeguarding intergenerational and intragenerational sustainable development. Chairperson and four members appointed by the Prime Minister after Opposition consultation. Advisory powers include policy review, impact-assessment scrutiny, public consultations, and information requests from government entities. Cited in the EU Intergenerational Fairness Strategy (March 2026) as a member-state institutional model.",
+      "mandate_type": "statutory advisory commission",
+      "tags": [
+        "future generations",
+        "sustainable development",
+        "advisory commission",
+        "EU model"
+      ],
+      "related_countries": [
+        "MT"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "Guardian of Future Generations (Malta)"
+      ],
+      "added_date": "2026-07-01"
+    },
+    {
+      "id": "portugal-gulbenkian-de-hoje-para-amanha",
+      "name": "Gulbenkian De Hoje Para Amanhã",
+      "actor_class": "initiative",
+      "fgp_category": "initiative",
+      "type": "philanthropic-programme",
+      "country": "PT",
+      "region": "Europe",
+      "focus": "intergenerational futures",
+      "status": "active",
+      "established": 2024,
+      "url": "https://gulbenkian.pt/",
+      "description": "Calouste Gulbenkian Foundation programme on present and future generations, supporting Portuguese dialogue on long-term governance and intergenerational fairness.",
+      "mandate_type": "philanthropic initiative",
+      "tags": [
+        "future generations",
+        "intergenerational equity",
+        "Portugal"
+      ],
+      "related_countries": [
+        "PT"
+      ],
+      "parent_actor_ids": [
+        "portugal-pcs-conselho-futuro"
+      ],
+      "signal_ids": [],
+      "aliases": [
+        "De Hoje Para Amanhã",
+        "Gulbenkian De Hoje Para Amanhã"
+      ],
+      "ie_lens": [
+        "ceb4-good-ancestor",
+        "ceb2-fairness"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "us-hi-oeqc",
+      "name": "Hawaii Office of Environmental Quality Control (OEQC)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "regulatory-agency",
+      "country": "US_HI",
+      "region": "Pacific",
+      "focus": "state environmental review",
+      "status": "active",
+      "established": 1974,
+      "url": "https://health.hawaii.gov/oeqc/",
+      "description": "Administers Hawaii Environmental Policy Act reviews with constitutional intergenerational mandate.",
+      "mandate_type": "state regulatory agency",
+      "tags": [
+        "HEPA",
+        "environmental review"
+      ],
+      "related_countries": [
+        "US"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Hawaii Office of Environmental Quality Control (OEQC)",
+        "Hawaii Office of Environmental Quality Control"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "high-court-of-australia",
+      "name": "High Court of Australia",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "supreme-court",
+      "country": "AU",
+      "region": "Oceania",
+      "focus": "constitutional adjudication",
+      "status": "active",
+      "established": 1903,
+      "url": "https://www.hcourt.gov.au/",
+      "description": "Australia's apex court, central to constitutional and intergenerational rights litigation.",
+      "mandate_type": "apex court",
+      "tags": [
+        "constitutional law",
+        "rights"
+      ],
+      "related_countries": [
+        "AU"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "australia-digital-freedom-high-court-challenge-2025-12-04",
+        "au-hca-aa-diocese-child-duty-ruling-2026"
+      ],
+      "ie_lens": [
+        "dfg2-rights"
+      ],
+      "aliases": [
+        "High Court of Australia",
+        "Australian High Court"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "high-court-of-kenya-nairobi",
+      "name": "High Court of Kenya at Nairobi",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "high-court",
+      "country": "KE",
+      "region": "Africa",
+      "focus": "high-court adjudication",
+      "status": "active",
+      "established": 1963,
+      "url": "https://www.judiciary.go.ke/",
+      "description": "Kenyan High Court forum for rights and capacity cases, including disability and child-rights litigation.",
+      "mandate_type": "high court",
+      "tags": [
+        "Kenya",
+        "children",
+        "rights"
+      ],
+      "related_countries": [
+        "KE"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "ke-macharia-v-im-bank-disability-ruling-2025-10-14"
+      ],
+      "ie_lens": [
+        "dfg2-rights"
+      ],
+      "aliases": [
+        "High Court of Kenya at Nairobi",
+        "Kenya High Court",
+        "Nairobi High Court"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "high-court-of-south-africa",
+      "name": "High Court of South Africa",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "high-court",
+      "country": "ZA",
+      "region": "Africa",
+      "focus": "high-court adjudication",
+      "status": "active",
+      "established": 1997,
+      "url": "https://www.judiciary.org.za/",
+      "description": "South Africa's High Court, important for child-rights, climate, and public-interest litigation.",
+      "mandate_type": "high court",
+      "tags": [
+        "state courts",
+        "children",
+        "climate litigation"
+      ],
+      "related_countries": [
+        "ZA"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "south-africa-cancelcoal-high-court-ruling-2024-12-04"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "High Court of South Africa",
+        "South African High Court"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "uk-lords-intergenerational-fairness-committee",
+      "name": "House of Lords Select Committee on Intergenerational Fairness and Provision",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "parliamentary-committee",
+      "country": "GB",
+      "region": "Europe",
+      "focus": "intergenerational fairness inquiry",
+      "status": "historical",
+      "established": 2018,
+      "url": "https://publications.parliament.uk/pa/ld201719/ldselect/ldintfair/329/32902.htm",
+      "description": "Temporary Lords inquiry (2018–2019) recommending intergenerational impact assessments and generational distributional budget analysis.",
+      "mandate_type": "parliamentary select committee (dissolved)",
+      "tags": [
+        "intergenerational fairness",
+        "parliamentary inquiry"
+      ],
+      "related_countries": [
+        "GB"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "ceb4-good-ancestor",
+        "ceb2-fairness",
+        "dfg3-prosperity"
+      ],
+      "aliases": [
+        "House of Lords Select Committee on Intergenerational Fairness and Provision",
+        "Lords Select Committee on Intergenerational Fairness and Provision"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "human-rights-watch",
+      "name": "Human Rights Watch",
+      "actor_class": "organization",
+      "fgp_category": "campaign",
+      "type": "human-rights-ngo",
+      "country": "International",
+      "region": "Global",
+      "focus": "human rights advocacy and monitoring",
+      "status": "active",
+      "established": 1978,
+      "url": "https://www.hrw.org/",
+      "description": "Global human rights NGO with recurring youth, digital-rights, and climate-justice advocacy signals.",
+      "mandate_type": "civil society organization",
+      "tags": [
+        "human rights",
+        "youth",
+        "climate"
+      ],
+      "related_countries": [],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "hrw-europe-right-healthy-environment-2026-06-05",
+        "hrw-nepal-gen-z-protest-unlawful-force-investigation-2025-11",
+        "hrw-uganda-student-climate-protest-crackdown-2025-11",
+        "hrw-egypt-youth-protest-space-economic-anxiety-2025",
+        "hrw-algorithms-exploitation-gig-economy-2026-05-13"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment",
+        "dfg6-technology"
+      ],
+      "aliases": [
+        "Human Rights Watch",
+        "HRW"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "icj-climate-advisory-opinion-2025",
+      "name": "ICJ Advisory Opinion on State Climate Obligations (2025)",
+      "actor_class": "initiative",
+      "fgp_category": "litigation",
+      "type": "advisory-opinion",
+      "country": "International",
+      "region": "Global",
+      "focus": "international climate law",
+      "status": "active",
+      "established": 2025,
+      "url": "https://www.icj-cij.org/",
+      "description": "Unanimous ICJ advisory opinion (July 2025) affirming binding state obligations to prevent climate harm to present and future generations.",
+      "mandate_type": "International Court of Justice advisory opinion",
+      "tags": [
+        "climate litigation",
+        "ICJ",
+        "future generations"
+      ],
+      "related_countries": [],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "icj-advisory-opinion-climate-obligations-2025-07-23",
+        "unga-icj-climate-resolution-2026-05-20"
+      ],
+      "aliases": [
+        "ICJ advisory opinion on climate obligations",
+        "ICJ climate advisory opinion 2025",
+        "International Court of Justice climate advisory opinion"
+      ],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "independent-electoral-and-boundaries-commission",
+      "name": "Independent Electoral and Boundaries Commission (Kenya)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "electoral-regulator",
+      "country": "KE",
+      "region": "Africa",
+      "focus": "electoral integrity and voter registration",
+      "status": "active",
+      "established": 2011,
+      "url": "https://www.iebc.or.ke/",
+      "description": "Kenya's electoral regulator, central to voter registration, participation, democratic legitimacy, and intergenerational representation.",
+      "mandate_type": "electoral commission",
+      "tags": [
+        "elections",
+        "voter registration",
+        "democracy",
+        "intergenerational fairness"
+      ],
+      "related_countries": [
+        "KE"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "kenya-niko-kadi-youth-voter-registration-movement-2026",
+        "nai-kenya-tuko-kadi-gen-z-ballot-political-power-2026"
+      ],
+      "ie_lens": [
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "Independent Electoral and Boundaries Commission (Kenya)",
+        "Independent Electoral and Boundaries Commission",
+        "IEBC",
+        "Independent Electoral Commission Kenya"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "corteidh-ao-32-25",
+      "name": "Inter-American Court Advisory Opinion AO-32/25 (Climate Rights)",
+      "actor_class": "initiative",
+      "fgp_category": "litigation",
+      "type": "advisory-opinion",
+      "country": "International",
+      "region": "Latin America and Caribbean",
+      "focus": "climate rights jurisprudence",
+      "status": "active",
+      "established": 2025,
+      "url": "https://www.corteidh.or.cr/",
+      "description": "Binding advisory opinion recognizing right to healthy climate and affirming intergenerational equity across 20 OAS member states.",
+      "mandate_type": "regional court advisory opinion",
+      "tags": [
+        "climate litigation",
+        "intergenerational equity",
+        "AO-32/25"
+      ],
+      "related_countries": [
+        "CL",
+        "CO",
+        "MX",
+        "BR",
+        "AR"
+      ],
+      "parent_actor_ids": [
+        "corteidh"
+      ],
+      "signal_ids": [],
+      "aliases": [
+        "AO-32/25",
+        "Advisory Opinion AO-32/25",
+        "Inter-American Court climate advisory opinion AO-32/25"
+      ],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "au-intergenerational-report-treasury",
+      "name": "Intergenerational Report (Australian Treasury)",
+      "actor_class": "initiative",
+      "fgp_category": "institution",
+      "type": "statutory-reporting",
+      "country": "AU",
+      "region": "Oceania",
+      "focus": "40-year fiscal outlook",
+      "status": "active",
+      "established": 2002,
+      "url": "https://treasury.gov.au/intergenerational-report",
+      "description": "Charter of Budget Honesty report projecting economy and budget over 40 years; 2023 edition integrated wellbeing indicators.",
+      "mandate_type": "statutory reporting mechanism",
+      "tags": [
+        "intergenerational equity",
+        "fiscal sustainability"
+      ],
+      "related_countries": [
+        "AU"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "aliases": [
+        "Intergenerational Report (Treasury)",
+        "Australian Intergenerational Report"
+      ],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg3-prosperity",
+        "ceb6-knowledge"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "international-idea-climate-rulings-tracker",
+      "name": "International IDEA Climate Rulings Implementation Tracker",
+      "actor_class": "initiative",
+      "fgp_category": "initiative",
+      "type": "accountability-tracker",
+      "country": "International",
+      "region": "Europe",
+      "focus": "climate litigation compliance",
+      "status": "active",
+      "established": 2025,
+      "url": "https://www.idea.int/",
+      "description": "International IDEA initiative tracking implementation of landmark climate rulings, closing the gap between judicial declarations and government compliance.",
+      "mandate_type": "monitoring initiative",
+      "tags": [
+        "climate litigation",
+        "implementation tracking",
+        "accountability"
+      ],
+      "related_countries": [],
+      "parent_actor_ids": [
+        "corteidh"
+      ],
+      "signal_ids": [],
+      "aliases": [
+        "International IDEA climate rulings tracker",
+        "IDEA climate rulings tracker"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "italy-constitutional-reform-art9-future-generations",
+      "name": "Italian Constitutional Reform — Future Generations (Art. 9 & 41)",
+      "actor_class": "initiative",
+      "fgp_category": "legislation",
+      "type": "constitutional-amendment",
+      "country": "IT",
+      "region": "Europe",
+      "focus": "constitutional intergenerational solidarity",
+      "status": "active",
+      "established": 2022,
+      "url": null,
+      "description": "Constitutional Law No. 1/2022 embedding protection of environment and future generations in Article 9 and limiting private economic initiative in Article 41.",
+      "mandate_type": "constitutional reform",
+      "tags": [
+        "constitutional law",
+        "future generations",
+        "intergenerational solidarity"
+      ],
+      "related_countries": [
+        "IT"
+      ],
+      "parent_actor_ids": [
+        "italy-vig-generational-impact-assessment"
+      ],
+      "signal_ids": [
+        "italy-constitutional-law-art9-future-generations-2022-02-11"
+      ],
+      "aliases": [
+        "Constitutional Law No. 1/2022",
+        "Italian constitutional reform future generations",
+        "Article 9 future generations"
+      ],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg2-rights",
+        "dfg3-prosperity"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "japan-future-generations-act-project",
+      "name": "Japan Future Generations Act Project",
+      "actor_class": "initiative",
+      "fgp_category": "campaign",
+      "type": "legislative-campaign",
+      "country": "JP",
+      "region": "Asia",
+      "focus": "future generations legislation",
+      "status": "active",
+      "established": 2024,
+      "url": null,
+      "description": "Civil society campaign advancing a Future Generations Act in Japan, drawing on the Wales model and parliamentary committee review.",
+      "mandate_type": "legislative advocacy campaign",
+      "tags": [
+        "future generations law",
+        "Wales model",
+        "Japan"
+      ],
+      "related_countries": [
+        "JP",
+        "GB"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "japan-future-generations-law-diet-committee-wales-model-2026"
+      ],
+      "aliases": [
+        "Japan Future Generations Act",
+        "Future Generations Act Project Japan"
+      ],
+      "ie_lens": [
+        "ceb5-representation",
+        "ceb2-fairness"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "us-supreme-court-juliana",
+      "name": "Juliana v. United States",
+      "actor_class": "initiative",
+      "fgp_category": "litigation",
+      "type": "youth-climate-case",
+      "country": "US",
+      "region": "North America",
+      "focus": "youth climate constitutional claims",
+      "status": "historical",
+      "established": 2015,
+      "url": null,
+      "description": "Landmark U.S. youth climate litigation seeking a constitutional right to a stable climate system; Supreme Court denied certiorari in March 2025, ending the decade-long case.",
+      "mandate_type": "federal climate litigation",
+      "tags": [
+        "youth climate litigation",
+        "Juliana",
+        "Supreme Court"
+      ],
+      "related_countries": [
+        "US"
+      ],
+      "parent_actor_ids": [
+        "us-supreme-court"
+      ],
+      "signal_ids": [
+        "scotus-juliana-cert-denied-2025-03-24"
+      ],
+      "aliases": [
+        "Juliana v. United States",
+        "Juliana youth climate case",
+        "Supreme Court Juliana cert denial"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "uk-kings-trust-youth-opportunity-fund",
+      "name": "King's Trust Youth Opportunity Fund",
+      "actor_class": "initiative",
+      "fgp_category": "initiative",
+      "type": "funding-programme",
+      "country": "GB",
+      "region": "Europe",
+      "focus": "youth employment and skills",
+      "status": "active",
+      "established": 2026,
+      "url": null,
+      "description": "£10 million DCMS funding package for The King's Trust youth opportunity initiative within the broader Youth Matters strategy.",
+      "mandate_type": "government funding programme",
+      "tags": [
+        "youth opportunity",
+        "skills",
+        "employment"
+      ],
+      "related_countries": [
+        "GB"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "uk-kings-trust-youth-opportunity-10m-2026-06-03"
+      ],
+      "aliases": [
+        "King's Trust Youth Opportunity Fund",
+        "Youth Opportunity Fund package"
+      ],
+      "ie_lens": [
+        "dfg3-prosperity"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "korea-media-and-communications-commission",
+      "name": "Korea Media and Communications Commission",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "communications-regulator",
+      "country": "KR",
+      "region": "Asia",
+      "focus": "media and platform regulation",
+      "status": "active",
+      "established": 2008,
+      "url": "https://www.kcc.go.kr/",
+      "description": "South Korea's media and communications regulator, relevant to youth digital governance and online safety rules.",
+      "mandate_type": "communications regulator",
+      "tags": [
+        "digital governance",
+        "online safety",
+        "media"
+      ],
+      "related_countries": [
+        "KR"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "dfg6-technology"
+      ],
+      "aliases": [
+        "Korea Media and Communications Commission",
+        "Korea Communications Commission",
+        "KCC Korea"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "kwazulu-natal-high-court",
+      "name": "KwaZulu-Natal High Court",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "high-court",
+      "country": "ZA",
+      "region": "Africa",
+      "focus": "high-court adjudication",
+      "status": "active",
+      "established": 1997,
+      "url": "https://www.judiciary.org.za/",
+      "description": "South African High Court division relevant to child-rights and public-interest litigation.",
+      "mandate_type": "high court",
+      "tags": [
+        "South Africa",
+        "children",
+        "courts"
+      ],
+      "related_countries": [
+        "ZA"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "za-kzn-high-court-ecd-rights-ruling-2026-06-23"
+      ],
+      "ie_lens": [
+        "dfg2-rights"
+      ],
+      "aliases": [
+        "KwaZulu-Natal High Court",
+        "KZN High Court"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "manitoba-court-of-kings-bench",
+      "name": "Manitoba Court of King's Bench",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "provincial-court",
+      "country": "CA_MB",
+      "region": "North America",
+      "focus": "provincial civil and child-welfare adjudication",
+      "status": "active",
+      "established": 1872,
+      "url": "https://www.manitobacourts.mb.ca/",
+      "description": "Manitoba's superior court, relevant to child welfare, self-government, and rights litigation.",
+      "mandate_type": "superior court",
+      "tags": [
+        "children",
+        "self-government",
+        "rights"
+      ],
+      "related_countries": [
+        "CA"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "ca-manitoba-first-nations-cfs-court-ruling-2026-05-11"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg3-prosperity"
+      ],
+      "aliases": [
+        "Manitoba Court of King's Bench",
+        "King's Bench Manitoba"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "milieudefensie-amsterdam-district-court",
+      "name": "Milieudefensie / Amsterdam District Court",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "district-court",
+      "country": "NL",
+      "region": "Europe",
+      "focus": "climate tort and emissions accountability",
+      "status": "active",
+      "established": 1945,
+      "url": "https://www.rechtspraak.nl/",
+      "description": "Dutch climate-litigation venue in Milieudefensie cases targeting financed emissions and corporate climate duties.",
+      "mandate_type": "district court",
+      "tags": [
+        "climate litigation",
+        "emissions",
+        "future generations"
+      ],
+      "related_countries": [
+        "NL"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "netherlands-milieudefensie-ing-climate-lawsuit-2025-03-28",
+        "netherlands-shell-appeal-climate-duty-ruling-2024-11-12"
+      ],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Milieudefensie / Amsterdam District Court",
+        "Milieudefensie",
+        "Amsterdam District Court"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "us-mt-deq",
+      "name": "Montana Department of Environmental Quality",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "regulatory-agency",
+      "country": "US_MT",
+      "region": "North America",
+      "focus": "MEPA implementation",
+      "status": "active",
+      "established": 1995,
+      "url": "https://deq.mt.gov/",
+      "description": "State environmental agency; mandate strengthened by Held v. Montana requiring climate impact consideration.",
+      "mandate_type": "state regulatory agency",
+      "tags": [
+        "MEPA",
+        "climate litigation"
+      ],
+      "related_countries": [
+        "US"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Montana Department of Environmental Quality"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "india-national-biodiversity-authority",
+      "name": "National Biodiversity Authority (India)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "statutory-authority",
+      "country": "IN",
+      "region": "Asia",
+      "focus": "biodiversity governance",
+      "status": "active",
+      "established": 2003,
+      "url": "https://nbaindia.org/",
+      "description": "Statutory body under the Biological Diversity Act regulating access and benefit-sharing for long-term conservation.",
+      "mandate_type": "statutory authority",
+      "tags": [
+        "biodiversity",
+        "conservation"
+      ],
+      "related_countries": [
+        "IN"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "dfg3-prosperity",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "National Biodiversity Authority (India)",
+        "National Biodiversity Authority"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "india-national-green-tribunal",
+      "name": "National Green Tribunal (India)",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "environmental-tribunal",
+      "country": "IN",
+      "region": "Asia",
+      "focus": "environmental adjudication",
+      "status": "active",
+      "established": 2010,
+      "url": "https://www.greentribunal.gov.in/",
+      "description": "Dedicated environmental tribunal applying sustainable development and precautionary principles to long-term environmental remedies.",
+      "mandate_type": "specialized environmental tribunal",
+      "tags": [
+        "environmental law",
+        "climate litigation"
+      ],
+      "related_countries": [
+        "IN"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "india-ngt-environmental-clearance-ruling-2025"
+      ],
+      "ie_lens": [
+        "ceb4-good-ancestor",
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "National Green Tribunal (India)",
+        "National Green Tribunal",
+        "NGT India"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "navahine-v-hawaii",
+      "name": "Navahine v. Hawaii Department of Transportation",
+      "actor_class": "initiative",
+      "fgp_category": "litigation",
+      "type": "youth-climate-case",
+      "country": "US_HI",
+      "region": "Pacific",
+      "focus": "youth constitutional climate rights",
+      "status": "active",
+      "established": 2024,
+      "url": null,
+      "description": "Hawaii Supreme Court ruling requiring the state to protect youth constitutional rights in transportation-sector climate litigation brought by young plaintiffs.",
+      "mandate_type": "state supreme court judgment",
+      "tags": [
+        "youth climate litigation",
+        "Hawaii",
+        "constitutional rights"
+      ],
+      "related_countries": [
+        "US"
+      ],
+      "parent_actor_ids": [
+        "us-hi-oeqc"
+      ],
+      "signal_ids": [
+        "navahine-v-hawaii-youth-climate-ruling-2024-06-12"
+      ],
+      "aliases": [
+        "Navahine v. Hawaii",
+        "Navahine climate case",
+        "Hawaii Supreme Court Navahine",
+        "Navahine v. Hawaii Department of Transportation"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "ndc-youth-ambassador-cohort",
+      "name": "NDC Youth Ambassador Programme (Care About Climate)",
+      "actor_class": "initiative",
+      "fgp_category": "initiative",
+      "type": "youth-fellowship",
+      "country": "International",
+      "region": "Global",
+      "focus": "NDC intergenerational equity analysis",
+      "status": "active",
+      "established": 2026,
+      "url": null,
+      "description": "Summer 2026 cohort training young advocates to analyze national climate commitments through intergenerational equity and gender-responsive lenses across 50+ countries.",
+      "mandate_type": "civil society programme",
+      "tags": [
+        "youth climate",
+        "NDC",
+        "intergenerational equity"
+      ],
+      "related_countries": [],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "ndc-youth-ambassador-intergenerational-equity-2026-06-21"
+      ],
+      "aliases": [
+        "NDC Youth Ambassador",
+        "Care About Climate NDC Youth Ambassador"
+      ],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg5-environment"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "us-ny-climate-action-council",
+      "name": "New York Climate Action Council",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "advisory-body",
+      "country": "US_NY",
+      "region": "North America",
+      "focus": "CLCPA scoping plan",
+      "status": "active",
+      "established": 2019,
+      "url": "https://climate.ny.gov/Our-Climate-Act/Council/",
+      "description": "Body established by the Climate Leadership and Community Protection Act to develop decarbonisation pathways.",
+      "mandate_type": "state advisory council",
+      "tags": [
+        "CLCPA",
+        "climate planning"
+      ],
+      "related_countries": [
+        "US"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "New York Climate Action Council",
+        "NY Climate Action Council"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "uk-office-budget-responsibility",
+      "name": "Office for Budget Responsibility (OBR)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "fiscal-watchdog",
+      "country": "GB",
+      "region": "Europe",
+      "focus": "fiscal sustainability",
+      "status": "active",
+      "established": 2010,
+      "url": "https://obr.uk/",
+      "description": "Independent fiscal watchdog; Wales and UK future generations bills have proposed extending its duties to intergenerational reporting.",
+      "mandate_type": "fiscal watchdog",
+      "tags": [
+        "fiscal policy",
+        "intergenerational reporting"
+      ],
+      "related_countries": [
+        "GB"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "uk-pensions-commission-intergenerational-fairness-2026-05-19"
+      ],
+      "ie_lens": [
+        "ceb5-representation",
+        "ceb2-fairness",
+        "dfg3-prosperity"
+      ],
+      "aliases": [
+        "Office for Budget Responsibility (OBR)",
+        "Office for Budget Responsibility"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "spain-onpe",
+      "name": "Oficina Nacional de Prospectiva y Estrategia (ONPE)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "government",
+      "country": "ES",
+      "region": "Iberia",
+      "focus": "strategic foresight",
+      "status": "active",
+      "established": "2021",
+      "url": "https://www.mptfp.gob.es/politica-territorial/prospectiva-estrategia",
+      "description": "Spanish government office coordinating the España 2050 long-term strategy, cited by the EU Intergenerational Fairness Strategy as a member-state model for institutionalizing strategic foresight in national governance.",
+      "mandate_type": "government foresight office",
+      "tags": [
+        "España 2050",
+        "strategic foresight",
+        "long-term planning"
+      ],
+      "related_countries": [
+        "ES"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "ceb4-good-ancestor",
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "Oficina Nacional de Prospectiva y Estrategia (ONPE)"
+      ],
+      "added_date": "2026-07-01"
+    },
+    {
+      "id": "pisffc",
+      "name": "Pacific Islands Students Fighting Climate Change (PISFCC)",
+      "actor_class": "organization",
+      "fgp_category": "campaign",
+      "type": "youth-movement",
+      "country": "VU",
+      "region": "Pacific",
+      "focus": "climate rights advocacy",
+      "status": "active",
+      "established": 2019,
+      "url": null,
+      "description": "Youth-led movement from the University of the South Pacific that drove the campaign culminating in the ICJ climate advisory opinion. 2025 Right Livelihood Award laureate.",
+      "mandate_type": "civil society movement",
+      "tags": [
+        "youth climate",
+        "ICJ campaign",
+        "Pacific"
+      ],
+      "related_countries": [
+        "VU",
+        "FJ"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "pisffc-right-livelihood-award-2025"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Pacific Islands Students Fighting Climate Change (PISFCC)",
+        "Pacific Islands Students Fighting Climate Change",
+        "PISFCC"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "pacific-cop31-talanoa-dialogues",
+      "name": "Pacific Youth COP31 Talanoa Dialogues",
+      "actor_class": "initiative",
+      "fgp_category": "campaign",
+      "type": "youth-dialogue-series",
+      "country": "International",
+      "region": "Pacific",
+      "focus": "youth climate participation",
+      "status": "active",
+      "established": 2026,
+      "url": null,
+      "description": "Three-part talanoa dialogue series co-delivered by Pacific Youth Council and UN to channel Pacific youth priorities into COP31 negotiations.",
+      "mandate_type": "multistakeholder dialogue",
+      "tags": [
+        "Pacific youth",
+        "COP31",
+        "talanoa",
+        "climate governance"
+      ],
+      "related_countries": [
+        "FJ",
+        "AU"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "pacific-youth-cop31-talanoa-dialogues-2026-05-25"
+      ],
+      "aliases": [
+        "talanoa dialogues",
+        "Pacific Youth COP31",
+        "Pacific talanoa"
+      ],
+      "ie_lens": [
+        "ceb5-representation",
+        "dfg5-environment"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "parlamericas",
+      "name": "ParlAmericas",
+      "actor_class": "organization",
+      "fgp_category": "institution",
+      "type": "network",
+      "country": "International",
+      "region": "Americas",
+      "focus": "parliamentary cooperation",
+      "status": "active",
+      "established": "2001",
+      "url": "https://parlamericas.org/",
+      "description": "Network of national legislatures across the Americas promoting open parliament, anticipatory governance, and intergenerational equity. Adopted the Montevideo declaration (May 2025) committing members to incorporate intergenerational fairness in legislative work.",
+      "mandate_type": "inter-parliamentary network",
+      "tags": [
+        "open parliament",
+        "anticipatory governance",
+        "intergenerational equity"
+      ],
+      "related_countries": [
+        "UY",
+        "CL",
+        "BR",
+        "MX",
+        "CO"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "ceb4-good-ancestor",
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "ParlAmericas"
+      ],
+      "added_date": "2026-07-01"
+    },
+    {
+      "id": "parlamericas-montevideo-declaration",
+      "name": "ParlAmericas Montevideo Declaration on Anticipatory Governance",
+      "actor_class": "initiative",
+      "fgp_category": "campaign",
+      "type": "parliamentary-declaration",
+      "country": "International",
+      "region": "Americas",
+      "focus": "intergenerational fairness in legislatures",
+      "status": "active",
+      "established": 2025,
+      "url": "https://parlamericas.org/",
+      "description": "May 2025 declaration committing ParlAmericas members to incorporate intergenerational fairness and anticipatory governance in legislative work.",
+      "mandate_type": "inter-parliamentary declaration",
+      "tags": [
+        "anticipatory governance",
+        "intergenerational fairness",
+        "open parliament"
+      ],
+      "related_countries": [
+        "UY",
+        "CL",
+        "BR",
+        "MX",
+        "CO"
+      ],
+      "parent_actor_ids": [
+        "parlamericas"
+      ],
+      "signal_ids": [
+        "parlamericas-montevideo-declaration-anticipatory-governance-2025-05"
+      ],
+      "aliases": [
+        "Montevideo declaration",
+        "ParlAmericas Montevideo declaration"
+      ],
+      "ie_lens": [
+        "ceb4-good-ancestor",
+        "ceb2-fairness"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "parliament-of-australia",
+      "name": "Parliament of Australia",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "parliamentary-body",
+      "country": "AU",
+      "region": "Oceania",
+      "focus": "federal legislative scrutiny and budgets",
+      "status": "active",
+      "established": 1901,
+      "url": "https://www.aph.gov.au/",
+      "description": "Australia's federal legislature, central to budget, taxation, and rights-related reforms with intergenerational implications.",
+      "mandate_type": "national parliament",
+      "tags": [
+        "budget",
+        "tax",
+        "legislation"
+      ],
+      "related_countries": [
+        "AU"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "australia-tax-reform-passed-lower-house-2026-06-04"
+      ],
+      "ie_lens": [
+        "dfg3-prosperity"
+      ],
+      "aliases": [
+        "Parliament of Australia",
+        "Australian Parliament",
+        "Federal Parliament of Australia"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "parliament-of-botswana",
+      "name": "Parliament of Botswana",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "parliamentary-body",
+      "country": "BW",
+      "region": "Africa",
+      "focus": "national legislation and youth policy",
+      "status": "active",
+      "established": 1966,
+      "url": "https://www.parliament.gov.bw/",
+      "description": "Botswana's legislature, which adopted the National Youth Policy 2026–2036 and signalled follow-up legislation for youth, future generations, and long-term governance.",
+      "mandate_type": "national parliament",
+      "tags": [
+        "parliament",
+        "youth policy",
+        "legislation",
+        "future generations",
+        "intergenerational equity"
+      ],
+      "related_countries": [
+        "BW"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "botswana-national-youth-policy-2026-2036-2026-04-14"
+      ],
+      "ie_lens": [
+        "ceb4-good-ancestor",
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "Parliament of Botswana",
+        "Botswana Parliament",
+        "National Assembly of Botswana"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "parliament-of-canada",
+      "name": "Parliament of Canada",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "parliamentary-body",
+      "country": "CA",
+      "region": "North America",
+      "focus": "budget, tax, and future-generations scrutiny",
+      "status": "active",
+      "established": 1867,
+      "url": "https://www.parl.ca/",
+      "description": "Canada's federal legislature, central to budget, tax, and long-horizon public-policy scrutiny.",
+      "mandate_type": "national parliament",
+      "tags": [
+        "parliament",
+        "budget",
+        "tax",
+        "future generations"
+      ],
+      "related_countries": [
+        "CA"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg3-prosperity"
+      ],
+      "aliases": [
+        "Parliament of Canada",
+        "Canadian Parliament",
+        "Parliament of Canada / House of Commons"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "parliament-of-kenya",
+      "name": "Parliament of Kenya",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "parliamentary-body",
+      "country": "KE",
+      "region": "Africa",
+      "focus": "national legislation and budget oversight",
+      "status": "active",
+      "established": 2010,
+      "url": "https://www.parliament.go.ke/",
+      "description": "Kenya's national legislature, increasingly central to youth, digital-rights, and climate governance reforms.",
+      "mandate_type": "national parliament",
+      "tags": [
+        "legislation",
+        "budget",
+        "youth policy"
+      ],
+      "related_countries": [
+        "KE"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "kenya-2026-bps-child-online-protection-framework-2026",
+        "kenya-mineral-sovereign-fund-intergenerational-2026"
+      ],
+      "ie_lens": [
+        "dfg3-prosperity",
+        "dfg5-environment",
+        "dfg6-technology"
+      ],
+      "aliases": [
+        "Parliament of Kenya",
+        "Kenyan Parliament",
+        "National Assembly of Kenya"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "new-zealand-parliament",
+      "name": "Parliament of New Zealand",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "parliamentary-body",
+      "country": "NZ",
+      "region": "Oceania",
+      "focus": "national legislation and Hansard scrutiny",
+      "status": "active",
+      "established": 1854,
+      "url": "https://www.parliament.nz/",
+      "description": "New Zealand's parliament, reflected in Hansard and legislative debates shaping future-facing public policy and intergenerational governance.",
+      "mandate_type": "national parliament",
+      "tags": [
+        "parliament",
+        "Hansard",
+        "legislation",
+        "future generations",
+        "intergenerational fairness"
+      ],
+      "related_countries": [
+        "NZ"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "Parliament of New Zealand",
+        "New Zealand Parliament",
+        "NZ Parliament"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "parliament-of-south-africa",
+      "name": "Parliament of South Africa",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "parliamentary-body",
+      "country": "ZA",
+      "region": "Africa",
+      "focus": "national legislation and oversight",
+      "status": "active",
+      "established": 1994,
+      "url": "https://www.parliament.gov.za/",
+      "description": "South Africa's legislature, a recurring actor in child, climate, and intergenerational equity policy debates.",
+      "mandate_type": "national parliament",
+      "tags": [
+        "legislation",
+        "oversight",
+        "children"
+      ],
+      "related_countries": [
+        "ZA"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "south-africa-youth-day-50-governance-accountability-2026-06-15",
+        "south-africa-climate-change-act-commenced-2025-03-17"
+      ],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Parliament of South Africa",
+        "South African Parliament"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "council-of-europe-parliamentary-assembly",
+      "name": "Parliamentary Assembly of the Council of Europe (PACE)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "parliamentary-assembly",
+      "country": "International",
+      "region": "Europe",
+      "focus": "pan-European parliamentary coordination",
+      "status": "active",
+      "established": 1949,
+      "url": "https://pace.coe.int/",
+      "description": "Council of Europe parliamentary assembly central to rights, democracy, youth governance, and future-generations debates.",
+      "mandate_type": "regional parliamentary assembly",
+      "tags": [
+        "Council of Europe",
+        "parliamentary assembly",
+        "future generations",
+        "intergenerational equity"
+      ],
+      "related_countries": [],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "hrw-europe-right-healthy-environment-2026-06-05",
+        "coe-ministers-klimaseniorinnen-review-2025-09"
+      ],
+      "ie_lens": [
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "Parliamentary Assembly of the Council of Europe (PACE)",
+        "PACE",
+        "Council of Europe Parliamentary Assembly",
+        "Council of Europe's Parliamentary Assembly",
+        "Parliamentary Assembly of the Council of Europe"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "us-pa-dep",
+      "name": "Pennsylvania Department of Environmental Protection",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "regulatory-agency",
+      "country": "US_PA",
+      "region": "North America",
+      "focus": "environmental regulation",
+      "status": "active",
+      "established": 1995,
+      "url": "https://www.dep.pa.gov/",
+      "description": "State environmental agency with public-trust obligations under Pennsylvania's environmental rights amendment.",
+      "mandate_type": "state regulatory agency",
+      "tags": [
+        "environmental rights",
+        "public trust"
+      ],
+      "related_countries": [
+        "US"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Pennsylvania Department of Environmental Protection"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "pensions-commission",
+      "name": "Pensions Commission",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "policy-commission",
+      "country": "GB",
+      "region": "Europe",
+      "focus": "retirement adequacy and intergenerational fairness",
+      "status": "active",
+      "established": 2025,
+      "url": "https://www.gov.uk/",
+      "description": "Commission examining retirement adequacy, undersaving, and the long-term distribution of pension burdens.",
+      "mandate_type": "policy commission",
+      "tags": [
+        "pensions",
+        "intergenerational fairness",
+        "fiscal sustainability"
+      ],
+      "related_countries": [
+        "GB"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "uk-pensions-commission-intergenerational-fairness-2026-05-19"
+      ],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg3-prosperity"
+      ],
+      "aliases": [
+        "Pensions Commission",
+        "UK Pensions Commission"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "philippines-clima-bill-hb4420",
+      "name": "Philippines CLIMA Bill (H.B. 4420)",
+      "actor_class": "initiative",
+      "fgp_category": "legislation",
+      "type": "proposed-legislation",
+      "country": "PH",
+      "region": "Asia",
+      "focus": "corporate climate accountability",
+      "status": "proposed",
+      "established": 2025,
+      "url": null,
+      "description": "Refiled bill requiring corporate climate accountability and reporting on intergenerational climate impacts.",
+      "mandate_type": "proposed national legislation",
+      "tags": [
+        "climate accountability",
+        "legislation",
+        "Philippines"
+      ],
+      "related_countries": [
+        "PH"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "philippines-clima-bill-hb4420-refiled-20th-congress-2025-09"
+      ],
+      "aliases": [
+        "CLIMA Bill",
+        "Philippines CLIMA Bill",
+        "H.B. 4420"
+      ],
+      "ie_lens": [
+        "dfg5-environment"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "scottish-parliament",
+      "name": "Scottish Parliament",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "devolved-parliament",
+      "country": "GB",
+      "region": "Europe",
+      "focus": "devolved legislation and scrutiny",
+      "status": "active",
+      "established": 1999,
+      "url": "https://www.parliament.scot/",
+      "description": "Scotland's devolved legislature, active in wellbeing, children, and future-generations policy debates.",
+      "mandate_type": "devolved parliament",
+      "tags": [
+        "Scotland",
+        "wellbeing",
+        "children",
+        "future generations",
+        "intergenerational fairness"
+      ],
+      "related_countries": [
+        "GB"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "scotland-wellbeing-future-generations-bill-fell-2026-01-22",
+        "scotland-children-care-services-act-2026-05-15",
+        "scotland-fm-intergenerational-child-poverty-2026-05-26"
+      ],
+      "ie_lens": [
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "Scottish Parliament",
+        "Holyrood"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "south-africa-climate-change-act",
+      "name": "South Africa Climate Change Act (commenced 2025)",
+      "actor_class": "initiative",
+      "fgp_category": "legislation",
+      "type": "framework-legislation",
+      "country": "ZA",
+      "region": "Africa",
+      "focus": "climate governance for future generations",
+      "status": "active",
+      "established": 2025,
+      "url": null,
+      "description": "National climate change legislation commenced March 2025, codifying protection of present and future generations in climate governance.",
+      "mandate_type": "national framework law",
+      "tags": [
+        "climate law",
+        "future generations",
+        "South Africa"
+      ],
+      "related_countries": [
+        "ZA"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "south-africa-climate-change-act-commenced-2025-03-17"
+      ],
+      "aliases": [
+        "South Africa Climate Change Act",
+        "Climate Change Act South Africa"
+      ],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg5-environment"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "stortinget",
+      "name": "Stortinget (Norwegian Parliament)",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "parliamentary-body",
+      "country": "NO",
+      "region": "Europe",
+      "focus": "national legislation and fiscal oversight",
+      "status": "active",
+      "established": 1814,
+      "url": "https://www.stortinget.no/",
+      "description": "Norway's parliament, including scrutiny of the oil fund, climate targets, and digital-age legislation with long-term implications.",
+      "mandate_type": "national parliament",
+      "tags": [
+        "parliament",
+        "fiscal policy",
+        "climate"
+      ],
+      "related_countries": [
+        "NO"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "norway-social-media-age-limit-16-bill-2026",
+        "norway-gpfg-ethical-framework-parliament-review-2025-11",
+        "norway-fiscal-advisory-council-handlingsregelen-criticism-2026-02"
+      ],
+      "ie_lens": [
+        "dfg3-prosperity",
+        "dfg5-environment",
+        "dfg6-technology"
+      ],
+      "aliases": [
+        "Stortinget (Norwegian Parliament)",
+        "Stortinget",
+        "Norwegian Parliament",
+        "Parliament of Norway"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "supreme-administrative-court-of-finland",
+      "name": "Supreme Administrative Court of Finland",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "supreme-administrative-court",
+      "country": "FI",
+      "region": "Europe",
+      "focus": "administrative law and climate review",
+      "status": "active",
+      "established": 1918,
+      "url": "https://oikeus.fi/ho/fi/index.html",
+      "description": "Finland's top administrative court, significant for climate governance and future-generations review.",
+      "mandate_type": "supreme administrative court",
+      "tags": [
+        "administrative law",
+        "climate",
+        "future generations"
+      ],
+      "related_countries": [
+        "FI"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "finland-supreme-administrative-court-climate-kho-2025-2"
+      ],
+      "ie_lens": [
+        "ceb2-fairness",
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Supreme Administrative Court of Finland",
+        "Korkein hallinto-oikeus",
+        "KHO"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "supreme-court-of-canada",
+      "name": "Supreme Court of Canada",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "supreme-court",
+      "country": "CA",
+      "region": "North America",
+      "focus": "constitutional adjudication",
+      "status": "active",
+      "established": 1875,
+      "url": "https://www.scc-csc.ca/",
+      "description": "Canada's apex court, central to constitutional and climate-rights litigation with intergenerational implications.",
+      "mandate_type": "apex court",
+      "tags": [
+        "constitutional law",
+        "climate litigation"
+      ],
+      "related_countries": [
+        "CA"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "canada-scc-mathur-climate-charter-leave-denied-2025-05-01"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Supreme Court of Canada",
+        "SCC"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "supreme-court-of-hawaii",
+      "name": "Supreme Court of Hawaii",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "supreme-court",
+      "country": "US_HI",
+      "region": "Pacific",
+      "focus": "state constitutional adjudication",
+      "status": "active",
+      "established": 1840,
+      "url": "https://www.courts.state.hi.us/",
+      "description": "Hawaii's highest court, central to rights, environment, and state governance disputes.",
+      "mandate_type": "state supreme court",
+      "tags": [
+        "state courts",
+        "climate litigation"
+      ],
+      "related_countries": [
+        "US"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Supreme Court of Hawaii",
+        "Hawaii Supreme Court"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "supreme-court-of-india",
+      "name": "Supreme Court of India",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "supreme-court",
+      "country": "IN",
+      "region": "Asia",
+      "focus": "constitutional adjudication",
+      "status": "active",
+      "established": 1950,
+      "url": "https://www.sci.gov.in/",
+      "description": "India's apex court, regularly shaping intergenerational rights in education, disability, climate, and data protection cases.",
+      "mandate_type": "apex constitutional court",
+      "tags": [
+        "constitutional law",
+        "rights",
+        "litigation"
+      ],
+      "related_countries": [
+        "IN"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "india-ridhima-pandey-sc-order-2025-02-21",
+        "india-supreme-court-rpwd-grievance-pil-2026-06-01",
+        "in-sc-dpdp-constitutional-challenge-2026-02-16"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment",
+        "ceb6-knowledge"
+      ],
+      "aliases": [
+        "Supreme Court of India",
+        "Indian Supreme Court"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "supreme-court-of-maryland",
+      "name": "Supreme Court of Maryland",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "supreme-court",
+      "country": "US_MD",
+      "region": "North America",
+      "focus": "state supreme-court adjudication",
+      "status": "active",
+      "established": 1776,
+      "url": "https://mdcourts.gov/coappeals",
+      "description": "Maryland's highest court, relevant to state climate tort and public-law disputes with intergenerational consequences.",
+      "mandate_type": "state supreme court",
+      "tags": [
+        "climate litigation",
+        "state courts"
+      ],
+      "related_countries": [
+        "US"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "maryland-sc-climate-tort-preemption-2026-03-24"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Supreme Court of Maryland",
+        "Maryland Supreme Court"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "supreme-court-of-norway",
+      "name": "Supreme Court of Norway",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "supreme-court",
+      "country": "NO",
+      "region": "Europe",
+      "focus": "constitutional and rights adjudication",
+      "status": "active",
+      "established": 1815,
+      "url": "https://www.domstol.no/en/supremecourt/",
+      "description": "Norway's apex court, relevant to climate, administrative, and intergenerational-rights disputes.",
+      "mandate_type": "apex court",
+      "tags": [
+        "constitutional law",
+        "climate litigation"
+      ],
+      "related_countries": [
+        "NO"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "norway-climate-case-appeal-supreme-court-2026-06"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Supreme Court of Norway",
+        "Norwegian Supreme Court"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "us-supreme-court",
+      "name": "Supreme Court of the United States",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "federal-supreme-court",
+      "country": "US",
+      "region": "North America",
+      "focus": "federal constitutional adjudication",
+      "status": "active",
+      "established": 1789,
+      "url": "https://www.supremecourt.gov/",
+      "description": "Highest federal court in the United States; decides certiorari and merits in constitutional and statutory cases including youth climate litigation.",
+      "mandate_type": "federal supreme court",
+      "tags": [
+        "SCOTUS",
+        "constitutional law",
+        "climate litigation"
+      ],
+      "related_countries": [
+        "US"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "scotus-juliana-cert-denied-2025-03-24",
+        "scotus-suncor-cert-granted-climate-preemption-2026-02-23"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Supreme Court of the United States",
+        "U.S. Supreme Court"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "supreme-court-of-utah",
+      "name": "Supreme Court of Utah",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "supreme-court",
+      "country": "US_UT",
+      "region": "North America",
+      "focus": "state constitutional adjudication",
+      "status": "active",
+      "established": 1894,
+      "url": "https://www.utcourts.gov/en/courts/supreme.html",
+      "description": "Utah's highest court, an important state forum for environmental, rights, and administrative disputes.",
+      "mandate_type": "state supreme court",
+      "tags": [
+        "state courts",
+        "constitutional law"
+      ],
+      "related_countries": [
+        "US"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "Supreme Court of Utah",
+        "Utah Supreme Court"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "uk-electoral-commission",
+      "name": "UK Electoral Commission",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "electoral-regulator",
+      "country": "GB",
+      "region": "Europe",
+      "focus": "electoral integrity and youth participation",
+      "status": "active",
+      "established": 2000,
+      "url": "https://www.electoralcommission.org.uk/",
+      "description": "Independent regulator overseeing UK elections and voter registration, relevant to youth participation, democratic renewal, and intergenerational fairness in representation.",
+      "mandate_type": "electoral regulator",
+      "tags": [
+        "elections",
+        "youth turnout",
+        "democracy",
+        "intergenerational fairness",
+        "representation"
+      ],
+      "related_countries": [
+        "GB"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "uk-electoral-commission-youth-democracy-survey-2025"
+      ],
+      "ie_lens": [
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "UK Electoral Commission",
+        "Electoral Commission (UK)",
+        "The Electoral Commission"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "un-special-envoy-future-generations",
+      "name": "UN Special Envoy for Future Generations",
+      "actor_class": "institution",
+      "fgp_category": "institution",
+      "type": "un-envoy",
+      "country": "International",
+      "region": "Global",
+      "focus": "future generations representation",
+      "status": "proposed",
+      "established": 2024,
+      "url": "https://www.un.org/en/summit-of-the-future",
+      "description": "Role mandated by the Pact for the Future to champion future generations across the UN system; appointment was on hold as of 2026.",
+      "mandate_type": "UN special envoy",
+      "tags": [
+        "future generations",
+        "Pact for the Future",
+        "UN"
+      ],
+      "related_countries": [],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "un-special-envoy-future-generations-appointment-hold-2026"
+      ],
+      "ie_lens": [
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "UN Special Envoy for Future Generations",
+        "Special Envoy for Future Generations"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "undp",
+      "name": "United Nations Development Programme (UNDP)",
+      "actor_class": "organization",
+      "fgp_category": "institution",
+      "type": "intergovernmental-development-programme",
+      "country": "International",
+      "region": "Global",
+      "focus": "development cooperation and youth inclusion",
+      "status": "active",
+      "established": 1965,
+      "url": "https://www.undp.org/",
+      "description": "UN development agency with a growing body of youth, climate, and governance programming across country offices and regional bureaus.",
+      "mandate_type": "UN development agency",
+      "tags": [
+        "development",
+        "youth",
+        "governance"
+      ],
+      "related_countries": [],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "undp-hdr-2026-youth-intergenerational-metrics-2026-04-28",
+        "kyrgyzstan-undp-youth-empowerment-fact-sheet-2026-05-12",
+        "undp-youth4climate-call-solutions-2026"
+      ],
+      "ie_lens": [
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "United Nations Development Programme (UNDP)",
+        "UNDP",
+        "United Nations Development Programme",
+        "UN Development Programme"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "uneca",
+      "name": "United Nations Economic Commission for Africa (UNECA)",
+      "actor_class": "organization",
+      "fgp_category": "institution",
+      "type": "regional-commission",
+      "country": "International",
+      "region": "Africa",
+      "focus": "African development, demography, and youth policy",
+      "status": "active",
+      "established": 1958,
+      "url": "https://www.uneca.org/",
+      "description": "UN regional commission supporting African development policy, including youth employment, demographics, and fiscal transformation.",
+      "mandate_type": "UN regional commission",
+      "tags": [
+        "Africa",
+        "development",
+        "youth"
+      ],
+      "related_countries": [],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "uneca-ageing-africa-intergenerational-action-2026-04-28",
+        "intl-uneca-youth-policy-implementation-pilot-2026-05-28"
+      ],
+      "ie_lens": [
+        "dfg3-prosperity"
+      ],
+      "aliases": [
+        "United Nations Economic Commission for Africa (UNECA)",
+        "UNECA",
+        "United Nations Economic Commission for Africa"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "us-ninth-circuit",
+      "name": "United States Court of Appeals for the Ninth Circuit",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "federal-appeals-court",
+      "country": "US",
+      "region": "North America",
+      "focus": "federal appellate jurisdiction (Pacific states)",
+      "status": "active",
+      "established": 1891,
+      "url": "https://www.ca9.uscourts.gov/",
+      "description": "Federal appellate court covering western US states; central forum for federal youth climate constitutional litigation including Juliana and Lighthiser.",
+      "mandate_type": "federal court of appeals",
+      "tags": [
+        "Ninth Circuit",
+        "youth climate litigation",
+        "federal courts"
+      ],
+      "related_countries": [
+        "US"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "ninth-circuit-lighthiser-youth-climate-dismissal-2026-06-02",
+        "lighthiser-v-trump-ninth-circuit-2026-04-13",
+        "ninth-circuit-dismisses-genesis-b-v-epa-2026-04-10"
+      ],
+      "ie_lens": [
+        "dfg2-rights",
+        "dfg5-environment"
+      ],
+      "aliases": [
+        "United States Court of Appeals for the Ninth Circuit",
+        "Ninth Circuit Court of Appeals",
+        "U.S. Court of Appeals for the Ninth Circuit"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "unu-future-generations-platform",
+      "name": "UNU Future Generations Platform",
+      "actor_class": "initiative",
+      "fgp_category": "initiative",
+      "type": "governance-database",
+      "country": "International",
+      "region": "Europe",
+      "focus": "future generations governance mapping",
+      "status": "active",
+      "established": 2026,
+      "url": "https://unu.edu/cpr/future-generations-platform",
+      "description": "UNU-CPR global interactive database mapping how governments and institutions embed future generations' interests into legal, institutional, and policy systems worldwide.",
+      "mandate_type": "research platform",
+      "tags": [
+        "future generations",
+        "governance mapping",
+        "UNU"
+      ],
+      "related_countries": [
+        "GB"
+      ],
+      "parent_actor_ids": [
+        "cepal-red-comisiones-futuro"
+      ],
+      "signal_ids": [
+        "unu-future-generations-platform-2026-04"
+      ],
+      "aliases": [
+        "UNU Future Generations Platform",
+        "Future Generations Platform",
+        "UNU-CPR Future Generations Platform"
+      ],
+      "ie_lens": [
+        "ceb5-representation",
+        "ceb2-fairness",
+        "dfg6-technology"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "italy-vig-generational-impact-assessment",
+      "name": "Valutazione di Impatto Generazionale (VIG)",
+      "actor_class": "initiative",
+      "fgp_category": "legislation",
+      "type": "impact-assessment-regime",
+      "country": "IT",
+      "region": "Europe",
+      "focus": "generational impact assessment",
+      "status": "active",
+      "established": 2025,
+      "url": null,
+      "description": "Italy's mandatory generational impact assessment introduced by Law 167/2025, requiring preventive assessment of effects on young people and future generations in the regulatory process.",
+      "mandate_type": "regulatory impact procedure",
+      "tags": [
+        "generational impact assessment",
+        "VIG",
+        "rulemaking"
+      ],
+      "related_countries": [
+        "IT"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "italy-vig-generational-impact-assessment-law-2025-11-20"
+      ],
+      "aliases": [
+        "VIG",
+        "Valutazione di Impatto Generazionale",
+        "generational impact assessment"
+      ],
+      "ie_lens": [
+        "ceb4-good-ancestor",
+        "ceb2-fairness"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "wales-wellbeing-future-generations-act",
+      "name": "Well-being of Future Generations (Wales) Act 2015",
+      "actor_class": "initiative",
+      "fgp_category": "legislation",
+      "type": "framework-legislation",
+      "country": "GB",
+      "region": "Europe",
+      "focus": "sustainable development duty",
+      "status": "active",
+      "established": 2015,
+      "url": "https://www.legislation.gov.uk/anaw/2015/2/contents",
+      "description": "Landmark Welsh legislation requiring public bodies to pursue sustainable development through seven well-being goals and five ways of working. Global reference model for future generations law.",
+      "mandate_type": "subnational framework law",
+      "tags": [
+        "Wales model",
+        "future generations law",
+        "well-being"
+      ],
+      "related_countries": [
+        "GB",
+        "JP"
+      ],
+      "parent_actor_ids": [
+        "wales-future-generations-commissioner"
+      ],
+      "signal_ids": [
+        "wales-senedd-future-generations-committee-2026-05-12"
+      ],
+      "aliases": [
+        "Well-being of Future Generations (Wales) Act 2015",
+        "Wales Future Generations Act",
+        "Well-being of Future Generations Act"
+      ],
+      "ie_lens": [
+        "ceb2-fairness"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "scotland-wellbeing-future-generations-bill",
+      "name": "Wellbeing and Sustainable Development (Scotland) Bill",
+      "actor_class": "initiative",
+      "fgp_category": "legislation",
+      "type": "proposed-legislation",
+      "country": "GB",
+      "region": "Europe",
+      "focus": "Scottish future generations commissioner",
+      "status": "historical",
+      "established": 2025,
+      "url": "https://www.parliament.scot/bills-and-laws/bills/s6/wellbeing-and-sustainable-development-scotland-bill",
+      "description": "Sarah Boyack MSP's bill to require public bodies to promote wellbeing and sustainable development and establish a Future Generations Commissioner for Scotland, modelled on Wales. Rejected at Stage 1 (91–25) in January 2026.",
+      "mandate_type": "proposed devolved legislation",
+      "tags": [
+        "future generations law",
+        "Wales model",
+        "Scotland"
+      ],
+      "related_countries": [
+        "GB"
+      ],
+      "parent_actor_ids": [
+        "wales-wellbeing-future-generations-act"
+      ],
+      "signal_ids": [
+        "scotland-wellbeing-future-generations-bill-fell-2026-01-22"
+      ],
+      "aliases": [
+        "Wellbeing and Sustainable Development (Scotland) Bill",
+        "Scottish Future Generations Commissioner Bill",
+        "Scotland Wellbeing and Sustainable Development Bill"
+      ],
+      "ie_lens": [
+        "ceb5-representation",
+        "ceb2-fairness"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "uk-wellbeing-future-generations-bill",
+      "name": "Wellbeing of Future Generations Bill [HL] (UK)",
+      "actor_class": "initiative",
+      "fgp_category": "legislation",
+      "type": "proposed-legislation",
+      "country": "GB",
+      "region": "Europe",
+      "focus": "UK-wide future generations framework",
+      "status": "historical",
+      "established": 2021,
+      "url": "https://bills.parliament.uk/bills/2869",
+      "description": "Lord Bird's private member's bill inspired by the Wales Act. Proposed UK wellbeing goals, a Commission for Future Generations, mandatory future-generations impact assessments, and extended OBR intergenerational reporting. Last progressed in 2021–22; dormant from 2022–26.",
+      "mandate_type": "proposed UK legislation",
+      "tags": [
+        "future generations law",
+        "Wales model",
+        "wellbeing goals"
+      ],
+      "related_countries": [
+        "GB"
+      ],
+      "parent_actor_ids": [
+        "wales-wellbeing-future-generations-act"
+      ],
+      "signal_ids": [
+        "uk-wellbeing-future-generations-bill-dormant-2024-26-session"
+      ],
+      "aliases": [
+        "Wellbeing of Future Generations Bill [HL]",
+        "Lord Bird Wellbeing of Future Generations Bill",
+        "UK Wellbeing of Future Generations Bill",
+        "Wellbeing of Future Generations (No. 2) Bill 2022"
+      ],
+      "ie_lens": [
+        "ceb5-representation",
+        "ceb2-fairness"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "au-wellbeing-future-generations-bill-2025",
+      "name": "Wellbeing of Future Generations Bill 2025 (Australia)",
+      "actor_class": "initiative",
+      "fgp_category": "legislation",
+      "type": "proposed-legislation",
+      "country": "AU",
+      "region": "Oceania",
+      "focus": "national future generations framework",
+      "status": "historical",
+      "established": 2025,
+      "url": "https://www.sophiescamps.com.au/future_generations_bill_2025",
+      "description": "Private member's bill introduced by Dr Sophie Scamps MP, modelled on Wales' Well-being of Future Generations Act. Proposed a Federal Wellbeing Framework, Future Generations Commissioner, and intergenerational wellbeing duty for public bodies. Lapsed in the House of Representatives in 2025.",
+      "mandate_type": "proposed federal legislation",
+      "tags": [
+        "future generations law",
+        "Wales model",
+        "wellbeing framework"
+      ],
+      "related_countries": [
+        "AU",
+        "GB"
+      ],
+      "parent_actor_ids": [
+        "wales-wellbeing-future-generations-act",
+        "au-parliamentary-group-future-generations"
+      ],
+      "signal_ids": [
+        "australia-climate-duty-of-care-bill-negatived-2025-10-29",
+        "australia-youth-parliament-mpi-intergenerational-2026-06"
+      ],
+      "aliases": [
+        "Wellbeing of Future Generations Bill 2025",
+        "Australian Wellbeing of Future Generations Bill",
+        "Sophie Scamps Wellbeing of Future Generations Bill"
+      ],
+      "ie_lens": [
+        "ceb5-representation",
+        "ceb2-fairness"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "western-cape-high-court",
+      "name": "Western Cape High Court",
+      "actor_class": "institution",
+      "fgp_category": "litigation",
+      "type": "high-court",
+      "country": "ZA",
+      "region": "Africa",
+      "focus": "high-court adjudication",
+      "status": "active",
+      "established": 1997,
+      "url": "https://www.judiciary.org.za/",
+      "description": "South African High Court division relevant to family, maintenance, and children-related litigation.",
+      "mandate_type": "high court",
+      "tags": [
+        "South Africa",
+        "family law",
+        "courts"
+      ],
+      "related_countries": [
+        "ZA"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "za-fcp-v-stc-child-maintenance-court-ruling-2025"
+      ],
+      "ie_lens": [
+        "dfg2-rights"
+      ],
+      "aliases": [
+        "Western Cape High Court",
+        "Cape High Court"
+      ],
+      "added_date": "2026-08-30"
+    },
+    {
+      "id": "ymca-youth-parliament-australia",
+      "name": "YMCA Youth Parliament (Australia)",
+      "actor_class": "organization",
+      "fgp_category": "campaign",
+      "type": "youth-parliament",
+      "country": "AU",
+      "region": "Oceania",
+      "focus": "youth civic participation and legislative influence",
+      "status": "active",
+      "established": 1989,
+      "url": "https://www.ymca.org.au/",
+      "description": "Youth parliamentary program whose consultations and MPIs have influenced intergenerational equity and future-generations legislation.",
+      "mandate_type": "youth civic programme",
+      "tags": [
+        "youth parliament",
+        "civic participation",
+        "intergenerational equity"
+      ],
+      "related_countries": [
+        "AU"
+      ],
+      "parent_actor_ids": [],
+      "signal_ids": [
+        "australia-youth-parliament-mpi-intergenerational-2026-06"
+      ],
+      "ie_lens": [
+        "ceb5-representation",
+        "ceb2-fairness"
+      ],
+      "aliases": [
+        "YMCA Youth Parliament (Australia)",
+        "WhyNot / YMCA Youth Parliament",
+        "YMCA Youth Parliament",
+        "WhyNot Youth Parliament"
+      ],
+      "added_date": "2026-08-30"
+    }
+  ]
+}
