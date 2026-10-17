@@ -1,0 +1,16 @@
+# Keep repo tooling and internal notes off the public web server.
+.git
+.github
+.claude
+node_modules
+docs
+reports
+scripts
+CLAUDE.md
+README-LOOP.md
+package.json
+package-lock.json
+Dockerfile
+.dockerignore
+*.bak-*
+*.backup-*
