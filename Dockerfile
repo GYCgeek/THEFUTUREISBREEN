@@ -11,6 +11,16 @@ FROM php:8.3-apache
 RUN a2enmod rewrite headers \
  && sed -ri 's!AllowOverride None!AllowOverride All!g' /etc/apache2/apache2.conf \
  && echo 'ServerName localhost' > /etc/apache2/conf-enabled/servername.conf \
+ && printf '%s\n' \
+    '# Let browsers keep static files instead of re-checking them on every visit.' \
+    '# File names are not versioned, so CSS and JS get one day; pages are not cached.' \
+    '<FilesMatch "\.(jpe?g|png|gif|webp|svg|ico|cur|woff2?|ttf|otf|eot|pdf|mp4)$">' \
+    '  Header set Cache-Control "public, max-age=2592000"' \
+    '</FilesMatch>' \
+    '<FilesMatch "\.(css|js)$">' \
+    '  Header set Cache-Control "public, max-age=86400"' \
+    '</FilesMatch>' \
+    > /etc/apache2/conf-enabled/cache.conf \
  && sed -i -e '/<VirtualHost/a ServerName https://localhost:443' \
            -e '/<VirtualHost/a UseCanonicalName Off' \
            /etc/apache2/sites-available/000-default.conf

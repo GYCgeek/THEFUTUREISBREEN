@@ -768,7 +768,7 @@ body.index-glass-header .impact-report-cover-link {
 body.index-glass-header .impact-report-cover-link img {
   width: 100%;
   height: auto;
-  max-height: 220px;
+  max-height: 420px;
   object-fit: contain;
   border-radius: 18px;
   border: 1px solid rgba(253, 88, 11, 0.2);
