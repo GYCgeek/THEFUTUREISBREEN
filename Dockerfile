@@ -4,15 +4,16 @@
 # PHP is included for save.php and the TRIDENT endpoint in DB/.
 FROM php:8.3-apache
 
+# Railway terminates HTTPS in front of Apache. Declare the public scheme and
+# port inside the vhost (a vhost otherwise takes them from its own
+# <VirtualHost *:PORT>), so redirects go to https://<visitor host>/... and not
+# http://...:PORT/...; UseCanonicalName Off keeps the host from the request.
 RUN a2enmod rewrite headers \
  && sed -ri 's!AllowOverride None!AllowOverride All!g' /etc/apache2/apache2.conf \
- && printf '%s\n' \
-    '# Railway terminates HTTPS in front of Apache. Declare the public scheme and port' \
-    '# so redirects go to https://<visitor host>/... and not http://...:PORT/...' \
-    '# (UseCanonicalName Off keeps the host from the request).' \
-    'ServerName https://localhost:443' \
-    'UseCanonicalName Off' \
-    > /etc/apache2/conf-enabled/servername.conf
+ && echo 'ServerName localhost' > /etc/apache2/conf-enabled/servername.conf \
+ && sed -i -e '/<VirtualHost/a ServerName https://localhost:443' \
+           -e '/<VirtualHost/a UseCanonicalName Off' \
+           /etc/apache2/sites-available/000-default.conf
 
 COPY . /var/www/html/
 
