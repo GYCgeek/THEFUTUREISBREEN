@@ -14,7 +14,11 @@ Desktop.ini
 *.bak-*
 *.backup-*
 *.mp4
-*.pdf
+# PDFs that pages link to are committed so Railway can serve them.
+# These stay out: over GitHub's 100 MB limit, or not linked from any page.
+assets/documents/Report2025/GYC Report2025 v3.pdf
+assets/documents/GYC REPORT 2024.pdf
+assets/images/logos/Partners R4P/Sankari.pdf
 node_modules/
 reports/screens/
 reports/*.log
