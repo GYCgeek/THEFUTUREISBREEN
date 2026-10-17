@@ -4,7 +4,7 @@ DirectoryIndex index.html
 Options -Indexes
 
 <IfModule mod_alias.c>
-	Redirect 301 /whyavocado https://www.theglobalyouth.co/assets/documents/Avocado-Framework-Introduction.pdf
+	Redirect 301 /whyavocado /assets/documents/Avocado-Framework-Introduction.pdf
 </IfModule>
 
 # Extensionless HTML files get no Content-Type from Apache.
