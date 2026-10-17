@@ -11,7 +11,12 @@ RUN a2enmod rewrite headers \
 COPY . /var/www/html/
 
 # Railway sets PORT at runtime; Apache listens on it.
+# mod_php needs mpm_prefork only; on Railway a second MPM can end up enabled
+# ("AH00534: More than one MPM loaded"), so drop the others before starting.
 ENV PORT=8080
-CMD sed -ri "s/^Listen .*/Listen ${PORT}/" /etc/apache2/ports.conf \
+CMD rm -f /etc/apache2/mods-enabled/mpm_event.* /etc/apache2/mods-enabled/mpm_worker.* \
+ && ln -sf ../mods-available/mpm_prefork.load /etc/apache2/mods-enabled/mpm_prefork.load \
+ && ln -sf ../mods-available/mpm_prefork.conf /etc/apache2/mods-enabled/mpm_prefork.conf \
+ && sed -ri "s/^Listen .*/Listen ${PORT}/" /etc/apache2/ports.conf \
  && sed -ri "s/<VirtualHost \*:[0-9]+>/<VirtualHost *:${PORT}>/" /etc/apache2/sites-available/000-default.conf \
  && exec apache2-foreground
