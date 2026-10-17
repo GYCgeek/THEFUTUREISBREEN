@@ -6,7 +6,12 @@ FROM php:8.3-apache
 
 RUN a2enmod rewrite headers \
  && sed -ri 's!AllowOverride None!AllowOverride All!g' /etc/apache2/apache2.conf \
- && echo 'ServerName localhost' > /etc/apache2/conf-enabled/servername.conf
+ && echo 'ServerName localhost' > /etc/apache2/conf-enabled/servername.conf \
+ && printf '%s\n' \
+    '# Railway terminates HTTPS in front of Apache, so Apache builds its own redirects' \
+    '# as http://host:PORT/... Strip that to a path so the browser keeps its URL.' \
+    'Header always edit Location "^http://[^/]+:[0-9]+(/.*)$" "$1"' \
+    > /etc/apache2/conf-enabled/railway-redirects.conf
 
 COPY . /var/www/html/
 
