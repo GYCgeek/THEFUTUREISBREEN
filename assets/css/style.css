@@ -703,6 +703,20 @@ body.index-glass-header .impact-reports-heading p {
   line-height: 1.7;
 }
 
+body.index-glass-header .impact-reports-more {
+  margin: 1.5rem 0 0;
+  text-align: center;
+  color: #475569;
+  font-size: 1.04rem;
+  line-height: 1.7;
+}
+
+body.index-glass-header .impact-reports-more a {
+  color: #fd580b;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 body.index-glass-header .impact-reports-grid {
   row-gap: 1.5rem;
 }
