@@ -2,7 +2,16 @@
 # Apache serves the repo root and reads .htaccess, so clean URLs, 301s,
 # 403 rules and the 404 page work exactly as on the old Awardspace host.
 # PHP is included for save.php and the TRIDENT endpoint in DB/.
-FROM php:8.3-apache
+# Pinned to 8.3.36: fixes CVE-2026-109618 / CVE-2026-109619 ("PHP2Shell",
+# unauthenticated RCE, 21 Oct 2026). Raise the pin when a newer 8.3 ships.
+FROM php:8.3.36-apache
+
+# Defence in depth for PHP2Shell (upload progress is not used by this site),
+# and stop advertising PHP and Apache versions to scanners.
+RUN printf '%s\n' 'session.upload_progress.enabled = Off' 'expose_php = Off' \
+    > /usr/local/etc/php/conf.d/zz-hardening.ini \
+ && printf '%s\n' 'ServerTokens Prod' 'ServerSignature Off' \
+    > /etc/apache2/conf-enabled/zz-hardening.conf
 
 # Railway terminates HTTPS in front of Apache. Declare the public scheme and
 # port inside the vhost (a vhost otherwise takes them from its own
