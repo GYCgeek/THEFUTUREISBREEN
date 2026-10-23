@@ -13,11 +13,12 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     die(json_encode(['error' => 'POST only']));
 }
 
-// CHANGE THIS to your admin password (must match approve_signal.php)
-define('ADMIN_PASS', 'foresight2026');
+// Review password comes from the Railway variable HS_ADMIN_PASS, never from code.
+// If it is not set, every request is refused.
+$adminPass = (string) getenv('HS_ADMIN_PASS');
 
-$pass = $_SERVER['HTTP_X_ADMIN_PASS'] ?? '';
-if ($pass !== ADMIN_PASS) {
+$pass = (string) ($_SERVER['HTTP_X_ADMIN_PASS'] ?? '');
+if ($adminPass === '' || !hash_equals($adminPass, $pass)) {
     http_response_code(401);
     die(json_encode(['error' => 'Unauthorized']));
 }

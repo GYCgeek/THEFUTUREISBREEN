@@ -1478,8 +1478,9 @@ const REJECT_ENDPOINT = './data/reject_signal.php';
 const SIGN_ENDPOINT = './data/sign_signal.php';
 const COMMENT_ENDPOINT = './data/comment_signal.php';
 
-// CHANGE THIS — must match the password in approve_signal.php / reject_signal.php
-const ADMIN_HASH = 'foresight2026';
+// The review password is checked by the server (Railway variable HS_ADMIN_PASS).
+// It is kept in memory only after the reviewer types it, never written in this page.
+let adminPass = '';
 
 const REFRESH_MS = 120000;
 
@@ -1807,7 +1808,8 @@ async function submitSignal() {
 // ════════════════════════════════════════════
 function adminAuth() {
   const pass = document.getElementById('adminPass').value;
-  if (pass === ADMIN_HASH) {
+  if (pass) {
+    adminPass = pass;
     isAdmin = true;
     document.getElementById('adminLogin').style.display = 'none';
     document.getElementById('adminQueue').style.display = 'block';
@@ -1861,10 +1863,18 @@ async function reviewAction(index, action) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-Admin-Pass': ADMIN_HASH,
+        'X-Admin-Pass': adminPass,
       },
       body: JSON.stringify({ index }),
     });
+    if (res.status === 401) {
+      isAdmin = false;
+      adminPass = '';
+      document.getElementById('adminQueue').style.display = 'none';
+      document.getElementById('adminLogin').style.display = 'block';
+      document.getElementById('adminError').style.display = 'block';
+      return;
+    }
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
     // Visual feedback

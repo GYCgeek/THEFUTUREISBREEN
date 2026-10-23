@@ -48,6 +48,12 @@ Options -Indexes
 	# Developer notes and deploy probes (local machine paths, test pages).
 	RewriteRule (^|/)README\.md$ - [F,NC]
 	RewriteRule ^public_html/(public_html/)?(intel/)?[^/]*-probe[^/]*$ - [F,NC]
+	# PHP scripts no page uses (old Awardspace Mission Control, data analysis
+	# pages, and the stale public_html/public_html copy): 403.
+	RewriteRule ^save\.php$ - [F,NC]
+	RewriteRule ^mc_state\.json$ - [F,NC]
+	RewriteRule ^public_html/data/(gyc-)?analysis\.php$ - [F,NC]
+	RewriteRule ^public_html/public_html/.*\.php$ - [F,NC]
 
 	# 301s for retired and mistyped URLs (see docs/site-map.md).
 	RewriteRule ^energy/?$ /GYCT [R=301,L,NC]
