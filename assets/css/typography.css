@@ -1,0 +1,14 @@
+/* Site typography: Unbounded (display) + Figtree (body).
+   Same rules as the top of style.css, for the pages that do not load style.css
+   (GYCT, FfD4, Foresight Research, The Trident). Keep both in sync. */
+:root {
+  --font-display: 'Unbounded', 'Arial Black', sans-serif;
+  --font-body: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+body { font-family: var(--font-body); }
+h1, h2, .stat-number, .hero-title { font-family: var(--font-display); font-weight: 800; line-height: 1.05; letter-spacing: -0.01em; }
+h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.2; }
+button, .btn, input, textarea, select, nav, footer { font-family: var(--font-body); }
+/* Unbounded is wide: smaller headings so nothing overflows. */
+h1 { font-size: clamp(2rem, 6vw, 3.5rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2.25rem); }

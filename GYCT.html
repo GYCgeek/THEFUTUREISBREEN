@@ -14,7 +14,8 @@
 <meta name="twitter:image" content="https://theglobalyouth.co/assets/gyct2026/social/gyct2026-og-image-1200x630.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/typography.css">
 <link rel="icon" type="image/png" href="assets/gyct2026/logos/gyct-logo.png">
 <style>
   :root {
@@ -35,7 +36,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+    font-family: var(--font-body);
     color: var(--ink);
     background: var(--paper);
     line-height: 1.65;
@@ -115,7 +116,7 @@
     min-height: 520px;
   }
   .hero h1 {
-    font-family: 'Oswald', Impact, sans-serif;
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: clamp(42px, 8vw, 84px);
     line-height: 0.95;
@@ -176,7 +177,7 @@
     color: var(--teal-mid); margin-bottom: 10px;
   }
   .section-title {
-    font-family: 'Oswald', Impact, sans-serif;
+    font-family: var(--font-display);
     font-size: clamp(28px, 4vw, 40px); font-weight: 600;
     letter-spacing: 0.02em; text-transform: uppercase; color: var(--teal-deep);
     margin-bottom: 12px; line-height: 1.1;
@@ -187,7 +188,7 @@
   .stats { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 28px 0; }
   .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .stat { text-align: center; padding: 8px; }
-  .stat .n { display: block; font-family: 'Oswald', sans-serif; font-size: 36px; font-weight: 700; color: var(--teal); line-height: 1; }
+  .stat .n { display: block; font-family: var(--font-display); font-size: 36px; font-weight: 700; color: var(--teal); line-height: 1; }
   .stat .l { display: block; margin-top: 6px; font-size: 13px; font-weight: 700; color: var(--mute); text-transform: uppercase; letter-spacing: 0.05em; }
 
   /* IMPACT OUTCOMES */
@@ -197,7 +198,7 @@
     background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 22px;
     text-align: center;
   }
-  .outcome .n { display: block; font-family: 'Oswald', sans-serif; font-size: 40px; font-weight: 700; color: var(--teal-deep); line-height: 1; }
+  .outcome .n { display: block; font-family: var(--font-display); font-size: 40px; font-weight: 700; color: var(--teal-deep); line-height: 1; }
   .outcome .l { display: block; margin-top: 8px; font-size: 14px; color: var(--ink-soft); font-weight: 600; }
   .impact-cta {
     margin-top: 22px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px;
@@ -212,7 +213,7 @@
     display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
   }
   .cop-inner h2 {
-    font-family: 'Oswald', sans-serif; font-size: clamp(22px, 3vw, 30px); font-weight: 600;
+    font-family: var(--font-display); font-size: clamp(22px, 3vw, 30px); font-weight: 600;
     letter-spacing: 0.03em; text-transform: uppercase; line-height: 1.15;
   }
   .cop-inner p { margin-top: 6px; color: rgba(255,255,255,0.84); max-width: 56ch; font-size: 15px; }
@@ -237,7 +238,7 @@
   .tracks { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 16px; }
   .track { background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 28px; min-height: 100%; }
   .track.yna { background: var(--teal-deep); color: #fff; border-color: var(--teal-deep); }
-  .track h3 { font-family: 'Oswald', sans-serif; font-size: 28px; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; margin-bottom: 10px; }
+  .track h3 { font-family: var(--font-display); font-size: 28px; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; margin-bottom: 10px; }
   .track.yna h3 { color: #fff; }
   .track p { color: var(--ink-soft); font-size: 15px; }
   .track.yna p { color: rgba(255,255,255,0.86); }
@@ -271,7 +272,7 @@
     background: var(--white); border: 1px solid var(--line); border-left: 4px solid var(--teal-bright); border-radius: 4px; padding: 16px 18px;
   }
   .timeline-item .date {
-    font-family: 'Oswald', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--teal);
+    font-family: var(--font-display); font-size: 16px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--teal);
   }
   .timeline-item .desc { color: var(--ink-soft); font-size: 15px; }
   .timeline-item.legacy { border-left-color: var(--gold); }
@@ -283,7 +284,7 @@
     display: grid; grid-template-columns: 90px 1fr; gap: 18px;
   }
   .history-year .yr {
-    font-family: 'Oswald', sans-serif; font-size: 28px; font-weight: 700; color: var(--teal); line-height: 1;
+    font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--teal); line-height: 1;
   }
   .history-year h3 { font-size: 17px; font-weight: 800; color: var(--teal-deep); margin-bottom: 6px; }
   .history-year p { font-size: 15px; color: var(--ink-soft); }
@@ -378,7 +379,7 @@
   .fund-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0; }
   .fund-card { border: 1px solid var(--line); border-radius: 4px; padding: 18px; background: var(--paper); }
   .fund-card.featured { border-color: var(--teal-bright); background: var(--teal-soft); }
-  .fund-card .price { font-family: 'Oswald', sans-serif; font-size: 30px; font-weight: 700; color: var(--teal-deep); margin-bottom: 6px; }
+  .fund-card .price { font-family: var(--font-display); font-size: 30px; font-weight: 700; color: var(--teal-deep); margin-bottom: 6px; }
   .fund-card .desc { font-size: 14px; color: var(--ink-soft); }
   .contact-box {
     display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px;
@@ -434,7 +435,7 @@
     border-bottom: 4px solid var(--gold);
   }
   .selected-band h2 {
-    font-family: 'Oswald', Impact, sans-serif;
+    font-family: var(--font-display);
     font-size: clamp(28px, 4.4vw, 42px);
     font-weight: 600;
     letter-spacing: .03em;
@@ -469,7 +470,7 @@
   .next-card.hack .k { color: var(--teal-deep); }
   .next-card.ace .k { color: #1a7a8c; }
   .next-card h3 {
-    font-family: 'Oswald', sans-serif; font-size: 20px; font-weight: 600;
+    font-family: var(--font-display); font-size: 20px; font-weight: 600;
     letter-spacing: .02em; text-transform: uppercase; color: var(--teal-deep);
     margin-bottom: 8px; line-height: 1.15;
   }
@@ -488,7 +489,7 @@
     padding: 16px 16px 14px;
   }
   .track-mini h4 {
-    font-family: 'Oswald', sans-serif; font-size: 16px; letter-spacing: .04em;
+    font-family: var(--font-display); font-size: 16px; letter-spacing: .04em;
     text-transform: uppercase; color: var(--teal-deep); margin-bottom: 6px;
   }
   .track-mini p { font-size: 14px; color: var(--ink-soft); }

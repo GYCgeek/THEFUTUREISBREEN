@@ -17,7 +17,10 @@
     <meta name="twitter:card" content="summary_large_image">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/typography.css">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -47,14 +50,14 @@
 
 
         body {
-            font-family: 'Impact', sans-serif;
+            font-family: var(--font-body);
             line-height: 1.6;
             overflow-x: hidden;
             color: var(--text-dark);
         }
 
         h1, h2, h3, h4, h5 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-display);
         }
 
         /* Hero Section */
@@ -2094,19 +2097,10 @@
           }
         }
 
-        /* Add at the beginning of the style section */
-        @font-face {
-            font-family: 'Nunito Sans Expanded';
-            src: url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
-
         /* Main Titles */
         h1, h2, .hero-content, .section-title, .big-title, 
         .heading-xl, .heading-lg, .hero-title, .main-title {
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+            font-family: var(--font-display) !important;
             font-size: 48px !important;
             font-weight: bold !important;
             letter-spacing: 0.5px !important;
@@ -2114,21 +2108,24 @@
 
         /* Subtitles */
         h3, h4, strong, .subtitle, .section-starter {
-            font-family: 'Helvetica World', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+            font-family: var(--font-display) !important;
             font-size: 24px !important;
             font-weight: bold !important;
         }
 
+        /* Bold words inside running text keep the body font */
+        p strong, li strong, span strong, td strong { font-family: var(--font-body) !important; }
+
         /* Body Text */
         p, span, div:not(.hero-content):not(.section-title):not(.subtitle):not(.btn):not(.w-button) {
-            font-family: 'Nunito Sans Expanded', 'Nunito Sans', sans-serif !important;
+            font-family: var(--font-body) !important;
             font-size: 16px !important;
             line-height: 1.5 !important;
         }
 
         /* Button Text */
         .btn, .w-button, .button, .cta-button, a[class*="btn"], button {
-            font-family: 'Nunito Sans Expanded', 'Nunito Sans', sans-serif !important;
+            font-family: var(--font-body) !important;
             font-size: 14px !important;
             font-weight: bold !important;
             color: #ffffff !important;
@@ -2137,13 +2134,13 @@
 
         /* FAQ/Accordion Styles */
         h5, .accordion-title, .accordion-header, .accordion-button {
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+            font-family: var(--font-display) !important;
             font-size: 20px !important;
             color: #25503C !important; /* Change to dark green */
         }
 
         .accordion-body, .accordion-body p, .accordion-collapse p {
-            font-family: 'Nunito Sans Expanded', 'Nunito Sans', sans-serif !important;
+            font-family: var(--font-body) !important;
             font-size: 16px !important;
             color: #000000 !important; /* Keep black for readability */
         }
@@ -2178,7 +2175,7 @@
 
         /* Update Live Impact Metrics title font */
         .metrics-dashboard h2 {
-            font-family: 'Helvetica World', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+            font-family: var(--font-display) !important;
             font-size: 36px !important;
         }
 
@@ -2190,7 +2187,7 @@
         /* Fix accordion text color */
         .accordion-body, .accordion-body p, .accordion-collapse p {
             color: #000000 !important; /* Keep black for readability */
-            font-family: 'Nunito Sans Expanded', 'Nunito Sans', sans-serif !important;
+            font-family: var(--font-body) !important;
             font-size: 16px !important;
         }
 
@@ -2581,13 +2578,13 @@
         </div>
     </section>
     <style>
-    .trident-happened { background: #25503c; color: #fff; padding: 56px 20px; font-family: 'Poppins', sans-serif; }
+    .trident-happened { background: #25503c; color: #fff; padding: 56px 20px; font-family: var(--font-body); }
     .trident-happened-inner { max-width: 900px; margin: 0 auto; }
-    .trident-happened h2 { font-family: 'Montserrat', sans-serif; font-size: clamp(2rem, 6vw, 3rem); margin: 0 0 16px; color: #fff; }
+    .trident-happened h2 { font-family: var(--font-display); font-size: clamp(2rem, 6vw, 3rem); margin: 0 0 16px; color: #fff; }
     .trident-happened p { font-size: 1.05rem; line-height: 1.7; margin: 0 0 14px; }
     .trident-happened-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 28px 0 0; }
     .trident-happened-fact { background: rgba(255,255,255,0.1); border-left: 4px solid #78D64B; border-radius: 8px; padding: 16px 18px; }
-    .trident-happened-fact dt { font-family: 'Montserrat', sans-serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: #c8f0b4; margin: 0 0 4px; }
+    .trident-happened-fact dt { font-family: var(--font-display); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: #c8f0b4; margin: 0 0 4px; }
     .trident-happened-fact dd { margin: 0; font-size: 1.05rem; font-weight: 600; }
     </style>
     <!-- Add ARIA landmarks to major sections -->
@@ -3081,7 +3078,7 @@ document.addEventListener('DOMContentLoaded', function() {
   font-size: 2rem;
   margin: 0.5rem 0 0.25rem 0; /* tighter spacing */
   color: #ff1d65;
-  font-family: Impact, sans-serif;
+  font-family: var(--font-display);
   text-align: center;
 }
 
@@ -3089,7 +3086,7 @@ document.addEventListener('DOMContentLoaded', function() {
   font-size: 1rem;
   margin: 0 0 0.75rem 0;
   color: #666;
-  font-family: "Nunito Sans Expanded", sans-serif;
+  font-family: var(--font-body);
   text-align: center;
 }
 
@@ -3113,7 +3110,7 @@ document.addEventListener('DOMContentLoaded', function() {
   color: var(--primary-color);
   margin-bottom: 15px;
   font-size: 1.3rem;
-  font-family: Helvetica, sans-serif;
+  font-family: var(--font-display);
 }
 
 .route-info-card ul {
@@ -3649,10 +3646,10 @@ Conducting environmental research as a UNESCO Young Scientist, he is pursuing an
         </div>
     </section>
     <style>
-    .trident-uon { background: #f4faf0; padding: 56px 20px; font-family: 'Poppins', sans-serif; color: #333; }
+    .trident-uon { background: #f4faf0; padding: 56px 20px; font-family: var(--font-body); color: #333; }
     .trident-uon-inner { max-width: 900px; margin: 0 auto; }
-    .trident-uon h2 { font-family: 'Montserrat', sans-serif; color: #25503c; font-size: clamp(1.6rem, 4.5vw, 2.2rem); margin: 0 0 16px; }
-    .trident-uon h3 { font-family: 'Montserrat', sans-serif; color: #25503c; font-size: 1.25rem; margin: 28px 0 12px; }
+    .trident-uon h2 { font-family: var(--font-display); color: #25503c; font-size: clamp(1.6rem, 4.5vw, 2.2rem); margin: 0 0 16px; }
+    .trident-uon h3 { font-family: var(--font-display); color: #25503c; font-size: 1.25rem; margin: 28px 0 12px; }
     .trident-uon p, .trident-uon li { font-size: 1.02rem; line-height: 1.7; }
     .trident-uon ul { padding-left: 20px; margin: 0 0 24px; }
     .trident-uon li { margin-bottom: 12px; }
